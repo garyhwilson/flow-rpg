@@ -19,20 +19,23 @@ publications/
 │   ├── players_guide.yaml
 │   ├── gm_guide.yaml
 │   ├── grimoire.yaml
+│   ├── monster_manual.yaml
 │   └── quick_reference.yaml
 ├── templates/          # Reusable content (title pages, copyright, etc.)
 │   ├── title_page.md
 │   ├── copyright.md
 │   ├── players_guide_title.md
 │   ├── gm_guide_title.md
-│   └── grimoire_title.md
+│   ├── grimoire_title.md
+│   └── monster_manual_title.md
 ├── custom_content/     # Book-specific content not in drafts/
 │   └── [book_name]/
 └── assembled/          # OUTPUT: Generated books (gitignored)
-    ├── core_rulebook.md (775 KB)
+    ├── core_rulebook.md (899 KB)
     ├── players_guide.md (683 KB)
-    ├── gm_guide.md (279 KB)
+    ├── gm_guide.md (391 KB)
     ├── grimoire.md (169 KB)
+    ├── monster_manual.md (109 KB)
     └── quick_reference.md (84 KB)
 ```
 
@@ -59,6 +62,9 @@ python scripts/assemble_book.py publications/manifests/players_guide.yaml
 
 # Game Master's Guide (GM-facing content only)
 python scripts/assemble_book.py publications/manifests/gm_guide.yaml
+
+# Monster Manual (bestiary and NPC compendium)
+python scripts/assemble_book.py publications/manifests/monster_manual.yaml
 
 # Grimoire (magic system deep-dive)
 python scripts/assemble_book.py publications/manifests/grimoire.yaml
@@ -197,11 +203,12 @@ python scripts/assemble_book.py publications/manifests/players_guide.yaml
 
 All publications are ready to assemble:
 
-### 1. Core Rulebook (`core_rulebook.yaml`) - 775 KB
+### 1. Core Rulebook (`core_rulebook.yaml`) - 899 KB
 **Complete game with everything**
 - All core rules
 - All character options (callings, archetypes, species)
 - Complete magic system
+- Monsters & NPCs (all threat levels)
 - Equipment and advancement
 - Both player and GM content
 - **Audience:** Everyone
@@ -213,19 +220,29 @@ All publications are ready to assemble:
 - Equipment
 - Advancement
 - Quick references
-- **Excludes:** GM guidelines, balance discussions
+- **Excludes:** GM guidelines, balance discussions, monsters
 - **Audience:** Players
 
-### 3. Game Master's Guide (`gm_guide.yaml`) - 279 KB
+### 3. Game Master's Guide (`gm_guide.yaml`) - 391 KB
 **GM-focused content only**
 - Running all systems
+- Complete monster & NPC compendium
 - Encounter design
 - Flow economy management
 - Campaign frameworks
 - Balance considerations
 - **Audience:** Game Masters
 
-### 4. The Grimoire (`grimoire.yaml`) - 169 KB
+### 4. Monster Manual (`monster_manual.yaml`) - 109 KB
+**Bestiary and NPC compendium**
+- 21 complete stat blocks (threat levels 1-4)
+- Comprehensive NPC templates
+- Encounter building guidelines
+- Tactical notes for running creatures
+- Quick reference tables
+- **Audience:** Game Masters
+
+### 5. The Grimoire (`grimoire.yaml`) - 169 KB
 **Magic system deep-dive**
 - Complete spell system
 - All four casting approaches
@@ -234,7 +251,7 @@ All publications are ready to assemble:
 - Character examples
 - **Audience:** Players and GMs who want magic mastery
 
-### 5. Quick Reference (`quick_reference.yaml`) - 84 KB
+### 6. Quick Reference (`quick_reference.yaml`) - 84 KB
 **Printable at-table reference**
 - All quick reference sections
 - Core mechanics summaries

@@ -107,8 +107,23 @@ sections:
       - file: "equipment/equipment_types/adventuring_gear.md"
       - file: "equipment/equipment_types/magical_items.md"
 
-  # ===== PART VII: GAME MASTER'S SECTION =====
-  - title: "Part VII: Running the Game"
+  # ===== PART VII: MONSTERS & NPCs =====
+  - title: "Part VII: Monsters & NPCs - Populating Your World"
+    intro: "Creatures, adversaries, and non-player characters bring your world to life. This section provides everything you need to create memorable encounters and compelling NPCs."
+    content:
+      - file: "monsters/00_introduction.md"
+      - file: "monsters/02_system_integration.md"
+
+      - section_header: "Creatures by Threat Level"
+
+      - file: "monsters/monster_types/threat_1_minions.md"
+      - file: "monsters/monster_types/threat_2_standard.md"
+      - file: "monsters/monster_types/threat_3_champion.md"
+      - file: "monsters/monster_types/threat_4_legendary.md"
+      - file: "monsters/monster_types/npcs.md"
+
+  # ===== PART VIII: GAME MASTER'S SECTION =====
+  - title: "Part VIII: Running the Game"
     intro: "This section provides Game Masters with the tools and guidance needed to run compelling Flow RPG adventures."
     content:
       - file: "core_rules/08_gm_guide.md"
@@ -130,6 +145,9 @@ sections:
       - file: "equipment/01_gm_guidelines.md"
         rename_to: "Running Equipment in Your Game"
 
+      - file: "monsters/01_gm_guidelines.md"
+        rename_to: "Running Monsters & NPCs in Your Game"
+
   # ===== APPENDICES =====
   - title: "Appendices"
     intro: "Quick reference materials for players and GMs."
@@ -149,8 +167,11 @@ sections:
       - file: "equipment/03_quick_reference.md"
         rename_to: "Appendix E: Equipment Quick Reference"
 
+      - file: "monsters/03_quick_reference.md"
+        rename_to: "Appendix F: Monster & NPC Quick Reference"
+
       - file: "core_rules/09_appendices.md"
-        rename_to: "Appendix F: Additional Resources"
+        rename_to: "Appendix G: Additional Resources"
 
 # Assembly options
 options:

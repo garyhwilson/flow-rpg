@@ -12,6 +12,7 @@ This document tracks ongoing design decisions, outstanding issues, and developme
 - **Species**: ✓ Fully modularized (all 4 species complete)
 - **Equipment**: ✓ Fully modularized (all equipment types complete)
 - **Spells**: ✓ Fully modularized (all 4 spell tiers complete)
+- **Monsters & NPCs**: ✓ Fully modularized (all threat levels + NPCs complete)
 - **Publication System**: ✓ Infrastructure complete for assembling books
 
 ## Active Development Priorities
@@ -52,6 +53,18 @@ This document tracks ongoing design decisions, outstanding issues, and developme
    - ✓ Set up .gitignore for assembled output
    - ✓ Document publication workflow
 
+6. **✓ Complete Monster & NPC System**
+
+   - ✓ Create monsters directory structure
+   - ✓ Develop threat level system (1-4: Minions, Standard, Elite, Legendary)
+   - ✓ Create monster root files (introduction, GM guidelines, system integration, quick reference)
+   - ✓ Create threat level 1 monsters - 6 minion stat blocks
+   - ✓ Create threat level 2 monsters - 4 standard enemy stat blocks
+   - ✓ Create threat level 3 monsters - 6 elite enemy stat blocks
+   - ✓ Create threat level 4 monsters - 5 legendary adversary stat blocks
+   - ✓ Create NPC templates and guidelines
+   - ✓ Integrate with Flow economy and PC systems
+
 ## Outstanding Design Issues
 
 ### Balance Concerns
@@ -91,6 +104,8 @@ This document tracks ongoing design decisions, outstanding issues, and developme
 
 ## Recently Addressed Items
 
+- ✓ Completed Monster & NPC system (all threat levels, 21 stat blocks, NPC templates)
+- ✓ Added Writing Guidelines to prevent video game terminology
 - ✓ Established complete publication system for book assembly
 - ✓ Completed spell system modularization (all 4 spell tiers)
 - ✓ Completed equipment modularization (all equipment types)
@@ -126,6 +141,49 @@ These core principles should guide all design decisions:
    - Meaningful choices in character building
    - Tactical decisions in combat
    - Narrative permissions granting special capabilities
+
+## Writing Guidelines
+
+These guidelines ensure Flow RPG maintains appropriate tabletop RPG language and avoids video game terminology:
+
+1. **Avoid Video Game Language**
+
+   Flow RPG is a tabletop RPG, not a video game. Use appropriate TTRPG terminology:
+
+   **Never Use:**
+   - "Boss" (use: legendary adversary, major villain, archvillain)
+   - "Elite" (use: champion, veteran, master)
+   - "Tank" (use: defender, front-line fighter, guardian)
+   - "DPS" (use: damage dealer, striker, attacker)
+   - "Aggro" (use: draw attention, threaten, engage)
+   - "AOE" (use: area effect, zone, burst)
+   - "Proc" (use: trigger, activate, occurs)
+   - "Cooldown" (use: recharge, rest required, once per scene)
+   - "Buff/Debuff" (use: enhance, weaken, advantage, penalty)
+   - "Mob" (use: creature, monster, enemy)
+   - "Adds" (use: reinforcements, additional enemies)
+   - "Trash" (use: minions, lesser enemies)
+   - "Loot" (use: treasure, rewards, spoils)
+   - "Respawn" (use: return, reform, regenerate)
+
+   **Use Instead:**
+   - Traditional TTRPG language
+   - Natural English descriptions
+   - Terms that fit fantasy fiction
+   - Language that evokes tabletop play
+
+2. **Natural Language Over Jargon**
+
+   Prefer clear, descriptive language over gaming jargon when possible:
+   - "The dragon attacks twice with its claws" not "The dragon has 2 claw attacks per turn"
+   - "Recovers when you rest" not "Recharges on short rest"
+   - "Once per encounter" not "1/encounter cooldown"
+
+3. **Fiction-First Descriptions**
+
+   Start with what it looks like in the fiction, then explain mechanics:
+   - Good: "The paladin's holy aura protects nearby allies, granting them +2 to Guard while within Close range."
+   - Bad: "AOE buff: +2 Guard to all friendlies within 10ft radius."
 
 ## Project Organization
 
@@ -182,6 +240,17 @@ flow-rpg/
 │       ├── standard_spells.md
 │       ├── advanced_spells.md
 │       └── master_spells.md
+├── monsters/             # Monsters and NPCs
+│   ├── 00_introduction.md
+│   ├── 01_gm_guidelines.md
+│   ├── 02_system_integration.md
+│   ├── 03_quick_reference.md
+│   └── monster_types/    # Creatures by threat level
+│       ├── threat_1_minions.md
+│       ├── threat_2_standard.md
+│       ├── threat_3_elite.md
+│       ├── threat_4_legendary.md
+│       └── npcs.md
 ├── publications/         # Publication assembly system
 │   ├── manifests/        # YAML book definitions
 │   │   └── core_rulebook.yaml
@@ -623,6 +692,48 @@ _11/12/25 Session (Continued 4)_:
 - Created GIT_SETUP.md with complete Git/GitHub setup instructions
 - Updated Living Design Document with Git workflow
 - Project ready for initial Git commit and GitHub push
+
+_11/12/25 Session (Continued 6)_:
+
+- Cleaned up video game terminology throughout monster system
+- Replaced all "Boss" references with "legendary adversary" (contextual)
+- Replaced all "Elite" references with "Champion" (threat level 3)
+- Renamed threat_3_elite.md → threat_3_champion.md
+- Updated all manifest files with new terminology
+- Added "Elite" to prohibited terms in Writing Guidelines
+- Successfully tested all assemblies:
+  - core_rulebook.md: 899 KB
+  - gm_guide.md: 391 KB
+  - monster_manual.md: 109 KB
+- Monster system now uses proper TTRPG language throughout
+
+_11/12/25 Session (Continued 5)_:
+
+- Integrated monster content into publication system
+- Updated core_rulebook.yaml to include all monster content (Part VII)
+- Updated gm_guide.yaml with complete monster compendium (Part II)
+- Created monster_manual.yaml manifest (standalone bestiary)
+- Created monster_manual_title.md template
+- Successfully assembled all publications with monster content:
+  - core_rulebook.md: 899 KB (was 775 KB)
+  - gm_guide.md: 391 KB (was 279 KB)
+  - monster_manual.md: 109 KB (new)
+- Updated publications/README.md with new Monster Manual publication
+- All 6 publications now complete and tested
+
+_11/12/25 Session (Continued 4)_:
+
+- Completed Monster & NPC system modularization
+- Created all monster root files (introduction, GM guidelines, system integration, quick reference)
+- Created threat level 1 monsters: 6 minion stat blocks (goblin, bandit, zombie, rat, skeleton, cultist)
+- Created threat level 2 monsters: 4 standard enemy stat blocks (orc, dire wolf, goblin shaman, animated armor)
+- Created threat level 3 monsters: 6 elite enemy stat blocks (ogre, battle mage, young dragon, vampire spawn, stone golem, werewolf)
+- Created threat level 4 monsters: 5 legendary adversary stat blocks (adult dragon, lich, beholder, demon lord, archmage)
+- Created comprehensive NPC templates and guidelines
+- Added Writing Guidelines section to prevent video game terminology (no "boss", "tank", "DPS", etc.)
+- Fixed all references from "boss" to "legendary adversary" throughout monster system
+- Updated Living Design Document with complete monster system
+- Total: 21 complete stat blocks plus NPC system
 
 _11/12/25 Session (Continued 3)_:
 

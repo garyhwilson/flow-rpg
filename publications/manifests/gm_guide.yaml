@@ -37,8 +37,26 @@ sections:
       - section_header: "Running Equipment"
       - file: "equipment/01_gm_guidelines.md"
 
+      - section_header: "Running Monsters & NPCs"
+      - file: "monsters/01_gm_guidelines.md"
+
+  # ===== MONSTERS & NPCS =====
+  - title: "Part II: Monsters & NPCs"
+    intro: "Creating memorable adversaries and populating your world with compelling non-player characters."
+    content:
+      - file: "monsters/00_introduction.md"
+      - file: "monsters/02_system_integration.md"
+
+      - section_header: "Creature Compendium"
+
+      - file: "monsters/monster_types/threat_1_minions.md"
+      - file: "monsters/monster_types/threat_2_standard.md"
+      - file: "monsters/monster_types/threat_3_champion.md"
+      - file: "monsters/monster_types/threat_4_legendary.md"
+      - file: "monsters/monster_types/npcs.md"
+
   # ===== ENCOUNTER DESIGN =====
-  - title: "Part II: Encounter Design"
+  - title: "Part III: Encounter Design"
     intro: "Using the Flow economy to create balanced, engaging encounters."
     content:
       - file: "core_rules/04_combat_system.md"
@@ -49,7 +67,7 @@ sections:
         # Keep only GM-relevant sections
 
   # ===== FLOW ECONOMY MANAGEMENT =====
-  - title: "Part III: Managing the Flow Economy"
+  - title: "Part IV: Managing the Flow Economy"
     intro: "The Flow economy is the heart of the game. Here's how to use it to create dramatic pacing."
     content:
       - file: "core_rules/02_basic_mechanics.md"
@@ -59,7 +77,7 @@ sections:
         # Focus on Flow management aspects
 
   # ===== CAMPAIGN FRAMEWORKS =====
-  - title: "Part IV: Campaign Frameworks"
+  - title: "Part V: Campaign Frameworks"
     intro: "Structure your campaign around the Flow RPG systems for maximum engagement."
     content:
       - file: "callings/growth_patterns/calling_evolution.md"
@@ -69,13 +87,13 @@ sections:
         rename_to: "Party Dynamics and Calling Synergies"
 
   # ===== ADVANCEMENT =====
-  - title: "Part V: Character Advancement"
+  - title: "Part VI: Character Advancement"
     intro: "Pacing character growth and managing milestone advancement."
     content:
       - file: "core_rules/06_advancement.md"
 
   # ===== BALANCE & HOUSE RULES =====
-  - title: "Part VI: Balance Considerations"
+  - title: "Part VII: Balance Considerations"
     intro: "Understanding the design decisions and how to maintain balance when modifying the game."
     content:
       - file: "archetypes/02_system_integration.md"
@@ -111,6 +129,9 @@ sections:
 
       - file: "equipment/03_quick_reference.md"
         rename_to: "Appendix F: Equipment Quick Reference"
+
+      - file: "monsters/03_quick_reference.md"
+        rename_to: "Appendix G: Monster & NPC Quick Reference"
 
 # Assembly options
 options:
