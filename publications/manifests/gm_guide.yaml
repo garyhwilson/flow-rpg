@@ -1,0 +1,120 @@
+# Flow RPG Game Master's Guide Manifest
+# GM-focused content: running games, balance, encounter design
+
+title: "Flow RPG Game Master's Guide"
+version: "1.0 (Draft)"
+output_file: "publications/assembled/gm_guide.md"
+
+sections:
+  # ===== FRONT MATTER =====
+  - title: "Front Matter"
+    content:
+      - file: "publications/templates/gm_guide_title.md"
+      - file: "publications/templates/copyright.md"
+
+  # ===== INTRODUCTION =====
+  - title: "Introduction to Game Mastering"
+    intro: "Welcome, Game Master! This guide provides everything you need to run compelling Flow RPG adventures."
+    content:
+      - file: "core_rules/08_gm_guide.md"
+
+  # ===== SYSTEM MASTERY =====
+  - title: "Part I: Mastering the Systems"
+    intro: "Deep dives into running each system effectively, with balance considerations and practical advice."
+    content:
+      - section_header: "Running Callings"
+      - file: "callings/01_gm_guidelines.md"
+
+      - section_header: "Running Archetypes"
+      - file: "archetypes/01_gm_guidelines.md"
+
+      - section_header: "Running Species"
+      - file: "species/01_gm_guidelines.md"
+
+      - section_header: "Running Magic"
+      - file: "spells/01_gm_guidelines.md"
+
+      - section_header: "Running Equipment"
+      - file: "equipment/01_gm_guidelines.md"
+
+  # ===== ENCOUNTER DESIGN =====
+  - title: "Part II: Encounter Design"
+    intro: "Using the Flow economy to create balanced, engaging encounters."
+    content:
+      - file: "core_rules/04_combat_system.md"
+        exclude_sections:
+          - "Basic Combat Actions"
+          - "Stances in Detail"
+          - "Example Combat"
+        # Keep only GM-relevant sections
+
+  # ===== FLOW ECONOMY MANAGEMENT =====
+  - title: "Part III: Managing the Flow Economy"
+    intro: "The Flow economy is the heart of the game. Here's how to use it to create dramatic pacing."
+    content:
+      - file: "core_rules/02_basic_mechanics.md"
+        exclude_sections:
+          - "Making Checks"
+          - "Skills"
+        # Focus on Flow management aspects
+
+  # ===== CAMPAIGN FRAMEWORKS =====
+  - title: "Part IV: Campaign Frameworks"
+    intro: "Structure your campaign around the Flow RPG systems for maximum engagement."
+    content:
+      - file: "callings/growth_patterns/calling_evolution.md"
+        rename_to: "Using Calling Evolution in Campaigns"
+
+      - file: "callings/growth_patterns/calling_combinations.md"
+        rename_to: "Party Dynamics and Calling Synergies"
+
+  # ===== ADVANCEMENT =====
+  - title: "Part V: Character Advancement"
+    intro: "Pacing character growth and managing milestone advancement."
+    content:
+      - file: "core_rules/06_advancement.md"
+
+  # ===== BALANCE & HOUSE RULES =====
+  - title: "Part VI: Balance Considerations"
+    intro: "Understanding the design decisions and how to maintain balance when modifying the game."
+    content:
+      - file: "archetypes/02_system_integration.md"
+        rename_to: "Balancing Archetypes and Party Composition"
+
+      - file: "species/02_system_integration.md"
+        rename_to: "Species Balance and Diversity"
+
+      - file: "spells/02_system_integration.md"
+        rename_to: "Magic Balance and Flow Management"
+
+      - file: "equipment/02_system_integration.md"
+        rename_to: "Equipment Balance and Treasure"
+
+  # ===== APPENDICES =====
+  - title: "Appendices: Quick References"
+    intro: "Fast-lookup tables and references for running the game."
+    content:
+      - file: "core_rules/09_appendices.md"
+        rename_to: "Appendix A: GM Resources"
+
+      - file: "callings/03_quick_reference.md"
+        rename_to: "Appendix B: Calling Quick Reference"
+
+      - file: "archetypes/03_quick_reference.md"
+        rename_to: "Appendix C: Archetype Quick Reference"
+
+      - file: "species/03_quick_reference.md"
+        rename_to: "Appendix D: Species Quick Reference"
+
+      - file: "spells/03_quick_reference.md"
+        rename_to: "Appendix E: Spell Quick Reference"
+
+      - file: "equipment/03_quick_reference.md"
+        rename_to: "Appendix F: Equipment Quick Reference"
+
+# Assembly options
+options:
+  generate_toc: true
+  fix_internal_links: false
+  add_page_breaks: false
+  heading_numbering: false

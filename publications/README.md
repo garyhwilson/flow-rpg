@@ -15,14 +15,25 @@ The publication system uses:
 ```
 publications/
 ├── manifests/           # YAML files defining book structure
-│   └── core_rulebook.yaml
+│   ├── core_rulebook.yaml
+│   ├── players_guide.yaml
+│   ├── gm_guide.yaml
+│   ├── grimoire.yaml
+│   └── quick_reference.yaml
 ├── templates/          # Reusable content (title pages, copyright, etc.)
 │   ├── title_page.md
-│   └── copyright.md
+│   ├── copyright.md
+│   ├── players_guide_title.md
+│   ├── gm_guide_title.md
+│   └── grimoire_title.md
 ├── custom_content/     # Book-specific content not in drafts/
 │   └── [book_name]/
 └── assembled/          # OUTPUT: Generated books (gitignored)
-    └── core_rulebook.md
+    ├── core_rulebook.md (775 KB)
+    ├── players_guide.md (683 KB)
+    ├── gm_guide.md (279 KB)
+    ├── grimoire.md (169 KB)
+    └── quick_reference.md (84 KB)
 ```
 
 ## Quick Start
@@ -37,13 +48,26 @@ pip install pyyaml
 
 ### 2. Assemble a Book
 
-From the project root directory (`/Users/garywilson/Downloads/Flow RPG/drafts/`):
+From the project root directory:
 
 ```bash
+# Core Rulebook (complete game)
 python scripts/assemble_book.py publications/manifests/core_rulebook.yaml
+
+# Player's Guide (player-facing content only)
+python scripts/assemble_book.py publications/manifests/players_guide.yaml
+
+# Game Master's Guide (GM-facing content only)
+python scripts/assemble_book.py publications/manifests/gm_guide.yaml
+
+# Grimoire (magic system deep-dive)
+python scripts/assemble_book.py publications/manifests/grimoire.yaml
+
+# Quick Reference (printable reference sheet)
+python scripts/assemble_book.py publications/manifests/quick_reference.yaml
 ```
 
-The assembled book will be created at: `publications/assembled/core_rulebook.md`
+Assembled books are created in: `publications/assembled/`
 
 ### 3. Review the Output
 
@@ -169,17 +193,55 @@ sections:
 python scripts/assemble_book.py publications/manifests/players_guide.yaml
 ```
 
-## Available Books
+## Available Publications
 
-Current manifests:
+All publications are ready to assemble:
 
-- **Core Rulebook** (`core_rulebook.yaml`) - Complete game with all rules
+### 1. Core Rulebook (`core_rulebook.yaml`) - 775 KB
+**Complete game with everything**
+- All core rules
+- All character options (callings, archetypes, species)
+- Complete magic system
+- Equipment and advancement
+- Both player and GM content
+- **Audience:** Everyone
 
-Planned manifests:
-- Player's Guide (player-focused subset)
-- Game Master's Guide (GM tools and guidance)
-- Grimoire (expanded magic)
-- Additional supplements
+### 2. Player's Guide (`players_guide.yaml`) - 683 KB
+**Player-focused content only**
+- Character creation
+- Combat and magic systems
+- Equipment
+- Advancement
+- Quick references
+- **Excludes:** GM guidelines, balance discussions
+- **Audience:** Players
+
+### 3. Game Master's Guide (`gm_guide.yaml`) - 279 KB
+**GM-focused content only**
+- Running all systems
+- Encounter design
+- Flow economy management
+- Campaign frameworks
+- Balance considerations
+- **Audience:** Game Masters
+
+### 4. The Grimoire (`grimoire.yaml`) - 169 KB
+**Magic system deep-dive**
+- Complete spell system
+- All four casting approaches
+- Magical traditions
+- Tactical spellcasting
+- Character examples
+- **Audience:** Players and GMs who want magic mastery
+
+### 5. Quick Reference (`quick_reference.yaml`) - 84 KB
+**Printable at-table reference**
+- All quick reference sections
+- Core mechanics summaries
+- Combat tables
+- Spell lists
+- Equipment tables
+- **Audience:** At-table lookup during play
 
 ## Customization
 

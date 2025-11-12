@@ -1,0 +1,163 @@
+# Flow RPG Player's Guide Manifest
+# Player-focused content only - no GM guidelines or balance discussions
+
+title: "Flow RPG Player's Guide"
+version: "1.0 (Draft)"
+output_file: "publications/assembled/players_guide.md"
+
+sections:
+  # ===== FRONT MATTER =====
+  - title: "Front Matter"
+    content:
+      - file: "publications/templates/players_guide_title.md"
+      - file: "publications/templates/copyright.md"
+
+  # ===== INTRODUCTION =====
+  - title: "Introduction"
+    intro: "Welcome to Flow RPG! This guide contains everything you need to create characters and play the game."
+    content:
+      - file: "core_rules/01_introduction.md"
+      - file: "core_rules/02_basic_mechanics.md"
+
+  # ===== CHARACTER CREATION =====
+  - title: "Creating Your Character"
+    intro: "Build your unique character through meaningful choices that shape both mechanics and story."
+    content:
+      - file: "core_rules/03_character_creation.md"
+
+  # ===== CALLINGS =====
+  - title: "Part I: Callings - Your Character's Drive"
+    intro: "Your calling defines who your character is at their core. It's not just flavor—it provides real mechanical benefits tied to pursuing your character's goals."
+    content:
+      - file: "callings/00_introduction.md"
+      - file: "callings/02_system_integration.md"
+        exclude_sections:
+          - "GM Considerations"
+
+      - section_header: "The Ten Callings"
+
+      - file: "callings/calling_types/explorer.md"
+      - file: "callings/calling_types/scholar.md"
+      - file: "callings/calling_types/protector.md"
+      - file: "callings/calling_types/ascendant.md"
+      - file: "callings/calling_types/avenger.md"
+      - file: "callings/calling_types/wanderer.md"
+      - file: "callings/calling_types/healer.md"
+      - file: "callings/calling_types/artisan.md"
+      - file: "callings/calling_types/rebel.md"
+      - file: "callings/calling_types/seeker.md"
+
+      - file: "callings/growth_patterns/calling_evolution.md"
+      - file: "callings/growth_patterns/calling_combinations.md"
+
+  # ===== ARCHETYPES =====
+  - title: "Part II: Archetypes - Your Character's Role"
+    intro: "Archetypes represent your training and capabilities—the mechanical foundation of what you can do."
+    content:
+      - file: "archetypes/00_introduction.md"
+      - file: "archetypes/02_system_integration.md"
+        exclude_sections:
+          - "GM Considerations"
+          - "Balancing Mixed Parties"
+
+      - section_header: "The Seven Core Archetypes"
+
+      - file: "archetypes/archetype_types/fighter.md"
+      - file: "archetypes/archetype_types/wizard.md"
+      - file: "archetypes/archetype_types/cleric.md"
+      - file: "archetypes/archetype_types/rogue.md"
+      - file: "archetypes/archetype_types/ranger.md"
+      - file: "archetypes/archetype_types/bard.md"
+      - file: "archetypes/archetype_types/paladin.md"
+
+  # ===== SPECIES =====
+  - title: "Part III: Species - Your Character's Heritage"
+    intro: "Your species represents your heritage and inherent traits. All species can pursue any calling or archetype."
+    content:
+      - file: "species/00_introduction.md"
+      - file: "species/02_system_integration.md"
+        exclude_sections:
+          - "GM Considerations"
+
+      - section_header: "The Four Core Species"
+
+      - file: "species/species_types/human.md"
+      - file: "species/species_types/elf.md"
+      - file: "species/species_types/dwarf.md"
+      - file: "species/species_types/halfling.md"
+
+  # ===== COMBAT =====
+  - title: "Part IV: Combat & Stances"
+    intro: "Combat in Flow RPG is dynamic and tactical. Your stance choice shapes how you fight and manage resources."
+    content:
+      - file: "core_rules/04_combat_system.md"
+        exclude_sections:
+          - "GM Notes"
+          - "Designing Combat Encounters"
+
+  # ===== MAGIC =====
+  - title: "Part V: Magic & Spellcasting"
+    intro: "Magic in Flow RPG adapts to your approach. The same spell creates different effects based on whether you cast with Mind, Awareness, Will, or Presence."
+    content:
+      - file: "spells/00_introduction.md"
+      - file: "spells/02_system_integration.md"
+        exclude_sections:
+          - "GM Considerations"
+
+      - section_header: "Spells by Tier"
+
+      - file: "spells/spell_tiers/cantrips.md"
+      - file: "spells/spell_tiers/standard_spells.md"
+      - file: "spells/spell_tiers/advanced_spells.md"
+      - file: "spells/spell_tiers/master_spells.md"
+
+  # ===== EQUIPMENT =====
+  - title: "Part VI: Equipment & Gear"
+    intro: "From simple tools to legendary artifacts, equipment shapes how you interact with the world."
+    content:
+      - file: "equipment/00_introduction.md"
+      - file: "equipment/02_system_integration.md"
+        exclude_sections:
+          - "GM Considerations"
+
+      - section_header: "Equipment Categories"
+
+      - file: "equipment/equipment_types/weapons.md"
+      - file: "equipment/equipment_types/armor.md"
+      - file: "equipment/equipment_types/adventuring_gear.md"
+      - file: "equipment/equipment_types/magical_items.md"
+
+  # ===== ADVANCEMENT =====
+  - title: "Part VII: Character Advancement"
+    intro: "As you adventure, your character grows stronger and gains new capabilities."
+    content:
+      - file: "core_rules/06_advancement.md"
+        exclude_sections:
+          - "GM Notes"
+          - "Pacing Advancement"
+
+  # ===== QUICK REFERENCES =====
+  - title: "Quick References"
+    intro: "Fast lookup tables and summaries for at-table use."
+    content:
+      - file: "callings/03_quick_reference.md"
+        rename_to: "Calling Quick Reference"
+
+      - file: "archetypes/03_quick_reference.md"
+        rename_to: "Archetype Quick Reference"
+
+      - file: "species/03_quick_reference.md"
+        rename_to: "Species Quick Reference"
+
+      - file: "spells/03_quick_reference.md"
+        rename_to: "Spell Quick Reference"
+
+      - file: "equipment/03_quick_reference.md"
+        rename_to: "Equipment Quick Reference"
+
+# Assembly options
+options:
+  generate_toc: true
+  fix_internal_links: false
+  add_page_breaks: false
+  heading_numbering: false

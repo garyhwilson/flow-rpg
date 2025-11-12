@@ -214,14 +214,21 @@ python scripts/assemble_book.py publications/manifests/core_rulebook.yaml
 
 **See:** `publications/README.md` for detailed documentation
 
-**Current Books:**
-- Core Rulebook (complete manifest ready)
+**Current Publications (All Ready):**
+- **Core Rulebook** (775 KB) - Complete game
+- **Player's Guide** (683 KB) - Player-facing content only
+- **Game Master's Guide** (279 KB) - GM-facing content only
+- **The Grimoire** (169 KB) - Magic system deep-dive
+- **Quick Reference** (84 KB) - Printable at-table reference
 
-**Planned Books:**
-- Player's Guide
-- Game Master's Guide
-- Grimoire: Advanced Magic
-- Additional supplements
+**Generate All Publications:**
+```bash
+python scripts/assemble_book.py publications/manifests/core_rulebook.yaml
+python scripts/assemble_book.py publications/manifests/players_guide.yaml
+python scripts/assemble_book.py publications/manifests/gm_guide.yaml
+python scripts/assemble_book.py publications/manifests/grimoire.yaml
+python scripts/assemble_book.py publications/manifests/quick_reference.yaml
+```
 
 ## Git & GitHub Workflow
 
@@ -277,6 +284,314 @@ git commit -m "Fixed stuff"
 
 **See:** `GIT_SETUP.md` for complete setup instructions
 
+## Git Usage Guidelines for Claude
+
+These guidelines help Claude actively support proper Git practices during work sessions.
+
+### When Claude Should Prompt for Commits
+
+I should remind you to review and commit changes when:
+
+**1. After Completing a Discrete Task**
+- Finished adding a new archetype/spell/calling
+- Completed a section of documentation
+- Fixed a specific bug or balance issue
+- Finished a set of related edits
+
+**2. Before Starting Major Changes**
+- About to refactor a large system
+- Planning to reorganize files
+- Starting experimental changes
+- Before trying alternative approaches
+
+**3. After Significant Milestones**
+- Completed a full system (e.g., all spells modularized)
+- Finished a publication manifest
+- Completed a session's work
+- Before switching focus to different system
+
+**4. Safety Checkpoints**
+- Before making potentially destructive edits
+- After creating many new files (rough guideline: 5-10+ files)
+- When work session is ending
+- Before long breaks in work
+
+**When NOT to Prompt:**
+- In the middle of a multi-step task
+- During active brainstorming/planning
+- When user explicitly says "don't commit yet"
+- For trivial typo fixes (batch these together)
+
+### Helping Write Commit Messages
+
+When prompting for a commit, I should:
+
+**1. Summarize What Changed**
+- List files modified/created
+- Describe the changes briefly
+- Group related changes
+
+**2. Propose Commit Message**
+- Suggest specific, descriptive message
+- Follow conventional commits format when appropriate
+- Include "why" not just "what"
+- Use imperative mood ("Add" not "Added")
+
+**3. Example Format:**
+```
+I've completed [X]. Ready to commit?
+
+Suggested commit message:
+"Add Monk archetype with ki point system
+
+- Created monk.md with complete archetype documentation
+- Added ki points as alternative resource to Flow
+- Integrated with existing combat stance system
+- Updated archetype quick reference"
+
+Files changed:
+- archetypes/archetype_types/monk.md (new)
+- archetypes/03_quick_reference.md (modified)
+```
+
+### Pre-Commit Verification
+
+Before suggesting a commit, I should verify:
+
+- [ ] No broken cross-references introduced
+- [ ] Consistent formatting maintained
+- [ ] No placeholder text left ([TODO], [Your Name], etc.)
+- [ ] Files are in correct locations
+- [ ] Related files are updated together (e.g., content + quick reference)
+- [ ] No assembled publications being committed (should be gitignored)
+
+If issues found, fix them before suggesting commit.
+
+### Git Workflow Rules for Claude
+
+**1. Always Suggest Review Commands First**
+```bash
+# Before commit, suggest these
+git status
+git diff
+```
+
+**2. Never Suggest These Commands** (unless user explicitly requests):
+- `git push --force` (destructive)
+- `git reset --hard` (destructive)
+- `git clean -fd` (destructive)
+- `git commit --amend` (unless last commit not pushed)
+- `git rebase` on main branch (risky)
+
+**3. Always Suggest Proper Sequence**:
+```bash
+# Review
+git status
+git diff
+
+# Commit
+git add .
+git commit -m "Descriptive message"
+
+# Push
+git push
+```
+
+**4. Warn About These Situations**:
+- Committing without reviewing changes first
+- Very large commits (>20 files) - suggest breaking up
+- Committing assembled publications (should be gitignored)
+- Committing with vague messages
+- Mixing unrelated changes in single commit
+
+### Commit Message Standards
+
+**Encourage This Format:**
+
+```bash
+# Good - Specific and clear
+git commit -m "Add Monk archetype with ki point system"
+
+# Better - Includes context
+git commit -m "Add Monk archetype with ki point system
+
+- Created complete Monk archetype documentation
+- Ki points as alternative resource to Flow
+- Unarmed combat specialization
+- Integrated with existing stance system"
+```
+
+**Prevent These:**
+
+```bash
+# Too vague
+git commit -m "updates"
+git commit -m "fixed stuff"
+git commit -m "more changes"
+
+# Too generic
+git commit -m "Updated files"
+git commit -m "Changes"
+```
+
+**If user provides vague message, suggest improvement:**
+```
+That message is a bit vague. How about:
+"Fix Fireball damage calculation in advanced_spells.md"
+
+This makes it clear what changed and why when reviewing history.
+```
+
+### Session Management
+
+**At Session Start:**
+```bash
+# Check for uncommitted changes
+git status
+```
+- If uncommitted changes exist, ask if user wants to commit them first
+- If on wrong branch, notify user
+
+**During Session:**
+- Commit after each completed task (not mid-task)
+- Batch small related changes together
+- Don't interrupt flow with too-frequent commit prompts
+- Group related file changes into single commit
+
+**At Session End:**
+```
+We've completed [list of tasks]. Before ending:
+
+1. Review changes: git status && git diff
+2. Commit work: git add . && git commit -m "[suggested message]"
+3. Push to GitHub: git push
+
+This ensures your work is backed up and tracked.
+```
+
+Always remind to commit any uncommitted work at session end.
+
+### When to Suggest Branching
+
+I should recommend creating a branch for:
+
+**1. Experimental Changes**
+- Testing major balance changes
+- Trying alternative system designs
+- Prototyping new mechanics
+
+**2. Large Refactors**
+- Restructuring multiple files
+- Renaming systems
+- Major reorganization
+
+**3. Optional Content**
+- New archetypes being playtested
+- Alternative spell lists
+- Variant rules
+
+**Suggested Workflow:**
+```bash
+# Create feature branch
+git checkout -b feature/monk-archetype
+
+# Work and commit as normal
+git add .
+git commit -m "Add Monk archetype (experimental)"
+
+# Push branch
+git push -u origin feature/monk-archetype
+
+# When ready to merge:
+git checkout main
+git merge feature/monk-archetype
+git branch -d feature/monk-archetype
+```
+
+**Keep on Main Branch:**
+- Bug fixes
+- Typo corrections
+- Balance tweaks
+- Documentation improvements
+- Regular content additions
+
+### Error Prevention
+
+I should actively warn about:
+
+**1. Large File Commits**
+- If assembled books aren't gitignored
+- Binary files being added accidentally
+- Very large documents (>1MB)
+
+**2. Sensitive Information**
+- Email addresses in content (use placeholders)
+- Personal information
+- API keys or tokens (shouldn't be in this project, but watch for it)
+
+**3. File Organization**
+- Files in wrong directories
+- Inconsistent naming conventions
+- Missing related updates
+
+**4. Commit Quality**
+- Mixing multiple unrelated changes
+- Incomplete features being committed
+- Broken cross-references
+
+### Example Interaction
+
+**Good Flow:**
+```
+User: "Let's add a Monk archetype"
+Claude: [Creates monk.md with complete documentation]
+
+Claude: "I've completed the Monk archetype with ki point mechanics.
+Before we continue, let's commit this work:
+
+git status  # Review what changed
+
+Suggested commit:
+git add drafts/archetypes/archetype_types/monk.md
+git commit -m 'Add Monk archetype with ki point system
+
+- Created complete Monk archetype documentation
+- Ki points as alternative resource to Flow
+- Unarmed combat specialization
+- Integrated with existing stance system'
+
+Ready to commit, or would you like to review the changes first?"
+```
+
+**Preventing Problems:**
+```
+User: "Commit these changes"
+Claude: "Before committing, I notice:
+- The assembled Core Rulebook (775KB) is included in changes
+- This should be gitignored (it's regenerated from sources)
+
+Let me verify the .gitignore is working correctly first."
+```
+
+### Commit Frequency Guidelines
+
+**Good Rhythm:**
+- 1 commit per completed task/feature
+- 3-5 commits per work session (rough guideline)
+- Commit before ending session (always)
+
+**Too Frequent:**
+- Committing every file edit
+- Committing incomplete work
+- Micro-commits for trivial changes
+
+**Too Infrequent:**
+- Working for hours without commits
+- Mixing many unrelated changes
+- Risk losing work if something goes wrong
+
+**Balance:** Commit when something discrete and meaningful is complete.
+
 ## Future Enhancements
 
 - **Character Generator Tool**: Interactive tool for character creation
@@ -285,6 +600,19 @@ git commit -m "Fixed stuff"
 - **Additional Publication Manifests**: Player's Guide, GM Guide, Grimoire, etc.
 
 ## Session Notes
+
+_11/12/25 Session (Continued 5)_:
+
+- Completed full publication suite (5 publications total)
+- Created Player's Guide manifest (683 KB - player-facing only)
+- Created Game Master's Guide manifest (279 KB - GM-facing only)
+- Created Spell Grimoire manifest (169 KB - magic deep-dive)
+- Created Quick Reference manifest (84 KB - printable reference)
+- Created publication-specific title pages
+- Successfully assembled all 5 publications
+- Updated publications/README.md with complete book list
+- Updated Living Design Document
+- Added Git Usage Guidelines for Claude to enforce proper Git practices
 
 _11/12/25 Session (Continued 4)_:
 

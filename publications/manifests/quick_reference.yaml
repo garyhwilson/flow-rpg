@@ -1,0 +1,79 @@
+# Flow RPG Quick Reference Compilation Manifest
+# All quick reference sections compiled into one printable document
+
+title: "Flow RPG Quick Reference"
+version: "1.0 (Draft)"
+output_file: "publications/assembled/quick_reference.md"
+
+sections:
+  # ===== FRONT MATTER =====
+  - title: "Flow RPG Quick Reference"
+    intro: "Fast-lookup tables and references for at-table use. Print this document for easy access during play."
+
+  # ===== CORE MECHANICS =====
+  - title: "Core Mechanics"
+    content:
+      - file: "core_rules/02_basic_mechanics.md"
+        exclude_sections:
+          - "The Flow Economy"
+          - "Skills in Detail"
+          - "Extended Contests"
+          - "Group Checks"
+        # Keep only: Making Checks, Success Thresholds, basic rules
+
+  # ===== COMBAT QUICK REF =====
+  - title: "Combat Reference"
+    content:
+      - file: "core_rules/04_combat_system.md"
+        exclude_sections:
+          - "Combat Philosophy"
+          - "The Flow of Combat"
+          - "Zones in Practice"
+          - "Detailed Action Descriptions"
+          - "Example Combat"
+          - "Advanced Combat Options"
+          - "GM Notes"
+        # Keep only: Quick reference tables, stance summaries, basic actions
+
+  # ===== CALLING REFERENCE =====
+  - title: "Calling Quick Reference"
+    content:
+      - file: "callings/03_quick_reference.md"
+
+  # ===== ARCHETYPE REFERENCE =====
+  - title: "Archetype Quick Reference"
+    content:
+      - file: "archetypes/03_quick_reference.md"
+
+  # ===== SPECIES REFERENCE =====
+  - title: "Species Quick Reference"
+    content:
+      - file: "species/03_quick_reference.md"
+
+  # ===== SPELL REFERENCE =====
+  - title: "Spell Quick Reference"
+    content:
+      - file: "spells/03_quick_reference.md"
+
+  # ===== EQUIPMENT REFERENCE =====
+  - title: "Equipment Quick Reference"
+    content:
+      - file: "equipment/03_quick_reference.md"
+
+  # ===== ADVANCEMENT REFERENCE =====
+  - title: "Advancement Reference"
+    content:
+      - file: "core_rules/06_advancement.md"
+        exclude_sections:
+          - "Philosophy of Advancement"
+          - "Milestone Details"
+          - "Example Advancement"
+          - "GM Notes"
+        # Keep only: Quick milestone table, advancement options list
+
+# Assembly options
+options:
+  generate_toc: true
+  fix_internal_links: false
+  add_page_breaks: true   # Page breaks between sections for printing
+  heading_numbering: false

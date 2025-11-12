@@ -1,0 +1,132 @@
+# Flow RPG Spell Grimoire Manifest
+# Deep dive into the magic system with all spells and extensive examples
+
+title: "Flow RPG: The Grimoire"
+version: "1.0 (Draft)"
+output_file: "publications/assembled/grimoire.md"
+
+sections:
+  # ===== FRONT MATTER =====
+  - title: "Front Matter"
+    content:
+      - file: "publications/templates/grimoire_title.md"
+      - file: "publications/templates/copyright.md"
+
+  # ===== INTRODUCTION =====
+  - title: "Introduction: The Art of Magic"
+    intro: "Magic in Flow RPG is revolutionary. This grimoire explores the complete spell system in depth."
+    content:
+      - file: "spells/00_introduction.md"
+
+  # ===== MAGICAL FOUNDATIONS =====
+  - title: "Part I: Understanding Magic"
+    intro: "Before diving into spells, understand the foundations of the magical system."
+    content:
+      - file: "core_rules/05_magic_system.md"
+        rename_to: "The Magic System in Detail"
+
+      - file: "spells/02_system_integration.md"
+        rename_to: "How Magic Integrates with Everything"
+
+  # ===== THE FOUR APPROACHES =====
+  - title: "Part II: The Four Casting Approaches"
+    intro: "Deep dive into what makes each attribute approach unique and how to leverage their strengths."
+    content:
+      # This section would benefit from expanded content in the future
+      # For now, we'll include relevant sections from introduction
+      - file: "spells/00_introduction.md"
+        exclude_sections:
+          - "Overview"
+          - "Magic Access Requirements"
+          - "Spell Categories"
+          - "Armor and Casting"
+          - "Spell Failure"
+          - "Using This Documentation"
+          - "Design Philosophy"
+        # Keeps only "The Four Casting Approaches" section
+
+  # ===== CANTRIPS =====
+  - title: "Part III: Cantrips - Fundamental Magic"
+    intro: "Master the basics. Cantrips may be simple, but in skilled hands they're elegant solutions to countless problems."
+    content:
+      - file: "spells/spell_tiers/cantrips.md"
+
+  # ===== STANDARD SPELLS =====
+  - title: "Part IV: Standard Spells - Reliable Magic"
+    intro: "Standard spells are the bread and butter of magical practice. Efficient, effective, and essential."
+    content:
+      - file: "spells/spell_tiers/standard_spells.md"
+
+  # ===== ADVANCED SPELLS =====
+  - title: "Part V: Advanced Spells - Powerful Magic"
+    intro: "Advanced spells can change the course of an encounter. These are the spells players remember."
+    content:
+      - file: "spells/spell_tiers/advanced_spells.md"
+
+  # ===== MASTER SPELLS =====
+  - title: "Part VI: Master Spells - Legendary Magic"
+    intro: "Master spells are the pinnacle of magical power. When these spells are cast, legends are born."
+    content:
+      - file: "spells/spell_tiers/master_spells.md"
+
+  # ===== MAGICAL TRADITIONS =====
+  - title: "Part VII: Magical Traditions"
+    intro: "Explore the cultural and narrative frameworks that shape how magic is practiced."
+    content:
+      - file: "core_rules/05_magic_system.md"
+        exclude_sections:
+          - "Core Magic Concepts"
+          - "Flexible Casting System"
+          - "Spell Categories"
+          - "Spell List with Attribute Variations"
+          - "Tactical Magic Guidelines"
+        # Keeps "Magical Traditions" and "Enchanted Items" sections
+
+  # ===== FOR GAME MASTERS =====
+  - title: "Part VIII: Running Magic (For GMs)"
+    intro: "Guidance for Game Masters on balancing magic, adjudicating spells, and creating magical encounters."
+    content:
+      - file: "spells/01_gm_guidelines.md"
+
+  # ===== TACTICAL GUIDE =====
+  - title: "Part IX: Tactical Spellcasting"
+    intro: "Advanced tactics for maximizing your effectiveness as a spellcaster."
+    content:
+      - file: "core_rules/05_magic_system.md"
+        exclude_sections:
+          - "Core Magic Concepts"
+          - "Flexible Casting System"
+          - "Spell Categories"
+          - "Spell List with Attribute Variations"
+          - "Magical Traditions"
+          - "Enchanted Items"
+          - "Example Magical Character Concepts"
+        # Keeps "Tactical Magic Guidelines" section
+
+  # ===== CHARACTER EXAMPLES =====
+  - title: "Part X: Example Magical Characters"
+    intro: "See how different casters leverage the flexible system to create unique playstyles."
+    content:
+      - file: "core_rules/05_magic_system.md"
+        exclude_sections:
+          - "Core Magic Concepts"
+          - "Flexible Casting System"
+          - "Spell Categories"
+          - "Spell List with Attribute Variations"
+          - "Magical Traditions"
+          - "Enchanted Items"
+          - "Tactical Magic Guidelines"
+        # Keeps "Example Magical Character Concepts" section
+
+  # ===== QUICK REFERENCE =====
+  - title: "Appendix: Spell Quick Reference"
+    intro: "Fast-lookup tables for at-table use."
+    content:
+      - file: "spells/03_quick_reference.md"
+
+# Assembly options
+options:
+  generate_toc: true
+  fix_internal_links: false
+  add_page_breaks: false
+  heading_numbering: false
