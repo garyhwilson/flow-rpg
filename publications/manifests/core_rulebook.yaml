@@ -1,0 +1,160 @@
+# Flow RPG Core Rulebook Manifest
+# This defines the structure and content of the complete Core Rulebook
+
+title: "Flow RPG Core Rulebook"
+version: "1.0 (Draft)"
+output_file: "publications/assembled/core_rulebook.md"
+
+# Book structure - sections are assembled in order
+sections:
+  # ===== FRONT MATTER =====
+  - title: "Front Matter"
+    content:
+      - file: "publications/templates/title_page.md"
+      - file: "publications/templates/copyright.md"
+
+  # ===== PART I: INTRODUCTION & CORE RULES =====
+  - title: "Part I: Core Rules"
+    intro: "These are the fundamental rules that power Flow RPG. Master these concepts and you'll be ready to play."
+    content:
+      - file: "core_rules/01_introduction.md"
+      - file: "core_rules/02_basic_mechanics.md"
+      - file: "core_rules/03_character_creation.md"
+      - file: "core_rules/04_combat_system.md"
+      - file: "core_rules/05_magic_system.md"
+        exclude_sections:
+          - "Example Magical Character Concepts"
+      - file: "core_rules/06_advancement.md"
+
+  # ===== PART II: CALLINGS =====
+  - title: "Part II: Callings - Character Motivation"
+    intro: "Your calling defines who your character is at their core—not just what they can do, but why they do it. This section explores the ten fundamental callings that drive adventurers."
+    content:
+      - file: "callings/00_introduction.md"
+
+      - section_header: "The Ten Callings"
+
+      - file: "callings/calling_types/explorer.md"
+      - file: "callings/calling_types/scholar.md"
+      - file: "callings/calling_types/protector.md"
+      - file: "callings/calling_types/ascendant.md"
+      - file: "callings/calling_types/avenger.md"
+      - file: "callings/calling_types/wanderer.md"
+      - file: "callings/calling_types/healer.md"
+      - file: "callings/calling_types/artisan.md"
+      - file: "callings/calling_types/rebel.md"
+      - file: "callings/calling_types/seeker.md"
+
+      - file: "callings/growth_patterns/calling_evolution.md"
+      - file: "callings/growth_patterns/calling_combinations.md"
+
+  # ===== PART III: ARCHETYPES =====
+  - title: "Part III: Archetypes - Character Profession"
+    intro: "Archetypes represent your character's training and capabilities—the mechanical foundation of what you can do in the game."
+    content:
+      - file: "archetypes/00_introduction.md"
+      - file: "archetypes/02_system_integration.md"
+
+      - section_header: "The Seven Core Archetypes"
+
+      - file: "archetypes/archetype_types/fighter.md"
+      - file: "archetypes/archetype_types/wizard.md"
+      - file: "archetypes/archetype_types/cleric.md"
+      - file: "archetypes/archetype_types/rogue.md"
+      - file: "archetypes/archetype_types/ranger.md"
+      - file: "archetypes/archetype_types/bard.md"
+      - file: "archetypes/archetype_types/paladin.md"
+
+  # ===== PART IV: SPECIES =====
+  - title: "Part IV: Species - Character Heritage"
+    intro: "Your species represents your character's heritage and inherent traits. While all species can pursue any calling or archetype, each brings unique advantages to the table."
+    content:
+      - file: "species/00_introduction.md"
+      - file: "species/02_system_integration.md"
+
+      - section_header: "The Four Core Species"
+
+      - file: "species/species_types/human.md"
+      - file: "species/species_types/elf.md"
+      - file: "species/species_types/dwarf.md"
+      - file: "species/species_types/halfling.md"
+
+  # ===== PART V: MAGIC SYSTEM =====
+  - title: "Part V: Magic - The Art of Spellcasting"
+    intro: "Magic in Flow RPG is revolutionary—the same spell adapts to your approach, creating unique effects based on whether you cast with mind, awareness, will, or presence."
+    content:
+      - file: "spells/00_introduction.md"
+      - file: "spells/02_system_integration.md"
+
+      - section_header: "Spells by Tier"
+
+      - file: "spells/spell_tiers/cantrips.md"
+      - file: "spells/spell_tiers/standard_spells.md"
+      - file: "spells/spell_tiers/advanced_spells.md"
+      - file: "spells/spell_tiers/master_spells.md"
+
+  # ===== PART VI: EQUIPMENT =====
+  - title: "Part VI: Equipment - Tools of Adventure"
+    intro: "From simple torches to legendary magical artifacts, equipment shapes how your character interacts with the world."
+    content:
+      - file: "equipment/00_introduction.md"
+      - file: "equipment/02_system_integration.md"
+
+      - section_header: "Equipment Categories"
+
+      - file: "equipment/equipment_types/weapons.md"
+      - file: "equipment/equipment_types/armor.md"
+      - file: "equipment/equipment_types/adventuring_gear.md"
+      - file: "equipment/equipment_types/magical_items.md"
+
+  # ===== PART VII: GAME MASTER'S SECTION =====
+  - title: "Part VII: Running the Game"
+    intro: "This section provides Game Masters with the tools and guidance needed to run compelling Flow RPG adventures."
+    content:
+      - file: "core_rules/08_gm_guide.md"
+
+      - section_header: "System-Specific GM Guidelines"
+
+      - file: "callings/01_gm_guidelines.md"
+        rename_to: "Running Callings in Your Game"
+
+      - file: "archetypes/01_gm_guidelines.md"
+        rename_to: "Running Archetypes in Your Game"
+
+      - file: "species/01_gm_guidelines.md"
+        rename_to: "Running Species in Your Game"
+
+      - file: "spells/01_gm_guidelines.md"
+        rename_to: "Running Magic in Your Game"
+
+      - file: "equipment/01_gm_guidelines.md"
+        rename_to: "Running Equipment in Your Game"
+
+  # ===== APPENDICES =====
+  - title: "Appendices"
+    intro: "Quick reference materials for players and GMs."
+    content:
+      - file: "callings/03_quick_reference.md"
+        rename_to: "Appendix A: Calling Quick Reference"
+
+      - file: "archetypes/03_quick_reference.md"
+        rename_to: "Appendix B: Archetype Quick Reference"
+
+      - file: "species/03_quick_reference.md"
+        rename_to: "Appendix C: Species Quick Reference"
+
+      - file: "spells/03_quick_reference.md"
+        rename_to: "Appendix D: Spell Quick Reference"
+
+      - file: "equipment/03_quick_reference.md"
+        rename_to: "Appendix E: Equipment Quick Reference"
+
+      - file: "core_rules/09_appendices.md"
+        rename_to: "Appendix F: Additional Resources"
+
+# Assembly options
+options:
+  generate_toc: true          # Auto-generate table of contents
+  fix_internal_links: false   # Update cross-references (future feature)
+  add_page_breaks: false      # Add --- between major sections
+  heading_numbering: false    # Auto-number sections (future feature)
