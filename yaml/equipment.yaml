@@ -1,0 +1,864 @@
+# Flow RPG Equipment System
+# Version: 1.0-complete
+# Weapons, armor, items, and economy
+
+equipment_system:
+  philosophy:
+    core_concept: "Equipment enhances but doesn't define characters"
+    design_principles:
+      - "Simple categories with meaningful choices"
+      - "Equipment grows with characters"
+      - "Quality matters more than quantity"
+      - "Integration with Flow system"
+
+# ============================================
+# WEAPONS
+# ============================================
+
+weapons:
+  categories:
+    light_weapons:
+      damage: "2d6"
+      attribute_options: ["might", "grace"]
+      special_property: "+1 to Finesse-based actions"
+      weight: "Light"
+      cost: "10-30 coins"
+      
+      examples:
+        dagger:
+          damage: "2d6"
+          range: "Close when thrown"
+          special: "Concealable"
+          cost: 10
+        
+        shortsword:
+          damage: "2d6"
+          special: "Quick draw"
+          cost: 20
+        
+        rapier:
+          damage: "2d6"
+          attribute: "grace only"
+          special: "+1 to parry"
+          cost: 30
+        
+        hand_axe:
+          damage: "2d6"
+          range: "Close when thrown"
+          special: "Tool use"
+          cost: 15
+    
+    medium_weapons:
+      damage: "2d6+1"
+      attribute_options: ["might", "grace"]
+      special_property: "Balanced, no special rules"
+      weight: "Medium"
+      cost: "30-50 coins"
+      
+      examples:
+        longsword:
+          damage: "2d6+1"
+          special: "Versatile (2d6+2 two-handed)"
+          cost: 40
+        
+        mace:
+          damage: "2d6+1"
+          attribute: "might only"
+          special: "Ignores 1 DR"
+          cost: 35
+        
+        spear:
+          damage: "2d6+1"
+          special: "Reach, can brace"
+          cost: 30
+        
+        battle_axe:
+          damage: "2d6+1"
+          special: "Brutal critical (+2 damage)"
+          cost: 45
+    
+    heavy_weapons:
+      damage: "2d6+2"
+      attribute: "might only"
+      special_property: "-1 Grace while wielding"
+      weight: "Heavy"
+      two_handed: true
+      cost: "50-100 coins"
+      
+      examples:
+        greatsword:
+          damage: "2d6+2"
+          special: "Cleave (hit 2 adjacent on crit)"
+          cost: 75
+        
+        maul:
+          damage: "2d6+2"
+          special: "Knockback on hit"
+          cost: 60
+        
+        greataxe:
+          damage: "2d6+2"
+          special: "Devastating critical (×3 on 12+)"
+          cost: 80
+        
+        polearm:
+          damage: "2d6+2"
+          special: "Reach, brace, trip"
+          cost: 70
+    
+    reach_weapons:
+      damage: "2d6"
+      attribute_options: ["might", "grace"]
+      special_property: "Attack from Close range"
+      weight: "Medium"
+      cost: "40-60 coins"
+      
+      examples:
+        pike:
+          damage: "2d6"
+          special: "Extra reach (2 zones)"
+          two_handed: true
+          cost: 50
+        
+        halberd:
+          damage: "2d6"
+          special: "Versatile damage types"
+          two_handed: true
+          cost: 55
+        
+        whip:
+          damage: "2d6"
+          attribute: "grace only"
+          special: "Disarm, trip, grab"
+          cost: 40
+        
+        lance:
+          damage: "2d6"
+          special: "+2 damage on charge"
+          mounted: "Required for full effect"
+          cost: 60
+    
+    thrown_weapons:
+      damage: "2d6"
+      range: "Close"
+      special_property: "+1 Flow when hit at Close range"
+      weight: "Light"
+      returning: "Some enchanted versions"
+      cost: "5-20 coins each"
+      
+      examples:
+        javelin:
+          damage: "2d6"
+          range: "Close or Far at -2"
+          quantity: "Bundle of 3"
+          cost: 15
+        
+        throwing_axe:
+          damage: "2d6"
+          special: "Can use in melee"
+          quantity: "Bundle of 3"
+          cost: 18
+        
+        chakram:
+          damage: "2d6"
+          attribute: "grace only"
+          special: "Returns on miss"
+          cost: 20
+        
+        sling_bullet:
+          damage: "2d6"
+          range: "Far with sling"
+          quantity: "Pouch of 20"
+          cost: 5
+    
+    ranged_weapons:
+      damage: "2d6"
+      range: "Far"
+      special_property: "+1 damage at Far, -2 when Engaged"
+      weight: "Medium"
+      ammunition: "Required"
+      cost: "30-150 coins"
+      
+      examples:
+        shortbow:
+          damage: "2d6"
+          attribute: "grace only"
+          range: "Far"
+          special: "Quick shot"
+          ammo: "Arrows"
+          cost: 30
+        
+        longbow:
+          damage: "2d6"
+          attribute: "grace only"
+          range: "Far or Extreme"
+          special: "+1 damage"
+          ammo: "Arrows"
+          cost: 60
+        
+        crossbow:
+          damage: "2d6+1"
+          attribute: "mind or grace"
+          range: "Far"
+          special: "Loading (every other turn)"
+          ammo: "Bolts"
+          cost: 80
+        
+        heavy_crossbow:
+          damage: "2d6+2"
+          range: "Far or Extreme"
+          special: "Loading, ignores 2 DR"
+          ammo: "Bolts"
+          cost: 150
+  
+  weapon_properties:
+    versatile:
+      description: "Use one or two-handed"
+      one_handed: "Normal damage"
+      two_handed: "+1 damage"
+    
+    finesse:
+      description: "Use Grace instead of Might"
+      benefit: "Attribute choice flexibility"
+    
+    loading:
+      description: "Requires action to reload"
+      limitation: "Attack every other turn"
+      benefit: "Usually higher damage"
+    
+    reach:
+      description: "Attack from further away"
+      benefit: "Strike from Close range"
+    
+    brutal:
+      description: "Devastating wounds"
+      benefit: "Extra critical damage"
+    
+    defensive:
+      description: "Aids in defense"
+      benefit: "+1 to defensive actions"
+  
+  weapon_quality:
+    crude:
+      modifier: "-1 to hit"
+      cost_multiplier: 0.5
+      description: "Poorly made"
+    
+    standard:
+      modifier: 0
+      cost_multiplier: 1
+      description: "Normal quality"
+    
+    fine:
+      modifier: "+1 to hit OR damage"
+      cost_multiplier: 5
+      description: "Excellent craftsmanship"
+    
+    masterwork:
+      modifier: "+1 to hit AND damage"
+      cost_multiplier: 10
+      description: "Artisan creation"
+    
+    legendary:
+      modifier: "+2 to hit and damage"
+      cost_multiplier: "Priceless"
+      special: "Unique properties"
+      description: "Weapons of legend"
+
+# ============================================
+# ARMOR
+# ============================================
+
+armor:
+  types:
+    no_armor:
+      damage_reduction: 0
+      penalties:
+        grace: 0
+        flow: "None"
+      benefits:
+        flow_when_hit: "+1 Flow when taking damage"
+        spellcasting_bonus: "+1 to Sorcery checks"
+        extra_movement: "+1 zone per turn"
+      cost: 0
+      description: "Clothing only"
+    
+    light_armor:
+      damage_reduction: 1
+      penalties:
+        grace: 0
+        flow: "None"
+        spellcasting: 0
+      benefits:
+        initiative: "+1 to act sooner in stance"
+        stealth_capable: "No Stealth penalty"
+      cost: "20-50 coins"
+      
+      examples:
+        padded:
+          dr: 1
+          special: "Quiet"
+          cost: 20
+        
+        leather:
+          dr: 1
+          special: "Flexible"
+          cost: 30
+        
+        studded_leather:
+          dr: 1
+          special: "+1 vs. slashing"
+          cost: 40
+        
+        hide:
+          dr: 1
+          special: "Natural camouflage"
+          cost: 35
+    
+    medium_armor:
+      damage_reduction: 2
+      penalties:
+        grace: -1
+        flow: "None"
+        spellcasting: -1
+      benefits:
+        guard_bonus: "+1 Guard at scene start"
+        balanced: "No stance restrictions"
+      cost: "50-150 coins"
+      
+      examples:
+        chain_shirt:
+          dr: 2
+          special: "Concealable under clothes"
+          cost: 80
+        
+        scale_mail:
+          dr: 2
+          special: "+1 vs. piercing"
+          cost: 100
+        
+        breastplate:
+          dr: 2
+          special: "Vital protection"
+          cost: 120
+        
+        ring_mail:
+          dr: 2
+          special: "Flexible"
+          cost: 90
+    
+    heavy_armor:
+      damage_reduction: 4
+      penalties:
+        grace: -2
+        flow: "-1 to all Flow generation"
+        spellcasting: -3
+      benefits:
+        knockback_immunity: "Cannot be moved"
+        damage_reduction: "Highest available"
+      cost: "200-500 coins"
+      
+      examples:
+        splint_mail:
+          dr: 4
+          special: "Reinforced joints"
+          cost: 250
+        
+        banded_mail:
+          dr: 4
+          special: "Distributed weight"
+          cost: 300
+        
+        half_plate:
+          dr: 4
+          special: "Good mobility for heavy"
+          cost: 400
+        
+        full_plate:
+          dr: 4
+          special: "+1 DR vs. all"
+          cost: 500
+  
+  shields:
+    buckler:
+      guard_bonus: 1
+      special: "Can use with two-handed"
+      cost: 15
+      weight: "Light"
+    
+    small_shield:
+      guard_bonus: 1
+      special: "Quick to ready"
+      cost: 20
+      weight: "Light"
+    
+    medium_shield:
+      guard_bonus: 2
+      special: "Standard protection"
+      cost: 30
+      weight: "Medium"
+    
+    large_shield:
+      guard_bonus: 2
+      special: "Provides partial cover"
+      cost: 40
+      weight: "Medium"
+    
+    tower_shield:
+      guard_bonus: 3
+      special: "Full cover, -1 to attacks"
+      cost: 60
+      weight: "Heavy"
+
+# ============================================
+# ADVENTURING GEAR
+# ============================================
+
+adventuring_gear:
+  kits:
+    adventurers_kit:
+      contents:
+        - "Backpack"
+        - "Bedroll"
+        - "Rations (1 week)"
+        - "Rope (50 ft)"
+        - "Torches (10)"
+        - "Waterskin"
+        - "Basic tools"
+      cost: 25
+      weight: "Medium load"
+    
+    dungeoneers_kit:
+      contents:
+        - "Everything in adventurer's kit"
+        - "Grappling hook"
+        - "Hammer and pitons (10)"
+        - "Crowbar"
+        - "Chalk"
+        - "10-foot pole"
+      cost: 50
+      weight: "Heavy load"
+    
+    healers_kit:
+      contents:
+        - "Bandages"
+        - "Herbs"
+        - "Salves"
+        - "Surgical tools"
+      uses: 10
+      benefit: "+1 to Medicine checks"
+      cost: 40
+    
+    thieves_tools:
+      contents:
+        - "Lockpicks"
+        - "Small mirror"
+        - "File"
+        - "Tension wrenches"
+      benefit: "Required for lockpicking"
+      quality:
+        standard: 
+          cost: 30
+          bonus: 0
+        masterwork:
+          cost: 150
+          bonus: "+1 to Finesse"
+    
+    disguise_kit:
+      contents:
+        - "Makeup"
+        - "Wigs"
+        - "Costume pieces"
+        - "False papers"
+      benefit: "Required for disguise"
+      uses: 10
+      cost: 35
+  
+  consumables:
+    healing_potion:
+      effect: "Restore 2d6 Vitality"
+      action: "Drink as action"
+      cost: 50
+      rarity: "Common"
+    
+    antidote:
+      effect: "Cure poison"
+      action: "Drink as action"
+      cost: 30
+      rarity: "Common"
+    
+    alchemists_fire:
+      effect: "1d6 fire damage, ongoing"
+      action: "Throw at Close range"
+      cost: 25
+      rarity: "Common"
+    
+    smoke_bomb:
+      effect: "Obscure vision in zone"
+      action: "Throw or drop"
+      cost: 20
+      rarity: "Common"
+    
+    flash_powder:
+      effect: "Blind for 1 round"
+      action: "Throw at Close range"
+      cost: 30
+      rarity: "Uncommon"
+  
+  tools_and_utilities:
+    rope:
+      types:
+        hemp:
+          length: "50 feet"
+          strength: "Standard"
+          cost: 5
+        silk:
+          length: "50 feet"
+          strength: "Superior, lighter"
+          cost: 25
+    
+    light_sources:
+      torch:
+        duration: "1 hour"
+        radius: "Close range"
+        cost: 1
+      
+      lantern:
+        duration: "6 hours per oil"
+        radius: "Close range, directed"
+        cost: 15
+      
+      sunrod:
+        duration: "6 hours"
+        radius: "Close range"
+        cost: 10
+    
+    climbing_gear:
+      grappling_hook:
+        benefit: "+1 to climbing"
+        cost: 10
+      
+      climbers_kit:
+        benefit: "+2 to climbing"
+        cost: 40
+      
+      pitons:
+        quantity: 10
+        benefit: "Secure climbing"
+        cost: 5
+
+# ============================================
+# MAGIC ITEMS
+# ============================================
+
+magic_items:
+  rarity_tiers:
+    common:
+      power: "Minor benefits"
+      cost: "50-200 coins"
+      availability: "Major cities"
+    
+    uncommon:
+      power: "Useful abilities"
+      cost: "200-1000 coins"
+      availability: "Specialist shops"
+    
+    rare:
+      power: "Significant advantages"
+      cost: "1000-5000 coins"
+      availability: "Special order"
+    
+    very_rare:
+      power: "Powerful effects"
+      cost: "5000-25000 coins"
+      availability: "Quest rewards"
+    
+    legendary:
+      power: "Campaign-changing"
+      cost: "Priceless"
+      availability: "Unique artifacts"
+  
+  enhancement_bonuses:
+    plus_1:
+      weapons: "+1 hit and damage"
+      armor: "+1 DR"
+      cost_multiplier: 10
+      rarity: "Uncommon"
+    
+    plus_2:
+      weapons: "+2 hit and damage"
+      armor: "+2 DR"
+      cost_multiplier: 50
+      rarity: "Rare"
+    
+    plus_3:
+      weapons: "+3 hit and damage"
+      armor: "+3 DR"
+      cost_multiplier: 200
+      rarity: "Very rare"
+  
+  weapon_properties:
+    flaming:
+      effect: "+1d6 fire damage"
+      cost: "+2000 coins"
+      rarity: "Rare"
+    
+    frost:
+      effect: "+1d6 cold damage"
+      cost: "+2000 coins"
+      rarity: "Rare"
+    
+    shock:
+      effect: "+1d6 lightning damage"
+      cost: "+2000 coins"
+      rarity: "Rare"
+    
+    keen:
+      effect: "Critical on 11+"
+      cost: "+3000 coins"
+      rarity: "Rare"
+    
+    vorpal:
+      effect: "Behead on natural 12"
+      cost: "Priceless"
+      rarity: "Legendary"
+    
+    returning:
+      effect: "Returns when thrown"
+      cost: "+1500 coins"
+      rarity: "Uncommon"
+  
+  armor_properties:
+    fortification:
+      light: "25% crit negation"
+      moderate: "50% crit negation"
+      heavy: "75% crit negation"
+      cost: "+1000/3000/5000"
+    
+    glamered:
+      effect: "Appears as clothing"
+      cost: "+1500 coins"
+      rarity: "Uncommon"
+    
+    ethereal:
+      effect: "No spellcasting penalty"
+      cost: "+4000 coins"
+      rarity: "Rare"
+    
+    invulnerability:
+      effect: "DR 5 once per scene"
+      cost: "Priceless"
+      rarity: "Legendary"
+  
+  wondrous_items:
+    stat_boosters:
+      belt_of_might:
+        effect: "+1 Might"
+        cost: 2000
+        rarity: "Rare"
+      
+      gloves_of_grace:
+        effect: "+1 Grace"
+        cost: 2000
+        rarity: "Rare"
+      
+      headband_of_mind:
+        effect: "+1 Mind"
+        cost: 2000
+        rarity: "Rare"
+    
+    utility_items:
+      bag_of_holding:
+        effect: "Holds 500 lbs, weighs 15"
+        cost: 1500
+        rarity: "Uncommon"
+      
+      boots_of_speed:
+        effect: "+1 zone movement"
+        cost: 2500
+        rarity: "Rare"
+      
+      cloak_of_protection:
+        effect: "+1 to all defenses"
+        cost: 1000
+        rarity: "Uncommon"
+      
+      ring_of_flow:
+        effect: "+1 maximum Flow"
+        cost: 3000
+        rarity: "Rare"
+
+# ============================================
+# EQUIPMENT PROGRESSION
+# ============================================
+
+equipment_progression:
+  bonding_system:
+    description: "Equipment grows with use"
+    
+    stages:
+      familiar:
+        uses: "10 successful uses"
+        benefit: "+1 to specific action"
+      
+      trusted:
+        uses: "25 successful uses"
+        benefit: "Ignore 1 on damage/defense"
+      
+      bonded:
+        uses: "50 successful uses"
+        benefit: "Counts as +1 magical"
+      
+      legendary:
+        uses: "100 successful uses"
+        benefit: "Unique magical property"
+  
+  milestone_upgrades:
+    minor_milestone:
+      options:
+        - "Repair and improve gear"
+        - "Add minor modification"
+        - "Acquire quality version"
+    
+    moderate_milestone:
+      options:
+        - "Commission masterwork"
+        - "Add magical enhancement"
+        - "Discover rare material"
+    
+    major_milestone:
+      options:
+        - "Forge legendary item"
+        - "Awaken item intelligence"
+        - "Create artifact"
+  
+  signature_equipment:
+    description: "Personal iconic gear"
+    
+    creation:
+      when: "Moderate milestone"
+      process: "Name and describe"
+      benefit: "Grows with character"
+    
+    evolution:
+      minor: "+1 enhancement"
+      moderate: "Special property"
+      major: "Legendary ability"
+
+# ============================================
+# ECONOMY
+# ============================================
+
+economy:
+  currency:
+    copper: 
+      value: 1
+      description: "Common transactions"
+    
+    silver:
+      value: 10
+      description: "Standard currency"
+    
+    gold:
+      value: 100
+      description: "Major purchases"
+    
+    platinum:
+      value: 1000
+      description: "Noble wealth"
+  
+  starting_wealth:
+    by_archetype:
+      fighter: "3d6 × 10 gold"
+      ranger: "2d6 × 10 gold"
+      paladin: "4d6 × 10 gold"
+      rogue: "4d6 × 10 gold"
+      wizard: "2d6 × 10 gold"
+      cleric: "3d6 × 10 gold"
+      bard: "3d6 × 10 gold"
+  
+  lifestyle_expenses:
+    wretched:
+      cost: "0/month"
+      description: "Homeless"
+    
+    poor:
+      cost: "20 gold/month"
+      description: "Basic shelter"
+    
+    modest:
+      cost: "100 gold/month"
+      description: "Simple comfort"
+    
+    comfortable:
+      cost: "200 gold/month"
+      description: "Middle class"
+    
+    wealthy:
+      cost: "500 gold/month"
+      description: "Fine living"
+    
+    aristocratic:
+      cost: "1000+ gold/month"
+      description: "Luxury"
+  
+  services:
+    healing:
+      first_aid: "5 gold"
+      cure_disease: "50 gold"
+      remove_curse: "100 gold"
+      resurrection: "5000 gold"
+    
+    transport:
+      coach_ride: "3 copper/mile"
+      ship_passage: "1 silver/mile"
+      teleportation: "100 gold/person"
+    
+    information:
+      common_knowledge: "1 silver"
+      specific_fact: "10 gold"
+      secret_information: "100+ gold"
+    
+    magical:
+      identify_item: "20 gold"
+      cast_spell: "10 gold × spell tier"
+      enchant_item: "Days × 100 gold"
+
+# ============================================
+# ENCUMBRANCE
+# ============================================
+
+encumbrance:
+  system: "Simplified slot-based"
+  
+  carrying_capacity:
+    light_load:
+      slots: "might + 5"
+      effect: "No penalty"
+    
+    medium_load:
+      slots: "might + 10"
+      effect: "-1 to physical actions"
+    
+    heavy_load:
+      slots: "might + 15"
+      effect: "-2 to physical, -1 zone movement"
+  
+  item_slots:
+    tiny: 0.1  # "Coins, gems, rings"
+    small: 0.5  # "Daggers, potions, tools"
+    medium: 1   # "Swords, armor pieces"
+    large: 2    # "Two-handed weapons, full armor"
+    bulky: 3    # "Awkward items"
+  
+  container_capacity:
+    pouch: "2 slots of small items"
+    backpack: "8 slots"
+    saddlebags: "12 slots"
+    bag_of_holding: "50 slots, weighs 1"
+  
+  quick_rules:
+    ignore: "Items under 0.5 slots"
+    weapons: "1 slot each"
+    armor_worn: "Doesn't count"
+    armor_carried: "Full slot value"

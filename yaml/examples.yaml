@@ -1,0 +1,665 @@
+# Flow RPG Examples & Quick Start
+# Version: 1.0-complete
+# Pre-generated characters, play examples, and tutorials
+
+quick_start:
+  what_you_need:
+    required:
+      - "2-5 players (including GM)"
+      - "Two six-sided dice per player"
+      - "Character sheets"
+      - "This reference"
+    
+    optional:
+      - "Tokens for Flow tracking"
+      - "Battle map and miniatures"
+      - "Initiative tracker"
+
+  fastest_start:
+    step_1: "Choose pre-gen character"
+    step_2: "GM reads scenario"
+    step_3: "Start playing, learn as you go"
+    step_4: "Reference rules as needed"
+
+# ============================================
+# PRE-GENERATED CHARACTERS
+# ============================================
+
+pregenerated_characters:
+  
+  # Level 0 (Starting Characters)
+  
+  marcus_ironforge:
+    concept: "Dwarven Defender"
+    level: "Starting (0 milestones)"
+    
+    identity:
+      species: "Dwarf"
+      archetype: "Fighter"
+      calling: "Guardian"
+    
+    attributes:
+      might: 3  # Base 2 + Dwarf 1
+      grace: 0
+      mind: -2
+      awareness: -1
+      will: 2
+      presence: 0
+    
+    skills:
+      professional: ["Combat +2"]
+      novice: ["Athletics -1", "Command -1"]
+      untrained: "All others at -2"
+    
+    derived_values:
+      guard: 11  # 8 + 3(Might) + 0
+      vitality: 12  # 10 + 2(Will)
+      flow: 
+        current: 0
+        max: 6
+      movement: 1
+    
+    equipment:
+      armor: "Medium (DR 2, -1 Grace)"
+      weapons: ["Longsword (2d6+1)", "Shield (+2 Guard)"]
+      gear: ["Adventurer's kit", "50 gold"]
+    
+    special_abilities:
+      species:
+        stone_endurance: "Reduce first Vitality damage by 2"
+        craftwise: "Ask one question about worked materials"
+        steady_stance: "Free switch from Defensive"
+      calling:
+        protective_surge: "When ally takes damage, gain +1 Flow"
+        helpers_intuition: "Know when someone needs help"
+      edge:
+        tough: "+2 Guard (included)"
+    
+    personality:
+      trait: "Protective to a fault"
+      ideal: "No one gets hurt on my watch"
+      bond: "Shield-siblings with party"
+      flaw: "Takes all blame for failures"
+    
+    tactics:
+      preferred_stance: "Defensive"
+      strategy: "Draw attacks, protect allies"
+      flow_use: "Rally and defensive techniques"
+  
+  silvara_moonwhisper:
+    concept: "Elven Scout"
+    level: "Starting (0 milestones)"
+    
+    identity:
+      species: "Elf"
+      archetype: "Ranger"
+      calling: "Seeker"
+    
+    attributes:
+      might: 0
+      grace: 3  # Base 2 + Elf 1
+      mind: 0
+      awareness: 1
+      will: -1
+      presence: 1
+    
+    skills:
+      professional: ["Survival +2"]
+      novice: ["Combat -1", "Investigate -1"]
+      untrained: "All others at -2"
+    
+    derived_values:
+      guard: 11  # 8 + 3(Grace) + 0
+      vitality: 9   # 10 + (-1)(Will)
+      flow:
+        current: 0
+        max: 6
+      movement: 1
+    
+    equipment:
+      armor: "Light (DR 1)"
+      weapons: ["Longbow (2d6)", "Shortsword (2d6)"]
+      gear: ["Tracking kit", "Climbing gear", "30 gold"]
+    
+    special_abilities:
+      species:
+        fey_grace: "+1 Flow on critical success"
+        magical_affinity: "Sense magic in Near range"
+        elven_focus: "Ignore first armor penalty to casting"
+      calling:
+        authentic_insight: "+3 Flow when trying new approach"
+        soul_reading: "Ask one deep question per scene"
+      edge:
+        precise_strike: "Reroll one damage die"
+    
+    personality:
+      trait: "Questions everything"
+      ideal: "Truth matters more than comfort"
+      bond: "Searching for lost sister"
+      flaw: "Struggles with authority"
+    
+    tactics:
+      preferred_stance: "Balanced"
+      strategy: "Ranged support, scouting"
+      flow_use: "Enhanced shots, perception"
+  
+  elena_lightbringer:
+    concept: "Human Healer"
+    level: "Starting (0 milestones)"
+    
+    identity:
+      species: "Human"
+      archetype: "Cleric"
+      calling: "Mediator"
+    
+    attributes:
+      might: 0
+      grace: 0
+      mind: 2  # Base 1 + Human 1
+      awareness: 1
+      will: 1
+      presence: 0
+    
+    skills:
+      professional: ["Medicine +2", "Empathy +2"]
+      novice: ["Sorcery -1"]
+      competent: ["Persuade 0"]  # Human versatile
+      untrained: "All others at -2"
+    
+    derived_values:
+      guard: 8   # 8 + 0 + 0
+      vitality: 11  # 10 + 1(Will)
+      flow:
+        current: 0
+        max: 6
+      movement: 1
+      spellcasting: "Yes (Mind 2 + Awareness 1 = 3)"
+    
+    equipment:
+      armor: "Medium (DR 2, -1 Grace, -1 Sorcery)"
+      weapons: ["Mace (2d6+1)", "Holy symbol"]
+      gear: ["Healer's kit", "Prayer book", "35 gold"]
+    
+    special_abilities:
+      species:
+        versatile: "Extra Competent skill"
+        determined: "+1 Flow when recovering from negative"
+        adaptable: "Swap skills during rest"
+      calling:
+        harmony_restoration: "+1 Flow to all when resolving conflict"
+        universal_understanding: "Understand any communication"
+      spellcasting:
+        tradition: "Divine"
+        known_spells: ["Heal", "Shield", "Bolt", "Light"]
+    
+    personality:
+      trait: "Sees all sides"
+      ideal: "Peace is always possible"
+      bond: "Sworn to protect the innocent"
+      flaw: "Avoids necessary conflicts"
+    
+    tactics:
+      preferred_stance: "Defensive"
+      strategy: "Heal and support"
+      flow_use: "Healing spells, protection"
+  
+  # After Minor Milestones (Session 3-4)
+  
+  finn_quickblade:
+    concept: "Halfling Trickster"
+    level: "3 Minor Milestones"
+    
+    identity:
+      species: "Halfling"
+      archetype: "Rogue"
+      calling: "Enthusiast"
+    
+    attributes:
+      might: -2
+      grace: 3
+      mind: 0
+      awareness: 2
+      will: 0  # Base -1 + Halfling 1
+      presence: 0
+    
+    skills:
+      professional: ["Stealth +2", "Finesse +2"]
+      competent: ["Deceive 0"]  # Upgraded
+      novice: ["Athletics -1"]  # New
+      untrained: "All others at -2"
+    
+    derived_values:
+      guard: 13  # 8 + 3(Grace) + 6(milestones)
+      vitality: 10  # 10 + 0
+      flow:
+        current: 0
+        max: 7  # Flow Harmony edge
+      movement: 2  # Fast Movement edge
+    
+    equipment:
+      armor: "Light (DR 1)"
+      weapons: ["Daggers (2d6)", "Shortbow (2d6)"]
+      gear: ["Masterwork thieves' tools", "Disguise kit", "100 gold"]
+    
+    special_abilities:
+      species:
+        lucky: "Flow stops at 0 once per scene"
+        brave_heart: "+1 Flow when ally goes negative"
+        small_but_mighty: "Move through enemies, +2 to hide"
+      calling:
+        joyful_flow: "Share Flow with adjacent allies"
+        silver_lining: "Find benefit in any situation"
+      edges:
+        flow_harmony: "+1 max Flow"
+        fast_movement: "+1 zone movement"
+        riposte: "Counter after successful defense"
+    
+    personality:
+      trait: "Eternally optimistic"
+      ideal: "Life's too short not to enjoy"
+      bond: "Party is chosen family"
+      flaw: "Can't resist a good prank"
+    
+    tactics:
+      preferred_stance: "Aggressive"
+      strategy: "Flank, sneak attack, share Flow"
+      flow_use: "Mobility and team support"
+  
+  # After Moderate Milestone (Session 6)
+  
+  aldric_stormcaller:
+    concept: "Human Wizard"
+    level: "1 Moderate, 2 Minor Milestones"
+    
+    identity:
+      species: "Human"
+      archetype: "Wizard"
+      calling: "Scholar"
+    
+    attributes:
+      might: -1
+      grace: 1  # Base 0 + Human 1
+      mind: 3  # Base 2 + Advancement 1
+      awareness: 1
+      will: 0
+      presence: 1
+    
+    skills:
+      expert: ["Sorcery +4"]  # Upgraded
+      professional: ["Lore +2"]
+      competent: ["Investigate 0"]  # Upgraded
+      novice: ["Craft -1"]  # New
+      untrained: "All others at -2"
+    
+    derived_values:
+      guard: 12  # 8 + 1(Grace) + 6(milestones)
+      vitality: 10  # 10 + 0
+      flow:
+        current: 1  # Scholar starts at +1
+        max: 7  # Flow Harmony edge
+      movement: 2  # No armor bonus
+      spellcasting: "Yes (Mind 3 + Awareness 1 = 4)"
+    
+    equipment:
+      armor: "None (DR 0, +1 Flow when hit, +1 Sorcery)"
+      weapons: ["Staff (2d6)", "Wand focus"]
+      gear: ["Spellbook", "Component pouch", "Research notes", "200 gold"]
+    
+    special_abilities:
+      species:
+        versatile: "Extra skill"
+        determined: "+1 Flow recovery"
+        adaptable: "Swap skills"
+      calling:
+        prepared_mind: "Start at +1 Flow"
+        contingency_planning: "Declare preparation once/scene"
+      signature_move:
+        name: "Arcane Tempest"
+        effect: "3d6 to all in zone"
+        cost: "2 Flow (reduced from 3)"
+      metamagic:
+        quicken: "+1 Flow to cast as swift action"
+        empower: "+2 Flow for +50% damage"
+    
+    known_spells:
+      cantrips: ["Spark", "Mage Armor", "Light", "Prestidigitation"]
+      tier_1: ["Bolt", "Shield", "Charm", "Detect Magic"]
+      tier_2: ["Fireball", "Fly", "Invisibility"]
+      tier_3: ["Lightning Storm"]
+    
+    personality:
+      trait: "Constantly theorizing"
+      ideal: "Knowledge should be preserved"
+      bond: "Seeking lost magical library"
+      flaw: "Overthinks simple problems"
+    
+    tactics:
+      preferred_stance: "Balanced"
+      strategy: "Control battlefield with spells"
+      flow_use: "Big spells at key moments"
+
+# ============================================
+# PLAY EXAMPLES
+# ============================================
+
+play_examples:
+  
+  basic_skill_check:
+    scenario: "Marcus tries to break down a door"
+    
+    step_1_approach:
+      player: "I'll shoulder-charge the door with my full weight"
+      gm: "That's using your Might with Athletics"
+    
+    step_2_roll:
+      dice: [4, 3]
+      modifiers:
+        might: 3
+        athletics: -1
+      total: 9
+    
+    step_3_result:
+      gm: "9 is a partial success. The door splinters and swings open, but you stumble through off-balance. You're in the room but you'll have -1 to your next action as you recover."
+    
+    step_4_flow:
+      change: "No Flow change on partial success"
+  
+  combat_round:
+    scenario: "Party fights goblin ambushers"
+    
+    setup:
+      party:
+        - "Marcus (Defensive)"
+        - "Silvara (Balanced)"
+        - "Elena (Defensive)"
+      enemies:
+        - "Goblin Chief (Aggressive)"
+        - "2 Goblin Archers (Defensive)"
+    
+    turn_1_aggressive:
+      goblin_chief:
+        action: "Charges Marcus"
+        roll: [5, 4]
+        modifiers: "+2 Combat"
+        total: 11
+        result: "Hits for 7 damage, reduced to 5 by armor"
+        marcus_guard: "11 → 6"
+        flow: "Chief gains +1 (Aggressive hit)"
+    
+    turn_2_balanced:
+      silvara:
+        action: "Shoots Chief with bow"
+        roll: [6, 5]
+        modifiers: "+3 Grace, -1 Combat"
+        total: 13
+        result: "Critical! 2d6 damage: 9 to Chief"
+        flow: "Silvara gains +1 (critical)"
+    
+    turn_3_defensive:
+      marcus:
+        action: "Defends and watches for opening"
+        roll: [3, 5]
+        modifiers: "+0 Grace, +2 Combat"
+        total: 10
+        result: "Success, +2 Guard until next turn"
+        guard: "6 → 8 temporary"
+        flow: "+1 (successful defense in Defensive)"
+      
+      elena:
+        action: "Casts Heal on Marcus"
+        roll: [4, 6]
+        modifiers: "+2 Mind, -1 Sorcery"
+        total: 11
+        result: "Success, Marcus regains 2d6: 8 Guard"
+        marcus_guard: "8 → 11 (full)"
+        flow: "Elena at -1 (spell cost)"
+      
+      goblin_archers:
+        action: "Fire at Silvara"
+        result: "One hits for 5 damage"
+        silvara_guard: "11 → 6"
+        silvara_flow: "+1 (took damage)"
+  
+  social_encounter:
+    scenario: "Elena negotiates with suspicious town guard"
+    
+    setup:
+      elena_approach: "Mediator calling, seeking peaceful resolution"
+      guard_attitude: "Suspicious (-2 to social rolls against)"
+      stakes: "Party needs entrance to investigate"
+    
+    round_1:
+      elena:
+        stance: "Defensive (listening)"
+        action: "I listen to his concerns first"
+        roll: [5, 6]
+        modifiers: "+1 Awareness, +2 Empathy"
+        total: 14
+        result: "Critical! Learn guard lost family to adventurers"
+        flow: "+1 (Defensive in social)"
+    
+    round_2:
+      elena:
+        stance: "Balanced"
+        action: "I acknowledge his loss and explain we're here to help"
+        roll: [3, 4]
+        modifiers: "+0 Presence, +0 Persuade, +1 Flow spent"
+        total: 8
+        result: "Partial success. He's listening but needs proof"
+        composure: "Guard at 3/5"
+    
+    round_3:
+      elena:
+        action: "I show him our charter from the church"
+        calling_benefit: "Universal Understanding - no roll needed"
+        result: "Automatic success through calling"
+        resolution: "Guard allows entry with escort"
+        flow: "+1 to all (Mediator resolved conflict)"
+  
+  spellcasting_example:
+    scenario: "Aldric uses magic in combat"
+    
+    turn_1_setup:
+      aldric:
+        flow: 1  # Scholar starts at +1
+        stance: "Aggressive"
+        action: "Cast Spark cantrip"
+        roll: [4, 5]
+        modifiers: "+3 Mind, +4 Sorcery"
+        total: 16
+        result: "Hit! 1d6: 4 damage"
+        flow: "+2 total (cantrip +1, Aggressive +1)"
+        new_flow: 3
+    
+    turn_2_buildup:
+      aldric:
+        flow: 3
+        action: "Cast Bolt (Tier 1)"
+        attribute_choice: "Mind for precision"
+        effect: "3+d6 damage, ignores cover"
+        roll: "Auto-hits behind cover"
+        damage: "3+4 = 7"
+        flow_cost: 0
+        new_flow: 3
+    
+    turn_3_nova:
+      aldric:
+        flow: 3
+        action: "Signature Move: Arcane Tempest"
+        cost: 2  # Reduced from 3
+        effect: "3d6 to all enemies in zone"
+        damage: "14 to all"
+        new_flow: 1
+        narrative: "Lightning crackles through the battlefield"
+
+# ============================================
+# QUICK RULES REFERENCE
+# ============================================
+
+rules_reference:
+  basic_roll: "2d6 + Attribute + Skill vs TN 8"
+  
+  success_levels:
+    "6_or_less": "Failure"
+    "7_to_9": "Partial Success"
+    "10_to_12": "Full Success"
+    "13_plus": "Critical Success (+1 Flow)"
+  
+  flow_quick:
+    range: "-3 to +6"
+    gain:
+      - "Critical success: +1"
+      - "Take damage: +1"
+      - "Stance-specific triggers"
+    spend:
+      - "Boost roll: +1 per point"
+      - "Techniques: varies"
+      - "Spells: 0 to -3"
+  
+  stance_summary:
+    aggressive:
+      order: "First"
+      bonus: "+1 damage, +1 Flow on hit"
+      penalty: "-1 defense"
+    balanced:
+      order: "Second"
+      bonus: "Flexible"
+      special: "Free stance switch 1/combat"
+    defensive:
+      order: "Last"
+      bonus: "+2 defense, +1 Flow when attacked"
+      penalty: "-1 damage"
+  
+  combat_actions:
+    attack: "Roll + Combat vs TN 8"
+    defend: "+2 Guard on success"
+    maneuver: "Create advantage"
+    rally: "Recover 1d6 Guard (1/scene)"
+    move: "1 zone"
+  
+  spell_costs:
+    tier_0: "+1 Flow (generates)"
+    tier_1: "0 Flow"
+    tier_2: "-1 Flow"
+    tier_3: "-2 Flow"
+    tier_4: "-3 Flow"
+
+# ============================================
+# FIRST SESSION GUIDE
+# ============================================
+
+first_session:
+  preparation:
+    before_session:
+      - "Read basic mechanics"
+      - "Choose starting scenario"
+      - "Print character sheets"
+      - "Prepare tokens for Flow"
+    
+    session_zero_topics:
+      - "Tone and content boundaries"
+      - "Character connections"
+      - "Campaign style preference"
+      - "House rules if any"
+  
+  starting_scenario:
+    title: "The Flowing Goblet"
+    
+    hook: "Goblins stole the town's magical cup that purifies water"
+    
+    scene_1_investigation:
+      location: "Town square"
+      challenge: "Gather information"
+      skill_checks:
+        - "Empathy to comfort victims"
+        - "Investigate for clues"
+        - "Persuade for witness info"
+      discovery: "Goblins went to old mine"
+    
+    scene_2_journey:
+      location: "Forest path"
+      challenge: "Environmental hazard"
+      options:
+        stealth: "Sneak past wolf pack"
+        survival: "Find safe path"
+        combat: "Fight through"
+      flow_opportunity: "Build Flow for mine"
+    
+    scene_3_mine_entrance:
+      location: "Abandoned mine"
+      challenge: "Goblin guards"
+      encounter:
+        enemies:
+          - "2 Goblin scouts (Defensive)"
+          - "1 Goblin warrior (Aggressive)"
+        environment: "Can use mine carts"
+        flow_use: "First combat techniques"
+    
+    scene_4_confrontation:
+      location: "Mine depths"
+      challenge: "Goblin shaman with cup"
+      options:
+        combat: "Defeat shaman"
+        social: "Negotiate return"
+        clever: "Trick or steal"
+      twist: "Goblins also need clean water"
+    
+    resolution_options:
+      violent: "Take cup by force"
+      peaceful: "Share water source"
+      clever: "Find second solution"
+    
+    rewards:
+      success:
+        - "Return water to town"
+        - "100 gold reward"
+        - "Minor milestone"
+      extra:
+        - "Peaceful: Goblin allies"
+        - "Violent: Goblin enmity"
+        - "Clever: Extra treasure"
+  
+  gm_tips:
+    first_combat:
+      - "Go slow, explain each step"
+      - "Demonstrate stance benefits"
+      - "Show Flow generation"
+      - "Allow takebacks for learning"
+    
+    flow_management:
+      - "Remind players when they gain Flow"
+      - "Suggest Flow uses"
+      - "Show GM Flow pool"
+      - "Demonstrate complications"
+    
+    calling_integration:
+      - "Point out calling triggers"
+      - "Reward calling roleplay"
+      - "Use narrative permissions"
+      - "Connect to character goals"
+  
+  common_mistakes:
+    players:
+      - "Forgetting Flow gains"
+      - "Not using stance benefits"
+      - "Hoarding Flow too long"
+      - "Ignoring calling benefits"
+    
+    gm:
+      - "Forgetting Flow for damage"
+      - "Not using GM Flow pool"
+      - "Making single enemies too weak"
+      - "Ignoring partial success"
+  
+  ending_session:
+    wrap_up:
+      - "Award minor milestone"
+      - "Discuss advancement choices"
+      - "Get feedback on system"
+      - "Set next session expectations"
+    
+    between_sessions:
+      - "Players choose advancement"
+      - "GM prepares next adventure"
+      - "Adjust based on feedback"
+      - "Build on established fiction"

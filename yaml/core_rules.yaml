@@ -1,0 +1,560 @@
+# Flow RPG Core Rules
+# Version: 1.0-complete
+# Last Updated: 2024
+
+metadata:
+  game_name: "Flow RPG"
+  version: "1.0-complete"
+  complexity: "rules-moderate"
+  dice_system: "2d6"
+  design_philosophy:
+    - "Elegance over complexity"
+    - "Perceived simplicity over dumb-simple"
+    - "Narrative-first with tactical depth option"
+    - "Flow as central unifying mechanic"
+    - "Fail-forward built into resolution"
+    - "65% baseline success rate"
+
+# ============================================
+# CORE RESOLUTION MECHANICS
+# ============================================
+
+resolution_system:
+  basic_roll:
+    formula: "2d6 + attribute + skill"
+    range: 
+      dice: [2, 12]
+      attribute: [-5, 5]
+      skill: [-2, 8]
+    
+  target_numbers:
+    trivial: 
+      value: 6
+      success_rate_base: 91.7
+      description: "Routine tasks under pressure"
+    easy: 
+      value: 7
+      success_rate_base: 83.3
+      description: "Basic professional work"
+    standard: 
+      value: 8
+      success_rate_base: 72.2
+      description: "Challenging professional tasks"
+    hard: 
+      value: 10
+      success_rate_base: 41.7
+      description: "Expert-level challenges"
+    extreme: 
+      value: 12
+      success_rate_base: 16.7
+      description: "Near-impossible feats"
+    legendary: 
+      value: 14
+      success_rate_base: 2.8
+      description: "Mythic achievements"
+    
+  success_tiers:
+    failure:
+      range: "6 or less"
+      effect: "Action fails"
+      flow_change: "+1 to opponent or creates consequence"
+      narrative: "Complication or setback occurs"
+    
+    partial_success:
+      range: "7-9"
+      effect: "Success with cost or complication"
+      flow_change: "No automatic change"
+      narrative: "Yes, but..."
+    
+    full_success:
+      range: "10-12"
+      effect: "Complete success as intended"
+      flow_change: "No automatic change"
+      narrative: "Yes, and..."
+    
+    critical_success:
+      range: "13+"
+      effect: "Exceptional success with benefits"
+      flow_change: "+1 Flow to character"
+      narrative: "Yes, and something exceptional"
+    
+    enhanced_success:
+      trigger: "Beat TN by 5+"
+      effect: "Gain advantage on next roll"
+      flow_change: "Normal for tier"
+      narrative: "Minor narrative permission"
+    
+    legendary_success:
+      trigger: "Beat TN by 8+"
+      effect: "Major narrative impact"
+      flow_change: "+2 Flow total"
+      narrative: "Major narrative permission"
+
+  advantage_disadvantage:
+    advantage:
+      mechanic: "Roll 3d6, keep highest 2"
+      sources:
+        - "Superior position"
+        - "Ally assistance"
+        - "Enhanced success carry-over"
+        - "Appropriate tools/preparation"
+    
+    disadvantage:
+      mechanic: "Roll 3d6, keep lowest 2"
+      sources:
+        - "Poor position"
+        - "Injured or exhausted"
+        - "Inappropriate tools"
+        - "Environmental hindrance"
+    
+    multiple_dice:
+      rule: "Advantages and disadvantages cancel 1:1"
+      maximum: "Never roll more than 4d6 total"
+
+# ============================================
+# FLOW SYSTEM
+# ============================================
+
+flow_system:
+  basics:
+    range: 
+      minimum: -3
+      maximum: 6
+    starting_flow: 0
+    reset: "Between scenes"
+    
+  starting_exceptions:
+    scholar_calling: 
+      starting_flow: 1
+      reason: "Perpetual mental readiness"
+    
+  flow_states:
+    negative:
+      range: [-3, -1]
+      description: "Disrupted, struggling, disadvantage"
+      effects:
+        - "Cannot cast spells (except Will-based)"
+        - "Narrative shows exhaustion/struggle"
+        - "-1 to initiative order"
+    
+    neutral:
+      range: [0, 0]
+      description: "Balanced, ready, baseline"
+      effects:
+        - "No modifiers"
+        - "Standard options available"
+    
+    positive:
+      range: [1, 3]
+      description: "In the flow, momentum building"
+      effects:
+        - "Can activate Flow techniques"
+        - "Narrative shows confidence"
+    
+    high_positive:
+      range: [4, 6]
+      description: "Perfect flow, commanding presence"
+      effects:
+        - "Can activate advanced techniques"
+        - "Narrative shows mastery"
+        - "+1 to all rolls while maintained"
+  
+  generation_sources:
+    universal:
+      critical_success:
+        trigger: "Roll 13+ on any check"
+        amount: 1
+        limit: "No limit"
+      
+      taking_damage:
+        trigger: "Take any damage to Guard or Vitality"
+        amount: 1
+        limit: "No limit"
+        note: "New rule for balance"
+    
+    stance_specific:
+      aggressive:
+        successful_attack:
+          trigger: "Hit with attack"
+          amount: 1
+          limit: "No limit"
+        
+        charging:
+          trigger: "Move 2+ zones toward enemy"
+          amount: 2
+          limit: "Once per turn"
+      
+      balanced:
+        critical_only:
+          trigger: "Any critical success"
+          amount: 1
+          limit: "Stacks with universal"
+      
+      defensive:
+        being_attacked:
+          trigger: "Targeted by attack"
+          amount: 1
+          limit: "Once per round"
+        
+        successful_defense:
+          trigger: "Successfully defend"
+          amount: 1
+          limit: "No limit"
+    
+    magic_specific:
+      cantrip_success:
+        trigger: "Successfully cast cantrip"
+        amount: 1
+        limit: "No limit"
+      
+      ritual_completion:
+        trigger: "Complete 10+ minute ritual"
+        amount: 3
+        limit: "Once per scene"
+    
+    calling_specific:
+      note: "See character.yaml for calling-specific triggers"
+  
+  expenditure:
+    enhance_roll:
+      cost: 1
+      effect: "+1 to roll per Flow spent"
+      limit: "Maximum +3"
+    
+    combat_techniques:
+      basic: 
+        cost: 1
+        examples: ["Riposte", "Press Advantage"]
+      moderate: 
+        cost: 2
+        examples: ["Whirlwind Strike", "Perfect Parry"]
+      advanced: 
+        cost: 3
+        examples: ["Death Blow", "Battlefield Control"]
+    
+    spells:
+      tier_0_cantrip: 
+        cost: "Generates +1"
+        note: "Reverses normal flow"
+      tier_1_basic: 
+        cost: 0
+      tier_2_advanced: 
+        cost: -1
+      tier_3_expert: 
+        cost: -2
+      tier_4_master: 
+        cost: -3
+    
+    narrative_advantages:
+      minor:
+        cost: 1
+        examples: ["Recall useful fact", "Spot hidden detail"]
+      moderate:
+        cost: 2
+        examples: ["Retroactive preparation", "Lucky coincidence"]
+      major:
+        cost: 3
+        examples: ["Deus ex machina", "Legendary deed"]
+    
+    stance_switching:
+      cost: 0
+      note: "Free action, was -1 in original"
+
+# ============================================
+# SCENE STRUCTURE
+# ============================================
+
+scene_resolution:
+  phases:
+    1_setup:
+      gm_actions:
+        - "Describe situation and environment"
+        - "Establish stakes and dangers"
+        - "Position participants"
+      player_actions:
+        - "Ask clarifying questions"
+        - "Declare initial stance/approach"
+    
+    2_engagement:
+      structure: "Varies by scene type"
+      types:
+        combat: "See combat.yaml"
+        social: "See social_combat rules"
+        exploration: "Skill challenges"
+        mixed: "Combine systems as needed"
+    
+    3_resolution:
+      flow_reset: "All Flow returns to 0"
+      guard_recovery: "Full Guard restoration"
+      consequences: "Apply lasting effects"
+      experience: "Note for milestone consideration"
+
+  scene_types:
+    combat:
+      typical_length: "3-5 rounds"
+      flow_range: [-3, 6]
+      stance_based: true
+      reference: "combat.yaml"
+    
+    social:
+      typical_length: "3-7 exchanges"
+      flow_range: [-2, 4]
+      stance_based: true
+      uses_composure: true
+    
+    exploration:
+      typical_length: "4-6 skill checks"
+      flow_range: [-1, 3]
+      stance_based: false
+      clock_based: true
+    
+    downtime:
+      typical_length: "Narrative"
+      flow_range: [0, 1]
+      stance_based: false
+      project_based: true
+
+# ============================================
+# ATTRIBUTES
+# ============================================
+
+attributes:
+  range:
+    minimum: -5
+    maximum: 5
+    average: 0
+  
+  physical:
+    might:
+      description: "Physical force, strength, endurance"
+      primary_uses:
+        - "Melee damage"
+        - "Lifting/breaking"
+        - "Physical intimidation"
+      defensive_use: "Resist physical effects"
+    
+    grace:
+      description: "Precision, agility, coordination"
+      primary_uses:
+        - "Ranged attacks"
+        - "Dodging/acrobatics"
+        - "Fine manipulation"
+      defensive_use: "Avoid attacks"
+  
+  mental:
+    mind:
+      description: "Reasoning, intellect, knowledge"
+      primary_uses:
+        - "Spell precision"
+        - "Investigation"
+        - "Logical argument"
+      defensive_use: "Resist deception"
+    
+    awareness:
+      description: "Perception, intuition, attunement"
+      primary_uses:
+        - "Spell power"
+        - "Detecting danger"
+        - "Reading people"
+      defensive_use: "Avoid ambush"
+  
+  social:
+    will:
+      description: "Fortitude, determination, spiritual power"
+      primary_uses:
+        - "Spell persistence"
+        - "Resisting control"
+        - "Death saves"
+      defensive_use: "Mental fortitude"
+    
+    presence:
+      description: "Charisma, magnetism, social influence"
+      primary_uses:
+        - "Spell drama"
+        - "Leadership"
+        - "Performance"
+      defensive_use: "Social composure"
+  
+  starting_arrays:
+    standard:
+      values: [2, 1, 1, 0, 0, -1]
+      description: "Well-rounded character"
+    
+    specialized:
+      values: [3, 2, 0, 0, -1, -2]
+      description: "Focused expertise"
+    
+    balanced:
+      values: [1, 1, 1, 0, 0, 0]
+      description: "No weaknesses"
+
+# ============================================
+# SKILLS
+# ============================================
+
+skills:
+  progression_tiers:
+    1_untrained:
+      modifier: -2
+      description: "No formal training"
+      advancement: "Starting only"
+    
+    2_novice:
+      modifier: -1
+      description: "Basic understanding"
+      advancement: "Starting or minor milestone"
+    
+    3_competent:
+      modifier: 0
+      description: "Professional capability"
+      advancement: "Starting or minor milestone"
+    
+    4_professional:
+      modifier: 2
+      description: "Skilled practitioner"
+      advancement: "Starting or minor milestone"
+    
+    5_expert:
+      modifier: 4
+      description: "Recognized master"
+      advancement: "Minor or moderate milestone"
+    
+    6_master:
+      modifier: 6
+      description: "Legendary capability"
+      advancement: "Moderate milestone"
+    
+    7_legendary:
+      modifier: 8
+      description: "Mythic mastery"
+      advancement: "Major milestone"
+  
+  skill_list:
+    physical:
+      combat:
+        description: "Fighting, weapons, tactical positioning"
+        key_attributes: ["might", "grace"]
+        specializations: ["Melee", "Ranged", "Defensive"]
+      
+      athletics:
+        description: "Running, climbing, swimming, strength"
+        key_attributes: ["might", "grace"]
+        specializations: ["Climbing", "Swimming", "Jumping"]
+      
+      stealth:
+        description: "Hiding, sneaking, avoiding detection"
+        key_attributes: ["grace", "awareness"]
+        specializations: ["Urban", "Wilderness", "Social"]
+      
+      survival:
+        description: "Tracking, foraging, navigation"
+        key_attributes: ["awareness", "will"]
+        specializations: ["Forest", "Desert", "Arctic"]
+      
+      finesse:
+        description: "Lockpicking, sleight of hand, precision"
+        key_attributes: ["grace", "mind"]
+        specializations: ["Lockpicking", "Pickpocket", "Forgery"]
+    
+    mental:
+      lore:
+        description: "History, academics, specialized knowledge"
+        key_attributes: ["mind", "awareness"]
+        specializations: ["History", "Arcana", "Religion"]
+      
+      medicine:
+        description: "Healing, anatomy, treating injuries"
+        key_attributes: ["mind", "awareness"]
+        specializations: ["Surgery", "Herbalism", "Diagnosis"]
+      
+      craft:
+        description: "Making, repairing, engineering"
+        key_attributes: ["mind", "grace"]
+        specializations: ["Smithing", "Alchemy", "Engineering"]
+      
+      investigate:
+        description: "Searching, analyzing, finding clues"
+        key_attributes: ["mind", "awareness"]
+        specializations: ["Crime Scenes", "Research", "Tracking"]
+      
+      sorcery:
+        description: "Magical theory and spellcasting"
+        key_attributes: ["mind", "awareness", "will", "presence"]
+        specializations: ["Arcane", "Divine", "Primal"]
+    
+    social:
+      persuade:
+        description: "Convincing through reason and charm"
+        key_attributes: ["presence", "mind"]
+        specializations: ["Diplomacy", "Seduction", "Logic"]
+      
+      deceive:
+        description: "Lying, disguise, misdirection"
+        key_attributes: ["presence", "mind"]
+        specializations: ["Lies", "Disguise", "Forgery"]
+      
+      perform:
+        description: "Entertainment, inspiration, art"
+        key_attributes: ["presence", "grace"]
+        specializations: ["Music", "Oratory", "Dance"]
+      
+      command:
+        description: "Leadership, intimidation, authority"
+        key_attributes: ["presence", "will"]
+        specializations: ["Military", "Intimidation", "Inspiration"]
+      
+      empathy:
+        description: "Understanding emotions and motivations"
+        key_attributes: ["awareness", "presence"]
+        specializations: ["Detect Lies", "Therapy", "Animal Handling"]
+  
+  approach_determines_attribute:
+    note: "The specific approach determines which attribute pairs with skill"
+    examples:
+      intimidation:
+        might: "Physical threats"
+        mind: "Logical consequences"
+        presence: "Force of personality"
+      
+      athletics:
+        might: "Raw power application"
+        grace: "Acrobatic maneuvers"
+        will: "Endurance tests"
+
+# ============================================
+# DICE CONVENTIONS
+# ============================================
+
+dice_conventions:
+  standard_roll:
+    formula: "2d6 + modifiers"
+    average: 7
+    range: [2, 12]
+  
+  advantage:
+    formula: "3d6, keep highest 2"
+    average: 8.46
+    improvement: "+1.46 average"
+  
+  disadvantage:
+    formula: "3d6, keep lowest 2"
+    average: 5.54
+    penalty: "-1.46 average"
+  
+  damage_dice:
+    exploding:
+      trigger: "Natural 6 on damage die"
+      effect: "Roll again and add"
+      milestone_requirement: 10
+      stacks: true
+  
+  special_dice:
+    flow_die:
+      when: "Spending 3+ Flow on single roll"
+      effect: "Add 1d6 to roll"
+      color: "Different color die"
+    
+    calling_die:
+      when: "Acting in perfect alignment with calling"
+      effect: "Add 1d6, 6s count as two successes"
+      limit: "Once per scene"

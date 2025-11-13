@@ -1,0 +1,838 @@
+# Flow RPG Magic System
+# Version: 1.0-complete
+# Spells, traditions, and magical mechanics
+
+magic_system:
+  philosophy:
+    core_concept: "Same spell, different effects based on approach"
+    design_principles:
+      - "Elegance over complexity"
+      - "Narrative-first with mechanical depth"
+      - "Flow integration central"
+      - "Player agency in casting approach"
+  
+  access_requirements:
+    archetype_override:
+      rule: "If archetype provides Sorcery skill, can cast regardless of attributes"
+      affected: ["wizard", "cleric", "paladin", "bard"]
+    
+    attribute_requirements:
+      arcane:
+        formula: "mind + awareness >= 2"
+        description: "Intellectual magical study"
+      
+      divine:
+        formula: "will + presence >= 2"
+        description: "Faith-based channeling"
+      
+      primal:
+        formula: "awareness + will >= 2"
+        description: "Natural world connection"
+      
+      performance:
+        formula: "presence + grace >= 2"
+        description: "Artistic magical expression"
+
+# ============================================
+# SPELL TIERS AND COSTS
+# ============================================
+
+spell_tiers:
+  tier_0_cantrips:
+    flow_cost: "Generates +1 on success"
+    description: "Simple magics that build momentum"
+    power_level: "Minor effects"
+    examples: ["spark", "mage_armor", "light", "prestidigitation"]
+    
+    strategic_use:
+      - "Flow generation in Aggressive stance (+2 total)"
+      - "Maintain magical pressure"
+      - "Setup for bigger spells"
+  
+  tier_1_basic:
+    flow_cost: 0
+    description: "Fundamental spells, Flow neutral"
+    power_level: "Standard combat/utility effects"
+    examples: ["bolt", "shield", "charm", "blur"]
+    
+    strategic_use:
+      - "Reliable damage/protection"
+      - "No Flow investment needed"
+      - "Sustained casting possible"
+  
+  tier_2_advanced:
+    flow_cost: -1
+    description: "Powerful effects requiring momentum"
+    power_level: "Significant impact"
+    examples: ["fireball", "heal", "fly", "invisibility"]
+    
+    strategic_use:
+      - "Turning point spells"
+      - "Worth Flow investment"
+      - "Combo with cantrips for Flow management"
+  
+  tier_3_expert:
+    flow_cost: -2
+    description: "Major magical effects"
+    power_level: "Battle-changing"
+    examples: ["lightning_storm", "teleport", "polymorph"]
+    
+    strategic_use:
+      - "Decisive moments"
+      - "Requires Flow buildup"
+      - "Often combat-ending"
+  
+  tier_4_master:
+    flow_cost: -3
+    description: "Reality-altering magic"
+    power_level: "Legendary effects"
+    examples: ["time_stop", "dominate", "meteor_swarm"]
+    
+    strategic_use:
+      - "Campaign climax moments"
+      - "Requires perfect Flow management"
+      - "Often scene-defining"
+
+# ============================================
+# ATTRIBUTE CASTING APPROACHES
+# ============================================
+
+casting_attributes:
+  mind:
+    name: "The Wizard's Way"
+    strengths:
+      - "Precision and control"
+      - "Avoiding allies/collateral"
+      - "Calculated effects"
+      - "Perfect placement"
+    
+    mechanical_benefits:
+      universal: "Ignore 1 point of cover/concealment"
+      damage: "Can exclude X allies from area (X = Mind)"
+      buff: "Duration in hours instead of minutes"
+      utility: "Perfect precision in effect"
+    
+    narrative_style: "Mathematical perfection, calculated angles"
+  
+  awareness:
+    name: "The Sorcerer's Way"
+    strengths:
+      - "Maximum power"
+      - "Instinctive casting"
+      - "Sensing weaknesses"
+      - "Raw magical force"
+    
+    mechanical_benefits:
+      universal: "Spells seek weak points"
+      damage: "+1 damage per die"
+      detection: "Sense additional information"
+      area: "Affects unseen targets"
+    
+    narrative_style: "Instinctive power, overwhelming force"
+  
+  will:
+    name: "The Divine/Pact Way"
+    strengths:
+      - "Reliability under pressure"
+      - "Persistence and duration"
+      - "Casting at negative Flow"
+      - "Unbreakable effects"
+    
+    mechanical_benefits:
+      universal: "Can cast at negative Flow"
+      concentration: "Maintains if unconscious"
+      duration: "Double duration"
+      saves: "Targets get -1 to resist"
+    
+    narrative_style: "Determination, faith, inexorable force"
+  
+  presence:
+    name: "The Bard's Way"
+    strengths:
+      - "Social and emotional effects"
+      - "Fear and inspiration"
+      - "Dramatic impact"
+      - "Group influence"
+    
+    mechanical_benefits:
+      universal: "Affects morale/emotions"
+      social: "Double effect vs. composure"
+      area: "Spectacular display causes awe"
+      buff: "Affects 2x normal targets"
+    
+    narrative_style: "Drama, performance, emotional impact"
+
+# ============================================
+# SPELL LIST BY TIER
+# ============================================
+
+spells:
+  # ==========================================
+  # TIER 0 - CANTRIPS
+  # ==========================================
+  
+  tier_0:
+    spark:
+      name: "Spark"
+      description: "Close combat magical attack"
+      base_effect: "1d6 damage, touch range"
+      flow: "+1 on success"
+      
+      attribute_variations:
+        mind: 
+          damage: "1d6"
+          special: "Can ignite flammable objects precisely"
+        awareness:
+          damage: "1d6+1"
+          special: "Automatically hits"
+        will:
+          damage: "1d6"
+          special: "Works at negative Flow"
+        presence:
+          damage: "1d6"
+          special: "Frightens target for 1 round"
+    
+    mage_armor:
+      name: "Mage Armor"
+      description: "Protective barrier, self only"
+      base_effect: "+2 Guard until hit"
+      flow: "+1 on success"
+      
+      attribute_variations:
+        mind:
+          guard: 2
+          special: "Absorbs first 3 damage"
+        awareness:
+          guard: 2
+          special: "Warns of incoming attacks"
+        will:
+          guard: 2
+          special: "Persists through unconsciousness"
+        presence:
+          guard: 2
+          special: "Shimmers impressively, +1 social"
+    
+    light:
+      name: "Light"
+      description: "Create illumination"
+      base_effect: "Bright light for scene"
+      flow: "+1 on success"
+      
+      attribute_variations:
+        mind:
+          effect: "Precisely controlled beam"
+          special: "Can focus like laser"
+        awareness:
+          effect: "Reveals hidden things"
+          special: "Detects invisible"
+        will:
+          effect: "Cannot be dispelled"
+          special: "Works in magical darkness"
+        presence:
+          effect: "Dazzling colors"
+          special: "Provides +1 to Perform"
+    
+    prestidigitation:
+      name: "Prestidigitation"
+      description: "Minor magical effects"
+      base_effect: "Small convenience magic"
+      flow: "+1 on success"
+      
+      attribute_variations:
+        mind:
+          effect: "Precise manipulation"
+          special: "Can pick locks at -2"
+        awareness:
+          effect: "Sense through creation"
+          special: "Created items detect magic"
+        will:
+          effect: "Persistent creations"
+          special: "Effects last hours"
+        presence:
+          effect: "Impressive displays"
+          special: "+2 to entertainment"
+  
+  # ==========================================
+  # TIER 1 - BASIC SPELLS
+  # ==========================================
+  
+  tier_1:
+    bolt:
+      name: "Bolt"
+      description: "Ranged magical attack at Far range"
+      base_effect: "Attribute + 1d6 damage"
+      flow: "0"
+      
+      attribute_variations:
+        mind:
+          damage: "mind + 1d6"
+          special: "Ignores cover completely"
+          narrative: "Impossible angles, ricochets"
+        awareness:
+          damage: "awareness + 1d6 + 1"
+          special: "Seeks weak points"
+          narrative: "Unerring accuracy"
+        will:
+          damage: "will + 1d6"
+          special: "Can cast at negative Flow"
+          narrative: "Unstoppable force"
+        presence:
+          damage: "presence + 1d6"
+          special: "Causes fear in nearby enemies"
+          narrative: "Spectacular impact"
+    
+    shield:
+      name: "Shield"
+      description: "Protective ward for self or ally"
+      base_effect: "+Attribute to Guard for scene"
+      flow: "0"
+      
+      attribute_variations:
+        mind:
+          guard: "+mind"
+          special: "Calculate optimal angles, no flanking"
+        awareness:
+          guard: "+awareness"
+          special: "Warns of attacks, +1 defense"
+        will:
+          guard: "+will"
+          special: "Persists if caster unconscious"
+        presence:
+          guard: "+presence"
+          special: "Demoralizes attackers, -1 to hit"
+    
+    charm:
+      name: "Charm"
+      description: "Influence target's mind"
+      base_effect: "Target becomes friendly"
+      flow: "0"
+      duration: "Scene or until betrayed"
+      
+      attribute_variations:
+        mind:
+          effect: "Actions must seem logical"
+          special: "+mind to convince"
+        awareness:
+          effect: "Sense target's desires"
+          special: "+awareness to social"
+        will:
+          effect: "Dominate if Will lower"
+          special: "Direct control"
+        presence:
+          effect: "Irresistible charisma"
+          special: "+presence to all social"
+    
+    blur:
+      name: "Blur"
+      description: "Defensive obscurement"
+      base_effect: "+2 defense for scene"
+      flow: "0"
+      
+      attribute_variations:
+        mind:
+          defense: 2
+          special: "Calculated probability distortion"
+        awareness:
+          defense: 2
+          special: "Instinctive dodging"
+        will:
+          defense: 2
+          special: "Maintains when stunned"
+        presence:
+          defense: 2
+          special: "Mesmerizing patterns"
+    
+    detect_magic:
+      name: "Detect Magic"
+      description: "Sense magical auras"
+      base_effect: "Detect magic in Near range"
+      flow: "0"
+      
+      attribute_variations:
+        mind:
+          range: "near"
+          special: "Identify spell types"
+        awareness:
+          range: "far"
+          special: "Sense through barriers"
+        will:
+          range: "near"
+          special: "Detect alignment/intent"
+        presence:
+          range: "near"
+          special: "Sense emotional resonance"
+  
+  # ==========================================
+  # TIER 2 - ADVANCED SPELLS
+  # ==========================================
+  
+  tier_2:
+    fireball:
+      name: "Fireball"
+      description: "Explosive area damage"
+      base_effect: "2d6 to all in zone"
+      flow: "-1"
+      
+      attribute_variations:
+        mind:
+          damage: "2d6"
+          special: "Exclude allies, precise placement"
+        awareness:
+          damage: "2d6+2"
+          special: "Seeks most enemies"
+        will:
+          damage: "2d6"
+          special: "Burns for 1d6/round"
+        presence:
+          damage: "2d6"
+          special: "Causes panic, enemies flee"
+    
+    heal:
+      name: "Heal"
+      description: "Restore health"
+      base_effect: "2d6 Vitality restored"
+      flow: "-1"
+      
+      attribute_variations:
+        mind:
+          healing: "2d6"
+          special: "Removes conditions"
+        awareness:
+          healing: "2d6+1"
+          special: "Diagnoses problems"
+        will:
+          healing: "2d6"
+          special: "Works at any range"
+        presence:
+          healing: "2d6"
+          special: "Inspires, +1 Flow"
+    
+    fly:
+      name: "Fly"
+      description: "Grant flight"
+      base_effect: "Fly for scene"
+      flow: "-1"
+      
+      attribute_variations:
+        mind:
+          speed: "2 zones/turn"
+          special: "Perfect control"
+        awareness:
+          speed: "3 zones/turn"
+          special: "Instinctive navigation"
+        will:
+          speed: "2 zones/turn"
+          special: "Maintains if unconscious"
+        presence:
+          speed: "2 zones/turn"
+          special: "Dramatic swooping, +1 intimidate"
+    
+    invisibility:
+      name: "Invisibility"
+      description: "Become unseen"
+      base_effect: "Invisible for scene or until attack"
+      flow: "-1"
+      
+      attribute_variations:
+        mind:
+          duration: "scene"
+          special: "Affects equipment perfectly"
+        awareness:
+          duration: "scene"
+          special: "Muffles sound too"
+        will:
+          duration: "scene"
+          special: "Can attack and stay invisible"
+        presence:
+          duration: "scene"
+          special: "Dramatic reveal stuns enemies"
+    
+    web:
+      name: "Web"
+      description: "Create entangling area"
+      base_effect: "Zone becomes difficult terrain"
+      flow: "-1"
+      
+      attribute_variations:
+        mind:
+          effect: "Geometric patterns"
+          special: "Can create bridges/walls"
+        awareness:
+          effect: "Living web"
+          special: "Attacks those who enter"
+        will:
+          effect: "Unbreakable strands"
+          special: "Cannot be destroyed"
+        presence:
+          effect: "Terrifying appearance"
+          special: "Fear effect on trapped"
+  
+  # ==========================================
+  # TIER 3 - EXPERT SPELLS
+  # ==========================================
+  
+  tier_3:
+    lightning_storm:
+      name: "Lightning Storm"
+      description: "Devastating area attack"
+      base_effect: "3d6 to multiple zones"
+      flow: "-2"
+      
+      attribute_variations:
+        mind:
+          damage: "3d6 to chosen targets"
+          zones: 2
+          special: "Precise targeting"
+        awareness:
+          damage: "3d6 to all enemies in sight"
+          zones: "line of sight"
+          special: "Cannot miss"
+        will:
+          damage: "3d6"
+          zones: 3
+          special: "Continues for 3 rounds"
+        presence:
+          damage: "3d6"
+          zones: 2
+          special: "Breaks morale, enemies flee"
+    
+    teleport:
+      name: "Teleport"
+      description: "Instant transportation"
+      base_effect: "Move anywhere instantly"
+      flow: "-2"
+      
+      attribute_variations:
+        mind:
+          range: "Anywhere with coordinates"
+          passengers: "mind"
+          special: "Perfect accuracy"
+        awareness:
+          range: "Anywhere you've sensed"
+          passengers: "awareness"
+          special: "Brings willing only"
+        will:
+          range: "Anywhere"
+          passengers: "will"
+          special: "Can bring unwilling (opposed Will)"
+        presence:
+          range: "Dramatic entrance"
+          passengers: "presence"
+          special: "+3 to next social action"
+    
+    polymorph:
+      name: "Polymorph"
+      description: "Transform creature"
+      base_effect: "Change form for scene"
+      flow: "-2"
+      
+      attribute_variations:
+        mind:
+          forms: "Studied creatures"
+          special: "Perfect mimicry"
+        awareness:
+          forms: "Any observed creature"
+          special: "Gain their abilities"
+        will:
+          forms: "Force transformation"
+          special: "Works on unwilling"
+        presence:
+          forms: "Terrifying/beautiful forms"
+          special: "Massive social impact"
+    
+    scrying:
+      name: "Scrying"
+      description: "View distant locations"
+      base_effect: "See/hear remote location"
+      flow: "-2"
+      
+      attribute_variations:
+        mind:
+          range: "Anywhere known"
+          special: "Can analyze what's seen"
+        awareness:
+          range: "Find anyone"
+          special: "Penetrates barriers"
+        will:
+          range: "Any plane"
+          special: "Cannot be blocked"
+        presence:
+          range: "Anywhere dramatic"
+          special: "Can project voice/image"
+  
+  # ==========================================
+  # TIER 4 - MASTER SPELLS
+  # ==========================================
+  
+  tier_4:
+    time_stop:
+      name: "Time Stop"
+      description: "Pause time"
+      base_effect: "Take extra turns"
+      flow: "-3"
+      
+      attribute_variations:
+        mind:
+          turns: 3
+          special: "Can set up complex plans"
+        awareness:
+          turns: 2
+          special: "React to anything, interrupt"
+        will:
+          turns: 2
+          special: "Extend through concentration"
+        presence:
+          turns: 2
+          special: "Dramatic monologue, guaranteed impact"
+    
+    dominate:
+      name: "Dominate"
+      description: "Total mental control"
+      base_effect: "Control target completely"
+      flow: "-3"
+      duration: "Scene or longer"
+      
+      attribute_variations:
+        mind:
+          effect: "Commands seem reasonable"
+          special: "Undetectable control"
+        awareness:
+          effect: "Access all memories"
+          special: "Use their skills"
+        will:
+          effect: "Absolute control"
+          special: "Permanent if Will higher"
+        presence:
+          effect: "They want to serve"
+          special: "Genuine devotion"
+    
+    meteor_swarm:
+      name: "Meteor Swarm"
+      description: "Ultimate destruction"
+      base_effect: "4d6 to huge area"
+      flow: "-3"
+      
+      attribute_variations:
+        mind:
+          damage: "4d6 precision strikes"
+          special: "Hit only enemies"
+        awareness:
+          damage: "5d6 seeking meteors"
+          special: "Cannot be dodged"
+        will:
+          damage: "4d6 + ongoing"
+          special: "Area burns for scene"
+        presence:
+          damage: "4d6 + terror"
+          special: "Witnesses flee in panic"
+    
+    wish:
+      name: "Wish"
+      description: "Alter reality"
+      base_effect: "Limited reality change"
+      flow: "-3"
+      
+      attribute_variations:
+        mind:
+          effect: "Logical changes"
+          special: "No unintended consequences"
+        awareness:
+          effect: "Know perfect wish"
+          special: "Optimal outcome"
+        will:
+          effect: "Force reality"
+          special: "Override natural law"
+        presence:
+          effect: "Dramatic changes"
+          special: "Legendary impact"
+
+# ============================================
+# RITUAL MAGIC
+# ============================================
+
+ritual_magic:
+  description: "Extended casting for powerful effects"
+  
+  mechanics:
+    time_required: "10+ minutes"
+    flow_generation: "+3 on completion"
+    interruption: "Ruins ritual, lose materials"
+  
+  ritual_types:
+    divination:
+      examples: ["Commune", "Legend Lore", "Contact Other Plane"]
+      requirement: "mind or awareness"
+    
+    warding:
+      examples: ["Magic Circle", "Forbiddance", "Hallow"]
+      requirement: "will or mind"
+    
+    summoning:
+      examples: ["Planar Ally", "Gate", "Conjure Elemental"]
+      requirement: "will or presence"
+    
+    transformation:
+      examples: ["Permanency", "Awaken", "Reincarnation"]
+      requirement: "any attribute + materials"
+  
+  group_rituals:
+    description: "Multiple casters contribute"
+    mechanics:
+      - "Each assistant grants +1 to roll"
+      - "Can combine different traditions"
+      - "Share Flow cost among participants"
+
+# ============================================
+# METAMAGIC
+# ============================================
+
+metamagic:
+  description: "Modify spells with special techniques"
+  acquisition: "Wizard archetype or feats"
+  
+  options:
+    quicken:
+      effect: "Cast as swift action"
+      cost: "+1 Flow"
+      requirement: "Mind-based casting"
+    
+    extend:
+      effect: "Double duration"
+      cost: "+1 Flow"
+      requirement: "Will-based casting"
+    
+    empower:
+      effect: "+50% damage"
+      cost: "+2 Flow"
+      requirement: "Awareness-based casting"
+    
+    silent:
+      effect: "No verbal component"
+      cost: "+1 Flow"
+      requirement: "Mind-based casting"
+    
+    still:
+      effect: "No somatic component"
+      cost: "+1 Flow"
+      requirement: "Will-based casting"
+    
+    widen:
+      effect: "Double area"
+      cost: "+2 Flow"
+      requirement: "Presence-based casting"
+
+# ============================================
+# MAGIC ITEMS
+# ============================================
+
+magic_items:
+  creation:
+    requirements:
+      - "Appropriate spell known"
+      - "Craft skill"
+      - "Special materials"
+      - "Time investment"
+    
+    flow_investment:
+      minor: "5 Flow total over days"
+      moderate: "10 Flow total over weeks"
+      major: "20 Flow total over months"
+  
+  categories:
+    consumables:
+      potions:
+        examples: ["Healing", "Invisibility", "Strength"]
+        use: "Drink as action"
+      
+      scrolls:
+        examples: ["Any spell"]
+        use: "Read with Sorcery check"
+      
+      wands:
+        examples: ["Specific spell, limited charges"]
+        use: "Activate with Flow"
+    
+    permanent:
+      weapons:
+        enhancement_bonus: "+1 to +3"
+        properties: ["Flaming", "Keen", "Vorpal"]
+      
+      armor:
+        enhancement_bonus: "+1 to +3"
+        properties: ["Fortification", "Glamered", "Ethereal"]
+      
+      accessories:
+        examples: ["Rings", "Amulets", "Cloaks"]
+        effects: ["Protection", "Enhancement", "Utility"]
+
+# ============================================
+# SPELL COMBINATIONS
+# ============================================
+
+spell_combinations:
+  description: "Casting spells in sequence for synergy"
+  
+  examples:
+    defensive_combo:
+      sequence: ["mage_armor", "shield", "blur"]
+      total_cost: "+1, 0, 0 = +1 Flow gained"
+      effect: "Layered defenses"
+    
+    offensive_combo:
+      sequence: ["spark", "spark", "fireball"]
+      total_cost: "+1, +1, -1 = +1 Flow net"
+      effect: "Build up to big spell"
+    
+    utility_combo:
+      sequence: ["detect_magic", "dispel", "shield"]
+      total_cost: "0, -1, 0 = -1 Flow"
+      effect: "Counter enemy magic"
+  
+  advanced_combinations:
+    time_stop_setup:
+      sequence: ["time_stop", "buff", "buff", "position"]
+      strategy: "Use frozen time for preparation"
+    
+    portal_assault:
+      sequence: ["scrying", "teleport", "fireball"]
+      strategy: "Scout, arrive, devastate"
+
+# ============================================
+# MAGICAL TRADITIONS
+# ============================================
+
+magical_traditions:
+  arcane:
+    source: "Study and knowledge"
+    attribute: "mind"
+    strengths: ["Versatility", "Precision", "Metamagic"]
+    weaknesses: ["Requires study", "Component dependent"]
+    signature_spells: ["Teleport", "Time Stop", "Wish"]
+  
+  divine:
+    source: "Faith and devotion"
+    attribute: "will"
+    strengths: ["Reliability", "Healing", "Protection"]
+    weaknesses: ["Deity restrictions", "Moral limitations"]
+    signature_spells: ["Heal", "Resurrection", "Divine Storm"]
+  
+  primal:
+    source: "Natural connection"
+    attribute: "awareness"
+    strengths: ["Elemental power", "Shapeshifting", "Territory"]
+    weaknesses: ["Environment dependent", "Civilization penalty"]
+    signature_spells: ["Lightning Storm", "Polymorph", "Earthquake"]
+  
+  performance:
+    source: "Artistic expression"
+    attribute: "presence"
+    strengths: ["Group effects", "Emotion", "Inspiration"]
+    weaknesses: ["Requires audience", "Obvious casting"]
+    signature_spells: ["Charm", "Fear", "Mass Suggestion"]
+  
+  pact:
+    source: "Bargained power"
+    attribute: "will"
+    strengths: ["Immediate power", "Unique abilities", "No study"]
+    weaknesses: ["Patron demands", "Power can be revoked"]
+    signature_spells: ["Dominate", "Summon", "Soul Cage"]

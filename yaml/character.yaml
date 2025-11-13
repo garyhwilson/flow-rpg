@@ -1,0 +1,706 @@
+# Flow RPG Character System
+# Version: 1.0-complete
+# Character creation, species, archetypes, and callings
+
+character_creation:
+  process:
+    step_1_attributes:
+      action: "Choose starting array"
+      options: ["standard", "specialized", "balanced"]
+      arrays:
+        standard: [2, 1, 1, 0, 0, -1]
+        specialized: [3, 2, 0, 0, -1, -2]
+        balanced: [1, 1, 1, 0, 0, 0]
+    
+    step_2_species:
+      action: "Select species for attribute bonus and traits"
+      options: ["human", "elf", "dwarf", "halfling"]
+    
+    step_3_archetype:
+      action: "Choose profession determining skills and equipment"
+      options: ["fighter", "ranger", "paladin", "rogue", "wizard", "cleric", "bard"]
+    
+    step_4_calling:
+      action: "Select inner motivation providing Flow benefits"
+      options: ["advocate", "guardian", "exemplar", "seeker", "scholar", "sentinel", "enthusiast", "champion", "mediator"]
+    
+    step_5_derived_values:
+      calculate:
+        - "Guard"
+        - "Vitality"
+        - "Flow starting value"
+        - "Movement zones"
+    
+    step_6_details:
+      add:
+        - "Name and background"
+        - "Connections to other characters"
+        - "Personal goals"
+        - "Equipment from archetype"
+
+# ============================================
+# SPECIES
+# ============================================
+
+species:
+  human:
+    name: "Human"
+    description: "Versatile and ambitious, adapting to any challenge"
+    
+    attribute_bonus:
+      choice: "any"
+      amount: 1
+    
+    species_traits:
+      versatile:
+        effect: "Start with one extra skill at Novice (-1) OR upgrade one starting skill one tier"
+        type: "character_creation"
+      
+      determined:
+        effect: "When at negative Flow, next successful action gains +1 additional Flow"
+        type: "flow_generation"
+      
+      adaptable:
+        effect: "During any rest, may swap one Competent skill with another"
+        type: "flexibility"
+    
+    natural_callings: "Any - humans show no pattern"
+    natural_archetypes: "Any - human flexibility"
+    
+  elf:
+    name: "Elf"
+    description: "Graceful people attuned to magic and nature"
+    
+    attribute_bonus:
+      choice: ["grace", "awareness"]
+      amount: 1
+    
+    species_traits:
+      fey_grace:
+        effect: "When you gain Flow from critical success (13+), gain +1 additional Flow"
+        type: "flow_generation"
+      
+      magical_affinity:
+        effect: "Can sense magic within Near range without Sorcery skill (but need skill for details)"
+        type: "perception"
+      
+      elven_focus:
+        effect: "When casting spells, ignore the first point of armor penalty"
+        type: "spellcasting"
+    
+    natural_callings: ["scholar", "seeker", "mediator"]
+    natural_archetypes: ["wizard", "ranger", "bard"]
+    
+  dwarf:
+    name: "Dwarf"
+    description: "Sturdy mountain folk known for resilience and craftsmanship"
+    
+    attribute_bonus:
+      choice: ["might", "will"]
+      amount: 1
+    
+    species_traits:
+      stone_endurance:
+        effect: "When Guard depleted, reduce first Vitality damage each scene by 2"
+        type: "defense"
+      
+      craftwise:
+        effect: "When examining worked materials, ask one question GM must answer truthfully"
+        type: "information"
+      
+      steady_stance:
+        effect: "Switching from Defensive stance costs no Flow (stubborn immovability)"
+        type: "stance"
+    
+    natural_callings: ["sentinel", "guardian", "advocate"]
+    natural_archetypes: ["fighter", "paladin", "cleric"]
+    
+  halfling:
+    name: "Halfling"
+    description: "Small, nimble folk with remarkable luck and courage"
+    
+    attribute_bonus:
+      choice: ["will", "presence"]
+      amount: 1
+    
+    species_traits:
+      lucky:
+        effect: "Once per scene, when Flow would go negative, it stops at 0 instead"
+        type: "flow_protection"
+      
+      brave_heart:
+        effect: "When an ally goes to negative Flow, immediately gain +1 Flow"
+        type: "flow_generation"
+      
+      small_but_mighty:
+        effect: "Move through enemy zones without provoking. When successfully Hide, enemies get -2 to detect"
+        type: "mobility"
+    
+    natural_callings: ["enthusiast", "guardian", "mediator"]
+    natural_archetypes: ["rogue", "bard", "cleric"]
+
+# ============================================
+# ARCHETYPES
+# ============================================
+
+archetypes:
+  fighter:
+    name: "Fighter"
+    description: "Master of weapons and combat techniques"
+    
+    starting_skills:
+      combat:
+        level: "professional"
+        modifier: 2
+      athletics:
+        level: "novice"
+        modifier: -1
+      command:
+        level: "novice"
+        modifier: -1
+    
+    starting_edge:
+      choice: ["weapon_focus", "tough"]
+      weapon_focus: "+1 damage with chosen weapon type"
+      tough: "+2 Guard"
+    
+    starting_equipment:
+      armor: "medium"
+      weapon: "martial weapon and shield"
+      gear: ["Adventurer's kit", "50 coins"]
+    
+    unique_subsystem:
+      name: "Combat Techniques"
+      description: "Chain techniques together for combination attacks"
+      progression: "Learn new techniques at milestones"
+    
+    natural_callings: ["champion", "guardian", "sentinel"]
+    
+  ranger:
+    name: "Ranger"
+    description: "Wilderness expert and skilled hunter"
+    
+    starting_skills:
+      combat:
+        level: "novice"
+        modifier: -1
+      survival:
+        level: "professional"
+        modifier: 2
+      investigate:
+        level: "novice"
+        modifier: -1
+    
+    starting_edge:
+      choice: ["fast_movement", "precise_strike"]
+      fast_movement: "+1 zone of movement"
+      precise_strike: "Reroll one damage die per attack"
+    
+    starting_equipment:
+      armor: "light"
+      weapon: "bow and hunting knife"
+      gear: ["Tracking kit", "Camping gear", "30 coins"]
+    
+    unique_subsystem:
+      name: "Favored Terrain"
+      description: "Gain bonuses in specific environments"
+      progression: "Add new terrains at milestones"
+    
+    natural_callings: ["seeker", "scholar", "sentinel"]
+    
+  paladin:
+    name: "Paladin"
+    description: "Divine warrior and inspiring leader"
+    
+    starting_skills:
+      combat:
+        level: "novice"
+        modifier: -1
+      medicine:
+        level: "novice"
+        modifier: -1
+      command:
+        level: "professional"
+        modifier: 2
+    
+    spellcasting:
+      tradition: "divine"
+      access: "Can cast divine spells regardless of attributes"
+      focus: "Protection and smiting"
+    
+    starting_equipment:
+      armor: "heavy"
+      weapon: "weapon and holy symbol"
+      gear: ["Healing kit", "Religious texts", "40 coins"]
+    
+    unique_subsystem:
+      name: "Divine Oath"
+      description: "Sworn oath provides power and restrictions"
+      progression: "Oath evolves with major milestones"
+    
+    natural_callings: ["advocate", "guardian", "champion"]
+    
+  rogue:
+    name: "Rogue"
+    description: "Skilled infiltrator and versatile expert"
+    
+    starting_skills:
+      stealth:
+        level: "professional"
+        modifier: 2
+      finesse:
+        level: "professional"
+        modifier: 2
+      deceive:
+        level: "novice"
+        modifier: -1
+    
+    special: "Only archetype starting with two Professional skills"
+    
+    starting_equipment:
+      armor: "light"
+      weapon: "daggers and shortbow"
+      gear: ["Thieves' tools", "Disguise kit", "60 coins"]
+    
+    unique_subsystem:
+      name: "Gambits"
+      description: "High-risk, high-reward special actions"
+      progression: "Unlock new gambits through heists"
+    
+    natural_callings: ["seeker", "enthusiast", "scholar"]
+    
+  wizard:
+    name: "Wizard"
+    description: "Master of arcane knowledge and magical theory"
+    
+    starting_skills:
+      sorcery:
+        level: "professional"
+        modifier: 2
+      lore:
+        level: "professional"
+        modifier: 2
+      investigate:
+        level: "novice"
+        modifier: -1
+    
+    spellcasting:
+      tradition: "arcane"
+      access: "Can cast arcane spells regardless of attributes"
+      focus: "Versatility and power"
+    
+    starting_equipment:
+      armor: "none"
+      weapon: "staff or wand"
+      gear: ["Spellbook", "Component pouch", "Scholarly tools", "30 coins"]
+    
+    unique_subsystem:
+      name: "Metamagic"
+      description: "Modify spells with special techniques"
+      progression: "Learn metamagic options at milestones"
+    
+    natural_callings: ["scholar", "seeker", "advocate"]
+    
+  cleric:
+    name: "Cleric"
+    description: "Channel of divine power and spiritual healer"
+    
+    starting_skills:
+      medicine:
+        level: "professional"
+        modifier: 2
+      sorcery:
+        level: "novice"
+        modifier: -1
+      empathy:
+        level: "professional"
+        modifier: 2
+    
+    spellcasting:
+      tradition: "divine"
+      access: "Can cast divine spells regardless of attributes"
+      focus: "Healing and support"
+    
+    starting_equipment:
+      armor: "medium"
+      weapon: "mace and holy symbol"
+      gear: ["Healer's kit", "Holy water", "Religious garments", "35 coins"]
+    
+    unique_subsystem:
+      name: "Divine Domain"
+      description: "Deity grants specialized powers"
+      progression: "Domain powers expand at milestones"
+    
+    natural_callings: ["guardian", "mediator", "advocate"]
+    
+  bard:
+    name: "Bard"
+    description: "Performer, storyteller, and magical artist"
+    
+    starting_skills:
+      perform:
+        level: "professional"
+        modifier: 2
+      deceive:
+        level: "novice"
+        modifier: -1
+      sorcery:
+        level: "novice"
+        modifier: -1
+    
+    spellcasting:
+      tradition: "performance"
+      access: "Can cast performance magic regardless of attributes"
+      focus: "Inspiration and manipulation"
+    
+    starting_equipment:
+      armor: "light"
+      weapon: "rapier and dagger"
+      gear: ["Musical instrument", "Costume", "Bardic lore collection", "45 coins"]
+    
+    unique_subsystem:
+      name: "Bardic Inspiration"
+      description: "Grant allies bonus dice through performance"
+      progression: "Inspiration die size increases with milestones"
+    
+    natural_callings: ["enthusiast", "mediator", "seeker"]
+
+# ============================================
+# CALLINGS
+# ============================================
+
+callings:
+  advocate:
+    name: "The Advocate"
+    core_drive: "The world must be made right"
+    fear: "Being corrupt, defective, or wrong"
+    desire: "To be good, right, accurate, and virtuous"
+    
+    flow_benefit:
+      name: "Righteous Revelation"
+      trigger: "When you or ally reveals truth or exposes deception"
+      effect: "Gain +1 Flow"
+      limit: "No limit per scene"
+    
+    narrative_permission:
+      name: "Truth Sense"
+      effect: "Always know when someone is lying about wrongdoing or corruption"
+      requirement: "No roll needed"
+    
+    stress_behavior: "Becomes critical and perfectionist"
+    growth_direction: "Learns to accept imperfection"
+    
+    calling_equipment:
+      item: "Seal of Truth"
+      effect: "Once per scene, force someone to answer honestly"
+    
+  guardian:
+    name: "The Guardian"
+    core_drive: "I exist to help others"
+    fear: "Being unloved or unwanted"
+    desire: "To feel loved and needed by others"
+    
+    flow_benefit:
+      name: "Protective Surge"
+      trigger: "When ally within Close range takes damage"
+      effect: "Gain +1 Flow"
+      limit: "Once per round"
+    
+    narrative_permission:
+      name: "Helper's Intuition"
+      effect: "Always know when someone genuinely needs help, even if hiding it"
+      requirement: "No roll needed"
+    
+    stress_behavior: "Becomes possessive and martyrlike"
+    growth_direction: "Learns healthy boundaries"
+    
+    calling_equipment:
+      item: "Guardian's Token"
+      effect: "Can take damage meant for another at any range once per scene"
+    
+  exemplar:
+    name: "The Exemplar"
+    core_drive: "Success proves my worth"
+    fear: "Being worthless without achievements"
+    desire: "To feel valuable and worthwhile"
+    
+    flow_benefit:
+      name: "Victory Rush"
+      trigger: "Any critical success (13+)"
+      effect: "Gain +1 additional Flow beyond normal critical"
+      limit: "No limit"
+    
+    narrative_permission:
+      name: "Victory Sense"
+      effect: "Instinctively know the 'win condition' of any situation"
+      requirement: "No roll needed"
+    
+    stress_behavior: "Becomes ruthlessly competitive"
+    growth_direction: "Learns intrinsic worth"
+    
+    calling_equipment:
+      item: "Trophy of Excellence"
+      effect: "Reroll one failed roll per scene"
+    
+  seeker:
+    name: "The Seeker"
+    core_drive: "I must find my true self"
+    fear: "Having no identity or significance"
+    desire: "To find themselves and their significance"
+    
+    flow_benefit:
+      name: "Authentic Insight"
+      trigger: "Attempt something completely new/unconventional"
+      effect: "Gain +3 Flow regardless of success"
+      limit: "Once per scene"
+    
+    narrative_permission:
+      name: "Soul Reading"
+      effect: "Once per scene, ask deep personal question that must be answered honestly"
+      requirement: "Target may be cryptic"
+    
+    stress_behavior: "Becomes self-absorbed and melancholic"
+    growth_direction: "Learns to connect authentically"
+    
+    calling_equipment:
+      item: "Mirror of Truth"
+      effect: "See through any disguise or illusion once per scene"
+    
+  scholar:
+    name: "The Scholar"
+    core_drive: "Knowledge reveals truth"
+    fear: "Being incompetent or overwhelmed"
+    desire: "To be capable and understanding"
+    
+    flow_benefit:
+      name: "Prepared Mind"
+      trigger: "Start of scene"
+      effect: "Begin at +1 Flow instead of 0"
+      limit: "Always active"
+    
+    narrative_permission:
+      name: "Contingency Planning"
+      effect: "Once per scene, declare you prepared for this exact situation"
+      requirement: "Produce relevant tool, fact, or preparation"
+    
+    stress_behavior: "Becomes detached and nihilistic"
+    growth_direction: "Learns to engage emotionally"
+    
+    calling_equipment:
+      item: "Scholar's Codex"
+      effect: "Ask GM one question about any topic, receive useful answer"
+    
+  sentinel:
+    name: "The Sentinel"
+    core_drive: "Loyalty and vigilance keep us safe"
+    fear: "Being without support or security"
+    desire: "To have security and support"
+    
+    flow_benefit:
+      name: "Defensive Vigilance"
+      trigger: "When you or visible ally is attacked"
+      effect: "Gain +1 Flow"
+      limit: "Once per round"
+    
+    narrative_permission:
+      name: "Danger Sense"
+      effect: "Cannot be surprised or ambushed, always act in first round"
+      requirement: "Even if caught off-guard"
+    
+    stress_behavior: "Becomes paranoid and reactive"
+    growth_direction: "Learns to trust"
+    
+    calling_equipment:
+      item: "Sentinel's Ward"
+      effect: "+2 Guard against first attack each scene"
+    
+  enthusiast:
+    name: "The Enthusiast"
+    core_drive: "Life is an adventure to experience"
+    fear: "Being trapped in pain or deprivation"
+    desire: "To be satisfied and content"
+    
+    flow_benefit:
+      name: "Joyful Flow"
+      trigger: "When you gain Flow from any source"
+      effect: "Adjacent ally also gains +1 Flow"
+      limit: "No limit"
+    
+    narrative_permission:
+      name: "Silver Lining"
+      effect: "Always find something positive/useful in any situation"
+      requirement: "Provides actual mechanical or narrative benefit"
+    
+    stress_behavior: "Becomes manic and scattered"
+    growth_direction: "Learns to face difficulty"
+    
+    calling_equipment:
+      item: "Lucky Charm"
+      effect: "Turn one failure into partial success per scene"
+    
+  champion:
+    name: "The Champion"
+    core_drive: "Strength protects what matters"
+    fear: "Being controlled, vulnerable, or weak"
+    desire: "To be self-reliant and in control"
+    
+    flow_benefit:
+      name: "Protective Dominance"
+      trigger: "Successful attack while any ally below half Guard/Vitality"
+      effect: "Gain +1 Flow"
+      limit: "No limit"
+    
+    narrative_permission:
+      name: "Unshakeable Will"
+      effect: "Intimidation attempts against you automatically fail"
+      requirement: "Project strength that cannot be undermined"
+    
+    stress_behavior: "Becomes domineering and aggressive"
+    growth_direction: "Learns vulnerability is strength"
+    
+    calling_equipment:
+      item: "Champion's Banner"
+      effect: "Allies in same zone gain +1 damage"
+    
+  mediator:
+    name: "The Mediator"
+    core_drive: "Harmony brings peace to all"
+    fear: "Loss of connection, separation, conflict"
+    desire: "To have inner and outer peace"
+    
+    flow_benefit:
+      name: "Harmony Restoration"
+      trigger: "First time each scene you help resolve any conflict"
+      effect: "You and all involved gain +1 Flow"
+      limit: "Once per scene"
+    
+    narrative_permission:
+      name: "Universal Understanding"
+      effect: "Understand basic meaning/emotion of any communication"
+      requirement: "Regardless of language barriers"
+    
+    stress_behavior: "Becomes passive and avoidant"
+    growth_direction: "Learns healthy conflict"
+    
+    calling_equipment:
+      item: "Peace Bond"
+      effect: "Prevent one act of violence per scene through mystical compulsion"
+
+# ============================================
+# DERIVED VALUES
+# ============================================
+
+derived_values:
+  guard:
+    formula: "8 + max(might, grace) + (total_milestones × 2)"
+    description: "Ablative defense, refreshes between scenes"
+    recovery:
+      between_scenes: "Full restoration"
+      rally_action: "1d6 once per scene"
+    milestone_scaling: "×2 per milestone for growth"
+  
+  vitality:
+    formula: "10 + will + (major_milestones × 3)"
+    description: "Core health, serious injury threshold"
+    recovery:
+      natural: "1 per hour of rest"
+      magical: "Varies by spell"
+    milestone_scaling: "×3 per major milestone only"
+  
+  flow:
+    starting: 0
+    exceptions:
+      scholar: 1
+    range: [-3, 6]
+    reset: "Between scenes"
+  
+  movement:
+    base_zones_per_turn: 1
+    modifiers:
+      no_armor: 2
+      fast_movement_edge: "+1"
+      halfling_size: "Can move through enemies"
+    double_move: "2 zones if no other action"
+  
+  initiative:
+    determination: "By stance"
+    order:
+      1: "Aggressive"
+      2: "Balanced"
+      3: "Defensive"
+    tiebreaker: "Highest Grace, then players before NPCs"
+  
+  carrying_capacity:
+    light_load: "might + 5 items"
+    medium_load: "might + 10 items (encumbered)"
+    heavy_load: "might + 15 items (heavily encumbered)"
+
+# ============================================
+# CALLING EVOLUTION
+# ============================================
+
+calling_evolution:
+  minor_milestone:
+    options:
+      - "Deepen understanding of current calling"
+      - "Gain minor related benefit (GM discretion)"
+      - "Explore calling through roleplay"
+  
+  moderate_milestone:
+    options:
+      - "Evolve interpretation of calling"
+      - "Modify Flow benefit trigger slightly"
+      - "Add minor secondary benefit"
+  
+  major_milestone:
+    transformation:
+      description: "Complete calling change or synthesis"
+      requirements:
+        - "Extensive roleplay groundwork"
+        - "Major narrative turning point"
+        - "Table agreement"
+      
+      options:
+        single_calling_evolution:
+          description: "Calling transforms to adjacent type"
+          example: "Guardian → Advocate (protecting individuals → fighting systemic injustice)"
+        
+        calling_synthesis:
+          description: "Merge two callings into unique hybrid"
+          example: "Guardian + Scholar = Battle Medic (protection through preparation)"
+          benefit: "Keep both Flow benefits at 75% effectiveness"
+        
+        calling_transcendence:
+          description: "Rise above calling limitations"
+          effect: "Lose calling benefits, gain +2 to all attributes"
+          narrative: "Achieved perfect balance"
+
+# ============================================
+# MAGIC ACCESS
+# ============================================
+
+magic_access:
+  universal_rule:
+    statement: "If archetype provides Sorcery skill, can cast regardless of attributes"
+    affected_archetypes: ["wizard", "cleric", "paladin", "bard"]
+  
+  alternative_access:
+    arcane_tradition:
+      requirement: "mind + awareness >= 2"
+      description: "Academic magical study"
+      spell_types: ["Arcane", "Ritual", "Metamagic"]
+    
+    divine_tradition:
+      requirement: "will + presence >= 2"
+      description: "Faith-based channeling"
+      spell_types: ["Divine", "Healing", "Smiting"]
+    
+    primal_tradition:
+      requirement: "awareness + will >= 2"
+      description: "Natural world attunement"
+      spell_types: ["Nature", "Elemental", "Shapeshifting"]
+    
+    performance_tradition:
+      requirement: "presence + grace >= 2"
+      description: "Magic through artistic expression"
+      spell_types: ["Enchantment", "Illusion", "Inspiration"]

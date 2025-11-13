@@ -1,0 +1,752 @@
+# Flow RPG Combat System
+# Version: 1.0-complete
+# Combat mechanics, stances, techniques, and health
+
+combat_system:
+  overview:
+    typical_length: "3-5 rounds"
+    turn_structure: "Stance-based initiative"
+    flow_importance: "Central to all combat actions"
+    zones: "Abstract positioning system"
+
+# ============================================
+# STANCES
+# ============================================
+
+stances:
+  aggressive:
+    name: "Aggressive Stance"
+    philosophy: "Strike first, strike hard"
+    
+    turn_order: 1
+    
+    flow_generation:
+      successful_attack: 1
+      charging: 
+        trigger: "Move 2+ zones toward enemy"
+        amount: 2
+        limit: "Once per turn"
+    
+    modifiers:
+      damage_bonus: 1
+      defense_penalty: -1
+      
+    movement:
+      requirement: "Must move toward nearest enemy if able"
+      charge: 
+        description: "Move 2+ zones and attack"
+        bonus: "+2 damage"
+    
+    special_ability:
+      name: "Overwhelming Assault"
+      effect: "Critical hits generate +1 additional Flow"
+    
+    restrictions:
+      heavy_armor_original: "Cannot use (removed in rebalance)"
+      heavy_armor_revised: "Can use with -1 Flow generation penalty"
+  
+  balanced:
+    name: "Balanced Stance"
+    philosophy: "Adapt and overcome"
+    
+    turn_order: 2
+    
+    flow_generation:
+      critical_success: 
+        trigger: "Any critical success"
+        amount: 1
+        note: "Stacks with universal critical Flow"
+    
+    modifiers:
+      damage_bonus: 0
+      defense_bonus: 0
+    
+    movement:
+      freedom: "Complete movement choice"
+      flexibility: "No restrictions or requirements"
+    
+    special_ability:
+      name: "Tactical Flexibility"
+      effect: "Once per combat, switch stance as free action"
+    
+    advantages:
+      - "Most versatile option"
+      - "No penalties"
+      - "Good for uncertain situations"
+  
+  defensive:
+    name: "Defensive Stance"
+    philosophy: "Patience and protection"
+    
+    turn_order: 3
+    
+    flow_generation:
+      being_attacked:
+        trigger: "Targeted by attack"
+        amount: 1
+        limit: "Once per round"
+      successful_defense:
+        trigger: "Successfully defend"
+        amount: 1
+        limit: "No limit"
+    
+    modifiers:
+      damage_penalty: -1
+      defense_bonus: 2
+    
+    movement:
+      disengage: "Can leave engagement without provoking"
+      retreat: "Free movement away from enemies"
+    
+    special_ability:
+      name: "Perfect Counter"
+      effect: "On critical defense success, make free counterattack"
+    
+    tactical_role:
+      - "Flow generation engine"
+      - "Tank/protector"
+      - "Spellcaster safety"
+
+stance_interactions:
+  switching:
+    cost: 0
+    action_type: "Free action at turn start"
+    limit: "Once per turn normally"
+    exception: "Balanced stance can switch mid-combat once"
+  
+  stance_dancing:
+    description: "Advanced technique of switching stances tactically"
+    requirements: "Moderate milestone technique"
+    benefit: "Switch stance as reaction for 1 Flow"
+  
+  team_tactics:
+    formation_fighting:
+      requirement: "All allies in same stance"
+      benefit: "+1 to all rolls"
+    
+    complementary_stances:
+      aggressive_defensive: "Aggressive draws attacks, Defensive generates Flow"
+      balanced_support: "Balanced switches to fill gaps"
+
+# ============================================
+# ZONES AND MOVEMENT
+# ============================================
+
+zones:
+  ranges:
+    engaged:
+      distance: "Melee combat range"
+      description: "In direct combat with specific opponents"
+      weapon_use:
+        melee: "Normal"
+        thrown: "-2 penalty"
+        ranged: "Cannot use"
+      movement: "Cannot move past enemies without special ability"
+    
+    close:
+      distance: "One move from engagement"
+      description: "Throwing range, near combat"
+      weapon_use:
+        melee: "Cannot attack"
+        thrown: "+1 Flow on hit"
+        ranged: "Normal"
+      movement: "Can engage or stay at range"
+    
+    far:
+      distance: "Two moves from engagement"
+      description: "Bow range, safe from melee"
+      weapon_use:
+        melee: "Cannot attack"
+        thrown: "Cannot reach"
+        ranged: "+1 damage"
+      movement: "Must move twice to engage"
+    
+    extreme:
+      distance: "Three+ moves from engagement"
+      description: "Beyond normal combat"
+      weapon_use:
+        melee: "Cannot affect"
+        thrown: "Cannot affect"
+        ranged: "-2 to hit"
+      movement: "Effectively out of combat"
+  
+  movement_rules:
+    standard: 
+      zones_per_turn: 1
+      action_cost: "Move action"
+    
+    double_move:
+      zones_per_turn: 2
+      action_cost: "Full turn"
+      restriction: "No other actions"
+    
+    modifiers:
+      no_armor: "+1 zone per turn"
+      fast_movement_edge: "+1 zone per turn"
+      difficult_terrain: "-1 zone per turn"
+      halfling: "Move through enemy zones"
+  
+  zone_control:
+    blocking:
+      description: "Enemies cannot move past you"
+      exception: "Special abilities or size difference"
+    
+    overwatch:
+      description: "Threaten area with ranged weapon"
+      effect: "Free attack if enemy enters"
+      cost: "Ready action"
+
+# ============================================
+# HEALTH AND DAMAGE
+# ============================================
+
+health_system:
+  guard:
+    formula: "8 + max(might, grace) + (total_milestones × 2)"
+    
+    function:
+      - "Ablative defense layer"
+      - "Represents dodging, armor, luck"
+      - "First to take damage"
+    
+    recovery:
+      between_scenes: "Full restoration"
+      rally_action:
+        effect: "Recover 1d6 Guard"
+        limit: "Once per scene"
+        action_cost: "Full action"
+    
+    milestone_scaling:
+      rate: "×2 per milestone"
+      justification: "Combat experience and awareness"
+    
+    armor_bonus:
+      medium_armor: "+1 Guard at scene start"
+      special_abilities: "Various edges grant +2"
+  
+  vitality:
+    formula: "10 + will + (major_milestones × 3)"
+    
+    function:
+      - "Core health"
+      - "Serious injury threshold"
+      - "Death trigger at 0"
+    
+    recovery:
+      natural: "1 per hour of rest"
+      medical: "Medicine check restores 1d6"
+      magical: "Varies by spell level"
+    
+    milestone_scaling:
+      rate: "×3 per major milestone only"
+      justification: "Heroic resilience develops slowly"
+    
+    damage_consequences:
+      half_vitality: "Visible injuries"
+      zero_vitality: "Unconscious and dying"
+      negative_vitality: "Death saves required"
+
+damage_resolution:
+  order:
+    1: "Roll damage dice"
+    2: "Add modifiers (attribute, milestone bonus, etc.)"
+    3: "Subtract armor damage reduction"
+    4: "Apply to Guard first"
+    5: "Excess damage goes to Vitality"
+    6: "Check for death/dying if Vitality = 0"
+  
+  damage_scaling:
+    milestone_bonus:
+      rate: "+1 per 2 milestones"
+      applies_to: "All attacks"
+    
+    weapon_die_upgrade:
+      5_milestones: "d6 → d8"
+      10_milestones: "Add exploding dice"
+      15_milestones: "d8 → d10"
+    
+    spell_scaling:
+      3_milestones: "+1d6 damage"
+      6_milestones: "+1 save TN"
+      10_milestones: "+1d6 damage"
+  
+  damage_types:
+    physical:
+      description: "Normal weapon damage"
+      reduction: "Armor applies fully"
+    
+    elemental:
+      description: "Fire, cold, lightning, etc."
+      reduction: "Armor applies half"
+      special: "May have ongoing effects"
+    
+    psychic:
+      description: "Mental damage"
+      reduction: "Armor doesn't apply"
+      defense: "Will-based resistance"
+    
+    true:
+      description: "Cannot be reduced"
+      reduction: "Nothing applies"
+      rarity: "Very rare, high-level only"
+
+death_and_dying:
+  unconscious:
+    trigger: "Vitality reaches 0"
+    effect: "Fall unconscious, begin dying"
+    duration: "Until stabilized or dead"
+  
+  death_saves:
+    roll: "2d6 + will"
+    timing: "Start of each turn while dying"
+    
+    results:
+      6_or_less:
+        effect: "Lose 1 Vitality"
+        description: "Getting worse"
+      
+      7_to_8:
+        effect: "Stable this round"
+        description: "Holding on"
+      
+      9_to_11:
+        effect: "Stabilize at 0 Vitality"
+        description: "Unconscious but stable"
+      
+      12_plus:
+        effect: "Conscious at 1 Vitality"
+        description: "Heroic recovery"
+  
+  death:
+    trigger: "Vitality reaches -3"
+    effect: "Character dies"
+    prevention: "Stabilization or healing"
+  
+  stabilization:
+    medicine_check: 
+      tn: 8
+      effect: "Stop dying process"
+    
+    magical_healing:
+      effect: "Any healing stabilizes and restores Vitality"
+    
+    first_aid:
+      description: "Narrative stabilization"
+      gm_discretion: true
+
+# ============================================
+# ARMOR SYSTEM
+# ============================================
+
+armor:
+  none:
+    damage_reduction: 0
+    penalties:
+      grace: 0
+      flow: "None"
+    benefits:
+      flow_generation: "+1 when taking damage"
+      spellcasting: "+1 to Sorcery checks"
+      movement: "+1 zone per turn"
+    description: "Maximum mobility and magical attunement"
+  
+  light:
+    damage_reduction: 1
+    penalties:
+      grace: 0
+      flow: "None"
+      spellcasting: 0
+    benefits:
+      initiative: "+1 to act sooner in stance"
+      stealth: "No penalty to Stealth"
+    description: "Balance of protection and mobility"
+    examples: ["Leather", "Padded", "Hide"]
+  
+  medium:
+    damage_reduction: 2
+    penalties:
+      grace: -1
+      flow: "None"
+      spellcasting: -1
+    benefits:
+      guard: "+1 Guard at scene start"
+      balance: "No stance restrictions"
+    description: "Versatile protection"
+    examples: ["Chain shirt", "Scale mail", "Breastplate"]
+  
+  heavy:
+    damage_reduction: 4
+    penalties:
+      grace: -2
+      flow: "-1 to all Flow generation"
+      spellcasting: -3
+    benefits:
+      knockback_immunity: "Cannot be moved by attacks"
+      damage_reduction: "Highest in game"
+    description: "Maximum protection at cost of mobility"
+    examples: ["Full plate", "Splint mail"]
+  
+  shields:
+    buckler:
+      guard_bonus: 1
+      special: "Can use with two-handed weapons"
+    
+    standard:
+      guard_bonus: 2
+      special: "Standard defensive tool"
+    
+    tower:
+      guard_bonus: 3
+      special: "Provides cover, -1 to attacks"
+
+# ============================================
+# WEAPONS
+# ============================================
+
+weapons:
+  categories:
+    light:
+      damage: "2d6"
+      attributes: ["grace", "might"]
+      special: "+1 to Finesse actions"
+      examples: ["Dagger", "Shortsword", "Rapier"]
+    
+    medium:
+      damage: "2d6+1"
+      attributes: ["might", "grace"]
+      special: "Balanced, no special rules"
+      examples: ["Longsword", "Mace", "Spear"]
+    
+    heavy:
+      damage: "2d6+2"
+      attributes: ["might"]
+      special: "-1 Grace while wielding"
+      examples: ["Greatsword", "Maul", "Greataxe"]
+    
+    reach:
+      damage: "2d6"
+      attributes: ["might", "grace"]
+      special: "Attack from Close range"
+      examples: ["Pike", "Halberd", "Whip"]
+    
+    thrown:
+      damage: "2d6"
+      range: "Close"
+      special: "+1 Flow at Close range"
+      examples: ["Javelin", "Throwing axe", "Dagger"]
+    
+    ranged:
+      damage: "2d6"
+      range: "Far"
+      special: "+1 damage at Far, -2 when Engaged"
+      examples: ["Bow", "Crossbow", "Sling"]
+  
+  weapon_properties:
+    versatile:
+      description: "Use one or two-handed"
+      effect: "+1 damage when two-handed"
+    
+    finesse:
+      description: "Use Grace instead of Might"
+      effect: "Choice of attribute"
+    
+    loading:
+      description: "Requires action to reload"
+      effect: "Every other turn firing"
+    
+    ammunition:
+      description: "Requires arrows/bolts"
+      effect: "Track ammo (optional)"
+  
+  quality_levels:
+    standard:
+      bonus: 0
+      cost: "Base price"
+    
+    fine:
+      bonus: "+1 to hit OR damage"
+      cost: "×5 price"
+    
+    masterwork:
+      bonus: "+1 to hit AND damage"
+      cost: "×10 price"
+    
+    legendary:
+      bonus: "+2 to hit and damage, special property"
+      cost: "Priceless"
+
+# ============================================
+# COMBAT ACTIONS
+# ============================================
+
+combat_actions:
+  basic_actions:
+    attack:
+      roll: "2d6 + attribute + combat"
+      typical: 
+        melee: "might + combat"
+        ranged: "grace + combat"
+      target: "TN 8 normally"
+      success: "Roll damage"
+    
+    defend:
+      roll: "2d6 + grace + combat"
+      effect: "+2 Guard until next turn"
+      critical: "Gain +1 Flow"
+    
+    maneuver:
+      roll: "2d6 + attribute + skill"
+      examples:
+        - "Reposition for advantage"
+        - "Create environmental hazard"
+        - "Disarm opponent"
+      success: "Situational benefit + possible Flow"
+    
+    rally:
+      effect: "Recover 1d6 Guard"
+      limit: "Once per scene"
+      action: "Full action, no roll"
+    
+    move:
+      effect: "Change position by 1 zone"
+      combine: "Can move and take another action"
+  
+  reactions:
+    counter:
+      trigger: "Attacked in Defensive stance"
+      cost: "1 Flow"
+      roll: "Opposed combat check"
+      success: "Negate attack, possibly counter"
+    
+    interpose:
+      trigger: "Adjacent ally attacked"
+      cost: "1 Flow"
+      effect: "Become target instead"
+      requirement: "Defensive stance"
+    
+    opportunity_attack:
+      trigger: "Enemy leaves engagement"
+      requirement: "Ready action or special ability"
+      effect: "Free attack at -2"
+  
+  full_actions:
+    charge:
+      requirement: "Aggressive stance"
+      effect: "Move 2 zones + attack with +2 damage"
+      flow: "+2 Flow if successful"
+    
+    full_defense:
+      effect: "+4 to defense, +2 Guard"
+      duration: "Until next turn"
+      limit: "No other actions"
+    
+    aim:
+      effect: "+2 to next ranged attack"
+      requirement: "Don't move"
+
+# ============================================
+# COMBAT TECHNIQUES
+# ============================================
+
+combat_techniques:
+  acquisition:
+    philosophy: "No attribute gates - anyone can learn"
+    method: "Milestone advancement"
+    training: "Narrative justification helpful"
+  
+  basic_techniques:
+    available_to: "Anyone"
+    no_flow_cost:
+      - "Strike (standard attack)"
+      - "Defend (increase Guard)"
+      - "Maneuver (tactical advantage)"
+      - "Rally (recover Guard)"
+  
+  minor_milestone_techniques:
+    requirement: "1+ minor milestones"
+    
+    riposte:
+      trigger: "After successful Defend"
+      effect: "Immediately Strike"
+      cost: "1 Flow"
+    
+    press_advantage:
+      trigger: "While Flow positive"
+      effect: "+1d6 damage"
+      cost: "Passive while condition met"
+    
+    defensive_mastery:
+      effect: "Defensive stance grants +3 defense"
+      cost: "Passive improvement"
+    
+    quick_recovery:
+      effect: "Regain 1d6 Guard between rounds"
+      cost: "1 Flow"
+      limit: "Once per combat"
+  
+  moderate_milestone_techniques:
+    requirement: "Flow +3 to activate"
+    
+    whirlwind_strike:
+      effect: "Hit all adjacent enemies"
+      cost: "3 Flow"
+      damage: "Normal weapon damage to each"
+    
+    perfect_parry:
+      effect: "Negate all damage from one source"
+      cost: "2 Flow"
+      timing: "Reaction"
+    
+    devastating_blow:
+      effect: "Double damage dice"
+      cost: "3 Flow"
+      limit: "Once per scene"
+    
+    combat_flow:
+      effect: "Extra Flow on any critical"
+      cost: "Passive once learned"
+  
+  major_milestone_techniques:
+    requirement: "Flow +6 to activate"
+    
+    unstoppable_assault:
+      effect: "Next attack cannot miss"
+      cost: "6 Flow"
+      damage: "Maximum damage"
+    
+    death_blow:
+      effect: "Instant kill if target below 50% Vitality"
+      cost: "6 Flow"
+      save: "Will TN 12 to reduce to normal damage"
+    
+    battlefield_control:
+      effect: "Reposition all combatants"
+      cost: "6 Flow"
+      limit: "Once per scene"
+
+# ============================================
+# SIGNATURE MOVES
+# ============================================
+
+signature_moves:
+  creation:
+    when: "Moderate milestone"
+    components:
+      - "Name (personal to character)"
+      - "Mechanical effect"
+      - "Flow cost (1 less than normal)"
+      - "Narrative description"
+  
+  examples:
+    fighter_magnus:
+      name: "Thunder Strike"
+      effect: "Attack all enemies in zone"
+      normal_cost: 3
+      signature_cost: 2
+      description: "Spins weapon in devastating arc"
+    
+    wizard_aldric:
+      name: "Arcane Eruption"
+      effect: "3d6 force damage in Close range"
+      normal_cost: 2
+      signature_cost: 1
+      description: "Raw magic explodes outward"
+    
+    cleric_elena:
+      name: "Divine Grace"
+      effect: "Heal 2d6 to all allies in zone"
+      normal_cost: 3
+      signature_cost: 2
+      description: "Golden light restores allies"
+  
+  evolution:
+    minor_improvement:
+      when: "2 milestones after creation"
+      options:
+        - "Reduce cost by 1 (minimum 0)"
+        - "Add minor effect"
+        - "Increase range/area"
+    
+    major_improvement:
+      when: "Major milestone"
+      options:
+        - "Double effect"
+        - "Remove limit"
+        - "Add dramatic narrative permission"
+
+# ============================================
+# ENVIRONMENTAL COMBAT
+# ============================================
+
+environmental_factors:
+  difficult_terrain:
+    effect: "-1 zone movement"
+    examples: ["Mud", "Rubble", "Thick vegetation"]
+  
+  hazardous_terrain:
+    effect: "1d6 damage when entering"
+    examples: ["Fire", "Acid", "Spikes"]
+  
+  cover:
+    partial:
+      effect: "+1 defense"
+      examples: ["Low wall", "Large tree"]
+    
+    full:
+      effect: "+2 defense, can't be targeted by some attacks"
+      examples: ["Building corner", "Fortification"]
+  
+  elevation:
+    higher_ground:
+      effect: "+1 to attacks, +1 damage with ranged"
+    
+    lower_ground:
+      effect: "-1 to attacks against higher opponents"
+  
+  visibility:
+    darkness:
+      effect: "-2 to attacks without darkvision"
+    
+    fog:
+      effect: "Cannot target beyond Close range"
+    
+    blinding_light:
+      effect: "-1 to all actions for 1 round"
+
+# ============================================
+# SOCIAL COMBAT
+# ============================================
+
+social_combat:
+  overview:
+    description: "Conflicts resolved through words not weapons"
+    uses_stances: true
+    uses_flow: true
+    health: "Composure instead of Guard/Vitality"
+  
+  composure:
+    formula: "will + presence + 5"
+    function: "Social resilience and resolve"
+    recovery: "Full between scenes"
+    at_zero: "Convinced, flees, or surrenders"
+  
+  social_stances:
+    aggressive:
+      approach: "Direct argument, intimidation"
+      flow: "+1 on successful social attacks"
+      vulnerability: "Easier to provoke"
+    
+    balanced:
+      approach: "Negotiation, finding common ground"
+      flow: "Normal generation"
+      flexibility: "Can adapt approach"
+    
+    defensive:
+      approach: "Listening, gathering information"
+      flow: "+1 when learning secrets"
+      advantage: "Harder to persuade"
+  
+  social_damage:
+    formula: "1d6 + presence or relevant attribute"
+    reduction: "Will provides 'social armor'"
+    consequences: "Belief changes, agreements, revelations"

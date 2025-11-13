@@ -1,0 +1,660 @@
+# Flow RPG Advancement System
+# Version: 1.0-complete
+# Milestones, progression, and character development
+
+advancement_system:
+  philosophy:
+    core_concept: "Story-driven growth through milestones"
+    design_principles:
+      - "No experience points to track"
+      - "Party advances together"
+      - "GM controls pacing"
+      - "Every advancement meaningful"
+  
+  milestone_types:
+    overview:
+      minor: "Individual growth moments"
+      moderate: "Significant development"
+      major: "Transformative evolution"
+
+# ============================================
+# MINOR MILESTONES
+# ============================================
+
+minor_milestones:
+  frequency: "Every 1-2 sessions"
+  philosophy: "Small but meaningful growth"
+  
+  triggers:
+    - "Complete single session"
+    - "Overcome challenging encounter"
+    - "Make meaningful discovery"
+    - "Successful significant skill use"
+    - "Character development moment"
+  
+  options:
+    skill_development:
+      advance_skill:
+        description: "Improve one skill by one tier"
+        limit: "Maximum Expert (+4) with minor"
+        examples:
+          - "Novice (-1) → Competent (0)"
+          - "Competent (0) → Professional (+2)"
+          - "Professional (+2) → Expert (+4)"
+      
+      new_skill:
+        description: "Learn new skill"
+        starting_level: "Novice (-1)"
+        requirement: "Narrative justification helpful"
+    
+    attribute_adjustment:
+      description: "Redistribute attributes"
+      mechanic: "+1 to one, -1 to another"
+      limit: "Total points unchanged"
+      examples:
+        - "Lower Grace -1, raise Mind +1"
+        - "Reduce Might -1, increase Will +1"
+    
+    combat_edges:
+      description: "Minor combat improvements"
+      limit: "Some edges limited to 1-3 times"
+      
+      list:
+        weapon_focus:
+          effect: "+1 damage with weapon type"
+          limit: "Once per weapon type"
+          examples: ["Swords", "Axes", "Bows"]
+        
+        armor_training:
+          effect: "Reduce armor penalty by 1"
+          limit: "Once per armor type"
+        
+        tough:
+          effect: "+2 Guard"
+          limit: "Can take twice"
+        
+        hardy:
+          effect: "+2 Vitality"
+          limit: "Can take twice"
+        
+        quick_draw:
+          effect: "Switch weapons free"
+          limit: "Once only"
+        
+        combat_reflexes:
+          effect: "+1 to defense rolls"
+          limit: "Once only"
+        
+        fast_movement:
+          effect: "+1 zone movement"
+          limit: "Once only"
+        
+        precise_strike:
+          effect: "Reroll one damage die per attack"
+          limit: "Once only"
+        
+        flow_harmony:
+          effect: "+1 maximum Flow"
+          limit: "Three times maximum"
+        
+        defensive_fighter:
+          effect: "+1 Guard in Defensive stance"
+          limit: "Once only"
+    
+    skill_edges:
+      description: "+1 to specific skill application"
+      examples:
+        combat:
+          - "Dueling (one-on-one)"
+          - "Formation fighting (with allies)"
+          - "Mounted combat"
+        
+        stealth:
+          - "Urban environments"
+          - "Moving silently"
+          - "Hiding in place"
+        
+        sorcery:
+          - "Specific spell school"
+          - "Ritual magic"
+          - "Counterspelling"
+        
+        social:
+          - "Specific social class"
+          - "Intimidation"
+          - "Seduction"
+    
+    calling_exploration:
+      description: "Deepen calling understanding"
+      options:
+        - "Minor mechanical benefit"
+        - "Narrative permission expansion"
+        - "Roleplay development reward"
+  
+  appropriate_challenges:
+    after_0_3_minor:
+      - "Local threats (bandits, wolves)"
+      - "Small-scale problems"
+      - "Village-level threats"
+    
+    after_4_6_minor:
+      - "Regional dangers"
+      - "Organized opposition"
+      - "Town-level threats"
+
+# ============================================
+# MODERATE MILESTONES
+# ============================================
+
+moderate_milestones:
+  frequency: "Every 5-6 sessions"
+  philosophy: "Substantial character development"
+  
+  triggers:
+    - "Complete major adventure/quest"
+    - "Resolve significant story arc"
+    - "Achieve important objective"
+    - "Defeat major antagonist"
+    - "Make campaign-changing decision"
+  
+  first_moderate:
+    typical_timing: "Session 6"
+    power_increase: "~25% overall effectiveness"
+  
+  second_moderate:
+    typical_timing: "Session 12"
+    power_increase: "~50% from start"
+  
+  options:
+    attribute_improvement:
+      description: "Permanent attribute increase"
+      amount: "+1"
+      limit: "Cannot exceed +4 until Major Milestone"
+      strategy: "Shore up weakness or enhance strength"
+    
+    skill_mastery:
+      advance_to_expert:
+        from: "Professional (+2)"
+        to: "Expert (+4)"
+        description: "Recognized expertise"
+      
+      advance_to_master:
+        from: "Expert (+4)"
+        to: "Master (+6)"
+        description: "Legendary capability"
+      
+      new_professional:
+        description: "Gain new skill at Professional (+2)"
+        requirement: "Significant training/experience"
+    
+    signature_move:
+      description: "Create personalized technique"
+      components:
+        name: "Unique to character"
+        effect: "Combines existing abilities"
+        cost: "1 less Flow than normal (minimum 0)"
+        narrative: "Dramatic description"
+      
+      examples:
+        fighter:
+          name: "Thundering Charge"
+          base_technique: "Charge attack"
+          enhancement: "Knocks prone"
+          normal_cost: 3
+          signature_cost: 2
+        
+        wizard:
+          name: "Prismatic Cascade"
+          base_spell: "Fireball"
+          enhancement: "Random energy type"
+          normal_cost: 1
+          signature_cost: 0
+        
+        rogue:
+          name: "Shadow Dance"
+          base_technique: "Stealth + Attack"
+          enhancement: "Teleport behind"
+          normal_cost: 3
+          signature_cost: 2
+    
+    advanced_technique:
+      description: "Gain powerful ability"
+      requirement: "Flow +3 to use"
+      
+      combat_techniques:
+        whirlwind_strike: "Attack all adjacent"
+        perfect_parry: "Negate all damage from source"
+        devastating_blow: "Double damage dice"
+        combat_flow: "Extra Flow on criticals"
+      
+      magic_techniques:
+        metamagic_mastery: "Apply 2 metamagics"
+        spell_combo: "Cast 2 spells in turn"
+        flow_channeling: "Convert HP to Flow"
+      
+      skill_techniques:
+        skill_mastery: "Auto-succeed once/scene"
+        team_coordination: "Grant allies your skill bonus"
+        perfect_timing: "Act out of turn order"
+    
+    calling_evolution:
+      description: "Enhance calling benefits"
+      options:
+        modified_trigger: "Easier or additional trigger"
+        secondary_benefit: "Minor additional effect"
+        narrative_expansion: "New permission type"
+      
+      example:
+        original: "Guardian gains Flow when ally damaged"
+        evolved: "Also gains Flow when healing ally"
+  
+  appropriate_challenges:
+    after_first_moderate:
+      - "Regional threats"
+      - "Organized armies"
+      - "Young dragons"
+      - "City-level dangers"
+    
+    after_second_moderate:
+      - "National threats"
+      - "Powerful organizations"
+      - "Adult dragons"
+      - "Planar incursions"
+
+# ============================================
+# MAJOR MILESTONES
+# ============================================
+
+major_milestones:
+  frequency: "Every 12-15 sessions"
+  philosophy: "Transformative character evolution"
+  
+  triggers:
+    - "Complete major campaign chapter"
+    - "Defeat campaign villain"
+    - "Save kingdom/world"
+    - "Achieve legendary deed"
+    - "Fundamental character change"
+  
+  first_major:
+    typical_timing: "Session 18"
+    power_increase: "~100% from start"
+    significance: "Heroes of the realm"
+  
+  second_major:
+    typical_timing: "Session 30+"
+    power_increase: "~200% from start"
+    significance: "Legendary figures"
+  
+  options:
+    legendary_skill:
+      description: "Achieve mythic mastery"
+      from: "Master (+6)"
+      to: "Legendary (+8)"
+      effect: "Auto-succeed on standard tasks"
+      special: "Impossible becomes possible"
+    
+    attribute_transcendence:
+      description: "Break mortal limits"
+      effect: "Raise attribute above +4"
+      maximum: "+6 ultimately"
+      narrative: "Superhuman capability"
+    
+    calling_transformation:
+      complete_change:
+        description: "Adopt new calling entirely"
+        requirement: "Major story justification"
+        example: "Guardian becomes Champion after loss"
+      
+      calling_synthesis:
+        description: "Merge two callings"
+        effect: "Both benefits at 75% effectiveness"
+        example: "Guardian + Scholar = Protective Sage"
+      
+      calling_transcendence:
+        description: "Rise above calling limits"
+        effect: "Lose calling, gain +1 all attributes"
+        narrative: "Achieved perfect balance"
+    
+    legendary_technique:
+      description: "Ultimate ability"
+      requirement: "Flow +6 to use"
+      
+      combat:
+        unstoppable_assault: "Attack cannot miss"
+        death_blow: "Instant kill <50% Vitality"
+        battlefield_control: "Reposition all combatants"
+        perfect_defense: "Immune to damage for round"
+      
+      magic:
+        reality_break: "Ignore one rule of magic"
+        dual_casting: "Cast two spells simultaneously"
+        permanent_effect: "Make one spell permanent"
+      
+      skill:
+        impossible_task: "Succeed at impossible"
+        inspire_legend: "Grant major bonus to all allies"
+        perfect_knowledge: "Know anything about topic"
+    
+    mythic_edge:
+      description: "Supernatural capability"
+      
+      examples:
+        immortal_body:
+          effect: "Don't age, immune to disease"
+          narrative: "Blessed by gods"
+        
+        planar_step:
+          effect: "Teleport at will (1 Flow)"
+          narrative: "Tear reality's fabric"
+        
+        true_sight:
+          effect: "See through all deceptions"
+          narrative: "Pierce the veil"
+        
+        legendary_presence:
+          effect: "Enemies must save or flee"
+          narrative: "Overwhelming aura"
+  
+  paragon_paths:
+    description: "Specialized evolution at first Major"
+    choice: "Defines legendary identity"
+    
+    examples:
+      weapon_master:
+        archetype: "Fighter"
+        benefits:
+          - "All weapons become +1 magical"
+          - "Invent new combat techniques"
+          - "Cannot be disarmed"
+        narrative: "Every weapon sings in your hands"
+      
+      archmage:
+        archetype: "Wizard"
+        benefits:
+          - "Reduce all spell costs by 1"
+          - "Cast signature spell at will"
+          - "Sense all magic within mile"
+        narrative: "Magic itself bends to your will"
+      
+      shadow_lord:
+        archetype: "Rogue"
+        benefits:
+          - "Become shadow (incorporeal) 1/scene"
+          - "See in absolute darkness"
+          - "Teleport between shadows"
+        narrative: "Darkness serves you"
+      
+      divine_champion:
+        archetype: "Paladin"
+        benefits:
+          - "Radiant aura damages evil"
+          - "Resurrect once per week"
+          - "Smite ignores all defenses"
+        narrative: "Living saint walking the earth"
+  
+  appropriate_challenges:
+    after_first_major:
+      - "Continental threats"
+      - "Demon lords"
+      - "Ancient dragons"
+      - "Deities' avatars"
+    
+    after_second_major:
+      - "World-ending threats"
+      - "Primordial entities"
+      - "Gods themselves"
+      - "Multiversal dangers"
+
+# ============================================
+# EDGES SYSTEM
+# ============================================
+
+edges_system:
+  description: "Minor improvements providing growth variety"
+  introduction: "Alternative to skill/attribute advancement"
+  
+  categories:
+    combat_edges:
+      description: "Martial improvements"
+      acquisition: "Minor milestones"
+      stacking: "Some stack, some don't"
+    
+    skill_edges:
+      description: "Specialized applications"
+      acquisition: "Minor milestones"
+      stacking: "Different specializations stack"
+    
+    flow_edges:
+      description: "Resource management"
+      acquisition: "Minor milestones"
+      stacking: "Limited stacking"
+    
+    social_edges:
+      description: "Interaction benefits"
+      acquisition: "Minor milestones or roleplay"
+      examples:
+        reputation: "+1 with specific group"
+        contact: "Ally in specific location"
+        language: "Learn new language"
+    
+    equipment_edges:
+      description: "Gear improvements"
+      acquisition: "Milestone or quest reward"
+      examples:
+        heirloom_weapon: "Weapon gains minor magic"
+        masterwork_tools: "+1 to craft/profession"
+        lucky_charm: "Reroll one die per scene"
+  
+  edge_chains:
+    description: "Edges that build on each other"
+    
+    example_chain_martial:
+      1_weapon_focus: "+1 damage with type"
+      2_weapon_specialization: "+1 to hit with type"
+      3_weapon_mastery: "Critical on 12+ with type"
+    
+    example_chain_defensive:
+      1_tough: "+2 Guard"
+      2_very_tough: "+2 more Guard"
+      3_incredibly_tough: "+2 more Guard, +1 DR"
+    
+    example_chain_magical:
+      1_flow_harmony: "+1 max Flow"
+      2_flow_resonance: "+1 more max Flow"
+      3_flow_mastery: "+1 more max, start at +1"
+
+# ============================================
+# CAMPAIGN PROGRESSION
+# ============================================
+
+campaign_progression:
+  typical_timeline:
+    sessions_1_5:
+      name: "Learning the Ropes"
+      milestones: "2-3 minor"
+      challenges: "Local threats"
+      power_level: "Competent adventurers"
+    
+    sessions_6_11:
+      name: "Growing Expertise"
+      milestones: "1 moderate, 2-3 minor"
+      challenges: "Regional threats"
+      power_level: "Notable heroes"
+    
+    sessions_12_17:
+      name: "Rising Heroes"
+      milestones: "2 moderate, 3-4 minor"
+      challenges: "National threats"
+      power_level: "Famous champions"
+    
+    sessions_18_29:
+      name: "Legendary Status"
+      milestones: "1 major, 1-2 moderate, 4-5 minor"
+      challenges: "Continental threats"
+      power_level: "Legendary figures"
+    
+    sessions_30_plus:
+      name: "Mythic Tier"
+      milestones: "2 major, 2-3 moderate, 6+ minor"
+      challenges: "Cosmic threats"
+      power_level: "Demigods"
+  
+  power_scaling:
+    formula: "Power = 10 + Attributes(6) + Skills(8) + (Milestones × 2) + Edges"
+    
+    progression:
+      session_1: 
+        power: 16
+        description: "Starting heroes"
+      
+      session_6:
+        power: 22
+        increase: "+37.5%"
+        description: "Experienced adventurers"
+      
+      session_12:
+        power: 30
+        increase: "+87.5%"
+        description: "Regional champions"
+      
+      session_18:
+        power: 38
+        increase: "+137.5%"
+        description: "Legendary heroes"
+      
+      session_30:
+        power: 50
+        increase: "+212.5%"
+        description: "Mythic figures"
+  
+  enemy_scaling:
+    principle: "Enemies scale at 80% of PC rate"
+    reasoning: "PCs should feel growth while maintaining challenge"
+    
+    minion_hp:
+      milestone_0_2: 8
+      milestone_3_5: 12
+      milestone_6_8: 16
+      milestone_9_11: 22
+      milestone_12_14: 30
+      milestone_15_plus: 40
+    
+    boss_hp:
+      milestone_0_2: 40
+      milestone_3_5: 55
+      milestone_6_8: 75
+      milestone_9_11: 95
+      milestone_12_14: 120
+      milestone_15_plus: 150
+
+# ============================================
+# ADVANCEMENT VARIANTS
+# ============================================
+
+advancement_variants:
+  individual_advancement:
+    description: "PCs advance separately"
+    pros: "Rewards active players"
+    cons: "Power gaps, complexity"
+    implementation: "Track milestones individually"
+  
+  xp_hybrid:
+    description: "Use XP for minor, milestones for major"
+    pros: "Granular progress feeling"
+    cons: "More bookkeeping"
+    implementation: "100 XP per minor milestone"
+  
+  achievement_based:
+    description: "Specific goals grant advancement"
+    pros: "Clear objectives"
+    cons: "Can feel videogamey"
+    examples:
+      - "Defeat 10 orcs: Combat Edge"
+      - "Save 3 villages: Guardian calling benefit"
+      - "Discover 5 ruins: Lore skill increase"
+  
+  narrative_only:
+    description: "Pure story-based advancement"
+    pros: "Maximum flexibility"
+    cons: "Can feel arbitrary"
+    implementation: "GM awards when appropriate"
+
+# ============================================
+# RETIREMENT AND LEGACY
+# ============================================
+
+retirement_legacy:
+  when_to_retire:
+    mechanical: "After 2-3 major milestones"
+    narrative: "Character achieves life goal"
+    player_choice: "Always player's decision"
+  
+  retirement_benefits:
+    become_npc:
+      description: "Character becomes world figure"
+      benefit: "Influences campaign"
+    
+    found_organization:
+      description: "Establish lasting institution"
+      benefit: "Creates ally network"
+    
+    mentor_next:
+      description: "Train new character"
+      benefit: "New PC starts with bonus"
+  
+  legacy_system:
+    description: "Retired character's impact"
+    
+    mechanical_legacy:
+      student: "New PC starts with extra edge"
+      heir: "Inherit legendary item"
+      inspired: "Start with higher attribute"
+    
+    narrative_legacy:
+      reputation: "Known as hero's successor"
+      connections: "Access to hero's allies"
+      mission: "Continue hero's work"
+
+# ============================================
+# DOWNTIME ADVANCEMENT
+# ============================================
+
+downtime_activities:
+  description: "Progress between adventures"
+  time_units: "Weeks or months"
+  
+  training:
+    description: "Improve skills"
+    mechanics:
+      cost: "Gold and time"
+      benefit: "Progress toward next tier"
+      requirement: "Trainer of higher skill"
+  
+  research:
+    description: "Gain knowledge"
+    mechanics:
+      cost: "Access to library/sage"
+      benefit: "Information or spell"
+      requirement: "Lore or Investigation"
+  
+  crafting:
+    description: "Create items"
+    mechanics:
+      cost: "Materials and time"
+      benefit: "Equipment or consumables"
+      requirement: "Appropriate Craft skill"
+  
+  networking:
+    description: "Build connections"
+    mechanics:
+      cost: "Social investment"
+      benefit: "Contacts and reputation"
+      requirement: "Social skills"
+  
+  recovery:
+    description: "Heal lasting injuries"
+    mechanics:
+      cost: "Time and possibly gold"
+      benefit: "Remove conditions"
+      requirement: "Medicine or magic"

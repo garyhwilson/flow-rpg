@@ -1,0 +1,561 @@
+# Flow RPG Game Master Tools
+# Version: 1.0-complete
+# GM guidance, encounter building, and campaign management
+
+gm_system:
+  philosophy:
+    core_concept: "Enable dynamic storytelling through Flow"
+    principles:
+      - "Story first, rules second"
+      - "Flow creates narrative momentum"
+      - "Fail forward always"
+      - "Player agency matters"
+
+# ============================================
+# FLOW ECONOMY MANAGEMENT
+# ============================================
+
+flow_management:
+  gm_flow_pool:
+    description: "GM's narrative currency"
+    starting: "3 + number of players"
+    maximum: 10
+    reset: "Between sessions"
+    
+    generation:
+      player_failure: "+1 when PC fails importantly"
+      dramatic_moment: "+1 when tension peaks"
+      villain_success: "+1 when antagonist succeeds"
+      scene_change: "+2 at dramatic scene transitions"
+    
+    expenditure:
+      introduce_complication:
+        cost: 1
+        effect: "Add unexpected obstacle"
+      
+      enhance_enemy:
+        cost: 2
+        effect: "Enemy gains advanced ability"
+      
+      environmental_hazard:
+        cost: 1
+        effect: "Activate environmental danger"
+      
+      reinforce:
+        cost: 3
+        effect: "Bring in reinforcements"
+      
+      escape_route:
+        cost: 2
+        effect: "Villain escapes dramatically"
+      
+      narrative_twist:
+        cost: 4
+        effect: "Major plot revelation"
+  
+  flow_transparency:
+    visible_to_players: "Optional but recommended"
+    benefits:
+      - "Creates tension"
+      - "Players understand stakes"
+      - "Collaborative storytelling"
+    
+    communication:
+      gaining: "I'm gaining Flow from that failure"
+      spending: "Spending 2 Flow for complication"
+      warning: "I have 8 Flow built up..."
+
+# ============================================
+# ENCOUNTER BUILDING
+# ============================================
+
+encounter_building:
+  challenge_rating:
+    formula: "Total Enemy Power / Party Average Power"
+    
+    difficulty_bands:
+      trivial:
+        ratio: "< 0.5"
+        description: "No real threat"
+        flow_generation: "Minimal"
+      
+      easy:
+        ratio: "0.5 - 0.75"
+        description: "Minor challenge"
+        flow_generation: "Low"
+      
+      standard:
+        ratio: "0.75 - 1.25"
+        description: "Fair fight"
+        flow_generation: "Moderate"
+      
+      hard:
+        ratio: "1.25 - 1.75"
+        description: "Serious challenge"
+        flow_generation: "High"
+      
+      deadly:
+        ratio: "> 1.75"
+        description: "Potential TPK"
+        flow_generation: "Extreme"
+  
+  enemy_templates:
+    minion:
+      guard: "5 + (party_milestones / 2)"
+      vitality: "3 + (party_milestones / 3)"
+      damage: "1d6 + (party_milestones / 4)"
+      skills: "One at Professional"
+      flow: "Starts at 0"
+      special: "Dies from any Vitality damage"
+    
+    standard:
+      guard: "8 + party_milestones"
+      vitality: "10 + (party_milestones × 2)"
+      damage: "2d6 + (party_milestones / 2)"
+      skills: "Two at Professional"
+      flow: "Starts at 0"
+      special: "One stance preference"
+    
+    elite:
+      guard: "12 + (party_milestones × 2)"
+      vitality: "15 + (party_milestones × 3)"
+      damage: "2d6+2 + party_milestones"
+      skills: "One Expert, two Professional"
+      flow: "Starts at +1"
+      special: "Stance dancing, signature move"
+    
+    boss:
+      guard: "15 + (party_milestones × 3)"
+      vitality: "25 + (party_milestones × 4)"
+      damage: "3d6 + party_milestones"
+      skills: "Two Expert, one Master"
+      flow: "Starts at +2"
+      special: "Multiple actions, legendary resistance"
+  
+  encounter_composition:
+    solo_boss:
+      composition: "1 Boss"
+      tactics: "Multiple actions per round"
+      modifications:
+        - "Acts in each stance"
+        - "Legendary resistance (3/scene)"
+        - "Escalation mechanics"
+    
+    boss_and_minions:
+      composition: "1 Boss + 4-6 Minions"
+      tactics: "Minions protect and enable"
+      flow_economy: "Minions generate Flow for boss"
+    
+    elite_squad:
+      composition: "2-3 Elites"
+      tactics: "Coordinated strikes"
+      special: "Combination attacks"
+    
+    horde:
+      composition: "10+ Minions"
+      tactics: "Overwhelming numbers"
+      special: "Swarm rules apply"
+    
+    mixed_threat:
+      composition: "1 Elite + 2 Standard + 3 Minions"
+      tactics: "Layered challenge"
+      progression: "Waves arrive over time"
+  
+  environmental_factors:
+    hazards:
+      ongoing_damage:
+        examples: ["Fire", "Acid", "Extreme cold"]
+        effect: "1d6 per round in area"
+        flow: "Generate when PCs affected"
+      
+      movement_restriction:
+        examples: ["Mud", "Web", "Ice"]
+        effect: "-1 zone movement"
+        tactical: "Control positioning"
+      
+      visibility:
+        examples: ["Darkness", "Fog", "Smoke"]
+        effect: "-2 to ranged attacks"
+        benefit: "Enables ambush"
+    
+    interactive_elements:
+      destructible_cover:
+        hp: 10-20
+        effect: "Provides protection until destroyed"
+      
+      environmental_weapons:
+        examples: ["Chandelier", "Boulder", "Explosive barrels"]
+        damage: "3d6 area effect"
+        activation: "1 action + skill check"
+      
+      terrain_advantage:
+        high_ground: "+1 attack and damage"
+        choke_point: "Limit enemy numbers"
+        escape_route: "Alternative resolution"
+
+# ============================================
+# NPC GENERATION
+# ============================================
+
+npc_generation:
+  quick_npc:
+    name_and_role: "Define immediately"
+    motivation: "What do they want?"
+    memorable_trait: "One distinctive feature"
+    
+    mechanical_needs:
+      social_npc:
+        skills: "Two social at Professional"
+        composure: "Will + Presence + 5"
+        flow: "Starts at 0"
+      
+      combat_npc:
+        template: "Use minion/standard/elite"
+        modify: "Adjust for role"
+      
+      specialist_npc:
+        master_skill: "One at Expert or Master"
+        other_skills: "Competent or less"
+  
+  memorable_traits:
+    physical:
+      - "Unusual height (very tall/short)"
+      - "Distinctive scar or marking"
+      - "Unusual hair/eye color"
+      - "Missing limb or prosthetic"
+      - "Distinctive clothing style"
+    
+    behavioral:
+      - "Specific speech pattern"
+      - "Nervous tic or habit"
+      - "Catchphrase or saying"
+      - "Unusual laugh"
+      - "Specific fear or phobia"
+    
+    social:
+      - "Overly formal/casual"
+      - "Constantly suspicious"
+      - "Inappropriately cheerful"
+      - "Never makes eye contact"
+      - "Whispers everything"
+  
+  npc_motivations:
+    basic_drives:
+      survival: "Stay alive and safe"
+      wealth: "Acquire resources"
+      power: "Gain influence/control"
+      knowledge: "Learn secrets"
+      revenge: "Settle old scores"
+      love: "Protect/pursue relationships"
+    
+    calling_based:
+      advocate: "Fix what's wrong"
+      guardian: "Protect someone"
+      exemplar: "Prove superiority"
+      seeker: "Find identity"
+      scholar: "Understand truth"
+      sentinel: "Maintain security"
+      enthusiast: "Experience excitement"
+      champion: "Demonstrate strength"
+      mediator: "Create harmony"
+
+# ============================================
+# CAMPAIGN MANAGEMENT
+# ============================================
+
+campaign_management:
+  campaign_types:
+    episodic:
+      description: "Self-contained adventures"
+      flow_reset: "Full reset each session"
+      advancement: "Milestone per episode"
+      benefits: "Easy to run, flexible"
+    
+    serial:
+      description: "Ongoing connected story"
+      flow_reset: "Carries between sessions"
+      advancement: "Natural story beats"
+      benefits: "Deep character development"
+    
+    sandbox:
+      description: "Player-driven exploration"
+      flow_reset: "By location"
+      advancement: "Discovery-based"
+      benefits: "Maximum agency"
+    
+    hybrid:
+      description: "Serial with episodic elements"
+      flow_reset: "Varies by arc"
+      advancement: "Mixed approach"
+      benefits: "Best of both worlds"
+  
+  session_structure:
+    opening:
+      recap: "What happened last time"
+      intentions: "What are we doing today"
+      flow_check: "Starting Flow states"
+      scene_set: "Where we begin"
+    
+    rising_action:
+      encounters: "2-3 challenges"
+      flow_building: "Tension increases"
+      complications: "Things go wrong"
+    
+    climax:
+      boss_encounter: "Major challenge"
+      flow_maximum: "Peak resources"
+      decisive_moment: "Victory or defeat"
+    
+    resolution:
+      consequences: "What changed"
+      rewards: "Treasure and growth"
+      hooks: "Next session seeds"
+      flow_reset: "Return to baseline"
+  
+  pacing_tools:
+    tension_management:
+      build_tension:
+        - "Increase enemy Flow generation"
+        - "Add time pressure"
+        - "Reveal stakes gradually"
+        - "Use environmental hazards"
+      
+      release_tension:
+        - "Comic relief NPC"
+        - "Safe haven location"
+        - "Minor victory"
+        - "Resource discovery"
+    
+    flow_pacing:
+      slow_start: "Let players build Flow"
+      midpoint_spike: "Big Flow expenditure opportunity"
+      climax_management: "Both sides maximum Flow"
+      denouement: "Gentle Flow reduction"
+  
+  milestone_timing:
+    minor_milestone_triggers:
+      - "End of satisfying session"
+      - "Significant discovery"
+      - "Overcome personal challenge"
+      - "Creative problem solution"
+    
+    moderate_milestone_triggers:
+      - "Complete story arc"
+      - "Defeat recurring villain"
+      - "Save community"
+      - "Major character growth"
+    
+    major_milestone_triggers:
+      - "Complete campaign chapter"
+      - "World-changing event"
+      - "Legendary achievement"
+      - "Transform the setting"
+
+# ============================================
+# RULES ADJUDICATION
+# ============================================
+
+adjudication:
+  core_principles:
+    fiction_first:
+      rule: "What makes sense in story?"
+      application: "Rules support narrative"
+    
+    yes_and:
+      rule: "Build on player ideas"
+      application: "Add complications, not roadblocks"
+    
+    fail_forward:
+      rule: "Failure creates opportunity"
+      application: "Every roll changes situation"
+  
+  common_rulings:
+    attribute_choice:
+      principle: "Approach determines attribute"
+      examples:
+        intimidation:
+          might: "Physical threats"
+          mind: "Logical consequences"
+          presence: "Force of personality"
+          will: "Unbreakable stare"
+    
+    skill_overlap:
+      principle: "Most specific skill applies"
+      examples:
+        climbing:
+          athletics: "General climbing"
+          survival: "Natural cliff faces"
+          finesse: "Precise handholds"
+    
+    edge_cases:
+      group_checks:
+        rule: "Highest roller + assists"
+        assist: "+1 per helper (max +3)"
+      
+      extended_challenges:
+        rule: "Multiple successes needed"
+        track: "Progress clock method"
+      
+      contested_rolls:
+        rule: "Highest total wins"
+        tie: "Defender/status quo wins"
+  
+  house_rule_guidelines:
+    before_implementing:
+      - "Discuss with players"
+      - "Test for one session"
+      - "Get feedback"
+      - "Adjust or abandon"
+    
+    common_modifications:
+      brutal_combat: "Injuries on Vitality damage"
+      heroic_play: "Start with +1 Flow"
+      gritty_realism: "Slower healing"
+      high_magic: "Reduce spell costs by 1"
+
+# ============================================
+# TOOLS AND RESOURCES
+# ============================================
+
+gm_tools:
+  random_tables:
+    quick_npc_generator:
+      d6_profession:
+        1: "Merchant"
+        2: "Guard"
+        3: "Craftsperson"
+        4: "Scholar"
+        5: "Criminal"
+        6: "Noble"
+      
+      d6_attitude:
+        1: "Hostile"
+        2: "Suspicious"
+        3: "Neutral"
+        4: "Friendly"
+        5: "Helpful"
+        6: "Fanatical"
+    
+    complication_generator:
+      combat:
+        1: "Reinforcements arrive"
+        2: "Environment becomes hazardous"
+        3: "Objective changes"
+        4: "Innocent in danger"
+        5: "Equipment failure"
+        6: "Unexpected betrayal"
+      
+      social:
+        1: "Authority arrives"
+        2: "Secret revealed"
+        3: "Mistaken identity"
+        4: "Cultural misunderstanding"
+        5: "Rival appears"
+        6: "Time pressure added"
+  
+  tracking_sheets:
+    combat_tracker:
+      per_combatant:
+        - "Name and stance"
+        - "Current Guard/Vitality"
+        - "Flow (current/max)"
+        - "Conditions"
+        - "Initiative order position"
+    
+    flow_tracker:
+      player_flow:
+        - "Character name"
+        - "Current Flow"
+        - "Flow triggers used"
+        - "Signature moves available"
+      
+      gm_flow:
+        - "Current pool"
+        - "Complications available"
+        - "Escalation level"
+    
+    campaign_tracker:
+      milestone_progress:
+        - "Sessions since last milestone"
+        - "Significant achievements"
+        - "Character growth moments"
+        - "Pending rewards"
+      
+      story_threads:
+        - "Active plots"
+        - "Background events"
+        - "Villain plans"
+        - "Timer/countdown events"
+
+# ============================================
+# SAFETY TOOLS
+# ============================================
+
+safety_tools:
+  session_zero:
+    discuss:
+      - "Content boundaries"
+      - "Tone expectations"
+      - "Safety mechanisms"
+      - "Communication preferences"
+    
+    establish:
+      - "Lines (never cross)"
+      - "Veils (fade to black)"
+      - "X-card availability"
+      - "Check-in schedule"
+  
+  ongoing_safety:
+    x_card:
+      description: "Tap to skip content"
+      no_questions: "No explanation needed"
+    
+    check_ins:
+      timing: "Break points"
+      method: "Thumbs up/down"
+    
+    aftercare:
+      debrief: "Post-session discussion"
+      support: "Available if needed"
+
+# ============================================
+# CAMPAIGN THEMES
+# ============================================
+
+campaign_themes:
+  theme_as_mechanics:
+    horror:
+      flow_modification: "Negative Flow = fear"
+      special_rules: "Sanity tracking"
+      tone: "Diminishing resources"
+    
+    heroic:
+      flow_modification: "Start at +1"
+      special_rules: "Death saves easier"
+      tone: "Larger than life"
+    
+    political:
+      flow_modification: "Social Flow pools"
+      special_rules: "Reputation tracking"
+      tone: "Consequences matter"
+    
+    exploration:
+      flow_modification: "Discovery generates Flow"
+      special_rules: "Resource management"
+      tone: "Wonder and danger"
+  
+  genre_modifications:
+    modern:
+      equipment: "Firearms and technology"
+      magic: "Hidden or scientific"
+      flow: "Adrenaline/confidence"
+    
+    sci_fi:
+      equipment: "Energy weapons, spacecraft"
+      magic: "Psionics or tech"
+      flow: "Quantum probability"
+    
+    post_apocalyptic:
+      equipment: "Scavenged and makeshift"
+      magic: "Mutations or lost tech"
+      flow: "Desperation/hope"
