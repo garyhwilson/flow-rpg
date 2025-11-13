@@ -28,25 +28,25 @@ sections:
 
   # ===== PART II: CALLINGS =====
   - title: "Part II: Callings - Character Motivation"
-    intro: "Your calling defines who your character is at their core—not just what they can do, but why they do it. This section explores the ten fundamental callings that drive adventurers."
+    intro: "Your calling defines who your character is at their core—not just what they can do, but why they do it. This section explores the fundamental callings that drive adventurers."
     content:
       - file: "callings/00_introduction.md"
 
-      - section_header: "The Ten Callings"
+      - section_header: "The Nine Callings"
 
-      - file: "callings/calling_types/explorer.md"
+      - file: "callings/calling_types/advocate.md"
+      - file: "callings/calling_types/champion.md"
+      - file: "callings/calling_types/enthusiast.md"
+      - file: "callings/calling_types/exemplar.md"
+      - file: "callings/calling_types/guardian.md"
+      - file: "callings/calling_types/mediator.md"
       - file: "callings/calling_types/scholar.md"
-      - file: "callings/calling_types/protector.md"
-      - file: "callings/calling_types/ascendant.md"
-      - file: "callings/calling_types/avenger.md"
-      - file: "callings/calling_types/wanderer.md"
-      - file: "callings/calling_types/healer.md"
-      - file: "callings/calling_types/artisan.md"
-      - file: "callings/calling_types/rebel.md"
       - file: "callings/calling_types/seeker.md"
+      - file: "callings/calling_types/sentinel.md"
 
       - file: "callings/growth_patterns/calling_evolution.md"
-      - file: "callings/growth_patterns/calling_combinations.md"
+      - file: "callings/growth_patterns/campaign_themes.md"
+      - file: "callings/growth_patterns/party_dynamics.md"
 
   # ===== PART III: ARCHETYPES =====
   - title: "Part III: Archetypes - Character Profession"
@@ -55,14 +55,13 @@ sections:
       - file: "archetypes/00_introduction.md"
       - file: "archetypes/02_system_integration.md"
 
-      - section_header: "The Seven Core Archetypes"
+      - section_header: "The Six Core Archetypes"
 
       - file: "archetypes/archetype_types/fighter.md"
       - file: "archetypes/archetype_types/wizard.md"
       - file: "archetypes/archetype_types/cleric.md"
       - file: "archetypes/archetype_types/rogue.md"
       - file: "archetypes/archetype_types/ranger.md"
-      - file: "archetypes/archetype_types/bard.md"
       - file: "archetypes/archetype_types/paladin.md"
 
   # ===== PART IV: SPECIES =====
@@ -74,10 +73,10 @@ sections:
 
       - section_header: "The Four Core Species"
 
-      - file: "species/species_types/human.md"
-      - file: "species/species_types/elf.md"
-      - file: "species/species_types/dwarf.md"
-      - file: "species/species_types/halfling.md"
+      - file: "species/human.md"
+      - file: "species/elf.md"
+      - file: "species/dwarf.md"
+      - file: "species/halfling.md"
 
   # ===== PART V: MAGIC SYSTEM =====
   - title: "Part V: Magic - The Art of Spellcasting"
