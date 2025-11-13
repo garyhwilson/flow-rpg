@@ -1,0 +1,21 @@
+{# Magic Item Crafting - from magic.yaml #}
+# MAGIC ITEM CRAFTING
+*Generated from YAML source data*
+
+## Overview
+Creating magical items through extended effort.
+
+{% if crafting_data %}
+{% for aspect_id, aspect in crafting_data.items() %}
+## {{ aspect_id.replace('_', ' ').title() }}
+{% if aspect is mapping %}
+{% for detail_id, detail in aspect.items() %}
+- **{{ detail_id.replace('_', ' ').title() }}:** {{ detail }}
+{% endfor %}
+{% else %}
+{{ aspect }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+*Magic item crafting requires time, materials, and Flow investment.*

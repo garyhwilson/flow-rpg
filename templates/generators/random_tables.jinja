@@ -1,0 +1,21 @@
+{# Random Tables - from gm_tools.yaml #}
+# RANDOM TABLES
+*Generated from YAML source data*
+
+## Overview
+Quick random generation for improvisation.
+
+{% if tables_data %}
+{% for table_id, table in tables_data.items() %}
+## {{ table_id.replace('_', ' ').title() }}
+{% if table is mapping %}
+{% for entry_id, entry in table.items() %}
+- {{ entry }}
+{% endfor %}
+{% else %}
+{{ table }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+*Roll or choose from these tables for quick NPC generation and complications.*

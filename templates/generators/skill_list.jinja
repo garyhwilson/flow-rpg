@@ -1,0 +1,23 @@
+{# Skill List - from core_rules.yaml #}
+# SKILL LIST REFERENCE
+*Generated from YAML source data*
+
+## Overview
+Complete skill reference with associated attributes.
+
+{% if skills_data %}
+{% for skill_id, skill in skills_data.items() %}
+## {{ skill_id.replace('_', ' ').title() }}
+{% if skill.attribute %}
+**Attribute:** {{ skill.attribute if skill.attribute is string else skill.attribute|join(' or ') }}
+{% endif %}
+{% if skill.description %}
+**Description:** {{ skill.description }}
+{% endif %}
+{% if skill.specializations %}
+**Specializations:** {{ skill.specializations|join(', ') }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+*Skills define what your character can do beyond basic attributes.*

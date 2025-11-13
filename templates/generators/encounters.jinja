@@ -1,0 +1,47 @@
+{#
+Encounters Template
+Generates encounter building guide from YAML GM tools data
+#}
+# ENCOUNTER BUILDER
+*Generated from YAML source data*
+
+## Encounter Compositions
+
+{% for comp_id, comp in encounter_composition.items() %}
+### {{ comp_id.replace('_', ' ').title() }}
+
+- **Composition:** {{ comp.composition }}
+- **Tactics:** {{ comp.tactics }}
+{% if comp.modifications %}
+**Modifications:**
+{% for mod in comp.modifications %}
+- {{ mod }}
+{% endfor %}
+{% endif %}
+{% if comp.flow_economy %}
+**Flow Economy:** {{ comp.flow_economy }}
+{% endif %}
+
+{% endfor %}
+
+---
+
+## Building Balanced Encounters
+
+### Difficulty Guidelines
+
+**Easy:** 4-6 Minions OR 1 Standard
+**Medium:** 2 Standards OR 4 Minions + 1 Standard
+**Hard:** 1 Elite OR 3 Standards
+**Deadly:** 1 Boss OR 2 Elites + Minions
+
+### Flow Economy Management
+
+- Minions die quickly but generate enemy Flow
+- Standards sustain pressure
+- Elites use Flow for techniques
+- Bosses start with Flow advantage
+
+---
+
+*Combine enemy types and terrain for dynamic, memorable encounters.*

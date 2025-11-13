@@ -1,0 +1,44 @@
+{#
+Enemy Templates Template
+Generates enemy stat blocks from YAML GM tools data
+#}
+# ENEMY TEMPLATES - STAT BLOCKS
+*Generated from YAML source data*
+
+## Overview
+
+Use these templates to create balanced enemies scaled to party progression. Replace `party_milestones` with total party milestones.
+
+---
+
+{% for template_id, template in enemy_templates.items() %}
+## {{ template_id.title() }}
+
+- **Guard:** {{ template.guard }}
+- **Vitality:** {{ template.vitality }}
+- **Damage:** {{ template.damage }}
+- **Skills:** {{ template.skills }}
+- **Flow:** {{ template.flow }}
+- **Special:** {{ template.special }}
+
+{% endfor %}
+
+---
+
+## Scaling Examples
+
+**Party at 0 Milestones (Starting):**
+- Minion: Guard 5, Vitality 3, Damage 1d6
+- Standard: Guard 8, Vitality 10, Damage 2d6
+- Elite: Guard 12, Vitality 15, Damage 2d6+2
+- Boss: Guard 15, Vitality 25, Damage 3d6
+
+**Party at 6 Milestones (Mid-Campaign):**
+- Minion: Guard 8, Vitality 5, Damage 1d6+1
+- Standard: Guard 14, Vitality 22, Damage 2d6+3
+- Elite: Guard 24, Vitality 33, Damage 2d6+8
+- Boss: Guard 33, Vitality 49, Damage 3d6+6
+
+---
+
+*Scale enemies to match party power for balanced, engaging combat.*

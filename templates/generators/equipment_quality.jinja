@@ -1,0 +1,23 @@
+{# Equipment Quality - from equipment.yaml #}
+# EQUIPMENT QUALITY TIERS
+*Generated from YAML source data*
+
+## Overview
+Equipment comes in varying quality levels affecting performance and cost.
+
+{% if quality_data %}
+{% for quality_id, quality in quality_data.items() %}
+## {{ quality_id.replace('_', ' ').title() }}
+{% if quality.bonus %}
+- **Bonus:** {{ quality.bonus }}
+{% endif %}
+{% if quality.cost_multiplier %}
+- **Cost:** ×{{ quality.cost_multiplier }} base price
+{% endif %}
+{% if quality.description %}
+- **Description:** {{ quality.description }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+*Quality represents craftsmanship and materials, not magical enchantment.*

@@ -1,0 +1,22 @@
+{# Advantage/Disadvantage - from core_rules.yaml #}
+# ADVANTAGE AND DISADVANTAGE
+*Generated from YAML source data*
+
+## Overview
+Situational modifiers for rolls.
+
+## Advantage (+1 to roll)
+{% if modifier_data.advantage %}
+{% for situation in modifier_data.advantage %}
+- {{ situation }}
+{% endfor %}
+{% endif %}
+
+## Disadvantage (-1 to roll)
+{% if modifier_data.disadvantage %}
+{% for situation in modifier_data.disadvantage %}
+- {{ situation }}
+{% endfor %}
+{% endif %}
+
+*Advantage and disadvantage represent favorable or unfavorable circumstances.*

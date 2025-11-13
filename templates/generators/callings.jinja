@@ -1,0 +1,96 @@
+{#
+Callings Template
+Generates calling documentation from YAML character data
+#}
+# CALLINGS - MECHANICAL REFERENCE
+*Generated from YAML source data*
+
+## Overview
+
+Callings represent your character's core psychological motivation and worldview. Each calling provides:
+- **Flow Benefit** - A mechanical trigger that generates Flow
+- **Narrative Permission** - A special ability that shapes roleplay
+- **Calling Equipment** - Optional unique item (acquired during play)
+
+Your calling influences how you approach problems, what drives your decisions, and how you generate Flow in play.
+
+---
+
+{% for calling_id, calling in callings.items() %}
+## {{ calling.name }}
+*"{{ calling.core_drive }}"*
+
+### Core Identity
+- **Fear:** {{ calling.fear }}
+- **Desire:** {{ calling.desire }}
+
+### Mechanical Benefits
+
+#### Flow Benefit: {{ calling.flow_benefit.name }}
+- **Trigger:** {{ calling.flow_benefit.trigger }}
+- **Effect:** {{ calling.flow_benefit.effect }}
+- **Limit:** {{ calling.flow_benefit.limit }}
+
+#### Narrative Permission: {{ calling.narrative_permission.name }}
+- **Effect:** {{ calling.narrative_permission.effect }}
+{% if calling.narrative_permission.requirement %}
+- **Requirement:** {{ calling.narrative_permission.requirement }}
+{% endif %}
+
+### Calling Equipment: {{ calling.calling_equipment.item }}
+- **Effect:** {{ calling.calling_equipment.effect }}
+- **Acquisition:** Awarded by GM during character development moments
+
+### Psychological Dynamics
+- **Under Stress:** {{ calling.stress_behavior }}
+- **Growth Path:** {{ calling.growth_direction }}
+
+---
+
+{% endfor %}
+
+## Using Callings in Play
+
+### Flow Generation Strategy
+Each calling generates Flow differently. Consider how your calling's trigger aligns with your:
+- **Archetype:** Combat style and abilities
+- **Stance Preference:** Aggressive, Balanced, or Defensive
+- **Party Role:** Tank, damage, support, or utility
+
+### Narrative Permission
+Your narrative permission is always available. It's not a spell or technique—it's an innate aspect of your character's perspective. Use it to:
+- Gain information without rolling
+- Justify unusual character knowledge or preparation
+- Create dramatic moments that align with your calling's themes
+
+### Calling Equipment
+Calling equipment is earned through play, not purchased:
+- GM awards it during significant character moments
+- Usually occurs after demonstrating growth or facing your calling's challenges
+- Mechanically powerful but limited to once per scene
+- Represents your calling becoming manifest in the world
+
+## GM Guidelines for Callings
+
+### Triggering Flow Benefits
+- **Be Generous:** If a player is trying to trigger their flow benefit, work with them
+- **Scene-Based Limits:** Most benefits have "no limit" but are naturally constrained by circumstances
+- **Reliability:** Each calling should trigger 1-3 times per session minimum
+- **Party Balance:** Ensure all callings have opportunities to trigger
+
+### Awarding Calling Equipment
+Award calling equipment when:
+- Character has significant moment related to their calling's theme
+- Player demonstrates growth or integration (not just stress behavior)
+- Feels dramatically appropriate
+- Typically between 3rd-6th session
+
+### Narrative Permissions
+- These are designed to never require rolls
+- They provide narrative justification, not automatic success at everything
+- Can still fail in execution even if the permission gives knowledge/intuition
+- Should feel special and unique to that character
+
+---
+
+*Callings represent the heart of character identity. Mechanics reinforce theme, and theme drives meaningful moments in play.*

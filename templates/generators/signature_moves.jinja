@@ -1,0 +1,22 @@
+{# Signature Moves - from advancement.yaml moderate_milestones #}
+# SIGNATURE MOVES
+*Generated from YAML source data*
+
+## Overview
+{{ milestone_data.moderate_milestones.options.signature_move.description }}
+
+**Components:**
+{% for component, desc in milestone_data.moderate_milestones.options.signature_move.components.items() %}
+- **{{ component.title() }}:** {{ desc }}
+{% endfor %}
+
+## Examples
+{% for archetype, move in milestone_data.moderate_milestones.options.signature_move.examples.items() %}
+### {{ archetype.title() }}: {{ move.name }}
+- **Base:** {{ move.base_technique if move.base_technique else move.base_spell }}
+- **Enhancement:** {{ move.enhancement }}
+- **Normal Cost:** {{ move.normal_cost }} Flow
+- **Signature Cost:** {{ move.signature_cost }} Flow
+{% endfor %}
+
+*Create your own signature move by combining existing abilities with reduced Flow cost.*

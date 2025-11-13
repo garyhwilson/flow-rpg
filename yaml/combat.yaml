@@ -17,30 +17,33 @@ stances:
   aggressive:
     name: "Aggressive Stance"
     philosophy: "Strike first, strike hard"
-    
+    when_to_use: "When you need to end fights quickly, press tactical advantage, or seize initiative"
+
     turn_order: 1
-    
+
     flow_generation:
       successful_attack: 1
-      charging: 
+      charging:
         trigger: "Move 2+ zones toward enemy"
         amount: 2
         limit: "Once per turn"
-    
+
     modifiers:
       damage_bonus: 1
       defense_penalty: -1
-      
+
     movement:
       requirement: "Must move toward nearest enemy if able"
-      charge: 
+      charge:
         description: "Move 2+ zones and attack"
         bonus: "+2 damage"
-    
+
     special_ability:
       name: "Overwhelming Assault"
       effect: "Critical hits generate +1 additional Flow"
-    
+
+    tactical_notes: "High risk, high reward - generates Flow through decisive action"
+
     restrictions:
       heavy_armor_original: "Cannot use (removed in rebalance)"
       heavy_armor_revised: "Can use with -1 Flow generation penalty"
@@ -48,7 +51,8 @@ stances:
   balanced:
     name: "Balanced Stance"
     philosophy: "Adapt and overcome"
-    
+    when_to_use: "When facing unpredictable threats, maintaining flexibility, or learning enemy capabilities"
+
     turn_order: 2
     
     flow_generation:
@@ -68,7 +72,9 @@ stances:
     special_ability:
       name: "Tactical Flexibility"
       effect: "Once per combat, switch stance as free action"
-    
+
+    tactical_notes: "Rewards skill and adaptability - no bonuses or penalties, but generates Flow from excellence and can adjust to changing battlefield conditions"
+
     advantages:
       - "Most versatile option"
       - "No penalties"
@@ -77,7 +83,8 @@ stances:
   defensive:
     name: "Defensive Stance"
     philosophy: "Patience and protection"
-    
+    when_to_use: "When threatened, protecting allies, buying time for preparation, or facing overwhelming offense"
+
     turn_order: 3
     
     flow_generation:
@@ -101,11 +108,8 @@ stances:
     special_ability:
       name: "Perfect Counter"
       effect: "On critical defense success, make free counterattack"
-    
-    tactical_role:
-      - "Flow generation engine"
-      - "Tank/protector"
-      - "Spellcaster safety"
+
+    tactical_notes: "Generates Flow reliably through being targeted - turns enemy aggression into resource advantage while protecting yourself and allies"
 
 stance_interactions:
   switching:

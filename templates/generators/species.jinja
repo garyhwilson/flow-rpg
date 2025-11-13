@@ -1,0 +1,191 @@
+{#
+Species Template
+Generates species documentation from YAML character data
+#}
+# SPECIES - MECHANICAL REFERENCE
+*Generated from YAML source data*
+
+## Overview
+
+Species represents your character's heritage and innate capabilities. Each species provides:
+- **Attribute Bonus** - A +1 bonus to one or more attributes
+- **Three Species Traits** - Unique mechanical abilities
+- **Natural Affinities** - Common calling and archetype patterns
+
+Choose a species that complements your desired playstyle and calling.
+
+---
+
+{% for species_id, species in species_data.items() %}
+## {{ species.name }}
+*{{ species.description }}*
+
+### Attribute Bonus
+{% if species.attribute_bonus.choice == "any" %}
+- **Choice:** +{{ species.attribute_bonus.amount }} to any one attribute
+{% elif species.attribute_bonus.choice is string %}
+- **Bonus:** +{{ species.attribute_bonus.amount }} to {{ species.attribute_bonus.choice.title() }}
+{% else %}
+- **Choice:** +{{ species.attribute_bonus.amount }} to {{ species.attribute_bonus.choice|join(' or ')|title }}
+{% endif %}
+
+### Species Traits
+
+{% for trait_id, trait in species.species_traits.items() %}
+#### {{ trait_id.replace('_', ' ').title() }}
+- **Effect:** {{ trait.effect }}
+- **Type:** {{ trait.type.replace('_', ' ').title() }}
+{% endfor %}
+
+### Natural Affinities
+
+{% if species.natural_callings is string %}
+**Callings:** {{ species.natural_callings }}
+{% else %}
+**Callings:** {{ species.natural_callings|join(', ')|title }}
+{% endif %}
+
+{% if species.natural_archetypes is string %}
+**Archetypes:** {{ species.natural_archetypes }}
+{% else %}
+**Archetypes:** {{ species.natural_archetypes|join(', ')|title }}
+{% endif %}
+
+*These are tendencies, not restrictions. Any species can choose any calling or archetype.*
+
+---
+
+{% endfor %}
+
+## Choosing Your Species
+
+### Character Creation Impact
+
+**Attribute Bonuses:**
+- Species bonus stacks with your starting attribute array
+- Choose bonus based on your desired archetype's primary attributes
+- Flexible bonuses (Human, Elf choices) offer more build variety
+
+**Species Traits:**
+- All three traits are always active
+- No choices needed—you get all three
+- Traits never conflict with class abilities
+- Unique mechanics that stay relevant throughout the campaign
+
+### Species and Flow Economy
+
+Each species interacts with Flow differently:
+
+**Humans:** Excel when recovering from setbacks (negative Flow bonus)
+- Strategy: Take calculated risks, benefit from adversity
+- Synergy: Works with any playstyle that accepts setbacks
+
+**Elves:** Generate extra Flow from excellence (critical success bonus)
+- Strategy: Build high skill bonuses to trigger crits more often
+- Synergy: Skill-focused characters, high attribute builds
+
+**Dwarves:** Protected economy, stable Flow (reduces Vitality loss, free defensive switches)
+- Strategy: Defensive play, resource conservation
+- Synergy: Tank characters, defenders, careful tacticians
+
+**Halflings:** Flow protection and support generation (prevent negative, gain from ally setbacks)
+- Strategy: Team player, safety net for party
+- Synergy: Support characters, party leaders, tactical coordinators
+
+### Species and Callings
+
+While any species can take any calling, some combinations create natural synergies:
+
+**Natural Synergies** (from YAML):
+- **Humans:** No pattern—truly any calling works equally well
+- **Elves:** Scholar, Seeker, Mediator (introspective, magical, diplomatic)
+- **Dwarves:** Sentinel, Guardian, Advocate (protective, moral, steadfast)
+- **Halflings:** Enthusiast, Guardian, Mediator (optimistic, caring, peaceful)
+
+**Against-Type Builds:**
+Playing against natural affinities creates interesting character concepts:
+- Dwarf Seeker: Finding identity through ancient stone
+- Elf Champion: Pursuing perfection through competition
+- Halfling Sentinel: Vigilant protector despite small size
+- Human Scholar: Compensating for short lifespan with knowledge
+
+### Species and Archetypes
+
+**Natural Synergies** (from YAML):
+- **Humans:** Any archetype—human versatility supports all playstyles
+- **Elves:** Wizard, Ranger, Bard (magical, graceful, intuitive)
+- **Dwarves:** Fighter, Paladin, Cleric (martial, devoted, resilient)
+- **Halflings:** Rogue, Bard, Cleric (nimble, charismatic, supportive)
+
+**Attribute Bonus Efficiency:**
+- Match species bonus to archetype primary attributes
+- Flexible bonuses let you optimize any build
+- Fixed bonuses reward appropriate class choices
+
+### Mechanical Considerations
+
+**Spellcasters:**
+- **Elf:** Ignore first armor penalty point (wear light armor freely)
+- **Human:** Extra skill tier helps meet magic access requirements
+- **Dwarf/Halfling:** Will bonus aids divine magic access
+
+**Martial Characters:**
+- **Dwarf:** Stone Endurance makes frontline safer
+- **Elf:** Fey Grace rewards aggressive stance crits
+- **Human:** Skill versatility adds utility to combat builds
+- **Halfling:** Mobility traits enable skirmisher tactics
+
+**Skill Specialists:**
+- **Human:** Versatile trait gives extra skill or tier upgrade
+- **Human:** Adaptable lets you retrain skills
+- **Dwarf:** Craftwise provides guaranteed information
+- **Halfling:** Small But Mighty makes stealth exceptionally reliable
+
+## GM Guidelines for Species
+
+### Balancing Species Traits
+
+All four species are designed to be mechanically balanced:
+- Each gets exactly 3 traits
+- Traits are situational—not "always on" bonuses
+- Flow interactions vary but average similar benefit
+- No species dominates any specific role
+
+### Encouraging Diversity
+
+- Don't push players toward "optimal" species choices
+- Reward creative use of species traits
+- Make traits relevant in different scenes
+- Validate against-type character concepts
+
+### Species in Your World
+
+The species as written assume:
+- All four species are common and integrated
+- No species is evil or monstrous
+- Cultural differences exist but aren't mechanically enforced
+- Players can reflavor species traits narratively
+
+Feel free to adjust:
+- Species descriptions to fit your setting
+- Add new species using these as templates
+- Rename species while keeping mechanics
+- Create cultural variants with trait swaps
+
+### Common Questions
+
+**Q: Can I play other species?**
+A: Work with GM to reskin existing species or create new ones with similar trait structure.
+
+**Q: What if my species doesn't match my calling/archetype?**
+A: That's fine! Species and class are separate mechanical choices. Natural affinities are just common patterns, not restrictions.
+
+**Q: Do I have to use my attribute bonus on the listed attributes?**
+A: If it says "choice," you can pick from those options. Humans can choose any attribute.
+
+**Q: Can species traits be improved?**
+A: Traits remain as written. Use edges or milestones to enhance related abilities.
+
+---
+
+*Species represents your character's heritage, but your choices and actions define who you become.*

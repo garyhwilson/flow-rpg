@@ -1,0 +1,222 @@
+{#
+Spells Template
+Generates spell documentation from YAML magic data
+#}
+# SPELLS - MECHANICAL REFERENCE
+*Generated from YAML source data*
+
+## Overview
+
+Magic in Flow RPG uses a unified casting framework where the same spell produces different effects based on your casting attribute. Every spell can be cast using Mind, Awareness, Will, or Presence + Sorcery, each providing unique benefits.
+
+**Casting Roll:** 2d6 + [Chosen Attribute] + Sorcery
+
+### The Four Casting Approaches
+
+- **Mind + Sorcery:** Precision, control, avoiding allies
+- **Awareness + Sorcery:** Maximum damage, sensing weaknesses
+- **Will + Sorcery:** Cast at negative Flow, persistence
+- **Presence + Sorcery:** Social effects, fear/inspiration
+
+---
+
+{% for tier_name, tier_data in spell_tiers.items() %}
+{% if tier_data is mapping and tier_name.startswith('tier_') %}
+# {{ tier_name.replace('_', ' ').upper() }}
+
+{% if tier_data.get('flow_cost') %}
+**Flow Cost:** {{ tier_data.flow_cost }}
+{% endif %}
+{% if tier_data.get('description') %}
+**Description:** {{ tier_data.description }}
+{% endif %}
+{% if tier_data.get('power_level') %}
+**Power Level:** {{ tier_data.power_level }}
+{% endif %}
+
+{% if tier_data.get('strategic_use') %}
+### Strategic Use
+{% for use in tier_data.strategic_use %}
+- {{ use }}
+{% endfor %}
+{% endif %}
+
+---
+
+{% for spell_id, spell_data in tier_data.items() %}
+{% if spell_data is mapping and spell_id not in ['flow_cost', 'description', 'power_level', 'examples', 'strategic_use'] %}
+
+## {{ spell_data.name }}
+*{{ spell_data.description }}*
+
+**Base Effect:** {{ spell_data.base_effect }}
+{% if spell_data.flow %}
+**Flow Cost:** {{ spell_data.flow }}
+{% endif %}
+{% if spell_data.range %}
+**Range:** {{ spell_data.range }}
+{% endif %}
+{% if spell_data.duration %}
+**Duration:** {{ spell_data.duration }}
+{% endif %}
+{% if spell_data.area %}
+**Area:** {{ spell_data.area }}
+{% endif %}
+
+### Attribute Variations
+
+{% if spell_data.attribute_variations %}
+{% if spell_data.attribute_variations.mind %}
+#### Mind + Sorcery: Calculated Casting
+{% if spell_data.attribute_variations.mind.damage %}
+- **Damage:** {{ spell_data.attribute_variations.mind.damage }}
+{% endif %}
+{% if spell_data.attribute_variations.mind.effect %}
+- **Effect:** {{ spell_data.attribute_variations.mind.effect }}
+{% endif %}
+{% if spell_data.attribute_variations.mind.special %}
+- **Special:** {{ spell_data.attribute_variations.mind.special }}
+{% endif %}
+{% if spell_data.attribute_variations.mind.guard %}
+- **Guard:** +{{ spell_data.attribute_variations.mind.guard }}
+{% endif %}
+{% if spell_data.attribute_variations.mind.healing %}
+- **Healing:** {{ spell_data.attribute_variations.mind.healing }}
+{% endif %}
+{% endif %}
+
+{% if spell_data.attribute_variations.awareness %}
+#### Awareness + Sorcery: Instinctive Power
+{% if spell_data.attribute_variations.awareness.damage %}
+- **Damage:** {{ spell_data.attribute_variations.awareness.damage }}
+{% endif %}
+{% if spell_data.attribute_variations.awareness.effect %}
+- **Effect:** {{ spell_data.attribute_variations.awareness.effect }}
+{% endif %}
+{% if spell_data.attribute_variations.awareness.special %}
+- **Special:** {{ spell_data.attribute_variations.awareness.special }}
+{% endif %}
+{% if spell_data.attribute_variations.awareness.guard %}
+- **Guard:** +{{ spell_data.attribute_variations.awareness.guard }}
+{% endif %}
+{% if spell_data.attribute_variations.awareness.healing %}
+- **Healing:** {{ spell_data.attribute_variations.awareness.healing }}
+{% endif %}
+{% endif %}
+
+{% if spell_data.attribute_variations.will %}
+#### Will + Sorcery: Unyielding Determination
+{% if spell_data.attribute_variations.will.damage %}
+- **Damage:** {{ spell_data.attribute_variations.will.damage }}
+{% endif %}
+{% if spell_data.attribute_variations.will.effect %}
+- **Effect:** {{ spell_data.attribute_variations.will.effect }}
+{% endif %}
+{% if spell_data.attribute_variations.will.special %}
+- **Special:** {{ spell_data.attribute_variations.will.special }}
+{% endif %}
+{% if spell_data.attribute_variations.will.guard %}
+- **Guard:** +{{ spell_data.attribute_variations.will.guard }}
+{% endif %}
+{% if spell_data.attribute_variations.will.healing %}
+- **Healing:** {{ spell_data.attribute_variations.will.healing }}
+{% endif %}
+{% endif %}
+
+{% if spell_data.attribute_variations.presence %}
+#### Presence + Sorcery: Reality-Shaping Will
+{% if spell_data.attribute_variations.presence.damage %}
+- **Damage:** {{ spell_data.attribute_variations.presence.damage }}
+{% endif %}
+{% if spell_data.attribute_variations.presence.effect %}
+- **Effect:** {{ spell_data.attribute_variations.presence.effect }}
+{% endif %}
+{% if spell_data.attribute_variations.presence.special %}
+- **Special:** {{ spell_data.attribute_variations.presence.special }}
+{% endif %}
+{% if spell_data.attribute_variations.presence.guard %}
+- **Guard:** +{{ spell_data.attribute_variations.presence.guard }}
+{% endif %}
+{% if spell_data.attribute_variations.presence.healing %}
+- **Healing:** {{ spell_data.attribute_variations.presence.healing }}
+{% endif %}
+{% endif %}
+{% endif %}
+
+---
+
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+## Spell Selection Strategy
+
+### Building Your Spell List
+
+**Cantrips (Always Prepare):**
+- Spark for combat Flow generation
+- Mage Armor for survivability
+- Light for utility
+- Prestidigitation for versatility
+
+**Basic Spells (Core Toolkit):**
+- Bolt for reliable ranged damage (0 Flow)
+- Shield for emergency protection
+- Blur for sustained defense
+- Charm for social encounters
+
+**Advanced Spells (Power Moves):**
+- Fireball for area damage
+- Heal for party support
+- Fly for tactical mobility
+- Invisibility for infiltration
+
+**Expert/Master Spells (Game Changers):**
+- Choose based on campaign needs
+- Coordinate with party
+- Plan Flow economy around these
+
+### Flow Economy for Casters
+
+**Cantrip Spam Phase (Turns 1-2):**
+- Cast Spark in Aggressive stance (+2 Flow per hit)
+- Build to +3 or +4 Flow
+- Maintain Mage Armor for defense
+
+**Power Phase (Turns 3-4):**
+- Cast Advanced spell (-1 Flow)
+- Aggressive stance gains +1 back if damage
+- Cast Expert spell (-2 Flow) for decisive action
+
+**Recovery Phase (if needed):**
+- Back to cantrips to rebuild
+- Use Defensive stance if taking heat
+- Manage Flow for sustained effectiveness
+
+## GM Guidelines for Magic
+
+### Balancing Spell Effects
+- All four attribute approaches should feel viable
+- Don't penalize creative use of attribute variations
+- Let Mind casters protect allies from AoE
+- Let Awareness casters maximize damage
+- Let Will casters function at negative Flow
+- Let Presence casters create social/fear effects
+
+### Common Mistakes
+- Forgetting armor penalties to Sorcery
+- Not allowing attribute flexibility
+- Treating all spells as Mind-based (old habits)
+- Overlooking Will's ability to cast at negative Flow
+- Undervaluing cantrips for Flow generation
+
+### Encouraging Diverse Casting
+- Ask "How are you casting this?"
+- Describe different attribute manifestations
+- Reward creative use of attribute variations
+- Allow attribute choice even if one is clearly "optimal"
+
+---
+
+*Magic is personal. Two wizards casting the same spell through different attributes create entirely different experiences, both mechanically and narratively.*

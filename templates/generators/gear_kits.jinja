@@ -1,0 +1,54 @@
+{#
+Gear Kits Template
+Generates adventuring gear kit documentation from YAML equipment data
+#}
+# ADVENTURING GEAR KITS
+*Generated from YAML source data*
+
+## Overview
+
+Gear kits provide complete equipment packages for specific roles and situations. More economical than buying items separately.
+
+---
+
+{% for kit_id, kit in kits.items() %}
+## {{ kit_id.replace('_', ' ').title() }}
+
+**Contents:**
+{% for item in kit.contents %}
+- {{ item }}
+{% endfor %}
+
+{% if kit.uses %}
+**Uses:** {{ kit.uses }}
+{% endif %}
+{% if kit.benefit %}
+**Benefit:** {{ kit.benefit }}
+{% endif %}
+{% if kit.quality %}
+**Quality Options:**
+{% for quality_id, quality in kit.quality.items() %}
+- {{ quality_id.title() }}: {{ quality.cost }} coins{% if quality.bonus %} ({{ quality.bonus }}){% endif %}
+{% endfor %}
+{% else %}
+**Cost:** {{ kit.cost }} coins
+{% endif %}
+{% if kit.weight %}
+**Weight:** {{ kit.weight }}
+{% endif %}
+
+---
+
+{% endfor %}
+
+## Kit Selection Guide
+
+**Adventurer's Kit:** Essential for all characters, standard baseline equipment
+**Dungeoneer's Kit:** Upgrade for dungeon-focused campaigns
+**Healer's Kit:** Required for effective field medicine
+**Thieves' Tools:** Required for rogues and infiltrators
+**Disguise Kit:** For social infiltration specialists
+
+---
+
+*Proper preparation prevents poor performance—stock up before venturing forth.*

@@ -1,0 +1,21 @@
+{# Target Numbers - from core_rules.yaml #}
+# TARGET NUMBERS REFERENCE
+*Generated from YAML source data*
+
+## Overview
+Standard target numbers for adjudicating checks.
+
+{% if tn_data %}
+{% for tn_id, tn in tn_data.items() %}
+### {{ tn_id.replace('_', ' ').title() }}
+- **TN:** {{ tn.value if tn.value else tn }}
+{% if tn.description %}
+- **Description:** {{ tn.description }}
+{% endif %}
+{% if tn.success_rate %}
+- **Success Rate:** {{ tn.success_rate }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+*Standard TN is 8 for most checks. Adjust for difficulty.*

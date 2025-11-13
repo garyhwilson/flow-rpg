@@ -1,0 +1,142 @@
+{#
+Armor Template
+Generates armor documentation from YAML equipment data
+#}
+# ARMOR SYSTEM - MECHANICAL REFERENCE
+*Generated from YAML source data*
+
+## Overview
+
+Armor provides damage reduction (DR) but comes with trade-offs. Each armor category offers distinct tactical benefits and penalties, creating meaningful choices for different character builds.
+
+**Key Principle:** Armor reduces incoming damage but affects your capabilities in different ways.
+
+---
+
+{% for armor_id, armor_data in armor_types.items() %}
+## {{ armor_id.replace('_', ' ').title() }}
+
+### Defense
+- **Damage Reduction:** {{ armor_data.damage_reduction }} (reduces all incoming damage)
+{% if armor_data.description %}
+- **Description:** {{ armor_data.description }}
+{% endif %}
+
+### Penalties
+{% if armor_data.penalties %}
+{% if armor_data.penalties.grace and armor_data.penalties.grace != 0 %}
+- **Grace Penalty:** {{ armor_data.penalties.grace }} to all Grace-based actions
+{% endif %}
+{% if armor_data.penalties.spellcasting and armor_data.penalties.spellcasting != 0 %}
+- **Spellcasting Penalty:** {{ armor_data.penalties.spellcasting }} to Sorcery checks
+{% endif %}
+{% if armor_data.penalties.flow and armor_data.penalties.flow != "None" %}
+- **Flow Penalty:** {{ armor_data.penalties.flow }}
+{% endif %}
+{% if armor_data.penalties.grace == 0 and armor_data.penalties.flow == "None" %}
+- **No Penalties** - This armor category has no mechanical penalties
+{% endif %}
+{% endif %}
+
+### Benefits
+{% if armor_data.benefits %}
+{% for benefit_key, benefit_value in armor_data.benefits.items() %}
+- **{{ benefit_key.replace('_', ' ').title() }}:** {{ benefit_value }}
+{% endfor %}
+{% endif %}
+
+### Cost
+- **Price Range:** {{ armor_data.cost }}
+
+{% if armor_data.examples %}
+### Examples
+{% for example_name, example_data in armor_data.examples.items() %}
+#### {{ example_name.replace('_', ' ').title() }}
+- **DR:** {{ example_data.dr }}
+{% if example_data.special %}
+- **Special:** {{ example_data.special }}
+{% endif %}
+- **Cost:** {{ example_data.cost }} coins
+{% endfor %}
+{% endif %}
+
+---
+
+{% endfor %}
+
+## Choosing Armor
+
+### By Character Type
+
+**Unarmored Characters (No Armor):**
+- Best for: Monks, mobile rogues, evasion-focused characters, spellcasters
+- Strategy: Maximum mobility, Flow generation, and spellcasting
+- Trade-off: Rely on Guard and positioning instead of DR
+
+**Light Armor Characters:**
+- Best for: Rangers, rogues, duelists, light combatants, most spellcasters
+- Strategy: Balance protection with mobility and flexibility
+- Trade-off: Modest DR for maintained capabilities
+
+**Medium Armor Characters:**
+- Best for: Fighters, clerics, versatile combatants
+- Strategy: Solid protection with manageable penalties
+- Trade-off: Grace penalty affects finesse actions, minor spellcasting impact
+
+**Heavy Armor Characters:**
+- Best for: Paladins, defenders, front-line tanks
+- Strategy: Maximum protection, become immovable bastion
+- Trade-off: Significant penalties to Grace, Flow generation, and spellcasting
+
+### Armor and Stances
+
+**Aggressive Stance:**
+- Light/No Armor: Act first, high mobility, generate Flow quickly
+- Medium Armor: Balanced approach, reliable damage
+- Heavy Armor: Slower but devastating when you connect
+
+**Balanced Stance:**
+- Light/No Armor: Flexibility to react, easy stance switching
+- Medium Armor: The intended use case, no restrictions
+- Heavy Armor: Solid but less flexible
+
+**Defensive Stance:**
+- Light/No Armor: +2 Guard, generate Flow while protected
+- Medium Armor: +3 Guard total (armor +1, stance +2)
+- Heavy Armor: +6 Guard total (armor +4, stance +2) - nearly untouchable
+
+## Armor Progression
+
+Characters typically upgrade armor as they:
+1. **Gain wealth** - Better quality examples within same category
+2. **Increase attributes** - Offset penalties with higher stats
+3. **Acquire magical armor** - Same category, enhanced benefits
+4. **Change tactics** - Switch categories as playstyle evolves
+
+Most characters find their preferred armor category early and improve within it rather than constantly moving between categories.
+
+## GM Guidelines
+
+### Balancing Encounters
+- Remember DR reduces **all** incoming damage
+- Heavy armor characters have high DR but generate less Flow
+- Target high-DR characters with:
+  - Multiple small attacks (DR applies per hit)
+  - Effects that bypass DR (forced movement, conditions)
+  - Armor-piercing abilities (specific monsters/weapons)
+
+### Treasure and Rewards
+- Quality matters more than category
+- Enhanced versions within same category (magical +1 DR, special properties)
+- Armor as character expression (decorative, cultural significance)
+- Don't push characters to "upgrade" if they like their current category
+
+### Common Mistakes
+- Don't forget armor penalties apply constantly (not just in combat)
+- Heavy armor's Flow penalty affects **all** Flow generation
+- Grace penalties affect Athletics, Stealth, Finesse-based actions
+- No armor bonuses only apply when truly unarmored (not with shields)
+
+---
+
+*Armor is more than protection—it's a fundamental tactical choice that shapes how your character approaches every situation.*

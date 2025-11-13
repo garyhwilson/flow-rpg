@@ -1,0 +1,20 @@
+{# Campaign Tracker - from gm_tools.yaml #}
+# CAMPAIGN TRACKER
+*Generated from YAML source data*
+
+## Overview
+Track campaign progression and story threads.
+
+{% if tracker_data %}
+{% for aspect_id, aspect in tracker_data.items() %}
+## {{ aspect_id.replace('_', ' ').title() }}
+{{ aspect if aspect is string else aspect.description if aspect.description else '' }}
+{% endfor %}
+{% endif %}
+
+## Milestone Tracking
+- **Minor:** Every 1-2 sessions
+- **Moderate:** Every 5-6 sessions
+- **Major:** Every 12-15 sessions
+
+*Use this to maintain pacing and ensure consistent character progression.*

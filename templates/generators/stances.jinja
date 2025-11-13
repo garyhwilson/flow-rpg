@@ -1,0 +1,261 @@
+{#
+Stances Template
+Generates stance documentation from YAML combat data
+#}
+# COMBAT STANCES - TACTICAL REFERENCE
+*Generated from YAML source data*
+
+## Overview
+
+Every combatant chooses a stance at the start of combat, determining their tactical approach. Stances affect turn order, Flow generation, combat modifiers, and special abilities.
+
+**Stance Selection:** Choose at combat start, can switch on your turn (costs Flow)
+
+---
+
+{% for stance_id, stance in stances.items() %}
+## {{ stance.name }}
+*"{{ stance.philosophy }}"*
+
+### Turn Order
+**Acts {{ stance.turn_order }}{{ 'st' if stance.turn_order == 1 else ('nd' if stance.turn_order == 2 else 'rd') }}** in initiative
+
+### Flow Generation
+
+{% if stance.flow_generation %}
+{% for generation_id, generation in stance.flow_generation.items() %}
+{% if generation is mapping %}
+**{{ generation_id.replace('_', ' ').title() }}:**
+- Trigger: {{ generation.trigger }}
+- Amount: +{{ generation.amount }} Flow
+{% if generation.limit %}
+- Limit: {{ generation.limit }}
+{% endif %}
+{% if generation.note %}
+- Note: {{ generation.note }}
+{% endif %}
+{% else %}
+**{{ generation_id.replace('_', ' ').title() }}:** +{{ generation }} Flow
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
+### Combat Modifiers
+
+{% if stance.modifiers %}
+{% if stance.modifiers.damage_bonus %}
+- **Damage Bonus:** {{ stance.modifiers.damage_bonus|string if stance.modifiers.damage_bonus >= 0 else stance.modifiers.damage_bonus }}
+{% endif %}
+{% if stance.modifiers.damage_penalty %}
+- **Damage Penalty:** {{ stance.modifiers.damage_penalty }}
+{% endif %}
+{% if stance.modifiers.defense_bonus %}
+- **Defense Bonus:** +{{ stance.modifiers.defense_bonus }}
+{% endif %}
+{% if stance.modifiers.defense_penalty %}
+- **Defense Penalty:** {{ stance.modifiers.defense_penalty }}
+{% endif %}
+{% endif %}
+
+### Movement
+
+{% if stance.movement %}
+{% for movement_aspect, movement_desc in stance.movement.items() %}
+{% if movement_desc is mapping %}
+**{{ movement_aspect.title() }}:**
+- Description: {{ movement_desc.description }}
+{% if movement_desc.bonus %}
+- Bonus: {{ movement_desc.bonus }}
+{% endif %}
+{% else %}
+**{{ movement_aspect.replace('_', ' ').title() }}:** {{ movement_desc }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+### Special Ability
+
+{% if stance.special_ability %}
+**{{ stance.special_ability.name }}**
+- {{ stance.special_ability.effect }}
+{% endif %}
+
+{% if stance.advantages %}
+### Advantages
+{% for advantage in stance.advantages %}
+- {{ advantage }}
+{% endfor %}
+{% endif %}
+
+{% if stance.tactical_role %}
+### Tactical Role
+{% for role in stance.tactical_role %}
+- {{ role }}
+{% endfor %}
+{% endif %}
+
+{% if stance.restrictions %}
+### Restrictions
+{% for restriction_id, restriction in stance.restrictions.items() %}
+- **{{ restriction_id.replace('_', ' ').title() }}:** {{ restriction }}
+{% endfor %}
+{% endif %}
+
+---
+
+{% endfor %}
+
+## Stance Tactics
+
+### When to Use Each Stance
+
+**Aggressive Stance:**
+- High damage output characters
+- When you need to end combat quickly
+- First strike advantage is critical
+- Building Flow through successful attacks
+- Charging builds (mobile melee)
+
+**Balanced Stance:**
+- Uncertain combat situations
+- When you need tactical flexibility
+- Critical-focused builds
+- Free stance switching per combat
+- Versatile party roles
+
+**Defensive Stance:**
+- Tanks and protectors
+- Spellcasters building Flow safely
+- When outnumbered
+- Protecting vulnerable allies
+- Flow generation engine
+
+### Stance Switching
+
+**Cost:** Switching stance costs Flow based on direction:
+- Aggressive → Balanced: 0 Flow
+- Balanced → Aggressive/Defensive: 0 Flow (Tactical Flexibility once per combat)
+- Defensive → Balanced: 0 Flow (Dwarf racial, otherwise 1 Flow)
+- Any other switch: 1 Flow
+
+**Timing:** Switch on your turn before taking actions
+
+**Strategy:** Start in one stance, switch based on combat developments
+
+### Flow Generation Comparison
+
+**Aggressive:** 1-3 Flow per round (attacks hit, charge bonus, critical overwhelm)
+**Balanced:** 1-2 Flow per round (critical successes)
+**Defensive:** 1-3 Flow per round (being attacked, successful defenses)
+
+All three stances generate comparable Flow over combat, but through different triggers.
+
+### Stance and Archetype Synergy
+
+**Fighter:** Any stance works
+- Aggressive for pure damage
+- Balanced for technique combos
+- Defensive for tanking
+
+**Ranger:** Primarily Aggressive or Balanced
+- Aggressive for skirmishing
+- Balanced for tactical shooting
+- Defensive less common (mobility focus)
+
+**Paladin:** Defensive or Balanced
+- Defensive while protecting allies
+- Balanced for flexibility
+- Can use Aggressive with heavy armor (-1 Flow generation)
+
+**Rogue:** Aggressive or Balanced
+- Aggressive for burst damage
+- Balanced for adaptability
+- Defensive rare (low armor)
+
+**Wizard/Cleric/Bard:** Defensive or Balanced
+- Defensive to build Flow safely
+- Balanced when confident
+- Aggressive rare (low HP/armor)
+
+### Stance Combinations in Party
+
+**Balanced Party (4 players):**
+- 1 Defensive (tank)
+- 2 Aggressive (damage dealers)
+- 1 Balanced (support/utility)
+
+**All Stances Work:**
+- 4 Aggressive = glass cannon party
+- 4 Defensive = grinding attrition
+- 4 Balanced = tactical flexibility
+- Mixed = recommended for variety
+
+### Advanced Stance Tactics
+
+**Stance Dancing:**
+- Start Defensive (build Flow)
+- Switch to Aggressive (spend Flow)
+- Switch to Balanced (reassess)
+
+**Role Swapping:**
+- Fighter starts Aggressive
+- Takes heavy damage
+- Switches to Defensive to recover
+- Back to Aggressive when healed
+
+**Coordination:**
+- Defensive player protects casters
+- Aggressive players focus fire
+- Balanced players respond to threats
+
+## GM Guidelines for Stances
+
+### Running Stances
+
+**Initiative Order:**
+1. Aggressive stance characters
+2. Balanced stance characters
+3. Defensive stance characters
+4. Within each group, highest relevant attribute
+
+**Don't forget:**
+- Stance modifiers apply to all rolls
+- Flow generation happens when triggered
+- Stance switching costs Flow (usually)
+- Special abilities are always available
+
+### Encouraging Tactical Play
+
+**Vary encounters:**
+- Single boss favors Aggressive
+- Multiple enemies favor Defensive
+- Mixed encounters favor Balanced
+
+**Reward stance switching:**
+- Battles that change mid-fight
+- Environmental shifts
+- Reinforcements arriving
+
+**Track Flow visibly:**
+- Let players see stance choices working
+- Make Flow generation feel meaningful
+- Celebrate high Flow moments
+
+### Common Mistakes
+
+**Players forget:**
+- Aggressive movement requirement (toward nearest enemy)
+- Defensive bonus is +2, not +1
+- Balanced free switch is once per combat
+- Aggressive critical bonus Flow
+
+**GMs forget:**
+- Turn order by stance
+- Flow generation triggers
+- Special ability availability
+- Stance modifiers to damage/defense
+
+---
+
+*Your stance is your combat philosophy made mechanical. Master all three to truly control the battlefield.*

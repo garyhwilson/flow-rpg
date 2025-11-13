@@ -1,0 +1,72 @@
+{#
+Shields Template
+Generates shield documentation from YAML equipment data
+#}
+# SHIELDS - DEFENSIVE EQUIPMENT
+*Generated from YAML source data*
+
+## Overview
+
+Shields provide Guard bonuses and special defensive capabilities. Using a shield requires one hand but significantly improves survivability.
+
+---
+
+{% for shield_id, shield in shields.items() %}
+## {{ shield_id.replace('_', ' ').title() }}
+
+- **Guard Bonus:** +{{ shield.guard_bonus }}
+- **Weight:** {{ shield.weight }}
+- **Special:** {{ shield.special }}
+- **Cost:** {{ shield.cost }} coins
+
+{% endfor %}
+
+---
+
+## Shield Selection Guide
+
+### By Guard Bonus
+
+**+1 Guard (Buckler, Small Shield):**
+- Light weight, minimal restriction
+- Buckler works with two-handed weapons
+- Good for mobile characters
+
+**+2 Guard (Medium Shield, Large Shield):**
+- Standard defensive option
+- Large shield provides cover
+- Best balance of protection and cost
+
+**+3 Guard (Tower Shield):**
+- Maximum protection
+- -1 to attacks (heavy, unwieldy)
+- For dedicated tanks
+
+### By Character Type
+
+**Fighters:** Medium or Large Shield (standard protection)
+**Paladins:** Large or Tower Shield (maximum defense)
+**Rangers:** Buckler if any (preserves mobility)
+**Rogues:** Small Shield or none (stealth priority)
+**Spellcasters:** Small Shield if any (usually rely on Mage Armor)
+
+### Shield Tactics
+
+**With Defensive Stance:**
+- Shield +2, Stance +2 = +4 Guard total
+- Very difficult to hit
+- Excellent for tanks
+
+**Two-Weapon vs Shield:**
+- Two weapons: More offense, no Guard bonus
+- Shield: Less offense, +1 to +3 Guard
+- Shield recommended for frontline
+
+**Buckler Special Use:**
+- Only shield usable with two-handed weapons
+- +1 Guard while wielding greatsword
+- Strapped to arm, not held
+
+---
+
+*A shield is a warrior's steadfast companion—choose wisely based on your role in battle.*

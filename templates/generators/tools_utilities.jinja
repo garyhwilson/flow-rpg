@@ -1,0 +1,27 @@
+{# Tools and Utilities - from equipment.yaml #}
+# TOOLS AND UTILITIES
+*Generated from YAML source data*
+
+## Overview
+Non-combat equipment for exploration and utility.
+
+{% if tools_data %}
+{% for tool_id, tool in tools_data.items() %}
+## {{ tool_id.replace('_', ' ').title() }}
+{% if tool.types %}
+### Types
+{% for type_id, type_data in tool.types.items() %}
+**{{ type_id.title() }}:**
+{% if type_data.cost %}Cost: {{ type_data.cost }} coins{% endif %}
+{% if type_data.special %}Special: {{ type_data.special }}{% endif %}
+{% endfor %}
+{% elif tool.cost %}
+**Cost:** {{ tool.cost }} coins
+{% endif %}
+{% if tool.uses %}
+**Uses:** {{ tool.uses }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+*Essential tools for adventuring beyond combat.*

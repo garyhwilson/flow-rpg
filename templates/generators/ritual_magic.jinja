@@ -1,0 +1,26 @@
+{# Ritual Magic - from magic.yaml #}
+# RITUAL MAGIC
+*Generated from YAML source data*
+
+## Overview
+Extended casting for powerful effects outside combat.
+
+{% if ritual_data %}
+{% for ritual_type, ritual in ritual_data.items() %}
+## {{ ritual_type.replace('_', ' ').title() }}
+{% if ritual.time %}
+**Time:** {{ ritual.time }}
+{% endif %}
+{% if ritual.cost %}
+**Cost:** {{ ritual.cost }}
+{% endif %}
+{% if ritual.effect %}
+**Effect:** {{ ritual.effect }}
+{% endif %}
+{% if ritual.examples %}
+**Examples:** {{ ritual.examples|join(', ') }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+*Ritual magic trades time for power beyond normal spellcasting limits.*

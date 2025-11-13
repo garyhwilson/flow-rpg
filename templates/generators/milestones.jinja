@@ -1,0 +1,312 @@
+{#
+Milestones Template
+Generates milestone advancement documentation from YAML advancement data
+#}
+# MILESTONES - ADVANCEMENT REFERENCE
+*Generated from YAML source data*
+
+## Overview
+
+Flow RPG uses milestone-based advancement with three tiers of growth:
+- **Minor Milestones:** Every 1-2 sessions (small meaningful growth)
+- **Moderate Milestones:** Every 5-6 sessions (significant power increases)
+- **Major Milestones:** Every 12-15 sessions (transformative evolution)
+
+---
+
+# MINOR MILESTONES
+
+**Frequency:** {{ milestone_data.minor_milestones.frequency }}
+**Philosophy:** {{ milestone_data.minor_milestones.philosophy }}
+
+## Triggers
+
+{% for trigger in milestone_data.minor_milestones.triggers %}
+- {{ trigger }}
+{% endfor %}
+
+## Minor Milestone Options
+
+### Skill Development
+
+**Advance Existing Skill:**
+- {{ milestone_data.minor_milestones.options.skill_development.advance_skill.description }}
+- **Limit:** {{ milestone_data.minor_milestones.options.skill_development.advance_skill.limit }}
+- **Examples:**
+{% for example in milestone_data.minor_milestones.options.skill_development.advance_skill.examples %}
+  - {{ example }}
+{% endfor %}
+
+**Learn New Skill:**
+- {{ milestone_data.minor_milestones.options.skill_development.new_skill.description }}
+- **Starting Level:** {{ milestone_data.minor_milestones.options.skill_development.new_skill.starting_level }}
+- **Requirement:** {{ milestone_data.minor_milestones.options.skill_development.new_skill.requirement }}
+
+### Attribute Adjustment
+
+- **Description:** {{ milestone_data.minor_milestones.options.attribute_adjustment.description }}
+- **Mechanic:** {{ milestone_data.minor_milestones.options.attribute_adjustment.mechanic }}
+- **Limit:** {{ milestone_data.minor_milestones.options.attribute_adjustment.limit }}
+- **Examples:**
+{% for example in milestone_data.minor_milestones.options.attribute_adjustment.examples %}
+  - {{ example }}
+{% endfor %}
+
+### Combat Edges
+
+{{ milestone_data.minor_milestones.options.combat_edges.description }}
+
+{% for edge_id, edge in milestone_data.minor_milestones.options.combat_edges.list.items() %}
+**{{ edge_id.replace('_', ' ').title() }}**
+- Effect: {{ edge.effect }}
+- Limit: {{ edge.limit }}
+{% if edge.examples %}
+- Examples: {{ edge.examples|join(', ') }}
+{% endif %}
+
+{% endfor %}
+
+### Skill Edges
+
+{{ milestone_data.minor_milestones.options.skill_edges.description }}
+
+{% for skill, applications in milestone_data.minor_milestones.options.skill_edges.examples.items() %}
+**{{ skill.title() }} Specializations:**
+{% for app in applications %}
+- {{ app }}
+{% endfor %}
+
+{% endfor %}
+
+---
+
+# MODERATE MILESTONES
+
+**Frequency:** {{ milestone_data.moderate_milestones.frequency }}
+**Philosophy:** {{ milestone_data.moderate_milestones.philosophy }}
+
+## Triggers
+
+{% for trigger in milestone_data.moderate_milestones.triggers %}
+- {{ trigger }}
+{% endfor %}
+
+## Timing and Power
+
+**First Moderate:** {{ milestone_data.moderate_milestones.first_moderate.typical_timing }} ({{ milestone_data.moderate_milestones.first_moderate.power_increase }})
+
+**Second Moderate:** {{ milestone_data.moderate_milestones.second_moderate.typical_timing }} ({{ milestone_data.moderate_milestones.second_moderate.power_increase }})
+
+## Moderate Milestone Options
+
+### Attribute Improvement
+
+- **Description:** {{ milestone_data.moderate_milestones.options.attribute_improvement.description }}
+- **Amount:** {{ milestone_data.moderate_milestones.options.attribute_improvement.amount }}
+- **Limit:** {{ milestone_data.moderate_milestones.options.attribute_improvement.limit }}
+- **Strategy:** {{ milestone_data.moderate_milestones.options.attribute_improvement.strategy }}
+
+### Skill Mastery
+
+**Advance to Expert:**
+- From: {{ milestone_data.moderate_milestones.options.skill_mastery.advance_to_expert.from }}
+- To: {{ milestone_data.moderate_milestones.options.skill_mastery.advance_to_expert.to }}
+- Description: {{ milestone_data.moderate_milestones.options.skill_mastery.advance_to_expert.description }}
+
+**Advance to Master:**
+- From: {{ milestone_data.moderate_milestones.options.skill_mastery.advance_to_master.from }}
+- To: {{ milestone_data.moderate_milestones.options.skill_mastery.advance_to_master.to }}
+- Description: {{ milestone_data.moderate_milestones.options.skill_mastery.advance_to_master.description }}
+
+**New Professional Skill:**
+- Description: {{ milestone_data.moderate_milestones.options.skill_mastery.new_professional.description }}
+- Requirement: {{ milestone_data.moderate_milestones.options.skill_mastery.new_professional.requirement }}
+
+### Signature Move
+
+{{ milestone_data.moderate_milestones.options.signature_move.description }}
+
+**Components:**
+{% for component, desc in milestone_data.moderate_milestones.options.signature_move.components.items() %}
+- **{{ component.title() }}:** {{ desc }}
+{% endfor %}
+
+**Examples:**
+
+{% for archetype, move in milestone_data.moderate_milestones.options.signature_move.examples.items() %}
+*{{ archetype.title() }}: {{ move.name }}*
+- Base: {{ move.base_technique if move.base_technique else move.base_spell }}
+- Enhancement: {{ move.enhancement }}
+- Normal Cost: {{ move.normal_cost }} Flow
+- Signature Cost: {{ move.signature_cost }} Flow
+
+{% endfor %}
+
+### Advanced Technique
+
+{{ milestone_data.moderate_milestones.options.advanced_technique.description }}
+**Requirement:** {{ milestone_data.moderate_milestones.options.advanced_technique.requirement }}
+
+**Combat Techniques:**
+{% for tech_id, tech_desc in milestone_data.moderate_milestones.options.advanced_technique.combat_techniques.items() %}
+- **{{ tech_id.replace('_', ' ').title() }}:** {{ tech_desc }}
+{% endfor %}
+
+**Magic Techniques:**
+{% for tech_id, tech_desc in milestone_data.moderate_milestones.options.advanced_technique.magic_techniques.items() %}
+- **{{ tech_id.replace('_', ' ').title() }}:** {{ tech_desc }}
+{% endfor %}
+
+**Skill Techniques:**
+{% for tech_id, tech_desc in milestone_data.moderate_milestones.options.advanced_technique.skill_techniques.items() %}
+- **{{ tech_id.replace('_', ' ').title() }}:** {{ tech_desc }}
+{% endfor %}
+
+### Calling Evolution
+
+{{ milestone_data.moderate_milestones.options.calling_evolution.description }}
+
+**Options:**
+{% for option, desc in milestone_data.moderate_milestones.options.calling_evolution.options.items() %}
+- **{{ option.replace('_', ' ').title() }}:** {{ desc }}
+{% endfor %}
+
+**Example:**
+- Original: {{ milestone_data.moderate_milestones.options.calling_evolution.example.original }}
+- Evolved: {{ milestone_data.moderate_milestones.options.calling_evolution.example.evolved }}
+
+---
+
+# MAJOR MILESTONES
+
+**Frequency:** {{ milestone_data.major_milestones.frequency }}
+**Philosophy:** {{ milestone_data.major_milestones.philosophy }}
+
+## Triggers
+
+{% for trigger in milestone_data.major_milestones.triggers %}
+- {{ trigger }}
+{% endfor %}
+
+## Timing and Power
+
+**First Major:** {{ milestone_data.major_milestones.first_major.typical_timing }} ({{ milestone_data.major_milestones.first_major.power_increase }})
+*{{ milestone_data.major_milestones.first_major.significance }}*
+
+**Second Major:** {{ milestone_data.major_milestones.second_major.typical_timing }} ({{ milestone_data.major_milestones.second_major.power_increase }})
+*{{ milestone_data.major_milestones.second_major.significance }}*
+
+## Major Milestone Options
+
+### Legendary Skill
+
+- **Description:** {{ milestone_data.major_milestones.options.legendary_skill.description }}
+- **From:** {{ milestone_data.major_milestones.options.legendary_skill.from }}
+- **To:** {{ milestone_data.major_milestones.options.legendary_skill.to }}
+- **Effect:** {{ milestone_data.major_milestones.options.legendary_skill.effect }}
+- **Special:** {{ milestone_data.major_milestones.options.legendary_skill.special }}
+
+### Attribute Transcendence
+
+- **Description:** {{ milestone_data.major_milestones.options.attribute_transcendence.description }}
+- **Effect:** {{ milestone_data.major_milestones.options.attribute_transcendence.effect }}
+- **Maximum:** {{ milestone_data.major_milestones.options.attribute_transcendence.maximum }}
+- **Narrative:** {{ milestone_data.major_milestones.options.attribute_transcendence.narrative }}
+
+### Calling Transformation
+
+**Complete Change:**
+- Description: {{ milestone_data.major_milestones.options.calling_transformation.complete_change.description }}
+- Requirement: {{ milestone_data.major_milestones.options.calling_transformation.complete_change.requirement }}
+- Example: {{ milestone_data.major_milestones.options.calling_transformation.complete_change.example }}
+
+**Calling Synthesis:**
+- Description: {{ milestone_data.major_milestones.options.calling_transformation.calling_synthesis.description }}
+- Effect: {{ milestone_data.major_milestones.options.calling_transformation.calling_synthesis.effect }}
+- Example: {{ milestone_data.major_milestones.options.calling_transformation.calling_synthesis.example }}
+
+**Calling Transcendence:**
+- Description: {{ milestone_data.major_milestones.options.calling_transformation.calling_transcendence.description }}
+- Effect: {{ milestone_data.major_milestones.options.calling_transformation.calling_transcendence.effect }}
+- Narrative: {{ milestone_data.major_milestones.options.calling_transformation.calling_transcendence.narrative }}
+
+### Legendary Technique
+
+{{ milestone_data.major_milestones.options.legendary_technique.description }}
+**Requirement:** {{ milestone_data.major_milestones.options.legendary_technique.requirement }}
+
+**Combat:**
+{% for tech_id, tech_desc in milestone_data.major_milestones.options.legendary_technique.combat.items() %}
+- **{{ tech_id.replace('_', ' ').title() }}:** {{ tech_desc }}
+{% endfor %}
+
+**Magic:**
+{% for tech_id, tech_desc in milestone_data.major_milestones.options.legendary_technique.magic.items() %}
+- **{{ tech_id.replace('_', ' ').title() }}:** {{ tech_desc }}
+{% endfor %}
+
+**Skill:**
+{% for tech_id, tech_desc in milestone_data.major_milestones.options.legendary_technique.skill.items() %}
+- **{{ tech_id.replace('_', ' ').title() }}:** {{ tech_desc }}
+{% endfor %}
+
+### Mythic Edge
+
+{{ milestone_data.major_milestones.options.mythic_edge.description }}
+
+{% for edge_id, edge in milestone_data.major_milestones.options.mythic_edge.examples.items() %}
+**{{ edge_id.replace('_', ' ').title() }}**
+- Effect: {{ edge.effect }}
+- Narrative: {{ edge.narrative }}
+
+{% endfor %}
+
+---
+
+## Using Milestones in Play
+
+### Advancement Pacing
+
+**Session 1-5:** Minor milestones build competence
+**Session 6:** First moderate—power jump
+**Session 12:** Second moderate—regional heroes
+**Session 18:** First major—legendary figures
+**Session 30+:** Second major—mythic beings
+
+### Choice Strategy
+
+**Minor Milestones:**
+- Focus on edges if you want variety
+- Advance skills if you want reliability
+- Attribute adjustment for optimization
+
+**Moderate Milestones:**
+- Attribute improvement for general power
+- Skill Mastery for specialization
+- Signature Move for unique identity
+- Advanced Technique for combat power
+- Calling Evolution for roleplaying depth
+
+**Major Milestones:**
+- Legendary Skill for unmatched expertise
+- Attribute Transcendence for superhuman power
+- Calling Transformation for character evolution
+- Legendary Technique for ultimate ability
+- Mythic Edge for supernatural capability
+
+### GM Guidance
+
+**Award milestones based on:**
+- Pacing needs (slow down if overwhelmed, speed up if bored)
+- Story beats (major victories deserve major milestones)
+- Player engagement (reward investment)
+- Campaign length (adjust frequency to match)
+
+**Don't gate milestones on:**
+- Perfect play (failure teaches too)
+- Attendance (catch up absent players)
+- Optimization (all choices valid)
+
+---
+
+*Milestones represent your character's growth through the campaign. Choose options that reflect who your character is becoming, not just mechanical optimization.*

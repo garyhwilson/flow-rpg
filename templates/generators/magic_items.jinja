@@ -1,0 +1,112 @@
+{#
+Magic Items Template
+Generates magic item documentation from YAML equipment data
+#}
+# MAGIC ITEMS - ENCHANTED EQUIPMENT
+*Generated from YAML source data*
+
+## Overview
+
+Magic items provide permanent benefits through enchantment. Rarity determines power level, cost, and availability.
+
+---
+
+## Rarity Tiers
+
+{% for rarity_id, rarity in rarity_tiers.items() %}
+### {{ rarity_id.replace('_', ' ').title() }}
+
+- **Power Level:** {{ rarity.power }}
+- **Cost Range:** {{ rarity.cost }}
+- **Availability:** {{ rarity.availability }}
+
+{% endfor %}
+
+---
+
+## Enhancement Bonuses
+
+{% for bonus_id, bonus in enhancement_bonuses.items() %}
+### {{ bonus_id.replace('_', '+') }}
+
+**Weapons:** {{ bonus.weapons }}
+**Armor:** {{ bonus.armor }}
+**Cost Multiplier:** ×{{ bonus.cost_multiplier }}
+**Rarity:** {{ bonus.rarity }}
+
+{% endfor %}
+
+---
+
+## Weapon Properties
+
+{% for property_id, property in weapon_properties.items() %}
+### {{ property_id.title() }}
+
+- **Effect:** {{ property.effect }}
+- **Cost:** {{ property.cost }}
+- **Rarity:** {{ property.rarity }}
+
+{% endfor %}
+
+---
+
+## Armor Properties
+
+{% for property_id, property in armor_properties.items() %}
+### {{ property_id.title() }}
+
+{% if property.light %}
+**Light Armor:** {{ property.light }}
+{% endif %}
+{% if property.medium %}
+**Medium Armor:** {{ property.medium }}
+{% endif %}
+{% if property.heavy %}
+**Heavy Armor:** {{ property.heavy }}
+{% endif %}
+{% if property.effect %}
+**Effect:** {{ property.effect }}
+{% endif %}
+{% if property.cost %}
+**Cost:** {{ property.cost }}
+{% endif %}
+{% if property.rarity %}
+**Rarity:** {{ property.rarity }}
+{% endif %}
+
+{% endfor %}
+
+---
+
+## Magic Item Guidelines
+
+### Awarding Magic Items
+
+**By Campaign Level:**
+- **Early (Sessions 1-6):** +1 weapons/armor, common wondrous items
+- **Mid (Sessions 7-15):** +2 weapons/armor, uncommon/rare items
+- **Late (Sessions 16+):** +3 weapons/armor, very rare/legendary items
+
+### Pricing Magic Items
+
+**Base Item Cost + Enhancement:**
+- Longsword (40 coins) + 1 (×10) = 400 coins total
+- Longsword (40 coins) + 2 (×50) = 2,000 coins total
+- Longsword (40 coins) + 3 (×200) = 8,000 coins total
+
+**Properties Add Flat Cost:**
+- +1 Flaming Longsword = 400 + 2,000 = 2,400 coins
+
+### Creating Custom Magic Items
+
+**Power Budget:**
+- Common: +1 bonus OR minor utility
+- Uncommon: +1 bonus AND minor effect OR +2 bonus
+- Rare: +2 bonus AND property OR unique major effect
+- Very Rare: +3 bonus OR game-changing ability
+- Legendary: Multiple effects OR reality-breaking power
+
+---
+
+*Magic items should feel special and earned, not mass-produced commodities.*

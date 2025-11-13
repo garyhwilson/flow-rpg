@@ -1,0 +1,24 @@
+{# Social Combat - from combat.yaml #}
+# SOCIAL COMBAT
+*Generated from YAML source data*
+
+## Overview
+Alternative conflict resolution through social interaction.
+
+{% if social_data %}
+## Composure System
+{% if social_data.composure %}
+- **Formula:** {{ social_data.composure.formula if social_data.composure.formula else 'Will + Presence + 5' }}
+- **Function:** Like Guard for social conflicts
+{% endif %}
+
+## Social Actions
+{% if social_data.actions %}
+{% for action_id, action in social_data.actions.items() %}
+### {{ action_id.replace('_', ' ').title() }}
+- {{ action }}
+{% endfor %}
+{% endif %}
+{% endif %}
+
+*Social combat uses the same Flow economy but targets Composure instead of Guard.*

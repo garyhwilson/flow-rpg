@@ -1,0 +1,282 @@
+{#
+Combat Techniques Template
+Generates combat technique documentation from YAML combat data
+#}
+# COMBAT TECHNIQUES - ABILITY REFERENCE
+*Generated from YAML source data*
+
+## Overview
+
+Combat techniques are special maneuvers and abilities learned through milestone advancement. Unlike spells, techniques are available to all character types and have no attribute requirements.
+
+**Philosophy:** {{ techniques.acquisition.philosophy }}
+**Acquisition:** {{ techniques.acquisition.method }}
+**Training:** {{ techniques.acquisition.training }}
+
+---
+
+## Basic Techniques
+
+**Available To:** {{ techniques.basic_techniques.available_to }}
+**Cost:** No Flow cost
+
+These are the fundamental combat actions available to everyone:
+
+{% for technique in techniques.basic_techniques.no_flow_cost %}
+- **{{ technique }}**
+{% endfor %}
+
+---
+
+## Minor Milestone Techniques
+
+**Requirement:** {{ techniques.minor_milestone_techniques.requirement }}
+
+Learn these techniques after achieving your first minor milestone. They provide reliable tactical options that enhance your combat effectiveness.
+
+{% for tech_id, tech in techniques.minor_milestone_techniques.items() %}
+{% if tech_id != 'requirement' %}
+### {{ tech_id.replace('_', ' ').title() }}
+
+{% if tech.trigger %}
+- **Trigger:** {{ tech.trigger }}
+{% endif %}
+- **Effect:** {{ tech.effect }}
+{% if tech.cost %}
+- **Cost:** {{ tech.cost }}
+{% endif %}
+{% if tech.limit %}
+- **Limit:** {{ tech.limit }}
+{% endif %}
+
+{% endif %}
+{% endfor %}
+
+---
+
+## Moderate Milestone Techniques
+
+**Requirement:** {{ techniques.moderate_milestone_techniques.requirement }}
+
+These powerful techniques require significant Flow investment but can turn the tide of battle. Available after moderate milestones.
+
+{% for tech_id, tech in techniques.moderate_milestone_techniques.items() %}
+{% if tech_id != 'requirement' %}
+### {{ tech_id.replace('_', ' ').title() }}
+
+- **Effect:** {{ tech.effect }}
+{% if tech.cost %}
+- **Cost:** {{ tech.cost }}
+{% endif %}
+{% if tech.damage %}
+- **Damage:** {{ tech.damage }}
+{% endif %}
+{% if tech.timing %}
+- **Timing:** {{ tech.timing }}
+{% endif %}
+{% if tech.limit %}
+- **Limit:** {{ tech.limit }}
+{% endif %}
+
+{% endif %}
+{% endfor %}
+
+---
+
+## Major Milestone Techniques
+
+**Requirement:** {{ techniques.major_milestone_techniques.requirement }}
+
+Ultimate combat abilities that require maximum Flow but deliver devastating results. Reserved for legendary warriors.
+
+{% for tech_id, tech in techniques.major_milestone_techniques.items() %}
+{% if tech_id != 'requirement' %}
+### {{ tech_id.replace('_', ' ').title() }}
+
+- **Effect:** {{ tech.effect }}
+{% if tech.cost %}
+- **Cost:** {{ tech.cost }}
+{% endif %}
+{% if tech.damage %}
+- **Damage:** {{ tech.damage }}
+{% endif %}
+{% if tech.save %}
+- **Save:** {{ tech.save }}
+{% endif %}
+{% if tech.limit %}
+- **Limit:** {{ tech.limit }}
+{% endif %}
+
+{% endif %}
+{% endfor %}
+
+---
+
+## Technique Selection Strategy
+
+### Building Your Technique Arsenal
+
+**Early Game (Minor Milestones):**
+- Choose 1-2 techniques that complement your playstyle
+- Riposte for defensive fighters
+- Press Advantage for aggressive damage dealers
+- Defensive Mastery for tanks
+- Quick Recovery for sustainability
+
+**Mid Game (Moderate Milestones):**
+- Add powerful Flow-consuming techniques
+- Whirlwind Strike for multi-target situations
+- Perfect Parry for survival
+- Devastating Blow for boss fights
+- Combat Flow for Flow generation
+
+**Late Game (Major Milestones):**
+- Select ultimate abilities carefully
+- Unstoppable Assault for guaranteed damage
+- Death Blow for finishing powerful enemies
+- Battlefield Control for tactical domination
+
+### Technique Combinations
+
+**Defensive Fighter Build:**
+1. Defensive Mastery (Minor) - +3 defense in Defensive stance
+2. Perfect Parry (Moderate) - Negate damage
+3. Combat Flow (Moderate) - Extra Flow generation
+4. Battlefield Control (Major) - Control positioning
+
+**Aggressive Striker Build:**
+1. Press Advantage (Minor) - Bonus damage at positive Flow
+2. Riposte (Minor) - Extra attacks
+3. Devastating Blow (Moderate) - Maximum damage spike
+4. Unstoppable Assault (Major) - Cannot miss
+
+**Flow Engine Build:**
+1. Combat Flow (Moderate) - Extra Flow on crits
+2. Quick Recovery (Minor) - Sustainability
+3. Defensive Mastery (Minor) - Safe Flow building
+4. Use Flow for spells or other techniques
+
+### Technique and Stance Synergy
+
+**Aggressive Stance:**
+- Press Advantage (passive damage while positive Flow)
+- Devastating Blow (spend built-up Flow for massive hit)
+- Unstoppable Assault (finish fights decisively)
+
+**Balanced Stance:**
+- Combat Flow (benefit from critical-focused play)
+- Riposte (react to enemy attacks)
+- Perfect Parry (tactical defense option)
+
+**Defensive Stance:**
+- Defensive Mastery (+3 total defense bonus)
+- Quick Recovery (sustainability in long fights)
+- Battlefield Control (control from safety)
+
+### Flow Management with Techniques
+
+**Low Flow (<0):**
+- Use basic techniques only
+- Focus on Flow generation
+- Avoid expensive techniques
+
+**Medium Flow (0-3):**
+- Use minor milestone techniques
+- Build toward moderate techniques
+- Riposte and Press Advantage active
+
+**High Flow (3-6):**
+- Moderate milestone techniques available
+- Whirlwind Strike for multi-target
+- Perfect Parry for safety
+- Devastating Blow for damage spike
+
+**Maximum Flow (6+):**
+- Major milestone techniques unlocked
+- Save for critical moments
+- Game-changing abilities
+- Combat-ending moves
+
+## GM Guidelines for Techniques
+
+### Teaching Techniques
+
+**Acquisition Methods:**
+- Automatic at milestones (player choice)
+- Training montages during downtime
+- Learning from defeated enemies
+- Ancient tomes or master teachers
+
+**Don't require:**
+- Specific trainers for every technique
+- Extensive downtime
+- Gold payment
+- Attribute minimums
+
+### Balancing Techniques in Combat
+
+**Minor Techniques:**
+- Used frequently (every combat)
+- Low Flow cost sustainable
+- Enhance but don't dominate
+
+**Moderate Techniques:**
+- Used 1-2 times per combat
+- Require Flow buildup
+- Swing momentum
+- Feel powerful
+
+**Major Techniques:**
+- Used once per combat at most
+- Require maximum Flow
+- Should feel epic
+- Combat-defining moments
+
+### Encounter Design
+
+**For parties with techniques:**
+- Expect ~20% more damage output
+- Perfect Parry can negate big hits
+- Whirlwind Strike changes multi-enemy math
+- Death Blow threatens lone bosses
+
+**Counter-strategies:**
+- Multiple waves prevent major technique spam
+- Flow draining effects limit options
+- Spread enemies to reduce Whirlwind value
+- High Vitality bosses resist Death Blow
+
+### Common Questions
+
+**Q: Can I use multiple techniques per turn?**
+A: Yes, if you have the Flow and actions. Most cost Flow but not actions.
+
+**Q: Do techniques stack with spells?**
+A: Yes. Devastating Blow can be used with weapon or spell attacks.
+
+**Q: Can rogues/wizards learn combat techniques?**
+A: Yes! No class restrictions. Anyone can learn any technique.
+
+**Q: What if I want a custom technique?**
+A: Work with GM to create balanced custom techniques using existing ones as templates.
+
+**Q: Can I unlearn techniques?**
+A: Generally no, but GM may allow retraining during downtime.
+
+### Technique Limitations
+
+**What techniques can't do:**
+- Replace class features entirely
+- Bypass core mechanics
+- Scale infinitely
+- Work without Flow (except basics and passives)
+
+**Design boundaries:**
+- Moderate techniques shouldn't obsolete minor ones
+- Major techniques should be rare in use
+- Flow cost gates power level
+- Techniques complement, don't replace, basic combat
+
+---
+
+*Combat techniques transform capable fighters into legendary warriors. Master your techniques and the Flow that powers them to dominate any battlefield.*

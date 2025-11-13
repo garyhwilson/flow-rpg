@@ -1,0 +1,328 @@
+{#
+Archetypes Template
+Generates archetype documentation from YAML character data
+#}
+# ARCHETYPES - MECHANICAL REFERENCE
+*Generated from YAML source data*
+
+## Overview
+
+Archetypes represent your character's training and professional capabilities. Each archetype provides:
+- **Starting Skills** - Three skills with set proficiency levels
+- **Starting Edge** (martial) or **Spellcasting** (magical) - Special capabilities
+- **Starting Equipment** - Armor, weapons, and gear
+- **Unique Subsystem** - Special mechanics that define the archetype
+- **Natural Callings** - Common psychological patterns
+
+Choose an archetype that defines your role in the party and your approach to challenges.
+
+---
+
+{% for archetype_id, archetype in archetypes.items() %}
+## {{ archetype.name }}
+*{{ archetype.description }}*
+
+### Starting Skills
+
+{% for skill_name, skill_data in archetype.starting_skills.items() %}
+- **{{ skill_name.title() }}:** {{ skill_data.level.title() }} ({{ skill_data.modifier|string if skill_data.modifier >= 0 else skill_data.modifier }})
+{% endfor %}
+
+{% if archetype.special %}
+**Special Note:** {{ archetype.special }}
+{% endif %}
+
+{% if archetype.starting_edge %}
+### Starting Edge (Choose One)
+
+{% for edge_name, edge_effect in archetype.starting_edge.items() %}
+{% if edge_name != 'choice' %}
+- **{{ edge_name.replace('_', ' ').title() }}:** {{ edge_effect }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if archetype.spellcasting %}
+### Spellcasting
+
+- **Tradition:** {{ archetype.spellcasting.tradition.title() }} magic
+- **Access:** {{ archetype.spellcasting.access }}
+- **Focus:** {{ archetype.spellcasting.focus }}
+
+*This archetype can cast spells from the {{ archetype.spellcasting.tradition }} tradition without needing to meet attribute requirements.*
+{% endif %}
+
+### Starting Equipment
+
+- **Armor:** {{ archetype.starting_equipment.armor.title() }} armor
+- **Weapon:** {{ archetype.starting_equipment.weapon.title() }}
+- **Gear:** {{ archetype.starting_equipment.gear|join(', ') }}
+
+### Unique Subsystem: {{ archetype.unique_subsystem.name }}
+
+**Description:** {{ archetype.unique_subsystem.description }}
+
+**Progression:** {{ archetype.unique_subsystem.progression }}
+
+### Natural Callings
+
+Common calling choices for {{ archetype.name }}s: {{ archetype.natural_callings|join(', ')|title }}
+
+*These are tendencies, not restrictions. Any archetype can choose any calling.*
+
+---
+
+{% endfor %}
+
+## Choosing Your Archetype
+
+### Archetype Roles
+
+**Frontline Combatants:**
+- **Fighter:** Versatile weapon master with combat techniques
+- **Paladin:** Armored spellcaster with divine oath powers
+- **Ranger:** Mobile skirmisher with terrain expertise
+
+**Skill Specialists:**
+- **Rogue:** Dual-professional start, gambits for high-risk plays
+- **Ranger:** Survival expert with investigation support
+- **Bard:** Social specialist with performance magic
+
+**Magical Adepts:**
+- **Wizard:** Pure arcane power with metamagic options
+- **Cleric:** Divine healing and domain powers
+- **Bard:** Support magic through bardic inspiration
+- **Paladin:** Martial + divine magic hybrid
+
+### Spellcasting Archetypes
+
+Four archetypes can cast spells:
+
+**Wizard (Arcane Tradition):**
+- Most versatile spell selection
+- Strongest direct damage
+- Metamagic modifies spells
+- Typically unarmored (Mage Armor cantrip)
+
+**Cleric (Divine Tradition):**
+- Best healing and support
+- Can wear medium armor
+- Domain provides specialized powers
+- Balanced combat and magic
+
+**Bard (Performance Tradition):**
+- Social and utility magic
+- Light armor compatible
+- Bardic Inspiration buffs allies
+- Versatile party support
+
+**Paladin (Divine Tradition):**
+- Heavy armor spellcaster
+- Martial + magic hybrid
+- Divine Oath shapes powers
+- Frontline position with healing
+
+### Martial Archetypes
+
+Three archetypes focus on non-magical combat:
+
+**Fighter:**
+- Highest combat proficiency (Professional)
+- Combat Techniques chain together
+- Starting edge (Weapon Focus or Tough)
+- Medium armor, shield capable
+- Pure martial excellence
+
+**Ranger:**
+- Survival-focused (Professional)
+- Favored Terrain bonuses
+- Starting edge (Fast Movement or Precise Strike)
+- Light armor, ranged specialist
+- Wilderness expertise
+
+**Rogue:**
+- Only dual-Professional start (Stealth + Finesse)
+- Gambits for risky plays
+- No starting edge (compensated by extra Professional skill)
+- Light armor, precision weapons
+- Skill-based problem solver
+
+### Starting Skill Analysis
+
+**Professional (+2) Skills:**
+- Your primary competency
+- Very reliable (58% + 33% = 91% success on TN 8)
+- Defines your core role
+
+**Novice (-1) Skills:**
+- Supporting capabilities
+- Still useful (58% - 16.7% = 41% success on TN 8)
+- Room to grow
+
+**Untrained (not listed):**
+- Can still attempt
+- -2 penalty is significant but not impossible
+- Invest milestones to improve
+
+### Starting Edge Choices
+
+**Fighter Edges:**
+- **Weapon Focus:** Choose if you know your combat style (damage boost)
+- **Tough:** Choose if you expect to tank (survival boost)
+
+**Ranger Edges:**
+- **Fast Movement:** Choose for mobility tactics (+1 zone of movement)
+- **Precise Strike:** Choose for consistent damage (reroll one die per attack)
+
+*Both choices are viable—pick based on playstyle preference.*
+
+### Unique Subsystems
+
+Each archetype has a special mechanic that sets it apart:
+
+**Combat Techniques (Fighter):**
+- Learn individual techniques at milestones
+- Chain them together in combat
+- Tactical depth through combinations
+
+**Favored Terrain (Ranger):**
+- Start with one terrain type
+- Gain bonuses in that environment
+- Expand to new terrains via milestones
+
+**Divine Oath (Paladin):**
+- Choose oath theme (work with GM)
+- Oath provides powers and restrictions
+- Evolves at major milestones
+
+**Gambits (Rogue):**
+- High-risk, high-reward actions
+- Unlock through successful heists
+- Narrative unlocks, not milestone-gated
+
+**Metamagic (Wizard):**
+- Modify spells with special techniques
+- Heighten, quicken, widen, etc.
+- Learn options at milestones
+
+**Divine Domain (Cleric):**
+- Deity grants specialized powers
+- Domains like War, Knowledge, Life, etc.
+- Powers expand at milestones
+
+**Bardic Inspiration (Bard):**
+- Grant allies bonus dice
+- Die size increases with milestones
+- Active support role
+
+### Equipment Considerations
+
+**Armor Choices:**
+- **Heavy (Paladin):** DR 4, -2 Grace, -3 Sorcery
+- **Medium (Fighter, Cleric):** DR 2, -1 Grace, -1 Sorcery
+- **Light (Ranger, Rogue, Bard):** DR 1, no penalties
+- **None (Wizard):** DR 0, +1 Sorcery, +1 movement
+
+Your archetype determines starting armor, affecting:
+- How much damage you can absorb
+- Your Grace-based action penalties
+- Your spellcasting penalties (if applicable)
+
+**Starting Wealth:**
+Varies by archetype (30-60 coins typically). This represents your initial purchasing power beyond starting equipment.
+
+### Archetype and Calling Synergy
+
+**Natural Synergies (from YAML):**
+- **Fighter:** Champion, Guardian, Sentinel (martial protector themes)
+- **Ranger:** Seeker, Scholar, Sentinel (wilderness wanderer themes)
+- **Paladin:** Advocate, Guardian, Champion (righteous warrior themes)
+- **Rogue:** Seeker, Enthusiast, Scholar (curious explorer themes)
+- **Wizard:** Scholar, Seeker, Advocate (knowledge pursuer themes)
+- **Cleric:** Guardian, Mediator, Advocate (care-giver themes)
+- **Bard:** Enthusiast, Mediator, Seeker (social connector themes)
+
+**Against-Type Builds:**
+- Advocate Rogue: Robin Hood vigilante justice
+- Champion Wizard: Competitive arcane duelist
+- Mediator Fighter: Peacekeeper enforcer
+- Scholar Bard: Academic performer
+
+## GM Guidelines for Archetypes
+
+### Balancing Party Composition
+
+**Ideal 4-Person Party:**
+- 1 Frontline (Fighter, Paladin)
+- 1 Damage/Utility (Ranger, Rogue, Wizard)
+- 1 Support (Cleric, Bard)
+- 1 Wildcard (any)
+
+**But any composition works if:**
+- Players understand their roles
+- Everyone contributes to tactics
+- GM adjusts challenges appropriately
+
+### Unique Subsystems in Play
+
+**Combat Techniques (Fighter):**
+- Award new techniques as treasure/training
+- Let players discover combinations
+- Techniques should feel impactful
+
+**Favored Terrain (Ranger):**
+- Make terrain matter mechanically
+- Bonus should be significant (typically +2 to relevant checks)
+- Let ranger shine in their environments
+
+**Divine Oath (Paladin):**
+- Work with player to define oath restrictions
+- Oath breaking should have consequences but not end character
+- Oath powers should feel powerful
+
+**Gambits (Rogue):**
+- Reward creative heist plans with new gambits
+- Gambits should have significant risk and reward
+- Unlock through play, not just milestones
+
+**Metamagic (Wizard):**
+- Start with 1-2 options, gain more at milestones
+- Costs should scale with spell tier
+- Let wizard feel like master of magic
+
+**Divine Domain (Cleric):**
+- Domain defines cleric's specialty
+- Domain powers supplement spells, not replace them
+- Each domain should feel distinct
+
+**Bardic Inspiration (Bard):**
+- Start with d4, increase at milestones (d6, d8, d10, d12)
+- Pool size scales with milestones
+- Make bard feel like force multiplier
+
+### Starting Equipment Customization
+
+Players may request variations:
+- Weapon swap within same category (longsword → mace)
+- Armor downgrade (medium → light, keep difference in coins)
+- Gear substitutions (equivalent value)
+
+**General Rule:** Keep archetype identity but allow reasonable customization.
+
+### Common Questions
+
+**Q: Can I multiclass?**
+A: No multiclassing. Use edges and milestones to add capabilities from other archetypes.
+
+**Q: Can I change my archetype?**
+A: Work with GM for narrative retraining. Rare but possible.
+
+**Q: Why does Rogue start with two Professional skills?**
+A: They don't get a starting edge. Two Professional skills compensates for this.
+
+**Q: Can non-casters learn magic?**
+A: Yes, if they meet attribute requirements (see Magic section). But they won't have Sorcery as Professional.
+
+---
+
+*Your archetype is your training, but your choices in play define who you become.*

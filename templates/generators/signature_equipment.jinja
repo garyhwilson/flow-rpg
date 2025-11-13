@@ -1,0 +1,23 @@
+{# Signature Equipment - from equipment.yaml #}
+# SIGNATURE EQUIPMENT
+*Generated from YAML source data*
+
+## Overview
+Signature equipment is iconic personal gear that grows with your character.
+
+{% if signature_data %}
+{% for aspect, desc in signature_data.items() %}
+- **{{ aspect.replace('_', ' ').title() }}:** {{ desc }}
+{% endfor %}
+{% endif %}
+
+## Creating Signature Equipment
+Work with your GM to designate one piece of equipment as "signature" at moderate milestone.
+
+**Benefits:**
+- Grows in power with you
+- Cannot be permanently lost
+- Unique personal story
+- Mechanical progression
+
+*Signature equipment should feel earned and meaningful.*

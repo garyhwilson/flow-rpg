@@ -1,0 +1,24 @@
+{# Legendary Techniques - from advancement.yaml major_milestones #}
+# LEGENDARY TECHNIQUES
+*Generated from YAML source data*
+
+## Overview
+{{ milestone_data.major_milestones.options.legendary_technique.description }}
+**Requirement:** {{ milestone_data.major_milestones.options.legendary_technique.requirement }}
+
+## Combat Legendary Techniques
+{% for tech_id, tech_desc in milestone_data.major_milestones.options.legendary_technique.combat.items() %}
+- **{{ tech_id.replace('_', ' ').title() }}:** {{ tech_desc }}
+{% endfor %}
+
+## Magic Legendary Techniques
+{% for tech_id, tech_desc in milestone_data.major_milestones.options.legendary_technique.magic.items() %}
+- **{{ tech_id.replace('_', ' ').title() }}:** {{ tech_desc }}
+{% endfor %}
+
+## Skill Legendary Techniques
+{% for tech_id, tech_desc in milestone_data.major_milestones.options.legendary_technique.skill.items() %}
+- **{{ tech_id.replace('_', ' ').title() }}:** {{ tech_desc }}
+{% endfor %}
+
+*Legendary techniques require Flow +6 and represent the pinnacle of mortal capability.*

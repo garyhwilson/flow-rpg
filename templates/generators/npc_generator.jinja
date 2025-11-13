@@ -1,0 +1,66 @@
+{#
+NPC Generator Template
+Generates NPC creation guide from YAML GM tools data
+#}
+# NPC QUICK GENERATOR
+*Generated from YAML source data*
+
+## Quick NPC Creation
+
+**Name and Role:** {{ npc_data.quick_npc.name_and_role }}
+**Motivation:** {{ npc_data.quick_npc.motivation }}
+**Memorable Trait:** {{ npc_data.quick_npc.memorable_trait }}
+
+---
+
+## Mechanical Templates
+
+### Social NPC
+- **Skills:** {{ npc_data.quick_npc.mechanical_needs.social_npc.skills }}
+- **Composure:** {{ npc_data.quick_npc.mechanical_needs.social_npc.composure }}
+- **Flow:** {{ npc_data.quick_npc.mechanical_needs.social_npc.flow }}
+
+### Combat NPC
+- **Template:** {{ npc_data.quick_npc.mechanical_needs.combat_npc.template }}
+- **Modify:** {{ npc_data.quick_npc.mechanical_needs.combat_npc.modify }}
+
+### Specialist NPC
+- **Master Skill:** {{ npc_data.quick_npc.mechanical_needs.specialist_npc.master_skill }}
+- **Other Skills:** {{ npc_data.quick_npc.mechanical_needs.specialist_npc.other_skills }}
+
+---
+
+## Memorable Traits
+
+### Physical Traits
+{% for trait in npc_data.memorable_traits.physical %}
+- {{ trait }}
+{% endfor %}
+
+### Behavioral Traits
+{% for trait in npc_data.memorable_traits.behavioral %}
+- {{ trait }}
+{% endfor %}
+
+### Social Traits
+{% for trait in npc_data.memorable_traits.social %}
+- {{ trait }}
+{% endfor %}
+
+---
+
+## NPC Motivations
+
+### Basic Drives
+{% for drive_id, drive_desc in npc_data.npc_motivations.basic_drives.items() %}
+- **{{ drive_id.title() }}:** {{ drive_desc }}
+{% endfor %}
+
+### Calling-Based Motivations
+{% for calling, motivation in npc_data.npc_motivations.calling_based.items() %}
+- **{{ calling.title() }}:** {{ motivation }}
+{% endfor %}
+
+---
+
+*Create NPCs quickly by combining role, trait, and motivation—mechanical details can wait.*

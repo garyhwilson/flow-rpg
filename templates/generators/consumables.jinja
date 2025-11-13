@@ -1,0 +1,43 @@
+{#
+Consumables Template
+Generates consumable items documentation from YAML equipment data
+#}
+# CONSUMABLES - SINGLE-USE ITEMS
+*Generated from YAML source data*
+
+## Overview
+
+Consumables are single-use items that provide immediate effects. Stock up before dangerous encounters.
+
+---
+
+{% for item_id, item in consumables.items() %}
+## {{ item_id.replace('_', ' ').title() }}
+
+- **Effect:** {{ item.effect }}
+- **Action:** {{ item.action }}
+- **Cost:** {{ item.cost }} coins
+- **Rarity:** {{ item.rarity }}
+
+{% endfor %}
+
+---
+
+## Usage Guidelines
+
+**Healing Potions:** Standard emergency healing, drink as action
+**Antidotes:** Keep 1-2 for poison-heavy areas
+**Alchemist's Fire:** Tactical damage option for non-casters
+**Smoke Bombs:** Escape or tactical obscurement
+**Flash Powder:** Disable enemies briefly
+
+### Typical Stock
+
+**Balanced Party Load (per character):**
+- 2-3 Healing Potions
+- 1 Antidote
+- 1-2 Tactical items (fire/smoke/flash)
+
+---
+
+*Consumables can turn defeat into victory—use them wisely but don't hoard them.*

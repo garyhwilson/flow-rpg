@@ -1,0 +1,308 @@
+{#
+Weapons Template
+Generates weapon documentation from YAML equipment data
+#}
+# WEAPONS - MECHANICAL REFERENCE
+*Generated from YAML source data*
+
+## Overview
+
+Weapons in Flow RPG are organized into six categories, each with distinct tactical characteristics. All weapons use the 2d6 base damage system, with modifiers based on weapon weight and type.
+
+**Attack Roll:** 2d6 + [Might or Grace] + Combat skill
+
+---
+
+{% for category_id, category in weapons.categories.items() %}
+## {{ category_id.replace('_', ' ').title() }}
+
+### Category Properties
+
+- **Base Damage:** {{ category.damage }}
+{% if category.attribute_options %}
+- **Attributes:** {{ category.attribute_options|join(' or ')|title }}
+{% elif category.attribute %}
+- **Attributes:** {{ category.attribute.title() }}
+{% endif %}
+{% if category.range %}
+- **Range:** {{ category.range }}
+{% endif %}
+- **Weight:** {{ category.weight }}
+{% if category.two_handed %}
+- **Hands:** Two-handed
+{% endif %}
+{% if category.ammunition %}
+- **Ammunition:** {{ category.ammunition }}
+{% endif %}
+- **Cost Range:** {{ category.cost }}
+
+**Category Benefit:** {{ category.special_property }}
+
+{% if category.returning %}
+*Note: {{ category.returning }}*
+{% endif %}
+
+### Weapons in This Category
+
+{% for weapon_id, weapon in category.examples.items() %}
+#### {{ weapon_id.replace('_', ' ').title() }}
+- **Damage:** {{ weapon.damage }}
+{% if weapon.range %}
+- **Range:** {{ weapon.range }}
+{% endif %}
+{% if weapon.attribute %}
+- **Attribute Restriction:** {{ weapon.attribute.title() }}
+{% endif %}
+{% if weapon.special %}
+- **Special:** {{ weapon.special }}
+{% endif %}
+{% if weapon.quantity %}
+- **Quantity:** {{ weapon.quantity }}
+{% endif %}
+{% if weapon.ammo %}
+- **Ammunition:** {{ weapon.ammo }}
+{% endif %}
+{% if weapon.mounted %}
+- **Mounted Requirement:** {{ weapon.mounted }}
+{% endif %}
+{% if weapon.two_handed %}
+- **Hands:** Two-handed
+{% endif %}
+- **Cost:** {{ weapon.cost }} coins
+
+{% endfor %}
+
+---
+
+{% endfor %}
+
+## Weapon Selection Guide
+
+### By Character Type
+
+**Might-Based Fighters:**
+- **Heavy Weapons:** Maximum damage (2d6+2), two-handed
+- **Medium Weapons:** Balanced damage (2d6+1), versatile
+- **Light Weapons:** Lower damage but allow shield
+
+**Grace-Based Fighters:**
+- **Light Weapons:** Full damage (2d6), +1 Finesse actions
+- **Ranged Weapons:** Attack from safety (2d6 at Far)
+- **Medium Weapons:** Balanced option if using Grace
+
+**Versatile Combatants:**
+- **Medium Weapons:** Can use Might or Grace
+- **Reach Weapons:** Might or Grace, tactical positioning
+- **Light Weapons:** Might or Grace, most flexible
+
+### By Combat Role
+
+**Frontline Tank:**
+- Medium weapon + shield (best defense)
+- Heavy weapon (maximum threat)
+- Light weapon + shield (if Grace-based)
+
+**Damage Dealer:**
+- Heavy weapons (2d6+2 base)
+- Medium weapons with critical bonuses (Battle Axe)
+- Ranged weapons with positioning
+
+**Skirmisher:**
+- Light weapons (mobility)
+- Thrown weapons (flexible range)
+- Reach weapons (safe distance)
+
+**Archer:**
+- Longbow (+1 damage at Far)
+- Shortbow (standard ranged)
+- Crossbow (armor penetration)
+
+### Damage Comparison
+
+**Base Damage by Category:**
+- Heavy: 2d6+2 (average 9)
+- Medium: 2d6+1 (average 8)
+- Light/Reach/Thrown/Ranged: 2d6 (average 7)
+
+**Plus Attribute Modifier:**
+- With +2 attribute: +2 to average
+- With +3 attribute: +3 to average
+
+**Example:** Heavy weapon wielder with Might +2:
+- Roll: 2d6+2 (weapon) +2 (Might) = 2d6+4
+- Average: 11 damage per hit
+
+### Special Properties Explained
+
+**Category-Wide:**
+- **Light Weapons:** +1 to Finesse actions (picking locks, sleight of hand while armed)
+- **Heavy Weapons:** -1 Grace while wielding (constant penalty, even out of combat)
+- **Reach Weapons:** Attack from Close range (one zone away, safer positioning)
+- **Thrown Weapons:** +1 Flow when hit at Close (reward for risky throws)
+- **Ranged Weapons:** +1 damage at Far, -2 when Engaged (range matters)
+
+**Individual Weapon Specials:**
+- **Versatile:** Use two-handed for +1 damage (longsword: 2d6+2 two-handed)
+- **Ignores DR:** Bypasses X points of damage reduction (mace, heavy crossbow)
+- **Critical Bonuses:** Extra effect on critical hits (greatsword cleave, greataxe ×3)
+- **Reach/Brace:** Can hit first when enemies approach
+- **Loading:** Fire every other turn (crossbows trade speed for power)
+- **Concealable:** Hidden weapons (dagger, easy to smuggle)
+
+### Weapon Upgrades
+
+Characters typically upgrade weapons through:
+
+**Quality Improvements:**
+- Masterwork: +1 to hit (not damage)
+- Silvered: Affects certain creatures
+- Cold Iron: Affects fey creatures
+
+**Magical Enhancement:**
+- +1: Bonus to hit and damage
+- +2: Greater bonus
+- +3: Maximum mundane bonus
+
+**Special Properties:**
+- Flaming, Frost, Shocking
+- Keen (improved critical range)
+- Defending (transfer bonus to Guard)
+
+### Tactical Considerations
+
+**Shields:**
+- +2 Guard (significant survivability)
+- Requires one hand (limits weapon choice)
+- Can't use Heavy or two-handed weapons
+
+**Two-Handed Weapons:**
+- Can't use shield
+- Typically higher damage
+- Free hand unavailable (no torch, items, etc.)
+
+**Dual Wielding:**
+- Not directly supported mechanically
+- Flavor with light weapons
+- No damage bonus (already using Might/Grace)
+
+**Weapon Switching:**
+- Free action once per turn
+- Keep multiple weapons ready
+- Adapt to range changes
+
+### By Archetype
+
+**Fighter Starting:**
+- "Martial weapon and shield" = Any medium weapon + shield
+- Most flexible starting loadout
+- Can swap for heavy two-handed instead
+
+**Ranger Starting:**
+- "Bow and hunting knife" = Longbow or shortbow + dagger
+- Ranged specialist with backup weapon
+- Mobile combatant
+
+**Paladin Starting:**
+- "Weapon and holy symbol" = Usually medium weapon
+- Heavy armor allows heavy weapon
+- Shield optional
+
+**Rogue Starting:**
+- "Daggers and shortbow" = Multiple light weapons + ranged
+- Versatile loadout for infiltration
+- All weapons concealable
+
+**Bard Starting:**
+- "Rapier and dagger" = Grace-focused light weapons
+- Stylish and effective
+- Both work with Performance
+
+**Wizard/Cleric:**
+- "Staff/wand" or "Mace" = Simple weapons
+- Not the focus, but functional
+- Typically casting instead
+
+## GM Guidelines for Weapons
+
+### Treasure and Rewards
+
+**Wealth-Based Upgrades:**
+- Let players buy better weapons in cities
+- Price progression: Normal → Masterwork → +1 → +2 → +3
+- Magic weapons are treasure, not purchases (usually)
+
+**Signature Weapons:**
+- Players often bond with specific weapons
+- Allow upgrades rather than forcing replacements
+- Named weapons create stories
+
+### Weapon Specials in Play
+
+**Versatile Weapons:**
+- Switching hands is free action
+- Two-handed mode incompatible with shield
+- Useful for adapting to threats
+
+**Reach Weapons:**
+- Actually enforce Close range advantages
+- Let reach users strike first against chargers
+- Reach is less useful in confined spaces
+
+**Loading Weapons:**
+- Crossbows fire every other turn
+- High damage compensates
+- Can't full-attack with loading weapons
+
+**Throwable Weapons:**
+- Most light weapons can be thrown (Close range)
+- Specific thrown weapons go farther
+- Thrown weapons aren't automatically retrieved
+
+### Balance Notes
+
+**Damage Differences Are Small:**
+- Heavy weapon: 2d6+2 (avg 9)
+- Light weapon: 2d6 (avg 7)
+- 2 damage difference per hit isn't huge
+- Other factors matter: armor compatibility, attributes, playstyle
+
+**Special Properties Matter:**
+- Weapon choice is about tactical options, not pure damage
+- Let players express character through weapon choice
+- All weapon categories are viable
+
+### Common Mistakes
+
+**Don't forget:**
+- Heavy weapon Grace penalty applies constantly
+- Ranged weapons have Engaged penalty
+- Loading weapons fire every other turn
+- Two-handed weapons prevent shield use
+
+**Do remember:**
+- Players add attribute modifier to damage
+- Aggressive stance adds +1 damage
+- Critical hits add tier bonus
+- Weapon damage is before DR
+
+## Improvised and Unusual Weapons
+
+**Improvised Weapons:**
+- Use light weapon stats (2d6)
+- No special properties
+- May break on critical failure
+
+**Unarmed Strikes:**
+- Count as light weapons
+- 2d6 damage (monks are skilled unarmed)
+- Might or Grace
+- Can't be disarmed
+
+**Exotic Weapons:**
+- Work with GM to stat custom weapons
+- Use existing category as base
+- Add special property for uniqueness
+
+---
+
+*Weapon choice expresses character identity as much as effectiveness. A greataxe-wielding berserker and rapier-dancing duelist both work—they just tell different stories.*

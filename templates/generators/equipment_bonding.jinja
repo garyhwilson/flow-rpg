@@ -1,0 +1,24 @@
+{# Equipment Bonding - from equipment.yaml #}
+# EQUIPMENT BONDING SYSTEM
+*Generated from YAML source data*
+
+## Overview
+Equipment grows with you through use and attachment.
+
+{% if bonding_data %}
+## Bonding Stages
+{% for stage_id, stage in bonding_data.items() %}
+### {{ stage_id.replace('_', ' ').title() }}
+{% if stage.requirement %}
+- **Requirement:** {{ stage.requirement }}
+{% endif %}
+{% if stage.benefit %}
+- **Benefit:** {{ stage.benefit }}
+{% endif %}
+{% if stage.narrative %}
+- **Narrative:** {{ stage.narrative }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+*Equipment bonding represents the deep connection between warrior and weapon.*

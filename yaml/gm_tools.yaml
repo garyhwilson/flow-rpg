@@ -100,66 +100,68 @@ encounter_building:
         flow_generation: "Extreme"
   
   enemy_templates:
-    minion:
+    henchman:
       guard: "5 + (party_milestones / 2)"
       vitality: "3 + (party_milestones / 3)"
       damage: "1d6 + (party_milestones / 4)"
       skills: "One at Professional"
       flow: "Starts at 0"
-      special: "Dies from any Vitality damage"
-    
-    standard:
-      guard: "8 + party_milestones"
-      vitality: "10 + (party_milestones × 2)"
+      special: "Falls quickly but dangerous in groups"
+      description: "Numerous followers, individually weak"
+
+    worthy_opponent:
+      guard: "10 + (party_milestones × 2)"
+      vitality: "15 + (party_milestones × 2)"
       damage: "2d6 + (party_milestones / 2)"
       skills: "Two at Professional"
       flow: "Starts at 0"
-      special: "One stance preference"
-    
+      special: "Equal match for individual heroes"
+      description: "Capable adversary matching party members"
+
     elite:
-      guard: "12 + (party_milestones × 2)"
-      vitality: "15 + (party_milestones × 3)"
-      damage: "2d6+2 + party_milestones"
-      skills: "One Expert, two Professional"
-      flow: "Starts at +1"
-      special: "Stance dancing, signature move"
-    
-    boss:
       guard: "15 + (party_milestones × 3)"
       vitality: "25 + (party_milestones × 4)"
       damage: "3d6 + party_milestones"
       skills: "Two Expert, one Master"
       flow: "Starts at +2"
-      special: "Multiple actions, legendary resistance"
+      special: "Acts multiple times, requires party coordination"
+      description: "Formidable threat requiring focused effort"
   
   encounter_composition:
-    solo_boss:
-      composition: "1 Boss"
-      tactics: "Multiple actions per round"
-      modifications:
-        - "Acts in each stance"
-        - "Legendary resistance (3/scene)"
-        - "Escalation mechanics"
-    
-    boss_and_minions:
-      composition: "1 Boss + 4-6 Minions"
-      tactics: "Minions protect and enable"
-      flow_economy: "Minions generate Flow for boss"
-    
+    overwhelming_force:
+      description: "Single powerful opponent with significant advantages"
+      composition: "1 Elite"
+      tactics: "Tests party coordination and resource management"
+      guidance: "Elite acts multiple times per round OR has environmental advantages"
+      notes: "Legendary resistance (3/scene) represents adaptability"
+
+    coordinated_threat:
+      description: "Elite leading organized group"
+      composition: "1 Elite + 4-6 Henchmen"
+      tactics: "Leader coordinates followers tactically"
+      guidance: "Henchmen enable Elite's strategy through positioning and support"
+      notes: "Elite adapts tactics when strategy fails"
+
     elite_squad:
+      description: "Multiple skilled opponents"
       composition: "2-3 Elites"
-      tactics: "Coordinated strikes"
-      special: "Combination attacks"
-    
-    horde:
-      composition: "10+ Minions"
-      tactics: "Overwhelming numbers"
-      special: "Swarm rules apply"
-    
-    mixed_threat:
-      composition: "1 Elite + 2 Standard + 3 Minions"
-      tactics: "Layered challenge"
-      progression: "Waves arrive over time"
+      tactics: "Coordinated strikes and combination attacks"
+      guidance: "Each Elite has distinct capability, they support each other"
+      notes: "Focus fire and divide-and-conquer both valid approaches"
+
+    overwhelming_numbers:
+      description: "Numerous weak opponents"
+      composition: "10+ Henchmen"
+      tactics: "Swarm and surround tactics"
+      guidance: "Use swarm rules for efficiency"
+      notes: "Area effects and choke points become critical"
+
+    asymmetric_conflict:
+      description: "Mixed opposition with varied capabilities"
+      composition: "1 Elite + 2 Worthy Opponents + 3 Henchmen"
+      tactics: "Layered challenge with distinct roles"
+      guidance: "Each opponent type complements the others tactically"
+      notes: "Reinforcements may arrive based on narrative circumstances"
   
   environmental_factors:
     hazards:
@@ -210,7 +212,7 @@ npc_generation:
         flow: "Starts at 0"
       
       combat_npc:
-        template: "Use minion/standard/elite"
+        template: "Use henchman/worthy_opponent/elite"
         modify: "Adjust for role"
       
       specialist_npc:
@@ -302,7 +304,7 @@ campaign_management:
       complications: "Things go wrong"
     
     climax:
-      boss_encounter: "Major challenge"
+      major_challenge: "Climactic encounter"
       flow_maximum: "Peak resources"
       decisive_moment: "Victory or defeat"
     
@@ -472,7 +474,6 @@ gm_tools:
       gm_flow:
         - "Current pool"
         - "Complications available"
-        - "Escalation level"
     
     campaign_tracker:
       milestone_progress:

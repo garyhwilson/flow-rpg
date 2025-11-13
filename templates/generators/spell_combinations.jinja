@@ -1,0 +1,23 @@
+{# Spell Combinations - from magic.yaml #}
+# SPELL COMBINATIONS
+*Generated from YAML source data*
+
+## Overview
+Tactical spell sequences for optimal Flow management.
+
+{% if combo_data %}
+{% for combo_id, combo in combo_data.items() %}
+## {{ combo_id.replace('_', ' ').title() }}
+{% if combo.sequence %}
+**Sequence:** {{ combo.sequence|join(' → ') }}
+{% endif %}
+{% if combo.flow_economy %}
+**Flow Economy:** {{ combo.flow_economy }}
+{% endif %}
+{% if combo.tactical_use %}
+**Tactical Use:** {{ combo.tactical_use }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+*Effective spell combinations manage Flow while maximizing impact.*

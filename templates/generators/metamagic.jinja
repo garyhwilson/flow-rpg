@@ -1,0 +1,23 @@
+{# Metamagic - from magic.yaml #}
+# METAMAGIC OPTIONS
+*Generated from YAML source data*
+
+## Overview
+Modify spells with special techniques (Wizard unique subsystem).
+
+{% if metamagic_data %}
+{% for meta_id, meta in metamagic_data.items() %}
+## {{ meta_id.replace('_', ' ').title() }}
+{% if meta.effect %}
+**Effect:** {{ meta.effect }}
+{% endif %}
+{% if meta.cost %}
+**Cost:** {{ meta.cost }}
+{% endif %}
+{% if meta.limitation %}
+**Limitation:** {{ meta.limitation }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+*Metamagic allows wizards to customize spells for specific situations.*

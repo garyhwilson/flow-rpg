@@ -109,7 +109,7 @@ casting_attributes:
     mechanical_benefits:
       universal: "Ignore 1 point of cover/concealment"
       damage: "Can exclude X allies from area (X = Mind)"
-      buff: "Duration in hours instead of minutes"
+      blessing: "Duration in hours instead of minutes"
       utility: "Perfect precision in effect"
     
     narrative_style: "Mathematical perfection, calculated angles"
@@ -158,7 +158,7 @@ casting_attributes:
       universal: "Affects morale/emotions"
       social: "Double effect vs. composure"
       area: "Spectacular display causes awe"
-      buff: "Affects 2x normal targets"
+      blessing: "Affects 2x normal targets"
     
     narrative_style: "Drama, performance, emotional impact"
 
@@ -790,7 +790,7 @@ spell_combinations:
   
   advanced_combinations:
     time_stop_setup:
-      sequence: ["time_stop", "buff", "buff", "position"]
+      sequence: ["time_stop", "blessing", "blessing", "position"]
       strategy: "Use frozen time for preparation"
     
     portal_assault:
