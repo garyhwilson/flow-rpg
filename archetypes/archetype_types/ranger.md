@@ -47,18 +47,20 @@ Most Rangers develop at least moderate scores across physical and perceptual att
 
 Rangers begin with the following skill proficiencies, reflecting their specialized training:
 
-**Professional (Tier 3):**
-- Survival (resource acquisition, shelter creation, and environmental adaptation)
-- Perception (tracking, threat detection, and environmental reading)
+**Professional (+2):**
+- Survival (resource acquisition, shelter creation, environmental adaptation, tracking, and wilderness navigation)
 
-**Competent (Tier 2):**
+**Novice (-1):**
 - Combat (wilderness-adapted fighting techniques and ranged weapon proficiency)
-- Stealth (environmental concealment and silent movement)
-- Choose one: Animal Handling, Heal, or Athletics
+- Investigate (tracking, observation, and detail-oriented search)
 
-**Basic (Tier 1):**
-- Nature (flora/fauna knowledge and natural resource identification)
-- Two additional skills reflecting background and cultural training
+**Starting Edge:**
+Choose one Edge at character creation:
+- **Fast Movement:** +1 zone of movement per turn
+- **Precise Strike:** Reroll one damage die per attack
+
+**Additional Skills:**
+- Choose three additional skills at Basic/Untrained level reflecting background and cultural training
 
 Rangers are typically Untrained in complex social interaction, scholarly pursuits, or urban operation unless their background specifically includes exposure to these areas.
 

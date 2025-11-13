@@ -7,7 +7,7 @@
 - **Desire:** To feel valuable and worthwhile
 
 ## Mechanical Benefits
-- **Flow Benefit - Excellence Cascade:** When you achieve a critical success (roll of 13+) while pursuing a declared goal, gain 2 Flow instead of 1 (once per scene)
+- **Flow Benefit - Excellence Rewarded:** Whenever you achieve a Critical Success (13+) on any roll, gain +1 additional Flow beyond the normal critical bonus
 - **Narrative Permission - Victory Sense:** You can instinctively assess the "win condition" of any situation - what would constitute success here. No roll needed
 
 ## Moral Compass

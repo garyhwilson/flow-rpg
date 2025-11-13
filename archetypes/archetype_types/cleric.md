@@ -41,18 +41,18 @@ Most Clerics develop at least moderate scores in Awareness and either Presence o
 
 Clerics begin with the following skill proficiencies, reflecting their specialized training in spiritual matters and community service:
 
-**Professional (Tier 3):**
-- Divine (ritual performance, spiritual communion, and theological knowledge)
+**Professional (+2):**
+- Medicine (holistic healing, wound treatment, and ailment diagnosis)
 - Empathy (spiritual perception, emotional understanding, and interpersonal awareness)
 
-**Competent (Tier 2):**
-- Medicine (holistic healing, wound treatment, and ailment diagnosis)
-- Persuade (theological explanation, moral guidance, and community leadership)
-- Choose one: Lore (sacred texts), Perform (ritual ceremonies), or Survival (community sustenance)
+**Novice (-1):**
+- Sorcery (divine magic channeling, ritual performance, and spiritual communion)
 
-**Basic (Tier 1):**
-- Endure (spiritual resilience, ritual fasting, physical hardship)
-- Two additional skills reflecting background and cultural training
+**Special Ability:**
+- **Divine Spellcasting:** Can cast divine spells regardless of attributes (archetype training overrides normal spellcasting requirements)
+
+**Additional Skills:**
+- Choose three additional skills at Basic/Untrained level reflecting background and cultural training
 
 Clerics are typically Untrained in deceptive practices, selfish pursuits, or activities contradicting their theological principles unless their background specifically includes exposure to these areas.
 

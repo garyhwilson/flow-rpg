@@ -1,34 +1,37 @@
-# STANDARD SPELLS (-1 FLOW)
+# TIER 1: BASIC SPELLS (0 FLOW)
 
 ## Overview
 
-Standard spells represent the bread-and-butter of magical practice. Costing only 1 Flow, these spells are efficient enough to use regularly while providing significantly more power than cantrips. A well-chosen standard spell at the right moment can turn the tide of an encounter without depleting your resources.
+Tier 1 spells represent the fundamental magical effects that all casters rely on. Costing 0 Flow, these spells maintain Flow equilibrium—making them sustainable and reliable for regular use. They provide significantly more power than cantrips while remaining accessible even at low Flow. A well-chosen basic spell at the right moment can turn the tide of an encounter without depleting your resources.
 
 ## Design Philosophy
 
-Standard spells occupy the sweet spot in the magic system:
+Basic spells occupy the foundational tier in the magic system:
 
-1. **Regular Use** - Affordable enough to cast multiple times per scene
-2. **Meaningful Impact** - Noticeably more powerful than cantrips
+1. **Sustainable Use** - No Flow cost means unlimited casting potential
+2. **Meaningful Impact** - Significantly more powerful than cantrips
 3. **Tactical Variety** - Different spells for different situations
-4. **Flow Economy** - Cost allows strategic resource management
+4. **Flow Neutral** - Maintain your Flow state while producing powerful effects
+5. **Combat Staple** - The bread and butter of magical combat
 
-Experienced casters use standard spells as their primary magical tool, reserving advanced and master spells for critical moments.
+Experienced casters use basic spells as their primary magical tool, building Flow with cantrips and spending it on advanced/master spells for critical moments.
 
-## Casting Standard Spells
+## Casting Basic Spells
 
 **Casting Roll:** 2d6 + [Chosen Attribute] + Sorcery
-**Flow Cost:** -1 Flow (cannot cast if at 0 or negative Flow, except Will approach)
+**Flow Cost:** 0 Flow (no Flow cost to cast)
 
 - Choose which attribute to use (Mind, Awareness, Will, or Presence)
 - Each attribute provides different benefits
-- Must have at least 1 Flow to cast (except Will casters)
+- Can cast at any Flow level (even negative Flow)
 - Still affected by armor penalties
+- Combine with Aggressive stance to generate +1 Flow on damage
 
 **Success Thresholds:**
-- **6 or less:** Failure (generates +1 Flow for enemy, lose Flow anyway)
+- **6 or less:** Failure (generates +1 Flow for enemy)
 - **7-9:** Partial success (reduced effect or complication)
 - **10+:** Full success (described effect occurs)
+- **13+:** Critical success (full effect plus +1 Flow)
 
 ---
 

@@ -7,7 +7,7 @@
 - **Desire:** To find themselves and their significance
 
 ## Mechanical Benefits
-- **Flow Benefit - Authentic Action:** When you act against conventional wisdom or expectations in a way true to yourself, gain 1 Flow (once per scene)
+- **Flow Benefit - Novel Approach:** Once per scene, when you attempt something you've never tried before or approach a problem in a completely novel way, gain +3 Flow regardless of success
 - **Narrative Permission - Soul Reading:** Once per scene, you can ask one creature a deep personal question that they must answer honestly (though they may be cryptic)
 
 ## Moral Compass

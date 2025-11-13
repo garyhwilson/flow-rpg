@@ -1,34 +1,51 @@
-# ADVANCED SPELLS (-3 FLOW)
+# ADVANCED & EXPERT SPELLS (TIER 2 & 3)
 
 ## Overview
 
-Advanced spells represent powerful magic that can change the course of an encounter. Costing 3 Flow, these spells require careful resource management but deliver game-changing effects. When a caster reaches for an advanced spell, everyone at the table knows something significant is about to happen.
+This document covers both Tier 2 (Advanced) and Tier 3 (Expert) spells—powerful magic that can change the course of an encounter. These spells require Flow investment but deliver game-changing effects. When a caster reaches for an advanced spell, everyone at the table knows something significant is about to happen.
 
 ## Design Philosophy
 
-Advanced spells occupy the high-impact tier:
+Advanced and Expert spells occupy the high-impact tiers:
 
 1. **Decisive Moments** - Turn the tide of combat or solve major problems
-2. **Resource Investment** - Significant Flow cost demands strategic timing
+2. **Resource Investment** - Flow cost demands strategic timing
 3. **Memorable Magic** - These are the spells players remember
-4. **Scaling Power** - Noticeably more powerful than standard spells
+4. **Scaling Power** - Dramatically more powerful than basic spells
+5. **Tactical Depth** - Each tier offers different power-to-cost ratios
 
-Experienced casters build toward advanced spells, managing Flow to enable these powerful effects when they matter most.
+Experienced casters build toward these spells, managing Flow to enable powerful effects when they matter most.
 
-## Casting Advanced Spells
+## Spell Tiers
+
+### Tier 2: Advanced Spells (-1 Flow)
+**Examples:** Fireball, Heal, Fly, Invisibility, Web
+
+Moderate Flow investment for significant battlefield impact. These spells are accessible enough to use regularly once you've built some Flow through cantrips or basic spells.
+
+### Tier 3: Expert Spells (-2 Flow)
+**Examples:** Lightning Bolt, Teleport, Polymorph, Scrying, Wall of Fire
+
+Higher Flow investment for dramatic results and game-changing capabilities. Reserved for critical moments or when you've built substantial Flow.
+
+## Casting These Spells
 
 **Casting Roll:** 2d6 + [Chosen Attribute] + Sorcery
-**Flow Cost:** -3 Flow (must have at least 3 Flow, except Will approach)
 
 - Choose which attribute to use (Mind, Awareness, Will, or Presence)
 - Each attribute provides dramatically different benefits
-- Significant resource investment
+- Flow cost varies by spell tier
 - Still affected by armor penalties
 
 **Success Thresholds:**
-- **6 or less:** Failure (generates +1 Flow for enemy, lose 3 Flow anyway)
+- **6 or less:** Failure (generates +1 Flow for enemy, lose Flow cost anyway)
 - **7-9:** Partial success (reduced effect or complication)
 - **10+:** Full success (described effect occurs in full glory)
+- **13+:** Critical success (full effect plus +1 Flow)
+
+---
+
+# TIER 2: ADVANCED SPELLS (-1 FLOW)
 
 ---
 
@@ -74,7 +91,7 @@ Fireball is the iconic area damage spell—a roiling sphere of magical flame tha
 - **Zone Effect:** Affects entire combat zone (typically 3-6 targets)
 - **No Friendly Fire:** Except Mind version which excludes specific targets
 - **Environmental Effects:** Might ignite flammable materials, create smoke
-- **Flow Cost:** At 3 Flow, this is a significant investment
+- **Flow Cost:** -1 Flow (Tier 2 spell)
 
 ### GM Notes
 - Fireball is THE iconic spell—make it feel awesome
@@ -129,6 +146,7 @@ Heal channels magical energy to repair injuries, restore vitality, and save live
 - **Living Targets Only:** Doesn't work on constructs/undead (usually)
 - **Not Resurrection:** Can't bring back the truly dead
 - **Multiple Castings:** Can heal same target multiple times
+- **Flow Cost:** -1 Flow (Tier 2 spell)
 
 ### GM Notes
 - Heal changes survival math significantly
@@ -183,6 +201,7 @@ Invisibility renders the target invisible to normal sight, providing a massive b
 - **Stealth Rolls:** Still need Stealth checks in risky situations
 - **Breaking Invisibility:** Depends on version (Will is exception)
 - **Self or Touch:** Can cast on allies
+- **Flow Cost:** -1 Flow (Tier 2 spell)
 
 ### GM Notes
 - Invisibility is powerful—massive Stealth bonus
@@ -237,7 +256,7 @@ Dispel is the anti-magic spell, capable of countering enemy spells or removing m
 - **Opposed Roll:** Your roll vs. their original casting roll or set DC
 - **Countering:** Can ready action to Dispel when enemy casts
 - **Removing:** Can dispel ongoing effects on targets
-- **Flow Cost:** Still -3 Flow even if dispel fails
+- **Flow Cost:** -1 Flow (Tier 2 spell), even if dispel fails
 
 ### GM Notes
 - Dispel creates dynamic magical duels
@@ -251,39 +270,58 @@ Dispel is the anti-magic spell, capable of countering enemy spells or removing m
 
 ---
 
-## Advanced Spell Tactics
+# TIER 3: EXPERT SPELLS (-2 FLOW)
 
-### When to Use Advanced Spells
+Expert spells require higher Flow investment but deliver game-changing results. These spells include Lightning Bolt, Teleport, Polymorph, Scrying, and Wall of Fire.
+
+**Note:** Full details for Tier 3 spells will be added in future updates. For now, GMs should treat these as more powerful versions of Tier 2 effects with -2 Flow cost and increased impact.
+
+---
+
+## Spell Tactics
+
+### When to Use Tier 2 Spells (-1 Flow)
 
 **Clear Uses:**
 - **Multiple Enemies:** Fireball when 3+ enemies clustered
 - **Ally Dying:** Heal to prevent death
 - **Infiltration Needed:** Invisibility for stealth mission
-- **Enemy Casting Big Spell:** Dispel to counter
+- **Enemy Casting:** Dispel to counter
 
 **Strategic Considerations:**
-- **Flow Cost:** 3 Flow is significant (30-50% of typical pool)
-- **Impact Required:** Must be worth the investment
-- **Timing Matters:** Too early = wasted, too late = dead
-- **Party Coordination:** Sometimes advanced spell enables ally combo
+- **Flow Cost:** -1 Flow is moderate (affordable after building with cantrips)
+- **Impact Required:** Significant battlefield change
+- **Timing Matters:** Use when effect will be decisive
+- **Party Coordination:** Can enable ally combos
+
+### When to Use Tier 3 Spells (-2 Flow)
+
+**Strategic Uses:**
+- Higher impact than Tier 2 for critical moments
+- When you've built substantial Flow (+3 or more)
+- Game-changing effects worth the investment
+- Saving throws or decisive actions
 
 ### Resource Management
 
-**At 3 Flow Exactly:**
-- This is the decision point
-- Cast advanced spell now, or build more Flow?
-- Consider: Can you afford to wait?
-- All-in vs. conservative play
+**At +1 Flow:**
+- Can cast one Tier 2 spell
+- Decision: Use it now or build more?
+- Consider urgency vs. waiting for bigger plays
 
-**At 4-6 Flow:**
-- Comfortable advanced spell range
-- Can cast and still have resources
-- Good time for Fireball/Heal/Invisibility
+**At +2 Flow:**
+- Can cast one Tier 2 and have Flow left
+- Or save for one Tier 3 spell
+- Comfortable position for Tier 2 usage
 
-**At 7+ Flow:**
-- Advanced spells are "cheap" now
-- Consider master spell instead
-- Or multiple advanced spells
+**At +3-4 Flow:**
+- Multiple Tier 2 spells possible
+- One Tier 3 spell comfortably
+- Good tactical flexibility
+
+**At +5-6 Flow:**
+- Can afford Tier 4 (master) spells
+- Or multiple Tier 2/3 combinations
 - High Flow = powerful plays
 
 ### Attribute Selection for Advanced Spells
@@ -319,14 +357,14 @@ Dispel is the anti-magic spell, capable of countering enemy spells or removing m
 ### Offensive Combos
 
 **Invisibility + Attack:**
-1. Cast Invisibility (Will version) -3 Flow
+1. Cast Invisibility (Will version) -1 Flow
 2. Attack with advantage (unseen)
 3. Remain invisible (Will special)
 4. Repeat until scene ends or Flow gone
 
 **Fireball + Aggressive Stance:**
 1. Enter Aggressive Stance
-2. Cast Fireball -3 Flow
+2. Cast Fireball -1 Flow
 3. Defeat multiple enemies
 4. Generate Flow from success
 5. Partially recover cost

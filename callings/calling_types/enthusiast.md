@@ -7,7 +7,7 @@
 - **Desire:** To be satisfied and content, to have needs fulfilled
 
 ## Mechanical Benefits
-- **Flow Benefit - Joyful Flow:** When you gain Flow, you may immediately transfer it to an adjacent ally instead of keeping it (no action required, doesn't count against your ability to switch stances)
+- **Flow Benefit - Contagious Enthusiasm:** When you gain Flow from any source, one adjacent ally also gains +1 Flow (spreading your enthusiasm)
 - **Narrative Permission - Silver Lining:** You can always find something positive or useful in any situation, no matter how dire. This insight provides actual benefit
 
 ## Moral Compass

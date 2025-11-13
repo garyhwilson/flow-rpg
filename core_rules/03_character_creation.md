@@ -110,32 +110,35 @@ Your archetype determines your initial skill training, equipment, and combat rol
 
 **Key Skills:**
 - Combat (Professional +2)
-- Athletics (Competent +0)
-- Command (Competent +0)
+- Athletics (Novice -1)
+- Command (Novice -1)
 
 **Starting Equipment:** Medium armor, martial weapon, shield
+**Starting Edge:** Choose Weapon Focus (+1 damage with one weapon type) or Tough (+2 Guard)
 **Natural Callings:** Champion, Guardian, Sentinel
 
 ### RANGER
 *Wilderness expert and skilled hunter*
 
 **Key Skills:**
-- Combat (Competent +0)
+- Combat (Novice -1)
 - Survival (Professional +2)
-- Investigate (Competent +0)
+- Investigate (Novice -1)
 
 **Starting Equipment:** Light armor, bow, tracking kit
+**Starting Edge:** Choose Fast Movement (+1 zone) or Precise Strike (reroll one damage die)
 **Natural Callings:** Seeker, Scholar, Sentinel
 
 ### PALADIN
 *Divine warrior and inspiring leader*
 
 **Key Skills:**
-- Combat (Competent +0)
-- Medicine (Competent +0)
+- Combat (Novice -1)
+- Medicine (Novice -1)
 - Command (Professional +2)
 
 **Starting Equipment:** Heavy armor, weapon, holy symbol
+**Special:** Can cast divine spells regardless of attributes
 **Natural Callings:** Advocate, Guardian, Champion
 
 ### ROGUE
@@ -144,9 +147,10 @@ Your archetype determines your initial skill training, equipment, and combat rol
 **Key Skills:**
 - Stealth (Professional +2)
 - Finesse (Professional +2)
-- Deceive (Competent +0)
+- Deceive (Novice -1)
 
 **Starting Equipment:** Light armor, daggers, thieves' tools
+**Special:** Two Professional skills at start (only archetype with this advantage)
 **Natural Callings:** Seeker, Enthusiast, Scholar
 
 ### WIZARD
@@ -155,35 +159,35 @@ Your archetype determines your initial skill training, equipment, and combat rol
 **Key Skills:**
 - Sorcery (Professional +2)
 - Lore (Professional +2)
-- Investigate (Competent +0)
+- Investigate (Novice -1)
 
 **Starting Equipment:** Robes, spellbook, component pouch
 **Natural Callings:** Scholar, Seeker, Advocate
-**Special:** Can cast spells if Mind + Awareness ≥ +2
+**Special:** Can cast arcane spells regardless of attributes
 
 ### CLERIC
 *Channel of divine power and spiritual healer*
 
 **Key Skills:**
 - Medicine (Professional +2)
-- Sorcery (Competent +0)
+- Sorcery (Novice -1)
 - Empathy (Professional +2)
 
 **Starting Equipment:** Medium armor, mace, holy symbol
 **Natural Callings:** Guardian, Mediator, Advocate
-**Special:** Can cast spells if Mind + Awareness ≥ +2
+**Special:** Can cast divine spells regardless of attributes
 
 ### BARD
 *Performer, storyteller, and magical artist*
 
 **Key Skills:**
 - Perform (Professional +2)
-- Deceive (Competent +0)
-- Sorcery (Competent +0)
+- Deceive (Novice -1)
+- Sorcery (Novice -1)
 
 **Starting Equipment:** Light armor, instrument, rapier
 **Natural Callings:** Enthusiast, Mediator, Seeker
-**Special:** Can cast spells if Mind + Awareness ≥ +2
+**Special:** Can cast performance magic regardless of attributes
 
 *Note: All other skills start at Untrained (-2)*
 
@@ -200,7 +204,7 @@ Your Calling represents your inner drive and provides Flow benefits and narrativ
 **Fear:** Being corrupt, defective, or wrong
 **Desire:** To be good, right, accurate, and virtuous
 
-**Flow Benefit - Righteous Fury:** When you expose corruption, lies, or injustice through your actions, immediately gain 1 Flow (once per scene)
+**Flow Benefit - Truth Revealed:** When you or an ally succeeds at revealing truth or exposing deception (any Investigation, Empathy, or social check that uncovers hidden information), gain +1 Flow
 
 **Narrative Permission - Truth Sense:** You can always tell when someone is lying about wrongdoing or corruption. No roll needed - you simply know.
 
@@ -211,7 +215,7 @@ Your Calling represents your inner drive and provides Flow benefits and narrativ
 **Fear:** Being unloved or unwanted
 **Desire:** To feel loved and needed by others
 
-**Flow Benefit - Protective Surge:** When an ally within Close range takes damage that would reduce them to 0 Vitality, you may immediately spend 1 Flow to reduce that damage by half (once per scene)
+**Flow Benefit - Protective Presence:** When an ally within Close range takes damage, you gain +1 Flow (once per round maximum)
 
 **Narrative Permission - Helper's Intuition:** You always know when someone genuinely needs help, even if they're trying to hide it. No roll needed.
 
@@ -222,7 +226,7 @@ Your Calling represents your inner drive and provides Flow benefits and narrativ
 **Fear:** Being worthless or without value apart from achievements
 **Desire:** To feel valuable and worthwhile
 
-**Flow Benefit - Victory Rush:** When you achieve a Critical Success (13+) on a declared "signature" action, gain 1 Flow and your next roll gains +1d6 (once per session, must declare signature action at scene start)
+**Flow Benefit - Excellence Rewarded:** Whenever you achieve a Critical Success (13+) on any roll, gain +1 additional Flow beyond the normal critical bonus
 
 **Narrative Permission - Victory Sense:** You can instinctively assess the "win condition" of any situation - what would constitute success here. No roll needed.
 
@@ -233,7 +237,7 @@ Your Calling represents your inner drive and provides Flow benefits and narrativ
 **Fear:** Having no identity or significance
 **Desire:** To find themselves and their significance
 
-**Flow Benefit - Authentic Insight:** Once per scene, when you act against conventional wisdom or expectations, gain 1 Flow. Additionally, you may reroll any one die that shows a 1, keeping the new result.
+**Flow Benefit - Novel Approach:** Once per scene, when you attempt something you've never tried before or approach a problem in a completely novel way, gain +3 Flow regardless of success
 
 **Narrative Permission - Soul Reading:** Once per scene, you can ask one creature a deep personal question that they must answer honestly (though they may be cryptic).
 
@@ -244,7 +248,7 @@ Your Calling represents your inner drive and provides Flow benefits and narrativ
 **Fear:** Being incompetent, invaded, or overwhelmed
 **Desire:** To be capable and understanding
 
-**Flow Benefit - Prepared Mind:** You can "bank" Flow gained from knowledge-based actions, saving up to 2 Flow between scenes (normally resets to 0).
+**Flow Benefit - Perpetual Readiness:** You begin each scene with +1 Flow instead of 0, representing your perpetual state of mental preparedness
 
 **Narrative Permission - Contingency Planning:** Once per scene, declare you prepared for this exact situation and produce a relevant tool, fact, or minor preparation.
 
@@ -255,7 +259,7 @@ Your Calling represents your inner drive and provides Flow benefits and narrativ
 **Fear:** Being without support, guidance, or security
 **Desire:** To have security and support
 
-**Flow Benefit - Defensive Vigilance:** When you gain Flow from any source, also gain +1 Guard until the start of your next turn.
+**Flow Benefit - Ever Watchful:** Whenever you or an ally you can see is attacked, gain +1 Flow (once per round maximum)
 
 **Narrative Permission - Danger Sense:** You cannot be surprised or ambushed. You always act in the first round of combat, even if caught off-guard.
 
@@ -266,7 +270,7 @@ Your Calling represents your inner drive and provides Flow benefits and narrativ
 **Fear:** Being trapped in pain or deprivation
 **Desire:** To be satisfied and content, to have needs fulfilled
 
-**Flow Benefit - Joyful Flow:** When you gain Flow from any source, you may immediately gift it to an adjacent ally instead of keeping it (no action required).
+**Flow Benefit - Contagious Enthusiasm:** When you gain Flow from any source, one adjacent ally also gains +1 Flow (spreading your enthusiasm)
 
 **Narrative Permission - Silver Lining:** You can always find something positive or useful in any situation, no matter how dire. This insight provides actual mechanical or narrative benefit.
 
@@ -277,7 +281,7 @@ Your Calling represents your inner drive and provides Flow benefits and narrativ
 **Fear:** Being controlled, vulnerable, or weak
 **Desire:** To be self-reliant and in control of their destiny
 
-**Flow Benefit - Protective Dominance:** When protecting others (not yourself) in Aggressive Stance, successful attacks generate +1 additional Flow (once per round).
+**Flow Benefit - Protective Wrath:** While any ally is below half Guard or Vitality, you gain +1 Flow on all successful attacks
 
 **Narrative Permission - Unshakeable Will:** Intimidation attempts against you automatically fail. You project strength that cannot be undermined.
 
@@ -288,7 +292,7 @@ Your Calling represents your inner drive and provides Flow benefits and narrativ
 **Fear:** Loss of connection, separation, conflict
 **Desire:** To have inner and outer peace
 
-**Flow Benefit - Harmony Restoration:** Once per scene, when you successfully defuse a conflict without violence (through roleplay and appropriate skill checks), you and all participants gain 1 Flow.
+**Flow Benefit - Bridge Builder:** The first time each scene you help resolve any conflict (combat, social, or otherwise), you and all involved parties gain +1 Flow
 
 **Narrative Permission - Universal Understanding:** You understand the basic meaning and emotional content of any communication, regardless of language barriers.
 
@@ -297,23 +301,39 @@ Your Calling represents your inner drive and provides Flow benefits and narrativ
 ## Derived Values
 
 ### Health
-- **Guard:** 7 + Might + Milestones Achieved
-  - Ablative defense that absorbs damage first
+- **Guard:** 8 + Higher of (Might or Grace) + (Total Milestones × 2)
+  - Ablative defense that absorbs damage first (allows both tough and agile defenders)
   - Recoverable between scenes
-  - Can be restored in combat with Rally action
-- **Vitality:** 10 + Will
+  - Can be restored in combat with Rally action (recover 1d6 Guard, once per scene)
+- **Vitality:** 10 + Will + (Major Milestones × 3)
   - Core health representing serious injury
   - Damage to Vitality causes lasting consequences
   - At 0 Vitality: Unconscious and dying
 
+### Death & Dying
+When reduced to 0 Vitality, you fall unconscious and begin dying.
+
+**Death Saves:** Roll 2d6 + Will at the start of each turn:
+- **6 or less:** Lose 1 Vitality (getting worse)
+- **7-8:** Stable for this round
+- **9-11:** Stabilize at 0 Vitality (unconscious but stable)
+- **12+:** Regain consciousness at 1 Vitality
+
+**Death:** Occurs at -3 Vitality (down from -5)
+**Stabilization:** Medicine check (TN 8) or any magical healing
+
 ### Flow
-- **Starting Flow:** 0
-- **Range:** -6 to +10
+- **Starting Flow:** 0 (Scholars start at +1)
+- **Range:** -3 to +6 (reduced from original -6 to +10)
 - **Flow Gates:** Some abilities require +3 or +6 Flow to activate
 
 ### Magic Access
-- **Can Cast Spells:** Only if Mind + Awareness ≥ +2
-- **Note:** Wizards, Clerics, and Bards still need this requirement!
+**Universal Rule:** If your archetype provides the Sorcery skill, you can cast spells regardless of your attributes.
+
+**Alternative Access:** Characters without a spellcasting archetype can learn magic if:
+- Mind + Awareness ≥ +2 (Arcane magic)
+- Will + Presence ≥ +2 (Divine magic)
+- Awareness + Will ≥ +2 (Primal magic)
 
 ### Movement & Zones
 - **Speed:** One zone per round (standard)

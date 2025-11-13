@@ -30,15 +30,18 @@ Wizards typically develop attribute distributions emphasizing mental capability,
 
 Wizards begin with the following skill proficiencies, reflecting their specialized training combining arcane practice with scholarly research:
 
-**Professional (Tier 3):**
+**Professional (+2):**
 - Sorcery (magical theory, energy manipulation, and spell formulation)
 - Lore (academic knowledge, research methodology, and historical context)
 
-**Competent (Tier 2):**
+**Novice (-1):**
 - Investigate (detailed observation, pattern recognition, and experimental design)
 
-**Basic (Tier 1):**
-- Choose three additional skills reflecting background and cultural training
+**Special Ability:**
+- **Arcane Spellcasting:** Can cast arcane spells regardless of attributes (archetype training overrides normal spellcasting requirements)
+
+**Additional Skills:**
+- Choose three additional skills at Basic/Untrained level reflecting background and cultural training
 
 Wizards are typically Untrained in heavy physical activity, deceptive arts, or wilderness survival unless their background specifically includes exposure to these areas.
 

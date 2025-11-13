@@ -7,7 +7,7 @@
 - **Desire:** To have inner and outer peace
 
 ## Mechanical Benefits
-- **Flow Benefit - Harmony Restoration:** Once per scene, when you successfully defuse a conflict without violence (through roleplay and appropriate skill checks), you and all participants gain 1 Flow.
+- **Flow Benefit - Bridge Builder:** The first time each scene you help resolve any conflict (combat, social, or otherwise), you and all involved parties gain +1 Flow
 - **Narrative Permission - Universal Understanding:** You can understand the basic meaning and emotional content of any communication, regardless of language barriers
 
 ## Moral Compass

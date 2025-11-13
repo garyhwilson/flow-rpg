@@ -1,34 +1,37 @@
-# MASTER SPELLS (-5 FLOW)
+# TIER 4: MASTER SPELLS (-3 FLOW)
 
 ## Overview
 
-Master spells represent the pinnacle of magical power—legendary effects that reshape battles, alter reality, and create moments that become campaign legends. Costing 5 Flow, these spells are massive investments that deliver correspondingly massive results. When a master spell is cast, the entire table stops to witness the awesome display of power.
+Master spells represent the pinnacle of magical power—legendary effects that reshape battles, alter reality, and create moments that become campaign legends. Costing 3 Flow, these spells are significant investments that deliver correspondingly massive results. When a master spell is cast, the entire table stops to witness the awesome display of power.
 
 ## Design Philosophy
 
 Master spells define the apex of the magic system:
 
 1. **Legendary Moments** - These spells become campaign-defining stories
-2. **Massive Investment** - 5 Flow typically represents 50-100% of a caster's pool
+2. **Significant Investment** - 3 Flow represents half of maximum Flow capacity
 3. **Reality-Bending** - Effects that seem impossible at lower tiers
-4. **Strategic Climaxes** - Usually cast at decisive moments
+4. **Strategic Climaxes** - Cast at decisive moments when you've built substantial Flow
+5. **Accessible Power** - Reduced cost makes them achievable in extended combats
 
-Master spells aren't for everyday use—they're for the moments when everything is on the line and only overwhelming magical power will suffice.
+Master spells aren't for everyday use—they're for the moments when everything is on the line and only overwhelming magical power will suffice. The rebalanced cost makes them achievable goals rather than once-per-campaign events.
 
 ## Casting Master Spells
 
 **Casting Roll:** 2d6 + [Chosen Attribute] + Sorcery
-**Flow Cost:** -5 Flow (must have at least 5 Flow, except Will approach)
+**Flow Cost:** -3 Flow (must have at least 3 Flow, except Will approach)
 
 - Choose which attribute to use (Mind, Awareness, Will, or Presence)
 - Each attribute creates fundamentally different expressions of power
-- Enormous resource investment—often your entire Flow pool
-- Still affected by armor penalties (though rarely matters at this power level)
+- Significant resource investment—requires building Flow through cantrips and combat
+- Still affected by armor penalties
+- Combine with Aggressive stance to partially recover cost on damage spells
 
 **Success Thresholds:**
-- **6 or less:** Failure (generates +1 Flow for enemy, lose 5 Flow anyway—devastating)
+- **6 or less:** Failure (generates +1 Flow for enemy, lose 3 Flow anyway—costly)
 - **7-9:** Partial success (reduced effect or complication—still impressive)
 - **10+:** Full success (legendary effect unfolds as described)
+- **13+:** Critical success (full effect plus +1 Flow recovered)
 
 ---
 

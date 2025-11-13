@@ -1,32 +1,34 @@
-# CANTRIPS (0 FLOW)
+# CANTRIPS (GENERATE +1 FLOW)
 
 ## Overview
 
-Cantrips are basic magical effects that require no Flow expenditure. They represent the fundamental expressions of magical ability—small but reliable effects that any caster can produce indefinitely. While less powerful than standard spells, cantrips form the foundation of magical practice and remain useful throughout a caster's career.
+Cantrips are simple magical effects that generate Flow rather than consuming it. Successfully casting a cantrip generates +1 Flow, making them excellent tools for building momentum. They represent the fundamental expressions of magical ability—small but reliable effects that any caster can produce indefinitely. While less powerful than standard spells, cantrips form the foundation of magical practice and remain useful throughout a caster's career as reliable Flow generators.
 
 ## Design Philosophy
 
 Cantrips serve several purposes in the magic system:
 
-1. **Baseline Action** - Casters always have something magical to do
-2. **Flow Conservation** - Allows saving Flow for critical moments
-3. **Narrative Flavor** - Shows constant magical ability
-4. **Combat Viability** - Keeps casters relevant at 0 Flow
+1. **Flow Generation** - Build momentum through successful casting
+2. **Baseline Action** - Casters always have something magical to do
+3. **Combat Viability** - Effective even at 0 or negative Flow
+4. **Narrative Flavor** - Shows constant magical ability
+5. **Strategic Tool** - Generate Flow for more powerful spells
 
-Even legendary archmages use cantrips—not every problem requires a master spell.
+Even legendary archmages use cantrips—not only because they're free, but because they build the Flow needed for devastating master spells.
 
 ## Casting Cantrips
 
 **Casting Roll:** 2d6 + [Chosen Attribute] + Sorcery
 - Choose which attribute to use (Mind, Awareness, Will, or Presence)
 - Each attribute provides different benefits
-- No Flow cost means unlimited use
+- No Flow cost, but generates +1 Flow on success
 - Still affected by armor penalties
 
 **Success Thresholds:**
 - **6 or less:** Failure (generates +1 Flow for enemy)
-- **7-9:** Partial success (reduced effect or complication)
-- **10+:** Full success (described effect occurs)
+- **7-9:** Partial success (reduced effect or complication, still generates +1 Flow)
+- **10+:** Full success (described effect occurs, generates +1 Flow)
+- **13+:** Critical success (full effect, generates +2 Flow: +1 from cantrip, +1 from critical)
 
 ---
 
@@ -162,10 +164,10 @@ Mage Armor creates a semi-tangible magical barrier that absorbs incoming damage.
 - When conserving resources
 
 **Situational Choice:**
-- Cantrip vs. Standard Spell depends on resources
-- Spark (0 Flow) vs. Bolt (-1 Flow) is common decision
-- Light (0 Flow) vs. Invisibility (-3 Flow) for different approaches
-- Mage Armor (0 Flow) vs. Shield (-1 Flow) for self vs. party protection
+- Cantrip vs. Standard Spell depends on Flow state and needs
+- Spark (+1 Flow) vs. Bolt (0 Flow) trades damage for Flow generation
+- Cantrips build Flow while standard spells maintain it
+- Consider cantrips when you need to build momentum for bigger spells
 
 ### Cantrip Combinations
 
@@ -176,10 +178,10 @@ Mage Armor creates a semi-tangible magical barrier that absorbs incoming damage.
 - Encourages aggression from enemies (good for party tactics)
 
 **Spark + Aggressive Stance:**
-- Attack with Spark (0 Flow)
-- Generate +1 Flow on success
-- Repeat for Flow generation
-- Eventually have Flow for bigger spells
+- Attack with Spark (generates +1 Flow from cantrip)
+- Aggressive stance adds +1 Flow on successful damage
+- Total: +2 Flow per successful Spark attack
+- Rapidly build Flow for bigger spells
 
 **Light + Investigation:**
 - Awareness Light reveals hidden things

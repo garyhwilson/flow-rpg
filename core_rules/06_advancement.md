@@ -38,27 +38,45 @@ Minor milestones occur frequently and represent individual character growth mome
 Choose ONE of the following when you reach a minor milestone:
 
 **Skill Development**
-- Advance one skill up one tier (Untrained → Competent → Professional)
-- Gain a new skill at Competent level
-- Note: Cannot advance beyond Professional tier (+2) with minor milestones
+- Advance one skill up one tier (Untrained → Novice → Competent → Professional)
+- Gain a new skill at Novice level (-1)
+- Note: Cannot advance beyond Expert tier (+4) with minor milestones
 
 **Attribute Adjustment**
 - Adjust one attribute by +1/-1 (representing shift in focus or retraining)
 - Total attribute points must remain the same
 - Example: Lower Grace by -1 to raise Mind by +1
 
-**Combat Technique**
-- Learn a basic combat technique
-- Options include:
-  - Riposte: After successful Defend, immediately Strike
-  - Press Advantage: +1d6 damage when Flow positive
-  - Defensive Stance Mastery: Trade offense for stronger defense
-  - Quick Recovery: Regain Guard between rounds
+**Combat Edge**
+- Gain a minor combat improvement (see Combat Edges list below)
+- Edges provide incremental power growth
+- Can take same Edge multiple times if limit allows
 
-**Calling Exploration**
-- Deepen understanding of current Calling
-- Gain minor related benefit (GM discretion)
-- Explore Calling through roleplay and narrative development
+**Skill Edge**
+- Gain +1 to specific application of a skill
+- Example: +1 to Athletics when climbing
+- Narrows focus for specialized expertise
+
+**Flow Edge**
+- Increase maximum Flow capacity by +1 (can take up to 3 times)
+- Example: Increases max Flow from +6 to +7
+
+### Combat Edges
+
+Minor improvements that provide incremental power growth. Some edges can be taken multiple times up to their limit.
+
+| Edge | Benefit | Limit |
+|------|---------|-------|
+| **Weapon Focus** | +1 damage with one weapon type | Once per weapon type |
+| **Armor Training** | Reduce armor penalty by 1 | Once per armor type |
+| **Tough** | +2 Guard | Twice |
+| **Hardy** | +2 Vitality | Twice |
+| **Quick Draw** | Switch weapons as free action | Once |
+| **Combat Reflexes** | +1 to defense rolls | Once |
+| **Fast Movement** | +1 zone of movement per turn | Once |
+| **Precise Strike** | Reroll one damage die per attack | Once |
+| **Flow Harmony** | +1 maximum Flow capacity | Three times |
+| **Defensive Fighter** | +1 Guard when in Defensive stance | Once |
 
 ### Minor Milestone Example
 
@@ -76,6 +94,27 @@ Characters who have experienced a few minor milestones are appropriate for:
 - Local threats (bandits, wolves, minor undead)
 - Small-scale local problems
 - Threats to villages or small communities
+
+---
+
+## Damage Scaling
+
+Your damage output increases automatically as you gain milestones, keeping pace with enemy advancement:
+
+**Milestone Damage Bonus:**
+- **Every 2 Milestones:** +1 damage with all attacks
+- **At 5 Total Milestones:** Weapon damage die increases (d6 → d8)
+- **At 10 Total Milestones:** Gain exploding dice (6s are rerolled and added)
+- **At 15 Total Milestones:** Weapon die increases again (d8 → d10)
+
+**Example Progression:**
+- **Start (0 milestones):** 2d6 + Might = 10 avg damage
+- **2 milestones:** 2d6 + Might + 1 = 11 avg damage
+- **4 milestones:** 2d6 + Might + 2 = 12 avg damage
+- **5 milestones:** 2d8 + Might + 2 = 13 avg damage
+- **10 milestones:** 2d8 + Might + 5 (with exploding) = 18 avg damage
+
+This progression ensures martial characters remain effective against increasingly powerful threats throughout a campaign.
 
 ---
 
@@ -101,9 +140,9 @@ Choose ONE of the following when you reach a moderate milestone:
 - Note: Cannot raise any attribute above +4 until a major milestone
 
 **Skill Mastery**
-- Advance one Professional skill to Expert level (+4)
-- Gain a new skill at Professional level
-- Note: Cannot advance to Master tier with moderate milestones
+- Advance one skill up to Master level (+6)
+- This allows progression beyond the Expert tier (+4) available through minor milestones
+- Gain a new skill at Professional level (+2) as an alternative option
 
 **Calling Evolution**
 - Evolve interpretation of Calling
@@ -171,9 +210,10 @@ Choose ONE of the following when you reach a major milestone:
 - Increase one attribute permanently by +1
 - Can now raise attributes to +5 (legendary level)
 
-**Skill Mastery**
-- Advance one Expert skill to Master level (+6)
-- Master-level skills represent legendary capability
+**Legendary Skill**
+- Advance one Master skill to Legendary level (+8)
+- Or advance any skill directly to Master level (+6)
+- Legendary-level skills represent mythic mastery beyond mortal limits
 
 **Calling Transcendence/Synthesis**
 - Fundamentally transform your Calling
@@ -248,9 +288,10 @@ After the **Second Major Milestone** (legendary status), characters are appropri
 ### Milestone Effect on Difficulty
 
 **Guard Scaling**
-- Guard = 5 + Might + Milestones Achieved
-- Character survivability increases with milestones
-- Allows for more challenging encounters
+- Guard = 8 + Higher of (Might or Grace) + (Total Milestones × 2)
+- Character survivability increases significantly with milestones
+- Allows both tough defenders and agile defenders to be viable
+- Enables progressively more challenging encounters
 
 **Flow Generation Rate**
 - More Flow triggers from advanced abilities
@@ -270,33 +311,36 @@ After the **Second Major Milestone** (legendary status), characters are appropri
 
 **Starting Character:**
 - **Attributes:** Might +2, Grace -2, Mind -1, Awareness 0, Will +3, Presence 0
-- **Skills:** Medicine (Professional +2), Sorcery (Competent +0), Empathy (Professional +2)
-- **Derived Values:** Guard 7, Vitality 14, Non-magical (Mind + Awareness = -1)
+- **Skills:** Medicine (Professional +2), Sorcery (Novice -1), Empathy (Professional +2)
+- **Derived Values:** Guard 10 (8 + 2 + 0), Vitality 13 (10 + 3)
+- **Magic:** Can cast divine spells (Cleric archetype override)
 
 **After Two Minor Milestones:**
-- Adjusted attributes: Mind 0, Awareness 0 (by lowering Grace to -3)
-- Can now cast spells (Mind + Awareness = +0, just below threshold)
-- Learned Quick Recovery combat technique
+- Advanced Sorcery from Novice (-1) to Competent (+0)
+- Gained Tough Edge (+2 Guard, now Guard 12)
+- Guard: 14 (8 + 2 + 4 from 2 milestones)
 
-**After First Moderate Milestone:**
-- Increased Mind to +1 (Mind + Awareness = +1, still below threshold)
+**After First Moderate Milestone (Session 6):**
+- Increased Will to +4 (enhancing both spell power and Vitality)
 - Developed Signature Move "Healing Word" - Command that also recovers 1d6 Guard
+- Vitality: 14 (10 + 4)
 
-**After Third Minor Milestone:**
-- Adjusted attributes: Mind +1, Awareness +1 (by lowering Presence to -1)
-- Can now cast spells! (Mind + Awareness = +2, meets threshold)
-- Begins using Will-cast healing magic
+**After Four Minor Milestones (Total 6 Milestones):**
+- Advanced Sorcery to Professional (+2)
+- Gained Hardy Edge (+2 Vitality)
+- Guard: 20 (8 + 2 + 12), Vitality: 16
 
-**After Second Moderate Milestone:**
-- Advanced Medicine skill to Expert (+4)
-- Evolved Signature Move to also provide temporary +1 Flow
+**After Second Moderate Milestone (Session 12):**
+- Advanced Medicine skill to Master (+6)
+- Mastery of both divine magic and mundane healing
 
-**After First Major Milestone:**
+**After First Major Milestone (Session 18):**
 - Synthesized Guardian and Scholar Callings
-- Can now both protect allies from death AND produce prepared tools/knowledge
-- Has become a battle medic with both protective and knowledge abilities
+- Can now protect allies from death AND begin scenes at +1 Flow
+- Guard: 28 (8 + 2 + 18), Vitality: 19 (10 + 4 + 5 from Major Milestone)
+- Has become a legendary battle medic combining protective instincts with scholarly preparation
 
-This evolution shows how a character can transform from a non-magical healer to a powerful battle cleric through thoughtful advancement choices that tell a coherent character story.
+This evolution shows how a character grows in power through milestone scaling while maintaining their core concept.
 
 ---
 

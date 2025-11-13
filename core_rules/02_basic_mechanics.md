@@ -4,44 +4,58 @@
 
 **Basic Roll:** 2d6 + Attribute + Skill
 
-Roll two six-sided dice, add your relevant attribute modifier (ranging from -5 to +5) and your skill rating (ranging from -2 to +6). Compare the total to the target number to determine your success.
+Roll two six-sided dice, add your relevant attribute modifier (ranging from -5 to +5) and your skill rating (ranging from -2 to +8). Compare the total to the target number to determine your success.
 
-**Target Number:** 8 (standard difficulty)
+**Standard Target Number:** 8 (moderate difficulty)
+
+**Difficulty Scale:**
+- **Trivial (TN 6):** Routine tasks under pressure
+- **Easy (TN 7):** Basic professional work
+- **Standard (TN 8):** Challenging professional tasks
+- **Hard (TN 10):** Expert-level challenges
+- **Extreme (TN 12):** Near-impossible feats
+- **Legendary (TN 14):** Mythic achievements
 
 **Success Tiers:**
 - **6 or less:** Failure (generates Flow for opponent or creates consequences)
 - **7-9:** Partial Success (succeeds with a cost or complication)
 - **10-12:** Full Success (achieves your goal as intended)
 - **13+:** Critical Success (generates extra Flow and exceptional results)
+- **Beat TN by 5+:** Enhanced Success (gain advantage on next roll)
+- **Beat TN by 8+:** Legendary Success (major narrative permission)
 
 ### The Flow System
 
 Flow is the central resource that powers combat techniques, spells, and narrative advantages. It represents your character's momentum, focus, and command of the situation.
 
-**Flow Range:** -6 to +10
+**Flow Range:** -3 to +6 (reduced from original)
 
 **Starting Flow:** 0 (neutral position)
+- **Exception:** Scholars start each scene at +1 Flow
 
 **Flow States:**
-- **Positive Flow (+1 to +10):** "In the flow," riding momentum, advantage
+- **Positive Flow (+1 to +6):** "In the flow," riding momentum, advantage
 - **Zero Flow (0):** Neutral state, balanced position
-- **Negative Flow (-1 to -6):** Disrupted, against the flow, disadvantage
+- **Negative Flow (-1 to -3):** Disrupted, struggling, disadvantage
 
 **Generating Flow:**
-- Critical success on a roll
-- Tactical positioning
-- Archetype abilities
-- Calling-specific triggers
-- Aggressive stance success
+- Critical success on any roll: +1 Flow
+- Successful attack in Aggressive stance: +1 Flow
+- Successful defense in Defensive stance: +1 Flow
+- Being attacked while in Defensive stance: +1 Flow (once per round)
+- Taking any damage: +1 Flow (new rule - helps all characters maintain momentum)
+- Casting a cantrip successfully: +1 Flow
+- Archetype abilities (varies)
+- Calling-specific triggers (rebalanced for reliability)
 
 **Spending Flow:**
 - Enhance dice rolls (+1 per point spent)
-- Trigger combat techniques
-- Cast spells
-- Access narrative advantages
-- Switch stances (-1 Flow when moving from Balanced)
+- Trigger combat techniques (varies by technique)
+- Cast intermediate and advanced spells (-1 to -3)
+- Access narrative advantages (GM discretion)
+- No cost for stance switching (revised from original)
 
-**Core Philosophy:** Flow is a turn-by-turn tactical resource, not a long-term pool. It fluctuates throughout an encounter, creating dynamic gameplay where characters rise to moments of glory before facing setbacks.
+**Core Philosophy:** Flow is moment-to-moment momentum that ebbs and flows naturally. All character types can generate Flow through their preferred playstyle - aggressive fighters through offense, defensive fighters through protection, and spellcasters through magical success.
 
 ### Attribute System
 
@@ -70,14 +84,22 @@ Flow is the central resource that powers combat techniques, spells, and narrativ
 
 ### Skill System
 
-Skills represent your character's training and expertise in various areas. Each skill has five possible ratings:
+Skills represent your character's training and expertise in various areas. Each skill has seven possible ratings:
 
-**Five-Tier Progression:**
-1. **Untrained** (-2 modifier): Little to no experience
-2. **Competent** (+0 modifier): Basic professional capability
-3. **Professional** (+2 modifier): Skilled practitioner
-4. **Expert** (+4 modifier): Recognized master
-5. **Master** (+6 modifier): Legendary capability
+**Seven-Tier Progression:**
+1. **Untrained** (-2 modifier): No formal training
+2. **Novice** (-1 modifier): Basic understanding
+3. **Competent** (+0 modifier): Professional capability
+4. **Professional** (+2 modifier): Skilled practitioner
+5. **Expert** (+4 modifier): Recognized master
+6. **Master** (+6 modifier): Legendary capability
+7. **Legendary** (+8 modifier): Mythic mastery
+
+**Advancement Limits by Milestone Type:**
+- **Starting Characters:** Maximum Professional (+2)
+- **Minor Milestones:** Can advance up to Expert (+4)
+- **Moderate Milestones:** Can advance up to Master (+6)
+- **Major Milestones:** Can advance to Legendary (+8)
 
 **The 15 Core Skills:**
 

@@ -7,7 +7,7 @@
 - **Desire:** To have security and support
 
 ## Mechanical Benefits
-- **Flow Benefit - Defensive Vigilance:** When you gain Flow from any source, also gain +1 Guard until the start of your next turn
+- **Flow Benefit - Ever Watchful:** Whenever you or an ally you can see is attacked, gain +1 Flow (once per round maximum)
 - **Narrative Permission - Danger Sense:** You cannot be surprised or ambushed. You always get to act in the first round of combat, even if caught off-guard
 
 ## Moral Compass

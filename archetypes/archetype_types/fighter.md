@@ -30,15 +30,20 @@ Fighters typically develop attribute distributions emphasizing physical capabili
 
 Fighters begin with the following skill proficiencies, reflecting their specialized combat training:
 
-**Professional (Tier 3):**
+**Professional (+2):**
 - Combat (weapon mastery, tactical positioning, and fighting techniques)
 
-**Competent (Tier 2):**
+**Novice (-1):**
 - Athletics (physical capability beyond combat applications)
 - Command (battlefield leadership and intimidation)
 
-**Basic (Tier 1):**
-- Choose three additional skills reflecting background and cultural training
+**Starting Edge:**
+Choose one Edge at character creation:
+- **Weapon Focus:** +1 damage with one specific weapon type
+- **Tough:** +2 Guard
+
+**Additional Skills:**
+- Choose three additional skills at Basic/Untrained level reflecting background and cultural training
 
 Fighters are typically Untrained in arcane knowledge, subtle social manipulation, or esoteric lore unless their background specifically includes exposure to these areas.
 

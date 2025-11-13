@@ -7,7 +7,7 @@
 - **Desire:** To be capable and understanding
 
 ## Mechanical Benefits
-- **Flow Benefit - Prepared Mind:** You can "bank" Flow gained from knowledge-based actions, saving up to 2 Flow between scenes (normally resets to 0)
+- **Flow Benefit - Perpetual Readiness:** You begin each scene with +1 Flow instead of 0, representing your perpetual state of mental preparedness
 - **Narrative Permission - Contingency Planning:** Once per scene, you can declare you prepared for this exact situation and produce a relevant tool, fact, or minor preparation
 
 ## Moral Compass

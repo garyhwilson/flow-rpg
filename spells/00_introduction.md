@@ -43,14 +43,19 @@ The revolutionary aspect of this magic system is that spells aren't tied to a si
 
 ## Magic Access Requirements
 
-Not everyone can cast spells. To access magic, a character must have:
+Magic access is determined by your archetype and attributes:
 
-- **Mind + Awareness ≥ +2** total
-- This represents the minimum mental acuity and perceptual awareness needed to sense and manipulate magical Flow
-- Approximately 45% of the population meets this requirement
-- Even Wizards, Clerics, and Bards must meet this requirement!
+**Universal Rule:** If your archetype provides the Sorcery skill, you can cast spells regardless of your attributes.
+- This applies to Wizards, Clerics, Bards, and Paladins
+- Your archetype training overrides the normal attribute requirements
+- Represents formal magical education and practice
 
-This requirement creates meaningful attribute choices without being overly restrictive. Failing to meet the requirement doesn't mean you can never cast—you can increase these attributes through milestones.
+**Alternative Access:** Characters without a spellcasting archetype can learn magic if:
+- **Mind + Awareness ≥ +2** (Arcane magic)
+- **Will + Presence ≥ +2** (Divine magic)
+- **Awareness + Will ≥ +2** (Primal magic)
+
+This creates meaningful choices for non-caster archetypes while ensuring spellcasting archetypes can fulfill their role.
 
 ### Mage Sight (Innate to All Casters)
 
@@ -63,51 +68,73 @@ All characters who meet the magic access requirement possess Mage Sight, an inna
 
 ## Spell Categories
 
-Spells are divided into four tiers based on power level and Flow cost:
+Spells are divided into five tiers based on power level and Flow cost:
 
-### Cantrips (0 Flow)
-- Basic magical effects that require no Flow expenditure
-- Available to all casters regardless of skill
-- Limited but useful effects
-- Examples: Spark, Light, Mage Armor
+### Tier 0: Cantrips (Generate +1 Flow on Success)
+- Simple magics that build momentum rather than consuming it
+- Successfully casting a cantrip generates +1 Flow
+- Available to all casters from the start
+- Examples: Spark, Light, Mage Armor, Prestidigitation
 
-### Standard Spells (-1 Flow)
-- Common magical effects that cost 1 Flow
-- Bread and butter of magical combat and utility
-- Examples: Bolt, Shield, Charm, Blur
+### Tier 1: Basic Spells (0 Flow Cost)
+- Fundamental spells that maintain Flow equilibrium
+- The bread and butter of magical combat and utility
+- No Flow cost, making them reliable and sustainable
+- Examples: Bolt, Shield, Charm, Blur, Detect Magic
 
-### Advanced Spells (-3 Flow)
-- Powerful magic requiring 3 Flow
-- Game-changing effects with significant impact
-- Examples: Fireball, Heal, Invisibility, Dispel
+### Tier 2: Advanced Spells (-1 Flow Cost)
+- Powerful effects that require minimal momentum investment
+- Moderate Flow cost enables frequent use
+- Significant battlefield impact
+- Examples: Fireball, Heal, Fly, Invisibility, Web
 
-### Master Spells (-5 Flow)
-- Highest tier of magic requiring 5 Flow
-- Legendary effects that can turn the tide of battle
-- Examples: Lightning Storm, Teleport, Dominate, Time Stop
+### Tier 3: Expert Spells (-2 Flow Cost)
+- Major magical effects requiring significant focus
+- Higher Flow investment for dramatic results
+- Game-changing capabilities
+- Examples: Lightning Bolt, Teleport, Polymorph, Scrying, Wall of Fire
+
+### Tier 4: Master Spells (-3 Flow Cost)
+- Reality-altering magic at the peak of mortal capability
+- Requires substantial Flow but delivers legendary effects
+- Can fundamentally change encounters
+- Examples: Time Stop, Dominate, Meteor Swarm, True Resurrection, Wish
 
 ## Armor and Casting
 
-Wearing armor while casting spells imposes penalties:
+Wearing armor while casting spells affects your spellcasting ability:
 
-- **Light Armor:** -1 to Sorcery rolls
-- **Medium Armor:** -2 to Sorcery rolls
-- **Heavy Armor:** Cannot cast spells
+- **No Armor:** +1 bonus to Sorcery checks (unrestricted magical flow)
+- **Light Armor:** No penalty (compatible with spellcasting)
+- **Medium Armor:** -1 to Sorcery checks (minor restriction)
+- **Heavy Armor:** -3 to Sorcery checks (difficult but possible)
 
-Certain species traits and abilities can reduce these penalties, like the Elven Focus trait that ignores the first point of armor penalty.
+This rebalancing allows armored spellcasters (like Clerics and Paladins) to function effectively while maintaining meaningful trade-offs. Certain species traits and abilities can further reduce these penalties.
 
 ## Spells and Flow Generation
 
-Spellcasters can generate Flow through successful offensive magic, just like martial characters generate Flow through successful attacks:
+Spellcasters generate Flow through multiple methods, ensuring they participate actively in the Flow economy:
 
-- **Aggressive Stance:** When you successfully cast an offensive spell that deals damage to an enemy, you generate +1 Flow
-- **Applies to all damage-dealing spells:** Spark, Bolt, Fireball, Lightning Storm, and other damage spells
-- **Must deal damage:** Spells that only provide buffs, debuffs, or utility effects don't generate Flow through this method
-- **Works with spell costs:** You still pay the spell's Flow cost, but successful damage generates +1 Flow back
+**Cantrips Generate Flow:**
+- Successfully casting any cantrip generates +1 Flow
+- This makes cantrips excellent for building momentum
+- No Flow cost means you're always gaining when successful
 
-This rule ensures spellcasters can participate in the Flow economy as actively as martial characters, making aggressive spellcasting a viable combat strategy.
+**Aggressive Stance:**
+- When you successfully cast an offensive spell that deals damage, gain +1 Flow
+- Applies to all damage-dealing spells (Spark, Bolt, Fireball, etc.)
+- Combines with cantrip Flow generation for Spark
 
-**Example:** A wizard casts Bolt (-1 Flow) in Aggressive Stance and hits, dealing damage. They spend 1 Flow for the spell but gain 1 Flow from the successful attack, resulting in net 0 Flow cost.
+**Taking Damage:**
+- When you take damage (regardless of armor), gain +1 Flow
+- Helps spellcasters recover from being targeted
+- Universal Flow generation for all character types
+
+**Critical Success:**
+- Rolling 13+ on any casting roll generates +1 Flow
+- Rewards high-skill casting
+
+**Example Flow Economy:** A wizard casts Spark (cantrip) in Aggressive Stance and hits. They gain +1 Flow from cantrip success and +1 Flow from Aggressive successful attack, for a total of +2 Flow. Later, they cast Fireball (-1 Flow) and hit, spending 1 Flow but gaining 1 Flow back from Aggressive, for net 0 Flow cost.
 
 ## Spell Failure
 

@@ -7,7 +7,7 @@
 - **Desire:** To be good, right, accurate, and virtuous
 
 ## Mechanical Benefits
-- **Flow Benefit - Righteous Fury:** When you expose corruption, lies, or injustice through your actions, immediately gain 1 Flow (once per scene)
+- **Flow Benefit - Truth Revealed:** When you or an ally succeeds at revealing truth or exposing deception (any Investigation, Empathy, or social check that uncovers hidden information), gain +1 Flow
 - **Narrative Permission - Truth Sense:** You can always tell when someone is lying about wrongdoing or corruption. No roll needed - you simply know
 
 ## Moral Compass

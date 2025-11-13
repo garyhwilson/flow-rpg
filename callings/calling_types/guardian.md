@@ -7,7 +7,7 @@
 - **Desire:** To feel loved and needed by others
 
 ## Mechanical Benefits
-- **Flow Benefit - Protective Surge:** When an ally within sight drops below half Vitality, immediately gain 1 Flow (once per scene)
+- **Flow Benefit - Protective Presence:** When an ally within Close range takes damage, you gain +1 Flow (once per round maximum)
 - **Narrative Permission - Helper's Intuition:** You always know when someone genuinely needs help, even if they're trying to hide it. No roll needed
 
 ## Moral Compass

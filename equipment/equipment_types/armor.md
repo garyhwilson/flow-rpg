@@ -17,8 +17,9 @@ Fighting unarmored represents a deliberate choice emphasizing mobility, stealth,
 
 **Damage Reduction**: 0
 **Penalties**: None
-**Flow Generation**: Normal
-**Casting**: No penalties
+**Flow Bonus**: +1 Flow when taking damage
+**Casting**: +1 bonus to Sorcery checks (unrestricted magical flow)
+**Special**: Extra zone of movement per turn
 **Best For**: Spellcasters, Grace-focused characters, stealthy characters, unarmored defense specialists
 
 #### Tactical Implications
@@ -45,10 +46,11 @@ Unarmored characters can generate Flow through graceful combat—dodging attacks
 
 Light armor provides modest protection through flexible materials that don't significantly restrict movement, making it ideal for characters balancing defense against mobility needs.
 
-**Damage Reduction**: -1
-**Penalties**: None to physical actions
+**Damage Reduction**: 1
+**Penalties**: None
 **Flow Generation**: Normal
-**Casting**: -1 to Sorcery rolls
+**Casting**: No penalty (compatible with spellcasting)
+**Special**: +1 to initiative and movement rolls
 **Weight**: 1 significant item slot
 **Cost**: 20-40 sp
 
@@ -82,12 +84,13 @@ Light armor doesn't restrict Flow generation, allowing wearers to generate Flow 
 
 ### Medium Armor
 
-Medium armor provides substantial protection through metal and reinforced construction, trading mobility and Flow generation for significant damage reduction.
+Medium armor provides substantial protection through metal and reinforced construction, trading mobility and spellcasting ease for significant damage reduction.
 
-**Damage Reduction**: -2
+**Damage Reduction**: 2
 **Penalties**: -1 to Grace-based rolls
-**Flow Generation**: Cannot generate Flow from movement (no charging bonus)
-**Casting**: -1 to Sorcery rolls
+**Flow Generation**: Normal
+**Casting**: -1 to Sorcery checks (minor restriction)
+**Special**: Gain +1 Guard at the start of each scene
 **Weight**: 2 significant item slots
 **Cost**: 40-80 sp
 
@@ -123,13 +126,13 @@ Medium armor represents a middle ground—better protection than light armor wit
 
 ### Heavy Armor
 
-Heavy armor provides maximum damage reduction through comprehensive metal protection, sacrificing significant mobility and spellcasting ability for exceptional defense.
+Heavy armor provides maximum damage reduction through comprehensive metal protection, sacrificing mobility, spellcasting ease, and Flow generation for exceptional defense.
 
-**Damage Reduction**: -4
+**Damage Reduction**: 4
 **Penalties**: -2 to Grace-based rolls
-**Stance Restriction**: Cannot use Aggressive stance
-**Casting**: -4 to Sorcery rolls (Elven Focus reduces to -3)
-**Flow Generation**: Normal, but movement severely restricted
+**Flow Penalty**: -1 to Flow generation from all sources
+**Casting**: -3 to Sorcery checks (difficult but possible)
+**Special**: Immune to forced movement and knockback effects
 **Weight**: 3 significant item slots
 **Cost**: 100-200 sp
 

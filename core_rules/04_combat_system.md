@@ -7,37 +7,38 @@ Rather than using traditional initiative rolls, this game uses a stance system t
 ### The Three Stances
 
 **Aggressive Stance**
-- **Philosophy:** Press the attack, build momentum
-- **Turn Order:** Act first (before Balanced and Defensive)
+*"Strike first, strike hard"*
+
+- **Turn Order:** Act first
 - **Flow Generation:** +1 Flow on successful attacks
-- **Risk:** More vulnerable to counterattacks
-- **Movement:** Gain +1 Flow per zone crossed when closing to Engaged
-- **Restriction:** Cannot disengage without switching stance
+- **Damage Bonus:** +1 to all damage rolls
+- **Defense Penalty:** -1 to defense rolls
+- **Movement:** Must move toward nearest enemy if able
+- **Special Ability:** Charge - Move 2+ zones and attack for +2 damage
 
 **Balanced Stance**
-- **Philosophy:** Adaptable, ready for anything
-- **Turn Order:** Act second (after Aggressive, before Defensive)
-- **Flow Generation:** Normal (no bonuses or penalties)
-- **Risk:** Moderate defense, moderate offense
-- **Movement:** Normal (one zone per round)
-- **Special:** Can move two zones if taking no other action
+*"Adapt and overcome"*
+
+- **Turn Order:** Act second
+- **Flow Generation:** +1 Flow on any critical success
+- **Damage:** Normal
+- **Defense:** Normal
+- **Movement:** Complete freedom
+- **Special Ability:** Once per combat, switch stance as a free action
 
 **Defensive Stance**
-- **Philosophy:** Protect yourself, wait for openings
-- **Turn Order:** Act last (after Aggressive and Balanced)
-- **Flow Generation:** +1 Flow when enemies close to Engaged with you
-- **Risk:** Harder to hit, but less offensive potential
-- **Movement:** Can disengage freely as part of movement
-- **Special:** Can maintain preferred distance
+*"Patience and protection"*
+
+- **Turn Order:** Act last (choosing your moment)
+- **Flow Generation:** +1 when attacked, +1 on successful defense
+- **Damage Penalty:** -1 to damage rolls
+- **Defense Bonus:** +2 to defense rolls
+- **Movement:** Can disengage without penalty
+- **Special Ability:** Counterattack on critical defense success
 
 ### Stance Switching Rules
 
-- **Moving TO Balanced:** Free (no Flow cost)
-- **Moving FROM Balanced:** -1 Flow
-- **Direct Switch (Aggressive → Defensive):** Must go through Balanced first
-  - Example: Aggressive → Balanced (free) → Defensive (-1 Flow)
-
-This makes Balanced the tactical pivot point for stance dancing. Strategic players will leverage stance switches to maximize advantages.
+Stance switching is now **free** (no Flow cost). You can change your stance at the start of each round based on tactical needs. The Balanced stance special ability allows one additional stance change during combat as a free action.
 
 ### Turn Order Specifics
 
@@ -117,25 +118,31 @@ Characters have two health resources that work together to model both minor and 
 
 Guard represents your ability to avoid serious harm through armor, dodging, and tactical positioning.
 
-- **Formula:** 7 + Might + Milestones Achieved
-- **Function:** Ablative defense that absorbs damage first
+- **Formula:** 8 + Higher of (Might or Grace) + (Total Milestones × 2)
+- **Function:** Ablative defense that absorbs damage first (allows both tough and agile defenders)
 - **Recovery:** Fully restored between scenes
 - **In-Combat Recovery:** Can use Rally action to recover 1d6 Guard (once per scene)
 
+**Why Two Options?**
+Using the higher of Might or Grace allows both tough fighters (high Might) and agile defenders (high Grace) to be effective. This creates build diversity without penalizing character concepts.
+
 **Milestone Scaling:**
-Guard increases with each milestone you achieve, making characters more resilient as they advance. This scaling represents improved combat awareness, better positioning, and tactical experience rather than just physical toughness.
+Guard increases with each milestone you achieve, making characters significantly more resilient as they advance. The doubled scaling (×2) represents improved combat awareness, better positioning, and tactical experience.
 
 **Milestone Tracking:**
-Keep a running total of all milestones achieved (minor, moderate, and major) on your character sheet. This total is added directly to your Guard score.
+Keep a running total of all milestones achieved (minor, moderate, and major) on your character sheet. Multiply this total by 2 and add it to your Guard score.
 
 ### Vitality
 
 Vitality represents your core health and ability to withstand serious injury.
 
-- **Formula:** 10 + Will
+- **Formula:** 10 + Will + (Major Milestones × 3)
 - **Function:** Core health representing serious injury
 - **Consequences:** Damage to Vitality often causes lasting effects
 - **Critical Point:** At 0 Vitality, you fall unconscious and begin dying
+
+**Major Milestone Scaling:**
+Vitality only increases with major milestones (every 12-15 sessions), making it a slowly growing resource that keeps death meaningful while reducing lethality at high levels.
 
 ### Damage Resolution
 
@@ -147,15 +154,17 @@ Vitality represents your core health and ability to withstand serious injury.
 
 ### Death & Dying Rules
 
-- **0 Vitality:** Character falls unconscious and unstable
-- **Death Saves:** Roll 2d6 at start of turn while dying:
-  - 6-: Lose 1 Vitality (getting worse)
-  - 7-9: Stable for this round
-  - 10-12: Stabilize at 0 Vitality (unconscious but stable)
-  - 13+: Regain consciousness at 1 Vitality
-- **Death:** Occurs at -5 Vitality
-- **Stabilization:** Medicine check (target 8) or any magical healing
-- **Recovery:** Regain 1 Vitality per hour of rest after stabilization
+When reduced to 0 Vitality, you fall unconscious and begin dying.
+
+**Death Saves:** Roll 2d6 + Will at the start of each turn:
+- **6 or less:** Lose 1 Vitality (getting worse)
+- **7-8:** Stable for this round
+- **9-11:** Stabilize at 0 Vitality (unconscious but stable)
+- **12+:** Regain consciousness at 1 Vitality
+
+**Death:** Occurs at -3 Vitality (down from -5)
+**Stabilization:** Medicine check (TN 8) or any magical healing
+**Recovery:** Regain 1 Vitality per hour of rest after stabilization
 
 ---
 

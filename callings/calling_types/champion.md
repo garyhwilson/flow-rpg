@@ -7,7 +7,7 @@
 - **Desire:** To be self-reliant and in control of their destiny
 
 ## Mechanical Benefits
-- **Flow Benefit - Protective Dominance:** When protecting others (not yourself) in Aggressive Stance, successful attacks generate +1 additional Flow (once per round)
+- **Flow Benefit - Protective Wrath:** While any ally is below half Guard or Vitality, you gain +1 Flow on all successful attacks
 - **Narrative Permission - Unshakeable Will:** Intimidation attempts against you automatically fail. You project strength that cannot be undermined
 
 ## Moral Compass

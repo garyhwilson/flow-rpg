@@ -11,17 +11,20 @@ Magic in Flow RPG isn't a separate subsystem—it's fully integrated into the co
 Magic fundamentally depends on Flow:
 
 1. **Spell Costs**
-   - Cantrips: 0 Flow
-   - Standard Spells: -1 Flow
-   - Advanced Spells: -3 Flow
-   - Master Spells: -5 Flow
+   - Tier 0 (Cantrips): Generate +1 Flow on success
+   - Tier 1 (Basic Spells): 0 Flow cost
+   - Tier 2 (Advanced Spells): -1 Flow
+   - Tier 3 (Expert Spells): -2 Flow
+   - Tier 4 (Master Spells): -3 Flow
 
 2. **Flow Generation**
-   - Spellcasters generate Flow the same way as martial characters
-   - **Aggressive Stance:** Offensive spells that successfully deal damage generate +1 Flow
-   - **Defensive Stance:** Building Flow action grants +1 Flow per turn (or use Mage Sight)
-   - Critical successes on spells may grant additional Flow (GM discretion)
-   - **Key Rule:** You pay the spell cost, but gain +1 Flow back if it deals damage in Aggressive
+   - Spellcasters generate Flow through multiple methods:
+   - **Cantrips:** +1 Flow on successful casting
+   - **Aggressive Stance:** +1 Flow when offensive spells deal damage
+   - **Defensive Stance:** +1 Flow when attacked (once per round)
+   - **Taking Damage:** +1 Flow when taking any damage
+   - **Critical Success:** +1 Flow when rolling 13+ on any spell
+   - **Key Rule:** Aggressive stance combines with cantrip generation for +2 Flow per successful Spark
 
 3. **Negative Flow Considerations**
    - Most casters cannot cast at negative Flow
@@ -129,6 +132,43 @@ Changing stances is a significant decision:
    - Switch to Defensive when injured
    - Switch to Balanced for multi-purpose turns
    - Coordinate stance changes with party
+
+## Spell Scaling with Advancement
+
+Spells automatically improve as characters gain milestones, ensuring magical power keeps pace with martial advancement:
+
+### Damage Spell Scaling
+
+**At 3 Milestones:**
+- Damage spells gain +1d6
+- Example: Bolt goes from Attribute + 1d6 to Attribute + 2d6
+- Applies to all damage-dealing spells (Spark, Bolt, Fireball, etc.)
+
+**At 6 Milestones:**
+- All spells gain +1 to their save TN
+- Enemy saves become harder to succeed
+- Increases effectiveness of control/debuff spells
+
+**At 10 Milestones:**
+- Damage spells gain another +1d6
+- Example: Fireball goes from 2d6 to 3d6
+- Significantly increased combat power
+
+**At 15 Milestones:**
+- Can cast one tier higher for same cost once per scene
+- Example: Cast a Tier 2 spell for 0 Flow, or Tier 3 for -1 Flow
+- Represents mastery of magical efficiency
+
+### Spell Progression Example
+
+**Bolt (Tier 1 Basic Spell):**
+- **Start:** Attribute + 1d6 damage, 0 Flow cost
+- **3 Milestones:** Attribute + 2d6 damage, 0 Flow cost
+- **6 Milestones:** Attribute + 2d6 damage, 0 Flow cost, +1 save TN
+- **10 Milestones:** Attribute + 3d6 damage, 0 Flow cost, +1 save TN
+- **15 Milestones:** Can cast as Tier 0 (generates +1 Flow) once per scene
+
+This progression ensures spellcasters remain competitive with martial damage scaling throughout a campaign.
 
 ## Magic and Character Creation
 

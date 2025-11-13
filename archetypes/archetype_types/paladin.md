@@ -41,18 +41,18 @@ Most Paladins develop at least moderate scores in Will and either Might or Prese
 
 Paladins begin with the following skill proficiencies, reflecting their specialized training in principle-guided combat and protective service:
 
-**Professional (Tier 3):**
-- Combat (martial techniques, defensive positioning, and protective tactics)
+**Professional (+2):**
 - Command (inspirational leadership, authoritative presence, and decisive direction)
 
-**Competent (Tier 2):**
-- Intimidate (projecting moral authority, conveying protective determination)
-- Endure (physical and mental resilience, pain management, and sustained effort)
-- Choose one: Divine (oath rituals), Athletics (physical conditioning), or Empathy (moral discernment)
-
-**Basic (Tier 1):**
+**Novice (-1):**
+- Combat (martial techniques, defensive positioning, and protective tactics)
 - Medicine (treatment of battle injuries, particularly for protected individuals)
-- Two additional skills reflecting background and cultural training
+
+**Special Ability:**
+- **Divine Spellcasting:** Can cast divine spells regardless of attributes (archetype training overrides normal spellcasting requirements)
+
+**Additional Skills:**
+- Choose three additional skills at Basic/Untrained level reflecting background and cultural training
 
 Paladins are typically Untrained in deceptive practices, self-serving activities, or any skills contradicting their sworn principles unless their background specifically includes exposure to these areas before taking their oaths.
 
