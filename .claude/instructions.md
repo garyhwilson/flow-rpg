@@ -668,7 +668,136 @@ Let me verify the .gitignore is working correctly first."
 - **Monster Creation System**: Standardized approach to creating balanced threats
 - **Additional Publication Manifests**: Player's Guide, GM Guide, Grimoire, etc.
 
+## Session Workflow for Claude
+
+These guidelines ensure continuity and proper documentation across development sessions.
+
+### At Session Start
+
+**1. Review Current State**
+```bash
+# Check for uncommitted changes
+git status
+```
+
+**2. Review Instructions Document**
+- Read any new entries in Outstanding Design Issues
+- Check Active Development Priorities
+- Review most recent Session Notes
+
+**3. Create Todo List for Session**
+- Use TodoWrite to track major tasks for this session
+- Always include "Update .claude/instructions.md session notes" as final task
+- Mark tasks in_progress as you work on them
+- Complete tasks immediately after finishing
+
+### During Session
+
+**1. Task Management**
+- Use TodoWrite for complex, multi-step work
+- Keep exactly one task in_progress at a time
+- Mark tasks completed immediately after finishing
+- Don't batch completions
+
+**2. Documentation**
+- Note any new design issues discovered
+- Track important decisions made
+- Document balance concerns that arise
+- Capture new guidelines or patterns
+
+**3. Git Workflow**
+- Provide git commands after completing discrete tasks
+- Suggest commits before major changes
+- Never execute git commands unless explicitly requested
+- Follow commit message guidelines
+
+### At Session End (MANDATORY)
+
+**1. Update Session Notes**
+- **ALWAYS add new session entry to this document**
+- Include date and session identifier
+- List all major work completed
+- Document design decisions made
+- Note any new issues discovered
+- Update project status if milestones completed
+
+**2. Verify Completeness**
+- All todos marked as completed
+- No placeholder text left in files
+- Cross-references are valid
+- Files in correct locations
+
+**3. Provide Git Commands**
+```bash
+# Review all changes
+git status
+git diff
+
+# Commit with descriptive message
+git add .
+git commit -m "Descriptive message"
+
+# Push to remote
+git push
+```
+
+**4. Session Notes Template**
+```markdown
+_MM/DD/YY Session (Identifier)_:
+
+- [Major accomplishment 1]
+- [Major accomplishment 2]
+- [Design decision made]
+- [New issue discovered]
+- [Files modified/created]
+```
+
+### Common Failure Modes to Avoid
+
+**Forgetting Session Notes:**
+- If session ends without updating Session Notes, this is a FAILURE
+- Session notes are MANDATORY, not optional
+- Use TodoWrite to track this task throughout session
+
+**Incomplete Git Workflow:**
+- Always provide git commands at session end
+- Review what changed before committing
+- Use descriptive commit messages
+- Never leave uncommitted work without explicit user approval
+
+**Poor Task Tracking:**
+- Forgetting to mark todos as completed
+- Leaving todos in_progress when done
+- Not using TodoWrite for complex work
+- Batching multiple task completions
+
+### Success Criteria
+
+A successful session includes:
+- ✓ New session notes added to instructions.md
+- ✓ All todos marked completed
+- ✓ Git commands provided for uncommitted changes
+- ✓ Design issues documented
+- ✓ Files properly organized
+- ✓ Cross-references validated
+
 ## Session Notes
+
+_11/12/25 Session (Evening)_:
+
+- Fixed Shield spell Mind version mechanical benefit
+- Replaced vague "sometimes prevents damage entirely" with clear tactical advantage
+- Mind version can now shield two adjacent targets (within Near of each other) for -1 Flow total
+- Provides meaningful efficiency benefit through optimized energy distribution
+- Updated standard_spells.md with new mechanics and GM notes
+- Each Shield attribute version now has distinct, meaningful value proposition:
+  - Mind: Efficiency (cover 2 targets for 1 Flow)
+  - Awareness: Information (warning of attacks)
+  - Will: Persistence (works when unconscious)
+  - Presence: Control (demoralizes attackers)
+- Confirmed spellcasting requirements: Mind + Awareness ≥ +2 still in place
+- Added "Session Workflow for Claude" section to ensure consistent documentation practices
+- Established mandatory session notes updates and success criteria
 
 _11/12/25 Session (Continued 5)_:
 
