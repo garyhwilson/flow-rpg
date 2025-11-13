@@ -39,8 +39,8 @@ Three stances create tactical depth:
 
 ### Complete Systems ✓
 - ✅ Core Rules (modularized)
-- ✅ Callings (10 callings fully documented)
-- ✅ Archetypes (7 core archetypes)
+- ✅ Callings (9 callings fully documented)
+- ✅ Archetypes (6 core archetypes)
 - ✅ Species (4 core species)
 - ✅ Equipment (complete equipment system)
 - ✅ Spells (all 4 tiers: cantrips, standard, advanced, master)
@@ -61,7 +61,7 @@ flow-rpg/
 ├── drafts/                    # Modular source files
 │   ├── core_rules/           # Core mechanics (9 files)
 │   ├── callings/             # Character motivation system
-│   ├── archetypes/           # Character classes (7 archetypes)
+│   ├── archetypes/           # Character classes (6 archetypes)
 │   ├── species/              # Character heritage (4 species)
 │   ├── equipment/            # Gear and magical items
 │   └── spells/               # Magic system (4 spell tiers)

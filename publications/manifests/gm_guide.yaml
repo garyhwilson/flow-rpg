@@ -83,7 +83,7 @@ sections:
       - file: "callings/growth_patterns/calling_evolution.md"
         rename_to: "Using Calling Evolution in Campaigns"
 
-      - file: "callings/growth_patterns/calling_combinations.md"
+      - file: "callings/growth_patterns/party_dynamics.md"
         rename_to: "Party Dynamics and Calling Synergies"
 
   # ===== ADVANCEMENT =====
