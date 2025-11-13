@@ -87,7 +87,7 @@ Medium armor provides substantial protection through metal and reinforced constr
 **Damage Reduction**: -2
 **Penalties**: -1 to Grace-based rolls
 **Flow Generation**: Cannot generate Flow from movement (no charging bonus)
-**Casting**: -2 to Sorcery rolls
+**Casting**: -1 to Sorcery rolls
 **Weight**: 2 significant item slots
 **Cost**: 40-80 sp
 
@@ -103,9 +103,9 @@ The inability to generate Flow from movement is a significant drawback, eliminat
 
 #### Spellcasting in Medium Armor
 
-The -2 Sorcery penalty makes arcane casting difficult but not impossible. Wizards generally avoid medium armor, but characters with moderate Sorcery can cast effectively with focus and higher spell levels.
+The -1 Sorcery penalty is manageable for most casters. Wizards with moderate Sorcery (+2 or higher) can cast reliably in medium armor, and elven casters ignore this penalty entirely due to Elven Focus.
 
-Clerics and paladins use Will for divine magic, making the Sorcery penalty irrelevant for their primary casting. This makes medium armor the default choice for divine spellcasters expecting combat.
+Clerics and paladins can cast comfortably in medium armor with only a slight penalty, making it a popular choice for divine spellcasters expecting combat.
 
 #### Balanced Protection
 
@@ -128,7 +128,7 @@ Heavy armor provides maximum damage reduction through comprehensive metal protec
 **Damage Reduction**: -4
 **Penalties**: -2 to Grace-based rolls
 **Stance Restriction**: Cannot use Aggressive stance
-**Casting**: Cannot cast spells
+**Casting**: -4 to Sorcery rolls (Elven Focus reduces to -3)
 **Flow Generation**: Normal, but movement severely restricted
 **Weight**: 3 significant item slots
 **Cost**: 100-200 sp
@@ -150,7 +150,7 @@ Heavy armor wearers fill specific tactical roles:
 - **Area Control**: Threatening zones enemies must respect
 - **Durable Combatants**: Sustaining combat effectiveness despite heavy damage
 
-The complete spellcasting restriction makes heavy armor incompatible with any casting-focused builds, though fighters with minimal spellcasting don't suffer from this limitation.
+The severe -4 spellcasting penalty makes heavy armor challenging for casters, though determined casters with high Sorcery bonuses can still cast effectively (especially elven casters who reduce the penalty to -3).
 
 #### Flow and Heavy Armor
 

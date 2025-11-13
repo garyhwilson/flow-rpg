@@ -102,6 +102,49 @@ Skills represent your character's training and expertise in various areas. Each 
 - **Command:** Leadership, intimidation, and issuing orders
 - **Empathy:** Understanding others' emotions and motivations
 
+### Physical Skill Decision Tree
+
+When determining which physical skill to use, ask these questions:
+
+**Is this combat-related (attacking, defending, tactical positioning)?**
+- Yes → Use **Combat**
+- No → Continue
+
+**Does it involve delicate manipulation or precise finger work?**
+- Yes (lockpicking, disarming traps, sleight of hand, pickpocketing) → Use **Finesse**
+- No → Continue
+
+**Does it involve avoiding detection or moving unseen?**
+- Yes (hiding, sneaking, tailing someone) → Use **Stealth**
+- No → Continue
+
+**Does it involve outdoor survival or wilderness skills?**
+- Yes (tracking, foraging, navigation, animal handling) → Use **Survival**
+- No → Continue
+
+**Does it involve physical exertion or strength?**
+- Yes (climbing, jumping, swimming, running, breaking down doors) → Use **Athletics**
+
+**Common Examples:**
+- **Climbing a wall:** Athletics (physical exertion)
+- **Climbing a wall silently:** Athletics + Stealth (GM might require two rolls or grant advantage)
+- **Picking a lock:** Finesse (delicate manipulation)
+- **Breaking down a door:** Athletics (strength/force)
+- **Dodging an attack in combat:** Combat (tactical defense)
+- **Jumping over a pit:** Athletics (physical feat)
+- **Sneaking past guards:** Stealth (avoiding detection)
+- **Tracking a creature:** Survival (wilderness skill)
+- **Disarming a trap:** Finesse (delicate work)
+
+**Attribute Choice Matters:**
+Remember, your approach determines which attribute pairs with the skill:
+- **Might + Athletics:** Forcing a door, carrying heavy loads
+- **Grace + Athletics:** Acrobatic maneuvers, parkour
+- **Might + Combat:** Heavy weapon strikes, shield bashing
+- **Grace + Combat:** Finesse weapon attacks, dodging
+- **Grace + Finesse:** Standard lockpicking, sleight of hand
+- **Mind + Finesse:** Complex locks requiring understanding mechanisms
+
 ### Scene Resolution
 
 Most gameplay occurs in scenes that follow this structure:

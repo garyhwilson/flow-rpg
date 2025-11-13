@@ -69,25 +69,58 @@ This document tracks ongoing design decisions, outstanding issues, and developme
 
 ### Balance Concerns
 
-- **Guard Scaling**: At higher milestones, Guard may scale too quickly, making characters difficult to threaten
-
-  - _Potential Solution_: Cap Guard scaling or introduce scaled threats
-
-- **Halfling Weapon Damage**: The penalty may make Halflings non-viable in combat-focused roles
-
-  - _Potential Solution_: Provide compensatory advantages or adjust penalty
-
-- **Scholar Calling Dice Benefit**: The retroactive dice benefit may be too powerful
-
-  - _Potential Solution_: Limit frequency or scope of benefit
+- **Guard Scaling**: ~~At higher milestones, Guard may scale too quickly~~ PARTIALLY ADDRESSED
+  - Changed base formula from 5 + Might to 7 + Might
+  - Narrows starting range from 7 points (3-10) to 5 points (5-10)
+  - Still scales with milestones - may need testing at higher levels
 
 - **Will Casting as Emergency Button**: Ability to cast at negative Flow may undermine Flow management
   - _Potential Solution_: Add consequences or limitations to Will casting at negative Flow
+  - _Status_: Needs playtesting with new Flow generation rules
+
+- **Species Trait Consistency**: Halfling traits differ between character_creation.md and species/halfling.md
+  - Character creation has: Lucky, Brave Heart, Small but Mighty
+  - Species file has: Communal Support, Inconspicuous, Homefield Advantage, Lucky
+  - Attribute bonuses also differ (+1 Will/Presence choice vs +2 Presence, +1 Grace, -2 Might)
+  - _Action Needed_: Standardize halfling traits across files
+
+- **Calling Ability Power Levels**: Some calling abilities may be stronger than others
+  - Champion's +1 Flow per round in Aggressive (when protecting) is very strong
+  - Sentinel's +1 Guard per Flow gain could stack rapidly
+  - Scholar's banking 2 Flow between scenes is unique but situational
+  - _Status_: Needs comparative playtesting
+
+### Missing Subsystems
+
+Critical gameplay systems not yet documented:
+
+- **Multiclassing Rules**: No system for characters training in multiple archetypes
+  - _Status_: Not started
+  - _Priority_: High (common player request)
+
+- **Crafting System**: Craft skill exists but no crafting rules
+  - _Status_: Not started
+  - _Priority_: Medium
+
+- **Social Conflict Resolution**: Social skills exist but no social conflict mechanics
+  - _Status_: Not started
+  - _Priority_: Medium (three social skills need framework)
+
+- **Exploration Procedures**: Survival/Investigate skills need exploration framework
+  - _Status_: Not started
+  - _Priority_: Low (can use general scene resolution)
+
+- **Rest and Recovery Mechanics**: How do characters recover Flow, Guard, and Vitality?
+  - _Status_: Partially documented, needs expansion
+  - _Priority_: High (fundamental to gameplay)
+
+- **Wealth and Economy**: No pricing beyond weapons/armor, no wealth tracking system
+  - _Status_: Not started
+  - _Priority_: Medium (GMs need guidelines)
 
 ### System Integration Questions
 
 - **Magic Access Requirement**: How does the Mind + Awareness ≥ +2 requirement affect archetypes like Clerics?
-
   - _Investigation Needed_: Review character creation examples to ensure viable paths
 
 - **Stance/Calling Interaction**: Some Calling benefits may work too well with certain stances
@@ -96,7 +129,6 @@ This document tracks ongoing design decisions, outstanding issues, and developme
 ### Documentation Needs
 
 - **Quick Start Rules**: Need condensed version for new players
-
   - _Status_: Not started
 
 - **GM Screen Information**: Identify key references for quick lookup
@@ -104,6 +136,13 @@ This document tracks ongoing design decisions, outstanding issues, and developme
 
 ## Recently Addressed Items
 
+- ✓ **Guard Calculation Rebalanced** (11/12/25): Changed from 5 + Might to 7 + Might, narrowing viability gap
+- ✓ **Halfling Small but Mighty Fixed** (11/12/25): Removed punitive -1 damage penalty, added stealth benefit
+- ✓ **Spell Flow Generation Added** (11/12/25): Offensive spells now generate +1 Flow in Aggressive stance
+- ✓ **Armor Penalties Reduced** (11/12/25): Medium armor -1 Sorcery (was -2), Heavy armor -4 (was prohibition)
+- ✓ **Calling Inconsistencies Resolved** (11/12/25): Standardized Champion, Scholar, Sentinel abilities
+- ✓ **Skill Decision Tree Added** (11/12/25): Clarified when to use Combat/Athletics/Finesse
+- ✓ **Shield Spell Mind Version Fixed** (11/12/25): Now protects two adjacent targets efficiently
 - ✓ Completed Monster & NPC system (all threat levels, 21 stat blocks, NPC templates)
 - ✓ Added Writing Guidelines to prevent video game terminology
 - ✓ Established complete publication system for book assembly
@@ -782,6 +821,40 @@ A successful session includes:
 - ✓ Cross-references validated
 
 ## Session Notes
+
+_11/12/25 Session (Balance Fixes)_:
+
+- **Implemented comprehensive balance fixes based on playtest feedback:**
+- **Guard Calculation Rebalanced**: Changed formula from 5 + Might to 7 + Might
+  - Narrows starting range from 7 points (3-10) to 5 points (5-10)
+  - Makes low-Might characters (rogues, wizards) more viable
+  - Updated: core_rules/03_character_creation.md, core_rules/04_combat_system.md
+- **Halfling Species Fixed**: Removed punitive -1 melee damage penalty
+  - New Small but Mighty: Movement + stealth bonus instead
+  - Updated: core_rules/03_character_creation.md
+- **Spell Flow Generation Added**: Offensive spells generate +1 Flow in Aggressive stance
+  - Fixes spellcaster Flow economy issue
+  - Updated: spells/00_introduction.md, spells/02_system_integration.md
+- **Armor System Rebalanced**:
+  - Medium armor: Reduced Sorcery penalty from -2 to -1
+  - Heavy armor: Changed from "cannot cast" to -4 Sorcery penalty
+  - Enables armored caster concepts (especially elves)
+  - Updated: equipment/equipment_types/armor.md
+- **Calling Inconsistencies Resolved**: Standardized Champion, Scholar, Sentinel
+  - Champion: Protecting others in Aggressive generates +1 Flow/round
+  - Scholar: Banks 2 Flow between scenes from knowledge actions
+  - Sentinel: Gains +1 Guard when gaining Flow from any source
+  - Updated: core_rules/03_character_creation.md
+- **Skill System Clarified**: Added Physical Skill Decision Tree
+  - Clear examples for when to use Combat/Athletics/Finesse/Stealth/Survival
+  - Includes attribute pairing guidance
+  - Updated: core_rules/02_basic_mechanics.md
+- **Outstanding Design Issues Updated**:
+  - Documented missing subsystems (multiclassing, crafting, social conflict, etc.)
+  - Added new balance concerns discovered (species trait consistency, calling power levels)
+  - Updated Recently Addressed Items with all fixes
+  - Updated: .claude/instructions.md
+- **Files Modified**: 7 core system files updated with balance improvements
 
 _11/12/25 Session (Evening)_:
 

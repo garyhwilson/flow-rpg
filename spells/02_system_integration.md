@@ -18,9 +18,10 @@ Magic fundamentally depends on Flow:
 
 2. **Flow Generation**
    - Spellcasters generate Flow the same way as martial characters
-   - Successful offensive actions in Aggressive Stance generate +1 Flow
-   - Defensive stance allows building +1 Flow per turn
-   - Some spells might grant Flow on critical success (GM discretion)
+   - **Aggressive Stance:** Offensive spells that successfully deal damage generate +1 Flow
+   - **Defensive Stance:** Building Flow action grants +1 Flow per turn (or use Mage Sight)
+   - Critical successes on spells may grant additional Flow (GM discretion)
+   - **Key Rule:** You pay the spell cost, but gain +1 Flow back if it deals damage in Aggressive
 
 3. **Negative Flow Considerations**
    - Most casters cannot cast at negative Flow

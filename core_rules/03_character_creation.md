@@ -81,7 +81,7 @@ Your species provides an attribute bonus and unique traits that integrate with t
 **Species Traits:**
 - **Lucky:** Once per scene, when your Flow would go negative, it stops at 0 instead
 - **Brave Heart:** When an ally goes to negative Flow, you immediately gain +1 Flow
-- **Small but Mighty:** You can move through enemy zones without provoking, but your melee weapon damage is -1
+- **Small but Mighty:** You can move through enemy zones without provoking. When you successfully Hide, enemies get -2 to detect you
 
 **Common Callings:** Enthusiast, Guardian, Mediator
 **Natural Archetypes:** Rogue, Bard, Cleric
@@ -244,7 +244,7 @@ Your Calling represents your inner drive and provides Flow benefits and narrativ
 **Fear:** Being incompetent, invaded, or overwhelmed
 **Desire:** To be capable and understanding
 
-**Flow Benefit - Prepared Mind:** Once per scene, after seeing the result of any roll (yours or another's), you may declare you predicted this outcome. The roll gains +1d6 retroactively. If this changes a failure to success, gain 1 Flow.
+**Flow Benefit - Prepared Mind:** You can "bank" Flow gained from knowledge-based actions, saving up to 2 Flow between scenes (normally resets to 0).
 
 **Narrative Permission - Contingency Planning:** Once per scene, declare you prepared for this exact situation and produce a relevant tool, fact, or minor preparation.
 
@@ -255,7 +255,7 @@ Your Calling represents your inner drive and provides Flow benefits and narrativ
 **Fear:** Being without support, guidance, or security
 **Desire:** To have security and support
 
-**Flow Benefit - Defensive Vigilance:** When you take the Defensive stance, you may protect one Close ally with your Guard value (they use your Guard instead of theirs). Once per scene, when doing so prevents damage, gain 1 Flow.
+**Flow Benefit - Defensive Vigilance:** When you gain Flow from any source, also gain +1 Guard until the start of your next turn.
 
 **Narrative Permission - Danger Sense:** You cannot be surprised or ambushed. You always act in the first round of combat, even if caught off-guard.
 
@@ -277,7 +277,7 @@ Your Calling represents your inner drive and provides Flow benefits and narrativ
 **Fear:** Being controlled, vulnerable, or weak
 **Desire:** To be self-reliant and in control of their destiny
 
-**Flow Benefit - Protective Dominance:** When you deal damage to an enemy that just harmed an ally, that damage cannot be reduced by Guard. Once per scene when you do this, gain 1 Flow.
+**Flow Benefit - Protective Dominance:** When protecting others (not yourself) in Aggressive Stance, successful attacks generate +1 additional Flow (once per round).
 
 **Narrative Permission - Unshakeable Will:** Intimidation attempts against you automatically fail. You project strength that cannot be undermined.
 
@@ -297,7 +297,7 @@ Your Calling represents your inner drive and provides Flow benefits and narrativ
 ## Derived Values
 
 ### Health
-- **Guard:** 5 + Might + Milestones Achieved
+- **Guard:** 7 + Might + Milestones Achieved
   - Ablative defense that absorbs damage first
   - Recoverable between scenes
   - Can be restored in combat with Rally action

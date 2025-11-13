@@ -96,6 +96,19 @@ Wearing armor while casting spells imposes penalties:
 
 Certain species traits and abilities can reduce these penalties, like the Elven Focus trait that ignores the first point of armor penalty.
 
+## Spells and Flow Generation
+
+Spellcasters can generate Flow through successful offensive magic, just like martial characters generate Flow through successful attacks:
+
+- **Aggressive Stance:** When you successfully cast an offensive spell that deals damage to an enemy, you generate +1 Flow
+- **Applies to all damage-dealing spells:** Spark, Bolt, Fireball, Lightning Storm, and other damage spells
+- **Must deal damage:** Spells that only provide buffs, debuffs, or utility effects don't generate Flow through this method
+- **Works with spell costs:** You still pay the spell's Flow cost, but successful damage generates +1 Flow back
+
+This rule ensures spellcasters can participate in the Flow economy as actively as martial characters, making aggressive spellcasting a viable combat strategy.
+
+**Example:** A wizard casts Bolt (-1 Flow) in Aggressive Stance and hits, dealing damage. They spend 1 Flow for the spell but gain 1 Flow from the successful attack, resulting in net 0 Flow cost.
+
 ## Spell Failure
 
 When you roll 6 or less on a casting roll:

@@ -117,7 +117,7 @@ Characters have two health resources that work together to model both minor and 
 
 Guard represents your ability to avoid serious harm through armor, dodging, and tactical positioning.
 
-- **Formula:** 5 + Might + Milestones Achieved
+- **Formula:** 7 + Might + Milestones Achieved
 - **Function:** Ablative defense that absorbs damage first
 - **Recovery:** Fully restored between scenes
 - **In-Combat Recovery:** Can use Rally action to recover 1d6 Guard (once per scene)
