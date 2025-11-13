@@ -51,3 +51,6 @@ env/
 # ===== Output Files =====
 output/
 *.log
+
+# ===== Obsidian Config =====
+.obsidian/
