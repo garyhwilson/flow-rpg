@@ -84,9 +84,9 @@ Shield creates a magical barrier around the caster or an ally, providing sustain
 ### Mind + Sorcery: Calculated Defense
 - **Effect:** +Mind to Guard for scene
 - **Range:** Near
-- **Special:** Calculate optimal protection angles (sometimes prevents damage entirely)
-- **Narrative:** Geometric force fields, mathematical deflection, perfect positioning
-- **Tactical Use:** Protecting allies with predictable bonus
+- **Special:** Can shield two adjacent targets (within Near of each other) for the same -1 Flow cost through optimized energy distribution
+- **Narrative:** Geometric force fields, mathematical deflection patterns, shared protective matrix
+- **Tactical Use:** Efficiently protect multiple allies simultaneously
 
 ### Awareness + Sorcery: Precognitive Ward
 - **Effect:** +Awareness to Guard for scene
@@ -119,7 +119,8 @@ Shield creates a magical barrier around the caster or an ally, providing sustain
 - Shield is incredibly efficient protection
 - +3 Guard for scene at -1 Flow is excellent value
 - Will version continuing after unconsciousness is powerful
-- Can cast on multiple allies (costs 1 Flow each)
+- Mind version can protect two adjacent allies for -1 Flow total (exceptional value)
+- Other versions can cast on multiple allies (costs 1 Flow each)
 - Combine with Mage Armor for layered defense
 
 ---
