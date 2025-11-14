@@ -39,15 +39,15 @@ magic_system:
 
 spell_tiers:
   tier_0_cantrips:
-    flow_cost: "Generates +1 on success"
-    description: "Simple magics that build momentum"
+    flow_cost: 0
+    description: "Simple magics requiring no Flow investment"
     power_level: "Minor effects"
     examples: ["spark", "mage_armor", "light", "prestidigitation"]
-    
+
     strategic_use:
-      - "Flow generation in Aggressive stance (+2 total)"
-      - "Maintain magical pressure"
-      - "Setup for bigger spells"
+      - "Free magical pressure without Flow cost"
+      - "Maintain offense when Flow is neutral"
+      - "Fill gaps between bigger spells"
   
   tier_1_basic:
     flow_cost: 0
@@ -94,6 +94,52 @@ spell_tiers:
       - "Often scene-defining"
 
 # ============================================
+# SPELL POINTS (OPTIONAL RULE)
+# ============================================
+
+spell_points:
+  description: "Alternative resource management for groups that prefer limited casting"
+  optional: true
+  philosophy: "Trade Flow integration for traditional resource tracking"
+
+  pool_calculation:
+    formula: "3 + Will modifier"
+    minimum: 3
+    maximum: 7
+    recovery: "Full restoration between scenes"
+
+    examples:
+      low_will:
+        will: 0
+        points: 3
+        note: "Can cast 3 Tier-1 spells or 1 Tier-3"
+
+      moderate_will:
+        will: 2
+        points: 5
+        note: "Can cast 5 Tier-1 or 2 Tier-2 + 1 Tier-1"
+
+      high_will:
+        will: 4
+        points: 7
+        note: "Can cast 7 Tier-1 or 2 Tier-3 + 1 Tier-1"
+
+  spell_costs:
+    tier_0_cantrips: 0
+    tier_1_basic: 1
+    tier_2_advanced: 2
+    tier_3_expert: 3
+    tier_4_master: 4
+
+  interaction_with_flow:
+    description: "Spell points replace Flow costs for spells"
+    flow_generation: "Still generate Flow from critical successes and stances"
+    flow_expenditure: "Can still spend Flow for techniques and narrative advantages"
+    note: "This divorces spell resources from Flow while maintaining Flow mechanics"
+
+  design_note: "For groups that prefer vancian-style resource management. Less elegant but more familiar to traditional players."
+
+# ============================================
 # ATTRIBUTE CASTING APPROACHES
 # ============================================
 
@@ -135,12 +181,12 @@ casting_attributes:
     strengths:
       - "Reliability under pressure"
       - "Persistence and duration"
-      - "Casting at negative Flow"
+      - "Unshakeable concentration"
       - "Unbreakable effects"
-    
+
     mechanical_benefits:
-      universal: "Can cast at negative Flow"
-      concentration: "Maintains if unconscious"
+      universal: "Advantage on concentration checks"
+      concentration: "Maintains even if stunned (not unconscious)"
       duration: "Double duration"
       saves: "Targets get -1 to resist"
     
@@ -176,7 +222,7 @@ spells:
       name: "Spark"
       description: "Close combat magical attack"
       base_effect: "1d6 damage, touch range"
-      flow: "+1 on success"
+      flow: "0"
       
       attribute_variations:
         mind: 
@@ -187,7 +233,7 @@ spells:
           special: "Automatically hits"
         will:
           damage: "1d6"
-          special: "Works at negative Flow"
+          special: "Unstoppable once cast"
         presence:
           damage: "1d6"
           special: "Frightens target for 1 round"
@@ -196,7 +242,7 @@ spells:
       name: "Mage Armor"
       description: "Protective barrier, self only"
       base_effect: "+2 Guard until hit"
-      flow: "+1 on success"
+      flow: "0"
       
       attribute_variations:
         mind:
@@ -216,7 +262,7 @@ spells:
       name: "Light"
       description: "Create illumination"
       base_effect: "Bright light for scene"
-      flow: "+1 on success"
+      flow: "0"
       
       attribute_variations:
         mind:
@@ -236,7 +282,7 @@ spells:
       name: "Prestidigitation"
       description: "Minor magical effects"
       base_effect: "Small convenience magic"
-      flow: "+1 on success"
+      flow: "0"
       
       attribute_variations:
         mind:
@@ -257,27 +303,29 @@ spells:
   # ==========================================
   
   tier_1:
+    design_note: "Damage increased to 2d6 base for caster viability"
+
     bolt:
       name: "Bolt"
       description: "Ranged magical attack at Far range"
-      base_effect: "Attribute + 1d6 damage"
+      base_effect: "Attribute + 2d6 damage"
       flow: "0"
-      
+
       attribute_variations:
         mind:
-          damage: "mind + 1d6"
+          damage: "mind + 2d6"
           special: "Ignores cover completely"
           narrative: "Impossible angles, ricochets"
         awareness:
-          damage: "awareness + 1d6 + 1"
+          damage: "awareness + 2d6 + 1"
           special: "Seeks weak points"
           narrative: "Unerring accuracy"
         will:
-          damage: "will + 1d6"
-          special: "Can cast at negative Flow"
+          damage: "will + 2d6"
+          special: "Penetrates magical defenses"
           narrative: "Unstoppable force"
         presence:
-          damage: "presence + 1d6"
+          damage: "presence + 2d6"
           special: "Causes fear in nearby enemies"
           narrative: "Spectacular impact"
     
@@ -367,24 +415,26 @@ spells:
   # ==========================================
   
   tier_2:
+    design_note: "Damage increased to 3d6 base for meaningful Flow investment"
+
     fireball:
       name: "Fireball"
       description: "Explosive area damage"
-      base_effect: "2d6 to all in zone"
+      base_effect: "3d6 to all in zone"
       flow: "-1"
-      
+
       attribute_variations:
         mind:
-          damage: "2d6"
+          damage: "3d6"
           special: "Exclude allies, precise placement"
         awareness:
-          damage: "2d6+2"
+          damage: "3d6+2"
           special: "Seeks most enemies"
         will:
-          damage: "2d6"
+          damage: "3d6"
           special: "Burns for 1d6/round"
         presence:
-          damage: "2d6"
+          damage: "3d6"
           special: "Causes panic, enemies flee"
     
     heal:
@@ -722,6 +772,31 @@ metamagic:
       requirement: "Presence-based casting"
 
 # ============================================
+# COUNTERSPELL
+# ============================================
+
+counterspell:
+  description: "React to interrupt enemy spells"
+
+  mechanics:
+    trigger: "Enemy casts spell you can see"
+    action: "Reaction"
+    check: "Sorcery vs Sorcery (TN 8 + spell tier)"
+    success: "Spell is negated"
+    failure: "Spell takes effect normally"
+
+  counterspell_consolation:
+    rule: "When your spell is counterspelled, gain +2 Flow"
+    reasoning: "Your magical energy rebounds, empowering your next attempt"
+    effect: "Being countered becomes a setback, not a total loss"
+
+    example:
+      situation: "Cast Fireball (Tier 2, -1 Flow), enemy counterspells it"
+      result: "Fireball negated, but you gain +2 Flow"
+      net: "+1 Flow total (lost -1 from casting, gained +2 from being countered)"
+      benefit: "Can immediately cast another Tier 2 spell at +1 Flow"
+
+# ============================================
 # MAGIC ITEMS
 # ============================================
 
@@ -775,13 +850,13 @@ spell_combinations:
   examples:
     defensive_combo:
       sequence: ["mage_armor", "shield", "blur"]
-      total_cost: "+1, 0, 0 = +1 Flow gained"
-      effect: "Layered defenses"
-    
+      total_cost: "0, 0, 0 = 0 Flow cost"
+      effect: "Layered defenses without Flow investment"
+
     offensive_combo:
       sequence: ["spark", "spark", "fireball"]
-      total_cost: "+1, +1, -1 = +1 Flow net"
-      effect: "Build up to big spell"
+      total_cost: "0, 0, -1 = -1 Flow net"
+      effect: "Soften targets before big spell"
     
     utility_combo:
       sequence: ["detect_magic", "dispel", "shield"]

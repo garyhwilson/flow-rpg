@@ -1,12 +1,14 @@
 # Flow RPG - Living Design Document
 
-_Last Updated: November 12, 2025_
+_Last Updated: November 14, 2025_
 
 This document tracks ongoing design decisions, outstanding issues, and development priorities for the Flow RPG system. It serves as a continuity reference between development sessions and should be regularly updated and pruned as items are addressed.
 
+**Technical Reference**: For system architecture, mathematical constraints, and recently fixed issues, see [CLAUDE.md](../CLAUDE.md).
+
 ## Current Project Status
 
-- **Core Rules**: Split into modular files for improved development
+- **Core Rules**: ✓ Split into modular files for improved development
 - **Callings**: ✓ Fully modularized into structured directory
 - **Archetypes**: ✓ Fully modularized (all 7 archetypes complete)
 - **Species**: ✓ Fully modularized (all 4 species complete)
@@ -14,29 +16,31 @@ This document tracks ongoing design decisions, outstanding issues, and developme
 - **Spells**: ✓ Fully modularized (all 4 spell tiers complete)
 - **Monsters & NPCs**: ✓ Fully modularized (all threat levels + NPCs complete)
 - **Publication System**: ✓ Infrastructure complete for assembling books
+- **YAML Conversion**: ✓ Complete (all game systems in structured YAML)
+- **Playtesting Phase 1-3**: ✓ Complete (critical fixes, balance tuning, accessibility improvements)
 
 ## Active Development Priorities
 
-1. **✓ Complete Archetype Modularization**
+**All initial development priorities completed!** The system is now in structured YAML format with all core systems implemented and playtested fixes applied (Phase 1-3).
 
+### Completed Initiatives
+
+1. **✓ Complete Archetype Modularization**
    - ✓ Create all archetype files following established template
    - ✓ Ensure consistent structure across all archetype documentation
 
 2. **✓ Complete Species Modularization**
-
    - ✓ Apply same modular structure to species documentation
    - ✓ Maintain consistent cross-referencing with archetypes and callings
    - ✓ Create root files (introduction, GM guidelines, etc.)
    - ✓ Develop individual species files (human, elf, dwarf, halfling)
 
 3. **✓ Complete Equipment Modularization**
-
    - ✓ Develop structured documentation for equipment systems
    - ✓ Create modular equipment structure (weapons, armor, adventuring gear, magical items)
    - ✓ Add quick reference guide
 
 4. **✓ Complete Spell System Modularization**
-
    - ✓ Create modular structure for spell documentation
    - ✓ Organize spells by tier (cantrips, standard, advanced, master)
    - ✓ Develop spell root files (introduction, GM guidelines, system integration)
@@ -44,7 +48,6 @@ This document tracks ongoing design decisions, outstanding issues, and developme
    - ✓ Add spell quick reference guide
 
 5. **✓ Establish Publication System**
-
    - ✓ Create publication directory structure
    - ✓ Develop Python assembly script (assemble_book.py)
    - ✓ Create YAML manifest system for book definitions
@@ -54,41 +57,52 @@ This document tracks ongoing design decisions, outstanding issues, and developme
    - ✓ Document publication workflow
 
 6. **✓ Complete Monster & NPC System**
-
    - ✓ Create monsters directory structure
-   - ✓ Develop threat level system (1-4: Minions, Standard, Elite, Legendary)
+   - ✓ Develop threat level system (1-4: Henchmen, Standard, Champions, Legendary)
    - ✓ Create monster root files (introduction, GM guidelines, system integration, quick reference)
-   - ✓ Create threat level 1 monsters - 6 minion stat blocks
+   - ✓ Create threat level 1 monsters - 6 henchman stat blocks
    - ✓ Create threat level 2 monsters - 4 standard enemy stat blocks
-   - ✓ Create threat level 3 monsters - 6 elite enemy stat blocks
+   - ✓ Create threat level 3 monsters - 6 champion enemy stat blocks
    - ✓ Create threat level 4 monsters - 5 legendary adversary stat blocks
    - ✓ Create NPC templates and guidelines
    - ✓ Integrate with Flow economy and PC systems
+
+7. **✓ YAML System Conversion**
+   - ✓ Convert all Markdown to structured YAML
+   - ✓ Establish YAML schema for all game components
+   - ✓ Create Python documentation generator
+   - ✓ Maintain dual YAML/Markdown workflow
+
+8. **✓ Playtesting Fixes - Phase 1 (Critical Fixes)**
+   - ✓ Champion action economy (2 attacks max to prevent TPK)
+   - ✓ Deepen Expertise timing (requires 3 consecutive minor milestones)
+   - ✓ Documentation corrections (Guard formula, skill tier modifiers)
+
+9. **✓ Playtesting Fixes - Phase 2 (Balance Tuning)**
+   - ✓ Flow generation limit (once per round)
+   - ✓ High Flow bonus removal (flat +6 maximum)
+   - ✓ TN scaling guidance (TN 10-12 for late game challenges)
+   - ✓ GM Flow examples and guidance
+
+10. **✓ Playtesting Fixes - Phase 3 (Accessibility & Polish)**
+    - ✓ Simplified rules for new players (examples.yaml)
+    - ✓ Default build paths to reduce option paralysis (advancement.yaml)
+    - ✓ Optional GM Flow pool guidance (gm_tools.yaml)
 
 ## Outstanding Design Issues
 
 ### Balance Concerns
 
-- **Guard Scaling**: ~~At higher milestones, Guard may scale too quickly~~ PARTIALLY ADDRESSED
-  - Changed base formula from 5 + Might to 7 + Might
-  - Narrows starting range from 7 points (3-10) to 5 points (5-10)
-  - Still scales with milestones - may need testing at higher levels
-
 - **Will Casting as Emergency Button**: Ability to cast at negative Flow may undermine Flow management
   - _Potential Solution_: Add consequences or limitations to Will casting at negative Flow
-  - _Status_: Needs playtesting with new Flow generation rules
-
-- **Species Trait Consistency**: Halfling traits differ between character_creation.md and species/halfling.md
-  - Character creation has: Lucky, Brave Heart, Small but Mighty
-  - Species file has: Communal Support, Inconspicuous, Homefield Advantage, Lucky
-  - Attribute bonuses also differ (+1 Will/Presence choice vs +2 Presence, +1 Grace, -2 Might)
-  - _Action Needed_: Standardize halfling traits across files
+  - _Status_: Needs playtesting with new Flow generation rules (once per round limit now in place)
 
 - **Calling Ability Power Levels**: Some calling abilities may be stronger than others
   - Champion's +1 Flow per round in Aggressive (when protecting) is very strong
   - Sentinel's +1 Guard per Flow gain could stack rapidly
   - Scholar's banking 2 Flow between scenes is unique but situational
   - _Status_: Needs comparative playtesting
+  - _Note_: Less urgent now with bounded accuracy +5 cap and Flow generation limit
 
 ### Missing Subsystems
 
@@ -136,6 +150,27 @@ Critical gameplay systems not yet documented:
 
 ## Recently Addressed Items
 
+### Playtesting Phase 1-3 Fixes (11/14/25)
+
+**Phase 1 - Critical Fixes:**
+- ✓ **Champion Action Economy** (advancement.yaml:752-763): Limited to 2 attacks per round to prevent TPK
+- ✓ **Deepen Expertise Timing** (advancement.yaml:609-616): Now requires 3 consecutive minor milestones (was ambiguous)
+- ✓ **Guard Formula Correction** (core_rules.yaml:412-420): Documented as `12 + max(Might, Grace, Will)` (not `8 + attribute + milestones`)
+- ✓ **Skill Tier Modifiers** (core_rules.yaml:372-381): Clarified Professional = +1 (not +2), Expert = +2
+
+**Phase 2 - Balance Tuning:**
+- ✓ **Flow Generation Limit** (core_rules.yaml:458-465): Maximum once per round to prevent runaway economy
+- ✓ **High Flow Bonus Removal** (core_rules.yaml:455-456): Removed +2 bonus at 6+ Flow, now flat +6 maximum
+- ✓ **TN Scaling Guidance** (gm_tools.yaml:64-110): Added guidance for TN 10-12 challenges at late game (+5 cap sweet spot)
+- ✓ **GM Flow Examples** (gm_tools.yaml:34-63): Added complete worked examples for spending GM Flow pool
+
+**Phase 3 - Accessibility & Polish:**
+- ✓ **Simplified Rules** (examples.yaml:24-93): Created quick-start variant for first 1-2 sessions
+- ✓ **Default Build Paths** (advancement.yaml:862-982): Added 6 pre-planned advancement paths to reduce option paralysis
+- ✓ **Optional GM Flow** (gm_tools.yaml:162-200): Made GM Flow pool explicitly optional with guidance for when to skip it
+
+### Earlier Addressed Items (Pre-YAML)
+
 - ✓ **Guard Calculation Rebalanced** (11/12/25): Changed from 5 + Might to 7 + Might, narrowing viability gap
 - ✓ **Halfling Small but Mighty Fixed** (11/12/25): Removed punitive -1 damage penalty, added stealth benefit
 - ✓ **Spell Flow Generation Added** (11/12/25): Offensive spells now generate +1 Flow in Aggressive stance
@@ -181,138 +216,178 @@ These core principles should guide all design decisions:
    - Tactical decisions in combat
    - Narrative permissions granting special capabilities
 
-## Writing Guidelines
+5. **Bounded Accuracy (+5 Cap)**
+   - Total modifier cap of +5 (attribute +3, skill +2, edges +1)
+   - Maintains meaningful dice rolls throughout progression
+   - Sweet spot: At +5 vs TN 8 = 97.2% (too easy), vs TN 10 = 72.2% (meaningful), vs TN 12 = 41.7% (hard)
+   - Late game challenges should use TN 10-12, not higher modifiers
+   - Guard doesn't automatically scale with milestones (12 + max attribute)
+   - See CLAUDE.md for detailed mathematical constraints
 
-These guidelines ensure Flow RPG maintains appropriate tabletop RPG language and avoids video game terminology:
+## CRITICAL: This Is A Tabletop RPG, Not A Video Game
 
-1. **Avoid Video Game Language**
+**This section must be reviewed before ANY content creation or modification.**
 
-   Flow RPG is a tabletop RPG, not a video game. Use appropriate TTRPG terminology:
+Flow RPG is a traditional tabletop roleplaying game. Every design decision, piece of content, and word choice must reflect TTRPG principles, not video game (especially MMO) patterns. This is not negotiable.
 
-   **Never Use:**
-   - "Boss" (use: legendary adversary, major villain, archvillain)
-   - "Elite" (use: champion, veteran, master)
-   - "Tank" (use: defender, front-line fighter, guardian)
-   - "DPS" (use: damage dealer, striker, attacker)
-   - "Aggro" (use: draw attention, threaten, engage)
-   - "AOE" (use: area effect, zone, burst)
-   - "Proc" (use: trigger, activate, occurs)
-   - "Cooldown" (use: recharge, rest required, once per scene)
-   - "Buff/Debuff" (use: enhance, weaken, advantage, penalty)
-   - "Mob" (use: creature, monster, enemy)
-   - "Adds" (use: reinforcements, additional enemies)
-   - "Trash" (use: minions, lesser enemies)
-   - "Loot" (use: treasure, rewards, spoils)
-   - "Respawn" (use: return, reform, regenerate)
+### The Video Game Trap
 
-   **Use Instead:**
-   - Traditional TTRPG language
-   - Natural English descriptions
-   - Terms that fit fantasy fiction
-   - Language that evokes tabletop play
+Video game design patterns are fundamentally incompatible with TTRPG play and must be actively rejected:
 
-2. **Natural Language Over Jargon**
+**Forbidden Video Game Patterns:**
+- **Formulaic stat scaling** - e.g., "Guard = 8 + milestones × 2"
+- **Enemy types/tiers as units** - Treating adversaries as interchangeable stat blocks
+- **Squad composition formulas** - e.g., "1 Champion + 4 Henchmen = Medium difficulty"
+- **Role trinity thinking** - Tank/Healer/DPS archetypes
+- **Balance calculations** - Mathematical encounter budgets and CR systems
+- **Scripted encounters** - Phase transitions, timed waves, enrage timers
+- **Stat blocks without character** - Enemies as numbers, not people
 
-   Prefer clear, descriptive language over gaming jargon when possible:
-   - "The dragon attacks twice with its claws" not "The dragon has 2 claw attacks per turn"
-   - "Recovers when you rest" not "Recharges on short rest"
-   - "Once per encounter" not "1/encounter cooldown"
+**Why These Patterns Are Poison:**
+- MMO patterns assume computer-controlled enemies with scripted AI
+- TTRPGs have intelligent GMs making dynamic narrative decisions
+- Video games require mathematical balance for fair matchmaking
+- TTRPGs balance through GM judgment and story appropriateness
+- Video game terminology breaks immersion for tabletop players
+- MMO thinking restricts GM creativity and player agency
 
-3. **Fiction-First Descriptions**
+### Required TTRPG Approach
 
-   Start with what it looks like in the fiction, then explain mechanics:
-   - Good: "The paladin's holy aura protects nearby allies, granting them +2 to Guard while within Close range."
-   - Bad: "AOE buff: +2 Guard to all friendlies within 10ft radius."
+**Every adversary is a character with a name and motivation:**
+- Don't create "a Champion" - create "Captain Vex, who wants revenge for his fallen squad"
+- Stats serve the story, never the other way around
+- GMs create specific individuals, not fill encounter slots
+- Personality and motivation come BEFORE mechanics
 
-4. **Forbidden Video Game Patterns**
+**Narrative-driven opposition:**
+- Scene difficulty emerges from circumstances, not stat calculations
+- Consequences and stakes matter more than hit points
+- Social and environmental challenges are as important as combat
+- Story determines what's appropriate, not balance formulas
 
-   Flow RPG is a traditional tabletop RPG, not an MMO or video game. Avoid these video game design patterns:
+**GM judgment over rigid rules:**
+- Provide guidance ranges and examples, not formulas
+- Trust GMs to create what feels right for their story
+- Emphasize adaptation to table needs
+- Flexibility is a feature, not a bug
 
-   **Never Use:**
-   - "Escalation" mechanics (automatic difficulty increases over time)
-   - "Wave spawning" (timed enemy reinforcements)
-   - "Adds" (additional enemies appearing on timers)
-   - "Holy Trinity" role design (Tank/Healer/DPS)
-   - "Aggro tables" or threat mechanics
-   - "Enrage timers" (forced time limits)
-   - "Phase transitions" (scripted boss behavior changes)
-   - "Wipes" (use: party defeat, overwhelming loss)
-   - "Pull" (use: engage, attack, draw out)
-   - "Kiting" (use: fighting retreat, hit-and-run tactics)
+### Forbidden Terminology (Comprehensive List)
 
-   **Design Rationale:**
-   - MMO patterns assume computer-controlled enemies with scripted behaviors
-   - Tabletop RPGs have intelligent GMs making dynamic decisions
-   - Video game balance assumes perfect information and consistent execution
-   - TTRPG balance accounts for improvisation and narrative circumstances
+**NEVER use these video game terms:**
 
-5. **Combat Design Principles**
+Combat & Enemies:
+- "Boss" → Use: legendary adversary, major villain, archvillain
+- "Elite" → Use: champion, veteran, master
+- "Minion" → Use: henchman, lesser enemy, follower
+- "Mob" → Use: creature, enemy, adversary
+- "Adds" → Use: reinforcements, additional enemies
+- "Trash" → Use: minor threats, fodder (sparingly)
+- "Pull" → Use: engage, attack, draw out
+- "Wipe" → Use: party defeat, overwhelming loss
+- "Aggro" → Use: draw attention, threaten, engage
 
-   Combat stances and tactical options should emphasize **situational choices**, not role-based character archetypes:
+Roles & Classes:
+- "Tank" → Use: defender, guardian, protector
+- "DPS" → Use: damage dealer, striker, attacker
+- "Healer" → Use: support, medic (if modern), cleric
+- "Support" → Use: ally, helper (context-dependent)
 
-   **Good - Tactical Guidance:**
-   - "Use Aggressive stance when you need to end fights quickly or press a tactical advantage"
-   - "Defensive stance generates Flow reliably through being targeted"
-   - "This ability works best when facing overwhelming offense"
+Abilities & Effects:
+- "AOE" → Use: area effect, zone, burst
+- "Proc" → Use: trigger, activate, occurs
+- "Cooldown" → Use: recharge, rest required, once per scene
+- "Buff/Debuff" → Use: enhance, weaken, advantage, penalty
+- "CC" (crowd control) → Use: restraint, hindrance, disable
+- "DOT" (damage over time) → Use: ongoing damage, poison, burning
 
-   **Bad - Role-Based Thinking:**
-   - "Tanks should use Defensive stance"
-   - "DPS characters want Aggressive stance"
-   - "This is the healer's main ability"
+Rewards & Progression:
+- "Loot" → Use: treasure, rewards, spoils
+- "Drop" → Use: carried, possesses
+- "XP/EXP" → Use: advancement, growth (we use milestones)
+- "Grinding" → Use: practice, training
+- "Farming" → Never applicable in TTRPG
 
-   **Why This Matters:**
-   - Stances are tactical responses to situations, not character identities
-   - Any character might use any stance depending on circumstances
-   - Role-based language restricts player creativity and agency
-   - Situational language empowers dynamic tactical decisions
+Encounter Design:
+- "Encounter" → Use: conflict, scene, confrontation
+- "Wave" → Use: reinforcements, second group
+- "Phase" → Use: the enemy changes tactics, adapts
+- "Enrage" → Use: desperation, fury (as character emotion)
+- "Respawn" → Use: return, reform, regenerate
 
-6. **Encounter Design Principles**
+### How to Audit Content
 
-   Encounters should be **narrative-based and GM-driven**, not timed or scripted:
+**Before creating or modifying any content, ask:**
 
-   **Good - Dynamic and Narrative:**
-   - "GM may introduce complications using Flow pool"
-   - "Reinforcements arrive when dramatically appropriate"
-   - "Elite adapts tactics when strategy fails"
-   - "Environmental hazards respond to fiction"
+1. **Does this sound like a tabletop game or World of Warcraft?**
+   - If it sounds like an MMO wiki page, rewrite it
+   - Would this appear in D&D, Fate, or Powered by the Apocalypse?
 
-   **Bad - Timed and Scripted:**
-   - "Wave 2 spawns after 3 rounds"
-   - "Boss enters phase 2 at 50% HP"
-   - "Adds appear every 4 rounds"
-   - "Enrage timer at round 10"
+2. **Are we describing characters or stat blocks?**
+   - Every significant enemy needs a name and motivation
+   - Personality should be clear even in mechanical descriptions
 
-   **Why This Matters:**
-   - GMs can respond to player creativity and table dynamics
-   - Encounters remain flexible to narrative circumstances
-   - No "correct" solution or optimal strategy
-   - Dramatic pacing emerges from play, not predetermined scripts
+3. **Is the GM empowered to make narrative choices?**
+   - Are we providing guidance or rigid formulas?
+   - Can the GM adapt to their specific story?
+   - Is player creativity supported or constrained?
 
-7. **YAML Documentation Standards**
+4. **Would veteran TTRPG players recognize this as tabletop content?**
+   - Does it evoke fantasy fiction or video game mechanics?
+   - Is the language natural or full of gaming jargon?
 
-   When working with YAML source files:
+**Red Flags vs Green Flags:**
 
-   - **Always validate** after making changes: `python scripts/generate_docs.py --all`
-   - **Regenerate all templates** when YAML changes affect multiple files
-   - **Check cross-references** between YAML and generated markdown
-   - **Test assembly** of affected publications after major changes
-   - **Maintain consistency** in terminology across all YAML files
+Red Flags (Video Game):
+- Mathematical scaling formulas
+- "Opposition types" and "squad composition"
+- Role-based character design
+- "Encounter balance guidelines"
+- Timed or scripted events
+- Treating enemies as interchangeable units
 
-8. **Language Audit Requirements**
+Green Flags (TTRPG):
+- Named characters with clear motivations
+- Situational guidance: "A squad typically has..."
+- Story-first design: "What makes sense for this villain?"
+- Emphasis on consequences over mechanics
+- GM empowerment and flexibility
+- Characters as people, not stat blocks
 
-   When reviewing or modifying content:
+### Content Audit Triggers
 
-   - **Search comprehensively** for video game terminology across all files
-   - **Check YAML first** - it's the source of truth for generated content
-   - **Verify generated docs** after cleaning up YAML
-   - **Update both mechanics and descriptions** - don't just reword, redesign if needed
-   - **Document changes** in session notes with files modified
+**These situations require extra vigilance:**
+- Adding new enemy types or adversary guidance
+- Creating combat abilities or tactical options
+- Writing GM guidance for running conflicts
+- Describing character roles or party dynamics
+- Designing challenges or obstacles
+- Writing advancement or progression systems
 
-   Common audit triggers:
-   - Adding new enemy types or encounter mechanics
-   - Creating combat abilities or tactical options
-   - Writing GM guidance for running encounters
-   - Describing character roles or party composition
+**When in doubt:**
+1. Check CLAUDE.md "Design Philosophy: TTRPG Not Video Game" section
+2. Search the content for forbidden terms
+3. Read it aloud - does it sound like fantasy fiction or a game wiki?
+4. Ask: "Would Gary Gygax or Matt Colville write it this way?"
+
+### Additional Writing Standards
+
+**YAML Documentation Standards:**
+
+When working with YAML source files:
+- **Always validate** after making changes: `python scripts/generate_docs.py --all`
+- **Regenerate all templates** when YAML changes affect multiple files
+- **Check cross-references** between YAML and generated markdown
+- **Test assembly** of affected publications after major changes
+- **Maintain consistency** in terminology across all YAML files
+
+**Language Audit Requirements:**
+
+When reviewing or modifying content:
+- **Search comprehensively** for video game terminology across all files
+- **Check YAML first** - it's the source of truth for generated content
+- **Verify generated docs** after cleaning up YAML
+- **Update both mechanics and descriptions** - don't just reword, redesign if needed
+- **Document changes** in session notes with files modified
 
 ## Project Organization
 

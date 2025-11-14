@@ -1,14 +1,14 @@
 # Flow RPG Complete System Index
-# Version: 1.0-complete
+# Version: 2.0-restructured
 # Master file referencing all system components
 
 flow_rpg_system:
   metadata:
     name: 'Flow RPG'
-    version: '1.0-complete'
+    version: '2.1-sweet-spot-edition'
     format: 'YAML structured rules'
     date: '2024'
-    status: 'Complete rebalanced system'
+    status: 'Sweet Spot Edition - Bounded accuracy that actually works'
 
   components:
     core_rules:
@@ -17,17 +17,19 @@ flow_rpg_system:
         - 'Basic mechanics and dice'
         - 'Resolution system'
         - 'Flow economy'
-        - 'Attributes and skills'
+        - 'Attributes and skills with caps (+5 max total)'
         - 'Scene structure'
+        - 'True bounded accuracy system'
 
     character:
       file: 'character.yaml'
       contains:
         - 'Character creation process'
         - 'Species (4 types)'
-        - 'Archetypes (7 types)'
+        - 'Archetypes (7 optional templates)'
+        - 'Custom Build alternative'
         - 'Callings (9 types)'
-        - 'Derived values'
+        - 'Derived values (no auto-scaling)'
         - 'Magic access requirements'
 
     combat:
@@ -55,13 +57,25 @@ flow_rpg_system:
     advancement:
       file: 'advancement.yaml'
       contains:
-        - 'Milestone system'
-        - 'Minor milestones'
-        - 'Moderate milestones'
-        - 'Major milestones'
+        - 'Sweet Spot Edition milestone system'
+        - 'Minor milestones (every session)'
+        - 'Moderate milestones (sessions 3, 6, 9)'
+        - 'Major milestones (sessions 5 and 10)'
         - 'Edges system'
-        - 'Campaign progression'
-        - 'Retirement and legacy'
+        - 'Campaign designed for 8-12 sessions'
+        - 'Retirement at peak power'
+
+    techniques:
+      file: 'techniques.yaml'
+      contains:
+        - 'Universal ability access'
+        - 'Combat Techniques'
+        - 'Metamagic options'
+        - 'Divine abilities'
+        - 'Roguish gambits'
+        - 'Bardic inspiration'
+        - 'Terrain mastery'
+        - 'No archetype requirements'
 
     equipment:
       file: 'equipment.yaml'
@@ -78,7 +92,7 @@ flow_rpg_system:
       file: 'gm_tools.yaml'
       contains:
         - 'Flow management for GMs'
-        - 'Encounter building'
+        - 'Scene design'
         - 'NPC generation'
         - 'Campaign management'
         - 'Rules adjudication'
@@ -110,13 +124,15 @@ flow_rpg_system:
       defensive: 'Act last, +2 defense, +1 Flow when attacked'
 
     health:
-      guard: '8 + max(Might, Grace) + (Milestones × 2)'
-      vitality: '10 + Will + (Major Milestones × 3)'
+      guard: '12 + max(Might, Grace, Will)'
+      vitality: '10 + Will'
+      progression: 'Through milestone choices, not automatic'
 
     advancement:
-      minor: 'Every 1-2 sessions'
-      moderate: 'Every 5-6 sessions'
-      major: 'Every 12-15 sessions'
+      minor: 'Every session (horizontal growth)'
+      moderate: 'Sessions 3, 6, 9 (capability expansion)'
+      major: 'Sessions 5 and 10 (transformative power)'
+      campaign_length: '8-12 sessions to peak power'
 
     spell_tiers:
       0: 'Cantrips (+1 Flow)'
@@ -126,35 +142,71 @@ flow_rpg_system:
       4: 'Master (-3 Flow)'
 
   design_notes:
+    sweet_spot_edition:
+      philosophy: 'Bounded accuracy that ACTUALLY works'
+      core_insight: 'Unlimited progression breaks bounded accuracy - cap modifiers or TN 8 becomes meaningless'
+      solution: 'Hard cap at +5 total modifier (attribute +3, skill +2, edges +1)'
+      campaign_length: '8-12 sessions is the natural lifespan for +0 to +5 progression'
+      retirement: 'Characters conclude at heroic peak rather than grinding through mechanical breakdown'
+      math: 'At +5 cap: 97.2% success vs TN 8 (nearly automatic - only fail on 1,1)'
+      reality_check: 'Even with +5 cap, TN 8 becomes trivial. GMs use TN 10-12 for peak power challenges.'
+      vs_old_system: 'Old +8 cap resulted in 99.5% success (truly automatic)'
+      sweet_spot: 'This length provides complete character arcs, but requires TN scaling in practice'
+
+    version_2_restructuring:
+      - 'Milestone pacing matches D&D dopamine schedule'
+      - 'Custom Build option enables true character freedom'
+      - 'Archetypes now optional starting templates'
+      - 'Universal techniques accessible to all'
+      - 'Major milestones arrive while still playing'
+      - 'The "unicorn" - no multiclassing needed'
+
     rebalanced_from_original:
       - 'Flow range reduced to -3/+6'
       - 'Added Novice skill tier'
-      - 'Cantrips generate Flow'
-      - 'Guard uses higher of Might/Grace'
-      - 'Death saves include Will'
-      - 'Archetype spellcasting override'
-      - 'Edges system for growth variety'
-      - 'Damage scales with milestones'
+      - 'Cantrips are Flow-neutral (cost 0)'
+      - 'Guard/Vitality no longer auto-scale'
+      - 'Death saves use flat rolls'
+      - 'Skills cap at Expert (+2), not Master (+3)'
+      - 'Attributes cap at +3, not +5'
 
     mathematical_fixes:
-      - '58% base success rate (corrected)'
-      - 'All playstyles generate 1.5-3 Flow'
-      - 'Combat lasts 3-5 rounds'
-      - 'Death at -3 Vitality'
-      - 'Armor penalties rebalanced'
+      - '58% base success rate at +0 modifier'
+      - '97.2% success at cap (+5 vs TN 8) - nearly automatic, requires TN scaling'
+      - 'Guard ranges 10-19 (not 37+)'
+      - 'Combat lasts 4-6 rounds at all tiers'
+      - 'Progression meaningful AND bounded'
+      - 'TN 8 relevant early game, TN 10-12 needed for late game challenges'
 
     structural_improvements:
-      - 'Each archetype has unique subsystem'
-      - 'Callings trigger reliably'
-      - 'Equipment progression system'
-      - 'Comprehensive GM tools'
-      - 'Complete play examples'
+      - 'Archetypes optional, not restrictive'
+      - 'Any character can learn any ability'
+      - 'Techniques.yaml unifies all subsystems'
+      - 'Milestone rewards are choices not automatic'
+      - 'True character customization achieved'
 
   usage_guide:
+    character_creation_options:
+      quick_start:
+        - 'Choose an archetype for instant playability'
+        - 'Everything pre-selected and balanced'
+        - 'Can diverge later if desired'
+
+      custom_build:
+        - 'Start with blank slate'
+        - 'Choose 3 skills and starting edge'
+        - '100 coin equipment budget'
+        - 'Build exactly what you envision'
+
+      hybrid_approach:
+        - 'Start with archetype'
+        - 'Immediately begin customizing'
+        - 'Keep what works, change what doesn''t'
+
     for_players:
-      start_with: ['character.yaml', 'examples.yaml']
+      start_with: ['character.yaml', 'techniques.yaml']
       reference: ['core_rules.yaml', 'combat.yaml', 'magic.yaml']
-      advancement: ['advancement.yaml', 'equipment.yaml']
+      advancement: ['advancement.yaml', 'techniques.yaml']
 
     for_gms:
       preparation: ['gm_tools.yaml']

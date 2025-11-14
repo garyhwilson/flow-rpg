@@ -16,9 +16,15 @@ character_creation:
       action: "Select species for attribute bonus and traits"
       options: ["human", "elf", "dwarf", "halfling"]
     
-    step_3_archetype:
-      action: "Choose profession determining skills and equipment"
-      options: ["fighter", "ranger", "paladin", "rogue", "wizard", "cleric", "bard"]
+    step_3_build_type:
+      action: "Choose between archetype (pre-built profession) or custom build"
+      options:
+        archetype:
+          description: "Select a pre-built profession with defined skills, equipment, and progression path"
+          choices: ["fighter", "ranger", "paladin", "rogue", "wizard", "cleric", "bard"]
+        custom_build:
+          description: "Build your own character with flexible skill and equipment choices"
+          note: "Can later adopt archetype abilities through milestones"
     
     step_4_calling:
       action: "Select inner motivation providing Flow benefits"
@@ -43,17 +49,19 @@ character_creation:
 # ============================================
 
 species:
+  design_note: "Species attribute bonuses respect the +3 attribute cap. If starting array already has +3 in an attribute, apply bonus elsewhere."
+
   human:
     name: "Human"
     description: "Versatile and ambitious, adapting to any challenge"
-    
+
     attribute_bonus:
       choice: "any"
       amount: 1
     
     species_traits:
       versatile:
-        effect: "Start with one extra skill at Novice (-1) OR upgrade one starting skill one tier"
+        effect: "Start with one extra skill at Novice (-1)"
         type: "character_creation"
       
       determined:
@@ -77,7 +85,7 @@ species:
     
     species_traits:
       fey_grace:
-        effect: "When you gain Flow from critical success (13+), gain +1 additional Flow"
+        effect: "When you roll 11+ on any check, gain +1 Flow (once per round)"
         type: "flow_generation"
       
       magical_affinity:
@@ -101,7 +109,7 @@ species:
     
     species_traits:
       stone_endurance:
-        effect: "When Guard depleted, reduce first Vitality damage each scene by 2"
+        effect: "Once per scene, reduce damage from one attack by 2 (stacks with armor)"
         type: "defense"
       
       craftwise:
@@ -125,8 +133,8 @@ species:
     
     species_traits:
       lucky:
-        effect: "Once per scene, when Flow would go negative, it stops at 0 instead"
-        type: "flow_protection"
+        effect: "Once per scene, reroll any single die (keep new result)"
+        type: "reroll"
       
       brave_heart:
         effect: "When an ally goes to negative Flow, immediately gain +1 Flow"
@@ -144,21 +152,71 @@ species:
 # ============================================
 
 archetypes:
+  philosophy:
+    core_concept: "Optional starting packages, not restrictive classes"
+
+    key_principles:
+      - "Archetypes are jumpstart templates, not mandatory paths"
+      - "Can diverge from archetype at any milestone"
+      - "Can adopt archetype features later through Custom Build"
+      - "No penalties for abandoning archetype progression"
+      - "Mix and match abilities through techniques.yaml"
+
+    flexibility:
+      at_creation: "Choose archetype OR custom build"
+      during_play: "Every milestone offers complete freedom"
+      subsystem_access: "Any character can learn any subsystem"
+      no_multiclassing: "No need - all options always available"
+
+    design_note: "This achieves the 'unicorn' of RPG design - true character freedom without multiclassing complexity"
+
+  archetype_benefits:
+    immediate:
+      - "Pre-selected skills that work together"
+      - "Starting equipment package"
+      - "Thematic starting edge"
+      - "Access to subsystem without prerequisites"
+
+    ongoing:
+      - "Suggested advancement paths (never mandatory)"
+      - "Narrative framework for character"
+      - "Quick character creation for new players"
+
+  divergence_examples:
+    fighter_becomes_scholar:
+      starting: "Fighter with Combat Techniques"
+      progression: "Takes Lore skill, learns Metamagic"
+      result: "Spell blade without multiclassing"
+
+    wizard_becomes_warrior:
+      starting: "Wizard with Metamagic"
+      progression: "Takes Combat skill, learns Techniques"
+      result: "Battle mage through natural growth"
+
+    custom_matches_archetype:
+      starting: "Custom Build"
+      progression: "Adopts Fighter techniques over time"
+      result: "Effectively a Fighter, built organically"
   fighter:
     name: "Fighter"
     description: "Master of weapons and combat techniques"
-    
+
     starting_skills:
       combat:
         level: "professional"
-        modifier: 2
+        modifier: 1
       athletics:
         level: "novice"
         modifier: -1
       command:
         level: "novice"
         modifier: -1
-    
+
+    archetype_feature:
+      name: "Weapon Training"
+      effect: "+1 to hit with all weapons"
+      note: "Represents fundamental martial discipline and combat accuracy"
+
     starting_edge:
       choice: ["weapon_focus", "tough"]
       weapon_focus: "+1 damage with chosen weapon type"
@@ -171,26 +229,33 @@ archetypes:
     
     unique_subsystem:
       name: "Combat Techniques"
-      description: "Chain techniques together for combination attacks"
-      progression: "Learn new techniques at milestones"
+      description: "Start with immediate access to combat techniques"
+      reference: "See techniques.yaml for full list"
+      starting_access: "One basic combat technique at creation"
+      progression: "Can continue learning or switch to other subsystems"
     
     natural_callings: ["champion", "guardian", "sentinel"]
     
   ranger:
     name: "Ranger"
     description: "Wilderness expert and skilled hunter"
-    
+
     starting_skills:
       combat:
         level: "novice"
         modifier: -1
       survival:
         level: "professional"
-        modifier: 2
+        modifier: 1
       investigate:
         level: "novice"
         modifier: -1
-    
+
+    archetype_feature:
+      name: "Weapon Training"
+      effect: "+1 to hit with all weapons"
+      note: "Rangers are trained combatants with excellent aim"
+
     starting_edge:
       choice: ["fast_movement", "precise_strike"]
       fast_movement: "+1 zone of movement"
@@ -211,7 +276,7 @@ archetypes:
   paladin:
     name: "Paladin"
     description: "Divine warrior and inspiring leader"
-    
+
     starting_skills:
       combat:
         level: "novice"
@@ -221,8 +286,13 @@ archetypes:
         modifier: -1
       command:
         level: "professional"
-        modifier: 2
-    
+        modifier: 1
+
+    archetype_feature:
+      name: "Divine Grace"
+      effect: "+1 to all saving rolls, +4 Guard, start each scene at +1 Flow"
+      note: "Divine protection shields from harm, strengthens resolve, and provides blessed energy"
+
     spellcasting:
       tradition: "divine"
       access: "Can cast divine spells regardless of attributes"
@@ -243,19 +313,22 @@ archetypes:
   rogue:
     name: "Rogue"
     description: "Skilled infiltrator and versatile expert"
-    
+
     starting_skills:
       stealth:
         level: "professional"
-        modifier: 2
+        modifier: 1
       finesse:
         level: "professional"
-        modifier: 2
+        modifier: 1
       deceive:
         level: "novice"
         modifier: -1
-    
-    special: "Only archetype starting with two Professional skills"
+
+    archetype_feature:
+      name: "Dual Expertise"
+      effect: "Two Professional skills instead of one"
+      note: "Rogues' defining trait - extreme skill specialization"
     
     starting_equipment:
       armor: "light"
@@ -272,18 +345,23 @@ archetypes:
   wizard:
     name: "Wizard"
     description: "Master of arcane knowledge and magical theory"
-    
+
     starting_skills:
       sorcery:
         level: "professional"
-        modifier: 2
+        modifier: 1
       lore:
         level: "professional"
-        modifier: 2
+        modifier: 1
       investigate:
         level: "novice"
         modifier: -1
-    
+
+    archetype_feature:
+      name: "Arcane Battery"
+      effect: "Maximum Flow increased to +7, start each scene at +2 Flow"
+      note: "Greater magical reserves and charged energy allow casting powerful spells immediately"
+
     spellcasting:
       tradition: "arcane"
       access: "Can cast arcane spells regardless of attributes"
@@ -296,26 +374,33 @@ archetypes:
     
     unique_subsystem:
       name: "Metamagic"
-      description: "Modify spells with special techniques"
-      progression: "Learn metamagic options at milestones"
+      description: "Start with immediate access to metamagic"
+      reference: "See techniques.yaml for full list"
+      starting_access: "One basic metamagic at creation"
+      progression: "Can continue learning or explore other subsystems"
     
     natural_callings: ["scholar", "seeker", "advocate"]
     
   cleric:
     name: "Cleric"
     description: "Channel of divine power and spiritual healer"
-    
+
     starting_skills:
       medicine:
         level: "professional"
-        modifier: 2
+        modifier: 1
       sorcery:
         level: "novice"
         modifier: -1
       empathy:
         level: "professional"
-        modifier: 2
-    
+        modifier: 1
+
+    archetype_feature:
+      name: "Divine Grace"
+      effect: "+1 to all saving rolls, +4 Guard, start each scene at +1 Flow"
+      note: "Divine protection shields from harm, strengthens resolve, and provides blessed energy"
+
     spellcasting:
       tradition: "divine"
       access: "Can cast divine spells regardless of attributes"
@@ -336,18 +421,23 @@ archetypes:
   bard:
     name: "Bard"
     description: "Performer, storyteller, and magical artist"
-    
+
     starting_skills:
       perform:
         level: "professional"
-        modifier: 2
+        modifier: 1
       deceive:
         level: "novice"
         modifier: -1
       sorcery:
         level: "novice"
         modifier: -1
-    
+
+    archetype_feature:
+      name: "Versatile Experience"
+      effect: "One additional Novice skill of your choice, +4 Guard, start each scene at +1 Flow"
+      note: "Bards learn from their travels, magical performance builds resilience and energy"
+
     spellcasting:
       tradition: "performance"
       access: "Can cast performance magic regardless of attributes"
@@ -364,6 +454,112 @@ archetypes:
       progression: "Inspiration die size increases with milestones"
     
     natural_callings: ["enthusiast", "mediator", "seeker"]
+
+# ============================================
+# CUSTOM BUILD
+# ============================================
+
+custom_build:
+  name: "Custom Build"
+  description: "Superior flexibility and customization for experienced players"
+
+  starting_skills:
+    selection: "Choose 4 skills (more than any archetype!)"
+    distribution:
+      competent:
+        number: 1
+        modifier: 0
+        note: "Your primary skill focus"
+      novice:
+        number: 3
+        modifier: -1
+        note: "Broader base than archetypes"
+    restrictions: "No skill may start above Competent (0)"
+    advantage: "Start with 4 skills vs archetype's 3"
+
+  starting_edges:
+    selection: "Choose TWO from universal list (double archetype bonus!)"
+    universal_edges:
+      tough:
+        effect: "+2 Guard"
+        description: "Natural resilience"
+
+      quick:
+        effect: "+1 zone of movement"
+        description: "Fast on your feet"
+
+      alert:
+        effect: "+1 to initiative rolls"
+        description: "Always ready"
+
+      versatile:
+        effect: "One additional Novice skill"
+        description: "Broad experience"
+
+      focused:
+        effect: "+1 to rolls with your Competent skill"
+        description: "Specialized training"
+
+      connected:
+        effect: "Start with helpful NPC contact"
+        description: "Social network"
+
+      wealthy:
+        effect: "Double starting coins (200 total)"
+        description: "Family resources or past success"
+
+      talented:
+        effect: "Choose one skill to advance faster (half milestone cost)"
+        description: "Natural aptitude"
+
+  starting_equipment:
+    budget: 150
+    note: "50% more than most archetypes!"
+    suggestions:
+      combat_focused:
+        - "Medium armor (40 coins)"
+        - "Martial weapon (20 coins)"
+        - "Shield (10 coins)"
+        - "Adventurer's kit (30 coins)"
+
+      skill_focused:
+        - "Light armor (20 coins)"
+        - "Simple weapon (10 coins)"
+        - "Professional tools (30 coins)"
+        - "Adventurer's kit (30 coins)"
+        - "10 coins remaining"
+
+      magic_focused:
+        - "No armor (0 coins)"
+        - "Focus item (20 coins)"
+        - "Component pouch (20 coins)"
+        - "Scholarly tools (30 coins)"
+        - "Adventurer's kit (30 coins)"
+
+  progression:
+    flexibility: "Complete freedom in milestone choices"
+
+    subsystem_access:
+      description: "Can learn any archetype subsystem through milestones"
+      requirement: "Narrative justification and/or training"
+      examples:
+        - "Learn Combat Techniques from Fighter mentor"
+        - "Develop Metamagic through magical research"
+        - "Gain Bardic Inspiration by studying performance"
+        - "Acquire Divine Oath through religious dedication"
+
+    magic_access:
+      description: "Can gain spellcasting if meeting requirements"
+      options:
+        attribute_based: "Meet tradition requirements (see magic_access)"
+        milestone_based: "Spend moderate milestone to gain Sorcery skill"
+        training_based: "Learn from mentor with proper narrative"
+
+    archetype_adoption:
+      description: "Can fully adopt an archetype at Moderate Milestone"
+      effect: "Gain archetype's unique subsystem and progression options"
+      restriction: "Must meet narrative requirements"
+      note: "Keeps all previously gained abilities"
 
 # ============================================
 # CALLINGS
@@ -402,9 +598,9 @@ callings:
     
     flow_benefit:
       name: "Protective Surge"
-      trigger: "When ally within Close range takes damage"
+      trigger: "When you successfully defend or heal an ally"
       effect: "Gain +1 Flow"
-      limit: "Once per round"
+      limit: "Twice per scene"
     
     narrative_permission:
       name: "Helper's Intuition"
@@ -450,9 +646,9 @@ callings:
     
     flow_benefit:
       name: "Authentic Insight"
-      trigger: "Attempt something completely new/unconventional"
-      effect: "Gain +3 Flow regardless of success"
-      limit: "Once per scene"
+      trigger: "When you discover something important about yourself or others"
+      effect: "Gain +2 Flow"
+      limit: "Twice per scene"
     
     narrative_permission:
       name: "Soul Reading"
@@ -474,9 +670,9 @@ callings:
     
     flow_benefit:
       name: "Prepared Mind"
-      trigger: "Start of scene"
-      effect: "Begin at +1 Flow instead of 0"
-      limit: "Always active"
+      trigger: "When you apply knowledge to solve a problem"
+      effect: "Gain +1 Flow"
+      limit: "Three times per scene"
     
     narrative_permission:
       name: "Contingency Planning"
@@ -498,9 +694,9 @@ callings:
     
     flow_benefit:
       name: "Defensive Vigilance"
-      trigger: "When you or visible ally is attacked"
+      trigger: "When you spot danger before it strikes"
       effect: "Gain +1 Flow"
-      limit: "Once per round"
+      limit: "Twice per scene"
     
     narrative_permission:
       name: "Danger Sense"
@@ -546,9 +742,9 @@ callings:
     
     flow_benefit:
       name: "Protective Dominance"
-      trigger: "Successful attack while any ally below half Guard/Vitality"
+      trigger: "When you defeat or intimidate an enemy threatening allies"
       effect: "Gain +1 Flow"
-      limit: "No limit"
+      limit: "Twice per scene"
     
     narrative_permission:
       name: "Unshakeable Will"
@@ -592,25 +788,24 @@ callings:
 
 derived_values:
   guard:
-    formula: "8 + max(might, grace) + (total_milestones × 2)"
+    formula: "12 + max(might, grace, will)"
     description: "Ablative defense, refreshes between scenes"
     recovery:
       between_scenes: "Full restoration"
       rally_action: "1d6 once per scene"
-    milestone_scaling: "×2 per milestone for growth"
-  
+    progression: "Increased through milestone choices, not automatically"
+    design_note: "Base 12 + highest attribute ensures all builds have survivability. Will inclusion helps casters use mental fortitude for defense."
+
   vitality:
-    formula: "10 + will + (major_milestones × 3)"
+    formula: "10 + will"
     description: "Core health, serious injury threshold"
     recovery:
       natural: "1 per hour of rest"
       magical: "Varies by spell"
-    milestone_scaling: "×3 per major milestone only"
+    progression: "Increased through milestone choices, not automatically"
   
   flow:
     starting: 0
-    exceptions:
-      scholar: 1
     range: [-3, 6]
     reset: "Between scenes"
   
@@ -672,8 +867,9 @@ calling_evolution:
         
         calling_transcendence:
           description: "Rise above calling limitations"
-          effect: "Lose calling benefits, gain +2 to all attributes"
+          effect: "Lose calling benefits, gain +1 to all attributes (respecting +3 cap)"
           narrative: "Achieved perfect balance"
+          note: "Excellent for generalists, brings all attributes closer to peak"
 
 # ============================================
 # MAGIC ACCESS

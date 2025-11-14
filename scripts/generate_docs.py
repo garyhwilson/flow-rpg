@@ -38,7 +38,6 @@ Usage:
     python generate_docs.py --milestones       # Generate milestones
     python generate_docs.py --signature-moves        # Generate signature moves
     python generate_docs.py --advanced-techniques    # Generate advanced techniques
-    python generate_docs.py --paragon-paths          # Generate paragon paths
     python generate_docs.py --legendary-techniques   # Generate legendary techniques
 
     # Combat
@@ -57,7 +56,6 @@ Usage:
     python generate_docs.py --npc-generator    # Generate NPC generator
     python generate_docs.py --enemy-templates  # Generate enemy templates
     python generate_docs.py --encounters       # Generate encounters
-    python generate_docs.py --monsters         # Generate monster reference
     python generate_docs.py --npc-templates    # Generate NPC templates
     python generate_docs.py --random-tables          # Generate random tables
     python generate_docs.py --campaign-tracker       # Generate campaign tracker
@@ -315,6 +313,16 @@ class FlowRPGGenerator:
             print("⚠️  No species data found")
             return
 
+        # Filter out non-species entries (like design_note)
+        filtered_species = {
+            key: value for key, value in species_data.items()
+            if isinstance(value, dict) and 'name' in value
+        }
+
+        if not filtered_species:
+            print("⚠️  No valid species data found")
+            return
+
         # Load template
         try:
             template = self.env.get_template('species.jinja')
@@ -324,7 +332,7 @@ class FlowRPGGenerator:
             return
 
         # Generate markdown
-        output = template.render(species_data=species_data)
+        output = template.render(species_data=filtered_species)
 
         # Write to file
         output_path = OUTPUT_DIR / 'species_mechanics.md'
@@ -332,7 +340,7 @@ class FlowRPGGenerator:
             f.write(output)
 
         print(f"✓ Generated species documentation: {output_path}")
-        print(f"  ({len(species_data)} species processed)")
+        print(f"  ({len(filtered_species)} species processed)")
 
     def generate_archetypes(self):
         """Generate archetype documentation from YAML."""
@@ -347,6 +355,16 @@ class FlowRPGGenerator:
             print("⚠️  No archetype data found")
             return
 
+        # Filter out non-archetype entries (like design_note)
+        filtered_archetypes = {
+            key: value for key, value in archetypes.items()
+            if isinstance(value, dict) and 'name' in value
+        }
+
+        if not filtered_archetypes:
+            print("⚠️  No valid archetype data found")
+            return
+
         # Load template
         try:
             template = self.env.get_template('archetypes.jinja')
@@ -356,7 +374,7 @@ class FlowRPGGenerator:
             return
 
         # Generate markdown
-        output = template.render(archetypes=archetypes)
+        output = template.render(archetypes=filtered_archetypes)
 
         # Write to file
         output_path = OUTPUT_DIR / 'archetype_mechanics.md'
@@ -364,7 +382,7 @@ class FlowRPGGenerator:
             f.write(output)
 
         print(f"✓ Generated archetype documentation: {output_path}")
-        print(f"  ({len(archetypes)} archetypes processed)")
+        print(f"  ({len(filtered_archetypes)} archetypes processed)")
 
     def generate_weapons(self):
         """Generate weapon documentation from YAML."""
@@ -659,8 +677,8 @@ class FlowRPGGenerator:
             print("⚠️  No GM tools data loaded")
             return
 
-        encounter_data = self.yaml_data['gm_tools'].get('encounter_building', {})
-        enemy_templates = encounter_data.get('enemy_templates', {})
+        scene_data = self.yaml_data['gm_tools'].get('scene_design', {})
+        enemy_templates = scene_data.get('enemy_templates', {})
 
         if not enemy_templates:
             print("⚠️  No enemy templates data found")
@@ -688,11 +706,11 @@ class FlowRPGGenerator:
             print("⚠️  No GM tools data loaded")
             return
 
-        encounter_data = self.yaml_data['gm_tools'].get('encounter_building', {})
-        encounter_composition = encounter_data.get('encounter_composition', {})
+        scene_data = self.yaml_data['gm_tools'].get('scene_design', {})
+        opposition_types = scene_data.get('opposition_types', {})
 
-        if not encounter_composition:
-            print("⚠️  No encounter composition data found")
+        if not opposition_types:
+            print("⚠️  No opposition types data found")
             return
 
         try:
@@ -701,29 +719,12 @@ class FlowRPGGenerator:
             print(f"⚠️  Template not found: {e}")
             return
 
-        output = template.render(encounter_composition=encounter_composition)
+        output = template.render(encounter_composition=opposition_types)
         output_path = OUTPUT_DIR / 'encounters.md'
         with open(output_path, 'w') as f:
             f.write(output)
 
         print(f"✓ Generated encounters documentation: {output_path}")
-
-    def generate_monsters(self):
-        """Generate monster reference documentation."""
-        print("\n📝 Generating monster reference documentation...")
-
-        try:
-            template = self.env.get_template('monsters.jinja')
-        except Exception as e:
-            print(f"⚠️  Template not found: {e}")
-            return
-
-        output = template.render()
-        output_path = OUTPUT_DIR / 'monsters_reference.md'
-        with open(output_path, 'w') as f:
-            f.write(output)
-
-        print(f"✓ Generated monster reference documentation: {output_path}")
 
     def generate_npc_templates(self):
         """Generate NPC templates reference documentation."""
@@ -788,30 +789,6 @@ class FlowRPGGenerator:
             f.write(output)
 
         print(f"✓ Generated advanced techniques documentation: {output_path}")
-
-    def generate_paragon_paths(self):
-        """Generate paragon paths documentation from YAML."""
-        print("\n📝 Generating paragon paths documentation...")
-
-        if 'advancement' not in self.yaml_data:
-            print("⚠️  No advancement data loaded")
-            return
-
-        milestone_data = self.yaml_data['advancement']
-        paragon_paths = milestone_data.get('major_milestones', {}).get('paragon_paths', {})
-
-        try:
-            template = self.env.get_template('paragon_paths.jinja')
-        except Exception as e:
-            print(f"⚠️  Template not found: {e}")
-            return
-
-        output = template.render(paragon_paths=paragon_paths, milestone_data=milestone_data)
-        output_path = OUTPUT_DIR / 'paragon_paths.md'
-        with open(output_path, 'w') as f:
-            f.write(output)
-
-        print(f"✓ Generated paragon paths documentation: {output_path}")
 
     def generate_legendary_techniques(self):
         """Generate legendary techniques documentation from YAML."""
@@ -1242,7 +1219,6 @@ class FlowRPGGenerator:
         self.generate_milestones()
         self.generate_signature_moves()
         self.generate_advanced_techniques()
-        self.generate_paragon_paths()
         self.generate_legendary_techniques()
         # Combat
         self.generate_stances()
@@ -1258,7 +1234,6 @@ class FlowRPGGenerator:
         self.generate_npc_generator()
         self.generate_enemy_templates()
         self.generate_encounters()
-        self.generate_monsters()
         self.generate_npc_templates()
         self.generate_random_tables()
         self.generate_campaign_tracker()
@@ -1343,10 +1318,6 @@ def main():
         help='Generate encounters documentation'
     )
     parser.add_argument(
-        '--monsters', action='store_true',
-        help='Generate monster reference documentation'
-    )
-    parser.add_argument(
         '--npc-templates', action='store_true',
         help='Generate NPC templates reference documentation'
     )
@@ -1357,10 +1328,6 @@ def main():
     parser.add_argument(
         '--advanced-techniques', action='store_true',
         help='Generate advanced techniques documentation'
-    )
-    parser.add_argument(
-        '--paragon-paths', action='store_true',
-        help='Generate paragon paths documentation'
     )
     parser.add_argument(
         '--legendary-techniques', action='store_true',
@@ -1494,16 +1461,12 @@ def main():
             generator.generate_enemy_templates()
         if args.encounters:
             generator.generate_encounters()
-        if args.monsters:
-            generator.generate_monsters()
         if getattr(args, 'npc_templates', False):
             generator.generate_npc_templates()
         if getattr(args, 'signature_moves', False):
             generator.generate_signature_moves()
         if getattr(args, 'advanced_techniques', False):
             generator.generate_advanced_techniques()
-        if getattr(args, 'paragon_paths', False):
-            generator.generate_paragon_paths()
         if getattr(args, 'legendary_techniques', False):
             generator.generate_legendary_techniques()
         if getattr(args, 'signature_combat', False):

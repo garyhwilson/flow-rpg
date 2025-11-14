@@ -1,47 +1,170 @@
 {#
-Encounters Template
-Generates encounter building guide from YAML GM tools data
+Scene Opposition Template
+Generates guidance for creating memorable adversaries and conflicts
 #}
-# ENCOUNTER BUILDER
+# CREATING MEMORABLE CONFLICTS
 *Generated from YAML source data*
 
-## Encounter Compositions
+## Captain Sera Blackthorn Hunts Heretics
 
-{% for comp_id, comp in encounter_composition.items() %}
-### {{ comp_id.replace('_', ' ').title() }}
+Captain Sera Blackthorn leads the city's elite guard. She's hunting the party because they're accused of stealing a sacred relic. Driven by duty, she genuinely believes the PCs are guilty. Methodical and professional, she's reluctant to kill—preferring to capture them alive for trial.
 
-- **Composition:** {{ comp.composition }}
-- **Tactics:** {{ comp.tactics }}
-{% if comp.modifications %}
-**Modifications:**
-{% for mod in comp.modifications %}
-- {{ mod }}
-{% endfor %}
-{% endif %}
-{% if comp.flow_economy %}
-**Flow Economy:** {{ comp.flow_economy }}
-{% endif %}
+**Her Squad:**
+- **Sergeant Kain:** Her trusted second, follows orders without question
+- **Marcus:** Young and eager, wants to prove himself
+- **Jenna:** Veteran archer, has seen too much violence
+- **Willem:** Grizzled veteran who questions the orders
 
-{% endfor %}
+**Stats:** Use Champion baseline. Add Professional Persuade and Insight to reflect her investigative role.
+
+**Tactics:** Sera coordinates her squad to separate party members. She uses non-lethal techniques when possible. Willem might be convinced to stand down. Marcus can be goaded into mistakes.
+
+**How This Plays:** The squad enables Sera's strategy through positioning. If Sera falls, Willem takes command but offers terms. If Willem and Sera both fall, the others scatter.
 
 ---
 
-## Building Balanced Encounters
+## The Red Cloak Gang Demands Tribute
 
-### Difficulty Guidelines
+Street thugs working for crime lord Vex. They're in it for money, not loyalty. Led by a tough named Scarface who keeps them in line through intimidation and the promise of easy coin.
 
-**Easy:** 4-6 Minions OR 1 Standard
-**Medium:** 2 Standards OR 4 Minions + 1 Standard
-**Hard:** 1 Elite OR 3 Standards
-**Deadly:** 1 Boss OR 2 Elites + Minions
+**The Gang:**
+- Most are barely-trained street muscle with clubs and knives
+- Scarface is genuinely dangerous and knows it
+- They'll flee if things turn badly—self-preservation beats loyalty
 
-### Flow Economy Management
+**Stats for Party at 3 Milestones:**
+- Gang members: Guard 10, Vitality 8, Damage 1d6+1, Professional Intimidate or Streetwise
+- Scarface: Guard 13, Vitality 12, Damage 1d6+2, Professional Intimidate and Combat
 
-- Minions die quickly but generate enemy Flow
-- Standards sustain pressure
-- Elites use Flow for techniques
-- Bosses start with Flow advantage
+**Tactics:** Surround and threaten. Scarface hangs back and directs traffic. They want to scare, not die.
+
+**Morale:** Scatter if Scarface falls or 3+ gang members drop. Can be bribed. Respect strength.
 
 ---
 
-*Combine enemy types and terrain for dynamic, memorable encounters.*
+## Inquisitor Thrace and Her Templars
+
+A zealous inquisitor who genuinely believes she's saving souls. Hunts heretics with holy magic and righteous fury. Methodical, offers mercy to those who recant. If defeated, she escapes to return as a recurring nemesis.
+
+**Stats for Party at 6 Milestones:**
+- **Guard:** 48 (40 baseline + 8 from milestones)
+- **Vitality:** 84 (70 baseline + 14 from milestones)
+- **Damage:** 2d6+8
+- **Skills:** Expert Theology and Insight, Professional Persuade
+- **Flow:** Starts at +2
+- **Special:** 3 actions per round (MAXIMUM 2 attacks), DR 2, 3 legendary resistances
+
+**Tactics:** Uses third action for holy techniques. Tries to convert PCs mid-combat. Calm and disappointed when they refuse redemption. Quotes scripture.
+
+**Supporting Templars:** 4-6 faithful warriors who enable her positioning. They won't flee while she stands.
+
+---
+
+## Duelist Kain Moretti Defends His Employer
+
+Hired sword protecting a noble. Has a code of honor—fights to first blood in duels, doesn't attack unconscious foes, accepts surrender. Prideful and can be goaded into single combat.
+
+**Stats for Party at 3 Milestones:**
+- **Guard:** 22
+- **Vitality:** 30
+- **Damage:** 2d6+1
+- **Skills:** Professional Combat and Insight
+- **Flow:** Starts at 0
+
+**Personality:** Honorable, expects respect, announces attacks dramatically.
+
+**Weakness:** Can be talked into duels. Won't hurt bystanders. His honor is exploitable.
+
+---
+
+## The Necromancer's Laboratory
+
+An ancient necromancer in his sanctum, surrounded by undead guardians and dark rituals. Environmental hazards everywhere. Multiple ways to win beyond straight combat.
+
+**The Necromancer:**
+- Fragile personally (low Vitality)
+- Powerful magic (high Flow, dangerous spells)
+- Environmental control (can trigger hazards, seal doors)
+
+**The Undead:**
+- 10+ skeletal warriors
+- Don't break morale, don't feel fear
+- Controlled by necromancer—destroy him and they collapse
+
+**The Environment:**
+- Ritual circles that explode if disrupted
+- Shelves of volatile reagents
+- Trapped doors and windows
+- Phylactery hidden somewhere (he can't truly die without destroying it)
+
+**How This Plays:** Area effects devastate undead. Smart players target the necromancer. Creative players use the environment. The phylactery creates a second objective.
+
+---
+
+## Building Your Own Conflicts
+
+Every adversary should be a character with a name, motivation, and personality. Their stats serve their story.
+
+### Start With Who They Are
+
+**Who are they?** Name, background, appearance
+**What do they want?** Specific, immediate goal
+**Why oppose the PCs?** Clear conflict of interest
+**How do they fight?** Tactics informed by personality
+
+### Add Supporting Details
+
+**How do they react when hurt?** Fight harder? Flee? Offer terms?
+**What are they willing to die for?** Most people prefer living
+**Who do they care about?** Allies, family, ideology
+**What do they fear?** Everyone fears something
+
+### Assign Stats to Match
+
+See the Adversary Creation Guide for baseline stats. These are starting points—adjust based on:
+
+**Narrative Importance**
+- Recurring villains need durability and escape options
+- Minor threats can be frailer
+- Climactic adversaries deserve higher stats
+
+**Dramatic Needs**
+- Chase scenes: fast movement, lower vitality (should escape)
+- Social conflicts: high Presence/Mind, moderate combat
+- Sieges: high vitality to survive prolonged fighting
+
+**Story Logic**
+- Ancient guardians survived centuries—high vitality makes sense
+- Hired thugs flee when hurt—low loyalty matters more than stats
+- Zealot cultists fight to death regardless of hit points
+
+### Consider the Environment
+
+The environment can be as important as the adversaries:
+
+- Choke points make numbers less effective
+- Cover protects vulnerable enemies
+- Hazards create tactical complications
+- Interactive elements reward creativity
+
+---
+
+## Adjusting During Play
+
+If the conflict feels too easy:
+- Reinforcements arrive (makes narrative sense)
+- Enemy reveals hidden capability (was holding back)
+- Environmental complication (alarm, collapse, hazard)
+- Objective shifts (villain escapes with the prize)
+
+If the conflict feels too hard:
+- NPC ally arrives (someone who'd realistically help)
+- Enemy offers terms (most people prefer living)
+- Environmental opportunity (escape route, cover, weapon)
+- Reveal a weakness (crack in armor, old injury, fear)
+
+Make adjustments for story and drama, not mathematical balance.
+
+---
+
+*Give them names. Give them reasons. Let their personality show through their actions.*

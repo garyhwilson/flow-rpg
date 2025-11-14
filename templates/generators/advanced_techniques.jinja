@@ -2,23 +2,37 @@
 # ADVANCED TECHNIQUES
 *Generated from YAML source data*
 
-## Overview
-{{ milestone_data.moderate_milestones.options.advanced_technique.description }}
-**Requirement:** {{ milestone_data.moderate_milestones.options.advanced_technique.requirement }}
+Advanced techniques are powerful abilities you can gain at moderate milestones. They require Flow +3 to use, but provide game-changing capabilities.
 
-## Combat Techniques
+---
+
 {% for tech_id, tech_desc in milestone_data.moderate_milestones.options.advanced_technique.combat_techniques.items() %}
-- **{{ tech_id.replace('_', ' ').title() }}:** {{ tech_desc }}
+### {{ tech_id.replace('_', ' ').title() }}
+
+{{ tech_desc }}
+
+**Requirement:** Flow +3
+
 {% endfor %}
 
-## Magic Techniques
 {% for tech_id, tech_desc in milestone_data.moderate_milestones.options.advanced_technique.magic_techniques.items() %}
-- **{{ tech_id.replace('_', ' ').title() }}:** {{ tech_desc }}
+### {{ tech_id.replace('_', ' ').title() }}
+
+{{ tech_desc }}
+
+**Requirement:** Flow +3
+
 {% endfor %}
 
-## Skill Techniques
 {% for tech_id, tech_desc in milestone_data.moderate_milestones.options.advanced_technique.skill_techniques.items() %}
-- **{{ tech_id.replace('_', ' ').title() }}:** {{ tech_desc }}
+### {{ tech_id.replace('_', ' ').title() }}
+
+{{ tech_desc }}
+
+**Requirement:** Flow +3
+
 {% endfor %}
 
-*Advanced techniques require Flow +3 but provide game-changing capabilities.*
+---
+
+*Advanced techniques represent major capabilities beyond normal mortal limits. Choose ones that fit your character concept.*

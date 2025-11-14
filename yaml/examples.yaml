@@ -21,6 +21,77 @@ quick_start:
     step_3: "Start playing, learn as you go"
     step_4: "Reference rules as needed"
 
+  simplified_rules:
+    when_to_use: "First 1-2 sessions or for casual play"
+
+    core_mechanic:
+      roll: "2d6 + Attribute + Skill"
+      target: "8 for standard tasks"
+      results:
+        "6_or_less": "Failure (something goes wrong)"
+        "7_to_9": "Partial success (it works, but...)"
+        "10_plus": "Success (it works!)"
+        "13_plus": "Critical success (it works amazingly!)"
+
+    character_basics:
+      attributes: "Use the numbers on your character sheet (+3 is great, -2 is weak)"
+      skills: "Professional +1, Novice +0, Untrained -2"
+      guard: "Your health in combat (recovers after fights)"
+      vitality: "Serious injuries (harder to recover)"
+      flow: "Ranges from -3 to +6, starts at 0 each scene"
+
+    combat_simplified:
+      attacking: "Roll 2d6 + best attribute + Combat skill vs TN 8"
+      damage: "Roll weapon dice (usually 2d6), subtract enemy armor"
+      being_hit: "Lose Guard first, then Vitality"
+
+      stances:
+        aggressive: "Go first, deal +1 damage, gain Flow when you hit"
+        balanced: "Go second, most flexible, can switch stances easily"
+        defensive: "Go last, +2 to defense rolls, gain Flow when attacked"
+
+      flow_simple:
+        gain: "Critical hit (+1), taking damage (+1, once per round), stance bonuses"
+        spend: "Add +1 to any roll per Flow spent (max +3)"
+
+    magic_simplified:
+      cantrips: "Minor spells (give +1 Flow when cast)"
+      tier_1: "Basic spells (cost 0 Flow)"
+      tier_2_plus: "Powerful spells (cost Flow)"
+
+      casting: "Roll 2d6 + Mind/Awareness/Will/Presence + Sorcery"
+      advice: "Use cantrips to build Flow, then cast big spells"
+
+    skip_for_now:
+      - "GM Flow pool (just wing it)"
+      - "Signature moves (add after session 1)"
+      - "Complex techniques (introduce gradually)"
+      - "Social combat (just roleplay it)"
+      - "Death saves (if PC reaches 0 Vitality, they're unconscious but stable)"
+
+    add_later:
+      session_2: "Introduce GM Flow pool for complications"
+      session_3: "Add signature moves and advanced techniques"
+      session_4: "Full social combat rules if needed"
+
+    gm_guidance:
+      difficulty:
+        easy: "TN 7 (routine under pressure)"
+        standard: "TN 8 (challenging)"
+        hard: "TN 10 (difficult)"
+        extreme: "TN 12 (nearly impossible)"
+
+      enemies:
+        mooks: "Guard 8, Vitality 5, damage 1d6"
+        tough: "Guard 15, Vitality 12, damage 2d6"
+        major_villain: "Guard 20, Vitality 15, damage 2d6+2, acts twice per round"
+
+      pacing:
+        - "Combat should last 3-5 rounds"
+        - "Let players describe cool moves"
+        - "Failures should create interesting complications"
+        - "Partial successes move story forward with a cost"
+
 # ============================================
 # PRE-GENERATED CHARACTERS
 # ============================================
@@ -47,12 +118,12 @@ pregenerated_characters:
       presence: 0
     
     skills:
-      professional: ["Combat +2"]
-      novice: ["Athletics -1", "Command -1"]
+      professional: ["Combat +1"]
+      novice: ["Athletics +0", "Command +0"]
       untrained: "All others at -2"
-    
+
     derived_values:
-      guard: 11  # 8 + 3(Might) + 0
+      guard: 15  # 12 + max(3 Might, 0 Grace, 2 Will) = 12 + 3
       vitality: 12  # 10 + 2(Will)
       flow: 
         current: 0
@@ -104,12 +175,12 @@ pregenerated_characters:
       presence: 1
     
     skills:
-      professional: ["Survival +2"]
-      novice: ["Combat -1", "Investigate -1"]
+      professional: ["Survival +1"]
+      novice: ["Combat +0", "Investigate +0"]
       untrained: "All others at -2"
-    
+
     derived_values:
-      guard: 11  # 8 + 3(Grace) + 0
+      guard: 15  # 12 + max(0 Might, 3 Grace, -1 Will) = 12 + 3
       vitality: 9   # 10 + (-1)(Will)
       flow:
         current: 0
@@ -161,13 +232,13 @@ pregenerated_characters:
       presence: 0
     
     skills:
-      professional: ["Medicine +2", "Empathy +2"]
-      novice: ["Sorcery -1"]
+      professional: ["Medicine +1", "Empathy +1"]
+      novice: ["Sorcery +0"]
       competent: ["Persuade 0"]  # Human versatile
       untrained: "All others at -2"
-    
+
     derived_values:
-      guard: 8   # 8 + 0 + 0
+      guard: 13  # 12 + max(0 Might, 0 Grace, 1 Will) = 12 + 1
       vitality: 11  # 10 + 1(Will)
       flow:
         current: 0
@@ -223,13 +294,13 @@ pregenerated_characters:
       presence: 0
     
     skills:
-      professional: ["Stealth +2", "Finesse +2"]
-      competent: ["Deceive 0"]  # Upgraded
-      novice: ["Athletics -1"]  # New
+      professional: ["Stealth +1", "Finesse +1"]
+      competent: ["Deceive 0"]  # Upgraded via minor milestone
+      novice: ["Athletics +0"]  # New via minor milestone
       untrained: "All others at -2"
-    
+
     derived_values:
-      guard: 13  # 8 + 3(Grace) + 6(milestones)
+      guard: 17  # 12 + max(-2 Might, 3 Grace, 0 Will) + 2 (minor milestone) = 17
       vitality: 10  # 10 + 0
       flow:
         current: 0
@@ -285,14 +356,14 @@ pregenerated_characters:
       presence: 1
     
     skills:
-      expert: ["Sorcery +4"]  # Upgraded
-      professional: ["Lore +2"]
-      competent: ["Investigate 0"]  # Upgraded
-      novice: ["Craft -1"]  # New
+      expert: ["Sorcery +2"]  # Upgraded via Deepen Expertise
+      professional: ["Lore +1"]
+      competent: ["Investigate 0"]  # Upgraded via milestone
+      novice: ["Craft +0"]  # New via milestone
       untrained: "All others at -2"
-    
+
     derived_values:
-      guard: 12  # 8 + 1(Grace) + 6(milestones)
+      guard: 15  # 12 + max(-1 Might, 1 Grace, 0 Will) + 2 (milestone choice) = 15
       vitality: 10  # 10 + 0
       flow:
         current: 1  # Scholar starts at +1
@@ -355,14 +426,14 @@ play_examples:
       dice: [4, 3]
       modifiers:
         might: 3
-        athletics: -1
-      total: 9
+        athletics: 0
+      total: 10
     
     step_3_result:
-      gm: "9 is a partial success. The door splinters and swings open, but you stumble through off-balance. You're in the room but you'll have -1 to your next action as you recover."
+      gm: "10 is a full success. The door bursts open cleanly. You're through and ready for action."
     
     step_4_flow:
-      change: "No Flow change on partial success"
+      change: "No Flow change on full success (Flow only on crit 13+)"
   
   combat_round:
     scenario: "Party fights goblin ambushers"
@@ -380,18 +451,18 @@ play_examples:
       goblin_chief:
         action: "Charges Marcus"
         roll: [5, 4]
-        modifiers: "+2 Combat"
+        modifiers: "+1 Combat, +1 attribute"
         total: 11
         result: "Hits for 7 damage, reduced to 5 by armor"
-        marcus_guard: "11 → 6"
+        marcus_guard: "15 → 10"
         flow: "Chief gains +1 (Aggressive hit)"
     
     turn_2_balanced:
       silvara:
         action: "Shoots Chief with bow"
         roll: [6, 5]
-        modifiers: "+3 Grace, -1 Combat"
-        total: 13
+        modifiers: "+3 Grace, +0 Combat"
+        total: 14
         result: "Critical! 2d6 damage: 9 to Chief"
         flow: "Silvara gains +1 (critical)"
     
@@ -399,25 +470,25 @@ play_examples:
       marcus:
         action: "Defends and watches for opening"
         roll: [3, 5]
-        modifiers: "+0 Grace, +2 Combat"
-        total: 10
-        result: "Success, +2 Guard until next turn"
-        guard: "6 → 8 temporary"
-        flow: "+1 (successful defense in Defensive)"
+        modifiers: "+0 Grace, +1 Combat"
+        total: 9
+        result: "Partial success, +1 Guard until next turn"
+        guard: "10 → 11 temporary"
+        flow: "+1 (attacked in Defensive stance)"
       
       elena:
         action: "Casts Heal on Marcus"
         roll: [4, 6]
-        modifiers: "+2 Mind, -1 Sorcery"
-        total: 11
-        result: "Success, Marcus regains 2d6: 8 Guard"
-        marcus_guard: "8 → 11 (full)"
-        flow: "Elena at -1 (spell cost)"
+        modifiers: "+2 Mind, +0 Sorcery"
+        total: 12
+        result: "Full success, Marcus regains 2d6: 8 Guard"
+        marcus_guard: "11 → 15 (full)"
+        flow: "Elena at 0 (Tier 1 spell costs 0)"
       
       goblin_archers:
         action: "Fire at Silvara"
         result: "One hits for 5 damage"
-        silvara_guard: "11 → 6"
+        silvara_guard: "15 → 10"
         silvara_flow: "+1 (took damage)"
   
   social_encounter:
@@ -433,8 +504,8 @@ play_examples:
         stance: "Defensive (listening)"
         action: "I listen to his concerns first"
         roll: [5, 6]
-        modifiers: "+1 Awareness, +2 Empathy"
-        total: 14
+        modifiers: "+1 Awareness, +1 Empathy"
+        total: 13
         result: "Critical! Learn guard lost family to adventurers"
         flow: "+1 (Defensive in social)"
     
@@ -465,8 +536,8 @@ play_examples:
         stance: "Aggressive"
         action: "Cast Spark cantrip"
         roll: [4, 5]
-        modifiers: "+3 Mind, +4 Sorcery"
-        total: 16
+        modifiers: "+3 Mind, +2 Sorcery"
+        total: 14
         result: "Hit! 1d6: 4 damage"
         flow: "+2 total (cantrip +1, Aggressive +1)"
         new_flow: 3

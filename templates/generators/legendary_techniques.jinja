@@ -2,23 +2,37 @@
 # LEGENDARY TECHNIQUES
 *Generated from YAML source data*
 
-## Overview
-{{ milestone_data.major_milestones.options.legendary_technique.description }}
-**Requirement:** {{ milestone_data.major_milestones.options.legendary_technique.requirement }}
+Legendary techniques are ultimate abilities you can gain at major milestones. They require Flow +6 to use and represent the pinnacle of mortal capability.
 
-## Combat Legendary Techniques
+---
+
 {% for tech_id, tech_desc in milestone_data.major_milestones.options.legendary_technique.combat.items() %}
-- **{{ tech_id.replace('_', ' ').title() }}:** {{ tech_desc }}
+### {{ tech_id.replace('_', ' ').title() }}
+
+{{ tech_desc }}
+
+**Requirement:** Flow +6
+
 {% endfor %}
 
-## Magic Legendary Techniques
 {% for tech_id, tech_desc in milestone_data.major_milestones.options.legendary_technique.magic.items() %}
-- **{{ tech_id.replace('_', ' ').title() }}:** {{ tech_desc }}
+### {{ tech_id.replace('_', ' ').title() }}
+
+{{ tech_desc }}
+
+**Requirement:** Flow +6
+
 {% endfor %}
 
-## Skill Legendary Techniques
 {% for tech_id, tech_desc in milestone_data.major_milestones.options.legendary_technique.skill.items() %}
-- **{{ tech_id.replace('_', ' ').title() }}:** {{ tech_desc }}
+### {{ tech_id.replace('_', ' ').title() }}
+
+{{ tech_desc }}
+
+**Requirement:** Flow +6
+
 {% endfor %}
 
-*Legendary techniques require Flow +6 and represent the pinnacle of mortal capability.*
+---
+
+*These are the abilities that define legendary heroes. Choose ones that match your character's legend.*

@@ -1,0 +1,500 @@
+# Flow RPG Universal Techniques
+# Version: 2.0-restructured
+# Abilities available to all characters through milestones
+
+techniques_system:
+  philosophy:
+    core_concept: "Any character can learn any technique with proper training"
+    design_principles:
+      - "No archetype gates - abilities available to all"
+      - "Narrative justification enhances acquisition"
+      - "Flow cost balances powerful techniques"
+      - "Milestone choices provide access"
+
+  acquisition_methods:
+    milestone_choice:
+      description: "Select technique instead of other advancement"
+      availability: "Any milestone level"
+
+    training:
+      description: "Learn from mentor or through practice"
+      requirement: "Downtime and narrative justification"
+      cost: "Time and possibly gold"
+
+    discovery:
+      description: "Find in ancient texts or through experimentation"
+      requirement: "Research or exploration"
+
+    archetype_package:
+      description: "Archetypes provide starting techniques"
+      benefit: "Immediate access without separate learning"
+
+# ============================================
+# COMBAT TECHNIQUES
+# ============================================
+
+combat_techniques:
+  description: "Martial abilities for all warriors"
+  source: "Originally Fighter archetype"
+
+  basic_techniques:
+    available_to: "All characters"
+    no_prerequisites: true
+
+    defensive_stance:
+      effect: "+2 Guard until next turn"
+      cost: "Action"
+      flow_cost: 0
+
+    power_attack:
+      effect: "-2 to hit, +2 damage"
+      cost: "Modifies attack"
+      flow_cost: 0
+
+    combat_expertise:
+      effect: "+1 to combat rolls in chosen situation"
+      examples: ["Dueling", "Mounted", "Defensive"]
+      acquisition: "Minor milestone"
+
+  flow_techniques:
+    note: "No prerequisites - just milestone + Flow cost"
+
+    riposte:
+      trigger: "After successful defense"
+      effect: "Immediate counterattack"
+      flow_cost: 1
+      acquisition: "Minor milestone"
+
+    press_advantage:
+      trigger: "While at Flow +2 or higher"
+      effect: "+1d6 damage on all attacks"
+      flow_cost: "Passive while condition met"
+      acquisition: "Minor milestone"
+
+    perfect_strike:
+      effect: "Next attack ignores armor"
+      flow_cost: 2
+      acquisition: "Moderate milestone"
+
+  advanced_techniques:
+    note: "Flow cost is the only gate"
+
+    whirlwind_strike:
+      effect: "Attack all adjacent enemies"
+      damage: "Normal weapon damage to each"
+      flow_cost: 3
+      acquisition: "Moderate milestone"
+
+    devastating_blow:
+      effect: "Double damage dice on next attack"
+      flow_cost: 3
+      limit: "Once per scene"
+      acquisition: "Moderate milestone"
+
+    battlefield_control:
+      effect: "Reposition all combatants in zone"
+      flow_cost: 3
+      acquisition: "Major milestone"
+
+# ============================================
+# METAMAGIC TECHNIQUES
+# ============================================
+
+metamagic:
+  description: "Spell modifications for all casters"
+  source: "Originally Wizard archetype"
+  note: "Available to anyone who can cast spells"
+
+  basic_metamagic:
+    note: "No prerequisites beyond spell access"
+
+    subtle_spell:
+      effect: "Cast without visible components"
+      flow_cost: 1
+      benefit: "Cannot be counterspelled"
+      acquisition: "Minor milestone"
+
+    extended_spell:
+      effect: "Double spell duration"
+      flow_cost: 1
+      restriction: "Duration spells only"
+      acquisition: "Minor milestone"
+
+    careful_spell:
+      effect: "Exclude allies from area effects"
+      flow_cost: 1
+      acquisition: "Minor milestone"
+
+  advanced_metamagic:
+    note: "Available through moderate milestones"
+
+    empowered_spell:
+      effect: "Add extra damage die"
+      flow_cost: 2
+      acquisition: "Moderate milestone"
+
+    twinned_spell:
+      effect: "Target two creatures"
+      flow_cost: 2
+      restriction: "Single-target spells only"
+      acquisition: "Moderate milestone"
+
+    quickened_spell:
+      effect: "Cast as bonus action"
+      flow_cost: 3
+      limit: "Once per turn"
+      acquisition: "Moderate milestone"
+
+  master_metamagic:
+    note: "Available through major milestones"
+
+    heightened_spell:
+      effect: "Increase save TN by 2"
+      flow_cost: 3
+      acquisition: "Major milestone"
+
+    persistent_spell:
+      effect: "Spell lasts entire scene"
+      flow_cost: 4
+      acquisition: "Major milestone"
+
+# ============================================
+# DIVINE TECHNIQUES
+# ============================================
+
+divine_techniques:
+  description: "Faith-based abilities"
+  source: "Originally Cleric/Paladin archetypes"
+  note: "Can be reflavored as primal or arcane"
+
+  healing_techniques:
+    no_spell_requirement: true
+
+    lay_on_hands:
+      effect: "Heal 1d6 Vitality by touch"
+      flow_cost: 1
+      daily_uses: "Will modifier (minimum 1)"
+      acquisition: "Minor milestone"
+
+    healing_surge:
+      effect: "All allies in zone recover 1d6 Guard"
+      flow_cost: 2
+      limit: "Once per scene"
+      acquisition: "Moderate milestone"
+
+  smite_techniques:
+    requirement: "Narrative alignment with cause"
+
+    divine_strike:
+      effect: "+1d6 radiant damage vs opposed alignment"
+      flow_cost: 1
+      acquisition: "Minor milestone"
+
+    banishing_smite:
+      effect: "Send extraplanar creature home"
+      flow_cost: 3
+      save: "Will TN 10"
+      acquisition: "Moderate milestone"
+
+  aura_techniques:
+    requirement: "Presence +1 or higher"
+
+    protective_aura:
+      effect: "Allies in zone get +1 to saves"
+      flow_cost: 2
+      duration: "Scene"
+      acquisition: "Moderate milestone"
+
+    inspiring_presence:
+      effect: "Allies gain +1 Flow when you succeed"
+      flow_cost: "Passive once activated"
+      activation: 3
+      acquisition: "Major milestone"
+
+# ============================================
+# ROGUISH GAMBITS
+# ============================================
+
+gambits:
+  description: "High-risk, high-reward maneuvers"
+  source: "Originally Rogue archetype"
+
+  basic_gambits:
+    available_to: "All characters"
+
+    sneak_attack:
+      trigger: "Attack with advantage or surprise"
+      effect: "+1d6 damage"
+      requirement: "Target unaware or flanked"
+      acquisition: "Minor milestone"
+
+      progression:
+        basic: "+1d6 damage (Minor milestone)"
+        improved: "+2d6 damage (Moderate milestone)"
+        note: "Caps at 2d6 to prevent overshadowing Fighter damage output"
+
+      critical_interaction:
+        rule: "Sneak Attack dice are NOT multiplied on critical hits"
+        reasoning: "Prevents damage spikes from turning crits into guaranteed kills"
+        example:
+          normal_hit: "2d6+3 (weapon) + 2d6 (sneak) = 4d6+3 avg 17"
+          critical_hit: "2d6+3 (weapon) + 2d6 (sneak) = 4d6+3 avg 17 (same!)"
+          without_this_rule: "Would be 6d6+3 avg 24 (too much)"
+
+    dirty_trick:
+      effect: "Blind, trip, or disarm opponent"
+      contest: "Finesse vs defense"
+      flow_generation: "+1 on success"
+      acquisition: "Minor milestone"
+
+  advanced_gambits:
+    requirement: "Grace or Mind +2"
+
+    impossible_dodge:
+      trigger: "About to take damage"
+      effect: "Negate all damage from source"
+      flow_cost: 3
+      limit: "Once per scene"
+      acquisition: "Moderate milestone"
+
+    shadow_step:
+      effect: "Teleport behind enemy"
+      range: "Within same zone"
+      flow_cost: 2
+      bonus: "Next attack has advantage"
+      acquisition: "Moderate milestone"
+
+  master_gambits:
+    requirement: "Multiple successes with basic gambits"
+
+    death_mark:
+      effect: "Study target for vulnerability"
+      duration: "One round studying"
+      benefit: "Critical on 10+ vs that target"
+      flow_cost: 3
+      acquisition: "Major milestone"
+
+# ============================================
+# BARDIC INSPIRATION
+# ============================================
+
+inspiration_techniques:
+  description: "Support and motivation abilities"
+  source: "Originally Bard archetype"
+
+  basic_inspiration:
+    requirement: "Presence +1 or Perform skill"
+
+    inspiring_word:
+      effect: "Ally gains +1d6 to next roll"
+      range: "Can hear you"
+      flow_cost: 1
+      uses: "Presence modifier per scene"
+      acquisition: "Minor milestone"
+
+    cutting_words:
+      effect: "Enemy suffers -1d6 to next roll"
+      range: "Can hear and understand you"
+      flow_cost: 1
+      acquisition: "Minor milestone"
+
+  performance_magic:
+    requirement: "Perform skill and spell access"
+
+    song_of_rest:
+      effect: "Double healing during short rest"
+      duration: "10 minutes performance"
+      acquisition: "Minor milestone"
+
+    countercharm:
+      effect: "Allies immune to charm/fear"
+      duration: "While performing"
+      flow_cost: 2
+      acquisition: "Moderate milestone"
+
+  legendary_performance:
+    requirement: "Perform Expert (+2)"
+    note: "Expert is the pinnacle of mortal skill"
+
+    mass_suggestion:
+      effect: "Influence crowd's emotions"
+      save: "Will TN 10"
+      flow_cost: 4
+      acquisition: "Major milestone"
+
+# ============================================
+# TERRAIN MASTERY
+# ============================================
+
+terrain_mastery:
+  description: "Environmental expertise"
+  source: "Originally Ranger archetype"
+
+  basic_terrain:
+    selection: "Choose one terrain type"
+
+    terrain_types:
+      forest:
+        benefits:
+          - "Move through trees without slowing"
+          - "Cannot be tracked"
+          - "+2 to Survival"
+
+      mountain:
+        benefits:
+          - "Climb at normal speed"
+          - "Immune to altitude"
+          - "+2 to Athletics"
+
+      urban:
+        benefits:
+          - "Blend into crowds"
+          - "Know all shortcuts"
+          - "+2 to Stealth"
+
+      desert:
+        benefits:
+          - "Half water requirements"
+          - "Immune to heat exhaustion"
+          - "+2 to Survival"
+
+    acquisition: "Minor milestone per terrain"
+
+  advanced_terrain:
+    requirement: "Basic mastery in terrain"
+
+    one_with_environment:
+      effect: "Invisible while still in terrain"
+      flow_cost: 2
+      acquisition: "Moderate milestone"
+
+    territorial_advantage:
+      effect: "+1 to all rolls in chosen terrain"
+      passive: true
+      acquisition: "Moderate milestone"
+
+  legendary_terrain:
+    requirement: "Multiple terrain masteries"
+
+    worldwalker:
+      effect: "Benefits of all terrains"
+      acquisition: "Major milestone"
+
+# ============================================
+# UNIVERSAL TECHNIQUES
+# ============================================
+
+universal_techniques:
+  description: "Abilities not tied to any archetype"
+
+  flow_mastery:
+    flow_conservation:
+      effect: "Reduce all Flow costs by 1 (minimum 0)"
+      acquisition: "Major milestone"
+
+    flow_battery:
+      effect: "Maximum Flow increased to +8"
+      acquisition: "Major milestone"
+
+    flow_transfer:
+      effect: "Give Flow to adjacent ally"
+      rate: "2 for 1"
+      acquisition: "Moderate milestone"
+
+  legendary_abilities:
+    requirement: "Two Major milestones"
+
+    unstoppable:
+      effect: "Immune to all conditions for scene"
+      flow_cost: 6
+      limit: "Once per day"
+
+    perfect_action:
+      effect: "Automatically succeed at any one roll"
+      flow_cost: 6
+      limit: "Once per session"
+
+    legendary_resistance:
+      effect: "Turn any failure into success"
+      flow_cost: 3
+      limit: "Three times per day"
+
+# ============================================
+# TECHNIQUE COMBINATIONS
+# ============================================
+
+technique_combinations:
+  description: "Using multiple techniques together"
+
+  examples:
+    spell_blade:
+      components:
+        - "Quickened Spell (cast as bonus)"
+        - "Perfect Strike (ignore armor)"
+      total_cost: 5
+      effect: "Cast spell and attack in same turn"
+
+    perfect_ambush:
+      components:
+        - "Shadow Step (teleport)"
+        - "Sneak Attack (bonus damage)"
+        - "Death Mark (improved critical)"
+      total_cost: 6
+      effect: "Devastating surprise attack"
+
+    divine_storm:
+      components:
+        - "Whirlwind Strike (hit all)"
+        - "Divine Strike (radiant damage)"
+        - "Inspiring Presence (allies gain Flow)"
+      total_cost: 7
+      effect: "Inspire allies while destroying enemies"
+
+  design_note: "Combinations reward system mastery"
+
+# ============================================
+# LEARNING PATHS
+# ============================================
+
+suggested_paths:
+  warrior_path:
+    minor_milestones:
+      - "Combat Expertise"
+      - "Riposte"
+      - "Weapon Focus"
+    moderate_milestones:
+      - "Whirlwind Strike"
+      - "Perfect Strike"
+    major_milestone:
+      - "Battlefield Control"
+
+  caster_path:
+    minor_milestones:
+      - "Subtle Spell"
+      - "Careful Spell"
+      - "Extended Spell"
+    moderate_milestones:
+      - "Empowered Spell"
+      - "Quickened Spell"
+    major_milestone:
+      - "Persistent Spell"
+
+  support_path:
+    minor_milestones:
+      - "Inspiring Word"
+      - "Lay on Hands"
+      - "Song of Rest"
+    moderate_milestones:
+      - "Healing Surge"
+      - "Protective Aura"
+    major_milestone:
+      - "Inspiring Presence"
+
+  custom_path:
+    philosophy: "Mix and match as desired"
+    example:
+      - "Sneak Attack + Subtle Spell"
+      - "Riposte + Inspiring Word"
+      - "Terrain Mastery + Metamagic"
+
+# End of Techniques File

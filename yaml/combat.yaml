@@ -23,10 +23,7 @@ stances:
 
     flow_generation:
       successful_attack: 1
-      charging:
-        trigger: "Move 2+ zones toward enemy"
-        amount: 2
-        limit: "Once per turn"
+      note: "Removed charging bonus for balance"
 
     modifiers:
       damage_bonus: 1
@@ -45,8 +42,7 @@ stances:
     tactical_notes: "High risk, high reward - generates Flow through decisive action"
 
     restrictions:
-      heavy_armor_original: "Cannot use (removed in rebalance)"
-      heavy_armor_revised: "Can use with -1 Flow generation penalty"
+      heavy_armor: "None - all armor types can use aggressive stance"
   
   balanced:
     name: "Balanced Stance"
@@ -54,12 +50,12 @@ stances:
     when_to_use: "When facing unpredictable threats, maintaining flexibility, or learning enemy capabilities"
 
     turn_order: 2
-    
+
     flow_generation:
-      critical_success: 
-        trigger: "Any critical success"
+      excellence:
+        trigger: "Any roll of 10+ (natural, before modifiers)"
         amount: 1
-        note: "Stacks with universal critical Flow"
+        note: "Rewards solid rolls, about 42% chance"
     
     modifiers:
       damage_bonus: 0
@@ -91,7 +87,8 @@ stances:
       being_attacked:
         trigger: "Targeted by attack"
         amount: 1
-        limit: "Once per round"
+        limit: "Once per round total (not per attacker)"
+        note: "First time you're attacked each round, gain +1 Flow regardless of how many attackers"
       successful_defense:
         trigger: "Successfully defend"
         amount: 1
@@ -99,7 +96,8 @@ stances:
     
     modifiers:
       damage_penalty: -1
-      defense_bonus: 2
+      defense_bonus: 4
+      damage_reduction: 2
     
     movement:
       disengage: "Can leave engagement without provoking"
@@ -139,7 +137,7 @@ stance_interactions:
 zones:
   ranges:
     engaged:
-      distance: "Melee combat range"
+      distance: "0 - Wrestling/sword range"
       description: "In direct combat with specific opponents"
       weapon_use:
         melee: "Normal"
@@ -148,7 +146,7 @@ zones:
       movement: "Cannot move past enemies without special ability"
     
     close:
-      distance: "One move from engagement"
+      distance: "1 - Across a room (30 feet)"
       description: "Throwing range, near combat"
       weapon_use:
         melee: "Cannot attack"
@@ -157,7 +155,7 @@ zones:
       movement: "Can engage or stay at range"
     
     far:
-      distance: "Two moves from engagement"
+      distance: "2 - Across a hall (60 feet)"
       description: "Bow range, safe from melee"
       weapon_use:
         melee: "Cannot attack"
@@ -166,7 +164,7 @@ zones:
       movement: "Must move twice to engage"
     
     extreme:
-      distance: "Three+ moves from engagement"
+      distance: "3+ - Shouting distance (120+ feet)"
       description: "Beyond normal combat"
       weapon_use:
         melee: "Cannot affect"
@@ -206,44 +204,48 @@ zones:
 
 health_system:
   guard:
-    formula: "8 + max(might, grace) + (total_milestones × 2)"
-    
+    formula: "12 + max(might, grace, will)"
+
     function:
       - "Ablative defense layer"
-      - "Represents dodging, armor, luck"
+      - "Represents dodging, armor, luck, and mental fortitude"
       - "First to take damage"
-    
+
+    design_note: "Will added to formula allows casters to use mental fortitude for defense"
+
     recovery:
       between_scenes: "Full restoration"
       rally_action:
         effect: "Recover 1d6 Guard"
         limit: "Once per scene"
         action_cost: "Full action"
-    
-    milestone_scaling:
-      rate: "×2 per milestone"
-      justification: "Combat experience and awareness"
-    
+
+    progression:
+      method: "Through milestone choices, not automatic"
+      options: "See advancement.yaml for Guard increase options"
+
+    design_note: "Base 12 + attribute ensures 2-3 hit survivability. Will inclusion gives casters 15+ Guard."
+
     armor_bonus:
-      medium_armor: "+1 Guard at scene start"
+      medium_armor: "+2 Guard at scene start"
       special_abilities: "Various edges grant +2"
   
   vitality:
-    formula: "10 + will + (major_milestones × 3)"
-    
+    formula: "10 + will"
+
     function:
       - "Core health"
       - "Serious injury threshold"
       - "Death trigger at 0"
-    
+
     recovery:
       natural: "1 per hour of rest"
       medical: "Medicine check restores 1d6"
       magical: "Varies by spell level"
-    
-    milestone_scaling:
-      rate: "×3 per major milestone only"
-      justification: "Heroic resilience develops slowly"
+
+    progression:
+      method: "Through milestone choices, not automatic"
+      options: "See advancement.yaml for Vitality increase options"
     
     damage_consequences:
       half_vitality: "Visible injuries"
@@ -260,39 +262,71 @@ damage_resolution:
     6: "Check for death/dying if Vitality = 0"
   
   damage_scaling:
-    milestone_bonus:
-      rate: "+1 per 2 milestones"
-      applies_to: "All attacks"
-    
-    weapon_die_upgrade:
-      5_milestones: "d6 → d8"
-      10_milestones: "Add exploding dice"
-      15_milestones: "d8 → d10"
-    
-    spell_scaling:
-      3_milestones: "+1d6 damage"
-      6_milestones: "+1 save TN"
-      10_milestones: "+1d6 damage"
+    philosophy: "Damage increases through choices, not automatically"
+
+    options:
+      weapon_focus: "Minor milestone: +1 damage with weapon type"
+      improved_casting: "Moderate milestone: +1d6 spell damage"
+      legendary_strike: "Major milestone: Critical on 11+ with chosen weapon"
+
+    note: "See advancement.yaml for specific damage improvement options"
   
   damage_types:
     physical:
       description: "Normal weapon damage"
       reduction: "Armor applies fully"
-    
+
     elemental:
       description: "Fire, cold, lightning, etc."
       reduction: "Armor applies half"
       special: "May have ongoing effects"
-    
+
     psychic:
       description: "Mental damage"
       reduction: "Armor doesn't apply"
       defense: "Will-based resistance"
-    
+
     true:
       description: "Cannot be reduced"
       reduction: "Nothing applies"
       rarity: "Very rare, high-level only"
+
+  critical_hits:
+    trigger: "Attack roll meets or exceeds critical threshold"
+    threshold: "13 + (total_modifier ÷ 3, rounded down)"
+
+    effect_in_combat:
+      damage: "Roll damage normally, then add +1d6 bonus damage"
+      flow: "+1 Flow as normal for critical success"
+      narrative: "Describe exceptional impact"
+
+    important_note: "Critical hits do NOT double damage dice"
+
+    design_rationale:
+      reason: "Prevents one-shot kills while keeping crits special"
+      math: "At +5 cap, crits add 3.5 average bonus (not doubling 10+ damage)"
+      balance: "Single crit won't drop a PC from full to death"
+
+    examples:
+      longsword_crit:
+        normal_damage: "2d6+3 (average 10)"
+        critical_damage: "2d6+3 + 1d6 (average 13.5)"
+        note: "+3.5 bonus, not double to 20"
+
+      fireball_crit:
+        normal_damage: "2d6+2 (average 9)"
+        critical_damage: "2d6+2 + 1d6 (average 12.5)"
+        note: "Spells also add +1d6, not double"
+
+    special_abilities:
+      sneak_attack_interaction:
+        rule: "Sneak Attack dice are NOT added to crit bonus"
+        example: "2d6+2 (weapon) + 2d6 (sneak) + 1d6 (crit) = 5d6+2"
+        note: "See techniques.yaml for full Sneak Attack rules"
+
+      critical_techniques:
+        some_abilities: "May have special crit interactions"
+        reference: "See individual technique descriptions"
 
 death_and_dying:
   unconscious:
@@ -301,26 +335,51 @@ death_and_dying:
     duration: "Until stabilized or dead"
   
   death_saves:
-    roll: "2d6 + will"
+    roll: "2d6 + Will"
     timing: "Start of each turn while dying"
-    
+
     results:
-      6_or_less:
+      5_or_less:
         effect: "Lose 1 Vitality"
         description: "Getting worse"
-      
-      7_to_8:
+
+      6_to_7:
         effect: "Stable this round"
         description: "Holding on"
-      
-      9_to_11:
+
+      8_to_10:
         effect: "Stabilize at 0 Vitality"
         description: "Unconscious but stable"
-      
-      12_plus:
+
+      11_plus:
         effect: "Conscious at 1 Vitality"
         description: "Heroic recovery"
-  
+
+    design_note: "Will modifier makes death saves less random"
+
+    success_rate_examples:
+      will_0:
+        modifier: "+0"
+        stabilize_8_plus: "42% chance per round"
+        survive_one_round: "72% chance (6+ keeps you alive)"
+
+      will_2:
+        modifier: "+2"
+        stabilize_8_plus: "58% chance per round"
+        survive_one_round: "83% chance"
+        note: "Typical cleric/paladin - very resilient"
+
+      will_5:
+        modifier: "+5"
+        stabilize_8_plus: "91% chance per round"
+        survive_one_round: "97% chance"
+        note: "Late campaign - death saves are reliable"
+
+    practical_guidance:
+      low_will: "Around 50/50 to stabilize each round - allies should help!"
+      mid_will: "Likely to stabilize in 1-2 rounds on your own"
+      high_will: "Very hard to kill - will probably stabilize"
+
   death:
     trigger: "Vitality reaches -3"
     effect: "Character dies"
@@ -371,9 +430,9 @@ armor:
     penalties:
       grace: -1
       flow: "None"
-      spellcasting: -1
+      spellcasting: 0
     benefits:
-      guard: "+1 Guard at scene start"
+      guard: "+2 Guard at scene start"
       balance: "No stance restrictions"
     description: "Versatile protection"
     examples: ["Chain shirt", "Scale mail", "Breastplate"]
@@ -382,13 +441,15 @@ armor:
     damage_reduction: 4
     penalties:
       grace: -2
-      flow: "-1 to all Flow generation"
-      spellcasting: -3
+      flow: "None"
+      spellcasting: -2
+      movement: "Maximum 1 zone per turn (cannot be increased by edges)"
     benefits:
       knockback_immunity: "Cannot be moved by attacks"
-      damage_reduction: "Highest in game"
-    description: "Maximum protection at cost of mobility"
+      damage_reduction: "Highest protection (DR 4)"
+    description: "Maximum protection at significant mobility cost"
     examples: ["Full plate", "Splint mail"]
+    design_note: "DR 4 means average attack (7 damage) still deals 3 damage"
   
   shields:
     buckler:
@@ -633,13 +694,36 @@ combat_techniques:
 # ============================================
 
 signature_moves:
+  description: "Personalized techniques that define your fighting style"
+  philosophy: "Earned power that represents mastery and personal style"
+
   creation:
     when: "Moderate milestone"
+    timing_note: "Awarded at session 4 typically, when character identity is established"
     components:
       - "Name (personal to character)"
-      - "Mechanical effect"
-      - "Flow cost (1 less than normal)"
-      - "Narrative description"
+      - "Mechanical effect (based on existing technique)"
+      - "Flow cost (1 less than normal technique, minimum 0)"
+      - "Narrative description (how it looks and feels)"
+
+    creation_guidelines:
+      base_technique: "Choose any technique you know as foundation"
+      discount: "Costs 1 Flow less than normal (minimum 0)"
+      restrictions: "Must have used the base technique successfully in play"
+      balance: "Should feel earned through character development"
+
+    examples:
+      riposte_signature:
+        base: "Riposte (normally 1 Flow)"
+        signature_cost: 0
+        name: "Example: 'Viper's Response'"
+        requirement: "Must have successfully used Riposte at least twice"
+
+      press_advantage_signature:
+        base: "Press Advantage (normally passive at Flow +2)"
+        signature_version: "Activates at Flow +1 instead"
+        name: "Example: 'Relentless Assault'"
+        requirement: "Must have maintained Flow +2 in multiple combats"
   
   examples:
     fighter_magnus:
@@ -716,6 +800,70 @@ environmental_factors:
     
     blinding_light:
       effect: "-1 to all actions for 1 round"
+
+# ============================================
+# RETREAT AND ESCAPE
+# ============================================
+
+retreat_mechanics:
+  overview:
+    description: "Combat doesn't always end in victory or death"
+    philosophy: "Provide meaningful options for escape without encouraging cowardice"
+
+  fighting_withdrawal:
+    description: "Orderly retreat while defending"
+    requirement: "All party members use Defensive stance"
+    effect: "Party can disengage from combat"
+    cost: "Each character loses 1 Flow"
+
+    procedure:
+      1: "All party members switch to Defensive stance"
+      2: "Each member loses 1 Flow (can go negative)"
+      3: "Party moves 1 zone away as coordinated action"
+      4: "Enemies may make one final attack at -2"
+
+    tactical_note: "Coordinated defense allows escape, but costs momentum"
+
+  rout:
+    description: "Panicked flight from overwhelming danger"
+    trigger: "Half or more of party at 0 Guard"
+    alternative_trigger: "All party members agree to flee"
+
+    effect: "Party scatters and escapes"
+    consequences:
+      immediate: "Enemies get one free attack per party member"
+      flow: "All party members drop to -3 Flow"
+      narrative: "Must regroup at safe location"
+
+    recovery: "Party must take short rest before regaining Flow or continuing"
+
+  tactical_retreat:
+    description: "Abandoning position while minimizing losses"
+    requirement: "At least one party member remains at positive Guard"
+
+    method: "Party designates rear guard"
+    rear_guard:
+      role: "Covers party escape"
+      benefit: "Party members escape without attacks"
+      cost: "Rear guard faces all enemies alone for 1 round"
+      reward: "Rear guard gains +2 Flow for bravery"
+
+    design_note: "Creates heroic moments while enabling escape"
+
+  pursuit:
+    description: "Enemies chasing fleeing party"
+    gm_discretion: true
+
+    factors:
+      enemy_motivation: "How much do they want to catch you?"
+      terrain: "Can party lose them in complex environment?"
+      speed: "Do enemies move faster?"
+
+    escape_check:
+      roll: "2d6 + grace or survival"
+      tn: "10 for determined pursuit, 8 for casual"
+      success: "Party escapes clean"
+      failure: "Another encounter at disadvantage"
 
 # ============================================
 # SOCIAL COMBAT

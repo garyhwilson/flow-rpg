@@ -1,6 +1,6 @@
 # Flow RPG Game Master Tools
 # Version: 1.0-complete
-# GM guidance, encounter building, and campaign management
+# GM guidance, scene design, and campaign management
 
 gm_system:
   philosophy:
@@ -59,17 +59,167 @@ flow_management:
       - "Creates tension"
       - "Players understand stakes"
       - "Collaborative storytelling"
-    
+
     communication:
       gaining: "I'm gaining Flow from that failure"
       spending: "Spending 2 Flow for complication"
       warning: "I have 8 Flow built up..."
 
+  play_examples:
+    example_1_building_tension:
+      setup: "4 players, GM starts with 7 Flow (3 + 4 players)"
+
+      scene_1_investigation:
+        pc_action: "Party investigates cult hideout, PC fails Stealth check"
+        gm_gains: "+1 Flow (player failure)"
+        gm_total: "8 Flow"
+        gm_announces: "That's +1 for me on that failure. I'm at 8 now."
+
+      scene_2_ambush:
+        gm_spends: "3 Flow for reinforcements"
+        effect: "Cultists arrive as party discovers ritual chamber"
+        gm_total: "5 Flow"
+        gm_announces: "Spending 3 Flow—reinforcements arrive!"
+
+      combat:
+        round_1: "PC crits, villain fails save"
+        gm_gains: "+1 (villain failure)"
+        round_3: "Villain escapes dramatically"
+        gm_spends: "2 Flow (escape route)"
+        gm_total: "4 Flow"
+
+      scene_3_confrontation:
+        gm_gains: "+2 (dramatic scene transition to ritual site)"
+        gm_total: "6 Flow"
+        climax: "Final battle with enhanced villain (2 Flow spent earlier)"
+
+    example_2_pacing_combat:
+      setup: "major villain fight, GM at 4 Flow"
+
+      round_1:
+        elite_action: "Champion attacks, hits two PCs"
+        pc_failure: "PC misses attack badly"
+        gm_gains: "+1 (PC failure)"
+        gm_total: "5 Flow"
+
+      round_2:
+        gm_decision: "Party doing well, need to raise stakes"
+        gm_spends: "1 Flow (environmental hazard)"
+        effect: "Ceiling begins collapsing, 1d6 damage per round"
+        gm_announces: "The ritual destabilizes—spending 1 Flow, ceiling collapses!"
+        gm_total: "4 Flow"
+
+      round_4:
+        situation: "Champion nearly defeated, dramatically appropriate exit"
+        gm_spends: "2 Flow (escape route)"
+        effect: "Champion teleports away: 'This isn't over!'"
+        narrative: "Villain survives for recurring threat"
+        gm_total: "2 Flow"
+
+    example_3_social_encounter:
+      setup: "Negotiation with noble, GM at 6 Flow"
+
+      round_1:
+        pc_action: "PC attempts Persuade, rolls 6 total (failure)"
+        gm_gains: "+1 (PC failure)"
+        noble_reaction: "The Count laughs derisively"
+        gm_total: "7 Flow"
+
+      round_2:
+        gm_decision: "Make this interesting"
+        gm_spends: "1 Flow (introduce complication)"
+        effect: "Count's rival enters, overhears negotiation"
+        gm_announces: "Spending 1 Flow—Baron Markus enters"
+        narrative: "Now players can leverage rivalry"
+        gm_total: "6 Flow"
+
+      resolution:
+        outcome: "Party succeeds through clever play with rival"
+        gm_gains: "+1 (tension peaked when rivals confronted)"
+        gm_total: "7 Flow (saved for next session)"
+
+    example_4_when_not_to_spend:
+      situation: "Party low on resources, barely surviving"
+      gm_flow: "9 Flow available"
+      gm_decision: "DON'T spend—let them have the win"
+      rationale: "Pacing: They earned this victory through clever play"
+      alternative: "Save Flow for next scene's dramatic entrance"
+
+    example_5_transparent_play:
+      gm_habit: "Announce all Flow changes"
+      benefits:
+        - "Players see consequences of failures"
+        - "Tension builds as GM Flow increases"
+        - "Players understand why complications arrive"
+
+      typical_session:
+        start: "GM at 7 Flow"
+        mid_session: "GM at 5 Flow (spent on complications)"
+        climax: "GM at 9 Flow (built up from failures)"
+        resolution: "GM at 3 Flow (major spends on climax)"
+        next_session: "GM starts fresh at 7 Flow (3+4)"
+
+  optional_variant:
+    when_to_skip: "First 1-2 sessions, casual play, or if tracking feels burdensome"
+
+    running_without_gm_flow:
+      philosophy: "Trust narrative instincts instead of mechanical tracking"
+
+      introduce_complications_when:
+        - "Drama naturally calls for it"
+        - "Players succeed too easily"
+        - "Scene needs tension boost"
+        - "Villain needs escape opportunity"
+        - "Story demands twist"
+
+      frequency_guideline: "1-2 complications per scene, no tracking needed"
+
+      benefits:
+        - "Less bookkeeping"
+        - "More intuitive GMing"
+        - "Faster pacing"
+        - "Simpler for new GMs"
+
+      drawbacks:
+        - "May feel arbitrary to players"
+        - "Less tension buildup"
+        - "No resource scarcity for GM"
+        - "Players can't anticipate complications"
+
+    when_to_add_gm_flow:
+      sign_1: "You want more structure for complications"
+      sign_2: "Players enjoy knowing when complications come"
+      sign_3: "You're tracking it mentally anyway"
+      sign_4: "Group likes transparent mechanics"
+
+      implementation: "Introduce after session 1-2 as 'house rule addition'"
+
+    hybrid_approach:
+      description: "Track Flow but don't announce it"
+      benefit: "Structure for you, invisible to players"
+      usage: "Use Flow as pacing guide only"
+
 # ============================================
-# ENCOUNTER BUILDING
+# SCENE DESIGN
+# ============================================
+#
+# WARNING: This section requires significant refactoring to align with TTRPG principles.
+# Current content contains video game patterns (formulaic scaling, "opposition types",
+# squad composition formulas) that are fundamentally incompatible with tabletop RPG design.
+#
+# This section should emphasize:
+# - Creating named adversaries with motivations
+# - Providing guidance ranges, not rigid formulas
+# - GM judgment and narrative appropriateness
+# - Story-driven challenges, not encounter balance math
+#
+# See CLAUDE.md and .claude/instructions.md "CRITICAL: This Is A Tabletop RPG, Not A Video Game"
+# section for detailed guidance on the required approach.
+#
+# Until refactored, use this section cautiously - trust your GM instincts over formulas.
 # ============================================
 
-encounter_building:
+scene_design:
   challenge_rating:
     formula: "Total Enemy Power / Party Average Power"
     
@@ -101,52 +251,95 @@ encounter_building:
   
   enemy_templates:
     henchman:
-      guard: "5 + (party_milestones / 2)"
-      vitality: "3 + (party_milestones / 3)"
-      damage: "1d6 + (party_milestones / 4)"
+      guard: "7 + party_milestones"
+      vitality: "5 + party_milestones"
+      damage: "1d6 + (party_milestones / 2)"
       skills: "One at Professional"
       flow: "Starts at 0"
-      special: "Falls quickly but dangerous in groups"
-      description: "Numerous followers, individually weak"
+      special: "Should survive 2 hits at each tier, dangerous in groups"
+      description: "Numerous followers, individually weak but not tissue paper"
+      design_note: "Playtest showed original formula (Guard 5, Vit 3 = 8 total) resulted in one-shot kills. New formula provides 12+ durability to require 2 hits."
 
     worthy_opponent:
-      guard: "10 + (party_milestones × 2)"
-      vitality: "15 + (party_milestones × 2)"
+      guard: "13 + (party_milestones × 3)"
+      vitality: "21 + (party_milestones × 3)"
       damage: "2d6 + (party_milestones / 2)"
       skills: "Two at Professional"
       flow: "Starts at 0"
       special: "Equal match for individual heroes"
       description: "Capable adversary matching party members"
+      design_note: "Lasts 2-3 rounds under focus fire, longer in mixed encounters"
 
-    elite:
-      guard: "15 + (party_milestones × 3)"
-      vitality: "25 + (party_milestones × 4)"
-      damage: "3d6 + party_milestones"
-      skills: "Two Expert, one Master"
+    champion:
+      guard: "40 + (party_milestones × 8)"
+      vitality: "70 + (party_milestones × 14)"
+      damage: "2d6+2 + party_milestones"
+      damage_reduction: 2
+      skills: "Two or three at Expert (+2)"
       flow: "Starts at +2"
-      special: "Acts multiple times, requires party coordination"
-      description: "Formidable threat requiring focused effort"
+      actions_per_round: 3
+      legendary_resistances: "3 per scene"
+
+      action_economy:
+        philosophy: "Three actions with attack limit prevents TPK while keeping champions threatening"
+
+        critical_rule: "Champions can make MAXIMUM 2 ATTACKS per round"
+
+        attack_limit_rationale: "Playtest showed 3 attacks caused TPK even with damage reduction and disadvantage. Focus-fire of 3 attacks (avg 30+ damage) instantly kills any PC. Limiting to 2 attacks prevents instant-kill alpha strikes while maintaining the champion's threatening multi-action advantage."
+
+        action_options:
+          standard_recommended: "2 attacks + 1 non-attack action"
+          defensive: "1 attack + 2 non-attack actions"
+          note: "Champions CANNOT make 3 attacks in one round under any circumstances"
+
+        non_attack_actions:
+          movement: "Reposition, advance, retreat (1-2 zones)"
+          technique: "Use combat technique or special ability (if available)"
+          defense: "Take Defensive Stance action (+2 Guard until next turn)"
+          grab_item: "Interact with environment, draw weapon, use item"
+          tactical: "Aid ally, grant advantage, create hazard"
+
+        typical_patterns:
+          round_1: "Attack PC1 + Attack PC2 + Move to advantageous position"
+          round_2: "Attack PC1 + Use technique (e.g., power attack, whirlwind) + Defensive stance"
+          round_3: "Attack weakened PC + Attack fresh PC + Reposition"
+          note: "Varies by situation, but never exceeds 2 attacks"
+
+        focus_fire_guidance:
+          permitted: "Champions CAN attack same PC twice in one round"
+          expected_damage: "2 attacks at 2d6+2+milestones: avg 21-24 damage"
+          survivability: "Most PCs survive 2 hits at appropriate tier"
+          counterplay: "Party can heal, reposition, or focus down the champion"
+
+        playtest_results:
+          old_system: "3 attacks with disadvantage on 2nd/3rd = 30+ damage = instant TPK"
+          new_system: "2 attacks maximum = 21-24 damage = threatening but survivable"
+          verdict: "Champions remain dangerous in 4-6 round conflicts without guaranteed PC deaths"
+
+      special: "Three actions per round with balanced economy, DR 2, legendary resistances"
+      description: "Formidable threat requiring focused effort and party coordination"
+      design_note: "Playtest-proven durability: 110 at milestone 0, 154 at milestone 3, 198 at milestone 6, 242 at milestone 9. Creates 4-6 round conflicts against optimized parties with ~40 DPR. Sweet Spot Edition balanced for 0-12 milestone campaigns."
   
-  encounter_composition:
+  opposition_types:
     overwhelming_force:
       description: "Single powerful opponent with significant advantages"
-      composition: "1 Elite"
+      composition: "1 Champion"
       tactics: "Tests party coordination and resource management"
-      guidance: "Elite acts multiple times per round OR has environmental advantages"
+      guidance: "Champion acts multiple times per round OR has environmental advantages"
       notes: "Legendary resistance (3/scene) represents adaptability"
 
     coordinated_threat:
-      description: "Elite leading organized group"
-      composition: "1 Elite + 4-6 Henchmen"
+      description: "Champion leading organized group"
+      composition: "1 Champion + 4-6 Henchmen"
       tactics: "Leader coordinates followers tactically"
-      guidance: "Henchmen enable Elite's strategy through positioning and support"
-      notes: "Elite adapts tactics when strategy fails"
+      guidance: "Henchmen enable Champion's strategy through positioning and support"
+      notes: "Champion adapts tactics when strategy fails"
 
-    elite_squad:
+    champion_team:
       description: "Multiple skilled opponents"
-      composition: "2-3 Elites"
+      composition: "2-3 Champions"
       tactics: "Coordinated strikes and combination attacks"
-      guidance: "Each Elite has distinct capability, they support each other"
+      guidance: "Each Champion has distinct capability, they support each other"
       notes: "Focus fire and divide-and-conquer both valid approaches"
 
     overwhelming_numbers:
@@ -158,7 +351,7 @@ encounter_building:
 
     asymmetric_conflict:
       description: "Mixed opposition with varied capabilities"
-      composition: "1 Elite + 2 Worthy Opponents + 3 Henchmen"
+      composition: "1 Champion + 2 Worthy Opponents + 3 Henchmen"
       tactics: "Layered challenge with distinct roles"
       guidance: "Each opponent type complements the others tactically"
       notes: "Reinforcements may arrive based on narrative circumstances"
@@ -182,7 +375,7 @@ encounter_building:
     
     interactive_elements:
       destructible_cover:
-        hp: 10-20
+        durability: "10-20 damage to destroy"
         effect: "Provides protection until destroyed"
       
       environmental_weapons:
@@ -212,11 +405,11 @@ npc_generation:
         flow: "Starts at 0"
       
       combat_npc:
-        template: "Use henchman/worthy_opponent/elite"
+        template: "Use henchman/worthy_opponent/champion"
         modify: "Adjust for role"
       
       specialist_npc:
-        master_skill: "One at Expert or Master"
+        expert_skill: "One at Expert (+2) - pinnacle of mortal achievement"
         other_skills: "Competent or less"
   
   memorable_traits:
@@ -414,6 +607,120 @@ adjudication:
       heroic_play: "Start with +1 Flow"
       gritty_realism: "Slower healing"
       high_magic: "Reduce spell costs by 1"
+
+# ============================================
+# SWEET SPOT EDITION CAMPAIGN GUIDANCE
+# ============================================
+
+sweet_spot_edition:
+  philosophy: "Flow RPG Sweet Spot Edition - Bounded accuracy that actually works"
+
+  campaign_parameters:
+    ideal_length: "8-12 sessions"
+    modifier_cap: "+5 total (attribute + skill + edges)"
+    design_goal: "TN 8 stays relevant from session 1 through campaign conclusion"
+    retirement: "Characters conclude at peak power around session 12"
+
+  power_progression:
+    session_1_2:
+      typical_modifier: "+0 to +2"
+      vs_tn_8: "42-58% success"
+      description: "Challenging but achievable - heroes finding their footing"
+      threats: "Local bandits, wild animals, minor mysteries"
+
+    session_3_4:
+      typical_modifier: "+2 to +3"
+      vs_tn_8: "58-72% success"
+      description: "Competent professionals - feel heroic without being automatic"
+      threats: "Organized crime, cultists, dangerous beasts"
+
+    session_5_6:
+      typical_modifier: "+3 to +4"
+      vs_tn_8: "72-83% success"
+      description: "Regional heroes - reliable but not infallible"
+      threats: "Noble houses, young dragons, demon cults"
+
+    session_7_9:
+      typical_modifier: "+4 to +5"
+      vs_tn_8: "83-91% success"
+      description: "Famous heroes - legendary skill with meaningful risk"
+      threats: "Ancient guardians, powerful organizations, planar threats"
+
+    session_10_12:
+      typical_modifier: "+5 (at cap)"
+      vs_tn_8: "97.2% success"
+      description: "Legendary heroes - peak mortal capability, but rolls feel nearly automatic"
+      threats: "Demon lords, ancient dragons, world-ending catastrophes"
+      note: "Campaign concludes here - characters retire at peak power"
+      design_warning: "At +5, TN 8 rolls are nearly automatic (35/36 outcomes succeed). Use TN 10+ for meaningful challenges. Bounded accuracy works but requires higher TNs at peak power."
+
+  target_numbers:
+    philosophy: "TN 8 is baseline, but GMs must scale TNs as party power increases"
+
+    reality_check: "Bounded accuracy with +5 cap means TN 8 becomes near-automatic at peak power (97.2% success). GMs need higher TNs for meaningful late-game challenges."
+
+    standard_tns:
+      trivial: 6
+      easy: 7
+      standard: 8
+      hard: 10
+      extreme: 12
+      legendary: 14
+
+    tn_scaling_by_session:
+      sessions_1_3:
+        party_modifiers: "+0 to +2"
+        standard_challenge: "TN 8 (58-86% success)"
+        hard_challenge: "TN 10 (42-72% success)"
+        guidance: "TN 8 feels appropriately challenging"
+        example: "Climbing crumbling wall, persuading suspicious guard"
+
+      sessions_4_6:
+        party_modifiers: "+3 to +4"
+        standard_challenge: "TN 8-10 (72-91% at TN 8, 42-72% at TN 10)"
+        hard_challenge: "TN 10-12 (42-72% at TN 10, 16-42% at TN 12)"
+        guidance: "Mix TN 8 for routine tasks, TN 10 for real challenges"
+        example: "TN 8: Tracking cultists. TN 10: Decoding ancient ritual"
+
+      sessions_7_9:
+        party_modifiers: "+4 to +5"
+        standard_challenge: "TN 10 (72-83% success)"
+        hard_challenge: "TN 12 (42-58% success)"
+        guidance: "TN 8 is for trivial tasks only, use TN 10 as new baseline"
+        example: "TN 10: Negotiating with dragon. TN 12: Disarming planar artifact"
+
+      sessions_10_12:
+        party_modifiers: "+5 (at cap)"
+        standard_challenge: "TN 10-12 (72% at TN 10, 42% at TN 12)"
+        hard_challenge: "TN 12-14 (42% at TN 12, 16.7% at TN 14)"
+        guidance: "TN 8 is automatic (97.2%), use TN 10+ exclusively for peak power heroes"
+        example: "TN 10: Binding demon lord. TN 12: Rewriting fate itself. TN 14: Godhood"
+
+    quick_reference_table:
+      at_plus_0: "TN 8 = 58% (challenging)"
+      at_plus_2: "TN 8 = 86% (reliable), TN 10 = 58% (challenging)"
+      at_plus_3: "TN 8 = 91% (routine), TN 10 = 72% (challenging)"
+      at_plus_4: "TN 8 = 97% (trivial), TN 10 = 83% (reliable), TN 12 = 42% (challenging)"
+      at_plus_5: "TN 8 = 97% (automatic), TN 10 = 97% (routine), TN 12 = 72% (challenging)"
+
+    practical_gm_advice:
+      early_campaign: "Use TN 8 liberally - it feels good at +0 to +2"
+      mid_campaign: "Start mixing TN 10 for important rolls at +3 to +4"
+      late_campaign: "Make TN 10 your new baseline at +5, reserve TN 8 for 'taking 10'"
+      peak_power: "TN 12-14 for climactic moments against world-ending threats"
+
+  design_rationale:
+    core_insight: "Bounded accuracy requires ACTUALLY bounding the modifiers AND adjusting TNs"
+    honest_assessment: "Even with +5 cap, TN 8 becomes nearly automatic at peak power"
+    sweet_spot: "8-12 sessions is the natural lifespan for +0 to +5 progression with TN scaling"
+    retirement: "Characters conclude at heroic peak when they're challenging gods at TN 14"
+    vs_unlimited_progression: "Avoids +8 modifiers breaking everything, but requires GM awareness"
+
+  gm_guidance:
+    embrace_conclusion: "Plan for campaign arc to conclude around session 10-12"
+    tn_awareness: "Track party modifiers and adjust TNs accordingly—this is critical"
+    next_campaign: "Start fresh with new characters for new stories"
+    legacy_benefits: "Retired characters can mentor new PCs or become world NPCs"
 
 # ============================================
 # TOOLS AND RESOURCES

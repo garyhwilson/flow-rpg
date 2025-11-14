@@ -1,51 +1,84 @@
 # Flow RPG Advancement System
-# Version: 1.0-complete
-# Milestones, progression, and character development
+# Version: 2.0-restructured
+# Rebalanced milestone progression and character development
 
 advancement_system:
   philosophy:
-    core_concept: "Story-driven growth through milestones"
+    core_concept: "Frequent rewards with bounded progression"
     design_principles:
-      - "No experience points to track"
-      - "Party advances together"
-      - "GM controls pacing"
-      - "Every advancement meaningful"
-  
-  milestone_types:
-    overview:
-      minor: "Individual growth moments"
-      moderate: "Significant development"
-      major: "Transformative evolution"
+      - "Reward every session to maintain engagement"
+      - "Horizontal growth through Minor Milestones"
+      - "Vertical growth through Major Milestones"
+      - "Player choice drives character development"
+      - "No automatic stat increases that break math"
+      - "Major power spikes arrive early enough to enjoy"
+
+  campaign_length:
+    sessions: "8-12"
+    philosophy: "Campaign-length game system designed for complete story arcs"
+    retirement: "Characters retire or transition to NPCs around session 12"
+
+  milestone_schedule:
+    minor:
+      frequency: "Every session"
+      total_expected: "8-12 in typical campaign"
+      philosophy: "Horizontal growth and specialization"
+
+    moderate:
+      frequency: "Every 3 sessions"
+      first: "Session 3"
+      second: "Session 6"
+      third: "Session 9"
+      total_expected: "3 in typical campaign"
+      philosophy: "Significant capability expansion"
+
+    major:
+      frequency: "Sessions 5 and 10"
+      first: "Session 5"
+      second: "Session 10"
+      total_expected: "2 in typical campaign"
+      philosophy: "Transformative evolution - regional heroes, then legendary figures"
 
 # ============================================
 # MINOR MILESTONES
 # ============================================
 
 minor_milestones:
-  frequency: "Every 1-2 sessions"
-  philosophy: "Small but meaningful growth"
+  frequency: "Every session"
+  philosophy: "Small rewards that add up over time"
   
   triggers:
     - "Complete single session"
-    - "Overcome challenging encounter"
-    - "Make meaningful discovery"
-    - "Successful significant skill use"
-    - "Character development moment"
-  
+    - "Meaningful roleplay moment"
+    - "Creative problem solving"
+    - "Party cooperation success"
+
   options:
     skill_development:
       advance_skill:
         description: "Improve one skill by one tier"
-        limit: "Maximum Expert (+4) with minor"
-        examples:
+        limit: "Maximum Professional (+1) with minor"
+        progression:
+          - "Untrained (-2) → Novice (-1)"
           - "Novice (-1) → Competent (0)"
-          - "Competent (0) → Professional (+2)"
-          - "Professional (+2) → Expert (+4)"
-      
+          - "Competent (0) → Professional (+1)"
+        note: "Higher tiers require Moderate/Major milestones, OR use deepen_expertise option below"
+
+      deepen_expertise:
+        description: "Advance Professional (+1) to Expert (+2) through sustained dedication"
+        requirement: "Use THREE consecutive minor milestones on the same skill"
+        progression: "Professional (+1) → Expert (+2)"
+        rationale: "Archetypes start with Professional skills, but standard minor cap prevents advancement. This option allows dedicated specialists to reach Expert through sustained effort over multiple sessions."
+        timing: "Completes at Session 4 (sessions 1, 2, 3 minors spent)"
+        example: "Fighter with Combat Professional (+1) uses minors at sessions 1, 2, and 3 to reach Combat Expert (+2) at start of session 4"
+        note: "Must commit all three milestones before starting - track 'Working toward Expert in [Skill]: 1/3, 2/3, Complete' on character sheet"
+
+        design_rationale: "Three minors delays reaching +5 cap until Session 4, maintaining bounded accuracy progression. With two minors, parties hit +5 at Session 3, causing 97.2% success rate vs TN 8 for majority of campaign. Three minors ensures power curve matches intended 8-12 session arc."
+
       new_skill:
         description: "Learn new skill"
         starting_level: "Novice (-1)"
-        requirement: "Narrative justification helpful"
+        requirement: "Must have used or observed skill"
     
     attribute_adjustment:
       description: "Redistribute attributes"
@@ -57,25 +90,29 @@ minor_milestones:
     
     combat_edges:
       description: "Minor combat improvements"
-      limit: "Some edges limited to 1-3 times"
-      
+      philosophy: "Specialization, not raw power increase"
+
       list:
-        weapon_focus:
-          effect: "+1 damage with weapon type"
-          limit: "Once per weapon type"
-          examples: ["Swords", "Axes", "Bows"]
-        
-        armor_training:
-          effect: "Reduce armor penalty by 1"
-          limit: "Once per armor type"
-        
-        tough:
-          effect: "+2 Guard"
-          limit: "Can take twice"
-        
-        hardy:
-          effect: "+2 Vitality"
-          limit: "Can take twice"
+        weapon_technique:
+          effect: "Special maneuver with weapon type"
+          examples:
+            - "Sword: Parry grants +1 defense"
+            - "Axe: Cleave hits adjacent enemy"
+            - "Bow: Called shot targets weak points"
+
+        armor_adaptation:
+          effect: "Reduce specific penalty from armor"
+          examples:
+            - "Swimming in light armor"
+            - "Spellcasting in medium armor"
+            - "Stealth in heavy armor"
+
+        combat_style:
+          effect: "+1 to specific combat situation"
+          examples:
+            - "Dueling (1v1 combat)"
+            - "Skirmishing (hit and run)"
+            - "Formation fighting (with allies)"
         
         quick_draw:
           effect: "Switch weapons free"
@@ -147,45 +184,61 @@ minor_milestones:
 # ============================================
 
 moderate_milestones:
-  frequency: "Every 5-6 sessions"
-  philosophy: "Substantial character development"
-  
+  frequency: "Every 3 sessions"
+  philosophy: "Significant capability without breaking math"
+
   triggers:
-    - "Complete major adventure/quest"
-    - "Resolve significant story arc"
-    - "Achieve important objective"
-    - "Defeat major antagonist"
-    - "Make campaign-changing decision"
-  
-  first_moderate:
-    typical_timing: "Session 6"
-    power_increase: "~25% overall effectiveness"
-  
-  second_moderate:
-    typical_timing: "Session 12"
-    power_increase: "~50% from start"
+    - "Complete story arc"
+    - "Defeat significant antagonist"
+    - "Major character development"
+    - "World-changing decision"
+
+  schedule:
+    first:
+      timing: "Session 3"
+      context: "Players feeling competent"
+    second:
+      timing: "Session 6"
+      context: "Mid-campaign power spike"
+    third:
+      timing: "Session 9"
+      context: "Approaching legendary status"
   
   options:
-    attribute_improvement:
-      description: "Permanent attribute increase"
-      amount: "+1"
-      limit: "Cannot exceed +4 until Major Milestone"
-      strategy: "Shore up weakness or enhance strength"
-    
-    skill_mastery:
-      advance_to_expert:
-        from: "Professional (+2)"
-        to: "Expert (+4)"
-        description: "Recognized expertise"
-      
-      advance_to_master:
-        from: "Expert (+4)"
-        to: "Master (+6)"
-        description: "Legendary capability"
-      
-      new_professional:
-        description: "Gain new skill at Professional (+2)"
-        requirement: "Significant training/experience"
+    choose_one:
+      description: "Select ONE improvement per moderate milestone"
+
+      defensive_mastery:
+        guard_increase:
+          effect: "+3 Guard"
+          description: "Improved defensive training"
+        damage_reduction:
+          effect: "+1 DR (stacks with armor)"
+          description: "Toughened body"
+        vitality_increase:
+          effect: "+2 Vitality"
+          description: "Enhanced endurance"
+
+      skill_mastery:
+        advance_to_expert:
+          from: "Professional (+1)"
+          to: "Expert (+2)"
+          description: "True expertise - pinnacle of mortal achievement"
+          limit: "Total modifier capped at +5 with attributes"
+          note: "Expert is the final skill tier"
+
+        new_professional:
+          description: "Gain new skill at Professional (+1)"
+          requirement: "Related to recent adventures"
+
+        skill_specialization:
+          effect: "Choose 3 specific applications, gain +1"
+          example: "Combat: Dueling, Mounted, Defensive"
+
+      attribute_improvement:
+        description: "Increase one attribute by +1"
+        limit: "Maximum +3 total"
+        note: "Counts toward skill cap of +5"
     
     signature_move:
       description: "Create personalized technique"
@@ -230,7 +283,7 @@ moderate_milestones:
       magic_techniques:
         metamagic_mastery: "Apply 2 metamagics"
         spell_combo: "Cast 2 spells in turn"
-        flow_channeling: "Convert HP to Flow"
+        flow_channeling: "Convert Vitality to Flow"
       
       skill_techniques:
         skill_mastery: "Auto-succeed once/scene"
@@ -266,39 +319,56 @@ moderate_milestones:
 # ============================================
 
 major_milestones:
-  frequency: "Every 12-15 sessions"
-  philosophy: "Transformative character evolution"
-  
+  frequency: "Sessions 5 and 10"
+  philosophy: "Transformative power achieved while still actively playing"
+
   triggers:
-    - "Complete major campaign chapter"
-    - "Defeat campaign villain"
-    - "Save kingdom/world"
-    - "Achieve legendary deed"
-    - "Fundamental character change"
-  
-  first_major:
-    typical_timing: "Session 18"
-    power_increase: "~100% from start"
-    significance: "Heroes of the realm"
-  
-  second_major:
-    typical_timing: "Session 30+"
-    power_increase: "~200% from start"
-    significance: "Legendary figures"
-  
+    - "Defeat major villain"
+    - "Save significant population"
+    - "Fundamental character transformation"
+    - "Complete epic quest"
+
+  schedule:
+    first:
+      timing: "Session 5"
+      context: "Players feel truly heroic"
+      significance: "Regional heroes"
+
+    second:
+      timing: "Session 10"
+      context: "Campaign approaching climax"
+      significance: "Legendary figures"
+      note: "Final major milestone - campaign concludes around session 12"
+
+    design_note: "Earlier timing ensures players enjoy transformative powers throughout the campaign"
+
   options:
-    legendary_skill:
-      description: "Achieve mythic mastery"
-      from: "Master (+6)"
-      to: "Legendary (+8)"
-      effect: "Auto-succeed on standard tasks"
-      special: "Impossible becomes possible"
-    
-    attribute_transcendence:
-      description: "Break mortal limits"
-      effect: "Raise attribute above +4"
-      maximum: "+6 ultimately"
-      narrative: "Superhuman capability"
+    choose_one:
+      description: "Select ONE transformative improvement"
+
+      legendary_capability:
+        perfect_skill:
+          effect: "One skill to Expert (+2) if not already"
+          plus: "Gain +1 edge in that skill"
+          description: "Perfect mastery with specialization"
+          limit: "Total modifier still capped at +5"
+
+        attribute_excellence:
+          effect: "One attribute to +3, or two attributes +1 each"
+          description: "Peak mortal capability"
+          limit: "Maximum +3, no supernatural levels"
+
+        vitality_transcendence:
+          effect: "+5 Vitality and death saves at advantage"
+          description: "Incredibly hard to kill"
+
+      subsystem_mastery:
+        description: "Gain or master an archetype subsystem"
+        examples:
+          - "Combat Techniques from Fighter"
+          - "Metamagic from Wizard"
+          - "Divine Domain from Cleric"
+        benefit: "Full access even without archetype"
     
     calling_transformation:
       complete_change:
@@ -338,60 +408,40 @@ major_milestones:
     
     mythic_edge:
       description: "Supernatural capability"
-      
+
       examples:
         immortal_body:
           effect: "Don't age, immune to disease"
           narrative: "Blessed by gods"
-        
+
         planar_step:
           effect: "Teleport at will (1 Flow)"
           narrative: "Tear reality's fabric"
-        
+
         true_sight:
           effect: "See through all deceptions"
           narrative: "Pierce the veil"
-        
+
         legendary_presence:
           effect: "Enemies must save or flee"
           narrative: "Overwhelming aura"
+
+        weapon_soul:
+          effect: "All weapons become +1 magical in your hands, cannot be disarmed, invent new combat techniques"
+          narrative: "Every weapon sings in your hands"
+
+        arcane_ascension:
+          effect: "Reduce all spell costs by 1, cast signature spell at will, sense all magic within mile"
+          narrative: "Magic itself bends to your will"
+
+        shadow_mastery:
+          effect: "Become shadow (incorporeal) 1/scene, see in absolute darkness, teleport between shadows"
+          narrative: "Darkness serves you"
+
+        divine_vessel:
+          effect: "Radiant aura damages evil, resurrect ally once per week, smite ignores all defenses"
+          narrative: "Living saint walking the earth"
   
-  paragon_paths:
-    description: "Specialized evolution at first Major"
-    choice: "Defines legendary identity"
-    
-    examples:
-      weapon_master:
-        archetype: "Fighter"
-        benefits:
-          - "All weapons become +1 magical"
-          - "Invent new combat techniques"
-          - "Cannot be disarmed"
-        narrative: "Every weapon sings in your hands"
-      
-      archmage:
-        archetype: "Wizard"
-        benefits:
-          - "Reduce all spell costs by 1"
-          - "Cast signature spell at will"
-          - "Sense all magic within mile"
-        narrative: "Magic itself bends to your will"
-      
-      shadow_lord:
-        archetype: "Rogue"
-        benefits:
-          - "Become shadow (incorporeal) 1/scene"
-          - "See in absolute darkness"
-          - "Teleport between shadows"
-        narrative: "Darkness serves you"
-      
-      divine_champion:
-        archetype: "Paladin"
-        benefits:
-          - "Radiant aura damages evil"
-          - "Resurrect once per week"
-          - "Smite ignores all defenses"
-        narrative: "Living saint walking the earth"
   
   appropriate_challenges:
     after_first_major:
@@ -470,83 +520,97 @@ edges_system:
 
 campaign_progression:
   typical_timeline:
-    sessions_1_5:
-      name: "Learning the Ropes"
-      milestones: "2-3 minor"
-      challenges: "Local threats"
+    sessions_1_2:
+      name: "Finding Your Feet"
+      milestones: "2 minor"
+      typical_modifier: "+0 to +2"
+      challenges: "Local threats, bandits, wild animals"
       power_level: "Competent adventurers"
-    
-    sessions_6_11:
-      name: "Growing Expertise"
-      milestones: "1 moderate, 2-3 minor"
-      challenges: "Regional threats"
-      power_level: "Notable heroes"
-    
-    sessions_12_17:
-      name: "Rising Heroes"
-      milestones: "2 moderate, 3-4 minor"
-      challenges: "National threats"
-      power_level: "Famous champions"
-    
-    sessions_18_29:
+
+    sessions_3_4:
+      name: "Regional Recognition"
+      milestones: "1 moderate (session 3), 2 minor total"
+      typical_modifier: "+2 to +3"
+      challenges: "Organized threats, minor villains"
+      power_level: "Local heroes"
+
+    sessions_5_6:
+      name: "True Heroes"
+      milestones: "1 major (session 5), 1 moderate (session 6), 2 minor total"
+      typical_modifier: "+3 to +4"
+      challenges: "Regional dangers, young dragons"
+      power_level: "Regional champions"
+
+    sessions_7_9:
+      name: "Legendary Rise"
+      milestones: "1 moderate (session 9), 3 minor total"
+      typical_modifier: "+4 to +5"
+      challenges: "National threats, powerful organizations"
+      power_level: "Famous heroes"
+
+    sessions_10_12:
       name: "Legendary Status"
-      milestones: "1 major, 1-2 moderate, 4-5 minor"
-      challenges: "Continental threats"
-      power_level: "Legendary figures"
-    
-    sessions_30_plus:
-      name: "Mythic Tier"
-      milestones: "2 major, 2-3 moderate, 6+ minor"
-      challenges: "Cosmic threats"
-      power_level: "Demigods"
+      milestones: "1 major (session 10), 2-3 minor total"
+      typical_modifier: "+5 (at cap)"
+      challenges: "World-ending threats, demon lords, ancient dragons"
+      power_level: "Legendary heroes"
+      note: "Campaign concludes - characters retire at peak power"
   
   power_scaling:
-    formula: "Power = 10 + Attributes(6) + Skills(8) + (Milestones × 2) + Edges"
-    
-    progression:
-      session_1: 
-        power: 16
-        description: "Starting heroes"
-      
-      session_6:
-        power: 22
-        increase: "+37.5%"
-        description: "Experienced adventurers"
-      
-      session_12:
-        power: 30
-        increase: "+87.5%"
-        description: "Regional champions"
-      
-      session_18:
-        power: 38
-        increase: "+137.5%"
-        description: "Legendary heroes"
-      
-      session_30:
-        power: 50
-        increase: "+212.5%"
-        description: "Mythic figures"
+    philosophy: "Bounded accuracy - TN 8 stays relevant throughout"
+
+    skill_caps:
+      total_maximum: "+5 (attribute + skill + edges)"
+      breakdown:
+        attribute: "+3 max (peak natural human)"
+        skill: "+2 max (Expert level)"
+        edges: "+1 from specializations"
+
+      design_note: "Capped at +5 to maintain challenge throughout 8-12 sessions"
+
+    progression_comparison:
+      session_1:
+        typical_roll: "2d6 + 0 to +2 (average 7-9)"
+        vs_tn_8: "42-58% success"
+        note: "Challenging but achievable"
+
+      session_5_with_major:
+        typical_roll: "2d6 + 3 to +4 (average 10-11)"
+        vs_tn_8: "72-83% success"
+        note: "Heroic competence, still meaningful risk"
+
+      session_10_with_two_majors:
+        typical_roll: "2d6 + 5 (average 12)"
+        vs_tn_8: "97.2% success"
+        note: "Legendary mastery - nearly automatic success (only fail on snake eyes 1,1)"
+        design_note: "At +5 cap, TN 8 becomes trivial. GMs should use TN 10+ for meaningful challenges at peak power."
+
+    guard_progression:
+      starting: "10-13 (based on attributes)"
+      session_5: "10-16 (if choosing Guard boosts)"
+      session_10: "10-19 (if maximizing defense)"
+      note: "No automatic scaling with milestones"
   
   enemy_scaling:
-    principle: "Enemies scale at 80% of PC rate"
+    principle: "Enemies scale with party milestone count"
     reasoning: "PCs should feel growth while maintaining challenge"
-    
-    minion_hp:
-      milestone_0_2: 8
-      milestone_3_5: 12
-      milestone_6_8: 16
-      milestone_9_11: 22
-      milestone_12_14: 30
-      milestone_15_plus: 40
-    
-    boss_hp:
-      milestone_0_2: 40
-      milestone_3_5: 55
-      milestone_6_8: 75
-      milestone_9_11: 95
-      milestone_12_14: 120
-      milestone_15_plus: 150
+    campaign_note: "Designed for 0-12 milestone range (8-12 session campaigns)"
+
+    henchman_total:
+      note: "Combined Guard + Vitality"
+      formula: "Guard 7 + milestones, Vitality 5 + milestones"
+      milestone_0_2: 12
+      milestone_3_5: 16
+      milestone_6_8: 20
+      milestone_9_plus: 24
+
+    elite_total:
+      note: "Combined Guard + Vitality"
+      formula: "Guard 40 + (milestones × 8), Vitality 70 + (milestones × 14)"
+      milestone_0_2: 110
+      milestone_3_5: 154
+      milestone_6_8: 198
+      milestone_9_plus: 242
 
 # ============================================
 # ADVANCEMENT VARIANTS
@@ -586,9 +650,10 @@ advancement_variants:
 
 retirement_legacy:
   when_to_retire:
-    mechanical: "After 2-3 major milestones"
+    mechanical: "After 2 major milestones (sessions 10-12)"
     narrative: "Character achieves life goal"
     player_choice: "Always player's decision"
+    design_note: "Characters naturally conclude around session 12 at peak power (+5 cap)"
   
   retirement_benefits:
     become_npc:
@@ -615,6 +680,286 @@ retirement_legacy:
       reputation: "Known as hero's successor"
       connections: "Access to hero's allies"
       mission: "Continue hero's work"
+
+# ============================================
+# ADVANCEMENT GUIDELINES
+# ============================================
+
+advancement_guidelines:
+  core_principles:
+    - "Skills are cheaper to improve than attributes"
+    - "Specialization beats generalization early"
+    - "Guard/Vitality increases are valuable but not mandatory"
+    - "Flow techniques multiply effectiveness"
+
+  recommended_progression:
+    sessions_1_3:
+      priority_1: "Get primary skill to Professional (+1)"
+      priority_2: "Pick up combat edge or technique"
+      priority_3: "Shore up weaknesses with new skills"
+      avoid: "Spreading too thin across many skills"
+
+    session_3_moderate:
+      fighter_types:
+        recommended: "+3 Guard or signature move"
+        alternative: "Skill to Expert (+2)"
+
+      caster_types:
+        recommended: "Metamagic or skill mastery"
+        alternative: "+1 to casting attribute"
+
+      skill_experts:
+        recommended: "Skill specializations"
+        alternative: "New Professional skill"
+
+    session_5_major:
+      optimal_choices:
+        combat_focused: "Perfect skill (Expert + edge) or subsystem mastery"
+        magic_focused: "Attribute excellence (casting stat to +3) or legendary technique"
+        balanced: "Attribute excellence (two attributes +1) or Vitality transcendence"
+
+      good_choices:
+        - "Perfect skill for primary specialty"
+        - "Attribute to +3 if not at cap"
+        - "Subsystem mastery to gain new capabilities"
+
+      situational_choices:
+        - "Vitality transcendence (good for frontline, okay for others)"
+        - "Calling transformation (only with narrative justification)"
+
+    sessions_6_10:
+      strategy: "Reach +5 cap and fill gaps"
+      minors: "Edges, techniques, skill variety"
+      session_6_moderate: "Whatever you didn't take at session 3"
+      session_9_moderate: "Final skill/attribute push to cap"
+      session_10_major: "Complete your build vision - this is your final transformative choice"
+
+  archetype_specific:
+    fighter:
+      early: "Combat to Professional (+1), weapon techniques"
+      mid: "Guard increases, Combat to Expert (+2)"
+      late: "Might to +3, battlefield control, signature moves"
+
+    wizard:
+      early: "Metamagic, lore skills, Sorcery to Professional (+1)"
+      mid: "Mind or Awareness attribute increases, spell combos"
+      late: "Casting attribute to +3, Sorcery to Expert (+2), legendary techniques"
+
+    rogue:
+      early: "Sneak attack, urban specialization, Grace increases"
+      mid: "Finesse/Stealth to Professional (+1), shadow techniques"
+      late: "Grace to +3, death mark, impossible dodge"
+
+    cleric:
+      early: "Healing techniques, medicine skill, Will increases"
+      mid: "Sorcery to Professional (+1), domain powers"
+      late: "Will to +3, divine mastery, resurrection"
+
+  custom_build_path:
+    advantage: "Can optimize from start"
+    sessions_1_2: "Define your niche with skills"
+    session_3: "Take what archetypes can't get (moderate milestone)"
+    session_5: "Adopt subsystem to catch up (major milestone)"
+    sessions_6_10: "Reach +5 cap in primary area"
+    session_10: "Final legendary power (major milestone)"
+    result: "Become exactly what you envision"
+
+  common_mistakes:
+    spreading_thin: "Too many skills at Novice"
+    ignoring_defense: "No Guard/Vitality boosts"
+    hoarding_flow: "Not learning techniques"
+    attribute_obsession: "Attributes over skills"
+
+  reaching_the_cap_early:
+    reality: "Specialists hit +5 in primary stat by sessions 3-5"
+
+    this_is_intentional: "Bounded accuracy REQUIRES capping vertical growth"
+
+    why_it_happens:
+      optimizer_path: "Attribute +2 (start) + Skill +2 (Expert) + Edge +1 = +5 total"
+      timing: "Can achieve by session 3 with focused choices"
+      example: "Fighter: Might +3, Combat +2 = +5 by session 3-5"
+
+    why_this_is_good:
+      bounded_accuracy: "Without cap, +8 modifiers break TN 8 (97% success = not meaningful)"
+      campaign_length: "System designed for 8-12 sessions, not infinite progression"
+      peak_power: "You've achieved mortal mastery - this is the goal!"
+
+    what_to_do_after:
+      philosophy: "Shift from vertical to horizontal growth"
+
+      options:
+        secondary_skills:
+          effect: "Develop new capabilities"
+          examples: ["Combat specialist learns Lore", "Wizard learns Athletics"]
+          benefit: "Become versatile, not just powerful"
+
+        techniques_and_abilities:
+          effect: "Gain new tactical options"
+          examples: ["Metamagic", "Combat techniques", "Gambits"]
+          benefit: "More ways to solve problems"
+
+        survivability:
+          effect: "Increase Guard and Vitality"
+          benefit: "Live long enough to use your mastery"
+
+        edges_and_specializations:
+          effect: "Narrow but deep expertise"
+          examples: ["Dueling +1", "Urban Stealth +1"]
+          benefit: "Excel in specific situations"
+
+        legendary_powers:
+          effect: "Gain transformative abilities at Major milestones"
+          examples: ["Subsystem mastery", "Mythic edges", "Legendary techniques"]
+          benefit: "Transcend mortal limits in special ways"
+
+    player_satisfaction:
+      reframe: "You're not 'done' - you've graduated to mastery"
+      comparison: "Like martial arts: black belt isn't the end, it's when real training begins"
+      growth: "Sessions 5-12 are about becoming the complete master, not just the skilled specialist"
+
+    examples:
+      kara_the_fighter:
+        session_3: "Hits +5 in Combat (Might +3, Combat +2)"
+        sessions_4_9: "Learns Athletics, Command, gains 4 combat techniques, increases Guard to 23"
+        session_10: "Still +5 in Combat, but now a versatile battlefield commander"
+        satisfaction: "Master of combat AND tactical leader"
+
+      aldric_the_wizard:
+        session_5: "Hits +5 in Sorcery (Mind +3, Sorcery +2)"
+        sessions_6_10: "Learns Lore +3, gains 6 metamagics, increases Vitality"
+        session_10: "Still +5 in Sorcery, but reshapes reality with metamagic mastery"
+        satisfaction: "Archmage who bends magic itself"
+
+  power_budget:
+    minor_milestone: "Worth about +0.3 to +0.5 modifier equivalent"
+    moderate_milestone: "Worth about +1 modifier or significant capability"
+    major_milestone: "Worth about +1 to +2 modifier plus transformative power"
+
+    campaign_total: "Characters progress from +0 to +5 over 8-12 sessions"
+    note: "Smaller per-milestone gains, but more frequent rewards maintain engagement"
+
+# ============================================
+# DEFAULT BUILD PATHS (OPTION PARALYSIS SOLUTION)
+# ============================================
+
+default_build_paths:
+  purpose: "Pre-planned advancement choices for players who want guidance"
+  usage: "Follow these exactly, modify as desired, or ignore completely"
+  philosophy: "Reduces decision fatigue while maintaining viable progression"
+
+  fighter_classic_path:
+    concept: "Unstoppable frontline warrior"
+
+    milestones:
+      session_1_minor: "Combat: Novice → Competent"
+      session_2_minor: "Athletics: Untrained → Novice"
+      session_3_moderate: "+3 Guard (durability focus)"
+      session_4_minor: "Combat: Competent → Professional (+1)"
+      session_5_major: "Perfect Skill (Combat to Expert +2 with edge)"
+      session_6_moderate: "Signature Move: Devastating Cleave"
+      session_7_minor: "Combat Reflexes (+1 defense)"
+      session_8_minor: "Precise Strike (reroll damage)"
+      session_9_moderate: "Attribute Improvement: Might +1 (to +3)"
+      session_10_major: "Legendary Technique: Unstoppable Assault"
+
+    result: "Might +3, Combat Expert +2, multiple combat edges = +5 cap at session 5, then versatility"
+
+  wizard_archmage_path:
+    concept: "Reality-warping spellcaster"
+
+    milestones:
+      session_1_minor: "Lore: Untrained → Novice"
+      session_2_minor: "Sorcery: Competent → Professional (+1)"
+      session_3_moderate: "Advance to Expert: Sorcery (+2)"
+      session_4_minor: "Flow Harmony (+1 max Flow)"
+      session_5_major: "Attribute Excellence: Mind +1 (to +3)"
+      session_6_moderate: "Metamagic: Quicken Spell"
+      session_7_minor: "Investigate: Untrained → Novice"
+      session_8_minor: "Flow Harmony (+1 max Flow again)"
+      session_9_moderate: "Signature Move: Prismatic Cascade"
+      session_10_major: "Legendary Technique: Reality Break"
+
+    result: "Mind +3, Sorcery Expert +2 = +5 cap at session 5, metamagic mastery after"
+
+  rogue_shadow_path:
+    concept: "Master of stealth and precision"
+
+    milestones:
+      session_1_minor: "Finesse: Novice → Competent"
+      session_2_minor: "Stealth: Competent → Professional (+1)"
+      session_3_moderate: "Skill Specialization: Urban Stealth/Urban Finesse/Urban Deceive (+1 each)"
+      session_4_minor: "Precise Strike (reroll damage)"
+      session_5_major: "Perfect Skill: Stealth to Expert (+2) with edge"
+      session_6_moderate: "Attribute Improvement: Grace +1 (to +3)"
+      session_7_minor: "Fast Movement (+1 zone)"
+      session_8_minor: "Shadow Techniques (advanced sneak)"
+      session_9_moderate: "Signature Move: Death Mark"
+      session_10_major: "Mythic Edge: Shadow Mastery"
+
+    result: "Grace +3, Stealth Expert +2 = +5 cap at session 6, legendary shadow powers"
+
+  cleric_healer_path:
+    concept: "Divine support and battlefield medic"
+
+    milestones:
+      session_1_minor: "Empathy: Novice → Competent"
+      session_2_minor: "Medicine: Competent → Professional (+1)"
+      session_3_moderate: "+2 Vitality (survivability)"
+      session_4_minor: "Sorcery: Novice → Competent"
+      session_5_major: "Subsystem Mastery: Divine Domain"
+      session_6_moderate: "Attribute Improvement: Will +1 (to +3)"
+      session_7_minor: "Medicine: Professional → Expert (+2) [1/3]"
+      session_8_minor: "Medicine: Professional → Expert (+2) [2/3]"
+      session_9_moderate: "Medicine: Professional → Expert (+2) [3/3 complete]"
+      session_10_major: "Mythic Edge: Resurrection"
+
+    result: "Will +3, Medicine Expert +2 = +5 cap at session 9, divine powers throughout"
+
+  ranger_scout_path:
+    concept: "Master of wilderness and archery"
+
+    milestones:
+      session_1_minor: "Combat: Novice → Competent"
+      session_2_minor: "Survival: Competent → Professional (+1)"
+      session_3_moderate: "Skill Specialization: Ranged Combat/Tracking/Wilderness Stealth"
+      session_4_minor: "Precise Strike (reroll damage)"
+      session_5_major: "Perfect Skill: Survival to Expert (+2) with edge"
+      session_6_moderate: "Attribute Improvement: Grace +1 (to +3)"
+      session_7_minor: "Fast Movement (+1 zone)"
+      session_8_minor: "Terrain Mastery: Forest"
+      session_9_moderate: "Signature Move: Hunter's Mark"
+      session_10_major: "Legendary Technique: Perfect Shot"
+
+    result: "Grace +3, Survival Expert +2 = +5 cap at session 6, perfect wilderness warrior"
+
+  custom_generalist_path:
+    concept: "Jack-of-all-trades adventurer"
+
+    milestones:
+      session_1_minor: "Athletics: Untrained → Novice"
+      session_2_minor: "Persuade: Novice → Competent"
+      session_3_moderate: "New Professional Skill: Combat (+1)"
+      session_4_minor: "Investigate: Untrained → Novice"
+      session_5_major: "Attribute Excellence: Two attributes +1"
+      session_6_moderate: "+3 Guard"
+      session_7_minor: "Empathy: Untrained → Novice"
+      session_8_minor: "Flow Harmony (+1 max Flow)"
+      session_9_moderate: "Combat: Professional → Expert (+2)"
+      session_10_major: "Calling Synthesis: Merge two callings"
+
+    result: "Broad skills, moderate combat ability, versatile problem solver"
+
+  usage_notes:
+    following_path: "Use exactly as written for simplest experience"
+    modifying_path: "Swap similar choices (e.g., +Guard for +Vitality)"
+    abandoning_path: "Switch to custom choices anytime"
+    mixing_paths: "Combine elements from multiple paths"
+
+  timing_flexibility:
+    note: "If session count differs, adjust milestones proportionally"
+    shorter_campaign: "Skip intermediate steps, keep major choices"
+    longer_campaign: "Add more minors for versatility"
 
 # ============================================
 # DOWNTIME ADVANCEMENT

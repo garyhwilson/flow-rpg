@@ -73,10 +73,18 @@ resolution_system:
       narrative: "Yes, and..."
     
     critical_success:
-      range: "13+"
+      base_threshold: 13
+      scaling_rule: "13 + (total_modifier ÷ 3, rounded down)"
       effect: "Exceptional success with benefits"
       flow_change: "+1 Flow to character"
       narrative: "Yes, and something exceptional"
+
+      threshold_examples:
+        modifier_0_2: "Crit on 13+ (16.7% chance)"
+        modifier_3_5: "Crit on 14+ (8.3% chance)"
+        note: "With +5 max modifier, critical threshold caps at 14+, maintaining 8.3% crit rate throughout campaign"
+
+      design_rationale: "Keeps crits rare and exciting throughout progression. With +5 cap and 14+ threshold, crits stay at healthy 8.3% rate even at peak power. Without scaling, high modifiers would crit 70%+ of the time, making them the default outcome rather than special moments."
     
     enhanced_success:
       trigger: "Beat TN by 5+"
@@ -124,9 +132,7 @@ flow_system:
     reset: "Between scenes"
     
   starting_exceptions:
-    scholar_calling: 
-      starting_flow: 1
-      reason: "Perpetual mental readiness"
+    none: "All callings now start at 0 Flow"
     
   flow_states:
     negative:
@@ -155,22 +161,24 @@ flow_system:
       range: [4, 6]
       description: "Perfect flow, commanding presence"
       effects:
-        - "Can activate advanced techniques"
-        - "Narrative shows mastery"
-        - "+1 to all rolls while maintained"
+        - "Can activate advanced techniques (cost 3 Flow)"
+        - "Narrative shows mastery and confidence"
+        - "Access to powerful narrative permissions"
+      design_note: "Removed '+1 to all rolls' bonus that stacked with +5 cap to create bounded accuracy issues. High Flow remains desirable for technique access without breaking math."
   
   generation_sources:
     universal:
       critical_success:
-        trigger: "Roll 13+ on any check"
+        trigger: "Reach critical threshold (see critical_success scaling rule)"
         amount: 1
         limit: "No limit"
+        note: "Threshold scales with total modifier: 13 + (modifier ÷ 3)"
       
       taking_damage:
         trigger: "Take any damage to Guard or Vitality"
         amount: 1
-        limit: "No limit"
-        note: "New rule for balance"
+        limit: "Once per round"
+        note: "Limited to prevent excessive Flow generation from multiple hits"
     
     stance_specific:
       aggressive:
@@ -202,10 +210,6 @@ flow_system:
           limit: "No limit"
     
     magic_specific:
-      cantrip_success:
-        trigger: "Successfully cast cantrip"
-        amount: 1
-        limit: "No limit"
       
       ritual_completion:
         trigger: "Complete 10+ minute ritual"
@@ -233,10 +237,10 @@ flow_system:
         examples: ["Death Blow", "Battlefield Control"]
     
     spells:
-      tier_0_cantrip: 
-        cost: "Generates +1"
-        note: "Reverses normal flow"
-      tier_1_basic: 
+      tier_0_cantrip:
+        cost: 0
+        note: "Flow-neutral magic"
+      tier_1_basic:
         cost: 0
       tier_2_advanced: 
         cost: -1
@@ -320,9 +324,10 @@ scene_resolution:
 
 attributes:
   range:
-    minimum: -5
-    maximum: 5
+    minimum: -2
+    maximum: 3
     average: 0
+    note: "Capped at +3 to maintain bounded accuracy. Represents peak natural human capability without supernatural enhancement."
   
   physical:
     might:
@@ -393,41 +398,90 @@ attributes:
 # ============================================
 
 skills:
+  skill_caps:
+    total_modifier_maximum: "+5"
+    formula: "Attribute + Skill + Edges ≤ 5"
+
+    breakdown:
+      attribute_max: "+3 (natural human limits)"
+      skill_max: "+2 (Expert level)"
+      edge_bonus: "+1 from specializations"
+
+    design_rationale:
+      - "Maintains bounded accuracy - prevents unlimited modifier inflation"
+      - "97.2% success rate at cap vs TN 8 (nearly automatic - only fail on 1,1)"
+      - "Supports 8-12 session campaigns perfectly"
+      - "GMs should use TN 10-12 for meaningful challenges at peak power"
+
+    bounded_accuracy_reality:
+      philosophy: "Hard cap prevents runaway progression, but creates new challenge"
+
+      success_rates_vs_tn_8:
+        at_plus_0: "58.3% (7+ on 2d6)"
+        at_plus_2: "86.1% (5+ on 2d6)"
+        at_plus_3: "91.7% (4+ on 2d6)"
+        at_plus_5: "97.2% (3+ on 2d6 - only fail on snake eyes)"
+
+      the_problem:
+        description: "Even with +5 cap, TN 8 becomes trivial at peak power"
+        solution: "GMs must use higher TNs for late-game challenges"
+
+      tn_scaling_guidance:
+        sessions_1_3: "TN 8 for standard challenges (+0 to +2 modifiers: 58-86% success)"
+        sessions_4_6: "TN 8-10 mix (+3 to +4 modifiers: 72-91% at TN 8)"
+        sessions_7_12: "TN 10-12 standard (+5 modifier: 72% at TN 10, 42% at TN 12)"
+        note: "Peak power heroes need harder challenges to feel meaningful risk"
+
+      vs_alternative_caps:
+        plus_4_cap: "Would give 91.7% vs TN 8 (4+ on 2d6) - better sweet spot"
+        plus_3_cap: "Would give 83.3% vs TN 8 (5+ on 2d6) - too restrictive"
+        plus_6_cap: "Would give 97.2% vs TN 8 (3+ on 2d6) - same problem as +5"
+        design_tension: "+5 cap allows heroic growth but requires GM TN adjustment"
+
+    examples:
+      optimized_fighter:
+        might: "+3"
+        combat_expert: "+2"
+        weapon_focus: "+1"
+        total: "+6 (over cap, choose which bonuses apply)"
+        note: "In practice: Use Might +3, Combat +2 for total +5"
+        reality: "At +5, hits TN 8 97% of the time - GM should use TN 10+ in late game"
+
+      skilled_rogue:
+        grace: "+3"
+        stealth_expert: "+2"
+        urban_specialist: "+1"
+        total: "+6 (over cap, must choose which bonuses apply)"
+        note: "Can apply urban specialist (+1) OR grace+stealth (+5), not both beyond cap"
+
   progression_tiers:
     1_untrained:
       modifier: -2
       description: "No formal training"
       advancement: "Starting only"
-    
+
     2_novice:
       modifier: -1
       description: "Basic understanding"
       advancement: "Starting or minor milestone"
-    
+
     3_competent:
       modifier: 0
       description: "Professional capability"
       advancement: "Starting or minor milestone"
-    
+
     4_professional:
-      modifier: 2
+      modifier: 1
       description: "Skilled practitioner"
-      advancement: "Starting or minor milestone"
-    
+      advancement: "Minor milestone"
+
     5_expert:
-      modifier: 4
-      description: "Recognized master"
-      advancement: "Minor or moderate milestone"
-    
-    6_master:
-      modifier: 6
-      description: "Legendary capability"
+      modifier: 2
+      description: "Pinnacle of mortal capability"
       advancement: "Moderate milestone"
-    
-    7_legendary:
-      modifier: 8
-      description: "Mythic mastery"
-      advancement: "Major milestone"
+      note: "Final skill tier - represents peak human achievement"
+
+    design_note: "Master tier (+3) removed to maintain bounded accuracy throughout 8-12 session campaigns. Expert represents the absolute peak of human capability without becoming superhuman."
   
   skill_list:
     physical:

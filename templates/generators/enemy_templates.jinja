@@ -1,44 +1,229 @@
 {#
-Enemy Templates Template
-Generates enemy stat blocks from YAML GM tools data
+Adversary Guidance Template
+Generates guidelines for creating memorable adversaries with appropriate stats
 #}
-# ENEMY TEMPLATES - STAT BLOCKS
+# ADVERSARY CREATION GUIDE
 *Generated from YAML source data*
 
-## Overview
+## The Red Cloak Gang
 
-Use these templates to create balanced enemies scaled to party progression. Replace `party_milestones` with total party milestones.
+Street thugs working for crime lord Vex. They're in it for money, not loyalty—they'll flee if things turn badly. Led by a tough named Scarface who keeps them in line.
 
----
+**Stats (Party at 3 Milestones):**
+- Most gang members: Guard 10, Vitality 8, Damage 1d6+1, Professional Intimidate or Streetwise
+- Scarface (leader): Guard 13, Vitality 12, Damage 1d6+2, Professional Intimidate and Combat
+- Morale: Scatter if Scarface falls or 3+ gang members drop
 
-{% for template_id, template in enemy_templates.items() %}
-## {{ template_id.title() }}
-
-- **Guard:** {{ template.guard }}
-- **Vitality:** {{ template.vitality }}
-- **Damage:** {{ template.damage }}
-- **Skills:** {{ template.skills }}
-- **Flow:** {{ template.flow }}
-- **Special:** {{ template.special }}
-
-{% endfor %}
+**What This Shows:** Gang members can take 2 hits before dropping. Scarface is tougher but still mortal. They're dangerous in groups but individually manageable.
 
 ---
 
-## Scaling Examples
+## Inquisitor Thrace
 
-**Party at 0 Milestones (Starting):**
-- Minion: Guard 5, Vitality 3, Damage 1d6
-- Standard: Guard 8, Vitality 10, Damage 2d6
-- Elite: Guard 12, Vitality 15, Damage 2d6+2
-- Boss: Guard 15, Vitality 25, Damage 3d6
+Hunts heretics with zealous devotion. She genuinely believes she's saving souls. Methodical, uses holy magic, and offers mercy to those who recant. Escapes if defeated to return as recurring nemesis.
 
-**Party at 6 Milestones (Mid-Campaign):**
-- Minion: Guard 8, Vitality 5, Damage 1d6+1
-- Standard: Guard 14, Vitality 22, Damage 2d6+3
-- Elite: Guard 24, Vitality 33, Damage 2d6+8
-- Boss: Guard 33, Vitality 49, Damage 3d6+6
+**Stats (Party at 6 Milestones):**
+- Guard: 48 (baseline 40 + 8 from milestones)
+- Vitality: 84 (baseline 70 + 14 from milestones)
+- Damage: 2d6+8 (baseline + milestones)
+- Skills: Expert (+2) Theology and Insight, Professional (+1) Persuade
+- Flow: Starts at +2
+- Special: 3 actions/round (MAXIMUM 2 attacks), DR 2, 3 legendary resistances
+- Tactics: Uses 3rd action for holy techniques, tries to convert PCs mid-combat
+- Personality: Calm, disappointed when PCs refuse redemption, quotes scripture
+
+**What This Shows:** A serious threat requiring party coordination. Survives 4-6 rounds under focus fire. Three actions with attack limit prevents overwhelming the party. Legendary resistances let her shrug off save-or-die effects.
 
 ---
 
-*Scale enemies to match party power for balanced, engaging combat.*
+## Duelist Kain Moretti
+
+Hired sword protecting a noble. Has a code of honor—fights to first blood in duels, doesn't attack unconscious foes, accepts surrender. Prideful and can be goaded into single combat.
+
+**Stats (Party at 3 Milestones):**
+- Guard: 22 (13 base + 9 from milestones × 3)
+- Vitality: 30 (21 base + 9 from milestones × 3)
+- Damage: 2d6+1 (base + milestones / 2)
+- Skills: Professional Combat and Insight
+- Flow: Starts at 0
+- Personality: Honorable, expects respect, announces attacks dramatically
+- Weakness: Can be talked into duels, won't hurt bystanders
+
+**What This Shows:** Equal match for an individual hero. Lasts 2-3 rounds under focus fire, longer in solo duel. His honor creates tactical and social options beyond straight combat.
+
+---
+
+## The Ancient Stone Guardian
+
+An ageless construct protecting a forgotten temple. No personality, no fear, no mercy. Just eternal duty.
+
+**Stats (Party at 0 Milestones):**
+- Guard: 40
+- Vitality: 70
+- Damage: 2d6+2
+- Skills: None (mindless)
+- Flow: Starts at +2
+- Special: DR 2 (stone hide), 3 legendary resistances, immune to mind effects
+- Weakness: Slow (can be outmaneuvered), vulnerable to environmental hazards
+
+**What This Shows:** Overwhelming at campaign start. Players must find clever solutions—lure it into traps, seal the door, negotiate with whatever controls it. Pure combat is possible but brutal.
+
+---
+
+## The Assassin in the Shadows
+
+A killer hired to eliminate the party. Professional, emotionless, patient. Will retreat and try again if initial attempt fails.
+
+**Stats (Party at 6 Milestones):**
+- Guard: 13 + 18 = 31 (low for this tier)
+- Vitality: 21 + 18 = 39 (fragile)
+- Damage: 2d6+8 (very high)
+- Skills: Expert Stealth, Professional Combat and Poison
+- Flow: Starts at +1
+- Special: First strike from hiding (advantage + extra damage), can disengage and hide as single action
+- Tactics: Hit hard, fade away, strike again. Never fights fair.
+
+**What This Shows:** Glass cannon. Deadly if she gets the drop on isolated targets. Vulnerable if caught in open combat. Creates paranoia and forces the party to watch their backs.
+
+---
+
+## The Corrupt Town Guard
+
+Not evil, just greedy. They've been paid to look the other way. Most would rather take a bribe than risk their lives.
+
+**Stats (Party at 3 Milestones):**
+- Individual guards: Guard 10, Vitality 8, Damage 1d6+1, Professional Combat
+- Sergeant (their leader): Guard 13, Vitality 12, Damage 1d6+2, Professional Combat and Intimidate
+- Morale: Extremely low. Will flee or surrender if offered better deal than their current bribe.
+
+**What This Shows:** Not all opposition requires violence. These guards can be intimidated, bribed, or convinced. The sergeant might turn on whoever paid him if the party offers more. Their corruption is a weakness.
+
+---
+
+## The Swarm of Rats
+
+Hundreds of diseased rats flooding through the sewers. No tactics, no morale, just hunger and instinct.
+
+**Stats:**
+- Individual rats are irrelevant
+- Use swarm rules: Treat entire swarm as single creature
+- Guard: 10 + milestones
+- Vitality: 40 + (milestones × 5)
+- Damage: 1d6 to everyone in the zone
+- Special: Area effects do double damage, swarm splits if reduced to half vitality
+
+**What This Shows:** Area effects are the solution. Single-target damage is inefficient. Fire, explosions, and environmental hazards devastate swarms. Tactical terrain becomes crucial.
+
+---
+
+## Assigning Stats to Your Adversaries
+
+Use these examples as models. Every significant adversary needs:
+
+**A Name:** Even if it's just "Scarface the Enforcer"
+
+**A Motivation:** Why are they here? What do they want?
+
+**A Personality:** How does this affect their tactics and decisions?
+
+**Stats Appropriate to Their Role:**
+
+For **individually weak but numerous** adversaries (gang members, guards, rats):
+- Guard: 7 + party milestones
+- Vitality: 5 + party milestones
+- Damage: 1d6 + (party milestones / 2)
+- One Professional skill
+- Flow: 0
+- Should survive 2 hits at each tier
+
+For **capable adversaries matching party members** (duelist, assassin, sergeant):
+- Guard: 13 + (party milestones × 3)
+- Vitality: 21 + (party milestones × 3)
+- Damage: 2d6 + (party milestones / 2)
+- Two Professional skills
+- Flow: 0
+- Lasts 2-3 rounds under focus fire
+
+For **formidable threats** requiring coordination (inquisitor, guardian):
+- Guard: 40 + (party milestones × 8)
+- Vitality: 70 + (party milestones × 14)
+- Damage: 2d6+2 + party milestones
+- Two or three Expert skills
+- Flow: Starts at +2
+- DR 2, 3 actions/round (MAXIMUM 2 attacks), 3 legendary resistances
+- Creates 4-6 round conflicts
+
+These are baselines. Adjust for story and drama.
+
+---
+
+## Adjusting Stats for Story
+
+### Narrative Importance
+
+**Minor Threat:** Lower end of baseline, reduce Vitality
+**Recurring Villain:** Higher Vitality, add escape options (teleport, hidden exits, loyal bodyguards)
+**Climactic Adversary:** Upper end of baseline, add unique abilities
+
+### Dramatic Needs
+
+**Chase Scene:** High movement, lower Vitality (they should escape)
+**Social Conflict:** High Presence/Mind, moderate combat stats
+**Siege Defense:** Very high Vitality, lower damage (needs to survive prolonged fighting)
+**Assassination Attempt:** Very high damage, low Vitality (glass cannon)
+
+### Story Logic
+
+**Ancient Guardian:** Very high Vitality (survived centuries)
+**Hired Thugs:** Low loyalty (flee when hurt), respect strength
+**Zealot Cultists:** Fight to death regardless of stats
+**Corrupt Official:** High social skills, minimal combat ability
+
+### Party Capabilities
+
+**Party Has Healing:** Enemies can hit harder
+**Party Focuses Single Target:** Add reinforcements or escape options
+**Party Uses Area Effects:** Use fewer, tougher enemies
+**Party Struggles with Saves:** Reduce enemy save-or-suck abilities
+
+---
+
+## Adjusting Conflicts During Play
+
+### If Conflict Feels Too Easy
+
+- Reinforcements arrive (makes narrative sense)
+- Enemy reveals new capability (was holding back)
+- Environmental complication (alarm triggers, ceiling collapses)
+- Objective changes (villain escapes with the artifact)
+
+### If Conflict Feels Too Hard
+
+- NPC ally arrives (someone who'd realistically help)
+- Enemy offers terms (most people prefer living)
+- Environmental opportunity (escape route, environmental weapon)
+- Reveal weakness (ancient armor has a crack)
+
+Adjust for story and drama. The goal is memorable narrative, not mathematical precision.
+
+---
+
+## Important Details
+
+**Every significant adversary should have:**
+- A name (even if it's just "Scarface the Enforcer")
+- A motivation (why are they here, what do they want?)
+- A personality trait (affects their tactics and decisions)
+- Stats appropriate to their narrative role
+
+**Consider:**
+- How do they react when hurt?
+- What are they willing to die for?
+- Who do they care about?
+- What do they fear?
+
+These details make adversaries memorable and give players meaningful choices beyond "attack until dead."
+
+---
+
+*Stats serve the story. Start with who the character is, then assign numbers that match their narrative role.*

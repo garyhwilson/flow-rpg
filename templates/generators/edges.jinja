@@ -2,135 +2,111 @@
 Edges Template
 Generates edge documentation from YAML advancement data
 #}
-# EDGES - MECHANICAL REFERENCE
+# EDGES
 *Generated from YAML source data*
 
-## Overview
+Edges are minor improvements you can take at minor milestones instead of advancing skills or attributes. They represent specialized training, natural talents, or earned benefits.
 
-Edges are minor improvements that provide growth variety at minor milestones. They represent specialized training, natural talents, or earned benefits that don't fit into the standard attribute/skill advancement model.
-
-**Acquisition:** Primarily at minor milestones (every 1-2 sessions)
+**Acquisition:** Minor milestones (every 1-2 sessions), roleplay rewards, quest rewards
 
 ---
 
-## Edge Categories
-
-{% if edges_data.categories %}
-{% for category_id, category in edges_data.categories.items() %}
-### {{ category_id.replace('_', ' ').title() }}
-
-- **Description:** {{ category.description }}
-- **Acquisition:** {{ category.acquisition }}
-{% if category.stacking %}
-- **Stacking:** {{ category.stacking }}
-{% endif %}
-
-{% if category.examples %}
-**Examples:**
-{% for example_name, example_desc in category.examples.items() %}
-- **{{ example_name.replace('_', ' ').title() }}:** {{ example_desc }}
-{% endfor %}
-{% endif %}
-
-{% endfor %}
-{% endif %}
-
----
-
-## Combat Edges
+## Available Edges
 
 {% if milestone_data.minor_milestones.options.combat_edges.list %}
 {% for edge_id, edge in milestone_data.minor_milestones.options.combat_edges.list.items() %}
 ### {{ edge_id.replace('_', ' ').title() }}
 
-- **Effect:** {{ edge.effect }}
-- **Limit:** {{ edge.limit }}
+**Effect:** {{ edge.effect }}
+{% if edge.limit %}
+**Limit:** {{ edge.limit }}
+{% endif %}
 {% if edge.examples %}
-- **Examples:** {{ edge.examples|join(', ') }}
+**Examples:** {{ edge.examples|join(', ') }}
 {% endif %}
 
 {% endfor %}
 {% endif %}
-
----
-
-## Skill Edges
-
-Skill edges provide +1 bonus to specific applications of a skill.
 
 {% if milestone_data.minor_milestones.options.skill_edges.examples %}
+### Skill Specialization
+
+**Effect:** +1 to specific application of a skill
+**Limit:** Multiple allowed (different applications)
+
+**Examples:**
 {% for skill, applications in milestone_data.minor_milestones.options.skill_edges.examples.items() %}
-### {{ skill.title() }} Specializations
-
-{% for app in applications %}
-- {{ app }}
+- **{{ skill.title() }}:** {{ applications|join(', ') }}
 {% endfor %}
 
-{% endfor %}
 {% endif %}
 
 ---
 
-## Edge Chains
+## Building With Edges
 
-Some edges build on each other, creating progression paths:
+### Defensive Fighter
 
-{% if edges_data.edge_chains %}
-{% for chain_id, chain in edges_data.edge_chains.items() %}
-{% if chain_id != 'description' %}
-### {{ chain_id.replace('_', ' ').title() }}
+Take if you want to survive on the front line:
 
-{% for step_id, step_desc in chain.items() %}
-**{{ step_id.replace('_', ' ').title() }}:** {{ step_desc }}
-{% endfor %}
+1. **Tough** (+2 Guard)
+2. **Tough** again (+2 more Guard, total +4)
+3. **Hardy** (+2 Vitality)
+4. **Defensive Fighter** (+1 Guard in Defensive stance)
 
-{% endif %}
-{% endfor %}
-{% endif %}
+Result: Much harder to kill, can protect squishier allies
+
+### Weapon Specialist
+
+Take if you want reliable damage with your signature weapon:
+
+1. **Weapon Technique** (special maneuver with your weapon type)
+2. Eventually **Precise Strike** (reroll damage die)
+3. Later milestones: weapon mastery chain if building toward it
+
+Result: Consistent, reliable damage dealer
+
+### Flow Master
+
+Take if you use techniques or spells frequently:
+
+1. **Flow Harmony** (+1 max Flow)
+2. **Flow Harmony** (+1 more max, total +2)
+3. **Flow Harmony** (+1 more max, total +3)
+
+Result: More Flow to spend on techniques, spells, and abilities
+
+### Versatile Specialist
+
+Take if you want to excel in specific situations:
+
+1. **Skill Specialization:** Stealth (Urban environments)
+2. **Skill Specialization:** Combat (Dueling)
+3. **Skill Specialization:** Empathy (Reading lies)
+
+Result: Exceptionally good in your specialty areas
+
+### Adaptable Fighter
+
+Take if you want tactical flexibility:
+
+1. **Armor Adaptation** (reduce armor penalty for specific action)
+2. **Combat Style** (+1 to specific combat situation)
+3. **Quick Draw** (switch weapons free)
+
+Result: Adapt to different tactical situations
 
 ---
 
-## Using Edges in Character Building
-
-### When to Take Edges
-
-**Combat Edges:**
-- Take early if you want combat reliability
-- Stack Guard/Vitality edges for survivability
-- Weapon Focus for consistent damage increase
-- Flow Harmony for casters and active fighters
-
-**Skill Edges:**
-- Take when you want expertise beyond skill level
-- Useful for signature character moments
-- Stacks with high skill tiers for specialization
-- Narrative permission for unique applications
-
-**Flow Edges:**
-- Essential for active Flow users
-- Maximum Flow edges increase ceiling
-- Flow generation edges smooth economy
-- Consider for any character using techniques/spells
-
-**Social Edges:**
-- Reputation and contacts from roleplay
-- Language acquisition for exploration
-- Network building for information gathering
-
-**Equipment Edges:**
-- Heirloom items grow with you
-- Masterwork tools for crafting characters
-- Lucky items for risk-takers
-
-### Edge Stacking Rules
+## Edge Stacking
 
 **Edges That Stack:**
-- Multiple weapon focuses (one per type)
-- Multiple armor training (one per type)
-- Tough (max 2 times)
-- Hardy (max 2 times)
-- Flow Harmony (max 3 times)
-- Skill specializations (different applications)
+- Weapon Technique (one per weapon type)
+- Armor Adaptation (one per armor type)
+- Tough (max 2 times total)
+- Hardy (max 2 times total)
+- Flow Harmony (max 3 times total)
+- Skill Specialization (different applications)
 
 **Edges That Don't Stack:**
 - Quick Draw (once only)
@@ -139,49 +115,30 @@ Some edges build on each other, creating progression paths:
 - Precise Strike (once only)
 - Defensive Fighter (once only)
 
-### Common Edge Builds
+---
 
-**Tank Build:**
-1. Tough (+2 Guard)
-2. Tough again (+2 more Guard, total +4)
-3. Hardy (+2 Vitality)
-4. Defensive Fighter (+1 Guard in Defensive)
+## How GMs Award Edges
 
-**Weapon Specialist:**
-1. Weapon Focus: Swords (+1 damage)
-2. Combat edge from archetype or later
-3. Eventually weapon mastery chain
+### At Minor Milestones
 
-**Flow Master:**
-1. Flow Harmony (+1 max Flow)
-2. Flow Harmony (+1 more, total +2 max)
-3. Flow Harmony (+1 more, total +3 max)
+Players choose from available edges, or can take skill/attribute advancement instead. Encourage variety but don't force it.
 
-**Versatile Skill Expert:**
-1. Skill edge: Stealth (Urban)
-2. Skill edge: Combat (Dueling)
-3. Skill edge: Empathy (Reading lies)
+### As Roleplay Rewards
 
-## GM Guidelines for Edges
+Social edges like **Reputation** ("+1 with specific group"), **Contact** ("ally in specific location"), or **Language** can be earned through play without spending milestones.
 
-### Awarding Edges
+### As Quest Rewards
 
-**Minor Milestones:**
-- Players choose edges from available options
-- Can take skill/attribute instead
-- Encourage variety but don't force it
+Unique edges tied to story beats:
+- **Heirloom Weapon:** weapon gains minor magic property
+- **Masterwork Tools:** +1 to craft/profession
+- **Lucky Charm:** reroll one die per scene
 
-**Roleplay Rewards:**
-- Social edges (reputation, contacts) from play
-- Don't require milestone spending
-- Earned through narrative achievements
+Make these feel special and earned.
 
-**Quest Rewards:**
-- Equipment edges from special items
-- Unique edges tied to story beats
-- Make these feel special and earned
+---
 
-### Creating Custom Edges
+## Creating Custom Edges
 
 **Power Level Guidelines:**
 - +1 to specific narrow application
@@ -189,19 +146,16 @@ Some edges build on each other, creating progression paths:
 - Reroll one die in specific situation
 - Narrative permission for unique action
 
-**Edge Design Template:**
-- **Name:** Descriptive and evocative
-- **Effect:** Clear mechanical benefit
-- **Limit:** How many times can be taken
-- **Requirement:** Prerequisites if any
-
 **Example Custom Edge:**
-- **Name:** Shadow Step
+
+**Shadow Step**
 - **Effect:** Once per scene, teleport to shadow within Near range
 - **Limit:** Once only
 - **Requirement:** Stealth Professional or higher
 
-### Balance Considerations
+---
+
+## Balance Considerations
 
 **All edges should be:**
 - Comparable in power to +1 skill tier in specific situation
