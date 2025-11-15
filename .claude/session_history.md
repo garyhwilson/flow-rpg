@@ -272,4 +272,62 @@ _11/12/25 Session (Mathematical Rebalancing)_:
 
 ---
 
+_11/14/25 Session (Documentation Standards & Taxonomy Elimination)_:
+
+- **Identified and eliminated video game taxonomy patterns throughout documentation**
+- **User identified discomfort with taxonomic organization** that doesn't appear in traditional TTRPGs:
+  - "Paragon Paths" terminology (D&D 4th Edition baggage)
+  - "Opposition Patterns" in encounters.md
+  - "Threat Levels" (Threat 1-4) in monsters_reference.md
+  - "Edge Categories" explicit categorization
+  - Category-first organization vs examples-first traditional TTRPG presentation
+- **Completed comprehensive template rewrites** (examples-first approach):
+  - encounters.jinja: Replaced "Opposition Patterns" with 5 concrete named conflicts (Captain Sera Blackthorn, Red Cloak Gang, Inquisitor Thrace, Duelist Kain, Necromancer's Laboratory)
+  - enemy_templates.jinja: Replaced "Stat Guidance by Power Level" with 7 concrete adversary examples
+  - edges.jinja: Removed "Edge Categories", presented as flat list with build examples
+  - advanced_techniques.jinja: Removed categorical headers, flat list
+  - legendary_techniques.jinja: Removed categorical headers, flat list
+  - npc_templates.jinja: Simplified to basic reference
+- **Deleted monsters_reference.md** and monsters.jinja template:
+  - Contained egregious "Threat Levels" MMO-style numbered threat system
+  - Pure video game taxonomy incompatible with TTRPG presentation
+  - Removed generate_monsters() function from scripts/generate_docs.py
+  - Removed all CLI references and handlers
+- **Regenerated all 38 documentation files** (down from 39)
+- **Created comprehensive documentation standards** to prevent future taxonomy issues:
+  - Added "Documentation Presentation Standards" section to CLAUDE.md (~270 lines)
+  - Added "Documentation Structure Standards" subsection to .claude/instructions.md
+  - Codified examples-first philosophy
+  - Defined forbidden taxonomic patterns (numbered tiers, category-first organization)
+  - Established "Bestiary vs Design Doc" test
+  - Provided case studies from recent fixes
+  - Created practical guidelines and audit checklists
+- **Key principles established**:
+  - Examples first, always (show 5-7 concrete examples before theory)
+  - Avoid video game taxonomy (no numbered tiers, formal type systems)
+  - Traditional TTRPG presentation (follow Monster Manual/Bestiary patterns)
+  - Terminology red flags ("Pattern", "Category", "Type" as section headers)
+  - Bestiary vs Design Doc test (game book vs internal documentation)
+- **Files Modified**:
+  - CLAUDE.md: Added comprehensive documentation presentation standards
+  - .claude/instructions.md: Added documentation structure audit checklist
+  - templates/generators/encounters.jinja: Complete rewrite (examples-first)
+  - templates/generators/enemy_templates.jinja: Complete rewrite (examples-first)
+  - templates/generators/edges.jinja: Complete rewrite (flat list with examples)
+  - templates/generators/advanced_techniques.jinja: Removed categories
+  - templates/generators/legendary_techniques.jinja: Removed categories
+  - templates/generators/npc_templates.jinja: Simplified
+  - templates/generators/monsters.jinja: DELETED
+  - scripts/generate_docs.py: Removed monsters generation system
+  - templates/output/monsters_reference.md: DELETED
+  - templates/output/*: All 38 remaining files regenerated
+- **Design Impact**:
+  - Future documentation will follow traditional TTRPG presentation patterns
+  - Clear standards prevent video game taxonomy from creeping back in
+  - Templates now inspire creativity rather than prescribing formulas
+  - Documentation reads like D&D/Pathfinder, not MMO wikis or 4th Edition
+  - Establishes auditable standards for reviewing generated content
+
+---
+
 _Note: This document contains the complete development history. Add new session notes at the bottom in chronological order._

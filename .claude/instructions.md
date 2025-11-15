@@ -369,6 +369,50 @@ Green Flags (TTRPG):
 3. Read it aloud - does it sound like fantasy fiction or a game wiki?
 4. Ask: "Would Gary Gygax or Matt Colville write it this way?"
 
+### Documentation Structure Standards
+
+**CRITICAL**: Beyond avoiding video game terminology, we must also avoid video game/design document **presentation patterns**. How we organize and present information matters as much as word choice.
+
+**Core Principle: Examples First, Always**
+
+Traditional TTRPGs (D&D Monster Manual, Pathfinder Bestiary) show concrete examples and let patterns emerge naturally. Video game design docs categorize first and provide examples second. Flow RPG must follow TTRPG traditions.
+
+**Quick Audit Checklist:**
+
+When creating or reviewing documentation:
+
+1. **✓ Examples come before theory**
+   - Show 5-7 named, concrete examples first
+   - Add "Building Your Own" guidance section after
+   - Let patterns emerge from studying examples
+
+2. **✗ No category-first organization**
+   - Not: "Opposition Patterns" with examples under each category
+   - Yes: Captain Sera Blackthorn, Red Cloak Gang, etc., then guidance
+
+3. **✗ No taxonomic section headers**
+   - Red flags: "Pattern", "Category", "Type", "Classification", "Tier", "Level"
+   - Better: "Creating [X]", "Available [X]", or named example headings
+
+4. **✗ No numbered threat/tier systems**
+   - Not: "Threat 1: Henchmen", "Tier 1-5 Challenges"
+   - Yes: Descriptive language in context, natural groupings
+
+5. **✓ Bestiary vs Design Doc test**
+   - Would this appear in D&D/Pathfinder? (Good)
+   - Would this appear in MMO wiki/design doc? (Bad)
+   - Does it inspire or prescribe? (Inspire = good)
+
+**Recent Case Studies:**
+
+These issues were just fixed - avoid similar patterns:
+- **"Paragon Paths"** - D&D 4e terminology, formal categorization
+- **"Opposition Patterns"** - Video game taxonomy, categories-first
+- **"Threat Levels"** - MMO numbered system (Threat 1-4)
+- **"Edge Categories"** - Explicit categorization headers
+
+**For Full Guidance:** See CLAUDE.md "Documentation Presentation Standards" section for comprehensive examples, red flags, and practical guidelines.
+
 ### Additional Writing Standards
 
 **YAML Documentation Standards:**
@@ -388,6 +432,14 @@ When reviewing or modifying content:
 - **Verify generated docs** after cleaning up YAML
 - **Update both mechanics and descriptions** - don't just reword, redesign if needed
 - **Document changes** in session notes with files modified
+
+**Documentation Structure Audit:**
+
+When creating templates or documentation:
+- **Check organization pattern** - examples first or categories first?
+- **Search for taxonomic headers** - "Pattern", "Category", "Type", etc.
+- **Verify presentation order** - concrete before abstract?
+- **Test inspiration factor** - does it inspire creativity or prescribe formulas?
 
 ## Project Organization
 
