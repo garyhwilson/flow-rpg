@@ -1,27 +1,178 @@
-{# Tools and Utilities - from equipment.yaml #}
-# TOOLS AND UTILITIES
-*Generated from YAML source data*
+{#
+Tools and Utilities Template - Publication Style
+Generates tools and utilities documentation with professional TTRPG prose
+#}
+# Tools and Utilities
 
-## Overview
-Non-combat equipment for exploration and utility.
+Adventures require more than weapons and armor. The rope that lets you climb castle walls, the torch that illuminates dark dungeons, the grappling hook that bridges impossible gaps—these mundane tools solve problems that magic and muscle cannot.
+
+While adventuring gear kits provide comprehensive loadouts for specific scenarios, tools and utilities represent individual items you choose based on your character's methods and the challenges you expect to face. Smart adventurers invest in the right tools before they're desperately needed.
+
+---
 
 {% if tools_data %}
-{% for tool_id, tool in tools_data.items() %}
-## {{ tool_id.replace('_', ' ').title() }}
-{% if tool.types %}
-### Types
-{% for type_id, type_data in tool.types.items() %}
-**{{ type_id.title() }}:**
-{% if type_data.cost %}Cost: {{ type_data.cost }} coins{% endif %}
-{% if type_data.special %}Special: {{ type_data.special }}{% endif %}
-{% endfor %}
-{% elif tool.cost %}
-**Cost:** {{ tool.cost }} coins
-{% endif %}
-{% if tool.uses %}
-**Uses:** {{ tool.uses }}
-{% endif %}
+
+{% if tools_data.rope %}
+## Rope
+
+The most versatile tool in any adventurer's pack. Rope enables climbing, creates makeshift bridges, secures prisoners, lowers party members into pits, and solves countless improvised challenges.
+
+{% if tools_data.rope.types %}
+{% for type_id, rope_type in tools_data.rope.types.items() %}
+**{{ type_id.title() }} Rope{% if rope_type.length %} ({{ rope_type.length }}){% endif %}:** {% if rope_type.strength %}{{ rope_type.strength }}. {% endif %}{% if rope_type.cost %}{{ rope_type.cost }} coins{% endif %}
+
 {% endfor %}
 {% endif %}
 
-*Essential tools for adventuring beyond combat.*
+Most adventurers carry hemp rope—it's affordable, reliable, and strong enough for typical use. Silk rope costs significantly more but weighs less and holds better, making it valuable for weight-conscious climbers or situations requiring superior strength.
+
+Always have rope. The situations where you need it are unpredictable, but the need is inevitable.
+{% endif %}
+
+{% if tools_data.light_sources %}
+
+## Light Sources
+
+Dungeons, caves, and nighttime adventures demand reliable illumination. Without light, you're helpless in darkness—unable to fight effectively, navigate terrain, or spot threats.
+
+{% for light_id, light_data in tools_data.light_sources.items() %}
+**{{ light_id.title() }}:** {% if light_data.duration %}Burns for {{ light_data.duration }}{% if light_data.radius %}, illuminates {{ light_data.radius }}{% endif %}. {% endif %}{% if light_data.cost %}{{ light_data.cost }} coins{% endif %}
+
+{% endfor %}
+
+Torches are cheap and disposable—carry a dozen and don't worry about losing them. Lanterns provide directed light and last longer but require oil and careful handling. Sunrods offer magical light that never flickers or requires fuel, perfect for extended delves into darkness.
+
+Characters with darkvision need light sources less frequently, but should still carry them for allies or situations where magical darkness negates darkvision.
+{% endif %}
+
+{% if tools_data.climbing_gear %}
+
+## Climbing Gear
+
+Vertical movement defines many adventures. Scaling fortress walls, descending into chasms, crossing ravines—climbing gear transforms impossible obstacles into merely difficult challenges.
+
+{% for gear_id, gear_data in tools_data.climbing_gear.items() %}
+**{{ gear_id.replace('_', ' ').title() }}:** {% if gear_data.benefit %}{{ gear_data.benefit }}{% if gear_data.quantity %} ({{ gear_data.quantity }} units){% endif %}. {% endif %}{% if gear_data.cost %}{{ gear_data.cost }} coins{% endif %}
+
+{% endfor %}
+
+Grappling hooks let you create climbing routes where none exist. Pitons secure ropes to surfaces, providing safe anchor points. Complete climber's kits include everything needed for professional-quality climbing, granting significant bonuses but requiring investment and weight capacity.
+
+The difference between falling and succeeding often comes down to having proper equipment. Don't cheap out on climbing gear if your adventures involve vertical terrain.
+{% endif %}
+
+{% endif %}
+
+---
+
+## Using Tools Effectively
+
+### Problem-Solving Equipment
+
+The best tool use isn't planned—it's improvised. You brought rope thinking you'd need to climb, but instead you use it to:
+- Bind captured enemies
+- Create trip wires across corridors
+- Lower wounded allies safely
+- Bridge small gaps between platforms
+- Pull distant objects closer
+
+This versatility makes simple tools like rope invaluable. They solve problems you didn't anticipate through clever application.
+
+### Tool Synergies
+
+Tools work together to enable complex solutions:
+
+**Rope + Grappling Hook** = Climb surfaces with no handholds
+**Rope + Pitons** = Secure climbing route for entire party
+**Lantern + Oil** = Set areas on fire for area denial
+**Rope + Weight** = Create makeshift pulley system
+
+Think beyond individual tool functions. Combinations create capabilities exceeding any single item.
+
+### Weight Considerations
+
+Every tool adds weight to your loadout. Prioritize based on:
+
+**Adventure Type:** Urban intrigue rarely needs climbing gear. Wilderness exploration always needs rope.
+
+**Party Composition:** If someone carries a complete climber's kit, you don't need pitons. Coordinate to avoid redundancy.
+
+**Known Challenges:** Scouting revealed a chasm? Bring extra rope. Ancient ruins known for darkness? Extra light sources.
+
+Don't carry everything "just in case." Carry what your adventure actually needs.
+
+---
+
+## Tool Quality
+
+Like weapons and armor, tools come in varying quality levels:
+
+**Standard Tools:** Reliable and affordable. The default choice for most adventurers. They work as described without bonuses or penalties.
+
+**Fine Tools:** Superior craftsmanship grants +1 to relevant checks. Fine lockpicks make picking locks easier. Fine climbing gear improves climbing attempts. Costs 2-5× standard price.
+
+**Masterwork Tools:** The best available. Grant +2 to relevant checks and rarely break or fail. Expensive (5-10× standard price) but worth it for critical skills.
+
+**Improvised Tools:** Trying to pick a lock with a stick or climb with frayed rope imposes -2 penalty. Don't use improvised tools unless desperate.
+
+### When Quality Matters
+
+Invest in high-quality tools for:
+- **Skills you use frequently:** The rogue's lockpicks should be fine or masterwork
+- **Life-or-death situations:** Masterwork climbing gear prevents fatal falls
+- **Professional activities:** The wizard's arcane tools, the cleric's religious implements
+
+Standard tools suffice for:
+- **Backup equipment:** You won't use the backup rope unless the main rope breaks
+- **Rarely-used items:** That grappling hook you've never actually thrown
+- **Disposable uses:** Torches and pitons that get left behind
+
+---
+
+## Game Master Guidance
+
+### Tool Availability
+
+Make standard tools readily available in any settlement. Players should never struggle to find basic rope, torches, or climbing gear in civilized areas.
+
+Fine tools require specialists—the master locksmith, the
+
+ expert outfitter. Finding them creates minor quests: "The best lockpicks in the city come from Old Marcus in the crafters' district."
+
+Masterwork tools require commission or discovery. NPCs who make masterwork items charge premium prices and have waiting lists. Finding masterwork tools as treasure feels rewarding.
+
+### Tool Challenges
+
+Design adventures that reward tool preparation:
+
+**The Classic Puzzle:** A 30-foot chasm blocks progress. Did anyone bring rope?
+
+**The Time Pressure:** The guard patrol arrives in 2 minutes. Can the rogue pick the lock before they're spotted? Quality tools improve speed.
+
+**The Environmental Hazard:** Complete darkness in the caves. Light sources determine visibility, positioning, and tactical options.
+
+Don't punish players for lacking tools arbitrarily. Make tool challenges fair—either the situation suggests preparation ("We're exploring caves, we should bring light sources") or tools can be improvised with skill checks.
+
+### Improvisation Rules
+
+When players lack proper tools but attempt creative solutions:
+
+**Set reasonable TN:** Picking a lock with a wire is possible (TN 10-12 instead of 8) but harder than using lockpicks.
+
+**Allow clever alternatives:** Rope can become a lasso, a climbing tool, a trip wire, or a dozen other things. Reward creativity.
+
+**Make failure interesting:** Improvised tools break, make noise, take longer—create complications rather than just "you fail."
+
+The wizard using mage hand to manipulate lockpicks from a distance is creative. The fighter using their sword as a crowbar is improvisation. Reward both.
+
+### Tool Costs and Economy
+
+Tools create ongoing expenses—torches burn out, pitons get left in walls, rope frays. This prevents infinite-resource scenarios without being punitive.
+
+Track consumables loosely. Don't make players count individual torches unless resource scarcity is a campaign focus. Abstract to "you have several torches" until it matters.
+
+Expensive tools (masterwork items, specialty equipment) should require investment. The thief commissioning masterwork lockpicks for 200 coins creates narrative weight—those tools matter because they cost significantly.
+
+---
+
+*Tools don't grant flashy powers or impressive statistics. They solve problems, enable creativity, and turn impossible challenges into merely difficult ones. Smart adventurers never underestimate mundane equipment.*

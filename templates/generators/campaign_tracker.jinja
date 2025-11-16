@@ -1,20 +1,341 @@
-{# Campaign Tracker - from gm_tools.yaml #}
-# CAMPAIGN TRACKER
-*Generated from YAML source data*
+{#
+Campaign Tracker Template - Publication Style
+Generates campaign tracking and management documentation with professional TTRPG prose
+#}
+# Campaign Tracker
 
-## Overview
-Track campaign progression and story threads.
+Running a campaign means juggling story threads, tracking character progression, remembering NPC motivations, and maintaining pacing across multiple sessions. Campaign tracking transforms scattered notes into organized systems that help you run better games while reducing prep stress.
 
-{% if tracker_data %}
-{% for aspect_id, aspect in tracker_data.items() %}
-## {{ aspect_id.replace('_', ' ').title() }}
-{{ aspect if aspect is string else aspect.description if aspect.description else '' }}
+Good campaign tracking answers three critical questions: Where have we been? Where are we now? Where are we going? The tools below help you answer those questions quickly during prep and at the table.
+
+---
+
+## Milestone Tracking
+
+The most critical tracking: character advancement. Flow RPG uses milestone advancement rather than experience points—characters advance when they accomplish significant story beats. Track these systematically to ensure consistent progression:
+
+### Milestone Types and Timing
+
+**Minor Milestones:** Every 1-2 sessions
+{% if campaign_management and campaign_management.milestone_timing and campaign_management.milestone_timing.minor_milestone_triggers %}
+Award when characters:
+{% for trigger in campaign_management.milestone_timing.minor_milestone_triggers %}
+- {{ trigger }}
+{% endfor %}
+{% else %}
+- End satisfying session
+- Make significant discovery
+- Overcome personal challenge
+- Solve problems creatively
+{% endif %}
+
+**Moderate Milestones:** Every 3-4 sessions
+{% if campaign_management and campaign_management.milestone_timing and campaign_management.milestone_timing.moderate_milestone_triggers %}
+Award when characters:
+{% for trigger in campaign_management.milestone_timing.moderate_milestone_triggers %}
+- {{ trigger }}
+{% endfor %}
+{% else %}
+- Complete story arc
+- Defeat recurring villain
+- Save community
+- Achieve major character growth
+{% endif %}
+
+**Major Milestones:** Every 5-6 sessions (typically sessions 5 and 10)
+{% if campaign_management and campaign_management.milestone_timing and campaign_management.milestone_timing.major_milestone_triggers %}
+Award when characters:
+{% for trigger in campaign_management.milestone_timing.major_milestone_triggers %}
+- {{ trigger }}
+{% endfor %}
+{% else %}
+- Complete campaign chapter
+- Cause world-changing event
+- Achieve legendary feat
+- Transform the setting
+{% endif %}
+
+### Tracking Sheet Example
+
+**Campaign:** The Dragon's Conspiracy
+**Session:** 7 of planned 12
+
+| Milestone Type | Last Awarded | Sessions Since | Next Expected |
+|---|---|---|---|
+| Minor | Session 6 | 1 session | Session 7-8 |
+| Moderate | Session 4 | 3 sessions | Session 7-8 |
+| Major | Session 5 | 2 sessions | Session 10 |
+
+**Achievements This Arc:**
+- Infiltrated cult hideout (session 5)
+- Discovered dragon alliance (session 6)
+- Stopped ritual (session 7 - pending)
+
+**Note:** Award moderate milestone when ritual stopped—completes story arc.
+
+---
+
+## Story Thread Tracking
+
+Campaigns involve multiple simultaneous plots. Track them to maintain coherence and provide satisfying resolutions:
+
+### Active Threads
+
+Plots currently driving session content:
+
+**Thread 1: The Dragon Conspiracy**
+- Status: Climax approaching
+- Next Step: Party raids ritual site
+- Stakes: City destruction if ritual completes
+- Timeline: 3 days in-game time
+
+**Thread 2: Marcella's Betrayal**
+- Status: Background mystery
+- Next Step: Party discovers her coded messages
+- Stakes: Trusted ally is actually informant
+- Timeline: Revelation session 8-9
+
+### Background Threads
+
+Plots developing off-screen, emerging later:
+
+**Thread 3: The Thieves' Guild Power Struggle**
+- Status: Developing
+- Trigger: When party returns to city
+- Stakes: Guild war erupts, collateral damage
+- Timeline: Sessions 9-10
+
+### Resolved Threads
+
+Completed plots (useful for continuity):
+
+**Thread A: The Bandit King** (Resolved Session 3)
+- Outcome: Defeated, territory claimed by legitimate authorities
+- Consequences: Party gained regional fame
+
+---
+
+## NPC Roster
+
+Track important NPCs to maintain consistent characterization:
+
+{% if npc_generation and npc_generation.memorable_traits %}
+### Quick NPC Template
+
+For each important NPC, record:
+
+**Name:** [Character name]
+**Role:** [Relationship to party]
+**Motivation:** [What do they want?]
+**Memorable Trait:** [One distinctive feature]
+**Status:** [Where are they now?]
+
+### Example NPCs
+
+**Captain Aldric Thorne**
+- Role: City guard contact, occasional ally
+- Motivation: Maintain order while protecting citizens from corrupt nobles
+- Memorable Trait: Missing left hand, replaced with ornate hook
+- Status: Investigating noble involvement in cult
+
+**Seraphine the Red**
+- Role: Informant, unreliable ally
+- Motivation: Profit and survival above all else
+- Memorable Trait: Whispers everything, even in safe locations
+- Status: Disappeared after double-crossing party (session 4)
+
+{% else %}
+
+**Name | Role | Motivation | Trait | Status**
+- Captain Thorne | Guard ally | Maintain order | Hook hand | Investigating cult
+- Seraphine | Informant | Personal profit | Always whispers | Missing
+- Elder Korrin | Quest giver | Protect village | Prophetic dreams | Waiting for report
+
+{% endif %}
+
+---
+
+## Session Structure Tracking
+
+{% if campaign_management and campaign_management.session_structure %}
+Maintain pacing by structuring sessions consistently:
+
+{% if campaign_management.session_structure.opening %}
+### Opening (15-20 minutes)
+{% for element, description in campaign_management.session_structure.opening.items() %}
+- **{{ element.replace('_', ' ').title() }}:** {{ description }}
 {% endfor %}
 {% endif %}
 
-## Milestone Tracking
-- **Minor:** Every 1-2 sessions
-- **Moderate:** Every 5-6 sessions
-- **Major:** Every 12-15 sessions
+{% if campaign_management.session_structure.rising_action %}
+### Rising Action (60-90 minutes)
+{% for element, description in campaign_management.session_structure.rising_action.items() %}
+- **{{ element.replace('_', ' ').title() }}:** {{ description }}
+{% endfor %}
+{% endif %}
 
-*Use this to maintain pacing and ensure consistent character progression.*
+{% if campaign_management.session_structure.climax %}
+### Climax (30-45 minutes)
+{% for element, description in campaign_management.session_structure.climax.items() %}
+- **{{ element.replace('_', ' ').title() }}:** {{ description }}
+{% endfor %}
+{% endif %}
+
+{% if campaign_management.session_structure.resolution %}
+### Resolution (15-30 minutes)
+{% for element, description in campaign_management.session_structure.resolution.items() %}
+- **{{ element.replace('_', ' ').title() }}:** {{ description }}
+{% endfor %}
+{% endif %}
+
+{% else %}
+
+**Opening:** Recap, intentions, Flow check, scene setting
+**Rising Action:** 2-3 encounters, building tension, complications
+**Climax:** Major challenge, peak resources, decisive moment
+**Resolution:** Consequences, rewards, hooks, Flow reset
+
+{% endif %}
+
+---
+
+## Campaign Type Tracking
+
+{% if campaign_management and campaign_management.campaign_types %}
+Different campaign styles require different tracking approaches:
+
+{% for type_id, campaign_type in campaign_management.campaign_types.items() %}
+### {{ type_id.replace('_', ' ').title() }}
+
+**Description:** {{ campaign_type.description if campaign_type.description else "Campaign focusing on different storytelling approach" }}
+{% if campaign_type.flow_reset %}**Flow Reset:** {{ campaign_type.flow_reset }}{% endif %}
+{% if campaign_type.advancement %}**Advancement:** {{ campaign_type.advancement }}{% endif %}
+{% if campaign_type.benefits %}**Benefits:** {{ campaign_type.benefits }}{% endif %}
+
+{% if type_id == 'episodic' %}**Tracking Needs:** Minimal—each session self-contained, track character sheets and milestone count only.{% endif %}
+{% if type_id == 'serial' %}**Tracking Needs:** Full tracking—maintain NPC roster, story threads, ongoing consequences across sessions.{% endif %}
+{% if type_id == 'sandbox' %}**Tracking Needs:** Location-based—track regions, factions, discovered locations, and available quests.{% endif %}
+{% if type_id == 'hybrid' %}**Tracking Needs:** Moderate—track main story arc thoroughly, episodic elements lightly.{% endif %}
+
+---
+{% endfor %}
+
+{% else %}
+
+**Episodic:** Self-contained adventures, minimal tracking
+**Serial:** Connected story, full NPC/thread tracking
+**Sandbox:** Location-based, track regions and factions
+**Hybrid:** Main arc + episodic elements, moderate tracking
+
+{% endif %}
+
+---
+
+## Pacing Tools
+
+{% if campaign_management and campaign_management.pacing_tools %}
+
+{% if campaign_management.pacing_tools.tension_management %}
+### Tension Management
+
+{% if campaign_management.pacing_tools.tension_management.build_tension %}
+**Build Tension When:**
+{% for technique in campaign_management.pacing_tools.tension_management.build_tension %}
+- {{ technique }}
+{% endfor %}
+{% endif %}
+
+{% if campaign_management.pacing_tools.tension_management.release_tension %}
+**Release Tension When:**
+{% for technique in campaign_management.pacing_tools.tension_management.release_tension %}
+- {{ technique }}
+{% endfor %}
+{% endif %}
+{% endif %}
+
+{% if campaign_management.pacing_tools.flow_pacing %}
+### Flow Pacing Across Session
+
+{% for phase, description in campaign_management.pacing_tools.flow_pacing.items() %}
+**{{ phase.replace('_', ' ').title() }}:** {{ description }}
+{% endfor %}
+{% endif %}
+
+{% else %}
+
+**Build Tension:** Add time pressure, reveal stakes gradually, increase hazards
+**Release Tension:** Comic relief, safe havens, minor victories, resource discovery
+
+**Flow Pacing:** Slow start → midpoint spike → climax (max Flow) → denouement
+
+{% endif %}
+
+---
+
+## Quick Campaign Tracker Template
+
+Use this format for session-by-session tracking:
+
+**Session #:** ___
+**Date:** ___
+**In-Game Time:** ___
+
+**Milestones Awarded:**
+- [ ] Minor
+- [ ] Moderate
+- [ ] Major
+
+**Story Progress:**
+- Main Quest: ___
+- Side Threads: ___
+- New Developments: ___
+
+**NPCs Introduced/Updated:**
+- ___
+- ___
+
+**Next Session Prep:**
+- ___
+- ___
+
+**Player Notes/Requests:**
+- ___
+- ___
+
+---
+
+## Campaign Conclusion Tracking
+
+{% if sweet_spot_edition and sweet_spot_edition.campaign_parameters %}
+Flow RPG campaigns naturally conclude after 8-12 sessions when characters reach peak power. Track toward this conclusion:
+
+**Campaign Length:** {{ sweet_spot_edition.campaign_parameters.ideal_length if sweet_spot_edition.campaign_parameters.ideal_length else "8-12 sessions" }}
+**Current Session:** ___
+**Estimated Conclusion:** Session ___
+
+**Milestone Progress:**
+- Minor Milestones Awarded: ___
+- Moderate Milestones Awarded: ___
+- Major Milestones Awarded: ___ / 2
+
+**Power Level Tracking:**
+- Current Party Modifiers: ___
+- Approaching Cap (+5): ___ sessions estimated
+
+**Retirement Planning:**
+- Main story arc conclusion: Session ___
+- Character epilogues planned: Yes / No
+- Legacy benefits for next campaign: ___
+
+{% else %}
+
+**Current Session:** ___
+**Planned Conclusion:** Session ___
+**Milestones Remaining:** ___
+**Story Arc Status:** ___
+
+{% endif %}
+
+---
+
+*Campaign tracking transforms scattered notes into organized systems. Invest fifteen minutes after each session updating your tracker—you'll save hours of prep time and run dramatically better games.*

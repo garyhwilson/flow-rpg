@@ -1,21 +1,363 @@
-{# Magic Item Crafting - from magic.yaml #}
-# MAGIC ITEM CRAFTING
-*Generated from YAML source data*
+{#
+Magic Item Crafting Template - Publication Style
+Generates magic item crafting documentation with professional TTRPG prose
+#}
+# Magic Item Crafting
 
-## Overview
-Creating magical items through extended effort.
+Anyone can swing a sword. Adventurers master enchanted blades that burn with elemental fury. The difference? Someone crafted that magic—invested Flow, gathered materials, and bound supernatural power into mundane metal. Magic item crafting transforms you from consumer of magical treasures to creator of them.
 
-{% if crafting_data %}
-{% for aspect_id, aspect in crafting_data.items() %}
-## {{ aspect_id.replace('_', ' ').title() }}
-{% if aspect is mapping %}
-{% for detail_id, detail in aspect.items() %}
-- **{{ detail_id.replace('_', ' ').title() }}:** {{ detail }}
+{% if crafting_data and crafting_data.description %}{{ crafting_data.description }}{% else %}Crafting magical items requires knowledge, materials, time, and most importantly: Flow investment. You pour your own magical energy into the creation across days, weeks, or months. The result is permanent enchantment that persists indefinitely.{% endif %}
+
+This system lets wizards create scrolls for emergency casting, artificers enchant party equipment, and late-game characters craft legendary artifacts. Crafting isn't quick or cheap—but it provides access to exactly the magic items you need rather than hoping random treasure provides them.
+
+---
+
+## Crafting Requirements
+
+### Knowledge Prerequisites
+
+You cannot create magical effects you don't understand:
+
+**Spell-Based Items:** Must know the spell you're imbuing (potions, scrolls, wands)
+**Enhancement Items:** Must have Craft skill appropriate to base item type
+**Unique Properties:** Requires GM collaboration to define effect and requirements
+
+Cannot create Healing Potion without knowing Heal spell. Cannot enchant weapon without Weaponsmith or similar craft expertise. The magic binds to your understanding—without knowledge, binding fails.
+
+### Material Components
+
+Magic items require special materials beyond mundane crafting supplies:
+
+**Consumables (Potions/Scrolls):** Rare inks, alchemical reagents, spell focuses
+**Permanent Items:** Magical essences, gemstones, enchanted metals
+**Legendary Items:** Unique materials (dragon scales, celestial metals, artifacts)
+
+{% if crafting_data and crafting_data.creation and crafting_data.creation.requirements %}
+{% for requirement in crafting_data.creation.requirements %}
+**{{ requirement }}**
 {% endfor %}
+{% endif %}
+
+Materials cost varies by item power—minor enchantments require 50-100 gold in components, moderate items need 500-1000 gold, major artifacts demand rare materials worth thousands or materials that cannot be purchased at all.
+
+### Time Investment
+
+Magical crafting cannot be rushed:
+
+**Minor Items:** Days of work (potions, scrolls, +1 weapons)
+**Moderate Items:** Weeks of work (wands, +2 weapons, specialized armor)
+**Major Items:** Months of work (artifacts, legendary weapons, reality-altering items)
+
+This time must be focused—you can adventure between crafting sessions, but each session requires several hours of uninterrupted work. Most crafters create minor items between adventures, commissioning moderate items during downtime, and pursuing major items as long-term campaign goals.
+
+### Flow Investment
+
+{% if crafting_data and crafting_data.creation and crafting_data.creation.flow_investment %}
+The critical requirement: Flow investment. Magical items store magical energy permanently—that energy comes from you:
+
+{% for tier, flow in crafting_data.creation.flow_investment.items() %}
+**{{ tier.replace('_', ' ').title() }} Items:** {{ flow }}
+{% endfor %}
+
 {% else %}
-{{ aspect }}
-{% endif %}
-{% endfor %}
+**Minor Items:** 5 Flow total over days
+**Moderate Items:** 10 Flow total over weeks
+**Major Items:** 20 Flow total over months
 {% endif %}
 
-*Magic item crafting requires time, materials, and Flow investment.*
+You don't spend this Flow all at once. Instead, you invest Flow across multiple crafting sessions—spending 1-2 Flow each session until the total investment reaches the required threshold. This prevents crafting from completely draining your resources but requires sustained effort.
+
+**Example crafting timeline:**
+- Session 1: Invest 2 Flow, begin enchanting longsword
+- Session 2: Invest 2 Flow, continue work
+- Session 3: Invest 1 Flow, complete +1 enhancement (5 Flow total)
+
+---
+
+## Item Categories
+
+{% if crafting_data and crafting_data.categories %}
+
+### Consumable Items
+
+Items destroyed or depleted through use:
+
+{% if crafting_data.categories.consumables %}
+{% if crafting_data.categories.consumables.potions %}
+#### Potions
+
+{{ crafting_data.categories.consumables.potions.use if crafting_data.categories.consumables.potions.use else "Single-use liquids containing spell effects" }}
+
+{% if crafting_data.categories.consumables.potions.examples %}**Common Examples:** {{ crafting_data.categories.consumables.potions.examples | join(', ') }}{% endif %}
+
+**Crafting Requirements:** Know the spell, alchemist's supplies, 2-3 days, 5 Flow
+**Typical Cost:** 50-200 gold in materials depending on spell tier
+**Usage:** Drinking potion is standard action, effect activates immediately
+
+Potions provide reliable spell effects without requiring caster presence. Healing potions let non-casters restore Vitality. Invisibility potions enable stealth without magical ability. Every party benefits from potion stockpiles.
+{% endif %}
+
+{% if crafting_data.categories.consumables.scrolls %}
+#### Scrolls
+
+{{ crafting_data.categories.consumables.scrolls.use if crafting_data.categories.consumables.scrolls.use else "Written spells that can be cast by reading" }}
+
+{% if crafting_data.categories.consumables.scrolls.examples %}**Examples:** {{ crafting_data.categories.consumables.scrolls.examples | join(', ') }}{% endif %}
+
+**Crafting Requirements:** Know the spell, fine parchment and inks, 1-2 days, 3 Flow
+**Typical Cost:** 25-150 gold depending on spell tier
+**Usage:** Read scroll as standard action, make Sorcery check (TN 8 + spell tier)
+
+Scrolls provide emergency access to spells you haven't prepared or don't know. Wizards create scroll libraries containing every spell they've mastered. Non-casters can use scrolls with successful Sorcery checks, though failure wastes the scroll.
+{% endif %}
+
+{% if crafting_data.categories.consumables.wands %}
+#### Wands
+
+{{ crafting_data.categories.consumables.wands.use if crafting_data.categories.consumables.wands.use else "Limited-charge items containing specific spells" }}
+
+{% if crafting_data.categories.consumables.wands.examples %}**Examples:** {{ crafting_data.categories.consumables.wands.examples | join(', ') }}{% endif %}
+
+**Crafting Requirements:** Know the spell, carved wood/bone, 1 week, 10 Flow
+**Typical Cost:** 200-800 gold in materials
+**Usage:** Activate as action, spend 1 Flow, produces spell effect (10-20 charges total)
+
+Wands provide multiple uses of specific spells. Unlike scrolls, wands don't require Sorcery checks—anyone who can spend Flow can activate them. Wands of Healing become party emergency resources. Wands of Fireball give warriors magical firepower.
+{% endif %}
+{% endif %}
+
+### Permanent Items
+
+Items that function indefinitely:
+
+{% if crafting_data.categories.permanent %}
+{% if crafting_data.categories.permanent.weapons %}
+#### Weapons
+
+Enchanted weapons provide combat advantages:
+
+{% if crafting_data.categories.permanent.weapons.enhancement_bonus %}**Enhancement Bonuses:** {{ crafting_data.categories.permanent.weapons.enhancement_bonus }}{% endif %}
+{% if crafting_data.categories.permanent.weapons.properties %}**Special Properties:** {{ crafting_data.categories.permanent.weapons.properties | join(', ') }}{% endif %}
+
+**Enhancement Crafting:**
+- **+1 Weapon:** 1 week, 5 Flow, 500 gold materials
+- **+2 Weapon:** 2 weeks, 10 Flow, 2000 gold materials
+- **+3 Weapon:** 1 month, 15 Flow, 8000 gold materials
+
+**Special Properties:**
+- **Flaming:** Weapon deals +1d6 fire damage (1 week, 8 Flow, 1000 gold)
+- **Keen:** Critical hits on 11+ instead of 12 (2 weeks, 10 Flow, 2000 gold)
+- **Vorpal:** On critical hit, target loses head if possible (1 month, 20 Flow, 10000 gold)
+
+Enhancement bonuses stack with properties—+2 Flaming Longsword provides +2 to hit/damage plus 1d6 fire. Crafting both requires time and Flow investment for each component separately.
+{% endif %}
+
+{% if crafting_data.categories.permanent.armor %}
+#### Armor
+
+Enchanted armor improves protection:
+
+{% if crafting_data.categories.permanent.armor.enhancement_bonus %}**Enhancement Bonuses:** {{ crafting_data.categories.permanent.armor.enhancement_bonus }}{% endif %}
+{% if crafting_data.categories.permanent.armor.properties %}**Special Properties:** {{ crafting_data.categories.permanent.armor.properties | join(', ') }}{% endif %}
+
+**Enhancement Crafting:**
+- **+1 Armor:** 1 week, 5 Flow, 500 gold materials
+- **+2 Armor:** 2 weeks, 10 Flow, 2000 gold materials
+- **+3 Armor:** 1 month, 15 Flow, 8000 gold materials
+
+**Special Properties:**
+- **Fortification:** 25% chance to negate critical hits (2 weeks, 12 Flow, 2500 gold)
+- **Glamered:** Changes appearance at will (1 week, 5 Flow, 1000 gold)
+- **Ethereal:** Become incorporeal briefly 1/day (3 weeks, 18 Flow, 8000 gold)
+
+Enhancement bonuses improve Guard directly. Properties provide utility or survivability. Combine both for comprehensive protection at significant cost.
+{% endif %}
+
+{% if crafting_data.categories.permanent.accessories %}
+#### Accessories
+
+{% if crafting_data.categories.permanent.accessories.examples %}**Examples:** {{ crafting_data.categories.permanent.accessories.examples | join(', ') }}{% endif %}
+{% if crafting_data.categories.permanent.accessories.effects %}**Effects:** {{ crafting_data.categories.permanent.accessories.effects | join(', ') }}{% endif %}
+
+Rings, amulets, cloaks, boots, and similar items provide diverse magical effects:
+
+**Ring of Protection:** +1 to Guard (1 week, 8 Flow, 1000 gold)
+**Amulet of Health:** +2 Vitality (1 week, 10 Flow, 1500 gold)
+**Cloak of Elvenkind:** +3 to Stealth (2 weeks, 12 Flow, 2000 gold)
+**Boots of Speed:** +1 zone movement (2 weeks, 15 Flow, 2500 gold)
+
+Accessories occupy limited slots (typically 2 rings, 1 amulet, 1 cloak). Choose enhancements that complement your character build rather than redundant effects.
+{% endif %}
+{% endif %}
+
+{% else %}
+
+### Consumables
+
+**Potions:** Single-use spell effects in drinkable form (Healing, Invisibility, Strength)
+**Scrolls:** Written spells readable with Sorcery check
+**Wands:** Limited-charge items for specific spells
+
+**Crafting Timeline:** Days for potions/scrolls, 1 week for wands
+**Flow Cost:** 3-10 Flow depending on power
+**Usage:** Consume or activate for immediate spell effect
+
+### Permanent Items
+
+**Weapons:** Enhancement bonuses (+1 to +3) and special properties (Flaming, Keen, Vorpal)
+**Armor:** Enhancement bonuses (+1 to +3) and special properties (Fortification, Glamered, Ethereal)
+**Accessories:** Rings, amulets, cloaks providing various benefits (Protection, Enhancement, Utility)
+
+**Crafting Timeline:** Weeks to months depending on power
+**Flow Cost:** 5-20+ Flow for permanent enchantments
+**Usage:** Continuous benefit while equipped
+
+{% endif %}
+
+---
+
+## The Crafting Process
+
+### Step 1: Define the Item
+
+Work with your GM to specify:
+
+**Base Item:** What mundane item receives enchantment?
+**Magical Effect:** What does the enchantment do?
+**Power Level:** Minor, Moderate, or Major?
+**Requirements:** What spell/knowledge do you need?
+
+Be specific—"magical sword" is too vague. "+1 Longsword with Flaming property" defines exactly what you're creating and what it requires.
+
+### Step 2: Gather Materials
+
+Acquire special materials:
+
+**Purchase:** Cities and magical suppliers sell common components
+**Harvest:** Defeat creatures and harvest magical essences (dragon scales, elemental cores)
+**Quest:** Legendary materials require dedicated quests (celestial metal, artifacts)
+
+Material gathering can become adventure hooks. The wizard needs phoenix feathers for fire wand—party quests to find phoenix. The artificer needs adamantine for legendary armor—party delves into deep mines.
+
+### Step 3: Invest Time and Flow
+
+Begin crafting sessions:
+
+**Daily Progress:** Spend 4-8 hours working, invest 1-2 Flow
+**Track Total:** Record cumulative Flow investment toward required threshold
+**Maintain Focus:** Interruptions (combat, travel) delay but don't ruin progress
+**Complete Item:** When Flow investment reaches requirement, item is finished
+
+**Example: Crafting +1 Longsword (5 Flow required)**
+- Day 1: 6 hours work, invest 2 Flow (2/5 complete)
+- Day 2: Rest, adventure, no crafting
+- Day 3: 8 hours work, invest 2 Flow (4/5 complete)
+- Day 4: 4 hours work, invest 1 Flow (5/5 complete—sword finished!)
+
+### Step 4: Test and Use
+
+Newly crafted items require testing:
+
+**Verify Function:** Does the enchantment work as intended?
+**Identify Quirks:** Unique items often have personality
+**Attune if Needed:** Some powerful items require attunement (bond with user over days)
+
+Crafted items are yours to use, sell, or gift to allies. Unlike found loot, crafted items suit exactly your needs because you designed them.
+
+---
+
+## Strategic Crafting Considerations
+
+### What to Craft First
+
+Prioritize based on party needs:
+
+**Early Campaign (Sessions 1-3):** Potions and scrolls for emergency resources
+**Mid Campaign (Sessions 4-7):** +1 weapons and armor for primary combatants
+**Late Campaign (Sessions 8-12):** Specialized items and +2/+3 enhancements
+
+Don't craft items that duplicate found loot. If you found +1 longsword in treasure, craft something else rather than redundant equipment.
+
+### Crafting vs. Purchasing
+
+Compare costs:
+
+**Crafting Advantages:**
+- Exactly the item you want
+- Lower gold cost (materials only, no markup)
+- Can create items unavailable for purchase
+
+**Purchasing Advantages:**
+- Immediate availability
+- No time investment
+- No Flow investment
+
+If you have gold and time is critical, purchase. If you have time and want specific customization, craft.
+
+### Collaborative Crafting
+
+Multiple characters can collaborate:
+
+**Assistant Crafters:** Grant +1 to crafting rolls, can share Flow investment
+**Material Providers:** Non-crafters gather materials while crafter works
+**Resource Pooling:** Party funds material costs, crafter provides expertise
+
+Entire party benefits from one skilled crafter supported by allies gathering resources and sharing Flow investment.
+
+---
+
+## Game Master Guidance
+
+### Balancing Availability
+
+Control crafting power through material availability:
+
+**Common Components:** Readily available in cities, enable basic crafting
+**Rare Components:** Require quests or defeating powerful creatures
+**Legendary Materials:** Unique items from major story arcs
+
+Don't let players craft everything they want immediately. Scarcity creates quests and limits power escalation.
+
+### Setting Crafting Standards
+
+Define your campaign's crafting accessibility:
+
+**High Magic:** Crafting common, materials available, many NPCs craft
+**Standard Magic:** Crafting available to dedicated characters, materials require effort
+**Low Magic:** Crafting rare, materials scarce, most items found not crafted
+
+Communicate standards early so players can plan character builds accordingly.
+
+### Crafting as Plot Hooks
+
+Use crafting requirements to generate adventures:
+
+**Material Quests:** "The +2 armor requires mithril from deep dwarf mines—are you willing to negotiate with them?"
+**Time Pressure:** "The warlord attacks in 3 days. Can you finish that weapon in time?"
+**Rival Crafters:** "Another artificer wants the same phoenix feather. Who claims it?"
+
+Crafting shouldn't be pure bookkeeping—make it drive story.
+
+### Handling Unique Items
+
+Players will request custom items not in standard lists:
+
+**Encourage Creativity:** Work with players to design balanced unique effects
+**Set Appropriate Costs:** Match Flow/time/gold to comparable standard items
+**Require Narrative Justification:** Unique properties need in-world explanation
+
+If player wants "Bow that recalls arrows," that's reasonable utility (similar to returning weapon property). Price accordingly and require quest for self-retrieving material.
+
+### Failed Crafting
+
+Decide whether crafting can fail:
+
+**Automatic Success (Recommended):** Time and Flow investment guarantee success—failure wastes player resources unsatisfyingly
+**Risk-Based Crafting:** Crafting requires check, failure loses materials but refunds Flow
+**Critical Failure:** Rare catastrophic failures create cursed items or explosions
+
+Most campaigns use automatic success—players investing weeks and 10 Flow deserve functional results. Reserve failure chance for experimental legendary crafting.
+
+---
+
+*Magic item crafting transforms adventurers into artificers, creating exactly the magical equipment they need through knowledge, materials, time, and Flow investment. Master the craft, and you'll never depend on random treasure again.*

@@ -1,62 +1,77 @@
 {#
-Armor Template
-Generates armor documentation from YAML equipment data
+Armor Template - Publication Style
+Generates armor documentation with professional TTRPG prose
 #}
-# ARMOR SYSTEM - MECHANICAL REFERENCE
-*Generated from YAML source data*
+# Armor and Protection
 
-## Overview
+How you protect yourself shapes everything about how you fight. Armor isn't just about reducing damage—it's a fundamental tactical choice that affects your mobility, your spellcasting, your Flow generation, and your entire approach to combat.
 
-Armor provides damage reduction (DR) but comes with trade-offs. Each armor category offers distinct tactical benefits and penalties, creating meaningful choices for different character builds.
-
-**Key Principle:** Armor reduces incoming damage but affects your capabilities in different ways.
+The heavily armored paladin standing immovable on the front line and the unarmored monk flowing around attacks represent opposite ends of the protection spectrum. Both work mechanically. Neither is universally better. The question isn't "which armor is best" but "which armor suits how I want to play."
 
 ---
 
 {% for armor_id, armor_data in armor_types.items() %}
+
 ## {{ armor_id.replace('_', ' ').title() }}
 
-### Defense
-- **Damage Reduction:** {{ armor_data.damage_reduction }} (reduces all incoming damage)
-{% if armor_data.description %}
-- **Description:** {{ armor_data.description }}
-{% endif %}
+{% if armor_data.description %}*{{ armor_data.description }}*{% endif %}
 
-### Penalties
+### Protection Provided
+
+**Damage Reduction:** {{ armor_data.damage_reduction }}
+
+Every attack that hits you deals {{ armor_data.damage_reduction }} less damage{% if armor_data.damage_reduction == 0 %} (you're unarmored—protection comes from other sources){% endif %}. This reduction applies after the attack roll succeeds but before damage reaches your Vitality or Guard.
+
+### Trade-Offs
+
 {% if armor_data.penalties %}
 {% if armor_data.penalties.grace and armor_data.penalties.grace != 0 %}
-- **Grace Penalty:** {{ armor_data.penalties.grace }} to all Grace-based actions
+**Grace Penalty:** {{ armor_data.penalties.grace }} to all Grace-based actions
+
+This penalty applies to Athletics, Stealth, Finesse, and any other action using Grace. It's constant—wearing this armor always affects your agility, even outside combat.
 {% endif %}
+
 {% if armor_data.penalties.spellcasting and armor_data.penalties.spellcasting != 0 %}
-- **Spellcasting Penalty:** {{ armor_data.penalties.spellcasting }} to Sorcery checks
+**Spellcasting Penalty:** {{ armor_data.penalties.spellcasting }} to Sorcery
+
+Armor interferes with the precise movements and gestures required for spellcasting. This penalty applies to all spell casting rolls.
 {% endif %}
+
 {% if armor_data.penalties.flow and armor_data.penalties.flow != "None" %}
-- **Flow Penalty:** {{ armor_data.penalties.flow }}
+**Flow Generation Impact:** {{ armor_data.penalties.flow }}
+
+The weight and restriction of heavy armor affects your ability to generate and maintain Flow during combat.
 {% endif %}
-{% if armor_data.penalties.grace == 0 and armor_data.penalties.flow == "None" %}
-- **No Penalties** - This armor category has no mechanical penalties
+
+{% if armor_data.penalties.grace == 0 and (not armor_data.penalties.flow or armor_data.penalties.flow == "None") %}
+**No Penalties**
+
+This armor category doesn't impose mechanical penalties{% if armor_id == "no_armor" %}, though you also gain no damage reduction from it{% endif %}.
 {% endif %}
 {% endif %}
 
 ### Benefits
+
 {% if armor_data.benefits %}
 {% for benefit_key, benefit_value in armor_data.benefits.items() %}
-- **{{ benefit_key.replace('_', ' ').title() }}:** {{ benefit_value }}
+**{{ benefit_key.replace('_', ' ').title() }}:** {{ benefit_value }}
+
 {% endfor %}
+{% else %}
+The primary benefit is the damage reduction itself, allowing you to absorb attacks that would disable unarmored characters.
 {% endif %}
 
-### Cost
-- **Price Range:** {{ armor_data.cost }}
+### Typical Cost
+
+{{ armor_data.cost }}
 
 {% if armor_data.examples %}
-### Examples
+### Specific Armor Types
+
 {% for example_name, example_data in armor_data.examples.items() %}
-#### {{ example_name.replace('_', ' ').title() }}
-- **DR:** {{ example_data.dr }}
-{% if example_data.special %}
-- **Special:** {{ example_data.special }}
-{% endif %}
-- **Cost:** {{ example_data.cost }} coins
+**{{ example_name.replace('_', ' ').title() }}** ({{ example_data.cost }} coins)
+DR {{ example_data.dr }}{% if example_data.special %}, {{ example_data.special }}{% endif %}
+
 {% endfor %}
 {% endif %}
 
@@ -64,79 +79,135 @@ Armor provides damage reduction (DR) but comes with trade-offs. Each armor categ
 
 {% endfor %}
 
-## Choosing Armor
+## Choosing Your Armor
 
-### By Character Type
+### Understanding the Protection Spectrum
 
-**Unarmored Characters (No Armor):**
-- Best for: Monks, mobile rogues, evasion-focused characters, spellcasters
-- Strategy: Maximum mobility, Flow generation, and spellcasting
-- Trade-off: Rely on Guard and positioning instead of DR
+Armor represents a spectrum from complete freedom of movement to maximum physical protection:
 
-**Light Armor Characters:**
-- Best for: Rangers, rogues, duelists, light combatants, most spellcasters
-- Strategy: Balance protection with mobility and flexibility
-- Trade-off: Modest DR for maintained capabilities
+**No Armor** provides zero damage reduction but maximizes your capabilities in every other area. You move fastest, cast spells most effectively, and generate Flow most efficiently. Your defense comes from Guard (your active defense skill), positioning, and not getting hit in the first place. This suits characters who can avoid attacks or who have alternative protection (Mage Armor cantrip, high Grace, Defensive stance bonuses).
 
-**Medium Armor Characters:**
-- Best for: Fighters, clerics, versatile combatants
-- Strategy: Solid protection with manageable penalties
-- Trade-off: Grace penalty affects finesse actions, minor spellcasting impact
+**Light Armor** provides modest damage reduction (DR 1) without penalizing your capabilities. You sacrifice one point of protection for maintained agility and spellcasting. This balanced option suits characters who want some insurance against hits while preserving mobility—rangers who need to move quickly, rogues who need to climb and sneak, spellcasters who cast frequently enough that even -1 Sorcery matters.
 
-**Heavy Armor Characters:**
-- Best for: Paladins, defenders, front-line fighters
-- Strategy: Maximum protection, become immovable bastion
-- Trade-off: Significant penalties to Grace, Flow generation, and spellcasting
+**Medium Armor** offers solid protection (DR 2) for manageable penalties. The -1 Grace affects athletic maneuvers and sneaking, making you slightly less agile. The -1 Sorcery makes spellcasting slightly harder. This middle ground suits characters who face danger regularly but need to maintain some versatility—fighters who want protection without giving up all mobility, clerics who balance martial and magical actions.
+
+**Heavy Armor** maximizes physical protection (DR 4) at the cost of significant penalties. You become substantially harder to hurt but less agile (-2 Grace), less effective at spellcasting (-3 Sorcery), and slower to generate Flow (-1 to all Flow generation). This extreme suits characters committed to standing their ground and absorbing attacks—paladins who protect allies by being too tough to ignore, defenders whose job is surviving focused enemy attention.
+
+### Armor and Your Role
+
+**If you're a frontline defender**, medium or heavy armor makes sense. You expect to be hit repeatedly; DR reduces accumulated damage significantly. Heavy armor makes you nearly unkillable in Defensive stance (DR 4 + Guard +2 from stance = absorbing 6 points per hit before taking damage). Medium armor provides solid protection while maintaining combat flexibility.
+
+**If you're a primary spellcaster**, light armor or no armor preserves your casting effectiveness. Wizards typically avoid armor entirely, using Mage Armor cantrip (+2 Guard) for protection. Clerics often wear light or medium armor—their divine magic remains accessible with modest penalties, and they operate at closer ranges than wizards.
+
+**If you're a mobile combatant**, light armor or no armor maintains your tactical mobility. Rangers wearing light armor can move quickly and transition smoothly between range bands. Rogues need to climb, sneak, and maneuver without Grace penalties.
+
+**If you're a hybrid character**, medium armor often provides the best balance. Paladins mix martial and magical actions; medium armor would work except they get heavy armor proficiency and their limited spellcasting accepts the -3 penalty. Bards want light armor to preserve spellcasting and mobility.
 
 ### Armor and Stances
 
+Your armor choice interacts significantly with combat stances:
+
 **Aggressive Stance:**
-- Light/No Armor: Act first, high mobility, generate Flow quickly
-- Medium Armor: Balanced approach, reliable damage
-- Heavy Armor: Slower but devastating when you connect
+- No/Light Armor: Act first with full mobility, generate Flow through successful attacks
+- Medium Armor: Balanced approach, modest Flow generation
+- Heavy Armor: Slower Flow generation but devastating when hits connect
 
 **Balanced Stance:**
-- Light/No Armor: Flexibility to react, easy stance switching
-- Medium Armor: The intended use case, no restrictions
-- Heavy Armor: Solid but less flexible
+- No/Light Armor: Maximum flexibility, easy stance switching
+- Medium Armor: The intended pairing—solid protection without restrictions
+- Heavy Armor: Functional but less adaptable
 
 **Defensive Stance:**
-- Light/No Armor: +2 Guard, generate Flow while protected
-- Medium Armor: +3 Guard total (armor +1, stance +2)
-- Heavy Armor: +6 Guard total (armor +4, stance +2) - nearly untouchable
+- No Armor: +2 Guard from stance plus high base Guard from no-armor bonus
+- Light Armor: DR 1 + stance +2 Guard = reliable defense
+- Medium Armor: DR 2 + stance +2 Guard = solid protection (effectively 4 points absorbed)
+- Heavy Armor: DR 4 + stance +2 Guard = nearly untouchable (effectively 6 points absorbed)
 
-## Armor Progression
+### Armor Progression
 
-Characters typically upgrade armor as they:
-1. **Gain wealth** - Better quality examples within same category
-2. **Increase attributes** - Offset penalties with higher stats
-3. **Acquire magical armor** - Same category, enhanced benefits
-4. **Change tactics** - Switch categories as playstyle evolves
+Most characters find their preferred armor category early and improve within it rather than constantly changing categories:
 
-Most characters find their preferred armor category early and improve within it rather than constantly moving between categories.
+**Quality Progression:** Within the same category, acquire better examples. Reinforced leather (light) → Studded leather (light) → Magical +1 leather (light). You maintain your tactical approach while improving protection.
 
-## GM Guidelines
+**Magical Enhancement:** Armor can gain magical bonuses to DR (+1, +2, +3) or special properties (fire resistance, extra movement, stealth bonuses). These improvements don't change the armor category—they enhance what you already wear.
 
-### Creating Appropriate Challenges
-- Remember DR reduces **all** incoming damage
-- Heavy armor characters have high DR but generate less Flow
-- Challenge high-DR characters with:
-  - Multiple small attacks (DR applies per hit)
-  - Effects that bypass DR (forced movement, conditions)
-  - Armor-piercing abilities (specific adversaries/weapons)
-
-### Treasure and Rewards
-- Quality matters more than category
-- Enhanced versions within same category (magical +1 DR, special properties)
-- Armor as character expression (decorative, cultural significance)
-- Don't push characters to "upgrade" if they like their current category
-
-### Common Mistakes
-- Don't forget armor penalties apply constantly (not just in combat)
-- Heavy armor's Flow penalty affects **all** Flow generation
-- Grace penalties affect Athletics, Stealth, Finesse-based actions
-- No armor bonuses only apply when truly unarmored (not with shields)
+**Tactical Retraining:** Occasionally characters switch armor categories as tactics evolve. A wizard who multi-classes into fighter might adopt light armor. A ranger transitioning to close combat might upgrade to medium armor. These changes are significant and should reflect character development.
 
 ---
 
-*Armor is more than protection—it's a fundamental tactical choice that shapes how your character approaches every situation.*
+## Armor and Character Identity
+
+### By Archetype
+
+Your archetype determines starting armor, reflecting professional training and expected combat role:
+
+**Fighter** starts with medium armor. This versatile option allows frontline combat without the severe penalties of heavy armor. You can upgrade to heavy armor if you commit to pure defense, or wear light armor if building a Grace-focused fighter.
+
+**Ranger** starts with light armor. Your mobile, ranged-focused playstyle needs the freedom light armor provides. The modest DR protects against the occasional hit without slowing your movements.
+
+**Paladin** starts with heavy armor. You're designed to stand at the front and absorb punishment while healing and supporting allies. The DR 4 makes you extremely difficult to kill, and your limited spellcasting accepts the -3 Sorcery penalty.
+
+**Rogue** starts with light armor. You need maximum Grace for sneaking, climbing, lockpicking, and precise combat. The DR 1 provides insurance without compromising your primary capabilities.
+
+**Wizard** typically wears no armor. The -3 Sorcery penalty from heavy armor would cripple your primary function. Instead, use Mage Armor cantrip for +2 Guard and rely on positioning and tactical awareness.
+
+**Cleric** starts with medium armor. You balance martial action and spellcasting; medium armor's -1 Sorcery is manageable for your casting frequency. The DR 2 lets you operate at medium range safely.
+
+**Bard** starts with light armor. Your spellcasting, mobility, and social focus all prefer avoiding penalties. The DR 1 provides basic protection while preserving your versatility.
+
+---
+
+## Game Master Guidance
+
+### Creating Appropriate Challenges
+
+Remember that DR reduces **all** incoming damage, making heavily armored characters significantly harder to drop:
+
+**Against High-DR Characters:**
+- Multiple small attacks (DR applies per hit—five 3-damage attacks bypass DR better than one 15-damage attack)
+- Conditions and effects that bypass DR (forced movement, stunning, restraint)
+- Armor-piercing abilities (specific monsters might have "ignores armor" traits)
+- Environmental hazards (DR doesn't stop falling damage, poison, exhaustion)
+
+**Against Low-DR Characters:**
+- Single powerful attacks (no DR to reduce the damage)
+- Flanking and positioning tactics (their high Guard can be bypassed with advantage)
+- Mobility denial (lock down mobile characters, force them to stand and fight)
+
+### Treasure and Rewards
+
+**Quality Over Category:** When rewarding armor, enhance what players already wear rather than pushing them toward "better" categories. A magical +1 leather armor that improves the rogue's chosen protection style beats giving them medium armor that breaks their character concept.
+
+**Magical Properties:** Beyond +1/+2/+3 DR bonuses, armor can gain special properties—fire resistance, stealth bonuses, extra movement, reaction bonuses. These create unique tactical options beyond raw numbers.
+
+**Armor as Expression:** Let players customize armor appearance and description. The mechanics are "medium armor DR 2," but the narrative can be anything from samurai plates to chainmail to reinforced coat. Support character identity through flavor.
+
+### Common Mistakes
+
+**Don't forget:**
+- Armor penalties apply constantly, not just in combat
+- Heavy armor's Flow penalty affects all Flow generation triggers
+- Grace penalties impact Athletics, Stealth, and Finesse
+- Spellcasting penalties apply to every spell cast
+- No-armor bonuses only apply when truly unarmored (shields don't count as armor)
+
+**Do remember:**
+- DR subtracts from damage after the attack succeeds
+- Armor category doesn't restrict weapon choices (except two-handed weapons being awkward with shields)
+- Players can change armor during rests (not mid-combat)
+- Enchanted armor costs significantly more than mundane versions
+
+### Balancing Armor Types
+
+All four armor categories are intentionally balanced to remain viable throughout campaigns:
+
+- **No Armor:** Highest mobility and capabilities, requires tactical skill to survive
+- **Light Armor:** Balanced protection and capability, suits versatile characters
+- **Medium Armor:** Solid protection with manageable trade-offs, the "standard" adventuring armor
+- **Heavy Armor:** Maximum protection at significant cost, for committed defenders
+
+Don't design encounters that force players to wear specific armor types. Let tactical variety emerge from player choice, not GM requirement.
+
+---
+
+*Armor isn't just protection—it's a declaration of how you approach danger. The unarmored duelist and the plate-armored defender both survive through different philosophies made mechanical.*

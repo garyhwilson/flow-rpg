@@ -1,101 +1,123 @@
 {#
-Milestones Template
-Generates milestone advancement documentation from YAML advancement data
+Milestones Template - Publication Style
+Generates milestone advancement documentation with professional TTRPG prose
 #}
-# MILESTONES - ADVANCEMENT REFERENCE
-*Generated from YAML source data*
+# Character Advancement
 
-## Overview
+Your character grows through meaningful achievements, not abstract experience points. Every few sessions, when the story reaches a natural pause or the party accomplishes something significant, you reach a milestone and gain new capabilities.
 
-Flow RPG uses milestone-based advancement with three tiers of growth:
-- **Minor Milestones:** {{ milestone_data.minor_milestones.frequency }}
-- **Moderate Milestones:** {{ milestone_data.moderate_milestones.frequency }}
-- **Major Milestones:** {{ milestone_data.major_milestones.frequency }}
+Flow RPG uses three tiers of milestones, each marking different levels of growth:
+
+**Minor Milestones** - {{ milestone_data.minor_milestones.frequency }}. Small but meaningful improvements that accumulate over time.
+
+**Moderate Milestones** - {{ milestone_data.moderate_milestones.frequency }}. Significant power increases that change how you play.
+
+**Major Milestones** - {{ milestone_data.major_milestones.frequency }}. Transformative moments that define your character's legend.
 
 ---
 
-# MINOR MILESTONES
+# Minor Milestones
 
-**Frequency:** {{ milestone_data.minor_milestones.frequency }}
+{{ milestone_data.minor_milestones.philosophy }}
 
-**Philosophy:** {{ milestone_data.minor_milestones.philosophy }}
+These frequent advancement opportunities let you refine your capabilities between sessions. Over time, small choices accumulate into a character that's uniquely yours.
 
-## When Minor Milestones Occur
+## When You Reach Minor Milestones
+
+Minor milestones occur when:
 
 {% for trigger in milestone_data.minor_milestones.triggers %}
 - {{ trigger }}
 {% endfor %}
 
-## Minor Milestone Options
+Your GM determines exact timing based on campaign pacing, but expect one every 1-2 sessions on average.
+
+## Your Advancement Options
+
+When you reach a minor milestone, choose one of the following options:
 
 {% for option_key, option_data in milestone_data.minor_milestones.options.items() %}
+{% if option_data is mapping %}
+
 ### {{ option_key.replace('_', ' ').title() }}
 
-{% if option_data is mapping %}
 {% if option_data.description %}
 {{ option_data.description }}
 
 {% endif %}
-{% for subkey, subvalue in option_data.items() %}
-{% if subkey not in ['description', 'examples', 'philosophy'] %}
-**{{ subkey.replace('_', ' ').title() }}:**
-{% if subvalue is mapping %}
-{% for field, value in subvalue.items() %}
-- **{{ field.title() }}:** {{ value }}
-{% endfor %}
-{% elif subvalue is string %}
-{{ subvalue }}
+{% if option_key == 'edge' %}
+Rather than broad capability increases, edges represent focused expertise in specific areas. See the Edges chapter for available options and detailed descriptions.
+
+When choosing an edge, consider what situations you face regularly. Edges shine in their specialty but don't replace general capability.
+{% elif option_key == 'skill_advancement' %}
+You can improve one skill by one tier. This makes you more reliable in that area across all situations.
+
+**Advancement Path:** Untrained (-2) → Novice (-1) → Competent (0) → Professional (+1) → Expert (+2) → Master (+3)
+
+Most characters reach Professional in their primary skills by mid-campaign. Expert and Master represent exceptional expertise typically achieved through dedicated focus.
+{% elif option_key == 'attribute_boost' %}
+You can increase one attribute by 1 point. This affects all actions using that attribute, making it a broadly applicable choice.
+
+**Typical Progression:** Most characters start with attributes between -1 and +2. Through milestones and major growth, attributes can reach +4 or higher in exceptional cases.
+
+Consider boosting attributes that support multiple skills you use frequently, or shore up weaknesses that limit your effectiveness.
 {% endif %}
 
-{% endif %}
-{% endfor %}
 {% endif %}
 {% endfor %}
 
 ---
 
-# MODERATE MILESTONES
+# Moderate Milestones
 
-**Frequency:** {{ milestone_data.moderate_milestones.frequency }}
+{{ milestone_data.moderate_milestones.philosophy }}
 
-**Philosophy:** {{ milestone_data.moderate_milestones.philosophy }}
+These milestones represent noticeable power increases. Where minor milestones accumulate gradually, moderate milestones create immediate, visible improvements to your character.
 
-## When Moderate Milestones Occur
+## When You Reach Moderate Milestones
+
+Moderate milestones occur when:
 
 {% for trigger in milestone_data.moderate_milestones.triggers %}
 - {{ trigger }}
 {% endfor %}
 
-## Schedule
+## Typical Campaign Schedule
 
 {% if milestone_data.moderate_milestones.schedule %}
+In a standard 8-12 session campaign, moderate milestones typically occur:
+
 {% for key, schedule in milestone_data.moderate_milestones.schedule.items() %}
 {% if key != 'design_note' and schedule is mapping %}
-**{{ key.title() }}:** {{ schedule.timing }} - {{ schedule.context }}
+**{{ schedule.timing }}** - {{ schedule.context }}
 {% endif %}
 {% endfor %}
+
+Your campaign's exact schedule may vary based on story pacing and session frequency.
 {% endif %}
 
-## Moderate Milestone Options
+## Your Advancement Options
+
+When you reach a moderate milestone, choose one of the following options:
 
 {% for option_key, option_data in milestone_data.moderate_milestones.options.items() %}
 {% if option_data is mapping %}
+
 ### {{ option_key.replace('_', ' ').title() }}
 
 {% if option_data.description %}
 {{ option_data.description }}
 
 {% endif %}
-
-{% if option_data.choose_one or option_data.options or option_data.examples %}
 {% if option_data.choose_one %}
-**Choose one:**
+Choose one of the following:
+
 {% for choice_key, choice_data in option_data.choose_one.items() %}
 {% if choice_key != 'description' and choice_data is mapping %}
-- **{{ choice_key.replace('_', ' ').title() }}:** {{ choice_data.description if choice_data.description else choice_data }}
+**{{ choice_key.replace('_', ' ').title() }}** - {{ choice_data.description if choice_data.description else choice_data }}
+
 {% endif %}
 {% endfor %}
-{% endif %}
 {% endif %}
 
 {% endif %}
@@ -103,28 +125,34 @@ Flow RPG uses milestone-based advancement with three tiers of growth:
 
 ---
 
-# MAJOR MILESTONES
+# Major Milestones
 
-**Frequency:** {{ milestone_data.major_milestones.frequency }}
+{{ milestone_data.major_milestones.philosophy }}
 
-**Philosophy:** {{ milestone_data.major_milestones.philosophy }}
+Major milestones mark transformative moments in your character's story. These aren't just mechanical upgrades—they represent fundamental changes in who your character is and what they're capable of.
 
-## When Major Milestones Occur
+## When You Reach Major Milestones
+
+Major milestones occur when:
 
 {% for trigger in milestone_data.major_milestones.triggers %}
 - {{ trigger }}
 {% endfor %}
 
-## Schedule
+## Typical Campaign Schedule
 
 {% if milestone_data.major_milestones.schedule %}
+In a standard campaign, major milestones mark key story beats:
+
 {% for key, schedule in milestone_data.major_milestones.schedule.items() %}
 {% if key != 'design_note' and schedule is mapping %}
-**{{ key.title() }}:** {{ schedule.timing }} - {{ schedule.context }}
+**{{ schedule.timing }}** - {{ schedule.context }}
 {% if schedule.significance %}
+
 *{{ schedule.significance }}*
 {% endif %}
 {% if schedule.note %}
+
 *({{ schedule.note }})*
 {% endif %}
 
@@ -132,26 +160,28 @@ Flow RPG uses milestone-based advancement with three tiers of growth:
 {% endfor %}
 {% endif %}
 
-## Major Milestone Options
+## Your Advancement Options
+
+When you reach a major milestone, choose one of the following options. These represent legendary capabilities that set you apart as a hero of note:
 
 {% for option_key, option_data in milestone_data.major_milestones.options.items() %}
 {% if option_data is mapping %}
+
 ### {{ option_key.replace('_', ' ').title() }}
 
 {% if option_data.description %}
 {{ option_data.description }}
 
 {% endif %}
-
-{% if option_data.choose_one or option_data.options or option_data.examples %}
 {% if option_data.choose_one %}
-**Choose one:**
+Choose one of the following:
+
 {% for choice_key, choice_data in option_data.choose_one.items() %}
 {% if choice_key != 'description' and choice_data is mapping %}
-- **{{ choice_key.replace('_', ' ').title() }}:** {{ choice_data.description if choice_data.description else choice_data }}
+**{{ choice_key.replace('_', ' ').title() }}** - {{ choice_data.description if choice_data.description else choice_data }}
+
 {% endif %}
 {% endfor %}
-{% endif %}
 {% endif %}
 
 {% endif %}
@@ -159,43 +189,125 @@ Flow RPG uses milestone-based advancement with three tiers of growth:
 
 ---
 
-## Using Milestones in Play
+## Building Your Character Through Milestones
 
-### Advancement Philosophy
+### The Philosophy of Choice
 
-Minor milestones provide regular growth and maintain engagement between sessions. Moderate milestones create noticeable power increases and memorable moments. Major milestones represent transformative character evolution.
+Every milestone presents a choice. Do you specialize further in what you already do well, or do you diversify to handle new challenges? Both approaches work—the decision itself is what makes your character unique.
 
-### Choice Strategy
+**Specialization** creates focused expertise. A character who invests repeatedly in combat edges becomes exceptionally dangerous in fights, but may struggle with social challenges or magical problems.
 
-**Minor Milestones:**
-- Focus on edges for variety and flexibility
-- Advance skills for increased reliability
-- Adjust attributes for optimization
+**Diversification** creates versatility. A character who spreads advancements across skills, attributes, and varied edges can handle many situations, but won't dominate any single area.
 
-**Moderate Milestones:**
-- Choose options that define your character's unique identity
-- Consider signature moves for memorable abilities
-- Advanced techniques provide immediate power increases
+Most successful characters blend both approaches—specializing in their core competency while diversifying enough to contribute meaningfully to varied situations.
 
-**Major Milestones:**
-- Select options that reflect your character's legendary status
-- These choices should feel transformative and campaign-defining
-- Consider the narrative impact as much as mechanical benefit
+### Minor Milestone Strategy
 
-### GM Guidance
+You'll have many minor milestones throughout a campaign. Early choices often focus on shoring up weaknesses or rounding out your starting concept. Later choices tend toward specialization in areas where you've already demonstrated strength.
 
-**Award milestones based on:**
-- Story progression and narrative beats
-- Session pacing and player engagement
-- Major victories and meaningful achievements
-- Campaign length and desired power curve
+**Early Campaign (Sessions 1-3):**
+- Advance your secondary skills to Competent or Professional
+- Take edges that support your core role
+- Consider attribute boosts to important secondary attributes
 
-**Adjust frequency if:**
-- Players feel overwhelmed by options (slow down)
-- Players are bored with current capabilities (speed up)
-- Campaign length differs from standard 8-12 sessions
-- Story beats demand faster or slower progression
+**Mid Campaign (Sessions 4-8):**
+- Push primary skills toward Expert
+- Specialize with edges that create unique capabilities
+- Boost primary attributes to maximize reliability
+
+**Late Campaign (Sessions 9+):**
+- Master-tier skills in your specialty
+- Edges that create signature moves
+- Final attribute optimization
+
+### Moderate Milestone Strategy
+
+Moderate milestones offer powerful, often build-defining options. These choices should feel significant and memorable.
+
+**Signature Moves** create dramatic moments that define your character in combat. The move that everyone at the table associates with your character often comes from a moderate milestone.
+
+**Advanced Techniques** represent refined mastery of your archetype's unique subsystem. Fighters gain new combat techniques, wizards learn metamagic, rogues develop gambits.
+
+**Power Increases** provide immediate combat effectiveness through better damage, defense, or resource economy. These feel less thematic but noticeably improve your power level.
+
+Choose based on what creates interesting moments at the table, not just optimal numbers.
+
+### Major Milestone Strategy
+
+Major milestones are rare and transformative. These choices should reflect your character's growth arc and the story you've told together.
+
+**Legendary Abilities** grant capabilities that transcend normal human limits. These are the abilities that make you a legend, not just an adventurer.
+
+**Attribute Mastery** pushes attributes beyond normal ranges, representing fundamental transformation in who you are.
+
+**Paradigm Shifts** might include learning entirely new subsystems, gaining access to magic you previously couldn't use, or fundamentally changing your role in the party.
+
+Consider the narrative impact as much as the mechanical benefit. What does this choice say about who your character has become?
 
 ---
 
-*Milestones represent your character's growth through the campaign. Choose options that reflect who your character is becoming.*
+## Game Master Guidance
+
+### Awarding Milestones
+
+The guidelines above provide typical pacing, but your campaign may differ. Some campaigns compress into 6 intense sessions, others sprawl across 20+ sessions. Adjust milestone frequency to match your story.
+
+**Award minor milestones based on:**
+- Session count (every 1-2 sessions as a baseline)
+- Story beats (completing an investigation, winning a battle)
+- Player engagement (when advancement would maintain interest)
+
+**Award moderate milestones based on:**
+- Story arc completion (defeating the bandit king, uncovering the conspiracy)
+- Major victories (surviving the deadly dungeon, winning the tournament)
+- Campaign phase transitions (moving from act one to act two)
+
+**Award major milestones based on:**
+- Campaign climaxes (confronting the main villain, saving the kingdom)
+- Fundamental story shifts (character revelations, world-changing events)
+- Transformative character moments (overcoming core flaws, achieving major goals)
+
+### Handling Milestone Choices
+
+When players reach milestones, give them time to consider options. Some players know immediately what they want; others need to review possibilities or discuss with the table.
+
+**Between Sessions:** Award milestones at session end, let players choose before next session. This prevents advancement from consuming play time.
+
+**During Sessions:** If you award mid-session (dramatic moment calls for immediate growth), allow quick choices or default to simple options (skill advancement, attribute boost).
+
+**Analysis Paralysis:** If a player struggles to choose, suggest two good options and explain why both work. The choice itself matters less than moving forward.
+
+### Milestone Timing Variance
+
+Not all campaigns follow standard pacing:
+
+**Short Campaigns (4-6 sessions):**
+- Award minor milestones every session
+- Award moderate milestones at sessions 2, 4
+- Award major milestone at campaign climax (session 5-6)
+
+**Long Campaigns (15+ sessions):**
+- Maintain minor milestone every 1-2 sessions
+- Spread moderate milestones every 3-4 sessions
+- Award major milestones at major story arcs (sessions 5, 10, 15, etc.)
+
+**Episodic Campaigns:**
+- Award minor milestone after each episode
+- Award moderate milestone after multi-episode arcs
+- Award major milestone at season finales
+
+The system is flexible. Adjust to your table's needs.
+
+### Encouraging Meaningful Choices
+
+Some players optimize mechanically. Others choose thematically. Both approaches are valid.
+
+**For optimizers:** Help them understand how different choices achieve their goals. Is +1 to Combat better than a combat edge? Depends on application.
+
+**For thematic choosers:** Ensure their thematic choices remain mechanically viable. A character built purely for theme shouldn't struggle to contribute.
+
+**For variety:** Encourage players to try different advancement types. A player who only takes edges misses the satisfaction of watching their core skills improve. A player who only boosts attributes might feel less distinctive than one who takes edges.
+
+---
+
+*Advancement in Flow RPG isn't about becoming generically more powerful—it's about becoming more uniquely yourself.*

@@ -1,21 +1,162 @@
-{# Target Numbers - from core_rules.yaml #}
-# TARGET NUMBERS REFERENCE
-*Generated from YAML source data*
+{#
+Target Numbers Template - Publication Style
+Generates target number documentation with professional TTRPG prose
+#}
+# Target Numbers and Difficulty
 
-## Overview
-Standard target numbers for adjudicating checks.
+Every time you attempt an action with uncertain outcome, you roll 2d6 and add relevant modifiers. The total must meet or exceed a target number (TN) to succeed. Choosing appropriate target numbers is one of the most important GM skills—set them too low and success becomes trivial, too high and failure becomes inevitable.
+
+Flow RPG uses a standardized TN scale that remains consistent throughout the game. Unlike systems where DCs scale with level, these target numbers represent absolute difficulty. A TN 8 task is equally challenging for beginning characters and legendary heroes—the difference is that heroes have higher bonuses and succeed more reliably.
+
+---
 
 {% if tn_data %}
 {% for tn_id, tn in tn_data.items() %}
-### {{ tn_id.replace('_', ' ').title() }}
-- **TN:** {{ tn.value if tn.value else tn }}
+
+## {{ tn_id.replace('_', ' ').title() }}
+
+**Target Number:** {% if tn.value %}{{ tn.value }}{% else %}{{ tn }}{% endif %}
+
 {% if tn.description %}
-- **Description:** {{ tn.description }}
+{{ tn.description }}
+
 {% endif %}
 {% if tn.success_rate %}
-- **Success Rate:** {{ tn.success_rate }}
+**Success Rates:**
+{{ tn.success_rate }}
 {% endif %}
+
+---
+
 {% endfor %}
 {% endif %}
 
-*Standard TN is 8 for most checks. Adjust for difficulty.*
+## Understanding the Scale
+
+**TN 6 - Easy Tasks**
+Trained characters succeed routinely. Untrained characters have reasonable chances. This represents tasks that require some capability but aren't particularly challenging—climbing a knotted rope, picking a simple lock, recalling common knowledge.
+
+A Competent (+0) character with average attributes (+0) succeeds about 72% of the time. A Professional (+1) character with +1 attribute succeeds about 91% of the time. Use this TN when you want trained characters to succeed reliably while giving untrained characters fighting chances.
+
+**TN 8 - Standard Tasks**
+The baseline difficulty. This represents meaningful challenges for trained characters—climbing a rough wall, picking a standard lock, recalling specialized knowledge. Success isn't guaranteed but is achievable with competence.
+
+A Competent (+0) character with average attributes succeeds about 42% of the time. A Professional (+1) character with +1 attribute succeeds about 72% of the time. Most skill checks should use TN 8 unless there's specific reason for easier or harder.
+
+**TN 10 - Difficult Tasks**
+These require significant expertise or exceptional natural talent. Climbing a sheer wall, picking a complex lock, recalling obscure lore. Competent characters struggle; professionals succeed regularly.
+
+A Competent (+0) character with average attributes succeeds about 17% of the time. A Professional (+1) character with +1 attribute succeeds about 42% of the time. Use this TN when tasks should challenge even skilled characters.
+
+**TN 12 - Very Difficult Tasks**
+Only experts and exceptionally talented individuals succeed reliably. Climbing an overhanging cliff, picking a masterwork lock, recalling legendary lore. These tasks push the boundaries of what's achievable through skill alone.
+
+A Professional (+1) character with +1 attribute succeeds about 17% of the time. An Expert (+2) character with +2 attribute succeeds about 42% of the time. Reserve this TN for tasks that should feel genuinely difficult even for skilled specialists.
+
+**TN 14 - Nearly Impossible**
+The limit of what skill and talent can achieve. Anything harder than this requires magical assistance, legendary abilities, or simply can't be done. Climbing a glass-smooth wall, picking an unpickable lock, recalling knowledge lost to history.
+
+An Expert (+2) character with +2 attribute succeeds about 17% of the time. A Master (+3) character with +3 attribute succeeds about 42% of the time. Use this TN sparingly—only when you want to communicate "this is nearly impossible."
+
+---
+
+## Choosing Target Numbers
+
+### The TN 8 Default
+
+When uncertain, use TN 8. This standard difficulty creates interesting choices without making success or failure foregone conclusions. Competent characters with decent attributes succeed about half the time—meaningful risk, meaningful reward.
+
+Only adjust when you have specific reasons:
+- The task is notably easier than standard → TN 6
+- The task is notably harder than standard → TN 10
+- The task is exceptionally difficult → TN 12
+- The task pushes the boundaries of possibility → TN 14
+
+### Context-Dependent Difficulty
+
+The same action might warrant different TNs in different contexts:
+
+**Climbing:**
+- Knotted rope (many handholds, secure) → TN 6
+- Rough stone wall (natural handholds) → TN 8
+- Smooth brick wall (few handholds) → TN 10
+- Sheer cliff (minimal handholds) → TN 12
+
+**Lockpicking:**
+- Simple lock (basic mechanism) → TN 6
+- Standard lock (common quality) → TN 8
+- Complex lock (multiple tumblers) → TN 10
+- Masterwork lock (precision engineering) → TN 12
+
+**Knowledge Recall:**
+- Common knowledge (widely known) → TN 6
+- Specialized knowledge (requires training) → TN 8
+- Obscure knowledge (rare books, dedicated study) → TN 10
+- Legendary knowledge (lost lore, ancient secrets) → TN 12
+
+### When Not to Roll
+
+Don't call for rolls when:
+- Success is automatic for someone with the character's training
+- Failure doesn't create interesting complications
+- The character can retry indefinitely with no time pressure
+
+If a Professional (+1) lockpicker is picking a simple lock (TN 6) with no time pressure, just let them succeed. The 91% success rate means they'll eventually succeed—rolling just wastes time.
+
+### Failure Consequences
+
+The TN should reflect both task difficulty and failure consequences:
+
+**Low Stakes, Standard Difficulty:** TN 8
+Picking a lock on an empty chest. Failure means trying again or finding another approach.
+
+**High Stakes, Standard Difficulty:** Consider TN 10
+Picking a lock while guards approach. Failure means capture or combat, raising effective difficulty.
+
+**Low Stakes, Hard Difficulty:** TN 10-12
+Recalling obscure lore that provides advantage but isn't essential. Failure means operating without that information.
+
+**High Stakes, Hard Difficulty:** TN 12-14
+Climbing a cliff face while enemies pursue. Failure means falling or being caught, compounding inherent difficulty with serious consequences.
+
+---
+
+## Game Master Guidance
+
+### Communicating Difficulty
+
+Before players roll, communicate the difficulty:
+- "This looks challenging" → TN 10
+- "This will be difficult even for you" → TN 12
+- "This seems nearly impossible" → TN 14
+
+Let players make informed decisions about attempting tasks, spending resources (Flow, edges, consumables), or finding alternative approaches.
+
+### Consistent Application
+
+Apply target numbers consistently:
+- All standard locks have TN 8
+- All complex locks have TN 10
+- All masterwork locks have TN 12
+
+Don't arbitrarily vary TNs for identical tasks. Consistency helps players learn what their characters can reliably accomplish.
+
+### Success Gradations
+
+On particularly important rolls, consider gradations:
+- **TN 8:** Basic success
+- **TN 10:** Success with advantage
+- **TN 12:** Exceptional success with significant advantage
+- **Critical (13+):** Extraordinary success beyond normal limits
+
+This gives players incentives to push high rolls even after meeting the base TN.
+
+### Avoiding TN Inflation
+
+Don't scale TNs upward as characters advance. A TN 8 lock remains TN 8 whether you're first level or legendary. Character advancement makes them succeed more reliably at the same tasks, not face arbitrarily harder tasks.
+
+If you want to challenge advanced characters, introduce tasks that were always TN 12 or 14—not tasks that "become harder" because the characters improved.
+
+---
+
+*Target numbers represent absolute difficulty, not relative challenge. Master characters succeed reliably at tasks that challenged them as beginners—that's the point of mastery.*

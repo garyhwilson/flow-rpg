@@ -1,72 +1,98 @@
 {#
-Shields Template
-Generates shield documentation from YAML equipment data
+Shields Template - Publication Style
+Generates shield documentation with professional TTRPG prose
 #}
-# SHIELDS - DEFENSIVE EQUIPMENT
-*Generated from YAML source data*
+# Shields
 
-## Overview
-
-Shields provide Guard bonuses and special defensive capabilities. Using a shield requires one hand but significantly improves survivability.
+A shield is more than defensive equipment—it's a tactical choice that defines your combat approach. Trading offense for defense, a shield grants substantial Guard bonuses at the cost of your off-hand. The difference between a medium weapon wielded two-handed and that same weapon paired with a shield often means surviving long enough to win rather than delivering maximum damage quickly.
 
 ---
 
 {% for shield_id, shield in shields.items() %}
+
 ## {{ shield_id.replace('_', ' ').title() }}
 
-- **Guard Bonus:** +{{ shield.guard_bonus }}
-- **Weight:** {{ shield.weight }}
-- **Special:** {{ shield.special }}
-- **Cost:** {{ shield.cost }} coins
+**Guard Bonus:** +{{ shield.guard_bonus }}
+**Weight:** {{ shield.weight }}
+**Cost:** {{ shield.cost }} coins
+
+{{ shield.special }}
 
 {% endfor %}
 
 ---
 
-## Shield Selection Guide
+## Choosing Your Shield
 
 ### By Guard Bonus
 
 **+1 Guard (Buckler, Small Shield):**
-- Light weight, minimal restriction
-- Buckler works with two-handed weapons
-- Good for mobile characters
+Minimal protection but also minimal restriction. Bucklers uniquely strap to your forearm, allowing them to be used even while wielding two-handed weapons—the only shield with this capability. Small shields provide standard +1 Guard while held. Both suit characters who want modest defense without committing fully to shield use.
 
 **+2 Guard (Medium Shield, Large Shield):**
-- Standard defensive option
-- Large shield provides cover
-- Best balance of protection and cost
+Standard defensive options for frontline fighters. Medium shields provide the +2 Guard without special restrictions. Large shields grant the same +2 Guard plus the ability to use your shield as cover against ranged attacks—crouch behind it for additional protection from arrows and spells. Most shield-using characters choose this tier.
 
 **+3 Guard (Tower Shield):**
-- Maximum protection
-- -1 to attacks (heavy, unwieldy)
-- For dedicated defensive fighters
+Maximum protection at significant cost. The tower shield's massive size makes you substantially harder to hit (+3 Guard) but the weight and bulk impose -1 to all attack rolls. Only dedicated defensive characters should use tower shields—the attack penalty matters less when your job is surviving, not killing.
 
 ### By Character Type
 
-**Fighters:** Medium or Large Shield (standard protection)
-**Paladins:** Large or Tower Shield (maximum defense)
-**Rangers:** Buckler if any (preserves mobility)
-**Rogues:** Small Shield or none (stealth priority)
-**Spellcasters:** Small Shield if any (usually rely on Mage Armor)
+**Fighters** typically use medium or large shields. The +2 Guard significantly improves frontline survivability without the attack penalty of tower shields. Pair with medium weapons for balanced offense and defense.
+
+**Paladins** can effectively use any shield type, including tower shields. Heavy armor already makes you slow; the tower shield's attack penalty matters less when your role is protecting allies rather than dealing damage. Large shields provide excellent balance.
+
+**Rangers** rarely use shields beyond bucklers. Your light armor and ranged focus prioritize mobility over defense. If you must use a shield, bucklers maintain the most freedom of movement.
+
+**Rogues** occasionally use small shields when expecting combat, but typically avoid shields entirely. Grace-based defense and positioning matter more than passive Guard bonuses, and shields interfere with climbing, stealth, and two-weapon fighting.
+
+**Spellcasters** rarely use shields. Wizards almost never do—they use Mage Armor instead. Clerics might use small or medium shields when expecting melee, balancing spellcasting needs with frontline presence. Bards avoid shields to preserve casting and mobility.
 
 ### Shield Tactics
 
 **With Defensive Stance:**
-- Shield +2, Stance +2 = +4 Guard total
-- Very difficult to hit
-- Excellent for defensive fighters
+Shield bonuses stack with stance bonuses. Medium shield (+2) plus Defensive stance (+2) equals +4 Guard total. Combined with armor DR, this makes you extremely difficult to damage. Frontline defenders in Defensive stance with shields become nearly untouchable walls.
 
-**Two-Weapon vs Shield:**
-- Two weapons: More offense, no Guard bonus
-- Shield: Less offense, +1 to +3 Guard
-- Shield recommended for frontline
+**Two-Handed Weapons vs. Shield:**
+Two-handed weapons deliver higher base damage (2d6+2 vs 2d6+1). Shields provide significant Guard bonuses (+1 to +3). The choice: kill enemies faster versus survive their attacks longer. Most frontline characters prefer shields—staying alive matters more than maximum damage.
 
-**Buckler Special Use:**
-- Only shield usable with two-handed weapons
-- +1 Guard while wielding greatsword
-- Strapped to arm, not held
+**Buckler Special Case:**
+Bucklers uniquely work with two-handed weapons. Strap a buckler to your arm, wield your greatsword with both hands, gain +1 Guard. You sacrifice the shield slot for modest protection, but it's better than nothing for two-handed weapon specialists who want some defense.
+
+**Shield as Cover:**
+Large shields provide cover against ranged attacks. When facing archers or spellcasters, you can crouch behind your shield for additional protection. This matters more in ranged-heavy encounters and makes large shields particularly valuable against magic-using enemies.
 
 ---
 
-*A shield is a warrior's steadfast companion—choose wisely based on your role in battle.*
+## Game Master Guidance
+
+### Shields in Combat
+
+Remember that shields occupy one hand:
+- Can't use two-handed weapons (except bucklers)
+- Can't wield versatile weapons two-handed
+- Can't dual-wield or use off-hand items
+- Can use medium or light weapons one-handed
+
+The trade-off is intentional—shields provide substantial defensive benefit at meaningful offensive cost.
+
+### Shield Upgrades
+
+Shields can be enhanced like other equipment:
+- **Masterwork:** Improved construction, lighter weight (reduce weight class by one)
+- **Magical +1/+2/+3:** Additional Guard bonus beyond base value
+- **Special Properties:** Spell reflection, extra DR, resistance to specific damage types
+
+When rewarding magical shields, remember they're highly valuable for defensive builds. A +1 medium shield (total +3 Guard) significantly improves survivability.
+
+### Balancing Shield Users
+
+Characters with shields are harder to hit but deal standard damage. Adjust encounters by:
+- Adding more enemies (shields don't help against being outnumbered)
+- Using effects that bypass Guard (forced movement, conditions, environmental hazards)
+- Targeting unshielded allies (make shield users choose between protecting themselves and others)
+
+Don't punish players for using shields—let them feel effective at the defensive role they chose.
+
+---
+
+*A shield is a warrior's steadfast companion. Choose wisely based on your role in battle—some fights are won by surviving long enough to matter, not by striking first.*

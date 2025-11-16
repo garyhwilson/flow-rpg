@@ -1,22 +1,165 @@
-{# Advantage/Disadvantage - from core_rules.yaml #}
-# ADVANTAGE AND DISADVANTAGE
-*Generated from YAML source data*
+{#
+Advantage/Disadvantage Template - Publication Style
+Generates advantage/disadvantage documentation with professional TTRPG prose
+#}
+# Advantage and Disadvantage
 
-## Overview
-Situational modifiers for rolls.
+Not all situations are equal. Fighting downhill against an enemy who can't see you creates favorable circumstances. Attempting to pick a lock while hanging from a rope in the rain creates unfavorable ones. Advantage and disadvantage represent these situational modifiers—the tactical edges and setbacks that emerge from circumstances rather than innate capability.
 
-## Advantage (+1 to roll)
+Flow RPG uses simple +1/-1 modifiers rather than complex advantage mechanics. When circumstances favor you, add +1 to your roll. When they work against you, subtract 1. These bonuses and penalties stack with your attributes and skills, creating meaningful tactical decisions without overwhelming complexity.
+
+---
+
+## Advantage (+1 to Roll)
+
+You gain advantage when circumstances favor your attempt. Add +1 to your roll when:
+
 {% if modifier_data.advantage %}
 {% for situation in modifier_data.advantage %}
 - {{ situation }}
 {% endfor %}
 {% endif %}
 
-## Disadvantage (-1 to roll)
+These situations represent favorable positioning, preparation, or circumstance that makes success more likely. The +1 bonus is consistent—advantage doesn't scale or vary based on how advantageous the situation is. Multiple sources of advantage don't stack; you either have advantage (+1) or you don't.
+
+## Disadvantage (-1 to Roll)
+
+You suffer disadvantage when circumstances work against your attempt. Subtract 1 from your roll when:
+
 {% if modifier_data.disadvantage %}
 {% for situation in modifier_data.disadvantage %}
 - {{ situation }}
 {% endfor %}
 {% endif %}
 
-*Advantage and disadvantage represent favorable or unfavorable circumstances.*
+These situations represent poor positioning, lack of preparation, or adverse circumstances that make success harder. Like advantage, the penalty is consistent—disadvantage is always -1, and multiple sources don't stack.
+
+---
+
+## How Advantage and Disadvantage Work
+
+### Stacking Rules
+
+Advantage and disadvantage don't stack with themselves:
+- Two sources of advantage = +1 (not +2)
+- Three sources of disadvantage = -1 (not -3)
+- Advantage and disadvantage cancel each other (net modifier 0)
+
+This keeps modifiers manageable. You're either advantaged, disadvantaged, or neutral—no complicated stacking calculations.
+
+### Common Situations
+
+**Combat Advantages:**
+Fighting from higher ground grants advantage—you strike downward while enemies strike upward. Flanking an enemy with an ally grants advantage—they must divide attention between threats. Attacking an enemy who can't see you grants advantage—they can't defend effectively against unseen strikes.
+
+**Combat Disadvantages:**
+Fighting while prone imposes disadvantage—your mobility and leverage are compromised. Attacking enemies you can't see clearly imposes disadvantage—you're striking at sounds and shadows. Fighting in difficult terrain imposes disadvantage—footing matters in combat.
+
+**Skill Advantages:**
+Using proper tools grants advantage on relevant checks—lockpicks for picking locks, healer's kit for treating wounds. Having detailed information grants advantage on knowledge checks—you researched beforehand. Favorable conditions grant advantage—picking locks in good light with no time pressure.
+
+**Skill Disadvantages:**
+Lacking proper tools imposes disadvantage—picking locks with improvised tools, treating wounds without supplies. Time pressure imposes disadvantage—rushing makes mistakes more likely. Poor conditions impose disadvantage—picking locks in darkness, treating wounds during combat.
+
+### GM Discretion
+
+Not every favorable or unfavorable circumstance warrants advantage or disadvantage. Reserve these modifiers for situations that meaningfully affect outcome probability:
+
+**Grant advantage when:**
+- Circumstances significantly favor the character
+- The tactical or environmental benefit is clear
+- Players created the advantage through clever play
+
+**Grant disadvantage when:**
+- Circumstances significantly hinder the character
+- The tactical or environmental penalty is clear
+- The difficulty stems from situation, not inherent task difficulty (use higher TN for harder tasks)
+
+### Advantage vs. Higher TN
+
+When situations make tasks harder, choose between disadvantage and higher TN:
+
+**Use disadvantage when:**
+- The task itself is standard difficulty but circumstances are poor
+- Example: Climbing a normal wall (TN 8) in the rain (-1 disadvantage)
+
+**Use higher TN when:**
+- The task itself is inherently harder
+- Example: Climbing a sheer cliff (TN 10) even in good conditions
+
+Don't apply both unless circumstances truly warrant it. A sheer cliff in the rain might be TN 10 with disadvantage, but this should be rare—usually, adjust either TN or apply disadvantage, not both.
+
+---
+
+## Playing with Advantage and Disadvantage
+
+### Creating Advantages
+
+Smart players create advantages through tactical play:
+
+**Combat:** Position yourself on higher ground before fighting. Coordinate with allies for flanking. Use smoke bombs or darkness to blind enemies while you navigate by sound.
+
+**Skills:** Gather tools before attempting difficult tasks. Research topics before knowledge checks. Create favorable conditions (good light, quiet environment, no time pressure) before crucial attempts.
+
+**Preparation:** Scout ahead to identify advantageous positions. Prepare backup plans that create advantages when primary plans fail. Invest in equipment that grants advantage (proper tools, quality gear).
+
+### Avoiding Disadvantages
+
+Disadvantages often come from poor planning or bad luck, but can be avoided:
+
+**Combat:** Don't fight prone unless forced to. Maintain awareness to avoid being surprised. Keep equipment in good repair to avoid penalties from damaged gear.
+
+**Skills:** Carry proper tools for tasks you attempt frequently. Don't rush unless necessary—time pressure is a common source of disadvantage. Work in favorable conditions when possible.
+
+**Contingency:** Plan for worst-case scenarios. Carry backup equipment. Develop skills that mitigate common disadvantages (darkvision negates darkness penalties, high Athletics reduces difficult terrain penalties).
+
+---
+
+## Game Master Guidance
+
+### When to Apply Modifiers
+
+Be consistent but not rigid. Similar situations should grant similar modifiers, but don't let advantage/disadvantage become automatic:
+
+**Don't grant advantage for:**
+- Routine situations that should be baseline (proper lighting during daytime, flat terrain, normal tools)
+- Player requests without tactical justification
+- Every creative description (save it for truly clever tactics)
+
+**Don't impose disadvantage for:**
+- Standard task difficulty (use appropriate TN instead)
+- Minor inconveniences that shouldn't affect rolls
+- Punishing players for reasonable attempts
+
+### Communicating Modifiers
+
+Tell players when they have advantage or disadvantage before they roll:
+- "You have advantage from higher ground, so add +1"
+- "You're attacking blind, so subtract 1 for disadvantage"
+- "The flanking advantage and darkness disadvantage cancel out"
+
+This transparency helps players understand tactical decisions and learn what creates advantages.
+
+### Balancing Combat
+
+Advantage and disadvantage create tactical depth without complex subsystems:
+- Players seek advantageous positions rather than standing and trading blows
+- Terrain matters beyond just aesthetics
+- Clever tactics provide mechanical benefits
+- Disadvantageous positions can be avoided through good play
+
+Encourage tactical thinking by making advantages accessible through smart play, not random chance.
+
+### Edge Cases
+
+**Multiple advantages/disadvantages:** They don't stack. Either you have advantage (+1), disadvantage (-1), or neither (0).
+
+**Advantage + Disadvantage:** They cancel. Net modifier is 0.
+
+**Multiple advantage sources + one disadvantage:** Cancels to advantage (+1). The single disadvantage cancels one advantage source, but you still have advantage from other sources.
+
+**Persistent conditions:** Some conditions create ongoing advantage or disadvantage. Invisibility grants advantage on attacks until you become visible. Prone imposes disadvantage on attacks until you stand.
+
+---
+
+*Advantage and disadvantage reward tactical thinking and punish poor positioning. Seek the high ground, prepare thoroughly, and create favorable circumstances—then let the dice fall where they may.*

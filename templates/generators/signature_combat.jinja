@@ -1,19 +1,121 @@
-{# Signature Combat Moves - reference to combat.yaml #}
-# SIGNATURE COMBAT MOVES
-*Reference to combat mechanics documentation*
+{#
+Signature Combat Reference - Publication Style
+Brief cross-reference pointing to main signature moves documentation
+#}
+# Signature Combat Moves
 
-## Overview
-Signature combat moves are personalized techniques developed by experienced warriors.
+{% if signature_moves %}
+Every warrior develops personal techniques through experience. That overhead slash you've perfected through a hundred battles, the defensive counter you've refined until it's second nature, the spell combination you can weave faster than anyone else—these become signature moves. They're not just mechanically efficient; they're expressions of your fighting style made manifest.
 
-## Creating Signature Moves
-See [Combat Techniques](techniques_mechanics.md) for the complete technique system.
+## What Are Signature Moves?
 
-Signature moves combine existing techniques with character flavor and reduced Flow cost.
+{{ signature_moves.description if signature_moves.description else "Signature moves are personalized combat techniques that define your character's unique fighting style. They represent the culmination of training, experience, and personal innovation—the moves only you perform exactly this way." }}
 
-**Guidelines:**
-- Based on existing combat techniques
-- Cost 1 less Flow than base technique (minimum 0)
-- Unique narrative description
-- Earned at moderate milestones
+{% if signature_moves.philosophy %}
+**Design Philosophy:** {{ signature_moves.philosophy }}
+{% endif %}
 
-*For detailed rules, consult combat techniques documentation.*
+## Creating Your Signature Move
+
+{% if signature_moves.creation %}
+{% if signature_moves.creation.when %}**Timing:** Earned at {{ signature_moves.creation.when }}{% if signature_moves.creation.timing_note %} ({{ signature_moves.creation.timing_note }}){% endif %}{% endif %}
+
+Your signature move requires four components:
+
+{% if signature_moves.creation.components %}
+{% for component in signature_moves.creation.components %}
+- {{ component }}
+{% endfor %}
+{% endif %}
+
+{% if signature_moves.creation.creation_guidelines %}
+### Creation Guidelines
+
+{% if signature_moves.creation.creation_guidelines.base_technique %}**Base Technique:** {{ signature_moves.creation.creation_guidelines.base_technique }}{% endif %}
+
+{% if signature_moves.creation.creation_guidelines.discount %}**Flow Discount:** {{ signature_moves.creation.creation_guidelines.discount }}{% endif %}
+
+{% if signature_moves.creation.creation_guidelines.restrictions %}**Requirement:** {{ signature_moves.creation.creation_guidelines.restrictions }}{% endif %}
+
+{% if signature_moves.creation.creation_guidelines.balance %}**Balance Note:** {{ signature_moves.creation.creation_guidelines.balance }}{% endif %}
+{% endif %}
+
+{% endif %}
+
+## Examples from the Field
+
+{% if signature_moves.examples %}
+These examples show how different characters create signature moves from their combat experience:
+
+{% for char_id, move in signature_moves.examples.items() %}
+### {{ move.name if move.name else char_id.replace('_', ' ').title() }}
+
+{% if move.effect %}**Effect:** {{ move.effect }}{% endif %}
+{% if move.normal_cost and move.signature_cost %}**Cost:** {{ move.signature_cost }} Flow (normally {{ move.normal_cost }}){% endif %}
+{% if move.description %}**Description:** {{ move.description }}{% endif %}
+
+---
+{% endfor %}
+{% endif %}
+
+{% else %}
+
+Signature moves personalize combat techniques:
+
+**Creation:** Moderate milestone
+**Components:** Name, mechanical effect, Flow cost (1 less than normal), narrative description
+**Examples:**
+- Thunder Strike: Attack all enemies in zone (2 Flow instead of 3)
+- Arcane Eruption: 3d6 force damage at Close range (1 Flow instead of 2)
+- Divine Grace: Heal 2d6 to all allies in zone (2 Flow instead of 3)
+
+{% endif %}
+
+## Evolution and Improvement
+
+{% if signature_moves and signature_moves.evolution %}
+Signature moves can improve at later milestones:
+
+{% if signature_moves.evolution.minor_improvement %}
+**Minor Improvement** ({{ signature_moves.evolution.minor_improvement.when if signature_moves.evolution.minor_improvement.when else "Later milestone" }}):
+{% if signature_moves.evolution.minor_improvement.options %}
+{% for option in signature_moves.evolution.minor_improvement.options %}
+- {{ option }}
+{% endfor %}
+{% endif %}
+{% endif %}
+
+{% if signature_moves.evolution.major_improvement %}
+**Major Improvement** ({{ signature_moves.evolution.major_improvement.when if signature_moves.evolution.major_improvement.when else "Major milestone" }}):
+{% if signature_moves.evolution.major_improvement.options %}
+{% for option in signature_moves.evolution.major_improvement.options %}
+- {{ option }}
+{% endfor %}
+{% endif %}
+{% endif %}
+
+{% else %}
+
+**Minor Improvement:** Reduce cost by 1, add minor effect, or increase range
+**Major Improvement:** Double effect, remove limits, or add narrative permissions
+
+{% endif %}
+
+---
+
+## Complete Documentation
+
+For comprehensive rules on creating, using, and evolving signature moves, including:
+- Detailed creation process and requirements
+- Tactical applications and strategic considerations
+- Game Master guidance on balancing signature moves
+- Multiple examples across different combat styles
+- Integration with other combat systems
+
+**See the full [Signature Moves](signature_moves.md) documentation.**
+
+This reference provides a quick overview. The complete documentation covers signature move creation in depth, including how to choose appropriate base techniques, balance Flow costs, develop narrative descriptions, and evolve signature moves through campaign progression.
+
+---
+
+*Signature moves represent the pinnacle of personal combat mastery—techniques so thoroughly refined they become inseparable from your identity as a warrior.*

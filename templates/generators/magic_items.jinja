@@ -1,112 +1,207 @@
 {#
-Magic Items Template
-Generates magic item documentation from YAML equipment data
+Magic Items Template - Publication Style
+Generates magic item documentation with professional TTRPG prose
 #}
-# MAGIC ITEMS - ENCHANTED EQUIPMENT
-*Generated from YAML source data*
+# Magic Items
 
-## Overview
+A sword is a tool. A *flaming* sword that never dulls and sheds light in darkness is a legend. Magic items transcend mundane equipment—they're the weapons that legends wield, the armor that heroes wear, the artifacts that campaigns revolve around.
 
-Magic items provide permanent benefits through enchantment. Rarity determines power level, cost, and availability.
+Unlike consumables that disappear with use or mundane gear that anyone can purchase, magic items are permanent treasures that grow in significance throughout a campaign. The +1 longsword earned at third level becomes an heirloom. The ring of protection that saved you from death becomes irreplaceable. These items aren't just mechanical bonuses—they're story elements.
 
 ---
 
-## Rarity Tiers
+## Understanding Magic Item Rarity
+
+Magic items are categorized by rarity, which determines their power level, cost, and how frequently they should appear:
 
 {% for rarity_id, rarity in rarity_tiers.items() %}
+
 ### {{ rarity_id.replace('_', ' ').title() }}
 
-- **Power Level:** {{ rarity.power }}
-- **Cost Range:** {{ rarity.cost }}
-- **Availability:** {{ rarity.availability }}
+**Power Level:** {{ rarity.power }}
+**Availability:** {{ rarity.availability }}
+**Typical Cost:** {{ rarity.cost }}
 
 {% endfor %}
+
+Rarity guides GMs in distributing treasure appropriately. Common items appear regularly; legendary items might appear once per campaign. Don't treat rarity as rigid requirements—adjust to your campaign's magic level—but use it as a baseline.
 
 ---
 
 ## Enhancement Bonuses
 
+The simplest magic items provide numerical bonuses to weapons and armor. These straightforward improvements scale predictably:
+
 {% for bonus_id, bonus in enhancement_bonuses.items() %}
-### {{ bonus_id.replace('_', '+') }}
+
+### {{ bonus_id.replace('_', '+') }} Enhancement
 
 **Weapons:** {{ bonus.weapons }}
 **Armor:** {{ bonus.armor }}
-**Cost Multiplier:** ×{{ bonus.cost_multiplier }}
 **Rarity:** {{ bonus.rarity }}
+**Cost Multiplier:** ×{{ bonus.cost_multiplier }} base item cost
 
 {% endfor %}
+
+Enhancement bonuses represent magical refinement—the blade holds an edge better, the armor deflects blows more effectively. These aren't flashy or interesting, but they're reliable and universally useful.
+
+### Pricing Enhanced Items
+
+Calculate costs by multiplying the base item cost by the enhancement multiplier:
+
+**+1 Longsword:** 40 coins (longsword) × 10 (+1 multiplier) = 400 coins
+**+2 Chainmail:** 75 coins (chainmail) × 50 (+2 multiplier) = 3,750 coins
+**+3 Greatsword:** 50 coins (greatsword) × 200 (+3 multiplier) = 10,000 coins
+
+These prices assume magic items can be purchased. Many campaigns treat magic items as treasure-only, making monetary cost irrelevant.
 
 ---
 
 ## Weapon Properties
 
+Beyond simple enhancement bonuses, weapons can gain special properties that create unique capabilities:
+
 {% for property_id, property in weapon_properties.items() %}
+
 ### {{ property_id.title() }}
 
-- **Effect:** {{ property.effect }}
-- **Cost:** {{ property.cost }}
-- **Rarity:** {{ property.rarity }}
+{{ property.effect }}
+
+**Rarity:** {{ property.rarity }}
+**Cost:** {{ property.cost }} coins (added to weapon cost)
 
 {% endfor %}
+
+Properties make weapons memorable. A +1 longsword is useful; a +1 *flaming* longsword becomes the weapon that burned the vampire lord to ash. Properties create narrative moments and tactical options beyond raw numbers.
 
 ---
 
 ## Armor Properties
 
+Armor can also gain special properties beyond enhancement bonuses:
+
 {% for property_id, property in armor_properties.items() %}
+
 ### {{ property_id.title() }}
 
-{% if property.light %}
-**Light Armor:** {{ property.light }}
-{% endif %}
-{% if property.medium %}
-**Medium Armor:** {{ property.medium }}
-{% endif %}
-{% if property.heavy %}
-**Heavy Armor:** {{ property.heavy }}
-{% endif %}
 {% if property.effect %}
-**Effect:** {{ property.effect }}
+{{ property.effect }}
 {% endif %}
-{% if property.cost %}
-**Cost:** {{ property.cost }}
-{% endif %}
-{% if property.rarity %}
-**Rarity:** {{ property.rarity }}
-{% endif %}
+
+{% if property.light %}**Light Armor:** {{ property.light }}{% endif %}
+{% if property.medium %}**Medium Armor:** {{ property.medium }}{% endif %}
+{% if property.heavy %}**Heavy Armor:** {{ property.heavy }}{% endif %}
+
+{% if property.rarity %}**Rarity:** {{ property.rarity }}{% endif %}
+{% if property.cost %}**Cost:** {{ property.cost }} coins{% endif %}
 
 {% endfor %}
 
----
-
-## Magic Item Guidelines
-
-### Awarding Magic Items
-
-**By Campaign Level:**
-- **Early (Sessions 1-6):** +1 weapons/armor, common wondrous items
-- **Mid (Sessions 7-15):** +2 weapons/armor, uncommon/rare items
-- **Late (Sessions 16+):** +3 weapons/armor, very rare/legendary items
-
-### Pricing Magic Items
-
-**Base Item Cost + Enhancement:**
-- Longsword (40 coins) + 1 (×10) = 400 coins total
-- Longsword (40 coins) + 2 (×50) = 2,000 coins total
-- Longsword (40 coins) + 3 (×200) = 8,000 coins total
-
-**Properties Add Flat Cost:**
-- +1 Flaming Longsword = 400 + 2,000 = 2,400 coins
-
-### Creating Custom Magic Items
-
-**Power Budget:**
-- Common: +1 bonus OR minor utility
-- Uncommon: +1 bonus AND minor effect OR +2 bonus
-- Rare: +2 bonus AND property OR unique major effect
-- Very Rare: +3 bonus OR game-changing ability
-- Legendary: Multiple effects OR reality-breaking power
+Armor properties solve specific problems or enhance survival in particular environments. They're less universally useful than weapon properties but more impactful in relevant situations.
 
 ---
 
-*Magic items should feel special and earned, not mass-produced commodities.*
+## Awarding Magic Items
+
+### Campaign Progression
+
+Distribute magic items based on campaign length and power level:
+
+**Early Campaign (Sessions 1-6):**
+Award +1 weapons and armor to primary combatants. Include one or two common wondrous items for utility. Focus on items that solve immediate problems—+1 weapons help hit enemies, +1 armor helps survive their attacks.
+
+**Mid Campaign (Sessions 7-15):**
+Upgrade to +2 enhancements. Introduce uncommon and rare properties. Characters should have signature items by now—the fighter's named sword, the wizard's enchanted staff. Award items that complement character builds rather than generic upgrades.
+
+**Late Campaign (Sessions 16+):**
+Distribute +3 enhancements sparingly. Rare and very rare properties appear. Legendary items might emerge for campaign climaxes. At this point, magic items define character identity as much as class and calling.
+
+### Distribution Philosophy
+
+**Don't flood the party with magic items.** Three +1 weapons among four party members creates meaningful choices about who gets the third. Everyone having +2 everything makes items feel common rather than magical.
+
+**Do match items to character builds.** The archer should find the +1 longbow, not the greatsword. The wizard should find the intelligence-boosting circlet, not the armor. Targeted rewards feel personal; random distribution feels arbitrary.
+
+**Don't make magic items purchasable unless your campaign embraces high-magic economy.** Treasure feels more valuable when you can't just buy it. If magic shops exist, price items high enough that purchase requires significant investment.
+
+**Do let players name significant items.** The +2 longsword they've carried for ten sessions deserves a name. Named items create attachment and story.
+
+### Creating Custom Items
+
+When designing custom magic items, use rarity as a power budget:
+
+**Common (Budget: +1 bonus OR minor utility):**
+- +1 weapon/armor
+- Light-producing item
+- Minor skill bonus (+1 to specific application)
+
+**Uncommon (Budget: +1 and minor effect OR +2 bonus):**
+- +1 flaming weapon
+- +2 weapon
+- Item with limited daily use special ability
+
+**Rare (Budget: +2 and property OR unique major effect):**
+- +2 weapon with property
+- Item with significant daily power
+- Unique narrative-driven capability
+
+**Very Rare (Budget: +3 OR game-changing ability):**
+- +3 weapon/armor
+- Flight or teleportation on command
+- Significant combat advantage
+
+**Legendary (Budget: Multiple effects OR reality-altering power):**
+- +3 weapon with multiple properties
+- Campaign-defining artifacts
+- Powers that change how the game works
+
+Balance custom items against existing examples. A rare item should feel roughly as powerful as other rare items.
+
+---
+
+## Game Master Guidance
+
+### Magic Items as Story
+
+The best magic items have history:
+- Who created it and why?
+- What deeds was it used for?
+- How did it come to be here?
+
+A +1 longsword found in a chest is forgettable. The +1 longsword that belonged to the knight whose statue you passed, that was lost when he fell defending this very room, becomes meaningful. Give significant items backstory.
+
+### Cursed and Problematic Items
+
+Some items come with costs:
+- Cursed weapons that can't be unequipped
+- Powerful items with alignment restrictions
+- Artifacts with drawbacks balancing their power
+
+Use these sparingly. Cursed items can create interesting dilemmas but frustrate players if overused. Make curse identification possible and removal achievable—the cursed sword arc should resolve, not define the entire campaign.
+
+### Upgrading Items
+
+Let players upgrade signature items rather than constantly replacing them:
+- The +1 sword becomes +2 through a quest
+- Armor gains properties through rare materials
+- Items evolve alongside characters
+
+This creates attachment. The sword you've carried since level 3 that's grown with you feels different than the "better sword" you looted at level 10.
+
+### Common Mistakes
+
+**Too many magic items too fast:**
+If everyone has +2 everything by session 8, nothing feels magical. Distribute gradually.
+
+**Random distribution ignoring character builds:**
+The archer doesn't want the maul. The paladin doesn't want the stealth cloak. Target rewards.
+
+**Forgetting items players already have:**
+Track magic items in party inventory. The ring of protection from session 4 should still be relevant at session 12.
+
+**Making magic items feel mundane:**
+If magic shops on every corner sell +1 weapons, they're not magical—they're standard equipment. Preserve the "magic" in magic items through scarcity and significance.
+
+---
+
+*Magic items should feel earned, treasured, and memorable. Award them thoughtfully, let them tell stories, and watch them become as much a part of character identity as class and calling.*

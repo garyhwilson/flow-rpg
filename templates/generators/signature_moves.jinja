@@ -1,22 +1,243 @@
-{# Signature Moves - from advancement.yaml moderate_milestones #}
-# SIGNATURE MOVES
-*Generated from YAML source data*
+{#
+Signature Moves Template - Publication Style
+Generates signature moves documentation with professional TTRPG prose
+#}
+# Signature Moves
 
-## Overview
-{{ milestone_data.moderate_milestones.options.signature_move.description }}
+Every fighter can execute a perfect sword strike. Every wizard can cast Fireball. But only you have *your* signature move—the personal technique that defines your fighting style, bears your name, and costs less Flow than anyone else could manage. Signature moves aren't just mechanically efficient; they're expressions of character identity made manifest in combat.
 
-**Components:**
+{% if milestone_data and milestone_data.moderate_milestones and milestone_data.moderate_milestones.options and milestone_data.moderate_milestones.options.signature_move %}{{ milestone_data.moderate_milestones.options.signature_move.description }} This personalization transforms generic techniques into abilities that feel uniquely yours.
+{% else %}Signature moves are personalized techniques created at moderate milestones. They take existing abilities and make them distinctly yours—reduced Flow cost, enhanced effects, or unique narrative descriptions.{% endif %}
+
+Signature moves typically arrive at your first moderate milestone (session 3 usually), though you can create additional signature moves at later moderate milestones. Most characters have 1-2 signature moves across entire campaigns—these are defining abilities, not a full arsenal.
+
+---
+
+## Creating Your Signature Move
+
+### Components
+
+{% if milestone_data and milestone_data.moderate_milestones and milestone_data.moderate_milestones.options and milestone_data.moderate_milestones.options.signature_move and milestone_data.moderate_milestones.options.signature_move.components %}
+Every signature move includes these elements:
+
 {% for component, desc in milestone_data.moderate_milestones.options.signature_move.components.items() %}
-- **{{ component.title() }}:** {{ desc }}
+**{{ component.title() }}:** {{ desc }}
+
 {% endfor %}
 
-## Examples
+These components work together to create techniques that mechanically improve existing abilities while adding personal narrative flavor.
+{% else %}
+Every signature move needs:
+
+**Name:** Personal to your character—"Kara's Devastating Charge" not "Generic Charge"
+**Mechanical Effect:** Based on existing technique but with modifications
+**Flow Cost:** 1 less than normal technique (minimum 0 Flow)
+**Narrative Description:** How it looks and feels when activated
+
+{% endif %}
+
+### Base Technique Selection
+
+Choose an existing technique you've used successfully in actual play. Signature moves should evolve from your character's combat experience, not theoretical optimization.
+
+**Requirements for base technique:**
+- Must have used it successfully at least 2-3 times in combat
+- Should reflect your character's fighting style
+- Works better with techniques you use frequently
+
+Don't create signature move for technique you've never actually used. The mechanic exists to reward and enhance existing playstyle, not introduce entirely new capabilities.
+
+### Flow Cost Reduction
+
+The defining mechanical benefit: your signature move costs 1 Flow less than the base technique (minimum 0).
+
+**Standard technique costs 2 Flow → Signature costs 1 Flow**
+**Standard technique costs 1 Flow → Signature costs 0 Flow**
+**Standard technique costs 0 Flow → Remains 0 Flow (but might gain other enhancements)**
+
+This reduction makes signature moves your go-to abilities. Where others must build Flow reserves, you execute your signature move more easily.
+
+### Personal Enhancements
+
+Beyond Flow reduction, signature moves can include minor enhancements:
+
+**Slight damage increase:** +1 or +1d6 damage
+**Extended range:** Affect additional target or slightly larger area
+**Improved effect:** Shorter duration debuffs last slightly longer, saves are slightly harder
+**Narrative permissions:** Can be used in situations where base technique wouldn't quite work
+
+These enhancements should feel earned rather than game-breaking. The signature move improves the base technique noticeably but doesn't double its power.
+
+---
+
+## Example Signature Moves
+
+{% if milestone_data and milestone_data.moderate_milestones and milestone_data.moderate_milestones.options and milestone_data.moderate_milestones.options.signature_move and milestone_data.moderate_milestones.options.signature_move.examples %}
+These examples show how different archetypes create signature moves from existing abilities:
+
 {% for archetype, move in milestone_data.moderate_milestones.options.signature_move.examples.items() %}
 ### {{ archetype.title() }}: {{ move.name }}
-- **Base:** {{ move.base_technique if move.base_technique else move.base_spell }}
-- **Enhancement:** {{ move.enhancement }}
-- **Normal Cost:** {{ move.normal_cost }} Flow
-- **Signature Cost:** {{ move.signature_cost }} Flow
+
+**Base Technique:** {{ move.base_technique if move.base_technique else move.base_spell }}
+**Enhancement:** {{ move.enhancement }}
+**Standard Cost:** {{ move.normal_cost }} Flow
+**Signature Cost:** {{ move.signature_cost }} Flow
+
+**In Play:** {% if archetype == 'fighter' %}The fighter builds +2 Flow instead of +3, activates immediately. The enhanced technique knocks enemies prone after damage, controlling battlefield positioning. Used every major fight when enemies cluster or need repositioning.{% elif archetype == 'wizard' %}Fireball with random energy type makes every casting unpredictable—enemies can't prepare resistances. Zero Flow cost means it's freely castable once per turn like enhanced cantrip. The wizard's signature combat spell.{% elif archetype == 'rogue' %}Shadow teleportation enables impossible positioning—appear behind enemies, strike, vanish. The definitive rogue move combining stealth, positioning, and damage. Costs 2 Flow instead of 3, enabling more frequent use.{% else %}This signature move defines the character's combat identity while providing mechanical advantage through reduced Flow cost.{% endif %}
+
+---
 {% endfor %}
 
-*Create your own signature move by combining existing abilities with reduced Flow cost.*
+{% else %}
+### Fighter Example: Thundering Charge
+
+**Base Technique:** Charge Attack
+**Enhancement:** Knocks prone on hit
+**Standard Cost:** 3 Flow → **Signature Cost:** 2 Flow
+
+The fighter's signature move combines aggressive movement with crowd control. Instead of standard charge damage, Thundering Charge knocks enemies prone, enabling follow-up attacks with advantage.
+
+---
+
+### Wizard Example: Prismatic Cascade
+
+**Base Spell:** Fireball
+**Enhancement:** Random energy type (fire, cold, lightning, acid)
+**Standard Cost:** 1 Flow → **Signature Cost:** 0 Flow
+
+The wizard's signature spell costs zero Flow—freely castable like enhanced cantrip. The random energy type prevents enemy resistance preparation while providing visual distinctiveness.
+
+---
+
+### Rogue Example: Shadow Dance
+
+**Base Technique:** Sneak Attack
+**Enhancement:** Teleport behind target before striking
+**Standard Cost:** 3 Flow → **Signature Cost:** 2 Flow
+
+The rogue's signature move adds impossible positioning to damage. Shadow-teleportation enables attacks from complete concealment, guaranteeing sneak attack conditions.
+
+---
+{% endif %}
+
+## Developing Your Signature Move
+
+### Start With Experience
+
+Don't plan signature moves during character creation. Wait until session 2-3 when you've actually fought in the system:
+
+**What techniques do you use most often?** Those are signature move candidates
+**What moments felt most satisfying?** Turn those into signature moves
+**What defines your fighting style?** Signature move should amplify that identity
+
+Signature moves work best when they codify what you're already doing into enhanced permanent form.
+
+### Collaborate With GM
+
+Work with your Game Master to design balanced signature moves:
+
+**Discuss base technique:** Ensure you're eligible (used it 2+ times successfully)
+**Propose enhancements:** What minor improvements make sense?
+**Set appropriate cost:** Usually 1 less Flow, minimum 0
+**Write narrative description:** How does this look when you use it?
+
+Good GMs encourage signature move creation—it increases player investment and creates memorable combat moments.
+
+### Evolve Over Time
+
+Signature moves can improve at later milestones:
+
+**Session 6 moderate milestone:** Reduce cost by additional 1 Flow OR add minor enhancement
+**Session 9 moderate milestone:** Add narrative permission OR slightly boost effect
+
+These improvements keep signature moves relevant as characters grow in power. The signature move you created at session 3 shouldn't become obsolete by session 9.
+
+---
+
+## Using Signature Moves
+
+### Tactical Applications
+
+Signature moves become core tactical options:
+
+**Reduced cost enables frequency:** Use your signature move almost every significant fight
+**Reliability encourages planning:** Build combat strategies around signature move availability
+**Identity reinforcement:** Every activation reminds table "this is my thing"
+
+Don't save signature moves for perfect moments. They're efficient enough to use liberally.
+
+### Narrative Integration
+
+Signature moves deserve description:
+
+*Standard casting:* "I cast Fireball."
+
+*Signature move:* "Prismatic energy coalesces in my hands—colors shifting unpredictably. I unleash Prismatic Cascade. The explosion detonates in brilliant cascade of random elemental fury."
+
+Encourage other players to recognize your signature move: "Oh no, here comes Shadow Dance again!"
+
+### Mechanical Efficiency
+
+Because signature moves cost less Flow, they create advantageous action economy:
+
+**More frequent activation:** Build to threshold faster
+**Flow conservation:** Spend less, have more for other techniques
+**Sustainable tactics:** Can repeat signature move across multiple encounters
+
+Signature moves should feel like your bread-and-butter technique, not desperate last resort.
+
+---
+
+## Game Master Guidance
+
+### Encouraging Creation
+
+Don't require signature moves, but create opportunities:
+
+**Ask at moderate milestone:** "You've reached session 3. Would you like to create a signature move?"
+**Reference technique use:** "You've used Charge Attack successfully three times. Want to make it signature?"
+**Suggest enhancements:** "What if your healing touch had golden glow unique to you?"
+
+Some players embrace signature moves immediately; others prefer generic techniques. Both are valid.
+
+### Balancing Power
+
+Signature moves should feel special without overshadowing everything:
+
+**Appropriate enhancements:**
+- Flow cost reduction (always appropriate)
+- +1d6 damage or equivalent minor boost
+- Small area or range increase
+- Narrative flavor making technique distinctive
+
+**Too powerful:**
+- Doubling damage or effect
+- Removing all limitations
+- Making technique strictly superior in all situations
+- Automatic critical hits or saves
+
+If signature move dominates all other options, it's too strong. Players should want to use it often but not exclusively.
+
+### Multiple Signature Moves
+
+Allow 1 signature move at first moderate milestone, possibly additional moves at later moderate milestones:
+
+**Session 3:** First signature move
+**Session 6:** Optional second signature move OR improve first
+**Session 9:** Optional third signature move OR improve existing ones
+
+Don't let players create signature versions of every technique. Limitation creates meaningful choice—which techniques matter most?
+
+### NPC Signature Moves
+
+Major recurring NPCs should have signature moves:
+
+**Rival adventurers:** Signature moves matching player signature moves in power
+**Lieutenants:** 1 signature move defining their combat role
+**Major villains:** 2-3 signature moves used at dramatic moments
+
+When NPC uses signature move, describe it distinctively: "The warlord's eyes ignite with crimson fire—you recognize his Flames of Conquest attack coming."
+
+---
+
+*Signature moves transform generic techniques into personal expressions of combat prowess. Create moves that reflect your character's identity, use them proudly and frequently, and let them define how the table remembers your hero.*

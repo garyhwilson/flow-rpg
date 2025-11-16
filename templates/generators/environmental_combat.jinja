@@ -1,17 +1,254 @@
-{# Environmental Combat - reference to combat.yaml #}
-# ENVIRONMENTAL COMBAT FACTORS
-*Reference to combat mechanics documentation*
+{#
+Environmental Combat Template - Publication Style
+Generates environmental combat documentation with professional TTRPG prose
+#}
+# Environmental Combat
 
-## Overview
-Environmental factors add tactical depth to combat conflicts.
+The battlefield is never just an empty room. Rain turns cobblestones slick. Fire spreads from overturned lanterns. Chandeliers hang overhead waiting to be cut loose. Barrels provide cover but might contain alchemical reagents. Every fight happens somewhere, and that somewhere matters.
 
-## Common Environmental Elements
-- **Terrain:** Difficult ground, elevation, cover
-- **Hazards:** Fire, water, falling objects
-- **Weather:** Rain, fog, wind
-- **Interactive Elements:** Barrels, chandeliers, traps
+Environmental combat transforms static battlefields into dynamic tactical puzzles. Smart combatants use terrain for advantage, create hazards to control enemies, and exploit elevation for tactical superiority. The environment isn't just scenery—it's a weapon, a shield, and a challenge all at once.
 
-## Using Environment
-GMs should incorporate 1-2 environmental factors per significant conflict to create dynamic battlefields.
+---
 
-*For detailed environmental combat rules, consult the core combat documentation.*
+{% if environmental_data %}
+
+## Terrain Types
+
+{% if environmental_data.difficult_terrain %}
+### Difficult Terrain
+
+{{ environmental_data.difficult_terrain.description if environmental_data.difficult_terrain.description else "Some ground makes movement harder—mud sucks at boots, rubble shifts underfoot, thick vegetation tangles legs. These obstacles slow movement without causing direct harm." }}
+
+**Effect:** {{ environmental_data.difficult_terrain.effect }}
+
+{% if environmental_data.difficult_terrain.examples %}
+**Common Examples:**
+{% for example in environmental_data.difficult_terrain.examples %}
+- {{ example }}
+{% endfor %}
+{% endif %}
+
+Difficult terrain creates tactical choices: move through it slowly, or take longer routes around it. Enemies in difficult terrain are easier to escape from. Archers benefit from difficult terrain between them and melee opponents.
+{% endif %}
+
+{% if environmental_data.hazardous_terrain %}
+
+### Hazardous Terrain
+
+{{ environmental_data.hazardous_terrain.description if environmental_data.hazardous_terrain.description else "Some environments actively harm those who enter them. Fire burns, acid corrodes, spikes pierce. These hazards don't just slow—they damage." }}
+
+**Effect:** {{ environmental_data.hazardous_terrain.effect }}
+
+{% if environmental_data.hazardous_terrain.examples %}
+**Common Hazards:**
+{% for example in environmental_data.hazardous_terrain.examples %}
+- {{ example }}
+{% endfor %}
+{% endif %}
+
+Hazardous terrain creates area denial—space enemies can't safely occupy. Push opponents into hazards through maneuvers. Create hazards through spells or clever use of environment. Force enemies to choose between damage from hazards or attacks from you.
+{% endif %}
+
+---
+
+## Cover and Concealment
+
+{% if environmental_data.cover %}
+Not all positions expose you equally to enemy attacks. Cover provides physical protection; concealment hides you from view. Both improve survivability but in different ways.
+
+{% if environmental_data.cover.partial %}
+### Partial Cover
+
+{{ environmental_data.cover.partial.description if environmental_data.cover.partial.description else "Low walls, large trees, furniture—objects that block part of your body but don't hide you completely. Enemies can still target you, but attacks are harder." }}
+
+**Effect:** {{ environmental_data.cover.partial.effect }}
+
+{% if environmental_data.cover.partial.examples %}
+**Examples:** {% for example in environmental_data.cover.partial.examples %}{{ example }}{{ ", " if not loop.last else "" }}{% endfor %}
+{% endif %}
+
+Partial cover rewards positioning. Archers firing from behind low walls gain defense without blocking their shots. Melee fighters can duck behind cover between attacks.
+{% endif %}
+
+{% if environmental_data.cover.full %}
+
+### Full Cover
+
+{{ environmental_data.cover.full.description if environmental_data.cover.full.description else "Complete protection—building corners, fortifications, massive objects. You're entirely hidden; most attacks can't reach you." }}
+
+**Effect:** {{ environmental_data.cover.full.effect }}
+
+{% if environmental_data.cover.full.examples %}
+**Examples:** {% for example in environmental_data.cover.full.examples %}{{ example }}{{ ", " if not loop.last else "" }}{% endfor %}
+{% endif %}
+
+Full cover creates tactical dilemmas. You can't be hit, but you can't attack without exposing yourself. Use it to recover Guard, prepare actions, or force enemies to advance into unfavorable positions.
+{% endif %}
+{% endif %}
+
+---
+
+## Elevation and Positioning
+
+{% if environmental_data.elevation %}
+Height matters in combat. Fighting from higher ground provides concrete advantages beyond just better views.
+
+{% if environmental_data.elevation.higher_ground %}
+### Higher Ground
+
+**Effect:** {{ environmental_data.elevation.higher_ground.effect }}
+
+Fighting from above grants mechanical superiority. You strike downward where enemies must defend upward. Ranged attacks benefit from gravity. Melee opponents struggle to reach you effectively.
+
+Seize high ground before fights when possible. The few seconds spent climbing stairs or hills pays dividends throughout combat. Enemies forced to attack uphill face persistent disadvantage.
+{% endif %}
+
+{% if environmental_data.elevation.lower_ground %}
+
+### Lower Ground
+
+**Effect:** {{ environmental_data.elevation.lower_ground.effect }}
+
+Attacking upward reverses all advantages. Your blows have less force, enemies defend more easily, positioning favors them. Avoid fighting from lower ground when possible—either seize elevation or reposition to neutral ground.
+{% endif %}
+{% endif %}
+
+---
+
+## Visibility Conditions
+
+{% if environmental_data.visibility %}
+What you can't see, you can't fight effectively. Environmental conditions that limit visibility create dramatic tactical shifts.
+
+{% if environmental_data.visibility.darkness %}
+### Darkness
+
+**Effect:** {{ environmental_data.visibility.darkness.effect }}
+
+Fighting blind is dangerous. Without darkvision or light sources, you're swinging at sounds and shadows. Enemies with darkvision gain overwhelming advantage in darkness.
+
+But darkness cuts both ways. If you possess darkvision and enemies don't, extinguish lights and dominate the battlefield. Spells or equipment that grant vision become tactically valuable.
+{% endif %}
+
+{% if environmental_data.visibility.fog %}
+
+### Fog and Obscurement
+
+**Effect:** {{ environmental_data.visibility.fog.effect }}
+
+Dense fog, smoke, or magical obscurement limits how far you can see and target. Ranged combat becomes impossible beyond close range; enemies appear from obscurement at close quarters.
+
+Fog favors melee combatants and ambushers. Create fog through spells or environmental manipulation, then close to melee while ranged enemies struggle to target you.
+{% endif %}
+
+{% if environmental_data.visibility.blinding_light %}
+
+### Blinding Light
+
+**Effect:** {{ environmental_data.visibility.blinding_light.effect }}
+
+Sudden intense light—magical flare, reflected sunlight, alchemical flash—overwhelms vision temporarily. Everyone affected suffers reduced effectiveness briefly.
+
+Use blinding effects to disrupt enemies before engagement, create openings for escape, or negate enemy advantages. The brief penalty can determine combat outcomes.
+{% endif %}
+{% endif %}
+
+{% endif %}
+
+---
+
+## Using the Environment Tactically
+
+### Creating Hazards
+
+Smart combatants don't just navigate environmental hazards—they create them:
+
+**Topple objects:** Cut chandelier ropes, push bookcases, collapse scaffolding. Turn scenery into hazards that damage or trap enemies.
+
+**Spread fire:** Ignite oil, set tapestries ablaze, create spreading flames that control space and force enemy movement.
+
+**Trigger traps:** Lure enemies into existing traps, or improvise new ones from environmental elements.
+
+These actions usually require maneuver actions—skill checks to accomplish tactical goals. Success creates advantages worth more than single attacks.
+
+### Environmental Awareness
+
+Before fights begin, survey the battlefield:
+
+- **What provides cover?** Identify positions that offer defensive bonuses.
+- **What could become hazards?** Spot objects that might topple, liquids that might ignite, edges that might become falls.
+- **Where is high ground?** Note elevated positions worth seizing.
+- **What limits visibility?** Identify darkness, fog, or other obscurement.
+
+Thirty seconds of observation before combat begins often determines victory. Position yourself advantageously before enemies engage.
+
+### Combining Environmental Factors
+
+The most dynamic battlefields combine multiple environmental elements:
+
+**Burning building:** Hazardous terrain (fire), difficult terrain (debris), visibility issues (smoke), structural hazards (collapsing beams).
+
+**Clifftop fight:** Elevation advantages, falling hazards, weather effects (wind), difficult terrain (rocky ground).
+
+**Sewer combat:** Visibility problems (darkness), difficult terrain (water), hazardous areas (toxic pools), cover (pillars and corners).
+
+Each additional environmental factor increases tactical complexity and rewards clever thinking.
+
+---
+
+## Game Master Guidance
+
+### How Many Environmental Factors?
+
+Don't overwhelm every fight with environmental complexity:
+
+**Simple encounters (1-2 rounds):** One environmental factor maximum. Partial cover or difficult terrain—enough to add interest without complexity.
+
+**Standard encounters (3-5 rounds):** Two environmental factors. Combine terrain types with visibility or elevation for tactical depth.
+
+**Climactic encounters (6+ rounds):** Three or more factors. Complex battlefields with hazards, elevation, cover, and visibility create memorable challenges.
+
+### Describing Environmental Effects
+
+Make environmental factors visible before they matter:
+
+- "The floor is slick with blood and oil—difficult terrain everywhere."
+- "The chandelier above creaks on fraying ropes. One good hit might bring it down."
+- "Rain pounds the rooftop. You can barely see twenty feet through the downpour."
+
+Players can't use environmental factors they don't know exist. Telegraph hazards and opportunities clearly.
+
+### Dynamic Environments
+
+The best battlefields change during combat:
+
+**Fire spreads:** What started as one burning square becomes multiple hazards.
+**Structures collapse:** Cover becomes debris, elevation changes to level ground.
+**Weather shifts:** Clear skies become obscuring rain, darkness gives way to dawn.
+
+These changes create urgency and force tactical adaptation. The fight feels alive rather than static.
+
+### Balancing Environmental Effects
+
+Environmental factors should create interesting choices, not arbitrary difficulty:
+
+**Good environmental design:** "The high ground is through difficult terrain. Fast route or defensive position?"
+
+**Poor environmental design:** "Everything is hazardous terrain and you take damage constantly."
+
+Use environment to reward clever tactics, not punish players for fighting at all.
+
+### Player-Created Environmental Effects
+
+Encourage players to interact with battlefields:
+
+- The wizard casts fog to blind enemies
+- The fighter topples the bookshelf onto opponents
+- The rogue extinguishes lights to create darkness
+- The cleric calls lightning to ignite dry brush
+
+When players propose environmental manipulation, set reasonable TNs (usually 8-10) and let creative tactics succeed. The most memorable fights emerge from players using environment cleverly.
+
+---
+
+*Every battlefield tells a story through its terrain, hazards, and features. Master the environment and you master combat itself.*

@@ -1,57 +1,60 @@
 {#
-Species Template
-Generates species documentation from YAML character data
+Species Template - Publication Style
+Generates species documentation with professional TTRPG prose
 #}
-# SPECIES - MECHANICAL REFERENCE
-*Generated from YAML source data*
+# Species and Heritage
 
-## Overview
+Before you were a fighter or a wizard, before you chose your calling or picked up your first weapon, you were born into a heritage that shapes how you experience the world. Species represents your innate capabilities—the advantages and perspectives that come from your fundamental nature.
 
-Species represents your character's heritage and innate capabilities. Each species provides:
-- **Attribute Bonus** - A +1 bonus to one or more attributes
-- **Three Species Traits** - Unique mechanical abilities
-- **Natural Affinities** - Common calling and archetype patterns
-
-Choose a species that complements your desired playstyle and calling.
+Every species in Flow RPG provides the same mechanical structure: an attribute bonus and three unique traits. These choices matter throughout your career, not just at creation. Your species shapes how you generate Flow, how you interact with the world, and what unique capabilities you bring to your party.
 
 ---
 
 {% for species_id, species in species_data.items() %}
+
 ## {{ species.name }}
+
 *{{ species.description }}*
 
-### Attribute Bonus
+### Innate Capability
+
 {% if species.attribute_bonus.choice == "any" %}
-- **Choice:** +{{ species.attribute_bonus.amount }} to any one attribute
+**Flexible Attribute:** +{{ species.attribute_bonus.amount }} to any one attribute of your choice
 {% elif species.attribute_bonus.choice is string %}
-- **Bonus:** +{{ species.attribute_bonus.amount }} to {{ species.attribute_bonus.choice.title() }}
+**Natural Affinity:** +{{ species.attribute_bonus.amount }} to {{ species.attribute_bonus.choice.title() }}
 {% else %}
-- **Choice:** +{{ species.attribute_bonus.amount }} to {{ species.attribute_bonus.choice|join(' or ')|title }}
+**Heritage Advantage:** +{{ species.attribute_bonus.amount }} to {{ species.attribute_bonus.choice|join(' or ')|title }} (your choice)
 {% endif %}
+
+This bonus reflects natural aptitudes that emerge from your species' typical physiology and cultural patterns. It stacks with your starting attribute array, helping you excel in areas that align with your heritage.
 
 ### Species Traits
 
 {% for trait_id, trait in species.species_traits.items() %}
-#### {{ trait_id.replace('_', ' ').title() }}
-- **Effect:** {{ trait.effect }}
-- **Type:** {{ trait.type.replace('_', ' ').title() }}
+
+**{{ trait_id.replace('_', ' ').title() }}**
+{{ trait.effect }}
+*{{ trait.type.replace('_', ' ').title() }}*
+
 {% endfor %}
 
-### Natural Affinities
+All three traits are always active. You don't choose between them—your heritage provides all of these capabilities simultaneously. They represent fundamental aspects of how your species experiences and interacts with the world.
+
+### Cultural Patterns
 
 {% if species.natural_callings is string %}
-**Callings:** {{ species.natural_callings }}
+Common callings among {{ species.name }}: {{ species.natural_callings }}
 {% else %}
-**Callings:** {{ species.natural_callings|join(', ')|title }}
+Common callings among {{ species.name }}: {{ species.natural_callings|join(', ')|title }}
 {% endif %}
 
 {% if species.natural_archetypes is string %}
-**Archetypes:** {{ species.natural_archetypes }}
+Typical professions: {{ species.natural_archetypes }}
 {% else %}
-**Archetypes:** {{ species.natural_archetypes|join(', ')|title }}
+Typical professions: {{ species.natural_archetypes|join(', ')|title }}
 {% endif %}
 
-*These are tendencies, not restrictions. Any species can choose any calling or archetype.*
+These patterns reflect tendencies, not restrictions. Any {{species.name}} can embody any calling or pursue any archetype. These connections simply describe what emerges naturally from cultural and physiological patterns—not what's required or optimal.
 
 ---
 
@@ -59,133 +62,106 @@ Choose a species that complements your desired playstyle and calling.
 
 ## Choosing Your Species
 
-### Character Creation Impact
+### Attribute Synergy
 
-**Attribute Bonuses:**
-- Species bonus stacks with your starting attribute array
-- Choose bonus based on your desired archetype's primary attributes
-- Flexible bonuses (Human, Elf choices) offer more build variety
+Your species attribute bonus should typically align with your intended archetype's primary attributes:
 
-**Species Traits:**
-- All three traits are always active
-- No choices needed—you get all three
-- Traits never conflict with class abilities
-- Unique mechanics that stay relevant throughout the campaign
+**Flexible bonuses** (Human's "any attribute") offer maximum build variety. Choose the attribute your archetype uses most—Might for fighters, Mind or Awareness for wizards, Presence for bards.
 
-### Species and Flow Economy
+**Fixed bonuses** reward archetypal builds while supporting variety. A species with +1 Might naturally suits martial characters, but the other two traits might enable surprising builds—a Might-bonus species with magic-enhancing traits could create an unusual but viable spellsword.
 
-Each species interacts with Flow differently:
+**Choice bonuses** (select from 2-3 options) provide directed flexibility. You have options, but they're constrained to attributes that align with your species' nature.
 
-**Humans:** Excel when recovering from setbacks (negative Flow bonus)
-- Strategy: Take calculated risks, benefit from adversity
-- Synergy: Works with any playstyle that accepts setbacks
+### Flow Economy Differences
 
-**Elves:** Generate extra Flow from excellence (critical success bonus)
-- Strategy: Build high skill bonuses to trigger crits more often
-- Synergy: Skill-focused characters, high attribute builds
+Each species interacts with Flow through unique mechanical frameworks:
 
-**Dwarves:** Protected economy, stable Flow (reduces Vitality loss, free defensive switches)
-- Strategy: Defensive play, resource conservation
-- Synergy: Defensive characters, defenders, careful tacticians
+**Humans** excel when recovering from adversity. Their traits trigger when things go wrong—negative Flow situations, setbacks, complications. This creates a playstyle that accepts calculated risks and turns disadvantages into advantages. Human characters often have the most dramatic swings in combat—desperate situations where their unique traits activate.
 
-**Halflings:** Flow protection and support generation (prevent negative, gain from ally setbacks)
-- Strategy: Team player, safety net for party
-- Synergy: Support characters, party leaders, tactical coordinators
+**Elves** generate extra Flow from excellence. Critical successes trigger additional benefits beyond normal critical rewards. This creates a playstyle that builds high bonuses to trigger criticals more frequently. Elf characters reward skillful play and high attributes—when you're good at something, you're *very* good at it.
 
-### Species and Callings
+**Dwarves** maintain protected, stable Flow economies. Their traits reduce costs (Vitality loss, stance switching) rather than generating additional Flow. This creates a playstyle focused on resource conservation and defensive play. Dwarf characters are predictable and reliable—they maintain consistent performance rather than spiking dramatically.
 
-While any species can take any calling, some combinations create natural synergies:
+**Halflings** create Flow safety nets for themselves and allies. They prevent negative Flow states and gain resources when party members face setbacks. This creates a support playstyle that keeps the party's overall Flow economy healthy. Halfling characters work best in team-oriented parties where protecting allies matters.
 
-**Natural Synergies** (from YAML):
-- **Humans:** No pattern—truly any calling works equally well
-- **Elves:** Scholar, Seeker, Mediator (introspective, magical, diplomatic)
-- **Dwarves:** Sentinel, Guardian, Advocate (protective, moral, steadfast)
-- **Halflings:** Enthusiast, Guardian, Mediator (optimistic, caring, peaceful)
+### Species and Calling
 
-**Against-Type Builds:**
-Playing against natural affinities creates interesting character concepts:
-- Dwarf Seeker: Finding identity through ancient stone
-- Elf Champion: Pursuing perfection through competition
-- Halfling Sentinel: Vigilant protector despite small size
-- Human Scholar: Compensating for short lifespan with knowledge
+While any species can embody any calling, some combinations create natural thematic resonance:
 
-### Species and Archetypes
+{% for species_id, species in species_data.items() %}
+**{{ species.name }}**: {{ species.natural_callings|join(', ')|title if species.natural_callings is not string else species.natural_callings }}
+{% endfor %}
 
-**Natural Synergies** (from YAML):
-- **Humans:** Any archetype—human versatility supports all playstyles
-- **Elves:** Wizard, Ranger, Bard (magical, graceful, intuitive)
-- **Dwarves:** Fighter, Paladin, Cleric (martial, devoted, resilient)
-- **Halflings:** Rogue, Bard, Cleric (nimble, charismatic, supportive)
+These aren't mechanical optimizations—they're thematic patterns. Playing against type creates interesting character concepts:
 
-**Attribute Bonus Efficiency:**
-- Match species bonus to archetype primary attributes
-- Flexible bonuses let you optimize any build
-- Fixed bonuses reward appropriate class choices
+- A Dwarf Seeker finding identity through ancient stone and craft traditions
+- An Elf Champion pursuing excellence through competition and perfection
+- A Halfling Sentinel maintaining vigilant watch despite small stature
+- A Human Scholar compensating for brief lifespan through accumulated knowledge
+
+The system supports whatever concept interests you.
 
 ### Mechanical Considerations
 
-**Spellcasters:**
-- **Elf:** Ignore first armor penalty point (wear light armor freely)
-- **Human:** Extra skill tier helps meet magic access requirements
-- **Dwarf/Halfling:** Will bonus aids divine magic access
+**For spellcasters:**
+Species traits that modify spellcasting penalties, provide magical bonuses, or enhance Flow generation make casting easier. Check your chosen species' traits for synergies with Sorcery and magical traditions.
 
-**Martial Characters:**
-- **Dwarf:** Stone Endurance makes frontline safer
-- **Elf:** Fey Grace rewards aggressive stance crits
-- **Human:** Skill versatility adds utility to combat builds
-- **Halfling:** Mobility traits enable skirmisher tactics
+**For martial characters:**
+Species traits that enhance durability, provide combat bonuses, or generate Flow through martial actions support frontline roles. Physical attribute bonuses align naturally with fighter, paladin, and ranger archetypes.
 
-**Skill Specialists:**
-- **Human:** Versatile trait gives extra skill or tier upgrade
-- **Human:** Adaptable lets you retrain skills
-- **Dwarf:** Craftwise provides guaranteed information
-- **Halfling:** Small But Mighty makes stealth exceptionally reliable
+**For skill specialists:**
+Species traits that provide automatic successes, extra training, or skill bonuses enable specialist builds. Rogues and bards particularly benefit from non-combat skill enhancements.
 
-## GM Guidelines for Species
+---
 
-### Balancing Species Traits
+## Game Master Guidance
 
-All four species are designed to be mechanically balanced:
-- Each gets exactly 3 traits
-- Traits are situational—not "always on" bonuses
-- Flow interactions vary but average similar benefit
-- No species dominates any specific role
+### Balancing Species
 
-### Encouraging Diversity
+All species are designed for mechanical balance:
+- Each receives exactly one attribute bonus and three traits
+- Traits are situational, not constant passive bonuses
+- Flow economy differences average similar total benefit
+- No species dominates any archetype or role
 
-- Don't push players toward "optimal" species choices
-- Reward creative use of species traits
-- Make traits relevant in different scenes
-- Validate against-type character concepts
+Don't push players toward "optimal" species choices. Support creative builds and against-type concepts. The human wizard and elf barbarian both work mechanically.
 
 ### Species in Your World
 
 The species as written assume:
-- All four species are common and integrated
-- No species is evil or monstrous
+- All species are common and socially integrated
+- No species is inherently evil or monstrous
 - Cultural differences exist but aren't mechanically enforced
-- Players can reflavor species traits narratively
+- Players can reflavor traits and descriptions to fit your setting
 
-Feel free to adjust:
-- Species descriptions to fit your setting
-- Add new species using these as templates
+Customize freely:
+- Adjust species descriptions to match your world's cultures
+- Create new species using the same structure (one attribute bonus, three traits)
 - Rename species while keeping mechanics
-- Create cultural variants with trait swaps
+- Design cultural variants with trait substitutions
+
+### Encouraging Diversity
+
+Make all species traits relevant during play:
+- Create situations where each species' unique traits solve problems
+- Highlight when species abilities change outcomes
+- Don't punish players for "suboptimal" species/class combinations
+- Validate creative uses of species traits
 
 ### Common Questions
 
-**Q: Can I play other species?**
-A: Work with GM to reskin existing species or create new ones with similar trait structure.
+**Can I play other species not listed?**
+Work with your GM to adapt existing species mechanically while describing your preferred heritage. The mechanics represent capability frameworks; the narrative can be anything.
 
-**Q: What if my species doesn't match my calling/archetype?**
-A: That's fine! Species and class are separate mechanical choices. Natural affinities are just common patterns, not restrictions.
+**What if my species doesn't match my calling or archetype?**
+That's perfectly fine. Species provides mechanical benefits and thematic flavor, but it doesn't restrict your choices. Natural affinities describe patterns, not requirements.
 
-**Q: Do I have to use my attribute bonus on the listed attributes?**
-A: If it says "choice," you can pick from those options. Humans can choose any attribute.
+**Can species traits improve?**
+Traits remain as written throughout your career. Use edges, milestones, and magical items to enhance related capabilities, but the base traits don't level up. They represent fundamental heritage, not learned skills.
 
-**Q: Can species traits be improved?**
-A: Traits remain as written. Use edges or milestones to enhance related abilities.
+**Do I have to use my attribute bonus on the listed attributes?**
+If your species provides "choice" between specific attributes, select from those options. If it says "any attribute" (like humans), choose any. Fixed bonuses apply automatically.
 
 ---
 
-*Species represents your character's heritage, but your choices and actions define who you become.*
+*Your species represents where you come from, but your choices define who you become.*

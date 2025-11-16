@@ -1,23 +1,153 @@
-{# Skill List - from core_rules.yaml #}
-# SKILL LIST REFERENCE
-*Generated from YAML source data*
+{#
+Skill List Template - Publication Style
+Generates skill documentation with professional TTRPG prose
+#}
+# Skills and Expertise
 
-## Overview
-Complete skill reference with associated attributes.
+Your skills define what you can do beyond raw physical and mental capability. While attributes measure your inherent potential, skills measure your learned expertise—the training, practice, and experience that let you apply your natural talents effectively.
+
+Every action in Flow RPG combines an attribute with a skill. Your attribute provides the foundation; your skill provides the refinement. A character with high Might but low Combat skill can throw a strong punch but lacks the training to use it effectively. A character with modest Might but high Combat skill compensates through technique and expertise.
+
+---
 
 {% if skills_data %}
 {% for skill_id, skill in skills_data.items() %}
+
 ## {{ skill_id.replace('_', ' ').title() }}
-{% if skill.attribute %}
-**Attribute:** {{ skill.attribute if skill.attribute is string else skill.attribute|join(' or ') }}
-{% endif %}
+
+**Associated Attribute:** {% if skill.attribute is string %}{{ skill.attribute.title() }}{% else %}{{ skill.attribute|join(' or ')|title }}{% endif %}
+
 {% if skill.description %}
-**Description:** {{ skill.description }}
+{{ skill.description }}
 {% endif %}
+
+This skill covers the range of actions and situations where expertise in this area applies. Your skill level determines how reliably you succeed when attempting related actions.
+
 {% if skill.specializations %}
-**Specializations:** {{ skill.specializations|join(', ') }}
+
+### Common Specializations
+
+When you take the Skill Specialization edge, you might focus on:
+
+{% for spec in skill.specializations %}
+- **{{ spec }}**
+{% endfor %}
+
+These represent narrow applications where focused expertise exceeds general capability.
 {% endif %}
+
+---
+
 {% endfor %}
 {% endif %}
 
-*Skills define what your character can do beyond basic attributes.*
+## Understanding Skill Levels
+
+Skills progress through distinct tiers, each representing a clear improvement in capability:
+
+**Untrained (-2):** You've never studied or practiced this skill. You can attempt actions but face significant penalties. Success relies heavily on natural talent (high attributes) or luck.
+
+**Novice (-1):** You have basic familiarity. You've practiced enough to understand fundamentals but lack consistent competence. Success is unreliable against standard challenges.
+
+**Competent (0):** You possess working proficiency. This represents professional-level capability for non-specialists. You succeed regularly at routine tasks and occasionally at difficult ones.
+
+**Professional (+1):** You excel in this area. This is your career-level expertise—you succeed reliably even at difficult tasks. Most characters reach Professional in their primary skills by mid-campaign.
+
+**Expert (+2):** You're among the best in your region. You succeed at difficult tasks routinely and have reasonable chances even at very hard challenges. Few characters reach this level in more than one or two skills.
+
+**Master (+3):** You're legendary. You succeed at tasks others consider impossible. This represents the pinnacle of human achievement in this skill. Reaching Master requires significant investment and typically happens only in your signature skill.
+
+## Skill Advancement
+
+You improve skills through minor milestone advancement. Each minor milestone (typically every 1-2 sessions), you can choose to advance one skill by one tier instead of taking an edge or boosting an attribute.
+
+The advancement path is always the same: Untrained → Novice → Competent → Professional → Expert → Master
+
+Most campaigns see characters reaching Professional in their primary skills by mid-campaign and pushing one or two skills toward Expert or Master by campaign's end. Diversifying across many skills versus specializing in few skills creates different character archetypes, both viable.
+
+## Skills and Attributes
+
+Most skills associate with specific attributes, but some allow choice:
+
+**Fixed Association:** Combat always uses Might or Grace. Sorcery always uses Mind, Awareness, Will, or Presence (your choice each cast). The connection is mechanical and thematic.
+
+**Flexible Association:** Some skills work with different attributes in different situations. Athletics might use Might for climbing or Grace for balancing. Social skills might use different attributes depending on approach.
+
+When the attribute association isn't obvious, the GM determines which attribute applies to the specific action attempted.
+
+## Building Through Skills
+
+Your starting archetype determines your initial skill proficiencies:
+
+**Fighters** begin with Professional Combat, giving them reliable martial capability from the start. Their other starting skills (typically Novice level) provide supporting competence.
+
+**Rangers** begin with Professional Survival, making them exceptional in wilderness environments. Their combat skill starts lower but advances quickly.
+
+**Rogues** uniquely begin with two Professional skills (Stealth and Finesse), representing their specialized training. This compensates for not receiving a starting edge.
+
+**Spellcasters** begin with Professional Sorcery, making their magic reliable from the start. Their other skills vary by tradition—Wizards often have scholarly skills, Clerics have social skills, Bards have performance skills.
+
+From these starting points, you advance skills through milestones based on how you want your character to develop.
+
+## Specializations vs. General Skill
+
+When you take the Skill Specialization edge, you gain +1 to a specific narrow application of a broader skill. This represents focused expertise that exceeds your general competence.
+
+**Example:** A character with Professional (+1) Combat who takes Skill Specialization: Combat (Dueling) gains +2 when fighting one-on-one but remains +1 in other combat situations.
+
+Specializations work best when:
+- You face that situation regularly (urban environment, specific enemy type, particular social context)
+- The narrow application is genuinely distinct from general use
+- The +1 matters for your character concept or playstyle
+
+---
+
+## Game Master Guidance
+
+### Calling for Skill Checks
+
+Use skill checks when:
+- The outcome matters to the story
+- Success and failure both create interesting results
+- The character's training and expertise should influence the outcome
+
+Don't call for skill checks when:
+- The task is trivial for someone with the character's skill level
+- Failure doesn't create interesting complications
+- Time pressure doesn't exist (characters can retry indefinitely)
+
+### Setting Target Numbers
+
+The standard difficulty (TN 8) represents a meaningful challenge for a Competent (+0) character with average attributes. Adjust based on task difficulty:
+
+**TN 6:** Easy for trained characters, possible for untrained
+**TN 8:** Standard difficulty, requires competence or good attributes
+**TN 10:** Difficult, requires Professional skill or high attributes
+**TN 12:** Very difficult, requires Expert skill or exceptional attributes
+**TN 14:** Nearly impossible, requires Master skill and high attributes
+
+Don't set TNs higher than 14 for tasks possible through skill alone. If something requires magical aid or legendary abilities, it shouldn't be a skill check.
+
+### Encouraging Skill Use
+
+Make all skills relevant regularly:
+- Combat skills matter in fights (obviously)
+- Social skills resolve conflicts without violence
+- Knowledge skills provide information and advantages
+- Craft skills create useful equipment
+- Survival skills matter in wilderness scenarios
+
+When players invest in skills, create situations where those skills shine. A player who pushes Stealth to Expert should have opportunities for that investment to matter beyond "you successfully sneak."
+
+### Skill Overlap and Cooperation
+
+Multiple characters with the same skill can cooperate:
+- The primary actor makes the check
+- Assisting characters provide +1 if they have the skill at Competent or higher
+- Maximum +2 from assistance regardless of number of helpers
+
+This encourages teamwork without requiring everyone to have every skill.
+
+---
+
+*Skills transform raw potential into consistent performance. Attributes show what you might do; skills show what you can reliably accomplish.*

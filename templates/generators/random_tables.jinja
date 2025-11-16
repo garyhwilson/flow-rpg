@@ -1,21 +1,215 @@
-{# Random Tables - from gm_tools.yaml #}
-# RANDOM TABLES
-*Generated from YAML source data*
+{#
+Random Tables Template - Publication Style
+Generates random table documentation with professional TTRPG prose
+#}
+# Random Tables
 
-## Overview
-Quick random generation for improvisation.
+The best game prep can't anticipate everything. Players ask unexpected questions, pursue tangents, demand details you haven't prepared. Random tables transform improvisation panic into confident ad-lib creativity. Roll once, get immediate usable results—no lengthy consultation required.
 
-{% if tables_data %}
-{% for table_id, table in tables_data.items() %}
-## {{ table_id.replace('_', ' ').title() }}
-{% if table is mapping %}
-{% for entry_id, entry in table.items() %}
-- {{ entry }}
+These tables provide quick NPC generation, instant complications, and on-the-fly details that make improvised content feel prepared. Keep them behind your screen for when players zigg where you planned zagg.
+
+---
+
+## Quick NPC Generator
+
+Players walk into the tavern. "What does the bartender look like?" You need an answer now. Roll 2d6 twice—once for profession, once for attitude:
+
+{% if tables_data and tables_data.quick_npc_generator %}
+
+{% if tables_data.quick_npc_generator.d6_profession %}
+### Profession (1d6)
+
+{% for roll, profession in tables_data.quick_npc_generator.d6_profession.items() %}
+{{ roll }}. **{{ profession }}** - {{ "Buys and sells goods, motivated by profit" if "Merchant" in profession else "Protects order, motivated by duty" if "Guard" in profession else "Makes/repairs items, motivated by craft pride" if "Craftsperson" in profession else "Studies knowledge, motivated by learning" if "Scholar" in profession else "Operates outside law, motivated by survival or greed" if "Criminal" in profession else "Wealth and status, motivated by power or legacy" if "Noble" in profession else "Background and livelihood" }}
 {% endfor %}
+{% endif %}
+
+{% if tables_data.quick_npc_generator.d6_attitude %}
+### Attitude (1d6)
+
+{% for roll, attitude in tables_data.quick_npc_generator.d6_attitude.items() %}
+{{ roll }}. **{{ attitude }}** - {{ "Opposes party actively, requires convincing or force" if "Hostile" in attitude else "Distrusts party, needs reassurance before cooperation" if "Suspicious" in attitude else "Indifferent to party, transactional relationship" if "Neutral" in attitude else "Likes party, willing to help reasonably" if "Friendly" in attitude else "Eager to assist party, goes beyond reasonable aid" if "Helpful" in attitude else "Obsessively devoted to party or shared cause" if "Fanatical" in attitude else "How they interact with party" }}
+{% endfor %}
+{% endif %}
+
 {% else %}
-{{ table }}
+
+### Profession (1d6)
+
+1. **Merchant** - Buys and sells goods, motivated by profit
+2. **Guard** - Protects order, motivated by duty
+3. **Craftsperson** - Makes/repairs items, motivated by craft pride
+4. **Scholar** - Studies knowledge, motivated by learning
+5. **Criminal** - Operates outside law, motivated by survival or greed
+6. **Noble** - Wealth and status, motivated by power or legacy
+
+### Attitude (1d6)
+
+1. **Hostile** - Opposes party actively, requires convincing or force
+2. **Suspicious** - Distrusts party, needs reassurance before cooperation
+3. **Neutral** - Indifferent to party, transactional relationship
+4. **Friendly** - Likes party, willing to help reasonably
+5. **Helpful** - Eager to assist party, goes beyond reasonable aid
+6. **Fanatical** - Obsessively devoted to party or shared cause
+
 {% endif %}
+
+### Example Usage
+
+**Roll:** 3 (Craftsperson) and 4 (Friendly)
+
+"You enter the smithy. The dwarf working the forge looks up, face sweaty but smiling. 'Welcome, friends! Name's Borin. What can I make for you?' He's a craftsperson (profession 3) with friendly attitude (4)—willing to help with reasonable requests, proud of his work."
+
+Add one memorable trait (see NPC Creation section) to make them stick in players' memories.
+
+---
+
+## Complication Generator
+
+Combat going too smoothly? Social scene needs stakes? Environmental puzzle too straightforward? Roll 1d6 for instant complication matching the scene type:
+
+{% if tables_data and tables_data.complication_generator %}
+
+{% if tables_data.complication_generator.combat %}
+### Combat Complications (1d6)
+
+{% for roll, complication in tables_data.complication_generator.combat.items() %}
+{{ roll }}. **{{ complication }}** - {{ "Enemies call for backup—2-4 additional combatants arrive" if "Reinforcements" in complication else "Fire starts, ceiling collapses, fog rolls in—1d6 damage per round in affected area" if "Environment" in complication or "hazardous" in complication else "Goal changes mid-fight—protect innocent, retrieve item before enemy escapes, prevent ritual completion" if "Objective" in complication else "Civilian enters combat zone—must protect them while fighting" if "Innocent" in complication or "danger" in complication else "Weapon breaks, armor strap snaps, spell focus shatters—requires improvisation or backup gear" if "Equipment" in complication or "failure" in complication else "Ally reveals true nature, enemy switches sides, neutral party joins—combat dynamics shift dramatically" if "betrayal" in complication else "Unexpected development raising stakes" }}
 {% endfor %}
 {% endif %}
 
-*Roll or choose from these tables for quick NPC generation and complications.*
+{% if tables_data.complication_generator.social %}
+### Social Complications (1d6)
+
+{% for roll, complication in tables_data.complication_generator.social.items() %}
+{{ roll }}. **{{ complication }}** - {{ "Guards, noble, official arrives—scene gains authority figure who changes dynamics" if "Authority" in complication else "Truth revealed publicly—someone's lie exposed, hidden agenda uncovered" if "Secret" in complication else "NPC confuses party member for someone else—case of mistaken identity creates problems" if "identity" in complication or "Mistaken" in complication else "Party violates social norm unknowingly—creates offense requiring damage control" if "Cultural" in complication or "misunderstanding" in complication else "Competing faction or individual enters scene—introduces conflicting agenda" if "Rival" in complication else "Ticking clock added—must conclude negotiation before deadline or consequences trigger" if "Time" in complication or "pressure" in complication else "Unexpected social development" }}
+{% endfor %}
+{% endif %}
+
+{% else %}
+
+### Combat Complications (1d6)
+
+1. **Reinforcements arrive** - Enemies call backup (2-4 additional combatants)
+2. **Environment becomes hazardous** - Fire, collapsing ceiling, fog (1d6 damage/round)
+3. **Objective changes** - Protect innocent, retrieve item, prevent ritual
+4. **Innocent in danger** - Civilian enters combat zone
+5. **Equipment failure** - Weapon breaks, armor fails, focus shatters
+6. **Unexpected betrayal** - Ally reveals true nature or enemy switches sides
+
+### Social Complications (1d6)
+
+1. **Authority arrives** - Guards, nobles, officials change scene dynamics
+2. **Secret revealed** - Truth exposed publicly
+3. **Mistaken identity** - NPC confuses party member for someone else
+4. **Cultural misunderstanding** - Party violates unknown social norm
+5. **Rival appears** - Competing faction introduces conflicting agenda
+6. **Time pressure added** - Deadline imposed on negotiation
+
+{% endif %}
+
+### Using Complications
+
+**Timing:** Introduce when scene needs tension or players succeeding too easily
+
+**GM Flow:** Spend 1 Flow when introducing complication via random table
+
+**Frequency:** 1-2 complications per scene maximum—don't overwhelm players
+
+**Player Response:** Complications create opportunities for clever solutions, not just obstacles
+
+### Example Usage
+
+**Combat Scene:** Party fighting cultists in ritual chamber. Combat going smoothly—party likely to win easily.
+
+**GM:** Rolls 1d6, gets 3 (Objective changes)
+
+**Implementation:** "As you strike down the cult leader, he laughs through bloody teeth. 'Too late!' The ritual circle beneath the altar begins glowing. You have 3 rounds to disrupt it before the summoning completes—the entire chamber will become a portal to the Abyss."
+
+**Result:** Combat continues but now has time pressure and split focus (fight enemies AND stop ritual).
+
+---
+
+## Memorable NPC Traits
+
+Every NPC needs one distinctive feature players remember. Roll 1d6 for category, then 1d6 within category:
+
+### Physical Traits (1d6)
+
+1. **Unusual height** - Notably taller or shorter than average
+2. **Distinctive scar** - Facial mark, missing eye, ritual brands
+3. **Unusual coloring** - Bright hair, heterochromatic eyes, albinism
+4. **Missing limb** - Prosthetic arm/leg, hook hand, peg leg
+5. **Distinctive style** - Always wears specific color, elaborate jewelry, military uniform
+6. **Unique feature** - Pointed ears, scales, glowing tattoos
+
+### Behavioral Traits (1d6)
+
+1. **Speech pattern** - Thick accent, formal language, street slang
+2. **Nervous tic** - Taps fingers, adjusts glasses, cracks knuckles
+3. **Catchphrase** - Repeated saying, verbal quirk, oath
+4. **Unusual laugh** - Snorting, silent shoulder-shaking, inappropriate giggling
+5. **Specific fear** - Jumps at loud noises, refuses to touch iron, avoids water
+6. **Odd habit** - Hums constantly, writes everything down, excessive hand-washing
+
+### Social Traits (1d6)
+
+1. **Formality mismatch** - Overly formal with commoners, too casual with nobility
+2. **Constant suspicion** - Assumes ulterior motives, checks doors repeatedly
+3. **Inappropriate cheer** - Upbeat during serious moments, finds dark humor everywhere
+4. **Eye contact issues** - Never makes eye contact OR stares uncomfortably
+5. **Volume control** - Whispers everything OR shouts unnecessarily
+6. **Personal space** - Stands too close OR keeps unusual distance
+
+### Combining Traits
+
+Roll once or combine 2-3 traits for complex NPCs:
+
+**Example:** Merchant (profession) + Suspicious (attitude) + Hook hand (physical) + Whispers everything (social)
+
+**Result:** "The merchant eyes you warily, hook hand resting near concealed dagger. He leans close, whispering despite privacy: 'What do you want?' Even paranoid merchants whisper—this one doubly so."
+
+---
+
+## Using Random Tables Effectively
+
+### When to Roll
+
+**DO roll when:**
+- Players ask unexpected questions requiring immediate answer
+- Prepared content exhausted but session continues
+- Need quick NPC for scene you didn't anticipate
+- Want genuine surprise in your own game
+
+**DON'T roll when:**
+- You have prepared content ready
+- Random result would contradict established facts
+- Scene requires specific NPC with particular traits
+- You already have better idea than random result might provide
+
+### Customizing Results
+
+Random rolls provide starting points, not mandates:
+
+**Roll:** Hostile Craftsperson
+
+**Don't love result?** Adjust: "Suspicious Craftsperson—not outright hostile, but definitely distrustful after being robbed recently. Needs convincing."
+
+Tables serve you, not vice versa. Roll for inspiration, then refine to fit your game.
+
+### Building Your Own Tables
+
+Create custom tables for your campaign:
+
+**Campaign-Specific NPCs:**
+- Local factions (1-6: Different guild members)
+- Regional cultures (1-6: Different ancestries common in this area)
+- Plot-relevant connections (1-6: Different relationships to main villain)
+
+**Format:** 1d6 or 2d6 table depending on granularity needed
+
+**Keep Simple:** 6 entries maximum per table for quick consultation
+
+---
+
+*Random tables transform blank-mind panic into confident improvisation. Keep them behind your screen, roll when needed, and watch unplanned NPCs become player favorites.*

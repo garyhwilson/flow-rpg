@@ -1,38 +1,42 @@
 {#
-Gear Kits Template
-Generates adventuring gear kit documentation from YAML equipment data
+Gear Kits Template - Publication Style
+Generates adventuring gear kit documentation with professional TTRPG prose
 #}
-# ADVENTURING GEAR KITS
-*Generated from YAML source data*
+# Adventuring Gear
 
-## Overview
+The difference between a successful expedition and a disaster often comes down to preparation. Rope to cross the chasm, torches to light the darkness, healing supplies to treat wounds—the mundane equipment you carry matters as much as your weapons and armor.
 
-Gear kits provide complete equipment packages for specific roles and situations. More economical than buying items separately.
+Gear kits bundle essential equipment into convenient packages. Rather than itemizing every piece of rope, piton, and ration, kits provide complete loadouts for specific roles and situations at economical prices.
 
 ---
 
 {% for kit_id, kit in kits.items() %}
+
 ## {{ kit_id.replace('_', ' ').title() }}
 
-**Contents:**
+{% if kit.uses %}
+*{{ kit.uses }}*
+{% endif %}
+
+**Contains:**
 {% for item in kit.contents %}
 - {{ item }}
 {% endfor %}
 
-{% if kit.uses %}
-**Uses:** {{ kit.uses }}
-{% endif %}
 {% if kit.benefit %}
-**Benefit:** {{ kit.benefit }}
+
+**Special Benefit:** {{ kit.benefit }}
 {% endif %}
+
 {% if kit.quality %}
-**Quality Options:**
+**Quality Tiers:**
 {% for quality_id, quality in kit.quality.items() %}
-- {{ quality_id.title() }}: {{ quality.cost }} coins{% if quality.bonus %} ({{ quality.bonus }}){% endif %}
+- **{{ quality_id.title() }}:** {{ quality.cost }} coins{% if quality.bonus %} ({{ quality.bonus }}){% endif %}
 {% endfor %}
 {% else %}
 **Cost:** {{ kit.cost }} coins
 {% endif %}
+
 {% if kit.weight %}
 **Weight:** {{ kit.weight }}
 {% endif %}
@@ -41,14 +45,86 @@ Gear kits provide complete equipment packages for specific roles and situations.
 
 {% endfor %}
 
-## Kit Selection Guide
+## Choosing Your Gear
 
-**Adventurer's Kit:** Essential for all characters, standard baseline equipment
-**Dungeoneer's Kit:** Upgrade for dungeon-focused campaigns
-**Healer's Kit:** Required for effective field medicine
-**Thieves' Tools:** Required for rogues and infiltrators
-**Disguise Kit:** For social infiltration specialists
+### Essential Kits
+
+**Adventurer's Kit** should be carried by every character. The basic tools it provides—rope, torches, rations, waterskin, bedroll—solve common adventuring problems. Without these basics, you can't explore dungeons safely, travel wilderness efficiently, or survive unexpected delays.
+
+**Healer's Kit** enables field medicine. Without it, treating wounds and stabilizing dying allies becomes significantly harder or impossible. Every party should have at least one character carrying a healer's kit, typically the character with the best Medicine skill.
+
+### Specialized Kits
+
+**Dungeoneer's Kit** upgrades basic adventuring gear for underground exploration. The additional pitons, chalk for marking passages, extra rope, and specialized tools make dungeon delving safer and more efficient. If your campaign focuses on dungeon exploration, upgrade to this from the basic adventurer's kit.
+
+**Thieves' Tools** are mandatory for rogues and anyone attempting to pick locks or disarm traps. Without these specialized tools, those actions simply can't be attempted. Quality matters—masterwork thieves' tools provide meaningful bonuses to difficult tasks.
+
+**Disguise Kit** enables social infiltration. If your character concept involves impersonation, undercover work, or deception, this kit provides the wigs, cosmetics, and clothing needed to convincingly portray different identities.
+
+### Quality Considerations
+
+Many kits offer quality tiers—standard, masterwork, and occasionally superior versions:
+
+**Standard** quality works reliably for routine tasks. This is the baseline assumption. Buy standard quality unless you have specific reasons for better.
+
+**Masterwork** quality provides mechanical bonuses (typically +1) to related skill checks. Worth the investment for tools you use frequently—masterwork thieves' tools for a rogue, masterwork healer's kit for a cleric who serves as party medic.
+
+**Superior** quality (when available) represents exceptional craftsmanship. Larger bonuses but dramatically higher costs. Usually reserved for master craftspeople or characters who've invested heavily in specific skills.
+
+### Economic Planning
+
+Gear kits represent front-loaded expenses—you buy them once and use them throughout the campaign (with occasional replacement/restocking):
+
+**Starting Characters:** Most archetypes begin with basic gear kits as part of starting equipment. If yours doesn't, budget 10-20 coins for an adventurer's kit.
+
+**After First Adventure:** Use initial treasure to upgrade or supplement. Add specialized kits based on your role (thieves' tools for rogues, healer's kit for support characters).
+
+**Mid-Campaign:** Upgrade to masterwork versions of frequently-used kits. The +1 bonus justifies the cost when you use the kit regularly.
+
+**Late Campaign:** By this point, your gear should be fully optimized. Focus treasure on magical items and consumables rather than mundane equipment.
 
 ---
 
-*Proper preparation prevents poor performance—stock up before venturing forth.*
+## Game Master Guidance
+
+### Gear Kit Availability
+
+Make basic kits readily available:
+- Adventurer's kits in any settlement
+- Specialized kits in towns and cities
+- Masterwork quality requires larger settlements or special orders
+- Superior quality might require quests or master craftspeople
+
+Don't create artificial scarcity for adventurer's kits and healer's kits. These are standard equipment.
+
+### Using Kits in Play
+
+When players attempt actions that would benefit from specific gear:
+
+**With Appropriate Kit:** Allow the action normally, applying any quality bonuses.
+
+**Without Appropriate Kit:** Impose disadvantage, increase TN, or rule the action impossible depending on how essential the gear is. You can't pick a lock without lockpicks. You can improvise bandages without a healer's kit, but healing is less effective.
+
+Make gear matter without being pedantic. Ask "Do you have rope?" when crossing chasms, but don't demand itemized tracking of every piton.
+
+### Kit Degradation
+
+Generally, kits don't degrade from normal use. They last throughout campaigns unless specifically damaged or lost:
+
+**Exceptions:**
+- Healer's kits have limited uses (bandages consumed, salves depleted)
+- Thieves' tools might break on critical failures
+- Consumable items within kits need restocking
+
+When kits are depleted or damaged, restocking costs ~25-50% of original kit price.
+
+### Custom Kits
+
+Players might request custom kit combinations. Allow this, pricing appropriately:
+- Sum individual item costs
+- Apply ~10-20% bundle discount
+- Ensure contents make thematic sense
+
+---
+
+*Proper preparation prevents poor performance. Stock up before venturing into danger—the rope you didn't bring is the rope you'll desperately need.*

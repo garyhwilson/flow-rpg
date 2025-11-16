@@ -1,23 +1,229 @@
-{# Spell Combinations - from magic.yaml #}
-# SPELL COMBINATIONS
-*Generated from YAML source data*
+{#
+Spell Combinations Template - Publication Style
+Generates spell combination documentation with professional TTRPG prose
+#}
+# Spell Combinations
 
-## Overview
-Tactical spell sequences for optimal Flow management.
+Individual spells solve immediate problems. Fireball eliminates clustered enemies. Shield prevents incoming damage. Heal restores wounded allies. But spellcasters who think only in single-spell terms miss the deeper tactical layer—spell combinations that synergize to create effects greater than their parts.
+
+Spell combinations aren't just "cast multiple spells." They're deliberate sequences that manage Flow economy while amplifying effectiveness. The wizard who casts two Sparks before Fireball generates Flow while softening targets. The cleric who layers Mage Armor, Shield, and Blur creates defenses that cost zero net Flow. These patterns separate competent spellcasters from masters.
+
+---
 
 {% if combo_data %}
-{% for combo_id, combo in combo_data.items() %}
-## {{ combo_id.replace('_', ' ').title() }}
-{% if combo.sequence %}
-**Sequence:** {{ combo.sequence|join(' → ') }}
+
+## Understanding Spell Synergy
+
+{% if combo_data.description %}
+{{ combo_data.description }}. Smart spellcasters don't just cast powerful spells—they create cascading effects where each spell enables the next.
 {% endif %}
-{% if combo.flow_economy %}
-**Flow Economy:** {{ combo.flow_economy }}
-{% endif %}
-{% if combo.tactical_use %}
-**Tactical Use:** {{ combo.tactical_use }}
-{% endif %}
+
+### Flow-Positive Sequences
+
+The best spell combinations generate more Flow than they consume:
+
+**Generate then spend:** Cast cantrips or minor spells to build Flow reserves, then unleash major spells when you have resources available.
+
+**Critical timing:** Save expensive spells for moments when you can follow them with Flow-generating actions.
+
+**Layered effects:** Stack multiple zero-cost or low-cost buffs before expending resources on offense.
+
+### Tactical Combinations
+
+Different situations demand different spell sequences:
+
+{% if combo_data.examples %}
+{% for combo_id, combo in combo_data.examples.items() %}
+
+#### {{ combo_id.replace('_', ' ').title() }}
+
+{% if combo.sequence %}**Spell Sequence:** {{ combo.sequence|join(' → ') }}{% endif %}
+
+{% if combo.total_cost %}**Total Flow Cost:** {{ combo.total_cost }}{% endif %}
+
+{% if combo.effect %}**Tactical Effect:** {{ combo.effect }}{% endif %}
+
+{{ combo.description if combo.description else "" }}
+
 {% endfor %}
 {% endif %}
 
-*Effective spell combinations manage Flow while maximizing impact.*
+{% endif %}
+
+---
+
+## Building Effective Combinations
+
+### Defensive Layering
+
+Protection spells stack to create overlapping defenses:
+
+**Mage Armor (Cantrip, 0 Flow):** Base magical protection active all day
+**Shield (Cantrip, 0 Flow):** Reactive defense against specific attacks
+**Blur (Cantrip, 0 Flow):** Ongoing concealment making you harder to hit
+
+These three cantrips cost zero Flow total but create significant defensive advantages. Cast them before combat begins—you're protected without resource expenditure.
+
+Add higher-tier protections as threats increase:
+- **Stoneskin** for physical damage reduction
+- **Resistance** for elemental protection
+- **Mind Blank** against psychic attacks
+
+Each layer costs Flow but solves specific threats. The key is knowing which defenses the current enemy can bypass and which they cannot.
+
+### Offensive Escalation
+
+Build Flow through minor attacks, then unleash devastating finishers:
+
+**Phase 1 - Generate Flow:**
+- Spark (Cantrip, 0 Flow) generates Flow on hit
+- Repeated cantrip attacks build Flow reserves
+- Conservative resource management
+
+**Phase 2 - Escalate:**
+- Magic Missile (Tier 1, -1 Flow) for guaranteed damage
+- Fireball (Tier 2, -1 Flow) when enemies cluster
+- Lightning Bolt (Tier 2, -1 Flow) for linear groups
+
+**Phase 3 - Finish:**
+- Disintegrate (Tier 3, -2 Flow) to eliminate priority targets
+- Meteor Swarm (Tier 3, -2 Flow) for area devastation
+
+This progression manages Flow carefully—you never cast expensive spells at negative Flow because you built reserves first.
+
+### Control and Setup
+
+Some combinations don't deal damage directly but create situations where damage becomes trivial:
+
+**Web + Fireball:** Immobilize enemies, then burn them while they can't escape
+**Fog Cloud + Darkvision:** Blind enemies, dominate while they fumble
+**Grease + Ranged Attacks:** Enemies fall prone, archers shoot helpless targets
+
+These combinations require planning and party coordination. The wizard creates the setup spell, allies exploit the advantage. More effective than any single spell alone.
+
+### Healing Chains
+
+Healing becomes more efficient through proper sequencing:
+
+**Stabilize (Cantrip, 0 Flow):** Stop dying allies from getting worse
+**Heal (Tier 1, -1 Flow):** Restore moderate Vitality to conscious allies
+**Mass Heal (Tier 2, -1 Flow):** Restore entire party after major battle
+
+Don't waste high-tier healing on single targets when cantrips suffice. Reserve expensive healing for emergencies or situations where healing multiple targets justifies the cost.
+
+Healing during combat competes with offensive actions. Sometimes dealing damage to end the fight quickly is better than healing damage already taken. Know when to heal and when to attack.
+
+---
+
+## Flow Management Through Combinations
+
+### The Cantrip Foundation
+
+Cantrips cost zero Flow, making them the backbone of sustainable spellcasting:
+
+**Before Combat:** Layer zero-cost buffs (Mage Armor, Shield, Light)
+**During Combat:** Generate Flow through cantrip attacks (Spark, Acid Splash)
+**After Combat:** Utility cantrips solve problems without resource drain (Mending, Prestidigitation)
+
+Never feel pressured to conserve cantrips. Cast them freely—they're designed for unlimited use.
+
+### Tier 1 Spells as Bridges
+
+Tier 1 spells cost -1 Flow but provide reliable effects:
+
+- Use them when cantrips aren't enough but Tier 2 spells are overkill
+- Cast them after generating Flow from cantrips (net 0 Flow)
+- Combine with party actions for multiplied effectiveness
+
+Magic Missile guarantees damage when you need a specific target eliminated. Bless grants party-wide bonuses without excessive Flow investment. These spells bridge the gap between cantrip consistency and high-tier power.
+
+### Tier 2+ Spells as Climaxes
+
+Expensive spells should feel climactic—not routine:
+
+**Save them for:**
+- Clustered enemies where area spells hit multiple targets
+- Priority threats that must die immediately
+- Desperate situations requiring maximum power
+
+**Don't waste them on:**
+- Single weak enemies
+- Situations where cantrips or Tier 1 spells suffice
+- Early combat when you might need them later
+
+When you cast Fireball or Disintegrate, it should matter. These aren't casual spells—they're dramatic moments that shift combat decisively.
+
+---
+
+## Advanced Combination Tactics
+
+### Action Economy Exploitation
+
+Spells with different casting times enable complex sequences:
+
+**Bonus Action Spells:** Cast alongside normal actions for double spell turns
+**Reaction Spells:** Trigger off enemy actions (Counterspell, Shield)
+**Concentration Spells:** Maintain ongoing effects while casting other spells
+
+A wizard maintaining Haste (concentration) can still cast Fireball on their turn. The cleric concentrating on Bless still throws cantrip attacks. Concentration spells provide persistent benefits without preventing other casting.
+
+### Attribute Flexibility
+
+The same spell cast with different attributes creates different combinations:
+
+**Mind-based Damage + Awareness-based Utility:** Fireball with Mind for maximum damage, Detect Magic with Awareness for perfect information
+**Will-based Buffs + Presence-based Debuffs:** Shield with Will for absolute protection, Charm with Presence for social dominance
+
+Mix attributes within combinations to leverage your strengths across different spell functions.
+
+### Multiclass Synergies
+
+Characters with multiple spellcasting archetypes (Wizard/Cleric, Paladin/Ranger) access broader spell combinations:
+
+**Wizard/Cleric:** Arcane damage + Divine healing creates self-sufficient caster
+**Paladin/Wizard:** Martial melee + Magical buffs enhances both capabilities
+**Ranger/Cleric:** Nature spells + Healing supports wilderness adventures
+
+These combinations require careful build planning but provide versatility single-class casters cannot match.
+
+---
+
+## Game Master Guidance
+
+### Encouraging Combination Play
+
+Don't punish players for clever spell combinations—reward them:
+
+**Recognize synergy:** When a player executes a well-planned combination, acknowledge the tactical thinking
+**Create opportunities:** Design encounters with clustered enemies (rewarding area spells) or specific vulnerabilities (rewarding targeted combinations)
+**Allow creativity:** If a player proposes a spell combination that makes sense narratively, find ways to make it work mechanically
+
+### Balancing Spell Combinations
+
+Combinations should feel powerful without being overwhelming:
+
+**Acceptable:** Web + Fireball combo that immobilizes and damages enemies (requires two spell slots, coordination, and proper positioning)
+**Too Strong:** Infinite combo that locks enemies permanently with no counterplay
+**Too Weak:** Combination that costs excessive resources for minimal benefit
+
+If a combination feels too powerful, examine whether it requires:
+- Multiple party members coordinating
+- Specific positioning or circumstances
+- Significant resource investment
+- Enemies failing saves or checks
+
+Most combinations that require these elements are balanced through their constraints.
+
+### Countering Combinations
+
+Enemies can use spell combinations too:
+
+**Intelligent casters:** Use defensive layers like player wizards
+**Boss encounters:** Combine buffs before combat begins
+**Villain tactics:** Counter player combinations with Dispel Magic, Counterspell, or tactical positioning
+
+When enemies use combinations effectively, it demonstrates that the magic system works consistently for everyone—and raises the tactical stakes.
+
+---
+
+*Individual spells are tools. Spell combinations are strategies. Master both to become a legendary spellcaster who shapes battles through careful planning and perfect execution.*

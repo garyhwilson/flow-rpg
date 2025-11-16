@@ -1,23 +1,259 @@
-{# Signature Equipment - from equipment.yaml #}
-# SIGNATURE EQUIPMENT
-*Generated from YAML source data*
+{#
+Signature Equipment Template - Publication Style
+Generates signature equipment documentation with professional TTRPG prose
+#}
+# Signature Equipment
 
-## Overview
-Signature equipment is iconic personal gear that grows with your character.
+Heroes carry many weapons and wear various armors across their careers. But every legendary figure has *the* weapon—the named blade, the ancestral shield, the staff that never leaves their side. Signature equipment isn't just mechanically superior gear. It's the equipment that defines your character visually and narratively, that grows alongside you, that cannot be truly lost.
 
-{% if signature_data %}
-{% for aspect, desc in signature_data.items() %}
-- **{{ aspect.replace('_', ' ').title() }}:** {{ desc }}
-{% endfor %}
+{% if signature_data %}Signature equipment represents {{ signature_data.description if signature_data.description else "personal iconic gear that evolves with your character" }}. {% endif %}This system transforms generic equipment into irreplaceable treasures with history, personality, and mechanical progression tied directly to your advancement.
+
+Most characters designate signature equipment at moderate milestones (session 3 typically), though you can evolve signature equipment or designate new pieces at later milestones. Typically you'll have 1-2 signature items across entire campaign—your legendary sword, your ancestral armor, your grandfather's bow.
+
+---
+
+## What Makes Equipment "Signature"
+
+### Personal Connection
+
+Signature equipment requires personal significance beyond mechanical stats:
+
+**Inherited:** Passed down through generations, carrying family history
+**Earned:** Won through great deeds or personal quests
+**Created:** Forged personally or commissioned from master craftsman
+**Bonded:** Found early in adventuring career, carried through all challenges
+
+Random loot sword #17 doesn't become signature equipment. The blade you inherited from your mentor, that saved your life in your first real battle, that bears your personal inscription—that becomes signature.
+
+### Cannot Be Permanently Lost
+
+The defining feature: signature equipment always returns to you eventually.
+
+**Stolen:** You recover it through quests
+**Destroyed:** It can be reforged with appropriate resources and time
+**Separated:** Narrative ensures reunion within reasonable timeframe
+
+This doesn't mean signature equipment is indestructible or un-loseable. It means permanent loss isn't an option—temporary separation creates story opportunities, but signature equipment always comes back.
+
+Game Masters shouldn't abuse this: don't constantly steal signature equipment for cheap drama. But knowing it cannot be permanently lost lets players invest emotionally without fear.
+
+### Grows With Character
+
+{% if signature_data and signature_data.evolution %}
+Signature equipment evolves as you advance:
+
+{% if signature_data.evolution.minor %}**Minor Milestones:** {{ signature_data.evolution.minor }}{% endif %}
+
+{% if signature_data.evolution.moderate %}**Moderate Milestones:** {{ signature_data.evolution.moderate }}{% endif %}
+
+{% if signature_data.evolution.major %}**Major Milestones:** {{ signature_data.evolution.major }}{% endif %}
+
+{% else %}
+**Minor Milestones:** Small improvements (+1 enhancement, cosmetic changes)
+**Moderate Milestones:** Significant properties (special abilities, unique effects)
+**Major Milestones:** Legendary capabilities (reality-bending powers, sentience)
+
 {% endif %}
 
+The sword you started with at level 1 doesn't become obsolete at level 10—it evolves into legendary artifact worthy of your achievements.
+
+---
+
 ## Creating Signature Equipment
-Work with your GM to designate one piece of equipment as "signature" at moderate milestone.
 
-**Benefits:**
-- Grows in power with you
-- Cannot be permanently lost
-- Unique personal story
-- Mechanical progression
+{% if signature_data and signature_data.creation %}
+### {% if signature_data.creation.when %}When: {{ signature_data.creation.when }}{% else %}Timing{% endif %}
 
-*Signature equipment should feel earned and meaningful.*
+{% if signature_data.creation.process %}**Process:** {{ signature_data.creation.process }}{% endif %}
+
+{% if signature_data.creation.benefit %}**Benefit:** {{ signature_data.creation.benefit }}{% endif %}
+
+{% else %}
+### Designating Signature Equipment
+
+At a moderate milestone (usually session 3), work with your GM to designate one piece of equipment as signature:
+
+**Choose existing equipment:** Don't create new items—elevate equipment you're already using
+**Establish history:** What makes this equipment special to your character?
+**Name it:** Signature equipment deserves a proper name
+**Describe evolution:** How will this equipment grow with you?
+
+{% endif %}
+
+### Requirements
+
+Signature equipment must meet these criteria:
+
+**Used significantly:** Carried for at least 2-3 sessions before designation
+**Narratively important:** Has personal significance beyond mechanical stats
+**Appropriate power:** Can't make trivial items signature just for free upgrades
+**GM approval:** Game Master must agree the equipment and evolution plan are reasonable
+
+### Naming Conventions
+
+Signature equipment always has a name:
+
+**Personal names:** *Nightbringer* (your greatsword), *Stormward* (your shield)
+**Descriptive names:** *The Blade of Falling Stars*, *Armor of the Iron Mountain*
+**Inherited names:** *Grandfather's Longbow*, *The Family Blade*
+**Earned titles:** *Dragonslayer* (after killing your first dragon with it)
+
+The name should feel earned and meaningful, not randomly generated or overly grandiose for your current level.
+
+---
+
+## Equipment Evolution
+
+### Mechanical Progression
+
+As you advance, signature equipment gains power:
+
+**Minor Milestone Option:** Instead of taking skill/attribute improvement, improve signature equipment by +1 enhancement
+
+**Moderate Milestone Option:** Grant signature equipment special property (flaming, frost, keen, returning, etc.)
+
+**Major Milestone Option:** Grant signature equipment legendary ability tied to your character's achievements
+
+These improvements cost milestone choices—signature equipment evolution competes with other advancement options. This ensures evolution feels earned rather than automatic.
+
+### Narrative Progression
+
+Equipment evolution should reflect your adventures:
+
+**The sword that killed a dragon** might gain fire resistance after bathing in dragon blood
+**The armor that endured siege warfare** might gain fortification after being tested in thousand battles
+**The bow that struck impossible shot** might gain perfect accuracy after achieving legendary marksmanship
+
+Work with your GM to tie mechanical improvements to narrative achievements. Equipment shouldn't randomly gain powers—it should evolve through use and experience.
+
+### Cosmetic Changes
+
+Signature equipment's appearance changes with power:
+
+**Worn but sturdy** (early game) → **Battle-scarred and legendary** (mid game) → **Radiant with power** (endgame)
+
+**Simple steel blade** → **Rune-etched steel glowing with inner light** → **Reality-warping artifact crackling with elemental fury**
+
+Describe how your equipment looks different at each power tier. Visual evolution reinforces mechanical progression.
+
+---
+
+## Signature Equipment Examples
+
+### The Sword That Grew
+
+**Session 1:** Standard longsword, inherited from mentor
+**Session 3 (Moderate Milestone):** Designated signature equipment, named *Oathkeeper*, +1 enhancement
+**Session 6 (Moderate Milestone):** Gains Keen property (critical on 11+) after striking killing blow against corrupt noble
+**Session 10 (Major Milestone):** Becomes *Oathkeeper, Blade of Justice*—grants wielder ability to sense lies and compel truth once per day
+
+The mechanical progression (+1 → Keen → Legendary ability) follows narrative progression (mentor's blade → proven weapon → artifact of justice).
+
+### The Armor That Endured
+
+**Session 2:** Chainmail purchased in starting town
+**Session 3 (Moderate Milestone):** Designated signature after surviving near-death experience, named *The Survivor*, begins showing battle scars
+**Session 5 (Major Milestone):** Transforms into *The Unyielding*—grants wearer +2 Vitality and immunity to fear after enduring impossible odds
+**Session 9 (Moderate Milestone):** Gains Fortification (25% critical negation) after defending allies in climactic battle
+
+Evolution tied to survival and protection themes. Each upgrade reflects character's role as indomitable defender.
+
+### The Staff That Awakened
+
+**Session 1:** Wooden quarterstaff, simple walking stick
+**Session 3 (Moderate Milestone):** Named *Starlight* after first major magical achievement, begins glowing faintly when spells cast
+**Session 6 (Moderate Milestone):** Gains +1 enhancement, light brightens with caster's power
+**Session 10 (Major Milestone):** Becomes sentient—*Starlight, the Awakened*—acts as advisor and grants +1 to all Sorcery checks
+
+The mundane staff evolves into legendary artifact and companion through magical use and character growth.
+
+---
+
+## Using Signature Equipment
+
+### Mechanical Benefits
+
+Signature equipment provides concrete advantages:
+
+**Enhanced performance:** Bonuses exceed standard equipment
+**Special properties:** Unique abilities unavailable elsewhere
+**Reliable access:** Cannot be permanently lost
+**Continued relevance:** Evolves to remain competitive at all levels
+
+These benefits justify the milestone investment required for evolution.
+
+### Narrative Weight
+
+Signature equipment creates story opportunities:
+
+**Quests to recover:** When stolen or lost, recovering signature equipment drives adventures
+**Reforging arcs:** If destroyed, quest to reforge becomes major story arc
+**Recognition:** NPCs might recognize legendary equipment, creating social encounters
+**Legacy:** Signature equipment can be passed to future characters as heirloom
+
+Game Masters should create moments where signature equipment matters narratively, not just mechanically.
+
+### Identity Reinforcement
+
+How you interact with signature equipment defines your character:
+
+**The knight who never draws their sword unless combat inevitable**
+**The wizard whose staff pulses with barely-contained power**
+**The archer who maintains their bow with ritual precision**
+
+These behaviors, tied to signature equipment, become character signatures as much as the equipment itself.
+
+---
+
+## Game Master Guidance
+
+### Approving Signature Equipment
+
+Allow signature equipment designation freely at moderate milestones, but ensure:
+
+**Narrative justification:** Equipment has personal significance beyond stats
+**Appropriate power level:** Can't make Common magic items signature for free upgrades to Legendary
+**Player investment:** Player actually uses the equipment regularly
+**Evolution balance:** Planned evolution won't overshadow other character choices
+
+Most signature equipment requests are fine. Occasionally player requests might need adjustment—"The random dagger you picked up last session can't be signature, but the sword you've carried since session 1 absolutely can be."
+
+### Evolution Timing
+
+Signature equipment should evolve roughly parallel to character power:
+
+**+1 enhancement:** Available at minor or moderate milestones (sessions 2-4)
+**Special properties:** Moderate milestones (sessions 6-9)
+**Legendary abilities:** Major milestones (sessions 5 and 10)
+
+Don't let signature equipment outpace character level dramatically. +3 Legendary equipment at session 3 breaks game balance.
+
+### Temporary Separation
+
+Signature equipment's "cannot be permanently lost" doesn't mean "cannot be temporarily lost":
+
+**Appropriate separations:**
+- Stolen by villain, recovered through quest (1-2 sessions)
+- Destroyed in battle, reforged through quest (2-3 sessions)
+- Lost in planar travel, retrieved through investigation (1 session)
+
+**Inappropriate separations:**
+- Stolen repeatedly for cheap drama
+- Destroyed permanently despite signature status
+- Lost with no narrative path to recovery
+
+Use temporary separation sparingly to create dramatic moments, not frustrate players.
+
+### Multiple Signature Items
+
+Most characters have 1 signature item, occasionally 2:
+
+**Typical:** One signature weapon OR one signature armor
+**Acceptable:** Signature weapon AND signature armor/shield
+**Too much:** Signature weapon, armor, shield, cloak, ring, boots...
+
+Signature status should be special. If everything is signature, nothing is.
+
+---
+
+*Signature equipment transforms generic gear into legendary artifacts that define your character's visual identity and grow alongside your achievements. Choose equipment with personal significance, invest milestones in its evolution, and let it become as much a part of your legend as your name.*

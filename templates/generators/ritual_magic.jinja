@@ -1,26 +1,229 @@
-{# Ritual Magic - from magic.yaml #}
-# RITUAL MAGIC
-*Generated from YAML source data*
+{#
+Ritual Magic Template - Publication Style
+Generates ritual magic documentation with professional TTRPG prose
+#}
+# Ritual Magic
 
-## Overview
-Extended casting for powerful effects outside combat.
+Combat spellcasting happens in seconds—instinctive reactions to immediate threats. But some magical effects are too complex, too powerful, or too permanent to accomplish in the heat of battle. These require ritual magic: extended casting that trades time and preparation for effects beyond normal spellcasting limits.
+
+Ritual magic isn't a separate spell list. Instead, it's a casting method that lets spellcasters perform powerful effects when they have hours instead of seconds. The same spellcaster who hurls Fireballs in combat might spend an evening performing a ritual to create permanent magical wards, divine distant events, or contact otherworldly entities.
+
+---
 
 {% if ritual_data %}
 {% for ritual_type, ritual in ritual_data.items() %}
+
 ## {{ ritual_type.replace('_', ' ').title() }}
+
 {% if ritual.time %}
-**Time:** {{ ritual.time }}
+**Casting Time:** {{ ritual.time }}
 {% endif %}
+
 {% if ritual.cost %}
 **Cost:** {{ ritual.cost }}
 {% endif %}
+
 {% if ritual.effect %}
-**Effect:** {{ ritual.effect }}
+{{ ritual.effect }}
 {% endif %}
+
 {% if ritual.examples %}
-**Examples:** {{ ritual.examples|join(', ') }}
-{% endif %}
+
+**Common Applications:**
+{% for example in ritual.examples %}
+- {{ example }}
 {% endfor %}
 {% endif %}
 
-*Ritual magic trades time for power beyond normal spellcasting limits.*
+---
+
+{% endfor %}
+{% endif %}
+
+## Understanding Ritual Casting
+
+### Time vs. Power
+
+Ritual magic's fundamental trade-off is time for power:
+
+**Combat Spells:** Cast in seconds, last for rounds or minutes, affect immediate tactical situations. You cast Shield when attacked, Fireball when surrounded, Heal when wounded. These solve immediate problems through quick magical reactions.
+
+**Ritual Spells:** Cast in hours, last for days or permanently, affect strategic situations. You perform rituals when you have time to prepare, when the magical effect needs to persist beyond combat, or when the magic required exceeds what combat casting can achieve.
+
+The same spellcaster uses both approaches depending on circumstances. In combat, you cast quickly. Outside combat with time available, you perform rituals.
+
+### Who Can Perform Rituals
+
+Any character with Sorcery skill can attempt rituals, though success probability varies:
+
+**Professional (+1) Sorcery:** Can perform basic rituals reliably. Success rates on standard rituals around 70-80% depending on attributes.
+
+**Expert (+2) Sorcery:** Can perform complex rituals reliably. Success rates on difficult rituals around 70-80%.
+
+**Master (+3) Sorcery:** Can perform even legendary rituals with reasonable success chances.
+
+Untrained or Novice spellcasters can attempt rituals but face significant failure risks. Most ritual magic requires Professional or better Sorcery to perform safely.
+
+### Ritual Components and Preparation
+
+Rituals require more than just magical knowledge:
+
+**Time:** Hours of concentrated casting, maintaining focus throughout the ritual period. Interruptions may ruin the ritual and waste invested time.
+
+**Components:** Rare materials, symbolic objects, or sacrifices consumed during casting. More powerful rituals require more expensive components.
+
+**Space:** Appropriate location—consecrated ground for divine rituals, ley line nexuses for arcane rituals, places with thematic resonance to the ritual's purpose.
+
+**Assistance:** Complex rituals might require multiple spellcasters working in concert, each contributing their magical expertise to the combined working.
+
+---
+
+## Types of Ritual Magic
+
+### Divination Rituals
+
+Learn information unavailable through normal means:
+
+**Scrying** lets you observe distant locations or individuals. Spend hours preparing the ritual, then view your target as if present. The target might resist if they possess defensive magic or strong will, but undefended targets can be observed freely.
+
+**Augury** provides answers about future events. Ask specific questions, receive cryptic guidance about likely outcomes. More distant or complex futures provide less reliable answers.
+
+**Commune** contacts otherworldly entities—gods, spirits, outsiders—to ask questions. The entity might answer truthfully, cryptically, or not at all depending on its nature and your relationship. Powerful entities demand offerings or services in exchange for knowledge.
+
+These rituals solve problems that reconnaissance, research, or investigation can't. When you need to know what's happening in the villain's fortress right now, scrying provides answers. When you need guidance about which path to take, augury offers insight.
+
+### Warding Rituals
+
+Create persistent magical protections:
+
+**Ward** creates magical barriers preventing entry, blocking specific creature types, or alerting you to intrusions. A warded home becomes safe from supernatural threats. A warded treasure vault alerts you to thieves.
+
+**Circle of Protection** creates areas resistant to specific threats—demons can't cross the circle's boundary, undead burn when entering, etc. These provide sanctuary against supernatural dangers.
+
+**Glyph** places triggered magical effects—explosive runes that harm intruders, alarm glyphs that alert you, binding glyphs that trap creatures. These persist until triggered, creating magical traps.
+
+Warding rituals solve long-term security problems. You can't maintain Shield 24/7, but you can ward your stronghold once and rely on persistent protection.
+
+### Binding and Summoning Rituals
+
+Control otherworldly entities:
+
+**Summon** calls creatures from other planes. Elementals, spirits, demons, angels—with the right ritual and sufficient power, you can call entities to serve you. They might serve willingly, grudgingly, or resist violently depending on the summoning's nature.
+
+**Bind** constrains summoned entities to specific commands or locations. Without binding, summoned creatures might immediately attack you or flee. Binding ensures service, though clever entities find loopholes in poorly-worded commands.
+
+**Banish** sends otherworldly creatures back to their native planes. When summoned entities become problematic or planar incursions threaten, banishing rituals remove the supernatural threat.
+
+These rituals are powerful but dangerous. Summoning demons provides power but risks corruption. Binding entities makes you responsible for their actions. Use carefully.
+
+### Creation and Alteration Rituals
+
+Permanent magical effects:
+
+**Enchant** imbues objects with persistent magic. This is how magic items are created—weapons become +1, armor gains properties, rings provide powers. These rituals require expensive materials and significant time but create permanent treasures.
+
+**Transform** changes fundamental nature permanently. Turn lead to gold, flesh to stone, forest to desert. These dramatic alterations require extensive preparation and powerful magic but achieve effects impossible through combat spells.
+
+**Resurrect** returns the dead to life. The most powerful rituals can reverse death itself, though resurrection requires rare components, divine intervention, or both. The soul must be willing to return.
+
+Creation rituals solve problems that temporary magic can't. You can't maintain a Fly spell indefinitely, but you can create winged boots that grant flight permanently.
+
+---
+
+## Performing Rituals
+
+### Preparation Phase
+
+Before beginning the ritual:
+
+**Research:** Learn the ritual's specific requirements. Arcane libraries, divine temples, or ancient texts provide ritual knowledge. Complex rituals might require quests to discover the proper methods.
+
+**Gather Components:** Acquire rare materials—gemstones, rare herbs, symbolic objects, blood sacrifices. More powerful rituals demand more expensive components.
+
+**Choose Location:** Find appropriate space. Wards require the location being warded. Summonings need space for the entity. Divinations benefit from quiet, isolated places.
+
+**Recruit Assistance:** If the ritual requires multiple casters, recruit skilled allies. Each participant contributes their Sorcery to the ritual's success.
+
+### Casting Phase
+
+During the ritual:
+
+**Maintain Focus:** Hours of concentrated casting. Breaking concentration ruins the ritual and wastes invested time and materials.
+
+**Resist Interruption:** Enemies who discover ongoing rituals might attack to disrupt them. Defend the ritual site or perform rituals in secure locations.
+
+**Manage Complications:** Complex rituals might require multiple skill checks—Sorcery for the magical components, specific knowledge skills for proper invocations, Will for maintaining focus. Failure on any check might compromise the ritual.
+
+### Resolution Phase
+
+The ritual completes (or fails):
+
+**Success:** The magical effect manifests as intended. Wards activate, summonings arrive, divinations reveal knowledge, enchantments persist.
+
+**Partial Success:** The effect manifests imperfectly. The ward has gaps, the summoned entity arrives hostile, the divination provides incomplete information. Still useful but problematic.
+
+**Failure:** Nothing happens. Time and components wasted, but no catastrophic consequences.
+
+**Catastrophic Failure:** The magic goes horribly wrong. Summoned entities arrive unbound and hostile, wards collapse catastrophically, divinations provide false information, enchantments corrupt the item.
+
+---
+
+## Game Master Guidance
+
+### When to Allow Rituals
+
+Don't let rituals trivialize adventures, but don't forbid them arbitrarily:
+
+**Allow rituals that:**
+- Solve problems through resource investment (time, components, effort)
+- Create interesting narrative opportunities
+- Reward player planning and preparation
+- Feel earned rather than convenient
+
+**Restrict rituals that:**
+- Bypass entire adventure segments without meaningful cost
+- Solve problems too easily (scrying finds all enemies instantly)
+- Remove interesting choices from play
+- Break campaign assumptions
+
+Finding the balance between "rituals solve everything" and "rituals never work" is the challenge.
+
+### Ritual Costs
+
+Make rituals cost resources commensurate with their power:
+
+**Minor Rituals:** 1-4 hours, 50-200 coins in components. Accessible regularly but not trivial.
+
+**Moderate Rituals:** 4-8 hours, 500-2,000 coins in components. Significant investment requiring planning.
+
+**Major Rituals:** 8-24 hours, 5,000-20,000 coins in components. Rare, campaign-defining events.
+
+**Legendary Rituals:** Days of casting, priceless unique components. Once-per-campaign climactic moments.
+
+Don't make ritual components unavailable arbitrarily—if players invest the time and money, let the ritual work. But make the investment meaningful enough that rituals feel special.
+
+### Ritual Failure Consequences
+
+When rituals fail, create interesting complications rather than just "nothing happens":
+
+**Summoning Fails:** The creature arrives but unbound and hostile, or the wrong creature appears, or the summoning opens a planar rift.
+
+**Warding Fails:** The ward repels the caster instead of intruders, or creates a trap for allies, or attracts the threats it should repel.
+
+**Divination Fails:** Provides false information that seems true, or alerts the scrying target to your surveillance, or attracts unwanted attention from otherworldly entities.
+
+Failed rituals should create problems that are interesting to solve, not just resource waste.
+
+### Collaborative Rituals
+
+Multiple spellcasters working together can accomplish rituals beyond individual capability:
+
+- Each participant adds their Sorcery bonus to the ritual check
+- Required casting time is divided among participants (4-hour ritual with 4 casters takes 1 hour each)
+- Component costs remain the same (can't reduce material requirements through numbers)
+
+This encourages party coordination and makes legendary rituals achievable through teamwork.
+
+---
+
+*Ritual magic trades the immediacy of combat casting for power beyond temporary spells. When you have time, resources, and need, rituals accomplish the impossible.*

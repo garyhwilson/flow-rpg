@@ -1,74 +1,85 @@
 {#
-Archetypes Template
-Generates archetype documentation from YAML character data
+Archetypes Template - Publication Style
+Generates archetype documentation with professional TTRPG prose
 #}
-# ARCHETYPES - MECHANICAL REFERENCE
-*Generated from YAML source data*
+# Character Archetypes
 
-## Overview
+Your archetype represents your professional training—the skills, techniques, and capabilities that define your role in the party. Where your calling shapes who you are psychologically, your archetype determines what you can do practically.
 
-Archetypes represent your character's training and professional capabilities. Each archetype provides:
-- **Starting Skills** - Three skills with set proficiency levels
-- **Starting Edge** (martial) or **Spellcasting** (magical) - Special capabilities
-- **Starting Equipment** - Armor, weapons, and gear
-- **Unique Subsystem** - Special mechanics that define the archetype
-- **Natural Callings** - Common psychological patterns
-
-Choose an archetype that defines your role in the party and your approach to challenges.
+Every archetype provides a complete starting package: combat-ready skills, specialized capabilities, professional equipment, and a unique subsystem that sets it apart from others. Whether you want to be an armored defender, a precise archer, a master of magic, or something else entirely, your archetype gives you the foundation to excel.
 
 ---
 
 {% for archetype_id, archetype in archetypes.items() %}
+
 ## {{ archetype.name }}
+
 *{{ archetype.description }}*
 
-### Starting Skills
+### Professional Training
+
+The {{ archetype.name }} begins with three skills honed through dedicated training:
 
 {% for skill_name, skill_data in archetype.starting_skills.items() %}
-- **{{ skill_name.title() }}:** {{ skill_data.level.title() }} ({{ skill_data.modifier|string if skill_data.modifier >= 0 else skill_data.modifier }})
+**{{ skill_name.title() }}** - {{ skill_data.level.title() }} ({{ '+' if skill_data.modifier >= 0 else '' }}{{ skill_data.modifier }})
 {% endfor %}
 
 {% if archetype.special %}
-**Special Note:** {{ archetype.special }}
+{{ archetype.special }}
 {% endif %}
 
+This skill distribution reflects years of focused practice. Your Professional skill represents your core competency—the thing you've trained to do better than most. Your Novice skills show supporting capabilities that complement your primary focus.
+
 {% if archetype.starting_edge %}
-### Starting Edge (Choose One)
+### Starting Specialization
+
+Choose one edge that represents your specific combat training:
 
 {% for edge_name, edge_effect in archetype.starting_edge.items() %}
 {% if edge_name != 'choice' %}
-- **{{ edge_name.replace('_', ' ').title() }}:** {{ edge_effect }}
+**{{ edge_name.replace('_', ' ').title() }}** - {{ edge_effect }}
+
 {% endif %}
 {% endfor %}
+
+Both options work. Choose based on how you expect to fight, not which seems objectively better. Your preference shapes your character more than theoretical optimization.
 {% endif %}
 
 {% if archetype.spellcasting %}
-### Spellcasting
+### Magical Tradition
 
-- **Tradition:** {{ archetype.spellcasting.tradition.title() }} magic
-- **Access:** {{ archetype.spellcasting.access }}
-- **Focus:** {{ archetype.spellcasting.focus }}
+The {{ archetype.name }} channels magic through the {{ archetype.spellcasting.tradition }} tradition.
 
-*This archetype can cast spells from the {{ archetype.spellcasting.tradition }} tradition without needing to meet attribute requirements.*
+**Access:** {{ archetype.spellcasting.access }}
+
+**Focus:** {{ archetype.spellcasting.focus }}
+
+Unlike martial archetypes, you don't need to meet specific attribute requirements to cast spells. Your training gives you access to {{ archetype.spellcasting.tradition }} magic naturally, though higher attributes still make you more effective.
 {% endif %}
 
 ### Starting Equipment
 
-- **Armor:** {{ archetype.starting_equipment.armor.title() }} armor
-- **Weapon:** {{ archetype.starting_equipment.weapon.title() }}
-- **Gear:** {{ archetype.starting_equipment.gear|join(', ') }}
+You begin your adventures properly equipped:
 
-### Unique Subsystem: {{ archetype.unique_subsystem.name }}
+**Armor:** {{ archetype.starting_equipment.armor.title() }} armor
+**Weapon:** {{ archetype.starting_equipment.weapon.title() }}
+**Gear:** {{ archetype.starting_equipment.gear|join(', ') }}
 
-**Description:** {{ archetype.unique_subsystem.description }}
+This equipment represents the standard loadout for your profession. You can customize within reasonable bounds—swapping one weapon for another of similar type, choosing different gear of equivalent value—but your armor choice defines important tactical decisions about mobility, protection, and spellcasting capability.
 
-**Progression:** {{ archetype.unique_subsystem.progression }}
+### {{ archetype.unique_subsystem.name }}
 
-### Natural Callings
+{{ archetype.unique_subsystem.description }}
 
-Common calling choices for {{ archetype.name }}s: {{ archetype.natural_callings|join(', ')|title }}
+{{ archetype.unique_subsystem.progression }}
 
-*These are tendencies, not restrictions. Any archetype can choose any calling.*
+This subsystem defines what makes a {{ archetype.name }} distinct. While any character might learn some combat techniques or develop specialized skills, this mechanical framework belongs uniquely to your archetype.
+
+### Common Psychological Patterns
+
+{{ archetype.name }}s often embody certain callings more frequently than others: {{ archetype.natural_callings|join(', ')|title }}
+
+These are tendencies, not restrictions. A {{ archetype.name }} can have any calling. But these patterns emerge naturally—the psychological drives that often lead people to choose this profession in the first place.
 
 ---
 
@@ -76,253 +87,197 @@ Common calling choices for {{ archetype.name }}s: {{ archetype.natural_callings|
 
 ## Choosing Your Archetype
 
-### Archetype Roles
+### Understanding Archetype Roles
 
-**Frontline Combatants:**
-- **Fighter:** Versatile weapon master with combat techniques
-- **Paladin:** Armored spellcaster with divine oath powers
-- **Ranger:** Mobile skirmisher with terrain expertise
+Every archetype fills certain roles naturally:
 
-**Skill Specialists:**
-- **Rogue:** Dual-professional start, gambits for high-risk plays
-- **Ranger:** Survival expert with investigation support
-- **Bard:** Social specialist with performance magic
+**If you want to stand on the frontline and trade blows**, consider Fighter or Paladin. Both can wear substantial armor and survive focused enemy attention, though they approach combat differently.
 
-**Magical Adepts:**
-- **Wizard:** Pure arcane power with metamagic options
-- **Cleric:** Divine healing and domain powers
-- **Bard:** Support magic through bardic inspiration
-- **Paladin:** Martial + divine magic hybrid
+**If you want to strike from range with precision and mobility**, consider Ranger or Rogue. Both excel at positioning and exploiting advantages, using agility over raw durability.
 
-### Spellcasting Archetypes
+**If you want to reshape combat through magical power**, consider Wizard, Cleric, or Bard. Each offers different magical traditions and different approaches to spellcasting.
 
-Four archetypes can cast spells:
+**If you want to blend martial capability with magical support**, consider Paladin or Bard. Both combine weapon skill with spellcasting, creating hybrid characters who adapt to varied challenges.
 
-**Wizard (Arcane Tradition):**
-- Most versatile spell selection
-- Strongest direct damage
-- Metamagic modifies spells
-- Typically unarmored (Mage Armor cantrip)
+### The Four Spellcasting Archetypes
 
-**Cleric (Divine Tradition):**
-- Best healing and support
-- Can wear medium armor
-- Domain provides specialized powers
-- Balanced combat and magic
+Four archetypes can cast spells, each approaching magic differently:
 
-**Bard (Performance Tradition):**
-- Social and utility magic
-- Light armor compatible
-- Bardic Inspiration aids allies
-- Versatile party support
+**Wizard** channels arcane magic through pure study and technique. You have the broadest spell selection and strongest direct damage, modified through metamagic to create precise effects. Most wizards avoid armor entirely, relying on Mage Armor and tactical positioning for defense.
 
-**Paladin (Divine Tradition):**
-- Heavy armor spellcaster
-- Martial + magic hybrid
-- Divine Oath shapes powers
-- Frontline position with healing
+**Cleric** channels divine magic granted by faith and devotion. You excel at healing and support, can wear medium armor without crippling your magic, and gain specialized powers through your chosen domain. You balance frontline presence with magical support.
 
-### Martial Archetypes
+**Bard** channels magic through performance and artistry. Your spells focus on utility and social situations rather than raw damage. You wear light armor comfortably, use Bardic Inspiration to multiply ally effectiveness, and serve as the party's versatile problem-solver.
 
-Three archetypes focus on non-magical combat:
+**Paladin** channels divine magic through sacred oaths and conviction. You're the only heavy armor spellcaster, combining frontline durability with healing and smiting magic. Your spell selection is more limited, but your martial prowess compensates.
 
-**Fighter:**
-- Highest combat proficiency (Professional)
-- Combat Techniques chain together
-- Starting edge (Weapon Focus or Tough)
-- Medium armor, shield capable
-- Pure martial excellence
+### The Three Martial Archetypes
 
-**Ranger:**
-- Survival-focused (Professional)
-- Favored Terrain bonuses
-- Starting edge (Fast Movement or Precise Strike)
-- Light armor, ranged specialist
-- Wilderness expertise
+Three archetypes focus entirely on physical capability without magical shortcuts:
 
-**Rogue:**
-- Only dual-Professional start (Stealth + Finesse)
-- Gambits for risky plays
-- No starting edge (compensated by extra Professional skill)
-- Light armor, precision weapons
-- Skill-based problem solver
+**Fighter** represents pure martial excellence. You begin with Professional combat skill—better than any other archetype's combat ability. Your combat techniques chain together into devastating combinations, and your starting edge (Weapon Focus or Tough) shapes whether you emphasize damage or defense. You wear medium armor and can use shields, creating a versatile tactical package.
+
+**Ranger** combines combat capability with wilderness expertise. Your Professional survival skill makes you invaluable outside combat, while your favored terrain bonus creates situations where you outperform everyone. You wear light armor for mobility, typically fight at range, and gain Fast Movement or Precise Strike to enhance your skirmishing style.
+
+**Rogue** begins with two Professional skills—the only archetype with this advantage. Professional Stealth and Finesse make you exceptionally dangerous when circumstances favor precision over direct confrontation. You don't get a starting edge (your extra Professional skill compensates), but you develop gambits through play—high-risk, high-reward techniques earned through successful heists rather than milestone advancement.
 
 ### Starting Skill Analysis
 
-**Professional (+2) Skills:**
-- Your primary competency
-- Very reliable (58% + 33% = 91% success on TN 8)
-- Defines your core role
+**Professional (+1) Skills** represent your core competency. At this level, you succeed 91% of the time at standard difficulty (TN 8). This is reliable expertise—the thing you do well enough to build a career around.
 
-**Novice (-1) Skills:**
-- Supporting capabilities
-- Still useful (58% - 16.7% = 41% success on TN 8)
-- Room to grow
+**Novice (-1) Skills** represent supporting capabilities. You succeed about 41% of the time at standard difficulty. Not reliable enough to stake everything on, but useful when combined with good tactics or favorable circumstances.
 
-**Untrained (not listed):**
-- Can still attempt
-- -2 penalty is significant but not impossible
-- Invest milestones to improve
+**Untrained Skills** carry a -2 penalty, reducing success to about 25% at standard difficulty. You can still attempt these actions, but you're gambling rather than applying expertise.
 
-### Starting Edge Choices
+Through milestones, you advance skills upward. Most characters reach Professional in multiple areas by mid-campaign and push toward Expert (+2) or even Master (+3) in their primary focus.
 
-**Fighter Edges:**
-- **Weapon Focus:** Choose if you know your combat style (damage boost)
-- **Tough:** Choose if you expect to defend (survival boost)
+### Starting Edge Decisions
 
-**Ranger Edges:**
-- **Fast Movement:** Choose for mobility tactics (+1 zone of movement)
-- **Precise Strike:** Choose for consistent damage (reroll one die per attack)
+Some archetypes choose a starting edge:
 
-*Both choices are viable—pick based on playstyle preference.*
+**Fighter** chooses between Weapon Focus (additional damage with chosen weapon type) or Tough (additional Guard). Weapon Focus suits aggressive damage dealers; Tough suits defenders who protect others. Neither choice is wrong—pick based on the fighter you want to play.
 
-### Unique Subsystems
+**Ranger** chooses between Fast Movement (+1 zone of movement per turn) or Precise Strike (reroll one damage die per attack). Fast Movement enables hit-and-run skirmishing; Precise Strike creates consistent damage output. Again, both work—choose your preferred style.
 
-Each archetype has a special mechanic that sets it apart:
+These choices don't lock you into permanent builds. They simply provide a starting direction that shapes your first few sessions.
 
-**Combat Techniques (Fighter):**
-- Learn individual techniques at milestones
-- Chain them together in combat
-- Tactical depth through combinations
+### Equipment and Armor Considerations
 
-**Favored Terrain (Ranger):**
-- Start with one terrain type
-- Gain bonuses in that environment
-- Expand to new terrains via milestones
+Your starting armor profoundly affects how you play:
 
-**Divine Oath (Paladin):**
-- Choose oath theme (work with GM)
-- Oath provides powers and restrictions
-- Evolves at major milestones
+**Heavy Armor** (Paladin only) grants DR 4 but imposes -2 to Grace-based actions and -3 to Sorcery. You can absorb tremendous damage but move less gracefully and cast spells less effectively. Paladins accept this tradeoff because their build emphasizes durability and limited spellcasting.
 
-**Gambits (Rogue):**
-- High-risk, high-reward actions
-- Unlock through successful heists
-- Narrative unlocks, not milestone-gated
+**Medium Armor** (Fighter, Cleric) grants DR 2 with -1 to Grace and -1 to Sorcery. This balanced option lets you survive focused attacks while maintaining reasonable agility and decent spellcasting. Most balanced builds use medium armor.
 
-**Metamagic (Wizard):**
-- Modify spells with special techniques
-- Heighten, quicken, widen, etc.
-- Learn options at milestones
+**Light Armor** (Ranger, Rogue, Bard) grants DR 1 with no penalties. You trade protection for freedom of movement and full spellcasting capability. Light armor suits mobile combatants and primary spellcasters who can't afford the Sorcery penalty.
 
-**Divine Domain (Cleric):**
-- Deity grants specialized powers
-- Domains like War, Knowledge, Life, etc.
-- Powers expand at milestones
+**No Armor** (Wizard) grants DR 0 but provides +1 to Sorcery and +1 zone of movement. Wizards typically use Mage Armor cantrip (grants +2 Guard) to compensate, creating a lightly defended but highly mobile and magically effective character.
 
-**Bardic Inspiration (Bard):**
-- Grant allies bonus dice
-- Die size increases with milestones
-- Active support role
-
-### Equipment Considerations
-
-**Armor Choices:**
-- **Heavy (Paladin):** DR 4, -2 Grace, -3 Sorcery
-- **Medium (Fighter, Cleric):** DR 2, -1 Grace, -1 Sorcery
-- **Light (Ranger, Rogue, Bard):** DR 1, no penalties
-- **None (Wizard):** DR 0, +1 Sorcery, +1 movement
-
-Your archetype determines starting armor, affecting:
-- How much damage you can absorb
-- Your Grace-based action penalties
-- Your spellcasting penalties (if applicable)
-
-**Starting Wealth:**
-Varies by archetype (30-60 coins typically). This represents your initial purchasing power beyond starting equipment.
+Your archetype determines starting armor, but you can change armor types during play. A fighter might upgrade to heavy armor, a wizard might acquire enchanted robes, a ranger might switch to medium armor when dungeon-crawling. Starting armor establishes your baseline, not your permanent state.
 
 ### Archetype and Calling Synergy
 
-**Natural Synergies (from YAML):**
-- **Fighter:** Champion, Guardian, Sentinel (martial protector themes)
-- **Ranger:** Seeker, Scholar, Sentinel (wilderness wanderer themes)
-- **Paladin:** Advocate, Guardian, Champion (righteous warrior themes)
-- **Rogue:** Seeker, Enthusiast, Scholar (curious explorer themes)
-- **Wizard:** Scholar, Seeker, Advocate (knowledge pursuer themes)
-- **Cleric:** Guardian, Mediator, Advocate (care-giver themes)
-- **Bard:** Enthusiast, Mediator, Seeker (social connector themes)
+Certain callings pair naturally with certain archetypes:
 
-**Against-Type Builds:**
-- Advocate Rogue: Robin Hood vigilante justice
-- Champion Wizard: Competitive arcane duelist
-- Mediator Fighter: Peacekeeper enforcer
-- Scholar Bard: Academic performer
+**Fighters** often embody Champion (protective strength), Guardian (helping through defense), or Sentinel (vigilant security). The martial protector archetype attracts these psychological patterns.
 
-## GM Guidelines for Archetypes
+**Rangers** often embody Seeker (finding themselves in wilderness), Scholar (studying nature), or Sentinel (watching for danger). The wilderness wanderer attracts introspective, observant callings.
 
-### Balancing Party Composition
+**Paladins** often embody Advocate (righteous truth), Guardian (selfless service), or Champion (strong protection). The divine warrior attracts conviction-driven callings.
 
-**Ideal 4-Person Party:**
-- 1 Frontline (Fighter, Paladin)
-- 1 Damage/Utility (Ranger, Rogue, Wizard)
-- 1 Support (Cleric, Bard)
-- 1 Wildcard (any)
+**Rogues** often embody Seeker (discovering identity through adventure), Enthusiast (experiencing life), or Scholar (clever problem-solving). The cunning opportunist attracts curious, exploratory callings.
 
-**But any composition works if:**
-- Players understand their roles
-- Everyone contributes to tactics
-- GM adjusts challenges appropriately
+**Wizards** often embody Scholar (mastering knowledge), Seeker (understanding mysteries), or Advocate (pursuing truth). The arcane student attracts intellectual callings.
 
-### Unique Subsystems in Play
+**Clerics** often embody Guardian (caring for others), Mediator (bringing peace), or Advocate (serving justice). The divine healer attracts nurturing, harmony-seeking callings.
 
-**Combat Techniques (Fighter):**
-- Award new techniques as treasure/training
-- Let players discover combinations
-- Techniques should feel impactful
+**Bards** often embody Enthusiast (celebrating life), Mediator (connecting people), or Seeker (exploring experience). The performer attracts socially engaged, expressive callings.
 
-**Favored Terrain (Ranger):**
-- Make terrain matter mechanically
-- Bonus should be significant (typically +2 to relevant checks)
-- Let ranger shine in their environments
+But these are patterns, not rules. Against-type combinations create interesting character concepts:
 
-**Divine Oath (Paladin):**
-- Work with player to define oath restrictions
-- Oath breaking should have consequences but not end character
-- Oath powers should feel powerful
+- Advocate Rogue: A vigilante pursuing justice through unconventional means
+- Champion Wizard: A competitive duel-focused mage who sees magic as strength
+- Mediator Fighter: An enforcer who prevents violence through implied force
+- Scholar Bard: A traveling academic who shares knowledge through performance
 
-**Gambits (Rogue):**
-- Reward creative heist plans with new gambits
-- Gambits should have significant risk and reward
-- Unlock through play, not just milestones
-
-**Metamagic (Wizard):**
-- Start with 1-2 options, gain more at milestones
-- Costs should scale with spell tier
-- Let wizard feel like master of magic
-
-**Divine Domain (Cleric):**
-- Domain defines cleric's specialty
-- Domain powers supplement spells, not replace them
-- Each domain should feel distinct
-
-**Bardic Inspiration (Bard):**
-- Start with d4, increase at milestones (d6, d8, d10, d12)
-- Pool size scales with milestones
-- Make bard feel like force multiplier
-
-### Starting Equipment Customization
-
-Players may request variations:
-- Weapon swap within same category (longsword → mace)
-- Armor downgrade (medium → light, keep difference in coins)
-- Gear substitutions (equivalent value)
-
-**General Rule:** Keep archetype identity but allow reasonable customization.
-
-### Common Questions
-
-**Q: Can I multiclass?**
-A: No multiclassing. Use edges and milestones to add capabilities from other archetypes.
-
-**Q: Can I change my archetype?**
-A: Work with GM for narrative retraining. Rare but possible.
-
-**Q: Why does Rogue start with two Professional skills?**
-A: They don't get a starting edge. Two Professional skills compensates for this.
-
-**Q: Can non-casters learn magic?**
-A: Yes, if they meet attribute requirements (see Magic section). But they won't have Sorcery as Professional.
+The system supports whatever concept you want to explore.
 
 ---
 
-*Your archetype is your training, but your choices in play define who you become.*
+## Playing Your Archetype
+
+### Understanding Your Unique Subsystem
+
+Every archetype has a special mechanical framework:
+
+**Combat Techniques (Fighter)** - You learn individual techniques at milestones and chain them together during fights. A technique might let you disarm an enemy, follow up with a precise strike, then intimidate nearby foes. The system rewards tactical thinking and creates combat depth beyond "I attack again."
+
+**Favored Terrain (Ranger)** - You choose terrain types (urban, forest, mountain, etc.) and gain significant bonuses when operating in those environments. These aren't minor flavor bonuses—they're substantial mechanical advantages that make you exceptional in your element. Expand your terrain types through milestones.
+
+**Divine Oath (Paladin)** - Work with your GM to define your oath's restrictions and powers. Your oath might grant bonus damage against oath-breakers, protective auras for allies, or smiting capabilities against specific enemy types. Oath violations have consequences but shouldn't destroy your character—work with your GM to handle lapses and redemption.
+
+**Gambits (Rogue)** - You don't learn gambits at milestones. Instead, you unlock them through successful heists and clever plans. Pull off an elaborate infiltration, and your GM might award a new gambit representing that technique. Gambits are high-risk, high-reward—spectacular successes when they work, dramatic failures when they don't.
+
+**Metamagic (Wizard)** - You learn techniques that modify your spells. Heighten a spell to increase damage, quicken it to cast faster, widen it to affect more area. Each metamagic option costs additional Flow, creating resource decisions. Start with 1-2 options, gain more at milestones.
+
+**Divine Domain (Cleric)** - Your deity grants specialized powers based on their domain (War, Knowledge, Life, Nature, etc.). Domain powers supplement your spells—a War domain cleric gains combat bonuses, a Knowledge domain cleric gains information-gathering capabilities. Domains expand at milestones.
+
+**Bardic Inspiration (Bard)** - You grant allies bonus dice to add to their rolls. Start with d4s, upgrade to larger dice (d6, d8, d10, d12) at milestones. Your pool of inspiration dice grows with advancement. You multiply ally effectiveness rather than directly solving problems yourself.
+
+### Tactical Considerations by Archetype
+
+**Fighter** - Position yourself between enemies and squishier allies. Use your high Guard and armor to absorb attacks. Chain combat techniques to create cascading effects. Switch stances based on whether you're pushing forward (Aggressive) or holding ground (Defensive).
+
+**Ranger** - Maintain distance from enemies. Use your mobility to create favorable positions. Fight in your favored terrain whenever possible—the bonuses are significant. Switch to melee if cornered, but your strength is avoiding that situation.
+
+**Paladin** - Stand on the frontline and dare enemies to ignore you. Your heavy armor lets you survive focused fire. Use healing spells on allies in danger. Your smiting capabilities make you dangerous to specific enemy types—learn what your oath makes you good at killing.
+
+**Rogue** - Avoid fair fights. Use stealth to create advantages. Position for flanking bonuses. Save gambits for moments when spectacular success changes everything. Your high skills make you valuable outside combat—take the lead in social and exploration challenges.
+
+**Wizard** - Build Flow with cantrips early in fights, then unleash powerful spells. Stay away from enemies—your low HP and armor make you fragile. Use metamagic to modify spells for specific situations. Your versatility is your strength; choose spells that cover different problem types.
+
+**Cleric** - Balance healing allies with supporting through domain powers. Your medium armor lets you operate at medium range safely. Don't burn all your resources healing—sometimes dealing damage or controlling enemies prevents more damage than healing fixes.
+
+**Bard** - Support allies with inspiration before combat gets serious. Use utility spells to create advantages. Your light armor and low HP make direct combat dangerous, but your social skills and magical versatility make you invaluable in varied situations.
+
+---
+
+## Game Master Guidance
+
+### Balancing Party Composition
+
+The ideal party has coverage:
+- Someone who can take hits (Fighter, Paladin)
+- Someone who deals consistent damage (any archetype can do this with right build)
+- Someone who can heal or prevent damage (Cleric, Paladin, Bard)
+- Someone who handles utility and problems (Rogue, Bard, Wizard, Ranger)
+
+But any composition works if players understand their roles and work together. Four fighters can succeed through tactics and coordination. Four wizards can succeed through overwhelming magical versatility.
+
+Don't force players to choose archetypes for party balance. Encourage them to play what interests them, then adjust encounters to their composition.
+
+### Supporting Unique Subsystems
+
+**Combat Techniques (Fighter)** - Award new techniques as treasure or training rewards. Let players discover combinations through experimentation. When a fighter chains three techniques into a devastating combo, make it feel impactful.
+
+**Favored Terrain (Ranger)** - Make terrain matter. Don't just describe the forest, create mechanical situations where forest knowledge provides advantages. Rangers should feel exceptional in their terrain, not merely slightly better.
+
+**Divine Oath (Paladin)** - Work with the player to define oath tenets. Violating the oath should have consequences (temporary loss of powers, need for atonement) but shouldn't end the character. Redemption arcs are dramatic and engaging.
+
+**Gambits (Rogue)** - Reward clever heist planning with new gambit options. Gambits should feel risky—high reward when they succeed, dramatic failure when they don't. Don't make every gambit succeed; the risk is part of the appeal.
+
+**Metamagic (Wizard)** - Let wizards feel like masters of magic. Metamagic should enable tricks other casters can't pull off. The Flow cost creates meaningful decisions about when to use standard spells versus enhanced versions.
+
+**Divine Domain (Cleric)** - Make domains feel distinct. A War cleric should feel different from a Knowledge cleric both mechanically and narratively. Domain powers should be significant enough to matter without overshadowing spellcasting.
+
+**Bardic Inspiration (Bard)** - Let inspiration dice turn failures into successes. When a bard gives inspiration and it changes the outcome, highlight that moment. Bards should feel like they make everyone better.
+
+### Starting Equipment Customization
+
+Players sometimes want to modify starting equipment:
+
+**Weapon Swaps** - Allow swaps within the same category. A fighter starting with a longsword can swap for a mace or battleaxe. Don't allow radical changes (longsword to bow) without narrative justification.
+
+**Armor Downgrades** - Players can choose lighter armor and keep the cost difference in coins. A fighter might start with light armor instead of medium, gaining coins for other purchases.
+
+**Gear Substitutions** - Allow equivalent-value gear swaps. If starting gear includes rope and pitons, a player might swap for a grappling hook and oil.
+
+General principle: Maintain the archetype's intended capability while allowing reasonable personalization.
+
+### Common Questions
+
+**Can characters multiclass?**
+No. Flow RPG doesn't use multiclassing. Instead, use edges and milestone options to add capabilities from other archetypes. A fighter who wants magical ability can learn basic spellcasting at major milestones if their attributes support it.
+
+**Can characters retrain or change archetypes?**
+Rarely, with strong narrative justification. A wizard who abandons magic to become a fighter would need significant story development. Work with players who want radical changes, but treat it as a major character arc, not a casual respec.
+
+**Why does Rogue start with two Professional skills but no edge?**
+Balance. Two Professional skills is roughly equivalent in power to one Professional skill plus a starting edge. Rogues trade the immediate capability of an edge for broader skill competency.
+
+**Can non-spellcasters learn magic later?**
+Yes, if they meet attribute requirements. A fighter with high Mind could learn some spells at major milestones. They won't cast as effectively as Wizard (no Professional Sorcery), but basic magic is accessible to anyone who studies and has the mental capability.
+
+---
+
+*Your archetype is your training and your starting point. Where you go from there defines who you become.*

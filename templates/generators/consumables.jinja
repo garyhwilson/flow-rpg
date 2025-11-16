@@ -1,43 +1,120 @@
 {#
-Consumables Template
-Generates consumable items documentation from YAML equipment data
+Consumables Template - Publication Style
+Generates consumable items documentation with professional TTRPG prose
 #}
-# CONSUMABLES - SINGLE-USE ITEMS
-*Generated from YAML source data*
+# Consumable Items
 
-## Overview
+Adventures rarely go according to plan. The healing potion you drink when the cleric is down, the alchemist's fire you throw when surrounded, the antidote that saves you from poison—these single-use items often mean the difference between triumph and disaster.
 
-Consumables are single-use items that provide immediate effects. Stock up before dangerous situations.
+Consumables provide immediate, powerful effects at the cost of being destroyed in use. Unlike permanent equipment that you carry throughout a campaign, consumables are tactical resources you spend when situations demand them.
 
 ---
 
 {% for item_id, item in consumables.items() %}
+
 ## {{ item_id.replace('_', ' ').title() }}
 
-- **Effect:** {{ item.effect }}
-- **Action:** {{ item.action }}
-- **Cost:** {{ item.cost }} coins
-- **Rarity:** {{ item.rarity }}
+{{ item.effect }}
+
+**Use:** {{ item.action }}
+**Cost:** {{ item.cost }} coins
+**Availability:** {{ item.rarity }}
 
 {% endfor %}
 
 ---
 
-## Usage Guidelines
+## Using Consumables Effectively
 
-**Healing Potions:** Standard emergency healing, drink as action
-**Antidotes:** Keep 1-2 for poison-heavy areas
-**Alchemist's Fire:** Tactical damage option for non-casters
-**Smoke Bombs:** Escape or tactical obscurement
-**Flash Powder:** Disable enemies briefly
+### When to Use Consumables
 
-### Typical Stock
+**Healing Potions** should be used freely. Don't hoard them for "emergencies"—if someone is down or severely wounded, that's the emergency. Drinking a potion now prevents death later. Most parties burn through 2-3 healing potions per dangerous encounter.
 
-**Balanced Party Load (per character):**
-- 2-3 Healing Potions
-- 1 Antidote
-- 1-2 Tactical items (fire/smoke/flash)
+**Antidotes** matter most in specific situations. If you're exploring poison-heavy environments (swamps, snake-infested ruins, alchemist lairs), carry several. Otherwise, one per party member provides insurance.
+
+**Alchemist's Fire** gives non-spellcasters a ranged damage option. It's expensive relative to bow ammunition, but the guaranteed fire damage (no attack roll needed in some interpretations) makes it valuable for finishing weakened enemies or dealing with swarms.
+
+**Smoke Bombs** create tactical opportunities. Block line of sight for escapes, create cover for advancing, separate enemy groups. Creative use of smoke often solves problems that direct combat can't.
+
+**Flash Powder** disables enemies briefly through blinding. Throw it when facing dangerous spellcasters or archers who need to see their targets. The brief advantage often decides combat.
+
+### Typical Inventory
+
+A well-prepared adventurer typically carries:
+
+**Essential (Every Character):**
+- 2-3 Healing Potions (minimum survival insurance)
+- 1 Antidote (situational but critical when needed)
+
+**Tactical (Role-Dependent):**
+- 1-2 Alchemist's Fire (frontline fighters, characters without ranged options)
+- 1-2 Smoke Bombs (scouts, tactical coordinators)
+- 1 Flash Powder (characters who face spellcasters or archers)
+
+**Specialized (Mission-Specific):**
+Additional consumables based on known threats. Raiding a poison-using cult? Bring extra antidotes. Facing undead? Holy water. Fighting fire elementals? Resist fire potions.
+
+### Economic Considerations
+
+Consumables represent ongoing campaign expenses. A typical adventuring party might spend 50-100 coins restocking consumables between missions. This creates natural money sinks and encourages economic progression—you need income to afford the consumables that let you tackle harder challenges.
+
+Don't let economic concerns prevent consumable use during critical moments. The coins spent on a healing potion that saves your life are coins well spent. Dead characters can't earn treasure.
 
 ---
 
-*Consumables can turn defeat into victory—use them wisely but don't hoard them.*
+## Game Master Guidance
+
+### Consumable Availability
+
+Make consumables readily available in civilized areas:
+- Towns and cities stock standard items (healing potions, antidotes, basic tactical items)
+- Specialized items require larger settlements or connections
+- Remote areas may lack access entirely (stock up before wilderness expeditions)
+
+Don't create artificial scarcity for basic healing potions. These are standard adventuring equipment, as available as rope and rations.
+
+### Pricing and Economy
+
+The listed prices assume standard fantasy economy:
+- Healing potions (50 coins) cost about a week's wages for common laborers
+- Expensive for common folk, affordable for adventurers
+- Rare/exotic consumables cost more (100-500+ coins)
+
+Adjust prices to match your campaign's economy. If your setting has abundant magic, healing potions might be cheaper. In low-magic settings, they might be rarer and more expensive.
+
+### Consumables as Treasure
+
+Don't just award coins—include consumables in treasure:
+- Healing potions found in defeated enemies' packs
+- Alchemical items in abandoned wizard laboratories
+- Antidotes in the healer's quarters of ruined temples
+
+Finding 2-3 healing potions as treasure feels immediately useful and encourages consumable use (they're "free").
+
+### Crafting Consumables
+
+If your campaign includes crafting, consumables are good candidates:
+- Healing potions require herbalism and time
+- Alchemical items require alchemy skill
+- Crafting costs ~50% of purchase price in materials
+- Crafting time varies (1-7 days depending on complexity)
+
+Let skilled characters craft during downtime. This rewards skill investment and provides cost savings.
+
+### Common Mistakes
+
+**Players hoard consumables "for emergencies":**
+Remind them that being unconscious IS the emergency. Encourage use rather than hoarding.
+
+**GMs create artificial scarcity:**
+Healing potions should be available in any settlement. Don't force scarcity hunts for basic supplies.
+
+**Forgetting consumables exist:**
+Remind players of their inventory periodically. "You have 3 healing potions—want to use one before this gets worse?"
+
+**Using consumables as crutches:**
+Consumables should supplement healing and tactics, not replace them. If parties burn 10 healing potions per fight, encounter balance needs adjustment.
+
+---
+
+*Consumables are tactical resources, not precious heirlooms. Use them when situations demand—that's what they're for.*

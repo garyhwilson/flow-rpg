@@ -1,96 +1,181 @@
 {#
-Callings Template
-Generates calling documentation from YAML character data
+Callings Template - Publication Style
+Generates calling documentation from YAML character data with professional TTRPG prose
 #}
-# CALLINGS - MECHANICAL REFERENCE
-*Generated from YAML source data*
+# Callings: Character Motivation
 
-## Overview
+Before you decide what your character *does*, decide who they *are*. Your calling represents the fundamental drive that compels you to adventure—the psychological truth at your core.
 
-Callings represent your character's core psychological motivation and worldview. Each calling provides:
-- **Flow Benefit** - A mechanical trigger that generates Flow
-- **Narrative Permission** - A special ability that shapes roleplay
-- **Calling Equipment** - Optional unique item (acquired during play)
+## Understanding Callings
 
-Your calling influences how you approach problems, what drives your decisions, and how you generate Flow in play.
+Every calling provides three interconnected elements:
+
+**Flow Benefit** - A mechanical trigger that generates Flow when you act according to your nature
+
+**Narrative Permission** - A special ability that emerges from your calling's unique perspective
+
+**Calling Equipment** - A unique item earned through play that manifests your calling in the world
+
+Together, these elements ensure your calling isn't just background—it actively shapes how you play.
 
 ---
 
 {% for calling_id, calling in callings.items() %}
+
 ## {{ calling.name }}
+
 *"{{ calling.core_drive }}"*
 
-### Core Identity
-- **Fear:** {{ calling.fear }}
-- **Desire:** {{ calling.desire }}
+### Who You Are
 
-### Mechanical Benefits
+The {{ calling.name }} is driven by a fundamental truth about human nature. Understanding this calling means understanding the tension between what you fear and what you desire:
 
-#### Flow Benefit: {{ calling.flow_benefit.name }}
-- **Trigger:** {{ calling.flow_benefit.trigger }}
-- **Effect:** {{ calling.flow_benefit.effect }}
-- **Limit:** {{ calling.flow_benefit.limit }}
+- **You Fear:** {{ calling.fear }}
+- **You Desire:** {{ calling.desire }}
 
-#### Narrative Permission: {{ calling.narrative_permission.name }}
-- **Effect:** {{ calling.narrative_permission.effect }}
-{% if calling.narrative_permission.requirement %}
-- **Requirement:** {{ calling.narrative_permission.requirement }}
+This tension defines you. Every {{ calling.name }} navigates this psychological landscape differently, but all share the same core drive.
+
+### How You Generate Flow
+
+**{{ calling.flow_benefit.name }}**
+
+{{ calling.flow_benefit.trigger }}, {{ calling.flow_benefit.effect }}.
+
+{% if calling.flow_benefit.limit != "No limit" %}
+**Frequency:** {{ calling.flow_benefit.limit }}
+{% else %}
+This benefit has no explicit limit beyond what naturally arises in play. Your GM should ensure you have opportunities to trigger it regularly.
 {% endif %}
 
-### Calling Equipment: {{ calling.calling_equipment.item }}
-- **Effect:** {{ calling.calling_equipment.effect }}
-- **Acquisition:** Awarded by GM during character development moments
+This flow benefit rewards you for acting according to your calling's nature. When you do what a {{ calling.name }} does, you gain the resources to do it better.
 
-### Psychological Dynamics
-- **Under Stress:** {{ calling.stress_behavior }}
-- **Growth Path:** {{ calling.growth_direction }}
+### Your Unique Perspective
+
+**{{ calling.narrative_permission.name }}**
+
+{{ calling.narrative_permission.effect }}.
+{% if calling.narrative_permission.requirement %}
+
+**Requirement:** {{ calling.narrative_permission.requirement }}
+{% endif %}
+
+This isn't a spell or technique—it's an innate aspect of how you see the world. You can always invoke this permission. It doesn't guarantee success at everything, but it gives you narrative justification and insight others lack.
+
+### Equipment of {{ calling.name }}
+
+**{{ calling.calling_equipment.item }}**
+
+{{ calling.calling_equipment.effect }}.
+
+**Acquisition:** Your GM awards this during a significant character moment, typically between sessions 3-6. It appears when you demonstrate growth or face your calling's challenges head-on. This isn't purchased—it's earned through character development.
+
+### Living This Calling
+
+**When Stressed:** {{ calling.stress_behavior }}
+
+**Path to Growth:** {{ calling.growth_direction }}
+
+The {{ calling.name }} must navigate their fear while pursuing their desire. How you handle this tension defines your character's growth arc.
 
 ---
 
 {% endfor %}
 
-## Using Callings in Play
+## Playing Your Calling
 
 ### Flow Generation Strategy
-Each calling generates Flow differently. Consider how your calling's trigger aligns with your:
-- **Archetype:** Combat style and abilities
-- **Stance Preference:** Aggressive, Balanced, or Defensive
-- **Party Role:** Defender, damage, support, or utility
 
-### Narrative Permission
-Your narrative permission is always available. It's not a spell or technique—it's an innate aspect of your character's perspective. Use it to:
-- Gain information without rolling
-- Justify unusual character knowledge or preparation
-- Create dramatic moments that align with your calling's themes
+Each calling generates Flow differently. Consider how your calling's trigger aligns with your character build:
 
-### Calling Equipment
-Calling equipment is earned through play, not purchased:
-- GM awards it during significant character moments
-- Usually occurs after demonstrating growth or facing your calling's challenges
-- Mechanically powerful but limited to once per scene
-- Represents your calling becoming manifest in the world
+**Archetype Synergy**
+- Does your calling's flow trigger match your combat style?
+- Do you need to seek out specific situations, or will they find you?
+- Can you reliably trigger your flow benefit multiple times per session?
 
-## GM Guidelines for Callings
+**Stance Preference**
+- Does your calling reward Aggressive, Balanced, or Defensive play?
+- Do you need to position yourself specially to trigger your benefit?
+- Can you still trigger your flow benefit regardless of stance?
 
-### Triggering Flow Benefits
-- **Be Generous:** If a player is trying to trigger their flow benefit, work with them
-- **Scene-Based Limits:** Most benefits have "no limit" but are naturally constrained by circumstances
-- **Reliability:** Each calling should trigger 1-3 times per session minimum
-- **Party Balance:** Ensure all callings have opportunities to trigger
+**Party Role**
+- Does your calling support your intended role (defender, damage, support, utility)?
+- Do you need allies in danger, enemies to defeat, or social conflicts to navigate?
+- Does your calling work solo or require party dynamics?
 
-### Awarding Calling Equipment
-Award calling equipment when:
-- Character has significant moment related to their calling's theme
-- Player demonstrates growth or integration (not just stress behavior)
-- Feels dramatically appropriate
-- Typically between 3rd-6th session
+Understanding these relationships helps you build a character whose mechanics reinforce their psychological drive.
 
-### Narrative Permissions
-- These are designed to never require rolls
-- They provide narrative justification, not automatic success at everything
-- Can still fail in execution even if the permission gives knowledge/intuition
-- Should feel special and unique to that character
+### Using Narrative Permission
+
+Your narrative permission is always available—it's not limited by Flow, cooldowns, or resource costs. Think of it as the lens through which you see the world:
+
+**What It Does:**
+- Provides information or insight without requiring rolls
+- Justifies unusual character knowledge or preparation
+- Creates dramatic moments aligned with your calling's themes
+- Gives you narrative authority in your calling's domain
+
+**What It Doesn't Do:**
+- Automatically succeed at everything related to your calling
+- Replace skills or negate the need for rolls entirely
+- Override the GM's authority about what's possible
+- Work outside your calling's thematic space
+
+When in doubt, discuss with your GM. Narrative permissions are designed to be generous within their theme while respecting the game's overall structure.
+
+### Earning Calling Equipment
+
+Calling equipment appears during character development moments—times when you demonstrate growth or face your calling's fundamental tension:
+
+**Advocate:** When you expose a significant injustice despite personal cost
+**Champion:** When you protect someone even though it means abandoning your goal
+**Enthusiast:** When you find joy in a moment of genuine despair
+**Exemplar:** When you inspire others while doubting yourself
+**Guardian:** When you let someone make their own mistakes
+**Mediator:** When you refuse to compromise despite pressure
+**Scholar:** When you admit the limits of your knowledge
+**Seeker:** When you choose familiar comfort over novel experience
+**Sentinel:** When you bend your principles for the greater good
+
+These aren't rigid requirements—they're examples. Your GM will recognize the right moment when it comes.
 
 ---
 
-*Callings represent the heart of character identity. Mechanics reinforce theme, and theme drives meaningful moments in play.*
+## Game Master Guidance
+
+### Triggering Flow Benefits
+
+Make flow benefits feel reliable and rewarding:
+
+**Be Generous:** If a player is trying to trigger their flow benefit, work with them. Find ways to yes rather than reasons to no.
+
+**Scene-Based Limits:** Most benefits have no explicit limit but are naturally constrained by circumstances. An Advocate can't expose corruption if there's none to expose.
+
+**Aim for Reliability:** Each calling should trigger 1-3 times per session minimum. If a player isn't triggering their benefit, create opportunities.
+
+**Party Balance:** Ensure all callings have chances to shine. If your scenarios only trigger certain callings, vary your approach.
+
+### Awarding Calling Equipment
+
+Award calling equipment when:
+
+1. The character has a significant moment related to their calling's theme
+2. The player demonstrates growth beyond their stress behavior
+3. It feels dramatically appropriate to the story
+4. Typically between sessions 3-6 (not too early, not too late)
+
+Don't make players beg for it or complete a checklist. When the moment feels right, award it. These items are designed to feel special and earned.
+
+### Supporting Narrative Permissions
+
+Narrative permissions work best when you:
+
+**Embrace Them:** Say yes to creative uses within the theme
+**Define Boundaries:** Clarify what the permission can and can't do
+**No Rolls Required:** These grant information/justification, they don't replace skills
+**Make Them Matter:** Create scenarios where these permissions shine
+
+A Scholar should feel like their knowledge gives them advantages. A Sentinel should feel like their vigilance catches things others miss. Design situations that reward these unique perspectives.
+
+---
+
+*Callings represent the heart of character identity. When mechanics reinforce theme, and theme drives meaningful moments in play, characters come alive at the table.*

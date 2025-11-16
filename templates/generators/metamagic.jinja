@@ -1,23 +1,172 @@
-{# Metamagic - from magic.yaml #}
-# METAMAGIC OPTIONS
-*Generated from YAML source data*
+{#
+Metamagic Template - Publication Style
+Generates metamagic documentation with professional TTRPG prose
+#}
+# Metamagic
 
-## Overview
-Modify spells with special techniques (Wizard unique subsystem).
+A wizard casts Fireball. So does every other spellcaster with access to that spell. But a wizard with metamagic mastery casts a Fireball that burns hotter, spreads wider, or strikes faster than the standard version. Metamagic transforms how wizards cast spells—it's the unique subsystem that makes wizards feel different from clerics, bards, and other spellcasters.
+
+Where other spellcasters simply cast their spells as written, wizards modify and enhance them through metamagic techniques. Every metamagic option costs additional Flow beyond the spell's base cost, creating resource management decisions. Spend extra Flow for enhanced effects, or conserve Flow and cast more spells? This choice defines wizard gameplay.
+
+---
 
 {% if metamagic_data %}
 {% for meta_id, meta in metamagic_data.items() %}
+
 ## {{ meta_id.replace('_', ' ').title() }}
+
 {% if meta.effect %}
-**Effect:** {{ meta.effect }}
+{{ meta.effect }}
 {% endif %}
-{% if meta.cost %}
-**Cost:** {{ meta.cost }}
-{% endif %}
-{% if meta.limitation %}
-**Limitation:** {{ meta.limitation }}
-{% endif %}
+
+{% if meta.cost %}**Additional Flow Cost:** {{ meta.cost }}{% endif %}
+{% if meta.limitation %}**Limitation:** {{ meta.limitation }}{% endif %}
+
+---
+
 {% endfor %}
 {% endif %}
 
-*Metamagic allows wizards to customize spells for specific situations.*
+## Learning Metamagic
+
+Wizards learn metamagic options at milestones, similar to how fighters learn combat techniques:
+
+**Starting Metamagic:** Most wizards begin with 1-2 metamagic options. These represent the techniques learned during magical training—the foundations of your metamagic mastery.
+
+**Milestone Progression:** At moderate and major milestones, wizards can choose to learn additional metamagic options instead of other advancement choices. By campaign end, experienced wizards might know 4-6 metamagic techniques.
+
+**No Archetype Restriction:** Only wizards can learn metamagic through their class feature, but the specific techniques chosen are personal preference. Two wizards with identical spell lists play completely differently based on metamagic selections.
+
+---
+
+## Using Metamagic
+
+### Flow Economy
+
+Metamagic creates additional Flow costs beyond spell casting:
+
+**Standard Spell:** Fireball costs -1 Flow (Tier 2 spell)
+**Heightened Fireball:** Fireball costs -1 (base) -1 (metamagic) = -2 Flow total
+**Widened Heightened Fireball:** Fireball costs -1 (base) -1 (heightened) -1 (widened) = -3 Flow total
+
+Multiple metamagic options stack on the same spell, but Flow costs accumulate quickly. A triple-enhanced spell might cost -4 or -5 Flow—only possible at maximum Flow reserves.
+
+### Strategic Decisions
+
+Metamagic creates constant resource decisions:
+
+**Cast standard spell now?** Conserve Flow, cast more spells this fight.
+**Enhance with metamagic?** Spend extra Flow for improved effect, cast fewer total spells.
+**Save Flow for later?** Hold resources for critical moment enhanced casting.
+
+Good wizards manage Flow to maximize impact across the entire encounter, not just individual turns.
+
+### Combining Metamagic
+
+Most metamagic options stack with each other:
+- Quickened Heightened Fireball (cast faster AND burn hotter)
+- Widened Empowered Shield (affect larger area AND stronger protection)
+- Extended Subtle Charm (longer duration AND harder to detect)
+
+But costs accumulate. Three metamagic enhancements on one spell might cost the wizard's entire Flow pool. Use combinations strategically, not routinely.
+
+---
+
+## Metamagic by Purpose
+
+### Damage Enhancement
+
+**Heighten** increases spell damage beyond base values. Use when you need to eliminate tough enemies quickly or overcome damage resistance. The extra Flow investment pays off against dangerous foes.
+
+**Empower** maximizes certain dice results. Use when you need consistency over variable damage. Reliable damage matters more against precision targets than maximum potential damage.
+
+### Tactical Modification
+
+**Widen** affects larger areas. Use when facing multiple clustered enemies. The increased area can hit 2-3 additional targets, multiplying spell effectiveness.
+
+**Extend** increases duration for ongoing effects. Use on buffs (Shield, Blur) or persistent battlefield control. Longer duration means fewer recasts, conserving spell slots and Flow.
+
+**Quicken** reduces casting time. Use when action economy matters—casting and moving in the same turn, responding instantly to threats, or maintaining combat tempo.
+
+### Subtle Casting
+
+**Subtle** makes spellcasting less obvious. Use in social situations where you can't be seen casting, or combat scenarios where enemies target visible spellcasters. The stealth value exceeds the Flow cost in many situations.
+
+---
+
+## Building Your Metamagic Arsenal
+
+### Essential Options
+
+**Heighten** is nearly universal. Every wizard wants the option to boost damage when necessary. It's the most straightforward metamagic—spend Flow, deal more damage.
+
+**Quicken** dramatically improves action economy. Wizards normally spend entire turns casting; quickening lets you cast and act. This flexibility justifies the cost.
+
+### Situational Selections
+
+**Widen** benefits wizards who emphasize area spells. If your spell list includes Fireball, Lightning Bolt, and similar area effects, Widen becomes very valuable.
+
+**Extend** suits wizards who cast many buffs. If you routinely maintain Shield, Mage Armor, Blur, and similar ongoing effects, extending duration reduces recasting frequency.
+
+**Empower** helps consistent-damage builds. If you prefer reliable outcomes over variable results, empowering spells reduces random variance.
+
+**Subtle** is essential for social-focused wizards. If your campaign emphasizes courtly intrigue and subtle magic use, subtle casting becomes mandatory rather than optional.
+
+### Advanced Combinations
+
+Experienced wizards combine metamagic creatively:
+
+**Quickened Subtle Charm:** Cast instantly and unnoticeably in social encounters.
+**Widened Heightened Fireball:** Affect huge area with increased damage—devastating against clustered enemies.
+**Extended Subtle Mage Armor:** Long-lasting protection cast without observers noticing.
+
+These combinations are expensive (multiple -1 Flow costs) but create effects impossible through standard casting.
+
+---
+
+## Game Master Guidance
+
+### Teaching Metamagic
+
+Don't require extensive training time or special teachers. Wizards learn metamagic at milestones like any other advancement. You can flavor this as:
+- Self-discovery through experimentation
+- Insights from spellbooks or scrolls
+- Refinement of technique through practice
+- Guidance from mentors during downtime
+
+But don't gatekeep metamagic behind narrative requirements that delay mechanical advancement.
+
+### Balancing Enhanced Spells
+
+Metamagic makes wizards more powerful but not overwhelmingly so:
+- Flow costs limit frequency (can't enhance every spell)
+- Stacking costs limit combinations (triple-enhanced spells rare)
+- Other spellcasters have different advantages (Cleric domains, Bard inspiration)
+
+Don't punish wizards for using metamagic effectively. If they spend Flow wisely to win fights, that's working as intended.
+
+### Metamagic in Different Campaigns
+
+**High Magic:** Wizards might start with 3 metamagic options, learn more frequently. Metamagic becomes defining feature from beginning.
+
+**Standard Magic:** Wizards start with 1-2 options, learn more at moderate/major milestones. Metamagic develops over campaign.
+
+**Low Magic:** Wizards might have only 1-2 metamagic options total. Limited enhancement options reflect rare magical knowledge.
+
+### Common Questions
+
+**Can non-wizards learn metamagic?**
+No. Metamagic is the wizard's unique subsystem, like fighter techniques or rogue gambits. Other spellcasters have their own unique features.
+
+**Can wizards apply metamagic to all spells?**
+Yes, unless specific metamagic has limitations. Most metamagic works with any spell.
+
+**Do metamagic costs stack with spell costs?**
+Yes. Enhanced spells cost base spell Flow + metamagic Flow. Heightened Fireball (-1 base, -1 metamagic) costs -2 total.
+
+**Can wizards learn unlimited metamagic?**
+No. Limit based on milestones invested. Typical wizard might know 4-6 options by campaign end.
+
+---
+
+*Metamagic transforms wizards from spellcasters who use the same spells as everyone else into magical innovators who bend arcane forces to their will. Master your metamagic and cast spells that defy convention.*

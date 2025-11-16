@@ -1,23 +1,251 @@
-{# Equipment Quality - from equipment.yaml #}
-# EQUIPMENT QUALITY TIERS
-*Generated from YAML source data*
+{#
+Equipment Quality Template - Publication Style
+Generates equipment quality documentation with professional TTRPG prose
+#}
+# Equipment Quality
 
-## Overview
-Equipment comes in varying quality levels affecting performance and cost.
+Not all swords are created equal. The blade forged by master smith with finest steel performs noticeably better than mass-produced weapon hammered from scrap iron. Equipment quality represents this variation—the difference between crude, functional, excellent, and legendary craftsmanship.
+
+Quality affects mundane equipment before magical enchantment. A fine longsword grants bonuses through superior balance and edge retention, not magic. Quality represents craftsmanship, materials, and the skill of whoever created it.
+
+Understanding quality tiers helps you make informed purchasing decisions, recognize exceptional gear when you find it, and know when that rusty sword really is as bad as it looks.
+
+---
+
+## Quality Tiers
 
 {% if quality_data %}
+Equipment comes in distinct quality tiers, each offering different performance and cost:
+
 {% for quality_id, quality in quality_data.items() %}
-## {{ quality_id.replace('_', ' ').title() }}
-{% if quality.bonus %}
-- **Bonus:** {{ quality.bonus }}
-{% endif %}
-{% if quality.cost_multiplier %}
-- **Cost:** ×{{ quality.cost_multiplier }} base price
-{% endif %}
-{% if quality.description %}
-- **Description:** {{ quality.description }}
-{% endif %}
+### {{ quality_id.replace('_', ' ').title() }}
+
+{% if quality.modifier or quality.bonus %}**Performance:** {{ quality.modifier if quality.modifier else quality.bonus }}{% endif %}
+
+{% if quality.cost_multiplier %}**Cost:** {{ "×" + quality.cost_multiplier|string if quality.cost_multiplier is number else quality.cost_multiplier }} base price{% endif %}
+
+{% if quality.description %}**Description:** {{ quality.description }}{% endif %}
+
+{% if quality.special %}**Special:** {{ quality.special }}{% endif %}
+
+**Typical Use:** {% if 'crude' in quality_id|lower %}Improvised weapons, worn equipment past useful lifespan, or weapons made by unskilled smiths from poor materials. Avoid if possible—the -1 penalty makes already-difficult combat harder. Only use when nothing better available.{% elif 'standard' in quality_id|lower %}Normal adventuring gear. Reliable, affordable, and widely available. Most characters start with standard equipment and use it throughout early campaigns. Functions perfectly well—no bonuses but no penalties either.{% elif 'fine' in quality_id|lower %}Superior craftsmanship from skilled smiths using quality materials. The edge holds better, the balance feels perfect, the construction tolerates stress standard equipment cannot. Worth the 5× cost for primary weapons.{% elif 'masterwork' in quality_id|lower %}Artisan creations representing peak mortal craftsmanship. Each piece custom-made, perfectly balanced, using finest available materials. The 10× cost reflects weeks or months of expert labor. Reserved for signature equipment or critical gear.{% elif 'legendary' in quality_id|lower %}Weapons and armor of myth and legend. These aren't purchased—they're quest rewards, heirlooms, or artifacts discovered in ancient ruins. Each is unique, named, and carries history. Priceless both literally and narratively.{% else %}{{ quality.description if quality.description else "Quality tier affecting equipment performance and value." }}{% endif %}
+
+---
 {% endfor %}
+
+{% else %}
+### Crude
+**Performance:** -1 to hit
+**Cost:** Half normal price
+Poor quality equipment made from inferior materials or by unskilled crafters. Noticeably worse than standard gear.
+
+### Standard
+**Performance:** No modifier
+**Cost:** Normal price
+Typical adventuring equipment. Reliable and functional without exceptional characteristics.
+
+### Fine
+**Performance:** +1 to hit OR damage (choose when crafted)
+**Cost:** 5× normal price
+Superior craftsmanship using quality materials. Noticeably better than standard equipment.
+
+### Masterwork
+**Performance:** +1 to hit AND damage
+**Cost:** 10× normal price
+Peak mortal craftsmanship. Custom-made pieces representing months of expert work.
+
+### Legendary
+**Performance:** +2 to hit and damage, plus unique properties
+**Cost:** Priceless
+Weapons of legend. Each unique, each with history. Cannot be purchased.
+
 {% endif %}
 
-*Quality represents craftsmanship and materials, not magical enchantment.*
+---
+
+## Choosing Equipment Quality
+
+### Starting Equipment
+
+Most characters begin with standard quality:
+
+**Typical starting wealth:** 20-40 gold
+**Standard longsword cost:** 15 gold
+**Fine longsword cost:** 75 gold (prohibitively expensive)
+**Masterwork longsword:** 150 gold (impossible for starting characters)
+
+Early campaign, standard equipment is appropriate. Save money for consumables, adventuring gear, and armor upgrades.
+
+### When to Upgrade
+
+Invest in quality when you can afford it and need performance:
+
+**Session 3-5:** Fine weapons for primary combatants (if you've accumulated 50-100 gold)
+**Session 6-8:** Masterwork weapons or fine armor for specialists
+**Session 10+:** Legendary equipment through quests, not purchase
+
+Don't buy quality upgrades before you have basic defensive gear. Fine longsword doesn't help when you're unarmored and dying.
+
+### Which Equipment to Upgrade First
+
+Prioritize based on usage frequency:
+
+**Primary weapon** (used every combat) > **Armor** (worn constantly) > **Secondary weapon** (situational) > **Tools** (used occasionally)
+
+The weapon you swing every round benefits most from quality. Tools used twice per session can stay standard quality.
+
+---
+
+## Quality vs. Magical Enhancement
+
+### Key Differences
+
+**Quality (Mundane):**
+- Represents superior craftsmanship
+- Available for purchase (except Legendary)
+- Works for anyone who uses equipment
+- Stacks with magical enhancement
+
+**Magical Enhancement:**
+- Supernatural power imbued in item
+- Usually found as treasure, not purchased
+- Properties beyond normal materials
+- Can be applied to any quality tier
+
+### Stacking Quality and Magic
+
+Quality bonuses stack with magical enhancement:
+
+**Masterwork Longsword:** +1 to hit and damage (quality)
+**+1 Masterwork Longsword:** +2 to hit, +2 damage (quality + magic stack)
+**+2 Fine Longsword:** +3 to hit OR +3 damage (quality + magic stack)
+
+This stacking creates highly effective equipment, but costs accumulate rapidly. +1 masterwork longsword costs 150 (masterwork) + 600 (enchantment) = 750 gold minimum.
+
+### When to Pursue Each
+
+**Early campaign:** Standard equipment, save for armor/consumables
+**Mid campaign:** Fine/Masterwork primary weapons before magical enhancement
+**Late campaign:** Magical enhancement on already-quality equipment
+
+A +1 enhancement on fine weapon (total +2) costs less than +2 enhancement on standard weapon and provides same benefit.
+
+---
+
+## Equipment Quality by Type
+
+### Weapons
+
+Quality matters most for primary weapons:
+
+**Crude:** Avoid unless desperate. The -1 penalty is significant.
+**Standard:** Perfectly functional throughout entire campaign.
+**Fine:** Worthwhile upgrade for primary weapon around session 5.
+**Masterwork:** Reserve for signature weapons or wealthy characters.
+**Legendary:** Quest rewards or heirlooms, not purchases.
+
+Different weapon types cost same quality multipliers—fine dagger costs 5× dagger price, fine longsword costs 5× longsword price.
+
+### Armor
+
+Quality armor provides better protection or reduced penalties:
+
+**Standard:** Baseline protection, standard penalties
+**Fine:** Reduces one penalty by 1 (Grace penalty reduced, or stealth penalty eliminated)
+**Masterwork:** Reduces two penalties, or reduces one penalty by 2
+**Legendary:** Unique defensive properties beyond normal armor capabilities
+
+Armor quality particularly valuable for characters who need mobility alongside protection—fine chainmail that doesn't penalize stealth worth significant investment.
+
+### Tools
+
+Quality tools grant bonuses to relevant checks:
+
+**Standard tools:** No modifier
+**Fine tools:** +1 to skill checks using these tools
+**Masterwork tools:** +2 to skill checks using these tools
+
+Thieves' tools, artisan tools, musical instruments, and similar equipment benefit from quality. The lockpick using masterwork thieves' tools has significant advantage over one using standard tools.
+
+---
+
+## Obtaining Quality Equipment
+
+### Purchase
+
+Standard, Crude, and Fine equipment can be purchased in most cities:
+
+**General stores:** Standard and Crude
+**Smiths and craftspeople:** Standard and Fine
+**Specialist artisans:** Fine and (commissioned) Masterwork
+
+Masterwork requires commission—finding master smith, placing order, waiting weeks or months for completion. Not purchased off shelf.
+
+### Quests and Rewards
+
+Quality equipment makes excellent quest rewards:
+
+**Minor quest:** Fine weapon or armor
+**Moderate quest:** Masterwork weapon or armor
+**Major quest:** Legendary equipment with unique properties
+
+Game Masters can award quality equipment as treasure without unbalancing wealth—fine longsword worth 75 gold but only costs GM narrative approval.
+
+### Crafting
+
+Characters with appropriate craft skills can create quality equipment:
+
+**Standard:** TN 8, requires appropriate tools and materials
+**Fine:** TN 10, requires fine materials and considerable time
+**Masterwork:** TN 12, requires rare materials and weeks of work
+
+Crafting quality equipment provides cost savings (only pay material costs) but requires significant skill investment and campaign time.
+
+---
+
+## Game Master Guidance
+
+### Distributing Quality Equipment
+
+Award quality equipment strategically:
+
+**Too common:** If everyone has masterwork everything by session 3, quality means nothing
+**Too rare:** If players reach session 10 still using standard gear, quality feels unattainable
+**Appropriate:** Primary combatants acquire fine weapons sessions 4-6, masterwork sessions 8-10
+
+Quality equipment should feel like meaningful upgrade without becoming expected baseline.
+
+### Pricing and Availability
+
+Use quality multipliers as guidelines, not rigid rules:
+
+**Wealthy cities:** Fine equipment readily available, masterwork commissioned easily
+**Frontier towns:** Standard equipment available, fine rare and expensive
+**War zones:** Crude equipment common, even standard quality expensive
+
+Adjust availability to setting. Isolated villages shouldn't have masterwork smiths casually available.
+
+### Legendary Equipment
+
+Legendary quality should be unique and earned:
+
+**Each piece named:** *Flamebrand*, *The Unyielding*, *Shadowpiercer*
+**Each piece has history:** Who made it? Who wielded it? What deeds was it used for?
+**Each piece has personality:** Unique properties reflecting its legend
+
+Don't create generic "+2 legendary longswords." Create *The Sword of the Last King, which knows the weak points of traitors and burns with righteous fury*.
+
+### Quality as Character Progression
+
+Let players upgrade equipment quality across campaign:
+
+**Session 1:** Standard equipment, maybe one fine item
+**Sessions 3-5:** Upgrade primary weapon to fine quality
+**Sessions 6-8:** Acquire masterwork weapon or commission one
+**Sessions 9-12:** Find legendary equipment through epic quests
+
+This progression creates satisfying power curve separate from character advancement—your sword improves alongside your skills.
+
+---
+
+*Equipment quality represents the difference between adequate tools and exceptional ones. Invest wisely in quality equipment for gear you use constantly, and save for magical enhancement once you have solid mundane foundation.*

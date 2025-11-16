@@ -1,24 +1,202 @@
-{# Social Combat - from combat.yaml #}
-# SOCIAL COMBAT
-*Generated from YAML source data*
+{#
+Social Combat Template - Publication Style
+Generates social combat documentation with professional TTRPG prose
+#}
+# Social Conflict
 
-## Overview
-Alternative conflict resolution through social interaction.
+Not all conflicts end in bloodshed. The negotiation with the guild master, the debate before the council, the interrogation of the captured spy—these confrontations matter as much as sword fights but resolve through words rather than weapons.
+
+Social combat applies Flow RPG's core mechanics to social conflicts. Instead of attacking Guard to deal Vitality damage, you attack Composure to break an opponent's social resistance. The same Flow economy, stances, and tactical decisions that govern physical combat apply to social confrontations.
+
+---
 
 {% if social_data %}
-## Composure System
+
+## The Composure System
+
 {% if social_data.composure %}
-- **Formula:** {{ social_data.composure.formula if social_data.composure.formula else 'Will + Presence + 5' }}
-- **Function:** Like Guard for social conflicts
+Just as Guard represents your ability to avoid physical harm, Composure represents your ability to resist social pressure, maintain your position, and avoid giving ground in arguments or negotiations.
+
+**Composure Formula:** {{ social_data.composure.formula if social_data.composure.formula else 'Will + Presence + 5' }}
+
+Composure functions identically to Guard—it's the buffer that must be depleted before you can actually change someone's mind, extract information, or force concessions. High Composure characters resist social pressure effectively; low Composure characters fold under interrogation or persuasion.
 {% endif %}
 
 ## Social Actions
+
 {% if social_data.actions %}
+Instead of attacking with weapons, you use social actions:
+
 {% for action_id, action in social_data.actions.items() %}
-### {{ action_id.replace('_', ' ').title() }}
-- {{ action }}
+**{{ action_id.replace('_', ' ').title() }}:** {{ action }}
+
 {% endfor %}
 {% endif %}
+
+These actions follow the same mechanics as combat actions—roll 2d6 + attribute + skill versus target's defense (Composure). Success reduces the target's Composure. When Composure reaches 0, the target gives ground, reveals information, or accepts terms.
+
 {% endif %}
 
-*Social combat uses the same Flow economy but targets Composure instead of Guard.*
+---
+
+## Running Social Conflicts
+
+### When to Use Social Combat
+
+Use the social combat system when:
+- The outcome matters significantly to the story
+- Both sides have something at stake
+- Physical combat isn't the solution
+- You want structured resolution with mechanical depth
+
+Don't use social combat for:
+- Casual conversations with friendly NPCs
+- Simple purchases or routine interactions
+- Situations where one side has no leverage
+- Moments where roleplaying alone creates better scenes
+
+### Social Stances
+
+Just like physical combat, participants choose stances:
+
+**Aggressive Stance (Confrontational):**
+Press your position forcefully. You act first in social initiative, deal more social damage (convincing arguments, harsh interrogation), but are more vulnerable to counterarguments. Generate Flow through successful persuasion attempts.
+
+**Balanced Stance (Diplomatic):**
+Adapt to changing social currents. You act second, maintain neutral modifiers, can switch tactics easily. Generate Flow through exceptional social successes (critical successes on persuasion, negotiation, deception).
+
+**Defensive Stance (Guarded):**
+Protect your position without giving ground. You act last but gain bonus Composure, making you harder to sway. Generate Flow when opponents fail to break down your arguments or when you successfully defend your stance.
+
+Stances create the same tactical decisions in social combat as physical combat—aggression versus defense, immediate pressure versus sustained resistance.
+
+### Social Initiative
+
+Initiative in social conflicts follows the same stance-based order as physical combat:
+1. Aggressive (Confrontational) speakers act first
+2. Balanced (Diplomatic) speakers act second
+3. Defensive (Guarded) speakers act last
+
+Within each group, order by Presence (ties broken by Will). This creates social dynamics where aggressive arguers dominate conversation flow but defensive participants resist pressure better.
+
+### Flow in Social Conflict
+
+The same Flow economy governs social conflicts:
+
+**Generate Flow through:**
+- Successful social attacks (convincing arguments that reduce opponent's Composure)
+- Stance-specific triggers (Aggressive generates Flow on success, Defensive generates Flow when attacked)
+- Critical social successes (particularly clever arguments, devastating revelations)
+
+**Spend Flow on:**
+- Social techniques (analogous to combat techniques)
+- Enhanced persuasion attempts
+- Recovering Composure
+- Forcing concessions even before Composure depletes
+
+Social conflict Flow integrates with overall Flow economy—Flow generated in negotiations can be spent in subsequent combat, and vice versa.
+
+---
+
+## Social Techniques
+
+Just as fighters learn combat techniques, characters can learn social techniques:
+
+**Compelling Argument** (Minor): When you successfully reduce an opponent's Composure, reduce it by an additional amount. Cost: 1 Flow.
+
+**Misdirection** (Minor): When an opponent attacks your Composure, you may redirect their argument to a different topic, negating the attack. Cost: 1 Flow.
+
+**Devastating Revelation** (Moderate): Reveal a fact that dramatically undermines your opponent's position. Reduce their Composure by a significant amount regardless of their defense. Cost: 2 Flow.
+
+**Unshakeable Conviction** (Major): For the remainder of the social conflict, your Composure cannot be reduced below 1. You cannot be broken. Cost: 3 Flow.
+
+These techniques create the same tactical depth in social conflicts that combat techniques create in physical fights.
+
+---
+
+## Resolving Social Conflicts
+
+### Victory Conditions
+
+Social conflicts end when:
+
+**One side's Composure reaches 0:** They've been socially defeated. They give ground, reveal information, accept terms, or flee the conversation. The extent depends on context and what's at stake.
+
+**One side concedes:** Before Composure depletion, a participant might concede voluntarily. This often happens when continuing would be pointless or costly.
+
+**Time expires:** Some social conflicts have time limits—the guards return in 10 minutes, the council must vote in an hour. If neither side achieves their goals before time expires, the status quo persists or a compromise emerges.
+
+**Third party intervenes:** External events might interrupt social conflicts—combat breaks out, authority figures arrive, new information emerges.
+
+### Consequences of Defeat
+
+When someone's Composure reaches 0:
+
+**Interrogation:** The subject reveals the information being sought. The depth and accuracy depend on context—hostile subjects might reveal partial truths, friendly subjects provide complete answers.
+
+**Negotiation:** The defeated party accepts the victor's terms. In balanced negotiations, this might mean compromise rather than complete capitulation.
+
+**Persuasion:** The defeated party changes their mind or agrees to the proposed action. They genuinely believe (at least temporarily) what they've been convinced of.
+
+**Intimidation:** The defeated party complies through fear. They'll follow orders while the threat remains credible but might seek revenge later.
+
+Social defeat doesn't mean mind control—it means accepting terms, revealing information, or changing position within the conflict's scope.
+
+---
+
+## Game Master Guidance
+
+### Balancing Social and Physical Conflict
+
+Don't let social combat replace physical combat entirely, but don't make it useless either:
+
+**Social combat solves:**
+- Information gathering (interrogations, investigations)
+- Alliances and betrayals (negotiations, persuasion)
+- Avoiding violence (talking down guards, convincing enemies to flee)
+
+**Social combat doesn't solve:**
+- Opponents who refuse to talk
+- Mindless creatures without Composure
+- Situations where violence is already inevitable
+- Stakes that can only be resolved through action
+
+### NPCs and Composure
+
+Assign NPC Composure based on their social resilience:
+
+**Low Composure (Composure 3-5):** Common folk, nervous guards, inexperienced negotiators. Fold quickly under social pressure.
+
+**Moderate Composure (Composure 6-8):** Trained diplomats, experienced merchants, hardened criminals. Resist social pressure but can be broken.
+
+**High Composure (Composure 9-12):** Master negotiators, fanatics, trained spies. Extremely difficult to sway or break.
+
+**Legendary Composure (Composure 13+):** Religious leaders, master politicians, those with unshakeable convictions. Nearly impossible to defeat socially without exceptional effort.
+
+### Mixing Social and Physical Threat
+
+Intimidation creates interesting dynamics—physical threat enhances social pressure:
+
+**Threatening violence:** Grants advantage (+1) on intimidation checks but might escalate to actual combat if the target calls your bluff.
+
+**Demonstrating capability:** Showing that you *could* kill them without actually threatening increases intimidation effectiveness—the implication is clear without the commitment.
+
+**Captured opponents:** Being physically defeated grants social advantage—it's easier to interrogate defeated enemies than threatening ones.
+
+The relationship between physical power and social pressure creates realistic dynamics.
+
+### When Social Combat Feels Wrong
+
+Not every social interaction needs mechanical resolution:
+
+**Friendly NPCs:** They help because they're friendly. Don't make players fight socially for information allies would give freely.
+
+**Trivial Stakes:** The shopkeeper sells you rope. No need for social combat unless you're negotiating unusual terms.
+
+**Roleplay Moments:** Sometimes the conversation itself is the point. If the table is engaged in the roleplay, don't interrupt with mechanics unless they'd enhance the scene.
+
+Use social combat when mechanics would improve the experience, not reflexively for every conversation.
+
+---
+
+*Social combat applies the same tactical depth to words that physical combat applies to swords. Master both to triumph in all conflicts.*

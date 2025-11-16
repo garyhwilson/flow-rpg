@@ -1,24 +1,232 @@
-{# Equipment Bonding - from equipment.yaml #}
-# EQUIPMENT BONDING SYSTEM
-*Generated from YAML source data*
+{#
+Equipment Bonding Template - Publication Style
+Generates equipment bonding documentation with professional TTRPG prose
+#}
+# Equipment Bonding
 
-## Overview
-Equipment grows with you through use and attachment.
+A sword is just metal until you've fought with it through a hundred battles. Armor becomes more than leather and mail after it's saved your life repeatedly. Equipment bonding represents this truth—the deep connection that develops between adventurer and gear through shared experience, repeated use, and accumulated trust.
 
-{% if bonding_data %}
-## Bonding Stages
-{% for stage_id, stage in bonding_data.items() %}
-### {{ stage_id.replace('_', ' ').title() }}
-{% if stage.requirement %}
-- **Requirement:** {{ stage.requirement }}
-{% endif %}
-{% if stage.benefit %}
-- **Benefit:** {{ stage.benefit }}
-{% endif %}
-{% if stage.narrative %}
-- **Narrative:** {{ stage.narrative }}
-{% endif %}
+{% if bonding_data and bonding_data.description %}{{ bonding_data.description }}. {% else %}Equipment grows with use, becoming more effective as you master it.{% endif %} This isn't magical enchantment—it's expertise, familiarity, and the unconscious adjustments that come from using the same equipment day after day, fight after fight.
+
+Equipment bonding provides an alternative to signature equipment for players who prefer gradual mechanical progression through use rather than milestone-based evolution. The same sword becomes deadlier not through magical enhancement, but through your perfect understanding of its balance, reach, and edge.
+
+---
+
+## How Equipment Bonding Works
+
+### Tracking Successful Uses
+
+Equipment bonds through successful use in meaningful situations:
+
+**Weapons:** Successful attacks that hit and deal damage
+**Armor:** Successfully protecting you from attacks (being hit while wearing it)
+**Tools:** Successful skill checks using the equipment
+**Shields:** Successful defensive actions or blocks
+
+Routine practice doesn't count. Bonding requires actual stakes—combat, critical skill checks, life-or-death moments. The equipment must prove itself in real circumstances.
+
+### Bonding Stages
+
+{% if bonding_data and bonding_data.stages %}
+Equipment progresses through distinct bonding stages as you use it:
+
+{% for stage_id, stage in bonding_data.stages.items() %}
+#### {{ stage_id.replace('_', ' ').title() }}
+
+{% if stage.uses or stage.requirement %}**Requirement:** {{ stage.uses if stage.uses else stage.requirement }}{% endif %}
+
+{% if stage.benefit %}**Benefit:** {{ stage.benefit }}{% endif %}
+
+{% if stage.narrative %}**Narrative:** {{ stage.narrative }}{% endif %}
+
+**In Practice:** {% if 'familiar' in stage_id|lower %}After ten successful uses, you understand this equipment's quirks and capabilities. The +1 bonus to specific actions represents your growing expertise—you know exactly where this sword's sweet spot is, precisely how this armor distributes weight.{% elif 'trusted' in stage_id|lower %}Twenty-five uses builds deep familiarity. You can ignore minor imperfections because you've learned to compensate unconsciously. That notch in the blade doesn't affect your strikes anymore—you angle attacks to account for it automatically.{% elif 'bonded' in stage_id|lower %}Fifty uses creates true partnership. The equipment feels like extension of yourself. The +1 magical equivalence isn't enchantment—it's perfect mastery translating mundane equipment into legendary performance through skill alone.{% elif 'legendary' in stage_id|lower %}One hundred uses transcends normal mastery. Equipment bonded this thoroughly develops unique properties reflecting how you've used it. The sword that's killed a hundred foes knows how to kill—and helps you do it.{% else %}As equipment bonds, it becomes increasingly effective in your hands specifically. Others using your bonded equipment don't gain these benefits—this is personal mastery, not inherent magic.{% endif %}
+
+---
 {% endfor %}
+
+{% else %}
+#### Familiar (10 Uses)
+Gain +1 to specific actions with this equipment. You've learned its balance and quirks.
+
+#### Trusted (25 Uses)
+Ignore minor flaws—treat equipment as if one quality tier higher. Deep familiarity compensates for imperfections.
+
+#### Bonded (50 Uses)
+Equipment counts as +1 magical due to your perfect mastery. You and equipment move as one.
+
+#### Legendary (100 Uses)
+Equipment develops unique property reflecting your use. Transcends normal limits through repeated legendary achievements.
+
 {% endif %}
 
-*Equipment bonding represents the deep connection between warrior and weapon.*
+### Bonding Multiple Items
+
+You can bond with multiple pieces of equipment simultaneously, but bonding progresses separately for each item:
+
+**Weapon at 40 uses (approaching Bonded)** + **Armor at 15 uses (past Familiar)** + **Shield at 8 uses (not yet Familiar)**
+
+Track uses independently. Different equipment bonds at different rates based on how frequently you use each piece.
+
+---
+
+## Equipment Bonding vs. Signature Equipment
+
+### Key Differences
+
+**Equipment Bonding:**
+- Gradual progression through use
+- Multiple items can bond simultaneously
+- Progress purely through play, no milestone investment
+- Benefits cap at specific thresholds
+- Represents mastery through repetition
+
+**Signature Equipment:**
+- Milestone-based evolution
+- Typically 1-2 items maximum
+- Requires milestone choices for progression
+- Can achieve higher power levels
+- Represents narrative importance and character identity
+
+### Which System to Use?
+
+**Use Equipment Bonding when:**
+- You prefer mechanical progression through play rather than choices
+- You want multiple pieces of equipment to improve gradually
+- You like tracking incremental progress toward thresholds
+- Your character is pragmatic warrior who masters whatever tools they carry
+
+**Use Signature Equipment when:**
+- You want narrative weight attached to specific items
+- You prefer milestone-based meaningful choices
+- You want equipment that cannot be permanently lost
+- Your character has iconic gear central to their identity
+
+**Use Both:** Some campaigns allow both systems—signature equipment for your primary weapon, bonding for secondary gear. Discuss with your GM.
+
+---
+
+## Tracking Equipment Bonding
+
+### Recording Uses
+
+Simple tally system works best:
+
+**My Longsword:** |||| |||| ||| (13 uses - past Familiar threshold)
+**My Chainmail:** |||| |||| |||| |||| |||| ||| (23 uses - approaching Trusted threshold)
+**My Shield:** |||| || (7 uses - not yet Familiar)
+
+Mark successful use with tally. When you reach threshold, note the new bonding stage benefit on your character sheet.
+
+### What Counts as "Successful Use"
+
+Be consistent about what qualifies:
+
+**Weapons:** Attack rolls that hit and deal damage (not missed attacks)
+**Armor:** Being hit by attacks (not avoiding attacks entirely)
+**Shields:** Active defensive uses (not passive carrying)
+**Tools:** Successful skill checks with meaningful stakes
+
+GMs set standards for what counts. Some prefer "any use in actual danger," others require "success that matters to scene outcome."
+
+### Reaching Thresholds
+
+When equipment reaches bonding threshold:
+
+1. **Record new benefit** on character sheet
+2. **Describe change** narratively—how does equipment feel different?
+3. **Continue tracking** uses toward next threshold
+4. **Celebrate milestone** with table acknowledgment
+
+Bonding thresholds represent significant investment—10, 25, 50, 100 uses take real campaign time. Reaching them should feel earned.
+
+---
+
+## Benefits of Bonded Equipment
+
+### Familiar Stage
+
+The +1 to specific actions represents growing expertise:
+
+**Longsword (Familiar):** +1 to attacks against humanoid opponents
+**Lockpicks (Familiar):** +1 to picking mechanical locks
+**Plate Armor (Familiar):** +1 to resisting grapples and pushes
+
+The bonus applies to narrow application you've practiced repeatedly. Discuss appropriate scope with GM—not "all combat," but "attacks against specific enemy type" or "specific defensive situation."
+
+### Trusted Stage
+
+Ignoring minor flaws means equipment performs one quality tier higher:
+
+**Worn leather armor → Performs like fine leather armor**
+**Standard longsword → Functions like fine longsword (+1 bonus)**
+**Basic thieves' tools → Equivalent to masterwork tools**
+
+This doesn't change the equipment's actual quality—it changes your ability to compensate for imperfections through mastery.
+
+### Bonded Stage
+
+Counting as +1 magical overcomes certain resistances and provides:
+
+**Hits creatures immune to non-magical weapons**
+**Bypasses DR that doesn't affect magical equipment**
+**Recognized as magical by detect magic (your mastery radiates)**
+
+This isn't enchantment—it's skill so perfect it transcends mundane limitations.
+
+### Legendary Stage
+
+Unique properties emerge from how you've used the equipment:
+
+**The sword that killed 100 enemies** might gain +1d6 damage against targets below half health
+**The armor hit 100 times** might grant +2 DR against physical attacks
+**The shield used 100 times** might allow perfect blocks (negate damage) once per scene
+
+Work with GM to define appropriate unique property based on equipment's history and your usage patterns.
+
+---
+
+## Game Master Guidance
+
+### Deciding Use Requirements
+
+Set consistent standards for what counts as bonding use:
+
+**Lenient:** Any meaningful use in dangerous situation (faster bonding, more generous)
+**Standard:** Successful uses that materially affect outcomes (balanced progression)
+**Strict:** Only critical successes or extraordinary circumstances (slow bonding, high value)
+
+Most campaigns use Standard—successful uses during actual challenges, not practice or trivial circumstances.
+
+### Balancing Bonding
+
+Equipment bonding shouldn't overshadow other advancement:
+
+**Appropriate bonding speed:** 10-15 uses per tier (sessions 5-8 reach Bonded)
+**Too fast:** Familiar at session 1, Legendary by session 4 (devalues progression)
+**Too slow:** Still working toward Familiar at session 10 (feels unrewarding)
+
+Typical combat-focused campaign: weapon reaches Familiar (session 2-3), Trusted (session 5-6), Bonded (session 8-9), Legendary unlikely unless campaign extends past session 12.
+
+### Unique Properties
+
+When equipment reaches Legendary, collaborate on appropriate unique property:
+
+**Reflect usage:** Sword used for executions might gain bonus against prone enemies
+**Match theme:** Armor worn by protector might grant bonus when defending allies
+**Balance power:** Unique properties should feel special without overshadowing legendary techniques
+
+Legendary bonding represents 100+ successful uses—significant campaign investment deserving meaningful reward.
+
+### Losing Bonded Equipment
+
+Bonded equipment lost or destroyed creates narrative opportunity:
+
+**Temporary loss:** Quest to recover becomes personal mission
+**Destruction:** Reforging quest using pieces maintains bonding (starts at previous stage -1)
+**Replacement:** New equipment starts bonding from scratch (old bonds don't transfer)
+
+Don't casually destroy bonded equipment—it represents player investment. But occasional loss creates dramatic stakes.
+
+---
+
+*Equipment bonding turns mundane gear into trusted companions through accumulated experience. Every successful use strengthens the bond, until warrior and weapon move as single perfectly coordinated entity.*
