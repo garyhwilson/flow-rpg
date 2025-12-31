@@ -41,12 +41,15 @@ Most Paladins develop at least moderate scores in Will and either Might or Prese
 
 Paladins begin with the following skill proficiencies, reflecting their specialized training in principle-guided combat and protective service:
 
-**Professional (+2):**
+**Professional (+1):**
 - Command (inspirational leadership, authoritative presence, and decisive direction)
 
-**Novice (-1):**
+**Competent (+0):**
 - Combat (martial techniques, defensive positioning, and protective tactics)
+
+**Novice (-1):**
 - Medicine (treatment of battle injuries, particularly for protected individuals)
+- Sorcery (divine magic channeling for protective and smiting effects)
 
 **Special Ability:**
 - **Divine Spellcasting:** Can cast divine spells regardless of attributes (archetype training overrides normal spellcasting requirements)

@@ -8,9 +8,8 @@ This document explains how Archetypes integrate with the core Flow RPG system me
 
 Archetypes determine a character's starting skill proficiencies, providing a foundation of professional training:
 
-- **Professional (+2):** Core competencies central to the archetype's function
-- **Competent (+0):** Secondary skills that support the archetype's approach
-- **Basic (not specified):** Peripheral skills with casual familiarity
+- **Professional (+1):** Core competencies central to the archetype's function
+- **Novice (-1):** Secondary skills that support the archetype's approach
 - **Untrained (-2):** Skills outside the archetype's typical training
 
 ### Skill Advancement Patterns

@@ -97,6 +97,54 @@ combat_techniques:
       acquisition: "Major milestone"
 
 # ============================================
+# WIZARD DEFENSIVE TECHNIQUES
+# ============================================
+
+wizard_techniques:
+  description: "Defensive abilities for arcane casters"
+  source: "Wizard archetype starting feature"
+
+  arcane_ward:
+    name: "Arcane Ward"
+    description: "Instinctive magical shield that deflects incoming harm"
+
+    trigger: "When you take damage from any source"
+    action_type: "Reaction"
+    flow_cost: 1
+
+    effect: "Reduce the damage by 1d6 + Mind"
+
+    scaling:
+      mind_minus_1: "Reduces damage by avg 2.5"
+      mind_0: "Reduces damage by avg 3.5"
+      mind_1: "Reduces damage by avg 4.5"
+      mind_2: "Reduces damage by avg 5.5"
+      mind_3: "Reduces damage by avg 6.5"
+
+    acquisition: "Wizard starting feature (free with Arcane Battery)"
+
+    availability_note: "Other characters can learn this through Minor milestone, but it scales with Mind so wizards benefit most"
+
+    tactical_notes: |
+      - Can use multiple times per round if you have Flow
+      - Competes with offensive Flow spending (spells, metamagic)
+      - Most effective when combined with Shield spell
+      - Consider saving Flow for emergencies vs. spending on damage
+      - At Mind +3, negates roughly one-third of a Champion's attack
+
+    example:
+      situation: "Champion hits Aldric for 19 damage"
+      response: "Aldric spends 1 Flow, rolls 1d6+3 = 7"
+      result: "Takes 12 damage instead of 19"
+
+    design_rationale: |
+      Gives Wizards meaningful defensive choice from Session 1.
+      Flow cost ensures it competes with spellcasting - you can't
+      both nuke enemies AND block all incoming damage.
+      Scales with Mind, keeping it wizard-optimal while allowing
+      other casters to use it less efficiently.
+
+# ============================================
 # METAMAGIC TECHNIQUES
 # ============================================
 

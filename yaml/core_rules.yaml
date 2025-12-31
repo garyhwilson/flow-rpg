@@ -48,11 +48,53 @@ resolution_system:
       value: 12
       success_rate_base: 16.7
       description: "Near-impossible feats"
-    legendary: 
+    legendary:
       value: 14
       success_rate_base: 2.8
       description: "Mythic achievements"
-    
+
+  # ================================================
+  # MANDATORY TN SCALING - CORE RULE (NOT OPTIONAL)
+  # ================================================
+
+  mandatory_tn_scaling:
+    rule_status: "CORE RULE - NOT OPTIONAL GUIDANCE"
+
+    critical_warning: |
+      AT +5 MODIFIER, TN 8 SUCCEEDS 97% OF THE TIME (ONLY FAILS ON SNAKE EYES).
+      This is NOT a meaningful challenge. GMs MUST use higher TNs as party power grows.
+      FAILURE TO SCALE TNs WILL MAKE SESSIONS 4-12 TRIVIAL AND BORING.
+
+    rationale: "Bounded accuracy caps modifiers at +5, but this creates near-automatic success vs TN 8. The solution is mandatory TN scaling, not higher modifier caps."
+
+    scaling_table:
+      early_campaign:
+        party_modifier: "+0 to +2"
+        sessions: "1-3"
+        standard_tn: 8
+        hard_tn: 10
+        note: "TN 8 feels appropriately challenging (58-86% success)"
+
+      mid_campaign:
+        party_modifier: "+3 to +4"
+        sessions: "4-6"
+        standard_tn: 10
+        hard_tn: 12
+        note: "TN 8 becomes routine (91-97%), use TN 10 for real challenges"
+
+      late_campaign:
+        party_modifier: "+5"
+        sessions: "7+"
+        standard_tn: 10
+        hard_tn: 12
+        note: "TN 8 is trivial (97.2%), TN 10 is new baseline, TN 12 for hard challenges"
+
+    quick_reference:
+      at_plus_0: "TN 8 = 58% (challenging)"
+      at_plus_2: "TN 8 = 86% (reliable), TN 10 = 58% (challenging)"
+      at_plus_3: "TN 8 = 91% (routine), TN 10 = 72% (challenging)"
+      at_plus_5: "TN 8 = 97% (automatic), TN 10 = 72% (challenging), TN 12 = 42% (hard)"
+
   success_tiers:
     failure:
       range: "6 or less"
@@ -79,12 +121,33 @@ resolution_system:
       flow_change: "+1 Flow to character"
       narrative: "Yes, and something exceptional"
 
-      threshold_examples:
-        modifier_0_2: "Crit on 13+ (16.7% chance)"
-        modifier_3_5: "Crit on 14+ (8.3% chance)"
-        note: "With +5 max modifier, critical threshold caps at 14+, maintaining 8.3% crit rate throughout campaign"
+      threshold_by_modifier:
+        modifier_0:
+          threshold: 13
+          required_roll: "13+ on 2d6 (impossible without advantage)"
+          probability: "0%"
+        modifier_1:
+          threshold: 13
+          required_roll: "12+ on 2d6"
+          probability: "2.8%"
+        modifier_2:
+          threshold: 13
+          required_roll: "11+ on 2d6"
+          probability: "8.3%"
+        modifier_3:
+          threshold: 14
+          required_roll: "11+ on 2d6"
+          probability: "8.3%"
+        modifier_4:
+          threshold: 14
+          required_roll: "10+ on 2d6"
+          probability: "16.7%"
+        modifier_5:
+          threshold: 14
+          required_roll: "9+ on 2d6"
+          probability: "27.8%"
 
-      design_rationale: "Keeps crits rare and exciting throughout progression. With +5 cap and 14+ threshold, crits stay at healthy 8.3% rate even at peak power. Without scaling, high modifiers would crit 70%+ of the time, making them the default outcome rather than special moments."
+      design_rationale: "At +5 cap, heroes crit ~28% of the time. This is intentional - legendary heroes should experience frequent moments of excellence. The scaling threshold (13→14 at +3) prevents crits from dominating early game while allowing heroic frequency at peak power."
     
     enhanced_success:
       trigger: "Beat TN by 5+"
@@ -193,10 +256,11 @@ flow_system:
           limit: "Once per turn"
       
       balanced:
-        critical_only:
-          trigger: "Any critical success"
+        excellence:
+          trigger: "Any roll of 8+ (natural, before modifiers)"
           amount: 1
-          limit: "Stacks with universal"
+          limit: "No limit"
+          note: "About 58% chance - competitive with other stances"
       
       defensive:
         being_attacked:

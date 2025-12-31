@@ -88,6 +88,55 @@ Flow is the central resource that powers combat techniques, spells, and narrativ
 - Access narrative advantages (GM discretion)
 - No cost for stance switching (revised from original)
 
+#### Flow Spending Quick Reference
+
+| Category | Ability | Flow Cost |
+|----------|---------|-----------|
+| **General** | Enhance any roll | +1 per Flow spent |
+| | | |
+| **Spells** | Cantrip (Tier 0) | 0 |
+| | Basic Spell (Tier 1) | 0 |
+| | Advanced Spell (Tier 2) | -1 |
+| | Expert Spell (Tier 3) | -2 |
+| | Master Spell (Tier 4) | -3 |
+| | | |
+| **Combat Techniques** | Riposte (counter after defend) | 1 |
+| | Quick Recovery (regain 1d6 Guard) | 1 |
+| | Perfect Parry (negate one attack) | 2 |
+| | Perfect Strike (ignore armor) | 2 |
+| | Whirlwind Strike (hit all adjacent) | 3 |
+| | Devastating Blow (double damage dice) | 3 |
+| | Battlefield Control (reposition combatants) | 3 |
+| | Unstoppable Assault (auto-hit, max damage) | 6 |
+| | Death Blow (execute wounded target) | 6 |
+| | | |
+| **Metamagic** | Subtle Spell (no visible components) | 1 |
+| | Extended Spell (double duration) | 1 |
+| | Careful Spell (exclude allies from AoE) | 1 |
+| | Empowered Spell (+1 damage die) | 2 |
+| | Twinned Spell (target two creatures) | 2 |
+| | Quickened Spell (cast as bonus action) | 3 |
+| | Heightened Spell (+2 save TN) | 3 |
+| | Persistent Spell (lasts entire scene) | 4 |
+| | | |
+| **Divine Techniques** | Lay on Hands (heal 1d6 Vitality) | 1 |
+| | Divine Strike (+1d6 radiant damage) | 1 |
+| | Healing Surge (allies in zone recover 1d6 Guard) | 2 |
+| | Protective Aura (allies +1 to saves) | 2 |
+| | Banishing Smite (send extraplanar home) | 3 |
+| | Inspiring Presence (activation) | 3 |
+| | | |
+| **Gambits** | Shadow Step (teleport behind enemy) | 2 |
+| | Impossible Dodge (negate all damage) | 3 |
+| | Death Mark (crit on 10+ vs target) | 3 |
+| | | |
+| **Inspiration** | Inspiring Word (ally +1d6 to roll) | 1 |
+| | Cutting Words (enemy -1d6 to roll) | 1 |
+| | | |
+| **Defensive** | Arcane Ward (reduce damage by 1d6+Mind) | 1 |
+
+> **Signature Moves:** At moderate milestone, you can create a personal version of any technique you know. Your signature version costs 1 less Flow (minimum 0).
+
 **Core Philosophy:** Flow is moment-to-moment momentum that ebbs and flows naturally. All character types can generate Flow through their preferred playstyle - aggressive fighters through offense, defensive fighters through protection, and spellcasters through magical success.
 
 ### Attribute System
@@ -117,22 +166,19 @@ Flow is the central resource that powers combat techniques, spells, and narrativ
 
 ### Skill System
 
-Skills represent your character's training and expertise in various areas. Each skill has seven possible ratings:
+Skills represent your character's training and expertise in various areas. Each skill has five possible ratings:
 
-**Seven-Tier Progression:**
+**Five-Tier Progression:**
 1. **Untrained** (-2 modifier): No formal training
 2. **Novice** (-1 modifier): Basic understanding
-3. **Competent** (+0 modifier): Professional capability
-4. **Professional** (+2 modifier): Skilled practitioner
-5. **Expert** (+4 modifier): Recognized master
-6. **Master** (+6 modifier): Legendary capability
-7. **Legendary** (+8 modifier): Mythic mastery
+3. **Competent** (+0 modifier): Functional capability
+4. **Professional** (+1 modifier): Skilled practitioner
+5. **Expert** (+2 modifier): Peak human mastery
 
 **Advancement Limits by Milestone Type:**
-- **Starting Characters:** Maximum Professional (+2)
-- **Minor Milestones:** Can advance up to Expert (+4)
-- **Moderate Milestones:** Can advance up to Master (+6)
-- **Major Milestones:** Can advance to Legendary (+8)
+- **Starting Characters:** Maximum Competent (+0), one Professional (+1) from archetype
+- **Minor Milestones:** Can advance skills up to Professional (+1)
+- **Moderate Milestones:** Can advance skills to Expert (+2)
 
 **The 15 Core Skills:**
 
@@ -366,33 +412,34 @@ Characters have two health resources that work together to model both minor and 
 
 ### Guard
 
-Guard represents your ability to avoid serious harm through armor, dodging, and tactical positioning.
+Guard represents your ability to avoid serious harm through armor, dodging, tactical positioning, and mental fortitude.
 
-- **Formula:** 8 + Higher of (Might or Grace) + (Total Milestones × 2)
-- **Function:** Ablative defense that absorbs damage first (allows both tough and agile defenders)
+- **Formula:** 12 + max(Might, Grace, Will)
+- **Function:** Ablative defense that absorbs damage first
 - **Recovery:** Fully restored between scenes
 - **In-Combat Recovery:** Can use Rally action to recover 1d6 Guard (once per scene)
 
-**Why Two Options?**
-Using the higher of Might or Grace allows both tough fighters (high Might) and agile defenders (high Grace) to be effective. This creates build diversity without penalizing character concepts.
+**Why Three Options?**
+Using the highest of Might, Grace, or Will allows tough fighters (high Might), agile defenders (high Grace), and mentally resilient characters (high Will) to all be effective. This is especially important for casters who typically have high Will but low physical attributes.
 
-**Milestone Scaling:**
-Guard increases with each milestone you achieve, making characters significantly more resilient as they advance. The doubled scaling (×2) represents improved combat awareness, better positioning, and tactical experience.
+> **Note:** Guard is NOT a target number for attacks. Attacks always roll against TN 8 (or higher per GM guidance). Guard is an HP pool that absorbs damage from successful hits.
 
-**Milestone Tracking:**
-Keep a running total of all milestones achieved (minor, moderate, and major) on your character sheet. Multiply this total by 2 and add it to your Guard score.
+**Archetype Bonuses:**
+Some archetypes provide additional Guard through their features:
+- **Divine Grace** (Paladin, Cleric): +4 Guard
+- **Arcane Battery** (Wizard): +2 Guard
 
 ### Vitality
 
 Vitality represents your core health and ability to withstand serious injury.
 
-- **Formula:** 10 + Will + (Major Milestones × 3)
+- **Formula:** 10 + Will
 - **Function:** Core health representing serious injury
 - **Consequences:** Damage to Vitality often causes lasting effects
 - **Critical Point:** At 0 Vitality, you fall unconscious and begin dying
 
-**Major Milestone Scaling:**
-Vitality only increases with major milestones (every 12-15 sessions), making it a slowly growing resource that keeps death meaningful while reducing lethality at high levels.
+**Increasing Vitality:**
+Vitality can be increased through milestone choices (see Advancement), but does not scale automatically. This keeps death meaningful throughout the campaign.
 
 ### Damage Resolution
 
@@ -811,38 +858,40 @@ When secure and growing, characters integrate positive aspects:
 ## Starting Skills
 
 ### Fighter
-- **Professional (+2):** Combat
-- **Competent (+0):** Athletics, Command
+- **Professional (+1):** Combat
+- **Novice (-1):** Athletics, Command
 - **Equipment:** Medium armor, martial weapon, shield
 
 ### Ranger
-- **Professional (+2):** Survival
-- **Competent (+0):** Combat, Investigate
+- **Professional (+1):** Survival
+- **Novice (-1):** Combat, Investigate
 - **Equipment:** Light armor, bow, tracking kit
 
 ### Paladin
-- **Professional (+2):** Command
-- **Competent (+0):** Combat, Medicine
+- **Professional (+1):** Command
+- **Competent (+0):** Combat
+- **Novice (-1):** Medicine, Sorcery
 - **Equipment:** Heavy armor, weapon, holy symbol
 
 ### Rogue
-- **Professional (+2):** Stealth, Finesse
-- **Competent (+0):** Deceive
+- **Professional (+1):** Stealth, Finesse
+- **Competent (+0):** Combat
 - **Equipment:** Light armor, daggers, thieves' tools
 
 ### Wizard
-- **Professional (+2):** Sorcery, Lore
-- **Competent (+0):** Investigate
+- **Professional (+1):** Sorcery, Lore
+- **Novice (-1):** Investigate
 - **Equipment:** Robes, spellbook, component pouch
 
 ### Cleric
-- **Professional (+2):** Medicine, Empathy
+- **Professional (+1):** Medicine, Empathy
 - **Competent (+0):** Sorcery
 - **Equipment:** Medium armor, mace, holy symbol
 
 ### Bard
-- **Professional (+2):** Perform
-- **Competent (+0):** Deceive, Sorcery
+- **Professional (+1):** Perform
+- **Competent (+0):** Sorcery
+- **Novice (-1):** Deceive
 - **Equipment:** Light armor, instrument, rapier
 
 ## Flow Mechanics by Archetype
@@ -2008,7 +2057,7 @@ Choose ONE of the following when you reach a minor milestone:
 **Skill Development**
 - Advance one skill up one tier (Untrained → Novice → Competent → Professional)
 - Gain a new skill at Novice level (-1)
-- Note: Cannot advance beyond Expert tier (+4) with minor milestones
+- Note: Cannot advance beyond Professional tier (+1) with minor milestones
 
 **Attribute Adjustment**
 - Adjust one attribute by +1/-1 (representing shift in focus or retraining)
@@ -2054,7 +2103,7 @@ Minor improvements that provide incremental power growth. Some edges can be take
 
 **Magnus (Fighter)** learns the Press Advantage combat technique, allowing him to deal +1d6 damage when his Flow is positive.
 
-**Lyra (Wizard)** advances her Investigate skill from Competent (+0) to Professional (+2), having honed her analytical abilities during the mission.
+**Lyra (Wizard)** advances her Investigate skill from Competent (+0) to Professional (+1), having honed her analytical abilities during the mission.
 
 ### Appropriate Challenges After Minor Milestones
 
@@ -2108,9 +2157,9 @@ Choose ONE of the following when you reach a moderate milestone:
 - Note: Cannot raise any attribute above +4 until a major milestone
 
 **Skill Mastery**
-- Advance one skill up to Master level (+6)
-- This allows progression beyond the Expert tier (+4) available through minor milestones
-- Gain a new skill at Professional level (+2) as an alternative option
+- Advance one skill to Expert level (+2)
+- This allows progression beyond the Professional tier (+1) available through minor milestones
+- Or gain a new skill at Professional level (+1) as an alternative option
 
 **Calling Evolution**
 - Evolve interpretation of Calling
@@ -2178,10 +2227,10 @@ Choose ONE of the following when you reach a major milestone:
 - Increase one attribute permanently by +1
 - Can now raise attributes to +5 (legendary level)
 
-**Legendary Skill**
-- Advance one Master skill to Legendary level (+8)
-- Or advance any skill directly to Master level (+6)
-- Legendary-level skills represent mythic mastery beyond mortal limits
+**Skill Expertise**
+- Advance any skill to Expert level (+2) if not already
+- Or gain a skill specialization edge (+1 to specific applications)
+- Expert-level skills represent peak human mastery
 
 **Calling Transcendence/Synthesis**
 - Fundamentally transform your Calling
@@ -2208,7 +2257,7 @@ Choose ONE of the following when you reach a major milestone:
 
 **Elena (Cleric)** chooses Calling Transcendence, evolving her Guardian Calling. She can now spend 1 Flow to reduce damage to a dying ally by half AND when she successfully defuses conflict without violence, she and all participants gain 1 Flow.
 
-**Magnus (Fighter)** achieves Skill Legendary Status, advancing his Combat skill to Master (+6) and gaining the ability to make an extra attack when scoring a critical hit.
+**Magnus (Fighter)** achieves Combat Mastery, gaining a skill specialization edge that grants +1 to Combat when fighting multiple opponents, and the ability to make an extra attack when scoring a critical hit.
 
 **Lyra (Wizard)** gains the Legendary Technique Unstoppable Assault, allowing her to cast spells that cannot miss when she spends 6 Flow, representing her complete mastery of magical precision.
 
@@ -2255,11 +2304,11 @@ After the **Second Major Milestone** (legendary status), characters are appropri
 
 ### Milestone Effect on Difficulty
 
-**Guard Scaling**
-- Guard = 8 + Higher of (Might or Grace) + (Total Milestones × 2)
-- Character survivability increases significantly with milestones
-- Allows both tough defenders and agile defenders to be viable
-- Enables progressively more challenging encounters
+**Guard and Survivability**
+- Guard = 12 + max(Might, Grace, Will)
+- Guard does not automatically scale with milestones
+- Survivability increases through milestone choices (edges, techniques)
+- Allows tough, agile, or mentally resilient characters to be effective
 
 **Flow Generation Rate**
 - More Flow triggers from advanced abilities
@@ -2279,33 +2328,33 @@ After the **Second Major Milestone** (legendary status), characters are appropri
 
 **Starting Character:**
 - **Attributes:** Might +2, Grace -2, Mind -1, Awareness 0, Will +3, Presence 0
-- **Skills:** Medicine (Professional +2), Sorcery (Novice -1), Empathy (Professional +2)
-- **Derived Values:** Guard 10 (8 + 2 + 0), Vitality 13 (10 + 3)
+- **Skills:** Medicine (Professional +1), Sorcery (Competent +0), Empathy (Professional +1)
+- **Derived Values:** Guard 15 (12 + 3 from Will), Vitality 13 (10 + 3)
 - **Magic:** Can cast divine spells (Cleric archetype override)
 
 **After Two Minor Milestones:**
-- Advanced Sorcery from Novice (-1) to Competent (+0)
-- Gained Tough Edge (+2 Guard, now Guard 12)
-- Guard: 14 (8 + 2 + 4 from 2 milestones)
+- Advanced Sorcery from Competent (+0) to Professional (+1)
+- Gained Tough Edge (+2 Guard)
+- Guard: 17 (15 base + 2 from edge)
 
 **After First Moderate Milestone (Session 6):**
 - Increased Will to +4 (enhancing both spell power and Vitality)
 - Developed Signature Move "Healing Word" - Command that also recovers 1d6 Guard
-- Vitality: 14 (10 + 4)
+- Guard: 18 (12 + 4 from Will + 2 from edge), Vitality: 14 (10 + 4)
 
 **After Four Minor Milestones (Total 6 Milestones):**
-- Advanced Sorcery to Professional (+2)
+- Advanced Sorcery to Expert (+2)
 - Gained Hardy Edge (+2 Vitality)
-- Guard: 20 (8 + 2 + 12), Vitality: 16
+- Guard: 18, Vitality: 16
 
 **After Second Moderate Milestone (Session 12):**
-- Advanced Medicine skill to Master (+6)
+- Advanced Medicine skill to Expert (+2)
 - Mastery of both divine magic and mundane healing
 
 **After First Major Milestone (Session 18):**
 - Synthesized Guardian and Scholar Callings
 - Can now protect allies from death AND begin scenes at +1 Flow
-- Guard: 28 (8 + 2 + 18), Vitality: 19 (10 + 4 + 5 from Major Milestone)
+- Guard: 20 (12 + 4 + 4 from edges), Vitality: 18
 - Has become a legendary battle medic combining protective instincts with scholarly preparation
 
 This evolution shows how a character grows in power through milestone scaling while maintaining their core concept.

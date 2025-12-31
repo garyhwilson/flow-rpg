@@ -30,7 +30,7 @@ Fighters typically develop attribute distributions emphasizing physical capabili
 
 Fighters begin with the following skill proficiencies, reflecting their specialized combat training:
 
-**Professional (+2):**
+**Professional (+1):**
 - Combat (weapon mastery, tactical positioning, and fighting techniques)
 
 **Novice (-1):**

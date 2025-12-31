@@ -47,7 +47,7 @@ Most Rangers develop at least moderate scores across physical and perceptual att
 
 Rangers begin with the following skill proficiencies, reflecting their specialized training:
 
-**Professional (+2):**
+**Professional (+1):**
 - Survival (resource acquisition, shelter creation, environmental adaptation, tracking, and wilderness navigation)
 
 **Novice (-1):**

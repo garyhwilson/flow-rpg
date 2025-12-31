@@ -257,22 +257,19 @@ Flow is the central resource that powers combat techniques, spells, and narrativ
 
 ### Skill System
 
-Skills represent your character's training and expertise in various areas. Each skill has seven possible ratings:
+Skills represent your character's training and expertise in various areas. Each skill has five possible ratings:
 
-**Seven-Tier Progression:**
+**Five-Tier Progression:**
 1. **Untrained** (-2 modifier): No formal training
 2. **Novice** (-1 modifier): Basic understanding
-3. **Competent** (+0 modifier): Professional capability
-4. **Professional** (+2 modifier): Skilled practitioner
-5. **Expert** (+4 modifier): Recognized master
-6. **Master** (+6 modifier): Legendary capability
-7. **Legendary** (+8 modifier): Mythic mastery
+3. **Competent** (+0 modifier): Functional capability
+4. **Professional** (+1 modifier): Skilled practitioner
+5. **Expert** (+2 modifier): Peak human mastery
 
 **Advancement Limits by Milestone Type:**
-- **Starting Characters:** Maximum Professional (+2)
-- **Minor Milestones:** Can advance up to Expert (+4)
-- **Moderate Milestones:** Can advance up to Master (+6)
-- **Major Milestones:** Can advance to Legendary (+8)
+- **Starting Characters:** Maximum Competent (+0), one Professional (+1) from archetype
+- **Minor Milestones:** Can advance skills up to Professional (+1)
+- **Moderate Milestones:** Can advance skills to Expert (+2)
 
 **The 15 Core Skills:**
 
@@ -499,7 +496,7 @@ Your archetype determines your initial skill training, equipment, and combat rol
 *Master of weapons and combat techniques*
 
 **Key Skills:**
-- Combat (Professional +2)
+- Combat (Professional +1)
 - Athletics (Novice -1)
 - Command (Novice -1)
 
@@ -512,7 +509,7 @@ Your archetype determines your initial skill training, equipment, and combat rol
 
 **Key Skills:**
 - Combat (Novice -1)
-- Survival (Professional +2)
+- Survival (Professional +1)
 - Investigate (Novice -1)
 
 **Starting Equipment:** Light armor, bow, tracking kit
@@ -523,9 +520,10 @@ Your archetype determines your initial skill training, equipment, and combat rol
 *Divine warrior and inspiring leader*
 
 **Key Skills:**
-- Combat (Novice -1)
+- Combat (Competent +0)
 - Medicine (Novice -1)
-- Command (Professional +2)
+- Command (Professional +1)
+- Sorcery (Novice -1)
 
 **Starting Equipment:** Heavy armor, weapon, holy symbol
 **Special:** Can cast divine spells regardless of attributes
@@ -535,9 +533,9 @@ Your archetype determines your initial skill training, equipment, and combat rol
 *Skilled infiltrator and versatile expert*
 
 **Key Skills:**
-- Stealth (Professional +2)
-- Finesse (Professional +2)
-- Deceive (Novice -1)
+- Stealth (Professional +1)
+- Finesse (Professional +1)
+- Combat (Competent +0)
 
 **Starting Equipment:** Light armor, daggers, thieves' tools
 **Special:** Two Professional skills at start (only archetype with this advantage)
@@ -547,8 +545,8 @@ Your archetype determines your initial skill training, equipment, and combat rol
 *Master of arcane knowledge and magical theory*
 
 **Key Skills:**
-- Sorcery (Professional +2)
-- Lore (Professional +2)
+- Sorcery (Professional +1)
+- Lore (Professional +1)
 - Investigate (Novice -1)
 
 **Starting Equipment:** Robes, spellbook, component pouch
@@ -559,9 +557,9 @@ Your archetype determines your initial skill training, equipment, and combat rol
 *Channel of divine power and spiritual healer*
 
 **Key Skills:**
-- Medicine (Professional +2)
-- Sorcery (Novice -1)
-- Empathy (Professional +2)
+- Medicine (Professional +1)
+- Sorcery (Competent +0)
+- Empathy (Professional +1)
 
 **Starting Equipment:** Medium armor, mace, holy symbol
 **Natural Callings:** Guardian, Mediator, Advocate
@@ -571,9 +569,9 @@ Your archetype determines your initial skill training, equipment, and combat rol
 *Performer, storyteller, and magical artist*
 
 **Key Skills:**
-- Perform (Professional +2)
+- Perform (Professional +1)
 - Deceive (Novice -1)
-- Sorcery (Novice -1)
+- Sorcery (Competent +0)
 
 **Starting Equipment:** Light armor, instrument, rapier
 **Natural Callings:** Enthusiast, Mediator, Seeker
@@ -757,19 +755,18 @@ When reduced to 0 Vitality, you fall unconscious and begin dying.
 - **Species:** Dwarf (+1 Will chosen)
 - **Attributes:** Specialized Array: Might +2, Grace -2, Mind -1, Awareness 0, Will +3[+1], Presence 0
 - **Archetype:** Cleric
-  - Medicine (Professional +2)
+  - Medicine (Professional +1)
   - Sorcery (Competent +0)
-  - Empathy (Professional +2)
+  - Empathy (Professional +1)
 - **Calling:** The Guardian
   - Can spend 1 Flow to halve damage to dying ally
   - Always knows who needs help
 - **Derived Values:**
-  - Guard: 7 (5 + Might 2)
+  - Guard: 15 (12 + Will 3, highest of Might/Grace/Will)
   - Vitality: 14 (10 + Will 4)
-  - Magic Access: No (Mind -1 + Awareness 0 = -1, needs +2)
-  - *Note: This Cleric cannot cast spells! Must rely on Medicine and Empathy*
+  - Magic Access: Yes (Cleric archetype grants divine casting regardless of attributes)
 
-Thornwick is a non-magical healer who protects through skill and determination rather than divine magic. His Guardian calling makes him exceptionally attuned to others' needs, while his dwarven resilience allows him to endure hardship to help others.
+Thornwick combines divine magic with practical medicine to protect his allies. His Guardian calling makes him exceptionally attuned to others' needs, while his dwarven resilience allows him to endure hardship to help others.
 
 ---
 
@@ -3272,43 +3269,43 @@ When developing a character centered on a particular archetype, consider the fol
 ## Archetype Mechanical Summary
 
 ### Fighter
-- **Key Skills:** Combat (Professional +2), Athletics (Competent +0), Command (Competent +0)
+- **Key Skills:** Combat (Professional +1), Athletics (Novice -1), Command (Novice -1)
 - **Starting Equipment:** Medium armor, martial weapon, shield
 - **Natural Callings:** Champion, Guardian, Sentinel
 - **Flow Generation:** Through disciplined combat techniques and tactical positioning
 
 ### Ranger
-- **Key Skills:** Combat (Competent +0), Survival (Professional +2), Investigate (Competent +0)
+- **Key Skills:** Combat (Novice -1), Survival (Professional +1), Investigate (Novice -1)
 - **Starting Equipment:** Light armor, bow, tracking kit
 - **Natural Callings:** Seeker, Scholar, Sentinel
 - **Flow Generation:** Through environmental awareness and adaptable techniques
 
 ### Paladin
-- **Key Skills:** Combat (Competent +0), Medicine (Competent +0), Command (Professional +2)
+- **Key Skills:** Combat (Competent +0), Medicine (Novice -1), Command (Professional +1), Sorcery (Novice -1)
 - **Starting Equipment:** Heavy armor, weapon, holy symbol
 - **Natural Callings:** Advocate, Guardian, Champion
 - **Flow Generation:** Through unwavering conviction and protective actions
 
 ### Rogue
-- **Key Skills:** Stealth (Professional +2), Finesse (Professional +2), Deceive (Competent +0)
+- **Key Skills:** Stealth (Professional +1), Finesse (Professional +1), Combat (Competent +0)
 - **Starting Equipment:** Light armor, daggers, thieves' tools
 - **Natural Callings:** Seeker, Enthusiast, Scholar
 - **Flow Generation:** Through opportunistic actions and advantageous positioning
 
 ### Wizard
-- **Key Skills:** Sorcery (Professional +2), Lore (Professional +2), Investigate (Competent +0)
+- **Key Skills:** Sorcery (Professional +1), Lore (Professional +1), Investigate (Novice -1)
 - **Starting Equipment:** Robes, spellbook, component pouch
 - **Natural Callings:** Scholar, Seeker, Advocate
 - **Flow Generation:** Through scholarly precision and magical manipulation
 
 ### Cleric
-- **Key Skills:** Medicine (Professional +2), Sorcery (Competent +0), Empathy (Professional +2)
+- **Key Skills:** Medicine (Professional +1), Sorcery (Competent +0), Empathy (Professional +1)
 - **Starting Equipment:** Medium armor, mace, holy symbol
 - **Natural Callings:** Guardian, Mediator, Advocate
 - **Flow Generation:** Through divine connection and spiritual practice
 
 ### Bard
-- **Key Skills:** Perform (Professional +2), Deceive (Competent +0), Sorcery (Competent +0)
+- **Key Skills:** Perform (Professional +1), Deceive (Novice -1), Sorcery (Competent +0)
 - **Starting Equipment:** Light armor, instrument, rapier
 - **Natural Callings:** Enthusiast, Mediator, Seeker
 - **Flow Generation:** Through artistic performance and inspiring others
@@ -3340,9 +3337,8 @@ This document explains how Archetypes integrate with the core Flow RPG system me
 
 Archetypes determine a character's starting skill proficiencies, providing a foundation of professional training:
 
-- **Professional (+2):** Core competencies central to the archetype's function
-- **Competent (+0):** Secondary skills that support the archetype's approach
-- **Basic (not specified):** Peripheral skills with casual familiarity
+- **Professional (+1):** Core competencies central to the archetype's function
+- **Novice (-1):** Secondary skills that support the archetype's approach
 - **Untrained (-2):** Skills outside the archetype's typical training
 
 ### Skill Advancement Patterns
@@ -3993,7 +3989,7 @@ Fighters typically develop attribute distributions emphasizing physical capabili
 
 Fighters begin with the following skill proficiencies, reflecting their specialized combat training:
 
-**Professional (+2):**
+**Professional (+1):**
 - Combat (weapon mastery, tactical positioning, and fighting techniques)
 
 **Novice (-1):**
@@ -4515,7 +4511,7 @@ Wizards typically develop attribute distributions emphasizing mental capability,
 
 Wizards begin with the following skill proficiencies, reflecting their specialized training combining arcane practice with scholarly research:
 
-**Professional (+2):**
+**Professional (+1):**
 - Sorcery (magical theory, energy manipulation, and spell formulation)
 - Lore (academic knowledge, research methodology, and historical context)
 
@@ -5046,11 +5042,11 @@ Most Clerics develop at least moderate scores in Awareness and either Presence o
 
 Clerics begin with the following skill proficiencies, reflecting their specialized training in spiritual matters and community service:
 
-**Professional (+2):**
+**Professional (+1):**
 - Medicine (holistic healing, wound treatment, and ailment diagnosis)
 - Empathy (spiritual perception, emotional understanding, and interpersonal awareness)
 
-**Novice (-1):**
+**Competent (+0):**
 - Sorcery (divine magic channeling, ritual performance, and spiritual communion)
 
 **Special Ability:**
@@ -5613,12 +5609,12 @@ Most Rogues develop at least moderate scores across dexterity, perception, and m
 
 Rogues begin with the following skill proficiencies, reflecting their specialized training:
 
-**Professional (+2):**
+**Professional (+1):**
 - Stealth (concealment, silent movement, and unobtrusive presence)
 - Finesse (fine manipulation, precise control, and delicate interaction)
 
-**Novice (-1):**
-- Deceive (misdirection, false presentation, and information control)
+**Competent (+0):**
+- Combat (tactical fighting, precision strikes, and opportunistic attacks)
 
 **Special Advantage:**
 - **Dual Expertise:** Rogues are the only archetype that starts with two Professional skills, reflecting their specialized mastery of precision and concealment
@@ -6142,7 +6138,7 @@ Most Rangers develop at least moderate scores across physical and perceptual att
 
 Rangers begin with the following skill proficiencies, reflecting their specialized training:
 
-**Professional (+2):**
+**Professional (+1):**
 - Survival (resource acquisition, shelter creation, environmental adaptation, tracking, and wilderness navigation)
 
 **Novice (-1):**
@@ -6729,12 +6725,15 @@ Most Paladins develop at least moderate scores in Will and either Might or Prese
 
 Paladins begin with the following skill proficiencies, reflecting their specialized training in principle-guided combat and protective service:
 
-**Professional (+2):**
+**Professional (+1):**
 - Command (inspirational leadership, authoritative presence, and decisive direction)
 
-**Novice (-1):**
+**Competent (+0):**
 - Combat (martial techniques, defensive positioning, and protective tactics)
+
+**Novice (-1):**
 - Medicine (treatment of battle injuries, particularly for protected individuals)
+- Sorcery (divine magic channeling for protective and smiting effects)
 
 **Special Ability:**
 - **Divine Spellcasting:** Can cast divine spells regardless of attributes (archetype training overrides normal spellcasting requirements)
@@ -15761,7 +15760,7 @@ Choose ONE of the following when you reach a minor milestone:
 **Skill Development**
 - Advance one skill up one tier (Untrained → Novice → Competent → Professional)
 - Gain a new skill at Novice level (-1)
-- Note: Cannot advance beyond Expert tier (+4) with minor milestones
+- Note: Cannot advance beyond Professional tier (+1) with minor milestones
 
 **Attribute Adjustment**
 - Adjust one attribute by +1/-1 (representing shift in focus or retraining)
@@ -15807,7 +15806,7 @@ Minor improvements that provide incremental power growth. Some edges can be take
 
 **Magnus (Fighter)** learns the Press Advantage combat technique, allowing him to deal +1d6 damage when his Flow is positive.
 
-**Lyra (Wizard)** advances her Investigate skill from Competent (+0) to Professional (+2), having honed her analytical abilities during the mission.
+**Lyra (Wizard)** advances her Investigate skill from Competent (+0) to Professional (+1), having honed her analytical abilities during the mission.
 
 ### Appropriate Challenges After Minor Milestones
 
@@ -15861,9 +15860,9 @@ Choose ONE of the following when you reach a moderate milestone:
 - Note: Cannot raise any attribute above +4 until a major milestone
 
 **Skill Mastery**
-- Advance one skill up to Master level (+6)
-- This allows progression beyond the Expert tier (+4) available through minor milestones
-- Gain a new skill at Professional level (+2) as an alternative option
+- Advance one skill to Expert level (+2)
+- This allows progression beyond the Professional tier (+1) available through minor milestones
+- Or gain a new skill at Professional level (+1) as an alternative option
 
 **Calling Evolution**
 - Evolve interpretation of Calling
@@ -15931,10 +15930,10 @@ Choose ONE of the following when you reach a major milestone:
 - Increase one attribute permanently by +1
 - Can now raise attributes to +5 (legendary level)
 
-**Legendary Skill**
-- Advance one Master skill to Legendary level (+8)
-- Or advance any skill directly to Master level (+6)
-- Legendary-level skills represent mythic mastery beyond mortal limits
+**Skill Expertise**
+- Advance any skill to Expert level (+2) if not already
+- Or gain a skill specialization edge (+1 to specific applications)
+- Expert-level skills represent peak human mastery
 
 **Calling Transcendence/Synthesis**
 - Fundamentally transform your Calling
@@ -15961,7 +15960,7 @@ Choose ONE of the following when you reach a major milestone:
 
 **Elena (Cleric)** chooses Calling Transcendence, evolving her Guardian Calling. She can now spend 1 Flow to reduce damage to a dying ally by half AND when she successfully defuses conflict without violence, she and all participants gain 1 Flow.
 
-**Magnus (Fighter)** achieves Skill Legendary Status, advancing his Combat skill to Master (+6) and gaining the ability to make an extra attack when scoring a critical hit.
+**Magnus (Fighter)** achieves Combat Mastery, gaining a skill specialization edge that grants +1 to Combat when fighting multiple opponents, and the ability to make an extra attack when scoring a critical hit.
 
 **Lyra (Wizard)** gains the Legendary Technique Unstoppable Assault, allowing her to cast spells that cannot miss when she spends 6 Flow, representing her complete mastery of magical precision.
 
@@ -16032,33 +16031,33 @@ After the **Second Major Milestone** (legendary status), characters are appropri
 
 **Starting Character:**
 - **Attributes:** Might +2, Grace -2, Mind -1, Awareness 0, Will +3, Presence 0
-- **Skills:** Medicine (Professional +2), Sorcery (Novice -1), Empathy (Professional +2)
-- **Derived Values:** Guard 10 (8 + 2 + 0), Vitality 13 (10 + 3)
+- **Skills:** Medicine (Professional +1), Sorcery (Competent +0), Empathy (Professional +1)
+- **Derived Values:** Guard 15 (12 + 3 from Will), Vitality 13 (10 + 3)
 - **Magic:** Can cast divine spells (Cleric archetype override)
 
 **After Two Minor Milestones:**
-- Advanced Sorcery from Novice (-1) to Competent (+0)
-- Gained Tough Edge (+2 Guard, now Guard 12)
-- Guard: 14 (8 + 2 + 4 from 2 milestones)
+- Advanced Sorcery from Competent (+0) to Professional (+1)
+- Gained Tough Edge (+2 Guard)
+- Guard: 17 (15 base + 2 from edge)
 
 **After First Moderate Milestone (Session 6):**
 - Increased Will to +4 (enhancing both spell power and Vitality)
 - Developed Signature Move "Healing Word" - Command that also recovers 1d6 Guard
-- Vitality: 14 (10 + 4)
+- Guard: 18 (12 + 4 from Will + 2 from edge), Vitality: 14 (10 + 4)
 
 **After Four Minor Milestones (Total 6 Milestones):**
-- Advanced Sorcery to Professional (+2)
+- Advanced Sorcery to Expert (+2)
 - Gained Hardy Edge (+2 Vitality)
-- Guard: 20 (8 + 2 + 12), Vitality: 16
+- Guard: 18, Vitality: 16
 
 **After Second Moderate Milestone (Session 12):**
-- Advanced Medicine skill to Master (+6)
+- Advanced Medicine skill to Expert (+2)
 - Mastery of both divine magic and mundane healing
 
 **After First Major Milestone (Session 18):**
 - Synthesized Guardian and Scholar Callings
 - Can now protect allies from death AND begin scenes at +1 Flow
-- Guard: 28 (8 + 2 + 18), Vitality: 19 (10 + 4 + 5 from Major Milestone)
+- Guard: 20 (12 + 4 + 4 from edges), Vitality: 18
 - Has become a legendary battle medic combining protective instincts with scholarly preparation
 
 This evolution shows how a character grows in power through milestone scaling while maintaining their core concept.
@@ -16333,38 +16332,40 @@ When secure and growing, characters integrate positive aspects:
 ## Starting Skills
 
 ### Fighter
-- **Professional (+2):** Combat
-- **Competent (+0):** Athletics, Command
+- **Professional (+1):** Combat
+- **Novice (-1):** Athletics, Command
 - **Equipment:** Medium armor, martial weapon, shield
 
 ### Ranger
-- **Professional (+2):** Survival
-- **Competent (+0):** Combat, Investigate
+- **Professional (+1):** Survival
+- **Novice (-1):** Combat, Investigate
 - **Equipment:** Light armor, bow, tracking kit
 
 ### Paladin
-- **Professional (+2):** Command
-- **Competent (+0):** Combat, Medicine
+- **Professional (+1):** Command
+- **Competent (+0):** Combat
+- **Novice (-1):** Medicine, Sorcery
 - **Equipment:** Heavy armor, weapon, holy symbol
 
 ### Rogue
-- **Professional (+2):** Stealth, Finesse
-- **Competent (+0):** Deceive
+- **Professional (+1):** Stealth, Finesse
+- **Competent (+0):** Combat
 - **Equipment:** Light armor, daggers, thieves' tools
 
 ### Wizard
-- **Professional (+2):** Sorcery, Lore
-- **Competent (+0):** Investigate
+- **Professional (+1):** Sorcery, Lore
+- **Novice (-1):** Investigate
 - **Equipment:** Robes, spellbook, component pouch
 
 ### Cleric
-- **Professional (+2):** Medicine, Empathy
+- **Professional (+1):** Medicine, Empathy
 - **Competent (+0):** Sorcery
 - **Equipment:** Medium armor, mace, holy symbol
 
 ### Bard
-- **Professional (+2):** Perform
-- **Competent (+0):** Deceive, Sorcery
+- **Professional (+1):** Perform
+- **Competent (+0):** Sorcery
+- **Novice (-1):** Deceive
 - **Equipment:** Light armor, instrument, rapier
 
 ## Flow Mechanics by Archetype

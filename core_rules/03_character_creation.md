@@ -109,7 +109,7 @@ Your archetype determines your initial skill training, equipment, and combat rol
 *Master of weapons and combat techniques*
 
 **Key Skills:**
-- Combat (Professional +2)
+- Combat (Professional +1)
 - Athletics (Novice -1)
 - Command (Novice -1)
 
@@ -122,7 +122,7 @@ Your archetype determines your initial skill training, equipment, and combat rol
 
 **Key Skills:**
 - Combat (Novice -1)
-- Survival (Professional +2)
+- Survival (Professional +1)
 - Investigate (Novice -1)
 
 **Starting Equipment:** Light armor, bow, tracking kit
@@ -133,9 +133,10 @@ Your archetype determines your initial skill training, equipment, and combat rol
 *Divine warrior and inspiring leader*
 
 **Key Skills:**
-- Combat (Novice -1)
+- Combat (Competent +0)
 - Medicine (Novice -1)
-- Command (Professional +2)
+- Command (Professional +1)
+- Sorcery (Novice -1)
 
 **Starting Equipment:** Heavy armor, weapon, holy symbol
 **Special:** Can cast divine spells regardless of attributes
@@ -145,9 +146,9 @@ Your archetype determines your initial skill training, equipment, and combat rol
 *Skilled infiltrator and versatile expert*
 
 **Key Skills:**
-- Stealth (Professional +2)
-- Finesse (Professional +2)
-- Deceive (Novice -1)
+- Stealth (Professional +1)
+- Finesse (Professional +1)
+- Combat (Competent +0)
 
 **Starting Equipment:** Light armor, daggers, thieves' tools
 **Special:** Two Professional skills at start (only archetype with this advantage)
@@ -157,8 +158,8 @@ Your archetype determines your initial skill training, equipment, and combat rol
 *Master of arcane knowledge and magical theory*
 
 **Key Skills:**
-- Sorcery (Professional +2)
-- Lore (Professional +2)
+- Sorcery (Professional +1)
+- Lore (Professional +1)
 - Investigate (Novice -1)
 
 **Starting Equipment:** Robes, spellbook, component pouch
@@ -169,9 +170,9 @@ Your archetype determines your initial skill training, equipment, and combat rol
 *Channel of divine power and spiritual healer*
 
 **Key Skills:**
-- Medicine (Professional +2)
-- Sorcery (Novice -1)
-- Empathy (Professional +2)
+- Medicine (Professional +1)
+- Sorcery (Competent +0)
+- Empathy (Professional +1)
 
 **Starting Equipment:** Medium armor, mace, holy symbol
 **Natural Callings:** Guardian, Mediator, Advocate
@@ -181,9 +182,9 @@ Your archetype determines your initial skill training, equipment, and combat rol
 *Performer, storyteller, and magical artist*
 
 **Key Skills:**
-- Perform (Professional +2)
+- Perform (Professional +1)
 - Deceive (Novice -1)
-- Sorcery (Novice -1)
+- Sorcery (Competent +0)
 
 **Starting Equipment:** Light armor, instrument, rapier
 **Natural Callings:** Enthusiast, Mediator, Seeker
@@ -301,11 +302,13 @@ Your Calling represents your inner drive and provides Flow benefits and narrativ
 ## Derived Values
 
 ### Health
-- **Guard:** 8 + Higher of (Might or Grace) + (Total Milestones × 2)
-  - Ablative defense that absorbs damage first (allows both tough and agile defenders)
+- **Guard:** 12 + max(Might, Grace, Will)
+  - Ablative defense that absorbs damage first
+  - Allows tough, agile, or mentally resilient characters to be effective defenders
   - Recoverable between scenes
   - Can be restored in combat with Rally action (recover 1d6 Guard, once per scene)
-- **Vitality:** 10 + Will + (Major Milestones × 3)
+  - Some archetypes add bonuses: Divine Grace +4, Arcane Battery +2
+- **Vitality:** 10 + Will
   - Core health representing serious injury
   - Damage to Vitality causes lasting consequences
   - At 0 Vitality: Unconscious and dying
@@ -367,19 +370,18 @@ When reduced to 0 Vitality, you fall unconscious and begin dying.
 - **Species:** Dwarf (+1 Will chosen)
 - **Attributes:** Specialized Array: Might +2, Grace -2, Mind -1, Awareness 0, Will +3[+1], Presence 0
 - **Archetype:** Cleric
-  - Medicine (Professional +2)
+  - Medicine (Professional +1)
   - Sorcery (Competent +0)
-  - Empathy (Professional +2)
+  - Empathy (Professional +1)
 - **Calling:** The Guardian
   - Can spend 1 Flow to halve damage to dying ally
   - Always knows who needs help
 - **Derived Values:**
-  - Guard: 7 (5 + Might 2)
+  - Guard: 15 (12 + Will 3, highest of Might/Grace/Will)
   - Vitality: 14 (10 + Will 4)
-  - Magic Access: No (Mind -1 + Awareness 0 = -1, needs +2)
-  - *Note: This Cleric cannot cast spells! Must rely on Medicine and Empathy*
+  - Magic Access: Yes (Cleric archetype grants divine casting regardless of attributes)
 
-Thornwick is a non-magical healer who protects through skill and determination rather than divine magic. His Guardian calling makes him exceptionally attuned to others' needs, while his dwarven resilience allows him to endure hardship to help others.
+Thornwick combines divine magic with practical medicine to protect his allies. His Guardian calling makes him exceptionally attuned to others' needs, while his dwarven resilience allows him to endure hardship to help others.
 
 ---
 

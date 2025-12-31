@@ -523,23 +523,26 @@ campaign_progression:
     sessions_1_2:
       name: "Finding Your Feet"
       milestones: "2 minor"
-      typical_modifier: "+0 to +2"
+      typical_modifier: "+2 to +4"
       challenges: "Local threats, bandits, wild animals"
       power_level: "Competent adventurers"
+      note: "Optimized characters can reach +4 at creation (specialized array +3, professional skill +1)"
 
     sessions_3_4:
       name: "Regional Recognition"
       milestones: "1 moderate (session 3), 2 minor total"
-      typical_modifier: "+2 to +3"
+      typical_modifier: "+3 to +5"
       challenges: "Organized threats, minor villains"
       power_level: "Local heroes"
+      note: "Specialists hit +5 cap via Deepen Expertise (3 minors → Expert +2)"
 
     sessions_5_6:
       name: "True Heroes"
       milestones: "1 major (session 5), 1 moderate (session 6), 2 minor total"
-      typical_modifier: "+3 to +4"
+      typical_modifier: "+4 to +5"
       challenges: "Regional dangers, young dragons"
       power_level: "Regional champions"
+      note: "Most characters at or near +5 cap in primary skill"
 
     sessions_7_9:
       name: "Legendary Rise"

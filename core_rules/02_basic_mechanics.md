@@ -84,22 +84,19 @@ Flow is the central resource that powers combat techniques, spells, and narrativ
 
 ### Skill System
 
-Skills represent your character's training and expertise in various areas. Each skill has seven possible ratings:
+Skills represent your character's training and expertise in various areas. Each skill has five possible ratings:
 
-**Seven-Tier Progression:**
+**Five-Tier Progression:**
 1. **Untrained** (-2 modifier): No formal training
 2. **Novice** (-1 modifier): Basic understanding
-3. **Competent** (+0 modifier): Professional capability
-4. **Professional** (+2 modifier): Skilled practitioner
-5. **Expert** (+4 modifier): Recognized master
-6. **Master** (+6 modifier): Legendary capability
-7. **Legendary** (+8 modifier): Mythic mastery
+3. **Competent** (+0 modifier): Functional capability
+4. **Professional** (+1 modifier): Skilled practitioner
+5. **Expert** (+2 modifier): Peak human mastery
 
 **Advancement Limits by Milestone Type:**
-- **Starting Characters:** Maximum Professional (+2)
-- **Minor Milestones:** Can advance up to Expert (+4)
-- **Moderate Milestones:** Can advance up to Master (+6)
-- **Major Milestones:** Can advance to Legendary (+8)
+- **Starting Characters:** Maximum Competent (+0), one Professional (+1) from archetype
+- **Minor Milestones:** Can advance skills up to Professional (+1)
+- **Moderate Milestones:** Can advance skills to Expert (+2)
 
 **The 15 Core Skills:**
 

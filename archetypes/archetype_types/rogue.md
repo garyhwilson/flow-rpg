@@ -47,12 +47,12 @@ Most Rogues develop at least moderate scores across dexterity, perception, and m
 
 Rogues begin with the following skill proficiencies, reflecting their specialized training:
 
-**Professional (+2):**
+**Professional (+1):**
 - Stealth (concealment, silent movement, and unobtrusive presence)
 - Finesse (fine manipulation, precise control, and delicate interaction)
 
-**Novice (-1):**
-- Deceive (misdirection, false presentation, and information control)
+**Competent (+0):**
+- Combat (tactical fighting, precision strikes, and opportunistic attacks)
 
 **Special Advantage:**
 - **Dual Expertise:** Rogues are the only archetype that starts with two Professional skills, reflecting their specialized mastery of precision and concealment

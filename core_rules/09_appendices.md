@@ -25,19 +25,18 @@
 | Level        | Modifier | Description                   |
 | ------------ | -------- | ----------------------------- |
 | Untrained    | -2       | Little to no experience       |
-| Competent    | +0       | Basic professional capability |
-| Professional | +2       | Skilled practitioner          |
-| Expert       | +4       | Recognized master             |
-| Master       | +6       | Legendary capability          |
+| Novice       | -1       | Basic understanding           |
+| Competent    | +0       | Functional capability         |
+| Professional | +1       | Skilled practitioner          |
+| Expert       | +2       | Peak human mastery            |
 
 ### Flow Reference
 | Range     | State                               |
 | --------- | ----------------------------------- |
-| -6 to -1  | Disrupted (disadvantage)            |
+| -3 to -1  | Disrupted (disadvantage)            |
 | 0         | Neutral (baseline)                  |
 | +1 to +3  | In Flow (advantage)                 |
 | +4 to +6  | Strong Flow (significant advantage) |
-| +7 to +10 | Perfect Flow (mastery)              |
 
 ### Combat Stance Effects
 | Stance     | Turn Order | Flow Generation    | Movement            | Special          |
@@ -110,7 +109,7 @@
 | MINOR:    | | | | | | | | | | | |        |
 | MODERATE: | | |                          |
 | MAJOR:    | |                            |
-| TOTAL MILESTONES: ____  (Add to Guard)    |
+| (Track for advancement options)           |
 +------------------------------------------+
 | CALLING                                  |
 | FLOW BENEFIT: ________________________   |
@@ -120,12 +119,12 @@
 +------------------------------------------+
 ```
 
-The character sheet has been updated with a dedicated Milestone Tracker section that allows players to:
+The character sheet includes a dedicated Milestone Tracker section that allows players to:
 1. Track individual minor, moderate, and major milestones with checkbox fields
 2. Calculate their total milestones achieved in one place
-3. Clearly see that this total gets added to Guard
+3. Reference their advancement options based on milestones earned
 
-This helps reinforce the connection between character advancement and Guard scaling, making it easier for players to maintain accurate derived statistics as they progress.
+This helps players track their character progression and know when new advancement options become available.
 
 ---
 

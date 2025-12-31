@@ -53,9 +53,9 @@ stances:
 
     flow_generation:
       excellence:
-        trigger: "Any roll of 10+ (natural, before modifiers)"
+        trigger: "Any roll of 8+ (natural, before modifiers)"
         amount: 1
-        note: "Rewards solid rolls, about 42% chance"
+        note: "Rewards solid rolls, about 58% chance - competitive with other stances"
     
     modifiers:
       damage_bonus: 0

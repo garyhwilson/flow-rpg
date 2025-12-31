@@ -233,8 +233,7 @@ pregenerated_characters:
     
     skills:
       professional: ["Medicine +1", "Empathy +1"]
-      novice: ["Sorcery +0"]
-      competent: ["Persuade 0"]  # Human versatile
+      competent: ["Sorcery +0", "Persuade 0"]  # Sorcery from archetype, Persuade from Human versatile
       untrained: "All others at -2"
 
     derived_values:
@@ -294,9 +293,8 @@ pregenerated_characters:
       presence: 0
     
     skills:
-      professional: ["Stealth +1", "Finesse +1"]
-      competent: ["Deceive 0"]  # Upgraded via minor milestone
-      novice: ["Athletics +0"]  # New via minor milestone
+      professional: ["Stealth +1", "Finesse +1", "Combat +1"]  # Combat upgraded via minor milestone
+      competent: ["Deceive 0"]  # New skill via minor milestone
       untrained: "All others at -2"
 
     derived_values:

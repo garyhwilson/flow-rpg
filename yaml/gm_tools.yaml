@@ -251,14 +251,14 @@ scene_design:
   
   enemy_templates:
     henchman:
-      guard: "7 + party_milestones"
-      vitality: "5 + party_milestones"
+      guard: "12 + party_milestones"
+      vitality: "12 + party_milestones"
       damage: "1d6 + (party_milestones / 2)"
       skills: "One at Professional"
       flow: "Starts at 0"
-      special: "Should survive 2 hits at each tier, dangerous in groups"
-      description: "Numerous followers, individually weak but not tissue paper"
-      design_note: "Playtest showed original formula (Guard 5, Vit 3 = 8 total) resulted in one-shot kills. New formula provides 12+ durability to require 2 hits."
+      special: "Should survive 2-3 hits, feel substantial in groups"
+      description: "Capable followers who can threaten careless PCs"
+      design_note: "Playtest v3: Increased from Guard 10/Vit 8 to Guard 12/Vit 12. At 24 total HP, survives 2-3 hits from optimized Fighter (avg 9-10 damage). Prevents 'tissue paper' feel while keeping them manageable."
 
     worthy_opponent:
       guard: "13 + (party_milestones × 3)"
@@ -271,8 +271,8 @@ scene_design:
       design_note: "Lasts 2-3 rounds under focus fire, longer in mixed encounters"
 
     champion:
-      guard: "40 + (party_milestones × 8)"
-      vitality: "70 + (party_milestones × 14)"
+      guard: "35 + (party_milestones × 3)"
+      vitality: "55 + (party_milestones × 5)"
       damage: "2d6+2 + party_milestones"
       damage_reduction: 2
       skills: "Two or three at Expert (+2)"
@@ -314,11 +314,11 @@ scene_design:
         playtest_results:
           old_system: "3 attacks with disadvantage on 2nd/3rd = 30+ damage = instant TPK"
           new_system: "2 attacks maximum = 21-24 damage = threatening but survivable"
-          verdict: "Champions remain dangerous in 4-6 round conflicts without guaranteed PC deaths"
+          verdict: "Champions remain dangerous in 2-3 round focused fights without guaranteed PC deaths"
 
       special: "Three actions per round with balanced economy, DR 2, legendary resistances"
       description: "Formidable threat requiring focused effort and party coordination"
-      design_note: "Playtest-proven durability: 110 at milestone 0, 154 at milestone 3, 198 at milestone 6, 242 at milestone 9. Creates 4-6 round conflicts against optimized parties with ~40 DPR. Sweet Spot Edition balanced for 0-12 milestone campaigns."
+      design_note: "Playtest v3: Reduced scaling from ×4/×7 to ×3/×5. New durability: 90 at milestone 0, 114 at milestone 3, 138 at milestone 6, 170 at milestone 10. Creates 2-3 round focused fights against optimized parties with ~60 DPR. Previous formula caused 4-6 round sloggy combats."
   
   opposition_types:
     overwhelming_force:
@@ -623,28 +623,32 @@ sweet_spot_edition:
 
   power_progression:
     session_1_2:
-      typical_modifier: "+0 to +2"
-      vs_tn_8: "42-58% success"
-      description: "Challenging but achievable - heroes finding their footing"
+      typical_modifier: "+2 to +4"
+      vs_tn_8: "86-97% success"
+      description: "Already competent - optimized characters hit +4 at creation"
       threats: "Local bandits, wild animals, minor mysteries"
+      note: "TN 8 may feel easy for optimized builds; use TN 10 for real challenges"
 
     session_3_4:
-      typical_modifier: "+2 to +3"
-      vs_tn_8: "58-72% success"
-      description: "Competent professionals - feel heroic without being automatic"
+      typical_modifier: "+3 to +5"
+      vs_tn_8: "91-97% success"
+      description: "Specialists hit cap via Deepen Expertise - TN 8 becomes routine"
       threats: "Organized crime, cultists, dangerous beasts"
+      note: "Transition to TN 10 as standard for meaningful challenges"
 
     session_5_6:
-      typical_modifier: "+3 to +4"
-      vs_tn_8: "72-83% success"
-      description: "Regional heroes - reliable but not infallible"
+      typical_modifier: "+4 to +5"
+      vs_tn_8: "97% success"
+      description: "Most characters at or near cap - TN 8 is now trivial"
       threats: "Noble houses, young dragons, demon cults"
+      note: "Use TN 10 as baseline, TN 12 for hard challenges"
 
     session_7_9:
-      typical_modifier: "+4 to +5"
-      vs_tn_8: "83-91% success"
-      description: "Famous heroes - legendary skill with meaningful risk"
+      typical_modifier: "+5 (at cap)"
+      vs_tn_8: "97% success"
+      description: "All characters at cap - horizontal growth replaces vertical"
       threats: "Ancient guardians, powerful organizations, planar threats"
+      note: "TN 10 is now standard, TN 8 is auto-success for primary skills"
 
     session_10_12:
       typical_modifier: "+5 (at cap)"
@@ -659,6 +663,37 @@ sweet_spot_edition:
 
     reality_check: "Bounded accuracy with +5 cap means TN 8 becomes near-automatic at peak power (97.2% success). GMs need higher TNs for meaningful late-game challenges."
 
+    # =========================================================
+    # CRITICAL GM REQUIREMENT - CORE RULE, NOT OPTIONAL
+    # =========================================================
+    critical_gm_reminder:
+      rule_status: "MANDATORY CORE RULE - NOT GUIDANCE"
+
+      the_problem: |
+        AT +5 MODIFIER, TN 8 SUCCEEDS 97% OF THE TIME!
+        Only snake eyes (1,1) fails. This is NOT a meaningful challenge.
+        If you use TN 8 throughout the campaign, Sessions 4-12 will be
+        boring and tension-free as players auto-succeed at everything.
+
+      the_solution: |
+        Scale TNs as party power increases:
+        - Sessions 1-3: TN 8 standard (party at +2 to +4)
+        - Sessions 4-6: TN 10 standard (party at +4 to +5)
+        - Sessions 7-12: TN 10-12 standard (party at +5 cap)
+
+      session_cheat_sheet:
+        sessions_1_3: "TN 8 standard, TN 10 hard"
+        sessions_4_6: "TN 10 standard, TN 12 hard"
+        sessions_7_12: "TN 10 routine, TN 12 standard, TN 14 extreme"
+
+      what_happens_if_ignored: |
+        - Sessions 1-3: Game feels appropriately challenging
+        - Sessions 4-6: Game starts feeling too easy
+        - Sessions 7-12: Players succeed at EVERYTHING, no tension
+        - Result: Boring campaign, players disengage
+
+      remember: "THIS IS A CORE RULE. Higher character power REQUIRES higher TNs."
+
     standard_tns:
       trivial: 6
       easy: 7
@@ -669,25 +704,25 @@ sweet_spot_edition:
 
     tn_scaling_by_session:
       sessions_1_3:
-        party_modifiers: "+0 to +2"
-        standard_challenge: "TN 8 (58-86% success)"
-        hard_challenge: "TN 10 (42-72% success)"
-        guidance: "TN 8 feels appropriately challenging"
-        example: "Climbing crumbling wall, persuading suspicious guard"
+        party_modifiers: "+2 to +4"
+        standard_challenge: "TN 8-10 (86-97% at TN 8, 58-83% at TN 10)"
+        hard_challenge: "TN 10-12 (58-83% at TN 10, 28-58% at TN 12)"
+        guidance: "TN 8 may feel easy for optimizers; use TN 10 for real challenges"
+        example: "TN 8: Routine tasks. TN 10: Climbing crumbling wall under fire"
 
       sessions_4_6:
-        party_modifiers: "+3 to +4"
-        standard_challenge: "TN 8-10 (72-91% at TN 8, 42-72% at TN 10)"
-        hard_challenge: "TN 10-12 (42-72% at TN 10, 16-42% at TN 12)"
-        guidance: "Mix TN 8 for routine tasks, TN 10 for real challenges"
-        example: "TN 8: Tracking cultists. TN 10: Decoding ancient ritual"
+        party_modifiers: "+4 to +5"
+        standard_challenge: "TN 10 (83-97% success)"
+        hard_challenge: "TN 12 (58-72% success)"
+        guidance: "TN 8 is now routine; TN 10 is new standard"
+        example: "TN 10: Tracking cultists. TN 12: Decoding ancient ritual"
 
       sessions_7_9:
-        party_modifiers: "+4 to +5"
-        standard_challenge: "TN 10 (72-83% success)"
-        hard_challenge: "TN 12 (42-58% success)"
-        guidance: "TN 8 is for trivial tasks only, use TN 10 as new baseline"
-        example: "TN 10: Negotiating with dragon. TN 12: Disarming planar artifact"
+        party_modifiers: "+5 (at cap)"
+        standard_challenge: "TN 10 (97% success)"
+        hard_challenge: "TN 12 (72% success)"
+        guidance: "TN 8 is auto-success, TN 10 is routine, TN 12 for real challenges"
+        example: "TN 10: Routine for legends. TN 12: Negotiating with dragon"
 
       sessions_10_12:
         party_modifiers: "+5 (at cap)"
@@ -704,9 +739,9 @@ sweet_spot_edition:
       at_plus_5: "TN 8 = 97% (automatic), TN 10 = 97% (routine), TN 12 = 72% (challenging)"
 
     practical_gm_advice:
-      early_campaign: "Use TN 8 liberally - it feels good at +0 to +2"
-      mid_campaign: "Start mixing TN 10 for important rolls at +3 to +4"
-      late_campaign: "Make TN 10 your new baseline at +5, reserve TN 8 for 'taking 10'"
+      early_campaign: "TN 8 works but optimizers may breeze through; mix TN 10 for real challenges"
+      mid_campaign: "TN 10 is your new standard by Session 4; TN 8 is for routine tasks"
+      late_campaign: "TN 10 is routine at +5; TN 12 is standard, TN 14 for heroic moments"
       peak_power: "TN 12-14 for climactic moments against world-ending threats"
 
   design_rationale:
@@ -721,6 +756,42 @@ sweet_spot_edition:
     tn_awareness: "Track party modifiers and adjust TNs accordingly—this is critical"
     next_campaign: "Start fresh with new characters for new stories"
     legacy_benefits: "Retired characters can mentor new PCs or become world NPCs"
+
+  # =========================================================
+  # PRINTABLE GM REFERENCE CARD
+  # =========================================================
+  gm_reference_card:
+    title: "Flow RPG - TN Quick Reference"
+    format: "Print and keep at table"
+
+    session_tn_guide:
+      sessions_1_3:
+        standard: "TN 8-10"
+        hard: "TN 10-12"
+      sessions_4_6:
+        standard: "TN 10"
+        hard: "TN 12"
+      sessions_7_plus:
+        standard: "TN 10-12"
+        hard: "TN 12-14"
+
+    modifier_to_success_vs_tn:
+      header: ["Mod", "TN 8", "TN 10", "TN 12"]
+      rows:
+        - ["+2", "86%", "58%", "28%"]
+        - ["+3", "91%", "72%", "42%"]
+        - ["+4", "97%", "83%", "58%"]
+        - ["+5", "97%", "97%", "72%"]
+
+    enemy_hp_quick_reference:
+      henchman: "24 HP (Guard 12 + Vitality 12) - dies in 2-3 hits"
+      worthy_opponent: "34 HP base - dies in 3-4 hits"
+      champion: "90 HP base - dies in 2-3 rounds focused fire"
+
+    remember:
+      - "At +5, TN 8 is auto-success (97%)"
+      - "Champions: MAX 2 attacks per round"
+      - "Track party modifiers each session"
 
 # ============================================
 # TOOLS AND RESOURCES

@@ -331,22 +331,33 @@ spells:
     
     shield:
       name: "Shield"
-      description: "Protective ward for self or ally"
-      base_effect: "+Attribute to Guard for scene"
+      description: "Protective ward that grows stronger with experience"
+      base_effect: "+Attribute + (total milestones ÷ 3, round down) to Guard for scene"
       flow: "0"
-      
+
+      scaling_examples:
+        session_1_0_milestones: "+attribute Guard (Mind +3 = +3 Guard)"
+        session_4_4_milestones: "+attribute +1 Guard (Mind +3 = +4 Guard)"
+        session_7_7_milestones: "+attribute +2 Guard (Mind +3 = +5 Guard)"
+        session_10_10_milestones: "+attribute +3 Guard (Mind +3 = +6 Guard)"
+
+      design_note: |
+        Scaling ensures Shield remains meaningful throughout campaign.
+        Requires action to cast, creating opportunity cost.
+        Combined with Arcane Ward, gives casters viable defense.
+
       attribute_variations:
         mind:
-          guard: "+mind"
+          guard: "+mind + milestone bonus"
           special: "Calculate optimal angles, no flanking"
         awareness:
-          guard: "+awareness"
+          guard: "+awareness + milestone bonus"
           special: "Warns of attacks, +1 defense"
         will:
-          guard: "+will"
+          guard: "+will + milestone bonus"
           special: "Persists if caster unconscious"
         presence:
-          guard: "+presence"
+          guard: "+presence + milestone bonus"
           special: "Demoralizes attackers, -1 to hit"
     
     charm:

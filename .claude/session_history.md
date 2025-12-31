@@ -330,4 +330,52 @@ _11/14/25 Session (Documentation Standards & Taxonomy Elimination)_:
 
 ---
 
+_12/29/25 Session (Archetype Balance Fixes)_:
+
+- **Conducted comprehensive stress test of Flow RPG combat system**:
+  - Created 7-character test party (one of each archetype)
+  - Simulated combat with real dice roll probabilities
+  - Advanced characters through 6 Minor + 2 Moderate milestones
+  - Identified critical balance issues with 4 archetypes
+
+- **Balance Issues Identified**:
+  - Paladin: 58% attack, 17% casting at session 1 (broken)
+  - Cleric: 58% casting at session 1 (unreliable healer)
+  - Rogue: 58% attack at session 1 (no Combat skill)
+  - Bard: 72% casting at session 1 (marginal)
+
+- **Implemented Archetype Balance Fixes**:
+  - **Paladin**: Combat Novice→Competent (+0), added Sorcery Novice (-1)
+  - **Cleric**: Sorcery Novice→Competent (+0)
+  - **Rogue**: Replaced Deceive Novice with Combat Competent (+0)
+  - **Bard**: Sorcery Novice→Competent (+0)
+
+- **Post-Fix Session 1 Success Rates**:
+  | Archetype | Primary Action | Before | After |
+  |-----------|----------------|--------|-------|
+  | Paladin | Attack | 58.3% | 72.2% |
+  | Cleric | Cast | 58.3% | 72.2% |
+  | Rogue | Attack | 58.3% | 72.2% |
+  | Bard | Cast | 72.2% | 83.3% |
+
+- **Files Modified**:
+  - yaml/character.yaml (source of truth)
+  - yaml/examples.yaml (example characters)
+  - core_rules/03_character_creation.md
+  - core_rules/06_advancement.md (character evolution example)
+  - archetypes/00_introduction.md
+  - archetypes/03_quick_reference.md
+  - archetypes/archetype_types/paladin.md
+  - archetypes/archetype_types/cleric.md
+  - archetypes/archetype_types/rogue.md
+  - All 6 publications regenerated and synced
+
+- **Design Impact**:
+  - All 7 archetypes now have 72%+ primary action success at session 1
+  - Fighter/Ranger/Wizard remain at 91-97% (specialized excellence)
+  - Paladin/Cleric/Rogue/Bard now at 72-83% (reliable baseline)
+  - Rogue gains combat viability without losing skill expertise identity
+
+---
+
 _Note: This document contains the complete development history. Add new session notes at the bottom in chronological order._

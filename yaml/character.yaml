@@ -213,27 +213,28 @@ archetypes:
         modifier: -1
 
     archetype_feature:
-      name: "Weapon Training"
-      effect: "+1 to hit with all weapons"
-      note: "Represents fundamental martial discipline and combat accuracy"
+      name: "Weapon Versatility"
+      effect: "Use any weapon without penalty, switch weapons as free action, gain proficiency with improvised weapons"
+      note: "Represents fundamental martial discipline and adaptability"
+      starting_flow: 1
 
     starting_edge:
       choice: ["weapon_focus", "tough"]
       weapon_focus: "+1 damage with chosen weapon type"
       tough: "+2 Guard"
-    
+
     starting_equipment:
       armor: "medium"
       weapon: "martial weapon and shield"
       gear: ["Adventurer's kit", "50 coins"]
-    
+
     unique_subsystem:
       name: "Combat Techniques"
       description: "Start with immediate access to combat techniques"
       reference: "See techniques.yaml for full list"
       starting_access: "One basic combat technique at creation"
       progression: "Can continue learning or switch to other subsystems"
-    
+
     natural_callings: ["champion", "guardian", "sentinel"]
     
   ranger:
@@ -242,8 +243,9 @@ archetypes:
 
     starting_skills:
       combat:
-        level: "novice"
-        modifier: -1
+        level: "competent"
+        modifier: 0
+        design_note: "Skilled hunters should be competent combatants"
       survival:
         level: "professional"
         modifier: 1
@@ -252,25 +254,42 @@ archetypes:
         modifier: -1
 
     archetype_feature:
-      name: "Weapon Training"
-      effect: "+1 to hit with all weapons"
-      note: "Rangers are trained combatants with excellent aim"
+      name: "Ambush Expert"
+      effect: |
+        When attacking from a hidden position, during a surprise round,
+        or against a target you have tracked for at least 1 minute:
+        - Deal +2 damage
+        - Gain +1 Flow on hit
+        - May use Survival skill instead of Combat for the attack
+      starting_flow: 1
+
+      design_note: |
+        Differentiates Rangers from Fighters:
+        - Fighter: "Always ready for any fight" (Weapon Versatility)
+        - Ranger: "Patient hunter who sets up devastating ambushes"
+
+      tactical_guidance: |
+        - Scout ahead to identify enemies before combat
+        - Track targets to learn their patterns and vulnerabilities
+        - Set ambushes for maximum first-round impact
+        - Synergizes with Stealth and Survival skills
+        - Using Survival for attack allows +4 total at Session 1 (Awareness +3, Survival +1)
 
     starting_edge:
       choice: ["fast_movement", "precise_strike"]
       fast_movement: "+1 zone of movement"
       precise_strike: "Reroll one damage die per attack"
-    
+
     starting_equipment:
       armor: "light"
       weapon: "bow and hunting knife"
       gear: ["Tracking kit", "Camping gear", "30 coins"]
-    
+
     unique_subsystem:
       name: "Favored Terrain"
       description: "Gain bonuses in specific environments"
       progression: "Add new terrains at milestones"
-    
+
     natural_callings: ["seeker", "scholar", "sentinel"]
     
   paladin:
@@ -279,14 +298,19 @@ archetypes:
 
     starting_skills:
       combat:
-        level: "novice"
-        modifier: -1
+        level: "professional"
+        modifier: 1
+        design_note: "Divine warriors should fight competently; still behind dedicated Fighters"
       medicine:
         level: "novice"
         modifier: -1
       command:
-        level: "professional"
-        modifier: 1
+        level: "competent"
+        modifier: 0
+        design_note: "Adjusted from professional to maintain 4-skill balance with combat improvement"
+      sorcery:
+        level: "novice"
+        modifier: -1
 
     archetype_feature:
       name: "Divine Grace"
@@ -321,25 +345,26 @@ archetypes:
       finesse:
         level: "professional"
         modifier: 1
-      deceive:
-        level: "novice"
-        modifier: -1
+      combat:
+        level: "competent"
+        modifier: 0
 
     archetype_feature:
       name: "Dual Expertise"
       effect: "Two Professional skills instead of one"
       note: "Rogues' defining trait - extreme skill specialization"
-    
+      starting_flow: 1
+
     starting_equipment:
       armor: "light"
       weapon: "daggers and shortbow"
       gear: ["Thieves' tools", "Disguise kit", "60 coins"]
-    
+
     unique_subsystem:
       name: "Gambits"
       description: "High-risk, high-reward special actions"
       progression: "Unlock new gambits through heists"
-    
+
     natural_callings: ["seeker", "enthusiast", "scholar"]
     
   wizard:
@@ -359,8 +384,34 @@ archetypes:
 
     archetype_feature:
       name: "Arcane Battery"
-      effect: "Maximum Flow increased to +7, start each scene at +2 Flow"
-      note: "Greater magical reserves and charged energy allow casting powerful spells immediately"
+      effect: |
+        - Maximum Flow increased to +7
+        - Start each scene at +2 Flow
+        - +2 base Guard (magical resilience)
+        - Gain Arcane Ward technique (see techniques.yaml)
+      note: "Greater magical reserves provide both offensive capability and basic protection"
+
+    glass_cannon_design:
+      trade_off_explanation: |
+        Wizards trade physical resilience for magical power:
+
+        WHAT YOU GET:
+        - +2 starting Flow (can cast Tier-2 spell immediately)
+        - +7 max Flow (vs standard +6)
+        - +2 base Guard (magical protection)
+        - Arcane Ward technique (Flow-based damage reduction)
+
+        WHAT YOU SACRIFICE:
+        - Cannot effectively wear armor (penalties)
+        - Still lowest Guard in party even with +2 bonus
+        - Must rely on Flow techniques and party protection
+
+        PLAY STYLE:
+        - Stay at Far range when possible
+        - Use Arcane Ward (1 Flow) to reduce incoming damage
+        - Cast Shield spell for additional Guard
+        - Coordinate with tanks for protection
+        - End fights fast with high-damage spells
 
     spellcasting:
       tradition: "arcane"
@@ -390,8 +441,8 @@ archetypes:
         level: "professional"
         modifier: 1
       sorcery:
-        level: "novice"
-        modifier: -1
+        level: "competent"
+        modifier: 0
       empathy:
         level: "professional"
         modifier: 1
@@ -430,8 +481,8 @@ archetypes:
         level: "novice"
         modifier: -1
       sorcery:
-        level: "novice"
-        modifier: -1
+        level: "competent"
+        modifier: 0
 
     archetype_feature:
       name: "Versatile Experience"

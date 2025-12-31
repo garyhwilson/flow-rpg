@@ -110,39 +110,39 @@ Combat occurs across abstract distance zones that determine engagement and weapo
 ---
 
 ## Health System
-## Health System
 
 Characters have two health resources that work together to model both minor and serious injuries.
 
 ### Guard
 
-Guard represents your ability to avoid serious harm through armor, dodging, and tactical positioning.
+Guard represents your ability to avoid serious harm through armor, dodging, tactical positioning, and mental fortitude.
 
-- **Formula:** 8 + Higher of (Might or Grace) + (Total Milestones × 2)
-- **Function:** Ablative defense that absorbs damage first (allows both tough and agile defenders)
+- **Formula:** 12 + max(Might, Grace, Will)
+- **Function:** Ablative defense that absorbs damage first
 - **Recovery:** Fully restored between scenes
 - **In-Combat Recovery:** Can use Rally action to recover 1d6 Guard (once per scene)
 
-**Why Two Options?**
-Using the higher of Might or Grace allows both tough fighters (high Might) and agile defenders (high Grace) to be effective. This creates build diversity without penalizing character concepts.
+**Why Three Options?**
+Using the highest of Might, Grace, or Will allows tough fighters (high Might), agile defenders (high Grace), and mentally resilient characters (high Will) to all be effective. This is especially important for casters who typically have high Will but low physical attributes.
 
-**Milestone Scaling:**
-Guard increases with each milestone you achieve, making characters significantly more resilient as they advance. The doubled scaling (×2) represents improved combat awareness, better positioning, and tactical experience.
+> **Note:** Guard is NOT a target number for attacks. Attacks always roll against TN 8 (or higher per GM guidance). Guard is an HP pool that absorbs damage from successful hits.
 
-**Milestone Tracking:**
-Keep a running total of all milestones achieved (minor, moderate, and major) on your character sheet. Multiply this total by 2 and add it to your Guard score.
+**Archetype Bonuses:**
+Some archetypes provide additional Guard through their features:
+- **Divine Grace** (Paladin, Cleric): +4 Guard
+- **Arcane Battery** (Wizard): +2 Guard
 
 ### Vitality
 
 Vitality represents your core health and ability to withstand serious injury.
 
-- **Formula:** 10 + Will + (Major Milestones × 3)
+- **Formula:** 10 + Will
 - **Function:** Core health representing serious injury
 - **Consequences:** Damage to Vitality often causes lasting effects
 - **Critical Point:** At 0 Vitality, you fall unconscious and begin dying
 
-**Major Milestone Scaling:**
-Vitality only increases with major milestones (every 12-15 sessions), making it a slowly growing resource that keeps death meaningful while reducing lethality at high levels.
+**Increasing Vitality:**
+Vitality can be increased through milestone choices (see Advancement), but does not scale automatically. This keeps death meaningful throughout the campaign.
 
 ### Damage Resolution
 

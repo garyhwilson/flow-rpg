@@ -41,11 +41,11 @@ Most Clerics develop at least moderate scores in Awareness and either Presence o
 
 Clerics begin with the following skill proficiencies, reflecting their specialized training in spiritual matters and community service:
 
-**Professional (+2):**
+**Professional (+1):**
 - Medicine (holistic healing, wound treatment, and ailment diagnosis)
 - Empathy (spiritual perception, emotional understanding, and interpersonal awareness)
 
-**Novice (-1):**
+**Competent (+0):**
 - Sorcery (divine magic channeling, ritual performance, and spiritual communion)
 
 **Special Ability:**

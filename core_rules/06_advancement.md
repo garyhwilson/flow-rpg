@@ -40,7 +40,7 @@ Choose ONE of the following when you reach a minor milestone:
 **Skill Development**
 - Advance one skill up one tier (Untrained → Novice → Competent → Professional)
 - Gain a new skill at Novice level (-1)
-- Note: Cannot advance beyond Expert tier (+4) with minor milestones
+- Note: Cannot advance beyond Professional tier (+1) with minor milestones
 
 **Attribute Adjustment**
 - Adjust one attribute by +1/-1 (representing shift in focus or retraining)
@@ -86,7 +86,7 @@ Minor improvements that provide incremental power growth. Some edges can be take
 
 **Magnus (Fighter)** learns the Press Advantage combat technique, allowing him to deal +1d6 damage when his Flow is positive.
 
-**Lyra (Wizard)** advances her Investigate skill from Competent (+0) to Professional (+2), having honed her analytical abilities during the mission.
+**Lyra (Wizard)** advances her Investigate skill from Competent (+0) to Professional (+1), having honed her analytical abilities during the mission.
 
 ### Appropriate Challenges After Minor Milestones
 
@@ -140,9 +140,9 @@ Choose ONE of the following when you reach a moderate milestone:
 - Note: Cannot raise any attribute above +4 until a major milestone
 
 **Skill Mastery**
-- Advance one skill up to Master level (+6)
-- This allows progression beyond the Expert tier (+4) available through minor milestones
-- Gain a new skill at Professional level (+2) as an alternative option
+- Advance one skill to Expert level (+2)
+- This allows progression beyond the Professional tier (+1) available through minor milestones
+- Or gain a new skill at Professional level (+1) as an alternative option
 
 **Calling Evolution**
 - Evolve interpretation of Calling
@@ -210,10 +210,10 @@ Choose ONE of the following when you reach a major milestone:
 - Increase one attribute permanently by +1
 - Can now raise attributes to +5 (legendary level)
 
-**Legendary Skill**
-- Advance one Master skill to Legendary level (+8)
-- Or advance any skill directly to Master level (+6)
-- Legendary-level skills represent mythic mastery beyond mortal limits
+**Skill Expertise**
+- Advance any skill to Expert level (+2) if not already
+- Or gain a skill specialization edge (+1 to specific applications)
+- Expert-level skills represent peak human mastery
 
 **Calling Transcendence/Synthesis**
 - Fundamentally transform your Calling
@@ -240,7 +240,7 @@ Choose ONE of the following when you reach a major milestone:
 
 **Elena (Cleric)** chooses Calling Transcendence, evolving her Guardian Calling. She can now spend 1 Flow to reduce damage to a dying ally by half AND when she successfully defuses conflict without violence, she and all participants gain 1 Flow.
 
-**Magnus (Fighter)** achieves Skill Legendary Status, advancing his Combat skill to Master (+6) and gaining the ability to make an extra attack when scoring a critical hit.
+**Magnus (Fighter)** achieves Combat Mastery, gaining a skill specialization edge that grants +1 to Combat when fighting multiple opponents, and the ability to make an extra attack when scoring a critical hit.
 
 **Lyra (Wizard)** gains the Legendary Technique Unstoppable Assault, allowing her to cast spells that cannot miss when she spends 6 Flow, representing her complete mastery of magical precision.
 
@@ -287,11 +287,11 @@ After the **Second Major Milestone** (legendary status), characters are appropri
 
 ### Milestone Effect on Difficulty
 
-**Guard Scaling**
-- Guard = 8 + Higher of (Might or Grace) + (Total Milestones × 2)
-- Character survivability increases significantly with milestones
-- Allows both tough defenders and agile defenders to be viable
-- Enables progressively more challenging encounters
+**Guard and Survivability**
+- Guard = 12 + max(Might, Grace, Will)
+- Guard does not automatically scale with milestones
+- Survivability increases through milestone choices (edges, techniques)
+- Allows tough, agile, or mentally resilient characters to be effective
 
 **Flow Generation Rate**
 - More Flow triggers from advanced abilities
@@ -311,33 +311,33 @@ After the **Second Major Milestone** (legendary status), characters are appropri
 
 **Starting Character:**
 - **Attributes:** Might +2, Grace -2, Mind -1, Awareness 0, Will +3, Presence 0
-- **Skills:** Medicine (Professional +2), Sorcery (Novice -1), Empathy (Professional +2)
-- **Derived Values:** Guard 10 (8 + 2 + 0), Vitality 13 (10 + 3)
+- **Skills:** Medicine (Professional +1), Sorcery (Competent +0), Empathy (Professional +1)
+- **Derived Values:** Guard 15 (12 + 3 from Will), Vitality 13 (10 + 3)
 - **Magic:** Can cast divine spells (Cleric archetype override)
 
 **After Two Minor Milestones:**
-- Advanced Sorcery from Novice (-1) to Competent (+0)
-- Gained Tough Edge (+2 Guard, now Guard 12)
-- Guard: 14 (8 + 2 + 4 from 2 milestones)
+- Advanced Sorcery from Competent (+0) to Professional (+1)
+- Gained Tough Edge (+2 Guard)
+- Guard: 17 (15 base + 2 from edge)
 
 **After First Moderate Milestone (Session 6):**
 - Increased Will to +4 (enhancing both spell power and Vitality)
 - Developed Signature Move "Healing Word" - Command that also recovers 1d6 Guard
-- Vitality: 14 (10 + 4)
+- Guard: 18 (12 + 4 from Will + 2 from edge), Vitality: 14 (10 + 4)
 
 **After Four Minor Milestones (Total 6 Milestones):**
-- Advanced Sorcery to Professional (+2)
+- Advanced Sorcery to Expert (+2)
 - Gained Hardy Edge (+2 Vitality)
-- Guard: 20 (8 + 2 + 12), Vitality: 16
+- Guard: 18, Vitality: 16
 
 **After Second Moderate Milestone (Session 12):**
-- Advanced Medicine skill to Master (+6)
+- Advanced Medicine skill to Expert (+2)
 - Mastery of both divine magic and mundane healing
 
 **After First Major Milestone (Session 18):**
 - Synthesized Guardian and Scholar Callings
 - Can now protect allies from death AND begin scenes at +1 Flow
-- Guard: 28 (8 + 2 + 18), Vitality: 19 (10 + 4 + 5 from Major Milestone)
+- Guard: 20 (12 + 4 + 4 from edges), Vitality: 18
 - Has become a legendary battle medic combining protective instincts with scholarly preparation
 
 This evolution shows how a character grows in power through milestone scaling while maintaining their core concept.

@@ -30,7 +30,7 @@ Wizards typically develop attribute distributions emphasizing mental capability,
 
 Wizards begin with the following skill proficiencies, reflecting their specialized training combining arcane practice with scholarly research:
 
-**Professional (+2):**
+**Professional (+1):**
 - Sorcery (magical theory, energy manipulation, and spell formulation)
 - Lore (academic knowledge, research methodology, and historical context)
 

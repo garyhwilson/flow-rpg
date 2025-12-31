@@ -15,38 +15,40 @@
 ## Starting Skills
 
 ### Fighter
-- **Professional (+2):** Combat
-- **Competent (+0):** Athletics, Command
+- **Professional (+1):** Combat
+- **Novice (-1):** Athletics, Command
 - **Equipment:** Medium armor, martial weapon, shield
 
 ### Ranger
-- **Professional (+2):** Survival
-- **Competent (+0):** Combat, Investigate
+- **Professional (+1):** Survival
+- **Novice (-1):** Combat, Investigate
 - **Equipment:** Light armor, bow, tracking kit
 
 ### Paladin
-- **Professional (+2):** Command
-- **Competent (+0):** Combat, Medicine
+- **Professional (+1):** Command
+- **Competent (+0):** Combat
+- **Novice (-1):** Medicine, Sorcery
 - **Equipment:** Heavy armor, weapon, holy symbol
 
 ### Rogue
-- **Professional (+2):** Stealth, Finesse
-- **Competent (+0):** Deceive
+- **Professional (+1):** Stealth, Finesse
+- **Competent (+0):** Combat
 - **Equipment:** Light armor, daggers, thieves' tools
 
 ### Wizard
-- **Professional (+2):** Sorcery, Lore
-- **Competent (+0):** Investigate
+- **Professional (+1):** Sorcery, Lore
+- **Novice (-1):** Investigate
 - **Equipment:** Robes, spellbook, component pouch
 
 ### Cleric
-- **Professional (+2):** Medicine, Empathy
+- **Professional (+1):** Medicine, Empathy
 - **Competent (+0):** Sorcery
 - **Equipment:** Medium armor, mace, holy symbol
 
 ### Bard
-- **Professional (+2):** Perform
-- **Competent (+0):** Deceive, Sorcery
+- **Professional (+1):** Perform
+- **Competent (+0):** Sorcery
+- **Novice (-1):** Deceive
 - **Equipment:** Light armor, instrument, rapier
 
 ## Flow Mechanics by Archetype

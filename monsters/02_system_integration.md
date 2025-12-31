@@ -483,10 +483,25 @@ Monsters that escape can return stronger:
 
 ### Swarms
 
-**Many Tiny Creatures:**
-- Treat as single monster
-- Area effect damage is devastating
-- Difficult to target individually
+When the party faces a horde of tiny creatures—rats, bats, insects, animated debris—treat the entire mass as a single creature rather than tracking dozens of individuals.
+
+**Swarm Statistics:**
+- **Guard:** 8-12 (dispersed targets are hard to damage effectively)
+- **Vitality:** 15-25 (represents critical mass needed to function)
+- **Damage:** 2d6 (engulfs and overwhelms)
+- **Flow:** Start at 0, gain +1 when they deal damage
+
+**Combat Properties:**
+- **Area Vulnerability:** Takes double damage from area effects (Fireball, Whirlwind Strike, sweeping torch)
+- **Single-Target Resistance:** Takes half damage from single-target attacks (sword strikes just scatter them)
+- **Engulf:** Can occupy the same space as characters; targets inside take automatic damage each round
+- **Dispersal:** At 0 Vitality, the swarm scatters rather than dying—survivors flee
+
+**Tactical Notes:**
+- Swarms force casters to use AoE spells and martial characters to improvise (fire, environmental hazards)
+- A torch used as an improvised weapon deals full damage to swarms
+- Swarms cannot be flanked or sneak attacked
+- Confined spaces make swarms more dangerous (harder to escape engulf)
 
 ### Flying Creatures
 

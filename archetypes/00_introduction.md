@@ -78,43 +78,43 @@ When developing a character centered on a particular archetype, consider the fol
 ## Archetype Mechanical Summary
 
 ### Fighter
-- **Key Skills:** Combat (Professional +2), Athletics (Competent +0), Command (Competent +0)
+- **Key Skills:** Combat (Professional +1), Athletics (Novice -1), Command (Novice -1)
 - **Starting Equipment:** Medium armor, martial weapon, shield
 - **Natural Callings:** Champion, Guardian, Sentinel
 - **Flow Generation:** Through disciplined combat techniques and tactical positioning
 
 ### Ranger
-- **Key Skills:** Combat (Competent +0), Survival (Professional +2), Investigate (Competent +0)
+- **Key Skills:** Combat (Novice -1), Survival (Professional +1), Investigate (Novice -1)
 - **Starting Equipment:** Light armor, bow, tracking kit
 - **Natural Callings:** Seeker, Scholar, Sentinel
 - **Flow Generation:** Through environmental awareness and adaptable techniques
 
 ### Paladin
-- **Key Skills:** Combat (Competent +0), Medicine (Competent +0), Command (Professional +2)
+- **Key Skills:** Combat (Competent +0), Medicine (Novice -1), Command (Professional +1), Sorcery (Novice -1)
 - **Starting Equipment:** Heavy armor, weapon, holy symbol
 - **Natural Callings:** Advocate, Guardian, Champion
 - **Flow Generation:** Through unwavering conviction and protective actions
 
 ### Rogue
-- **Key Skills:** Stealth (Professional +2), Finesse (Professional +2), Deceive (Competent +0)
+- **Key Skills:** Stealth (Professional +1), Finesse (Professional +1), Combat (Competent +0)
 - **Starting Equipment:** Light armor, daggers, thieves' tools
 - **Natural Callings:** Seeker, Enthusiast, Scholar
 - **Flow Generation:** Through opportunistic actions and advantageous positioning
 
 ### Wizard
-- **Key Skills:** Sorcery (Professional +2), Lore (Professional +2), Investigate (Competent +0)
+- **Key Skills:** Sorcery (Professional +1), Lore (Professional +1), Investigate (Novice -1)
 - **Starting Equipment:** Robes, spellbook, component pouch
 - **Natural Callings:** Scholar, Seeker, Advocate
 - **Flow Generation:** Through scholarly precision and magical manipulation
 
 ### Cleric
-- **Key Skills:** Medicine (Professional +2), Sorcery (Competent +0), Empathy (Professional +2)
+- **Key Skills:** Medicine (Professional +1), Sorcery (Competent +0), Empathy (Professional +1)
 - **Starting Equipment:** Medium armor, mace, holy symbol
 - **Natural Callings:** Guardian, Mediator, Advocate
 - **Flow Generation:** Through divine connection and spiritual practice
 
 ### Bard
-- **Key Skills:** Perform (Professional +2), Deceive (Competent +0), Sorcery (Competent +0)
+- **Key Skills:** Perform (Professional +1), Deceive (Novice -1), Sorcery (Competent +0)
 - **Starting Equipment:** Light armor, instrument, rapier
 - **Natural Callings:** Enthusiast, Mediator, Seeker
 - **Flow Generation:** Through artistic performance and inspiring others
