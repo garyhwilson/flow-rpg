@@ -1,4 +1,4 @@
-# Flow RPG Universal Techniques
+# Autumn Phoenix RPG Universal Techniques
 # Version: 2.0-restructured
 # Abilities available to all characters through milestones
 
@@ -8,7 +8,7 @@ techniques_system:
     design_principles:
       - "No archetype gates - abilities available to all"
       - "Narrative justification enhances acquisition"
-      - "Flow cost balances powerful techniques"
+      - "Momentum cost balances powerful techniques"
       - "Milestone choices provide access"
 
   acquisition_methods:
@@ -44,56 +44,56 @@ combat_techniques:
     defensive_stance:
       effect: "+2 Guard until next turn"
       cost: "Action"
-      flow_cost: 0
+      momentum_cost: 0
 
     power_attack:
       effect: "-2 to hit, +2 damage"
       cost: "Modifies attack"
-      flow_cost: 0
+      momentum_cost: 0
 
     combat_expertise:
       effect: "+1 to combat rolls in chosen situation"
       examples: ["Dueling", "Mounted", "Defensive"]
       acquisition: "Minor milestone"
 
-  flow_techniques:
-    note: "No prerequisites - just milestone + Flow cost"
+  momentum_techniques:
+    note: "No prerequisites - just milestone + Momentum cost"
 
     riposte:
       trigger: "After successful defense"
       effect: "Immediate counterattack"
-      flow_cost: 1
+      momentum_cost: 1
       acquisition: "Minor milestone"
 
     press_advantage:
-      trigger: "While at Flow +2 or higher"
+      trigger: "While at Momentum +2 or higher"
       effect: "+1d6 damage on all attacks"
-      flow_cost: "Passive while condition met"
+      momentum_cost: "Passive while condition met"
       acquisition: "Minor milestone"
 
     perfect_strike:
       effect: "Next attack ignores armor"
-      flow_cost: 2
+      momentum_cost: 2
       acquisition: "Moderate milestone"
 
   advanced_techniques:
-    note: "Flow cost is the only gate"
+    note: "Momentum cost is the only gate"
 
     whirlwind_strike:
       effect: "Attack all adjacent enemies"
       damage: "Normal weapon damage to each"
-      flow_cost: 3
+      momentum_cost: 3
       acquisition: "Moderate milestone"
 
     devastating_blow:
       effect: "Double damage dice on next attack"
-      flow_cost: 3
+      momentum_cost: 3
       limit: "Once per scene"
       acquisition: "Moderate milestone"
 
     battlefield_control:
       effect: "Reposition all combatants in zone"
-      flow_cost: 3
+      momentum_cost: 3
       acquisition: "Major milestone"
 
 # ============================================
@@ -110,7 +110,7 @@ wizard_techniques:
 
     trigger: "When you take damage from any source"
     action_type: "Reaction"
-    flow_cost: 1
+    momentum_cost: 1
 
     effect: "Reduce the damage by 1d6 + Mind"
 
@@ -126,20 +126,20 @@ wizard_techniques:
     availability_note: "Other characters can learn this through Minor milestone, but it scales with Mind so wizards benefit most"
 
     tactical_notes: |
-      - Can use multiple times per round if you have Flow
-      - Competes with offensive Flow spending (spells, metamagic)
+      - Can use multiple times per round if you have Momentum
+      - Competes with offensive Momentum spending (spells, metamagic)
       - Most effective when combined with Shield spell
-      - Consider saving Flow for emergencies vs. spending on damage
+      - Consider saving Momentum for emergencies vs. spending on damage
       - At Mind +3, negates roughly one-third of a Champion's attack
 
     example:
       situation: "Champion hits Aldric for 19 damage"
-      response: "Aldric spends 1 Flow, rolls 1d6+3 = 7"
+      response: "Aldric spends 1 Momentum, rolls 1d6+3 = 7"
       result: "Takes 12 damage instead of 19"
 
     design_rationale: |
       Gives Wizards meaningful defensive choice from Session 1.
-      Flow cost ensures it competes with spellcasting - you can't
+      Momentum cost ensures it competes with spellcasting - you can't
       both nuke enemies AND block all incoming damage.
       Scales with Mind, keeping it wizard-optimal while allowing
       other casters to use it less efficiently.
@@ -158,19 +158,19 @@ metamagic:
 
     subtle_spell:
       effect: "Cast without visible components"
-      flow_cost: 1
+      momentum_cost: 1
       benefit: "Cannot be counterspelled"
       acquisition: "Minor milestone"
 
     extended_spell:
       effect: "Double spell duration"
-      flow_cost: 1
+      momentum_cost: 1
       restriction: "Duration spells only"
       acquisition: "Minor milestone"
 
     careful_spell:
       effect: "Exclude allies from area effects"
-      flow_cost: 1
+      momentum_cost: 1
       acquisition: "Minor milestone"
 
   advanced_metamagic:
@@ -178,18 +178,18 @@ metamagic:
 
     empowered_spell:
       effect: "Add extra damage die"
-      flow_cost: 2
+      momentum_cost: 2
       acquisition: "Moderate milestone"
 
     twinned_spell:
       effect: "Target two creatures"
-      flow_cost: 2
+      momentum_cost: 2
       restriction: "Single-target spells only"
       acquisition: "Moderate milestone"
 
     quickened_spell:
       effect: "Cast as bonus action"
-      flow_cost: 3
+      momentum_cost: 3
       limit: "Once per turn"
       acquisition: "Moderate milestone"
 
@@ -198,12 +198,12 @@ metamagic:
 
     heightened_spell:
       effect: "Increase save TN by 2"
-      flow_cost: 3
+      momentum_cost: 3
       acquisition: "Major milestone"
 
     persistent_spell:
       effect: "Spell lasts entire scene"
-      flow_cost: 4
+      momentum_cost: 4
       acquisition: "Major milestone"
 
 # ============================================
@@ -220,13 +220,13 @@ divine_techniques:
 
     lay_on_hands:
       effect: "Heal 1d6 Vitality by touch"
-      flow_cost: 1
+      momentum_cost: 1
       daily_uses: "Will modifier (minimum 1)"
       acquisition: "Minor milestone"
 
     healing_surge:
       effect: "All allies in zone recover 1d6 Guard"
-      flow_cost: 2
+      momentum_cost: 2
       limit: "Once per scene"
       acquisition: "Moderate milestone"
 
@@ -235,12 +235,12 @@ divine_techniques:
 
     divine_strike:
       effect: "+1d6 radiant damage vs opposed alignment"
-      flow_cost: 1
+      momentum_cost: 1
       acquisition: "Minor milestone"
 
     banishing_smite:
       effect: "Send extraplanar creature home"
-      flow_cost: 3
+      momentum_cost: 3
       save: "Will TN 10"
       acquisition: "Moderate milestone"
 
@@ -249,13 +249,13 @@ divine_techniques:
 
     protective_aura:
       effect: "Allies in zone get +1 to saves"
-      flow_cost: 2
+      momentum_cost: 2
       duration: "Scene"
       acquisition: "Moderate milestone"
 
     inspiring_presence:
-      effect: "Allies gain +1 Flow when you succeed"
-      flow_cost: "Passive once activated"
+      effect: "Allies gain +1 Momentum when you succeed"
+      momentum_cost: "Passive once activated"
       activation: 3
       acquisition: "Major milestone"
 
@@ -292,7 +292,7 @@ gambits:
     dirty_trick:
       effect: "Blind, trip, or disarm opponent"
       contest: "Finesse vs defense"
-      flow_generation: "+1 on success"
+      momentum_generation: "+1 on success"
       acquisition: "Minor milestone"
 
   advanced_gambits:
@@ -301,14 +301,14 @@ gambits:
     impossible_dodge:
       trigger: "About to take damage"
       effect: "Negate all damage from source"
-      flow_cost: 3
+      momentum_cost: 3
       limit: "Once per scene"
       acquisition: "Moderate milestone"
 
     shadow_step:
       effect: "Teleport behind enemy"
       range: "Within same zone"
-      flow_cost: 2
+      momentum_cost: 2
       bonus: "Next attack has advantage"
       acquisition: "Moderate milestone"
 
@@ -319,7 +319,7 @@ gambits:
       effect: "Study target for vulnerability"
       duration: "One round studying"
       benefit: "Critical on 10+ vs that target"
-      flow_cost: 3
+      momentum_cost: 3
       acquisition: "Major milestone"
 
 # ============================================
@@ -336,14 +336,14 @@ inspiration_techniques:
     inspiring_word:
       effect: "Ally gains +1d6 to next roll"
       range: "Can hear you"
-      flow_cost: 1
+      momentum_cost: 1
       uses: "Presence modifier per scene"
       acquisition: "Minor milestone"
 
     cutting_words:
       effect: "Enemy suffers -1d6 to next roll"
       range: "Can hear and understand you"
-      flow_cost: 1
+      momentum_cost: 1
       acquisition: "Minor milestone"
 
   performance_magic:
@@ -357,7 +357,7 @@ inspiration_techniques:
     countercharm:
       effect: "Allies immune to charm/fear"
       duration: "While performing"
-      flow_cost: 2
+      momentum_cost: 2
       acquisition: "Moderate milestone"
 
   legendary_performance:
@@ -367,7 +367,7 @@ inspiration_techniques:
     mass_suggestion:
       effect: "Influence crowd's emotions"
       save: "Will TN 10"
-      flow_cost: 4
+      momentum_cost: 4
       acquisition: "Major milestone"
 
 # ============================================
@@ -413,7 +413,7 @@ terrain_mastery:
 
     one_with_environment:
       effect: "Invisible while still in terrain"
-      flow_cost: 2
+      momentum_cost: 2
       acquisition: "Moderate milestone"
 
     territorial_advantage:
@@ -435,17 +435,17 @@ terrain_mastery:
 universal_techniques:
   description: "Abilities not tied to any archetype"
 
-  flow_mastery:
-    flow_conservation:
-      effect: "Reduce all Flow costs by 1 (minimum 0)"
+  momentum_mastery:
+    momentum_conservation:
+      effect: "Reduce all Momentum costs by 1 (minimum 0)"
       acquisition: "Major milestone"
 
-    flow_battery:
-      effect: "Maximum Flow increased to +8"
+    momentum_battery:
+      effect: "Maximum Momentum increased to +8"
       acquisition: "Major milestone"
 
-    flow_transfer:
-      effect: "Give Flow to adjacent ally"
+    momentum_transfer:
+      effect: "Give Momentum to adjacent ally"
       rate: "2 for 1"
       acquisition: "Moderate milestone"
 
@@ -454,17 +454,17 @@ universal_techniques:
 
     unstoppable:
       effect: "Immune to all conditions for scene"
-      flow_cost: 6
+      momentum_cost: 6
       limit: "Once per day"
 
     perfect_action:
       effect: "Automatically succeed at any one roll"
-      flow_cost: 6
+      momentum_cost: 6
       limit: "Once per session"
 
     legendary_resistance:
       effect: "Turn any failure into success"
-      flow_cost: 3
+      momentum_cost: 3
       limit: "Three times per day"
 
 # ============================================
@@ -494,7 +494,7 @@ technique_combinations:
       components:
         - "Whirlwind Strike (hit all)"
         - "Divine Strike (radiant damage)"
-        - "Inspiring Presence (allies gain Flow)"
+        - "Inspiring Presence (allies gain Momentum)"
       total_cost: 7
       effect: "Inspire allies while destroying enemies"
 

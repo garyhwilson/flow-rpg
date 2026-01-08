@@ -1,10 +1,10 @@
-# Flow RPG Complete System Index
+# Autumn Phoenix RPG Complete System Index
 # Version: 2.0-restructured
 # Master file referencing all system components
 
-flow_rpg_system:
+momentum_rpg_system:
   metadata:
-    name: 'Flow RPG'
+    name: 'Autumn Phoenix RPG'
     version: '2.1-sweet-spot-edition'
     format: 'YAML structured rules'
     date: '2024'
@@ -16,7 +16,7 @@ flow_rpg_system:
       contains:
         - 'Basic mechanics and dice'
         - 'Resolution system'
-        - 'Flow economy'
+        - 'Momentum economy'
         - 'Attributes and skills with caps (+5 max total)'
         - 'Scene structure'
         - 'True bounded accuracy system'
@@ -91,7 +91,7 @@ flow_rpg_system:
     gm_tools:
       file: 'gm_tools.yaml'
       contains:
-        - 'Flow management for GMs'
+        - 'Momentum management for GMs'
         - 'Scene design'
         - 'NPC generation'
         - 'Campaign management'
@@ -112,16 +112,16 @@ flow_rpg_system:
   quick_reference:
     basic_mechanic: '2d6 + Attribute + Skill vs TN 8'
 
-    flow_summary:
+    momentum_summary:
       range: [-3, 6]
       start: 0
       gain: ['Critical success', 'Taking damage', 'Stance triggers']
       spend: ['Boost rolls', 'Techniques', 'Spells']
 
     stances:
-      aggressive: 'Act first, +1 damage, +1 Flow on hit'
+      aggressive: 'Act first, +1 damage, +1 Momentum on hit'
       balanced: 'Act second, flexible, free switch'
-      defensive: 'Act last, +2 defense, +1 Flow when attacked'
+      defensive: 'Act last, +2 defense, +1 Momentum when attacked'
 
     health:
       guard: '12 + max(Might, Grace, Will)'
@@ -135,11 +135,11 @@ flow_rpg_system:
       campaign_length: '8-12 sessions to peak power'
 
     spell_tiers:
-      0: 'Cantrips (+1 Flow)'
-      1: 'Basic (0 Flow)'
-      2: 'Advanced (-1 Flow)'
-      3: 'Expert (-2 Flow)'
-      4: 'Master (-3 Flow)'
+      0: 'Cantrips (+1 Momentum)'
+      1: 'Basic (0 Momentum)'
+      2: 'Advanced (-1 Momentum)'
+      3: 'Expert (-2 Momentum)'
+      4: 'Master (-3 Momentum)'
 
   design_notes:
     sweet_spot_edition:
@@ -162,9 +162,9 @@ flow_rpg_system:
       - 'The "unicorn" - no multiclassing needed'
 
     rebalanced_from_original:
-      - 'Flow range reduced to -3/+6'
+      - 'Momentum range reduced to -3/+6'
       - 'Added Novice skill tier'
-      - 'Cantrips are Flow-neutral (cost 0)'
+      - 'Cantrips are Momentum-neutral (cost 0)'
       - 'Guard/Vitality no longer auto-scale'
       - 'Death saves use flat rolls'
       - 'Skills cap at Expert (+2), not Master (+3)'
@@ -229,7 +229,7 @@ flow_rpg_system:
       from_other_systems:
         - 'Use archetype equivalents'
         - 'Convert HP to Guard/Vitality'
-        - 'Map abilities to Flow techniques'
+        - 'Map abilities to Momentum techniques'
         - 'Adapt monsters using templates'
 
   validation:
@@ -253,14 +253,14 @@ flow_rpg_system:
 
   implementation:
     physical_play:
-      required: ['2d6 per player', 'Character sheets', 'Flow tokens']
+      required: ['2d6 per player', 'Character sheets', 'Momentum tokens']
       optional: ['Battle map', 'Miniatures', 'Initiative tracker']
 
     virtual_play:
       vtt_compatible: true
       dice_roller: 'Standard 2d6'
       character_sheets: 'YAML → form conversion'
-      automation: 'Flow tracking priority'
+      automation: 'Momentum tracking priority'
 
     digital_tools:
       parser_ready: true
@@ -274,5 +274,5 @@ flow_rpg_system:
     modification: 'Encouraged with attribution'
     distribution: 'Share complete file set'
 # End of Index File
-# This completes the Flow RPG YAML implementation
+# This completes the Autumn Phoenix RPG YAML implementation
 # All rules, mechanics, and content are now structured data

@@ -6,21 +6,21 @@ Generates legendary techniques documentation with professional TTRPG prose
 
 Heroes master advanced techniques. Legends transcend them. Legendary techniques represent the absolute pinnacle of mortal capability—abilities so powerful they reshape battles, bend reality, or accomplish the impossible. These aren't just enhanced versions of normal abilities. They're campaign-defining powers that create moments players remember years later.
 
-Legendary techniques become available at major milestones (sessions 5 and 10 typically). They require Flow +6 to activate—a threshold so high that using them demands extended success sequences or climactic moments when everything hangs in balance. When you unleash a legendary technique, it should feel like the pivotal moment of the entire session.
+Legendary techniques become available at major milestones (sessions 5 and 10 typically). They require Momentum +6 to activate—a threshold so high that using them demands extended success sequences or climactic moments when everything hangs in balance. When you unleash a legendary technique, it should feel like the pivotal moment of the entire session.
 
 ---
 
 ## Understanding Legendary Techniques
 
-### Flow Requirement: +6
+### Momentum Requirement: +6
 
-Legendary techniques activate only at Flow +6 or higher. This extreme requirement creates dramatic pacing:
+Legendary techniques activate only at Momentum +6 or higher. This extreme requirement creates dramatic pacing:
 
-**Extended Success:** Reaching +6 Flow requires sustained excellence—multiple successful attacks, critical hits, or perfect defensive sequences.
+**Extended Success:** Reaching +6 Momentum requires sustained excellence—multiple successful attacks, critical hits, or perfect defensive sequences.
 
-**Team Coordination:** Allies can grant Flow through support actions, enabling legendary technique activation through party coordination.
+**Team Coordination:** Allies can grant Momentum through support actions, enabling legendary technique activation through party coordination.
 
-**Climactic Timing:** Flow +6 typically arrives late in major battles, ensuring legendary techniques resolve climactic encounters rather than opening with them.
+**Climactic Timing:** Momentum +6 typically arrives late in major battles, ensuring legendary techniques resolve climactic encounters rather than opening with them.
 
 You can't casually activate legendary techniques. They emerge from desperate final stands, overwhelming victories, or perfectly executed battle plans.
 
@@ -35,7 +35,7 @@ Most campaigns feature 2-3 legendary techniques total across entire party. Choos
 
 ### Once-Per-Session Power
 
-Even with Flow +6, legendary techniques typically limit to once per session or once per major encounter. The Flow cost alone prevents spamming, but additional limits ensure they remain special rather than routine.
+Even with Momentum +6, legendary techniques typically limit to once per session or once per major encounter. The Momentum cost alone prevents spamming, but additional limits ensure they remain special rather than routine.
 
 Game Masters should enforce: "You've used Unstoppable Assault this fight. It won't be available again until your next major confrontation."
 
@@ -53,13 +53,13 @@ Legendary combat techniques end fights definitively. When activated, battles shi
 
 {{ tech_desc }}
 
-**Requirement:** Flow +6
+**Requirement:** Momentum +6
 **Type:** Legendary Combat Technique
 **Frequency:** Once per major encounter
 
-**When to Use:** {% if 'cannot miss' in tech_desc|lower or 'unstoppable' in tech_desc|lower %}Activate when priority target absolutely must die. The villain at 30% health, the dragon preparing devastating breath weapon, the assassin about to escape. Perfect accuracy and maximum damage guarantee elimination.{% elif 'instant kill' in tech_desc|lower or 'death' in tech_desc|lower %}Execute wounded enemies before they can recover or retreat. Best against major adversaries below half health—bypass prolonged combat phase and end threat immediately. Enemies can resist but rarely succeed.{% elif 'battlefield' in tech_desc|lower and 'reposition' in tech_desc|lower %}Reshape entire combat when positioning matters critically. Separate enemy reinforcements from main force, position allies for devastating combos, eliminate terrain advantages. Strategic power that wins battles before damage matters.{% elif 'immune' in tech_desc|lower or 'defense' in tech_desc|lower %}Survive otherwise-lethal attacks. Ancient dragon's breath weapon, demon lord's reality-rending strike, collapsing fortress while completing objective. Absolute defense for one round lets you accomplish impossible tasks.{% else %}Ultimate combat power requiring Flow +6. Activating this determines battle outcomes.{% endif %}
+**When to Use:** {% if 'cannot miss' in tech_desc|lower or 'unstoppable' in tech_desc|lower %}Activate when priority target absolutely must die. The villain at 30% health, the dragon preparing devastating breath weapon, the assassin about to escape. Perfect accuracy and maximum damage guarantee elimination.{% elif 'instant kill' in tech_desc|lower or 'death' in tech_desc|lower %}Execute wounded enemies before they can recover or retreat. Best against major adversaries below half health—bypass prolonged combat phase and end threat immediately. Enemies can resist but rarely succeed.{% elif 'battlefield' in tech_desc|lower and 'reposition' in tech_desc|lower %}Reshape entire combat when positioning matters critically. Separate enemy reinforcements from main force, position allies for devastating combos, eliminate terrain advantages. Strategic power that wins battles before damage matters.{% elif 'immune' in tech_desc|lower or 'defense' in tech_desc|lower %}Survive otherwise-lethal attacks. Ancient dragon's breath weapon, demon lord's reality-rending strike, collapsing fortress while completing objective. Absolute defense for one round lets you accomplish impossible tasks.{% else %}Ultimate combat power requiring Momentum +6. Activating this determines battle outcomes.{% endif %}
 
-**Legendary Moment Example:** {% if 'cannot miss' in tech_desc|lower %}"The lich raises the Staff of Souls for the killing blow. You've built +6 Flow through perfect combat. Eyes blazing with determination, you activate Unstoppable Assault—your blade strikes true despite impossible odds, shattering the phylactery in single perfect strike."{% elif 'instant kill' in tech_desc|lower %}"The vampire lord, wounded but not beaten, begins regenerating in shadow. You surge forward, Flow crackling around you. Death Blow activates—silver through the heart, the ancient evil crumbles to dust before it can recover."{% elif 'battlefield' in tech_desc|lower %}"Enemy reinforcements pour through both doors while the artifact pulses with power. You slam your weapon down, spending all accumulated Flow. Reality ripples—enemies scatter to opposite walls, allies teleport beside you, the artifact now within reach."{% elif 'defense' in tech_desc|lower %}"The collapsing temple rains massive stone blocks. Your party flees but won't make it. You plant your feet, activate Perfect Defense, and reality itself bends around you. For one impossible moment, you are untouchable. Your allies escape. You survive."{% else %}"This is the moment that defines legends."{% endif %}
+**Legendary Moment Example:** {% if 'cannot miss' in tech_desc|lower %}"The lich raises the Staff of Souls for the killing blow. You've built +6 Momentum through perfect combat. Eyes blazing with determination, you activate Unstoppable Assault—your blade strikes true despite impossible odds, shattering the phylactery in single perfect strike."{% elif 'instant kill' in tech_desc|lower %}"The vampire lord, wounded but not beaten, begins regenerating in shadow. You surge forward, Momentum crackling around you. Death Blow activates—silver through the heart, the ancient evil crumbles to dust before it can recover."{% elif 'battlefield' in tech_desc|lower %}"Enemy reinforcements pour through both doors while the artifact pulses with power. You slam your weapon down, spending all accumulated Momentum. Reality ripples—enemies scatter to opposite walls, allies teleport beside you, the artifact now within reach."{% elif 'defense' in tech_desc|lower %}"The collapsing temple rains massive stone blocks. Your party flees but won't make it. You plant your feet, activate Perfect Defense, and reality itself bends around you. For one impossible moment, you are untouchable. Your allies escape. You survive."{% else %}"This is the moment that defines legends."{% endif %}
 
 ---
 {% endfor %}
@@ -75,13 +75,13 @@ Legendary magic techniques shatter fundamental rules of spellcasting. These abil
 
 {{ tech_desc }}
 
-**Requirement:** Flow +6
+**Requirement:** Momentum +6
 **Type:** Legendary Magic Technique
 **Frequency:** Once per major encounter
 
-**When to Use:** {% if 'ignore' in tech_desc|lower and 'rule' in tech_desc|lower %}Break fundamental magical limitations when standard casting fails. Cast Wish without backlash, Fireball in anti-magic field, healing spell at impossible range. Reality Break lets magic work when it shouldn't.{% elif 'two spells' in tech_desc|lower or 'simultaneously' in tech_desc|lower %}Maximum magical output when single spells insufficient. Meteor Swarm + Time Stop, Resurrection + Greater Heal, Disintegrate + Teleport. Double legendary spell power solves problems single spells cannot.{% elif 'permanent' in tech_desc|lower %}Make temporary magic eternal. Permanent flight, permanent mind reading, permanent invisibility. The ultimate magical achievement—making fleeting effects last forever.{% else %}Reality-altering magical power requiring Flow +6. Activating this rewrites magical rules.{% endif %}
+**When to Use:** {% if 'ignore' in tech_desc|lower and 'rule' in tech_desc|lower %}Break fundamental magical limitations when standard casting fails. Cast Wish without backlash, Fireball in anti-magic field, healing spell at impossible range. Reality Break lets magic work when it shouldn't.{% elif 'two spells' in tech_desc|lower or 'simultaneously' in tech_desc|lower %}Maximum magical output when single spells insufficient. Meteor Swarm + Time Stop, Resurrection + Greater Heal, Disintegrate + Teleport. Double legendary spell power solves problems single spells cannot.{% elif 'permanent' in tech_desc|lower %}Make temporary magic eternal. Permanent flight, permanent mind reading, permanent invisibility. The ultimate magical achievement—making fleeting effects last forever.{% else %}Reality-altering magical power requiring Momentum +6. Activating this rewrites magical rules.{% endif %}
 
-**Legendary Moment Example:** {% if 'reality break' in tech_desc|lower or 'ignore' in tech_desc|lower %}"The demon's anti-magic aura nullifies all spells. Your party stands helpless as it advances. You gather every scrap of Flow, force your will against reality itself—Reality Break activates. For one impossible moment, magic works in the dead zone. Your Banishment spell tears the demon back to the Abyss despite impossible odds."{% elif 'dual casting' in tech_desc|lower or 'two spells' in tech_desc|lower %}"The undead army advances from both sides—too many targets for single spell. You channel +6 Flow, weave impossible patterns. Dual Casting activates—Fireball detonates left flank while Lightning Bolt chain-strikes right flank. In single devastating moment, you've cast what should require two full turns."{% elif 'permanent' in tech_desc|lower %}"The dragon's curse: flight only lasts minutes before failing. You've gathered enough Flow through the entire campaign. Now, atop the dragon's corpse, you channel everything into one final working. Permanent Effect activates—your wings are yours forever."{% else %}"This is magic that reshapes reality."{% endif %}
+**Legendary Moment Example:** {% if 'reality break' in tech_desc|lower or 'ignore' in tech_desc|lower %}"The demon's anti-magic aura nullifies all spells. Your party stands helpless as it advances. You gather every scrap of Momentum, force your will against reality itself—Reality Break activates. For one impossible moment, magic works in the dead zone. Your Banishment spell tears the demon back to the Abyss despite impossible odds."{% elif 'dual casting' in tech_desc|lower or 'two spells' in tech_desc|lower %}"The undead army advances from both sides—too many targets for single spell. You channel +6 Momentum, weave impossible patterns. Dual Casting activates—Fireball detonates left flank while Lightning Bolt chain-strikes right flank. In single devastating moment, you've cast what should require two full turns."{% elif 'permanent' in tech_desc|lower %}"The dragon's curse: flight only lasts minutes before failing. You've gathered enough Momentum through the entire campaign. Now, atop the dragon's corpse, you channel everything into one final working. Permanent Effect activates—your wings are yours forever."{% else %}"This is magic that reshapes reality."{% endif %}
 
 ---
 {% endfor %}
@@ -97,13 +97,13 @@ Legendary skill techniques transcend mortal limitations. When expertise isn't en
 
 {{ tech_desc }}
 
-**Requirement:** Flow +6
+**Requirement:** Momentum +6
 **Type:** Legendary Skill Technique
 **Frequency:** Once per major encounter
 
-**When to Use:** {% if 'impossible' in tech_desc|lower %}Accomplish literally impossible tasks when campaign hinges on success. Scale the unclimbable tower, decode the impossible cipher, persuade the immovable god. Automatic success regardless of difficulty.{% elif 'major bonus' in tech_desc|lower or 'all allies' in tech_desc|lower %}Grant entire party legendary competence when coordinated action determines success. The heist requiring perfect teamwork, the ritual needing multiple simultaneous castings, the defense requiring every ally at peak performance.{% elif 'know anything' in tech_desc|lower or 'perfect knowledge' in tech_desc|lower %}Obtain critical information when normal research fails. The demon's true name, the artifact's activation phrase, the king's darkest secret. Perfect supernatural knowledge on any topic.{% else %}Ultimate skill application requiring Flow +6. Activating this guarantees success at impossible tasks.{% endif %}
+**When to Use:** {% if 'impossible' in tech_desc|lower %}Accomplish literally impossible tasks when campaign hinges on success. Scale the unclimbable tower, decode the impossible cipher, persuade the immovable god. Automatic success regardless of difficulty.{% elif 'major bonus' in tech_desc|lower or 'all allies' in tech_desc|lower %}Grant entire party legendary competence when coordinated action determines success. The heist requiring perfect teamwork, the ritual needing multiple simultaneous castings, the defense requiring every ally at peak performance.{% elif 'know anything' in tech_desc|lower or 'perfect knowledge' in tech_desc|lower %}Obtain critical information when normal research fails. The demon's true name, the artifact's activation phrase, the king's darkest secret. Perfect supernatural knowledge on any topic.{% else %}Ultimate skill application requiring Momentum +6. Activating this guarantees success at impossible tasks.{% endif %}
 
-**Legendary Moment Example:** {% if 'impossible' in tech_desc|lower %}"The tower extends infinitely upward, defying physics. No mortal has ever reached the top. You've built +6 Flow through the entire dungeon. Activate Impossible Task—reality bends. Your hands find holds that shouldn't exist, your body defies gravity, minutes later you stand where none have stood. The impossible becomes merely difficult."{% elif 'inspire legend' in tech_desc|lower or 'allies' in tech_desc|lower %}"The ritual requires six simultaneous spell castings—failure means apocalypse. Your party is skilled but not legendary. You channel +6 Flow, touch each ally. Inspire Legend activates—for this one moment, they are as competent as you. Six spells sing in perfect harmony. The world is saved."{% elif 'perfect knowledge' in tech_desc|lower %}"The demon lord's true name is lost to history. Without it, banishment fails. You spend +6 Flow accumulated through the entire campaign. Perfect Knowledge activates—the universe itself whispers secrets. You speak the name that reality forgot. The demon screams as ancient bindings activate."{% else %}"This is skill that transcends mortal limits."{% endif %}
+**Legendary Moment Example:** {% if 'impossible' in tech_desc|lower %}"The tower extends infinitely upward, defying physics. No mortal has ever reached the top. You've built +6 Momentum through the entire dungeon. Activate Impossible Task—reality bends. Your hands find holds that shouldn't exist, your body defies gravity, minutes later you stand where none have stood. The impossible becomes merely difficult."{% elif 'inspire legend' in tech_desc|lower or 'allies' in tech_desc|lower %}"The ritual requires six simultaneous spell castings—failure means apocalypse. Your party is skilled but not legendary. You channel +6 Momentum, touch each ally. Inspire Legend activates—for this one moment, they are as competent as you. Six spells sing in perfect harmony. The world is saved."{% elif 'perfect knowledge' in tech_desc|lower %}"The demon lord's true name is lost to history. Without it, banishment fails. You spend +6 Momentum accumulated through the entire campaign. Perfect Knowledge activates—the universe itself whispers secrets. You speak the name that reality forgot. The demon screams as ancient bindings activate."{% else %}"This is skill that transcends mortal limits."{% endif %}
 
 ---
 {% endfor %}
@@ -152,17 +152,17 @@ Legendary techniques used rarely feel wasted. Select techniques you'll actually 
 
 ## Using Legendary Techniques
 
-### Building to Flow +6
+### Building to Momentum +6
 
-Reaching +6 Flow requires sustained success:
+Reaching +6 Momentum requires sustained success:
 
 **Aggressive Stance:** 6 successful attacks (generates +1 per hit)
 **Balanced Stance:** 6 excellent rolls of 10+ (generates +1 per excellence)
 **Defensive Stance:** Being attacked 6 times (generates +1 per targeting)
 
-Alternatively, combine Flow generation with Flow preservation—generate +3, spend none, generate +3 more.
+Alternatively, combine Momentum generation with Momentum preservation—generate +3, spend none, generate +3 more.
 
-Party coordination accelerates: allies grant Flow through support actions, healing, or buffs.
+Party coordination accelerates: allies grant Momentum through support actions, healing, or buffs.
 
 ### Maximizing Impact
 
@@ -180,7 +180,7 @@ Legendary techniques deserve description:
 
 *"Standard attack":* "You hit for 15 damage."
 
-*"Legendary technique":* "You've built Flow through perfect combat—each successful strike accumulates power crackling around you. Now facing the dragon at last, you channel everything into single perfect strike. Unstoppable Assault activates—reality itself cannot prevent your blade from finding the dragon's heart. Maximum damage, perfect accuracy, the impossible made inevitable."
+*"Legendary technique":* "You've built Momentum through perfect combat—each successful strike accumulates power crackling around you. Now facing the dragon at last, you channel everything into single perfect strike. Unstoppable Assault activates—reality itself cannot prevent your blade from finding the dragon's heart. Maximum damage, perfect accuracy, the impossible made inevitable."
 
 Game Masters should encourage players to describe legendary technique activations dramatically.
 
@@ -193,17 +193,17 @@ Game Masters should encourage players to describe legendary technique activation
 Legendary techniques should feel overwhelming without trivializing campaigns:
 
 **Appropriate situations:** Decide major encounters but don't auto-win campaigns
-**Flow requirement:** +6 threshold ensures rare activation
+**Momentum requirement:** +6 threshold ensures rare activation
 **Frequency limits:** Once per major encounter prevents spamming
 **Saves still apply:** Some legendary techniques allow saves—they're powerful, not unstoppable
 
-If legendary techniques dominate too much, increase frequency limits (once per session). If underwhelming, reduce Flow cost to +5.
+If legendary techniques dominate too much, increase frequency limits (once per session). If underwhelming, reduce Momentum cost to +5.
 
 ### Creating Legendary Moments
 
 Design encounters that enable legendary technique use:
 
-**Major confrontations lasting 5+ rounds:** Give time to build +6 Flow
+**Major confrontations lasting 5+ rounds:** Give time to build +6 Momentum
 **Multiple-phase encounters:** Reset between phases, allowing legendary technique per phase
 **Desperate circumstances:** Create situations where legendary techniques feel justified
 
@@ -221,4 +221,4 @@ When NPCs use legendary techniques, describe them dramatically and give players 
 
 ---
 
-*Legendary techniques represent the apex of mortal achievement. Choose wisely, build Flow patiently, and unleash them at moments when legends are born.*
+*Legendary techniques represent the apex of mortal achievement. Choose wisely, build Momentum patiently, and unleash them at moments when legends are born.*

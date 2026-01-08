@@ -1,5 +1,6 @@
 # Bard
-*Performers, Storytellers, and Magical Artists Who Shape Reality Through Creative Expression*
+
+_Performers, Storytellers, and Magical Artists Who Shape Reality Through Creative Expression_
 
 ## Archetype Essence
 
@@ -42,56 +43,63 @@ Most Bards develop at least moderate scores in Presence and either Grace or Mind
 Bards begin with the following skill proficiencies, reflecting their specialized training in performance and social interaction:
 
 **Professional (+1):**
+
 - Perform (musical performance, storytelling, oratory, and artistic expression)
 
 **Novice (-1):**
+
 - Deceive (misdirection, disguise, and creative interpretation of truth)
 
 **Competent (+0):**
+
 - Sorcery (performance magic, emotional manipulation, and inspiration channeling)
 
 **Special Ability:**
+
 - **Performance Spellcasting:** Can cast performance magic regardless of attributes (archetype training overrides normal spellcasting requirements)
 - **Versatile Experience:** One additional Novice skill of your choice reflecting diverse background
 
 **Additional Skills:**
+
 - Choose two additional skills at Basic/Untrained level reflecting background and cultural training
 
 Bards are typically Untrained in heavy physical labor, rigid scholarly study, or activities contradicting their creative approach unless their background specifically includes exposure to these areas.
 
-### Flow Mechanics
+### Momentum Mechanics
 
-Bards interact with the Flow resource through performance and creative expression:
+Bards interact with the Momentum resource through performance and creative expression:
 
-**Flow Generation:**
-- Completing a successful performance (+1 Flow)
-- Inspiring an ally to great deeds (+1 Flow)
-- Learning a new story, song, or secret (+1 Flow)
-- Witnessing dramatic events worth commemorating (+1 Flow)
-- Receiving genuine audience appreciation (+2 Flow)
+**Momentum Generation:**
 
-**Flow Expenditure:**
+- Completing a successful performance (+1 Momentum)
+- Inspiring an ally to great deeds (+1 Momentum)
+- Learning a new story, song, or secret (+1 Momentum)
+- Witnessing dramatic events worth commemorating (+1 Momentum)
+- Receiving genuine audience appreciation (+2 Momentum)
+
+**Momentum Expenditure:**
+
 - Enhancing performance with magical effects (costs vary by spell tier)
-- Granting allies inspiration dice (+1 Flow for Inspiring Word)
-- Demoralizing enemies through cutting wit (+1 Flow for Cutting Words)
-- Creating illusions or charms through performance (+1-3 Flow)
-- Accessing obscure knowledge through bardic lore (+1 Flow)
+- Granting allies inspiration dice (+1 Momentum for Inspiring Word)
+- Demoralizing enemies through cutting wit (+1 Momentum for Cutting Words)
+- Creating illusions or charms through performance (+1-3 Momentum)
+- Accessing obscure knowledge through bardic lore (+1 Momentum)
 
-Bards typically generate Flow through engaging performances and social success, then spend it on inspiring allies and manipulating situations. This pattern reflects their approach of building momentum through audience engagement.
+Bards typically generate Momentum through engaging performances and social success, then spend it on inspiring allies and manipulating situations. This pattern reflects their approach of building momentum through audience engagement.
 
 ### Signature Techniques
 
 Bards develop specialized techniques reflecting their approach to performance magic:
 
-**Inspiring Word (Flow +1):** Grant an ally a bonus die to their next roll through encouragement, song, or motivational speech. This technique exemplifies the Bard's role as morale booster and team support.
+**Inspiring Word (Momentum +1):** Grant an ally a bonus die to their next roll through encouragement, song, or motivational speech. This technique exemplifies the Bard's role as morale booster and team support.
 
-**Cutting Words (Flow +1):** Impose a penalty die on an enemy's next action through mockery, distraction, or demoralizing performance. This technique demonstrates the Bard's ability to weaponize wit.
+**Cutting Words (Momentum +1):** Impose a penalty die on an enemy's next action through mockery, distraction, or demoralizing performance. This technique demonstrates the Bard's ability to weaponize wit.
 
-**Fascinate (Flow +2):** Hold an audience's attention so completely they become temporarily distracted from other concerns. This technique showcases the Bard's supernatural charm.
+**Fascinate (Momentum +2):** Hold an audience's attention so completely they become temporarily distracted from other concerns. This technique showcases the Bard's supernatural charm.
 
-**Tale of Heroes (Flow +2):** Recount legendary deeds to grant temporary courage and resolve to all allies who hear. This technique illustrates the Bard's role as keeper of heroic tradition.
+**Tale of Heroes (Momentum +2):** Recount legendary deeds to grant temporary courage and resolve to all allies who hear. This technique illustrates the Bard's role as keeper of heroic tradition.
 
-**Diplomat's Grace (Flow +1):** Enhance social interactions through perfectly chosen words, gaining advantage on persuasion attempts. This technique reflects the Bard's mastery of verbal influence.
+**Diplomat's Grace (Momentum +1):** Enhance social interactions through perfectly chosen words, gaining advantage on persuasion attempts. This technique reflects the Bard's mastery of verbal influence.
 
 ## Cultural Variations
 
@@ -102,6 +110,7 @@ The Bard archetype manifests differently across cultures, creating distinctive t
 Dwarven Bards maintain clan histories through epic recitations, preserving ancestral deeds and teaching younger generations through compelling narrative. Their traditions emphasize accuracy of historical record alongside artistic presentation.
 
 Distinctive features include:
+
 - Elaborate genealogical sagas tracing family lines across centuries
 - Stone-carving traditions preserving stories in permanent form
 - Drinking songs celebrating ancestral victories and mourning losses
@@ -113,6 +122,7 @@ Distinctive features include:
 Elven Bards cultivate ancient musical traditions spanning millennia, creating works of subtle complexity requiring centuries to fully appreciate. Their performances incorporate magical elements so seamlessly that art and enchantment become indistinguishable.
 
 Distinctive features include:
+
 - Instrumental traditions passed through family lines for generations
 - Compositions spanning decades of layered development
 - Dream-weaving performances influencing sleeping audiences
@@ -124,6 +134,7 @@ Distinctive features include:
 Human Bards typically develop versatile skills serving diverse patrons, adapting styles to please audiences from tavern crowds to noble courts. Their traditions emphasize adaptability, quick wit, and the ability to thrive in varied social contexts.
 
 Distinctive features include:
+
 - Rapid repertoire development responding to current events
 - Political satire walking careful lines between criticism and entertainment
 - Patronage relationships providing stability while maintaining artistic freedom
@@ -135,6 +146,7 @@ Distinctive features include:
 Halfling Bards focus on community storytelling, creating participatory experiences where audiences contribute to ongoing narratives. Their traditions transform passive entertainment into collective creativity.
 
 Distinctive features include:
+
 - Interactive performances encouraging audience participation
 - Family story traditions passed through generations
 - Practical tales teaching moral lessons through entertainment
@@ -350,6 +362,7 @@ Bards develop distinctive interactions with other archetypes, creating specializ
 This combination integrates performance skills with infiltration capabilities, creating practitioners who use entertainment as cover for covert activities.
 
 **Key Synergies:**
+
 - Performance providing access to restricted locations
 - Distraction techniques enabling ally operations
 - Information gathering through entertainer access
@@ -361,6 +374,7 @@ This combination integrates performance skills with infiltration capabilities, c
 This combination integrates magical scholarship with artistic expression, creating practitioners who understand the deep theory underlying performance magic.
 
 **Key Synergies:**
+
 - Enhanced understanding of magical components in performance
 - Access to arcane effects adapted for bardic use
 - Theoretical innovation developing new performance techniques
@@ -372,6 +386,7 @@ This combination integrates magical scholarship with artistic expression, creati
 This combination integrates martial capability with artistic expression, creating practitioners who celebrate combat through performance and perform through combat.
 
 **Key Synergies:**
+
 - Battle songs enhancing allied morale during combat
 - Combat techniques incorporated into dramatic performance
 - Reputation as both fighter and entertainer
@@ -383,6 +398,7 @@ This combination integrates martial capability with artistic expression, creatin
 This combination integrates spiritual devotion with artistic expression, creating practitioners who worship through performance and perform as worship.
 
 **Key Synergies:**
+
 - Liturgical music enhancing religious ceremonies
 - Theological concepts communicated through artistic expression
 - Divine inspiration channeled through creative works

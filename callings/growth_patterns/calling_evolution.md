@@ -29,6 +29,7 @@ This **disintegration** represents how core drives can twist when a character fe
 When under extreme pressure, characters may exhibit unhealthy aspects of another Calling. This "disintegration" represents how core drives manifest when a person feels threatened or insecure.
 
 ### Full Stress Direction Map
+
 - **Advocate → Exemplar**: Becomes obsessed with being seen as perfect
 - **Guardian → Champion**: Becomes controlling and domineering
 - **Exemplar → Mediator**: Becomes apathetic and disengaged
@@ -40,49 +41,59 @@ When under extreme pressure, characters may exhibit unhealthy aspects of another
 - **Mediator → Sentinel**: Becomes anxious and reactive
 
 ### Stress Indicators
+
 Watch for these signs that a character is moving toward their stress direction:
 
 #### Advocate Stress
+
 - Becomes preoccupied with appearance of perfection
 - Shifts focus from principles to personal achievement
 - Increasingly concerned with how others perceive their virtue
 
 #### Guardian Stress
+
 - Becomes demanding rather than supportive
 - Uses help as a means of control
 - Grows resentful when others don't appreciate their sacrifice
 
 #### Exemplar Stress
+
 - Loses motivation and drive
 - Becomes indifferent to former goals
 - Avoids conflict even when important
 
 #### Seeker Stress
+
 - Becomes needy and dependent
 - Excessively concerned with others' approval
 - Abandons unique identity to please others
 
 #### Scholar Stress
+
 - Jumps between unrelated ideas
 - Becomes impulsive and unfocused
 - Seeks distraction rather than understanding
 
 #### Sentinel Stress
+
 - Becomes competitive and image-conscious
 - Measures worth through external validation
 - Abandons loyalty for personal advancement
 
 #### Enthusiast Stress
+
 - Becomes hypercritical of self and others
 - Focuses on flaws rather than possibilities
 - Rigid about "correct" ways to experience joy
 
 #### Champion Stress
+
 - Withdraws from action into analysis
 - Becomes indecisive and hesitant
 - Substitutes planning for doing
 
 #### Mediator Stress
+
 - Becomes anxious about potential threats
 - Hypervigilant about possible conflict
 - Loses ability to see multiple perspectives
@@ -92,6 +103,7 @@ Watch for these signs that a character is moving toward their stress direction:
 When secure and developing positively, characters integrate healthy aspects of another Calling. This "integration" represents psychological maturity and balance.
 
 ### Full Growth Direction Map
+
 - **Advocate → Enthusiast**: Learns joy and spontaneity
 - **Guardian → Seeker**: Develops authentic self-expression
 - **Exemplar → Sentinel**: Gains loyalty and teamwork
@@ -103,49 +115,59 @@ When secure and developing positively, characters integrate healthy aspects of a
 - **Mediator → Exemplar**: Develops goals and initiative
 
 ### Growth Indicators
+
 Look for these signs that a character is moving toward their growth direction:
 
 #### Advocate Growth
+
 - Discovers joy in imperfection
 - Becomes more spontaneous and playful
 - Finds meaning beyond moral perfection
 
 #### Guardian Growth
+
 - Discovers own needs and desires
 - Expresses authentic self even when others disapprove
 - Helps by empowering rather than doing for others
 
 #### Exemplar Growth
+
 - Finds value in loyalty beyond achievement
 - Contributes to team success without needing credit
 - Develops stable identity beyond accomplishments
 
 #### Seeker Growth
+
 - Channels self-discovery into principled action
 - Stands for values beyond personal identity
 - Uses uniqueness to improve things for others
 
 #### Scholar Growth
+
 - Translates knowledge into decisive action
 - Develops confidence to implement ideas
 - Leads through expertise rather than just advising
 
 #### Sentinel Growth
+
 - Develops inner peace amid uncertainty
 - Trusts without excessive verification
 - Sees multiple perspectives rather than binary threats
 
 #### Enthusiast Growth
+
 - Develops depth and focus in pursuits
 - Finds joy in mastery through discipline
 - Values knowledge as much as experience
 
 #### Champion Growth
+
 - Discovers strength in vulnerability and service
 - Protects through nurturing rather than just force
 - Empowers others rather than controlling
 
 #### Mediator Growth
+
 - Develops clear personal goals and boundaries
 - Takes initiative rather than just responding
 - Stands firm for personal convictions
@@ -153,7 +175,9 @@ Look for these signs that a character is moving toward their growth direction:
 ## Implementing Evolution in Play
 
 ### Player-Driven Evolution
+
 Encourage players to:
+
 - Identify their Calling's stress and growth directions
 - Notice when their character exhibits stress behaviors
 - Actively pursue growth opportunities
@@ -162,6 +186,7 @@ Encourage players to:
 ### GM-Facilitated Evolution
 
 #### Stress Direction Triggers
+
 - **Advocate:** Moral dilemmas with no clear right answer
 - **Guardian:** Loved ones rejecting their help
 - **Exemplar:** Significant failure or public humiliation
@@ -173,6 +198,7 @@ Encourage players to:
 - **Mediator:** Irreconcilable conflict
 
 #### Growth Direction Opportunities
+
 - **Advocate:** Chances to find joy in imperfection
 - **Guardian:** Opportunities for self-discovery and expression
 - **Exemplar:** Situations requiring loyalty over recognition
@@ -185,8 +211,9 @@ Encourage players to:
 
 ### Mechanical Evolution Options
 
-#### Flow Benefit Evolution
-As characters evolve, their Flow benefits can reflect this growth:
+#### Momentum Benefit Evolution
+
+As characters evolve, their Momentum benefits can reflect this growth:
 
 - **Enhanced Benefit:** Same trigger but improved effect
 - **Expanded Trigger:** Same effect but more ways to activate
@@ -195,41 +222,48 @@ As characters evolve, their Flow benefits can reflect this growth:
 #### Example Evolved Benefits
 
 **Advocate Evolution (Righteous Fury → Righteous Joy)**
-- **Original:** Gain 1 Flow when exposing corruption/injustice
-- **Evolved:** Gain 1 Flow when exposing corruption/injustice OR when helping others find joy in difficult circumstances
+
+- **Original:** Gain 1 Momentum when exposing corruption/injustice
+- **Evolved:** Gain 1 Momentum when exposing corruption/injustice OR when helping others find joy in difficult circumstances
 
 **Champion Evolution (Protective Dominance → Protective Nurturing)**
-- **Original:** +1 Flow when protecting others in Aggressive stance
-- **Evolved:** +1 Flow when protecting others in any stance, with additional beneficial effect for the protected ally
+
+- **Original:** +1 Momentum when protecting others in Aggressive stance
+- **Evolved:** +1 Momentum when protecting others in any stance, with additional beneficial effect for the protected ally
 
 ## Character Evolution Arcs
 
 ### Short-Term Evolution (5-10 sessions)
+
 - Character exhibits occasional stress behaviors
 - Begins noticing growth direction opportunities
 - No mechanical changes yet
 
 ### Medium-Term Evolution (10-20 sessions)
+
 - Character consciously works on growth direction
 - Stress behaviors become less frequent
-- Flow benefit might begin to evolve
+- Momentum benefit might begin to evolve
 
 ### Long-Term Evolution (20+ sessions)
+
 - Character regularly exhibits growth direction qualities
 - Stress direction manifests only in extreme circumstances
-- Flow benefit fully evolved to reflect growth
+- Momentum benefit fully evolved to reflect growth
 
 ## Advanced Evolution: Calling Transformations
 
 In rare circumstances, usually after Major Milestones involving profound character development, a character's primary Calling might shift entirely. This represents fundamental transformation of core motivation.
 
 ### Requirements for Transformation
+
 - Extensive roleplaying groundwork
 - Major narrative turning point
 - Unanimous table agreement (player, GM, other players)
-- Mechanical rebalancing (Flow benefits, etc.)
+- Mechanical rebalancing (Momentum benefits, etc.)
 
 ### Example Transformations
+
 - **Guardian to Advocate:** From protecting individuals to fighting systemic injustice
 - **Scholar to Seeker:** From external knowledge to internal understanding
 - **Champion to Mediator:** From enforcing peace through strength to creating harmony through understanding
@@ -237,17 +271,20 @@ In rare circumstances, usually after Major Milestones involving profound charact
 ## Practical Applications
 
 ### For Players
+
 - Use stress and growth directions to guide roleplaying in different situations
 - Consider how your character might evolve over the campaign
 - Talk with your GM about evolution goals for your character
 
 ### For Game Masters
+
 - Create scenarios that challenge characters' stress points
 - Provide opportunities aligned with growth directions
 - Recognize and reward character evolution
 - Use NPC Callings to demonstrate different evolution stages
 
 ### For Groups
+
 - Discuss how character evolutions might affect party dynamics
 - Consider campaign themes that support meaningful evolution
 - Create collaborative story moments that mark evolution milestones

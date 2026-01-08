@@ -1,6 +1,6 @@
 ## Copyright & License
 
-**Flow RPG Core Rulebook**
+**Autumn Phoenix RPG Core Rulebook**
 Copyright © 2025 [Your Name/Company]
 All rights reserved.
 
@@ -8,7 +8,7 @@ All rights reserved.
 
 ### Draft Notice
 
-This is a development draft of Flow RPG. Content is subject to change based on playtesting feedback and ongoing development.
+This is a development draft of Autumn Phoenix RPG. Content is subject to change based on playtesting feedback and ongoing development.
 
 ---
 
@@ -30,6 +30,7 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAl
 ### Contact
 
 For questions, feedback, or licensing inquiries:
+
 - Email: [your email]
 - Website: [your website]
 
@@ -37,7 +38,7 @@ For questions, feedback, or licensing inquiries:
 
 ### Acknowledgments
 
-Thanks to all playtesters and contributors who helped shape Flow RPG.
+Thanks to all playtesters and contributors who helped shape Autumn Phoenix RPG.
 
 [Add specific acknowledgments here]
 

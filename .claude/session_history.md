@@ -1,4 +1,4 @@
-# Flow RPG - Session History
+# Autumn Phoenix RPG - Session History
 
 This document tracks all development session notes in chronological order. Each session records major accomplishments, design decisions, and files modified.
 
@@ -14,8 +14,8 @@ _11/12/25 Session (Balance Fixes)_:
 - **Halfling Species Fixed**: Removed punitive -1 melee damage penalty
   - New Small but Mighty: Movement + stealth bonus instead
   - Updated: core_rules/03_character_creation.md
-- **Spell Flow Generation Added**: Offensive spells generate +1 Flow in Aggressive stance
-  - Fixes spellcaster Flow economy issue
+- **Spell Momentum Generation Added**: Offensive spells generate +1 Momentum in Aggressive stance
+  - Fixes spellcaster Momentum economy issue
   - Updated: spells/00_introduction.md, spells/02_system_integration.md
 - **Armor System Rebalanced**:
   - Medium armor: Reduced Sorcery penalty from -2 to -1
@@ -23,9 +23,9 @@ _11/12/25 Session (Balance Fixes)_:
   - Enables armored caster concepts (especially elves)
   - Updated: equipment/equipment_types/armor.md
 - **Calling Inconsistencies Resolved**: Standardized Champion, Scholar, Sentinel
-  - Champion: Protecting others in Aggressive generates +1 Flow/round
-  - Scholar: Banks 2 Flow between scenes from knowledge actions
-  - Sentinel: Gains +1 Guard when gaining Flow from any source
+  - Champion: Protecting others in Aggressive generates +1 Momentum/round
+  - Scholar: Banks 2 Momentum between scenes from knowledge actions
+  - Sentinel: Gains +1 Guard when gaining Momentum from any source
   - Updated: core_rules/03_character_creation.md
 - **Skill System Clarified**: Added Physical Skill Decision Tree
   - Clear examples for when to use Combat/Athletics/Finesse/Stealth/Survival
@@ -42,11 +42,11 @@ _11/12/25 Session (Evening)_:
 
 - Fixed Shield spell Mind version mechanical benefit
 - Replaced vague "sometimes prevents damage entirely" with clear tactical advantage
-- Mind version can now shield two adjacent targets (within Near of each other) for -1 Flow total
+- Mind version can now shield two adjacent targets (within Near of each other) for -1 Momentum total
 - Provides meaningful efficiency benefit through optimized energy distribution
 - Updated standard_spells.md with new mechanics and GM notes
 - Each Shield attribute version now has distinct, meaningful value proposition:
-  - Mind: Efficiency (cover 2 targets for 1 Flow)
+  - Mind: Efficiency (cover 2 targets for 1 Momentum)
   - Awareness: Information (warning of attacks)
   - Will: Persistence (works when unconscious)
   - Presence: Control (demoralizes attackers)
@@ -159,21 +159,22 @@ _11/11/25 Session_:
 
 _11/12/25 Session (Mathematical Rebalancing)_:
 
-- **Implemented comprehensive mathematical rebalancing across entire Flow RPG system**
+- **Implemented comprehensive mathematical rebalancing across entire Autumn Phoenix RPG system**
 - **Addressed 10 Core System Problems**:
-  1. Flow economy too volatile (-6 to +10 range excessive)
+  1. Momentum economy too volatile (-6 to +10 range excessive)
   2. Skill progression unclear and unbalanced
   3. Guard formula created non-viable low-Might characters
   4. Vitality scaling insufficient at higher levels
   5. Death spiral too punishing
   6. Spell costs unbalanced across tiers
   7. Spellcasting access too restrictive
-  8. Calling Flow benefits too rare/unreliable
+  8. Calling Momentum benefits too rare/unreliable
   9. Armor system too restrictive (blocked armored casters)
   10. Damage scaling unclear
 
 **Phase 1 - Core Rules (7 files modified)**:
-- **Flow System Rebalanced**: Changed range from -6 to +10 down to -3 to +6
+
+- **Momentum System Rebalanced**: Changed range from -6 to +10 down to -3 to +6
   - Tighter economy, more predictable resource management
   - Updated: basic_mechanics.md, character_creation.md, combat_system.md
 - **7-Tier Skill System Implemented**: Untrained (-2), Novice (-1), Competent (+0), Professional (+2), Expert (+4), Master (+6), Legendary (+8)
@@ -193,8 +194,9 @@ _11/12/25 Session (Mathematical Rebalancing)_:
   - Updated: advancement.md, combat_system.md
 
 **Phase 2 - Magic System (6 files modified)**:
-- **Spell Tier Costs Rebalanced**: Tier 0 (+1 Flow), Tier 1 (0 Flow), Tier 2 (-1 Flow), Tier 3 (-2 Flow), Tier 4 (-3 Flow)
-  - Cantrips generate Flow, making spellcasters more sustainable
+
+- **Spell Tier Costs Rebalanced**: Tier 0 (+1 Momentum), Tier 1 (0 Momentum), Tier 2 (-1 Momentum), Tier 3 (-2 Momentum), Tier 4 (-3 Momentum)
+  - Cantrips generate Momentum, making spellcasters more sustainable
   - Tier 1 spells free, reducing barrier to entry
   - Higher tier costs scale reasonably
   - Updated: introduction.md, cantrips.md, standard_spells.md, advanced_spells.md, master_spells.md
@@ -207,6 +209,7 @@ _11/12/25 Session (Mathematical Rebalancing)_:
   - Updated: system_integration.md
 
 **Phase 3 - Archetypes (6 files modified)**:
+
 - **All Archetypes Updated with Novice Skills**: Every archetype now grants Novice (-1) proficiency in 6-7 skills
   - Ensures basic competence in archetype-relevant skills
   - Updated: fighter.md, ranger.md, paladin.md, rogue.md, wizard.md, cleric.md
@@ -221,32 +224,35 @@ _11/12/25 Session (Mathematical Rebalancing)_:
   - Updated: fighter.md, paladin.md, ranger.md
 
 **Phase 4 - Calling Files (9 files modified)**:
-- **All Calling Flow Benefits Redesigned for Reliability**:
+
+- **All Calling Momentum Benefits Redesigned for Reliability**:
   - **Advocate**: Truth revelation triggers (Investigation/Empathy checks) instead of "expose corruption once per scene"
   - **Guardian**: Ally takes damage (once per round) instead of "ally drops below half Vitality once per scene"
-  - **Exemplar**: +1 bonus Flow on any critical success instead of complex goal system
-  - **Seeker**: Novel approach +3 Flow (once per scene) instead of vague "act against expectations"
-  - **Scholar**: Start scenes at +1 Flow instead of banking system
+  - **Exemplar**: +1 bonus Momentum on any critical success instead of complex goal system
+  - **Seeker**: Novel approach +3 Momentum (once per scene) instead of vague "act against expectations"
+  - **Scholar**: Start scenes at +1 Momentum instead of banking system
   - **Sentinel**: When you/ally attacked (once per round) instead of Guard conversion
-  - **Enthusiast**: Adjacent ally gains +1 Flow when you do instead of voluntary transfer
+  - **Enthusiast**: Adjacent ally gains +1 Momentum when you do instead of voluntary transfer
   - **Champion**: Successful attacks while allies threatened instead of "protecting in Aggressive once per round"
   - **Mediator**: First conflict resolution per scene instead of "defuse without violence once per scene"
   - Updated: All 9 calling files in calling_types/
 
 **Phase 5 - Armor System (1 file modified)**:
-- **No Armor Benefits Added**: +1 Flow when taking damage, +1 Sorcery, extra movement zone
+
+- **No Armor Benefits Added**: +1 Momentum when taking damage, +1 Sorcery, extra movement zone
   - Makes unarmored a deliberate tactical choice, not just "can't afford armor"
 - **Light Armor Rebalanced**: DR 1, no penalties, +1 initiative/movement
   - Versatile choice for many character types
-- **Medium Armor Rebalanced**: DR 2, -1 Grace, -1 Sorcery (removed Flow restriction), +1 Guard per scene
+- **Medium Armor Rebalanced**: DR 2, -1 Grace, -1 Sorcery (removed Momentum restriction), +1 Guard per scene
   - Viable for armored casters (especially elves)
-- **Heavy Armor Rebalanced**: DR 4, -2 Grace, -1 Flow generation, -3 Sorcery (removed casting prohibition and stance restriction), immune to forced movement
+- **Heavy Armor Rebalanced**: DR 4, -2 Grace, -1 Momentum generation, -3 Sorcery (removed casting prohibition and stance restriction), immune to forced movement
   - Can now cast in heavy armor (difficult but possible)
   - Can use all stances
   - Distinct tactical identity
   - Updated: armor.md
 
 **Files Modified (43 total)**:
+
 - Core Rules: 7 files (introduction, basic_mechanics, character_creation, combat_system, advancement, magic, running_the_game)
 - Spells: 6 files (introduction, system_integration, cantrips, standard_spells, advanced_spells, master_spells)
 - Archetypes: 6 files (fighter, ranger, paladin, rogue, wizard, cleric)
@@ -255,16 +261,18 @@ _11/12/25 Session (Mathematical Rebalancing)_:
 - GM Guidelines: 14 files (spell tiers GM notes)
 
 **Design Impact**:
-- Flow economy more predictable and manageable
+
+- Momentum economy more predictable and manageable
 - All character concepts viable (including armored casters)
 - Spellcasters sustainable without constant resource starvation
 - Martial characters have clear progression
-- Calling Flow benefits trigger frequently enough to be meaningful
+- Calling Momentum benefits trigger frequently enough to be meaningful
 - Armor provides distinct tactical choices, not just numerical progression
 - Death spiral reduced, creating more dramatic combat
 - Skill progression clear and balanced
 
 **Outstanding Issues Partially Addressed**:
+
 - Guard Scaling: Formula improved, still needs high-level playtesting
 - Calling Power Levels: All rebalanced to trigger frequently
 - Spellcasting Access: Attribute gating removed for spellcasting archetypes
@@ -320,7 +328,7 @@ _11/14/25 Session (Documentation Standards & Taxonomy Elimination)_:
   - templates/generators/monsters.jinja: DELETED
   - scripts/generate_docs.py: Removed monsters generation system
   - templates/output/monsters_reference.md: DELETED
-  - templates/output/*: All 38 remaining files regenerated
+  - templates/output/\*: All 38 remaining files regenerated
 - **Design Impact**:
   - Future documentation will follow traditional TTRPG presentation patterns
   - Clear standards prevent video game taxonomy from creeping back in
@@ -332,19 +340,22 @@ _11/14/25 Session (Documentation Standards & Taxonomy Elimination)_:
 
 _12/29/25 Session (Archetype Balance Fixes)_:
 
-- **Conducted comprehensive stress test of Flow RPG combat system**:
+- **Conducted comprehensive stress test of Autumn Phoenix RPG combat system**:
+
   - Created 7-character test party (one of each archetype)
   - Simulated combat with real dice roll probabilities
   - Advanced characters through 6 Minor + 2 Moderate milestones
   - Identified critical balance issues with 4 archetypes
 
 - **Balance Issues Identified**:
+
   - Paladin: 58% attack, 17% casting at session 1 (broken)
   - Cleric: 58% casting at session 1 (unreliable healer)
   - Rogue: 58% attack at session 1 (no Combat skill)
   - Bard: 72% casting at session 1 (marginal)
 
 - **Implemented Archetype Balance Fixes**:
+
   - **Paladin**: Combat Novice→Competent (+0), added Sorcery Novice (-1)
   - **Cleric**: Sorcery Novice→Competent (+0)
   - **Rogue**: Replaced Deceive Novice with Combat Competent (+0)
@@ -359,6 +370,7 @@ _12/29/25 Session (Archetype Balance Fixes)_:
   | Bard | Cast | 72.2% | 83.3% |
 
 - **Files Modified**:
+
   - yaml/character.yaml (source of truth)
   - yaml/examples.yaml (example characters)
   - core_rules/03_character_creation.md

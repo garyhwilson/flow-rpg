@@ -6,7 +6,7 @@ Generates metamagic documentation with professional TTRPG prose
 
 A wizard casts Fireball. So does every other spellcaster with access to that spell. But a wizard with metamagic mastery casts a Fireball that burns hotter, spreads wider, or strikes faster than the standard version. Metamagic transforms how wizards cast spells—it's the unique subsystem that makes wizards feel different from clerics, bards, and other spellcasters.
 
-Where other spellcasters simply cast their spells as written, wizards modify and enhance them through metamagic techniques. Every metamagic option costs additional Flow beyond the spell's base cost, creating resource management decisions. Spend extra Flow for enhanced effects, or conserve Flow and cast more spells? This choice defines wizard gameplay.
+Where other spellcasters simply cast their spells as written, wizards modify and enhance them through metamagic techniques. Every metamagic option costs additional Momentum beyond the spell's base cost, creating resource management decisions. Spend extra Momentum for enhanced effects, or conserve Momentum and cast more spells? This choice defines wizard gameplay.
 
 ---
 
@@ -19,7 +19,7 @@ Where other spellcasters simply cast their spells as written, wizards modify and
 {{ meta.effect }}
 {% endif %}
 
-{% if meta.cost %}**Additional Flow Cost:** {{ meta.cost }}{% endif %}
+{% if meta.cost %}**Additional Momentum Cost:** {{ meta.cost }}{% endif %}
 {% if meta.limitation %}**Limitation:** {{ meta.limitation }}{% endif %}
 
 ---
@@ -41,25 +41,25 @@ Wizards learn metamagic options at milestones, similar to how fighters learn com
 
 ## Using Metamagic
 
-### Flow Economy
+### Momentum Economy
 
-Metamagic creates additional Flow costs beyond spell casting:
+Metamagic creates additional Momentum costs beyond spell casting:
 
-**Standard Spell:** Fireball costs -1 Flow (Tier 2 spell)
-**Heightened Fireball:** Fireball costs -1 (base) -1 (metamagic) = -2 Flow total
-**Widened Heightened Fireball:** Fireball costs -1 (base) -1 (heightened) -1 (widened) = -3 Flow total
+**Standard Spell:** Fireball costs -1 Momentum (Tier 2 spell)
+**Heightened Fireball:** Fireball costs -1 (base) -1 (metamagic) = -2 Momentum total
+**Widened Heightened Fireball:** Fireball costs -1 (base) -1 (heightened) -1 (widened) = -3 Momentum total
 
-Multiple metamagic options stack on the same spell, but Flow costs accumulate quickly. A triple-enhanced spell might cost -4 or -5 Flow—only possible at maximum Flow reserves.
+Multiple metamagic options stack on the same spell, but Momentum costs accumulate quickly. A triple-enhanced spell might cost -4 or -5 Momentum—only possible at maximum Momentum reserves.
 
 ### Strategic Decisions
 
 Metamagic creates constant resource decisions:
 
-**Cast standard spell now?** Conserve Flow, cast more spells this fight.
-**Enhance with metamagic?** Spend extra Flow for improved effect, cast fewer total spells.
-**Save Flow for later?** Hold resources for critical moment enhanced casting.
+**Cast standard spell now?** Conserve Momentum, cast more spells this fight.
+**Enhance with metamagic?** Spend extra Momentum for improved effect, cast fewer total spells.
+**Save Momentum for later?** Hold resources for critical moment enhanced casting.
 
-Good wizards manage Flow to maximize impact across the entire encounter, not just individual turns.
+Good wizards manage Momentum to maximize impact across the entire encounter, not just individual turns.
 
 ### Combining Metamagic
 
@@ -68,7 +68,7 @@ Most metamagic options stack with each other:
 - Widened Empowered Shield (affect larger area AND stronger protection)
 - Extended Subtle Charm (longer duration AND harder to detect)
 
-But costs accumulate. Three metamagic enhancements on one spell might cost the wizard's entire Flow pool. Use combinations strategically, not routinely.
+But costs accumulate. Three metamagic enhancements on one spell might cost the wizard's entire Momentum pool. Use combinations strategically, not routinely.
 
 ---
 
@@ -76,7 +76,7 @@ But costs accumulate. Three metamagic enhancements on one spell might cost the w
 
 ### Damage Enhancement
 
-**Heighten** increases spell damage beyond base values. Use when you need to eliminate tough enemies quickly or overcome damage resistance. The extra Flow investment pays off against dangerous foes.
+**Heighten** increases spell damage beyond base values. Use when you need to eliminate tough enemies quickly or overcome damage resistance. The extra Momentum investment pays off against dangerous foes.
 
 **Empower** maximizes certain dice results. Use when you need consistency over variable damage. Reliable damage matters more against precision targets than maximum potential damage.
 
@@ -84,13 +84,13 @@ But costs accumulate. Three metamagic enhancements on one spell might cost the w
 
 **Widen** affects larger areas. Use when facing multiple clustered enemies. The increased area can hit 2-3 additional targets, multiplying spell effectiveness.
 
-**Extend** increases duration for ongoing effects. Use on buffs (Shield, Blur) or persistent battlefield control. Longer duration means fewer recasts, conserving spell slots and Flow.
+**Extend** increases duration for ongoing effects. Use on buffs (Shield, Blur) or persistent battlefield control. Longer duration means fewer recasts, conserving spell slots and Momentum.
 
 **Quicken** reduces casting time. Use when action economy matters—casting and moving in the same turn, responding instantly to threats, or maintaining combat tempo.
 
 ### Subtle Casting
 
-**Subtle** makes spellcasting less obvious. Use in social situations where you can't be seen casting, or combat scenarios where enemies target visible spellcasters. The stealth value exceeds the Flow cost in many situations.
+**Subtle** makes spellcasting less obvious. Use in social situations where you can't be seen casting, or combat scenarios where enemies target visible spellcasters. The stealth value exceeds the Momentum cost in many situations.
 
 ---
 
@@ -98,7 +98,7 @@ But costs accumulate. Three metamagic enhancements on one spell might cost the w
 
 ### Essential Options
 
-**Heighten** is nearly universal. Every wizard wants the option to boost damage when necessary. It's the most straightforward metamagic—spend Flow, deal more damage.
+**Heighten** is nearly universal. Every wizard wants the option to boost damage when necessary. It's the most straightforward metamagic—spend Momentum, deal more damage.
 
 **Quicken** dramatically improves action economy. Wizards normally spend entire turns casting; quickening lets you cast and act. This flexibility justifies the cost.
 
@@ -120,7 +120,7 @@ Experienced wizards combine metamagic creatively:
 **Widened Heightened Fireball:** Affect huge area with increased damage—devastating against clustered enemies.
 **Extended Subtle Mage Armor:** Long-lasting protection cast without observers noticing.
 
-These combinations are expensive (multiple -1 Flow costs) but create effects impossible through standard casting.
+These combinations are expensive (multiple -1 Momentum costs) but create effects impossible through standard casting.
 
 ---
 
@@ -139,11 +139,11 @@ But don't gatekeep metamagic behind narrative requirements that delay mechanical
 ### Balancing Enhanced Spells
 
 Metamagic makes wizards more powerful but not overwhelmingly so:
-- Flow costs limit frequency (can't enhance every spell)
+- Momentum costs limit frequency (can't enhance every spell)
 - Stacking costs limit combinations (triple-enhanced spells rare)
 - Other spellcasters have different advantages (Cleric domains, Bard inspiration)
 
-Don't punish wizards for using metamagic effectively. If they spend Flow wisely to win fights, that's working as intended.
+Don't punish wizards for using metamagic effectively. If they spend Momentum wisely to win fights, that's working as intended.
 
 ### Metamagic in Different Campaigns
 
@@ -162,7 +162,7 @@ No. Metamagic is the wizard's unique subsystem, like fighter techniques or rogue
 Yes, unless specific metamagic has limitations. Most metamagic works with any spell.
 
 **Do metamagic costs stack with spell costs?**
-Yes. Enhanced spells cost base spell Flow + metamagic Flow. Heightened Fireball (-1 base, -1 metamagic) costs -2 total.
+Yes. Enhanced spells cost base spell Momentum + metamagic Momentum. Heightened Fireball (-1 base, -1 metamagic) costs -2 total.
 
 **Can wizards learn unlimited metamagic?**
 No. Limit based on milestones invested. Typical wizard might know 4-6 options by campaign end.

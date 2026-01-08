@@ -1,15 +1,16 @@
 # Species
-*Heritage, Physiology & Cultural Context*
+
+_Heritage, Physiology & Cultural Context_
 
 ## Introduction
 
-In the Flow RPG system, your character's Species represents one of the three foundational pillars of identity, alongside Archetype (professional training) and Calling (psychological motivation). Your character's species shapes their physical capabilities, cultural background, and perspective on the world. Unlike some game systems that treat species as purely mechanical packages of bonuses, Flow RPG approaches species as integrated combinations of physical traits, cultural contexts, and historical experiences.
+In the Autumn Phoenix RPG system, your character's Species represents one of the three foundational pillars of identity, alongside Archetype (professional training) and Calling (psychological motivation). Your character's species shapes their physical capabilities, cultural background, and perspective on the world. Unlike some game systems that treat species as purely mechanical packages of bonuses, Autumn Phoenix RPG approaches species as integrated combinations of physical traits, cultural contexts, and historical experiences.
 
 The four core species—Dwarves, Elves, Halflings, and Humans—represent distinct approaches to life in the world, each with their own physical adaptations, cultural values, and traditional practices. While individual members of each species vary tremendously, these fundamental patterns provide starting points for character development and worldbuilding.
 
 ## Species vs. Race
 
-Flow RPG deliberately uses the term "Species" rather than "Race" to emphasize several key design philosophies:
+Autumn Phoenix RPG deliberately uses the term "Species" rather than "Race" to emphasize several key design philosophies:
 
 **Biological Reality:** The four playable options represent genuinely different biological species with distinct evolutionary histories, physiological traits, and adaptations. They are not simply variations of humans with cosmetic differences.
 
@@ -20,15 +21,19 @@ Flow RPG deliberately uses the term "Species" rather than "Race" to emphasize se
 ## Core Species Characteristics
 
 ### Dwarves
+
 Dwarves are characterized by physical resilience, methodical patience, and deep cultural traditions. Their sturdy physiology, extended lifespans, and connection to stone and metal have shaped societies that value craftsmanship, historical continuity, and community obligation.
 
 ### Elves
+
 Elves possess remarkable sensory acuity, physical grace, and exceptionally long lifespans. These traits have fostered cultures that emphasize environmental harmony, artistic refinement, and long-term perspective, approaching both problems and opportunities with patience born from centuries of experience.
 
 ### Halflings
+
 Halflings combine physical adaptability, strong community bonds, and practical resilience. Their societies emphasize interpersonal connections, adaptive tradition, and finding contentment in daily life while maintaining the flexibility to thrive in changing circumstances.
 
 ### Humans
+
 Humans are defined by their adaptability, ambition, and cultural diversity. Their relatively brief lifespans drive innovation and experimentation, creating tremendous cultural variation across different communities while maintaining core human tendencies toward expansion and adaptation.
 
 ## Species in Character Creation

@@ -9,6 +9,7 @@ Roll two six-sided dice, add your relevant attribute modifier (ranging from -5 t
 **Standard Target Number:** 8 (moderate difficulty)
 
 **Difficulty Scale:**
+
 - **Trivial (TN 6):** Routine tasks under pressure
 - **Easy (TN 7):** Basic professional work
 - **Standard (TN 8):** Challenging professional tasks
@@ -17,49 +18,54 @@ Roll two six-sided dice, add your relevant attribute modifier (ranging from -5 t
 - **Legendary (TN 14):** Mythic achievements
 
 **Success Tiers:**
-- **6 or less:** Failure (generates Flow for opponent or creates consequences)
+
+- **6 or less:** Failure (generates Momentum for opponent or creates consequences)
 - **7-9:** Partial Success (succeeds with a cost or complication)
 - **10-12:** Full Success (achieves your goal as intended)
-- **13+:** Critical Success (generates extra Flow and exceptional results)
+- **13+:** Critical Success (generates extra Momentum and exceptional results)
 - **Beat TN by 5+:** Enhanced Success (gain advantage on next roll)
 - **Beat TN by 8+:** Legendary Success (major narrative permission)
 
-### The Flow System
+### The Momentum System
 
-Flow is the central resource that powers combat techniques, spells, and narrative advantages. It represents your character's momentum, focus, and command of the situation.
+Momentum is the central resource that powers combat techniques, spells, and narrative advantages. It represents your character's momentum, focus, and command of the situation.
 
-**Flow Range:** -3 to +6 (reduced from original)
+**Momentum Range:** -3 to +6 (reduced from original)
 
-> **Note:** Flow cannot exceed your maximum (default +6, can be increased through edges and abilities). Any excess Flow generation is lost.
+> **Note:** Momentum cannot exceed your maximum (default +6, can be increased through edges and abilities). Any excess Momentum generation is lost.
 
-**Starting Flow:** 0 (neutral position)
-- **Exception:** Scholars start each scene at +1 Flow
+**Starting Momentum:** 0 (neutral position)
 
-**Flow States:**
-- **Positive Flow (+1 to +6):** "In the flow," riding momentum, advantage
-- **Zero Flow (0):** Neutral state, balanced position
-- **Negative Flow (-1 to -3):** Disrupted, struggling, disadvantage
+- **Exception:** Scholars start each scene at +1 Momentum
 
-**Generating Flow:**
-- Critical success on any roll: +1 Flow
-- Successful attack in Aggressive stance: +1 Flow
-- Successful defense in Defensive stance: +1 Flow
-- Being attacked while in Defensive stance: +1 Flow (once per round)
-- Taking any damage: +1 Flow (new rule - helps all characters maintain momentum)
-- Casting a cantrip successfully: +1 Flow
+**Momentum States:**
+
+- **Positive Momentum (+1 to +6):** "In the flow," riding momentum, advantage
+- **Zero Momentum (0):** Neutral state, balanced position
+- **Negative Momentum (-1 to -3):** Disrupted, struggling, disadvantage
+
+**Generating Momentum:**
+
+- Critical success on any roll: +1 Momentum
+- Successful attack in Aggressive stance: +1 Momentum
+- Successful defense in Defensive stance: +1 Momentum
+- Being attacked while in Defensive stance: +1 Momentum (once per round)
+- Taking any damage: +1 Momentum (new rule - helps all characters maintain momentum)
+- Casting a cantrip successfully: +1 Momentum
 - Archetype abilities (varies)
 - Calling-specific triggers (rebalanced for reliability)
 
-> **Stacking:** You can gain Flow from multiple different triggers in the same round. Each trigger's "once per round" limit applies separately. For example, you could gain +1 Flow from being attacked AND +1 Flow from taking damage in the same round.
+> **Stacking:** You can gain Momentum from multiple different triggers in the same round. Each trigger's "once per round" limit applies separately. For example, you could gain +1 Momentum from being attacked AND +1 Momentum from taking damage in the same round.
 
-**Spending Flow:**
+**Spending Momentum:**
+
 - Enhance dice rolls (+1 per point spent)
 - Trigger combat techniques (varies by technique)
 - Cast intermediate and advanced spells (-1 to -3)
 - Access narrative advantages (GM discretion)
 - No cost for stance switching (revised from original)
 
-**Core Philosophy:** Flow is moment-to-moment momentum that ebbs and flows naturally. All character types can generate Flow through their preferred playstyle - aggressive fighters through offense, defensive fighters through protection, and spellcasters through magical success.
+**Core Philosophy:** Momentum is moment-to-moment momentum that ebbs and flows naturally. All character types can generate Momentum through their preferred playstyle - aggressive fighters through offense, defensive fighters through protection, and spellcasters through magical success.
 
 ### Attribute System
 
@@ -68,20 +74,24 @@ Flow is the central resource that powers combat techniques, spells, and narrativ
 **The Six Attributes:**
 
 **Physical Attributes**
+
 - **Might:** Raw physical power, strength, and endurance
 - **Grace:** Agility, coordination, precision, and speed
 
 **Mental Attributes**
+
 - **Mind:** Intellect, reasoning, calculation, and knowledge
 - **Awareness:** Perception, intuition, and attunement to surroundings
 
 **Social Attributes**
+
 - **Will:** Mental fortitude, determination, and spiritual power
 - **Presence:** Charisma, force of personality, and social influence
 
 **Key Principle - Approach Matters:** When making a check, you use the specific attribute that matches your approach, not a predetermined attribute for each skill.
 
-*Example: Intimidating someone could use:*
+_Example: Intimidating someone could use:_
+
 - **Might** if physically threatening them
 - **Mind** if pointing out logical consequences
 - **Presence** if using sheer force of personality
@@ -91,6 +101,7 @@ Flow is the central resource that powers combat techniques, spells, and narrativ
 Skills represent your character's training and expertise in various areas. Each skill has five possible ratings:
 
 **Five-Tier Progression:**
+
 1. **Untrained** (-2 modifier): No formal training
 2. **Novice** (-1 modifier): Basic understanding
 3. **Competent** (+0 modifier): Functional capability
@@ -98,6 +109,7 @@ Skills represent your character's training and expertise in various areas. Each 
 5. **Expert** (+2 modifier): Peak human mastery
 
 **Advancement Limits by Milestone Type:**
+
 - **Starting Characters:** Maximum Competent (+0), one Professional (+1) from archetype
 - **Minor Milestones:** Can advance skills up to Professional (+1)
 - **Moderate Milestones:** Can advance skills to Expert (+2)
@@ -105,6 +117,7 @@ Skills represent your character's training and expertise in various areas. Each 
 **The 15 Core Skills:**
 
 **Physical Skills (5)**
+
 - **Combat:** Fighting, weapons, and tactical positioning
 - **Athletics:** Running, climbing, swimming, and feats of strength
 - **Stealth:** Hiding, sneaking, and avoiding detection
@@ -112,6 +125,7 @@ Skills represent your character's training and expertise in various areas. Each 
 - **Finesse:** Fine manipulation, lockpicking, and sleight of hand
 
 **Mental Skills (5)**
+
 - **Lore:** History, academics, and specialized knowledge
 - **Medicine:** Healing, anatomy, and treating injuries
 - **Craft:** Making, repairing, and engineering objects
@@ -119,6 +133,7 @@ Skills represent your character's training and expertise in various areas. Each 
 - **Sorcery:** Magical theory and spellcasting practice
 
 **Social Skills (5)**
+
 - **Persuade:** Convincing others through reason and charm
 - **Deceive:** Lying, disguising, and misdirection
 - **Perform:** Entertainment, inspiration, and artistic expression
@@ -130,25 +145,31 @@ Skills represent your character's training and expertise in various areas. Each 
 When determining which physical skill to use, ask these questions:
 
 **Is this combat-related (attacking, defending, tactical positioning)?**
+
 - Yes → Use **Combat**
 - No → Continue
 
 **Does it involve delicate manipulation or precise finger work?**
+
 - Yes (lockpicking, disarming traps, sleight of hand, pickpocketing) → Use **Finesse**
 - No → Continue
 
 **Does it involve avoiding detection or moving unseen?**
+
 - Yes (hiding, sneaking, tailing someone) → Use **Stealth**
 - No → Continue
 
 **Does it involve outdoor survival or wilderness skills?**
+
 - Yes (tracking, foraging, navigation, animal handling) → Use **Survival**
 - No → Continue
 
 **Does it involve physical exertion or strength?**
+
 - Yes (climbing, jumping, swimming, running, breaking down doors) → Use **Athletics**
 
 **Common Examples:**
+
 - **Climbing a wall:** Athletics (physical exertion)
 - **Climbing a wall silently:** Athletics + Stealth (GM might require two rolls or grant advantage)
 - **Picking a lock:** Finesse (delicate manipulation)
@@ -161,6 +182,7 @@ When determining which physical skill to use, ask these questions:
 
 **Attribute Choice Matters:**
 Remember, your approach determines which attribute pairs with the skill:
+
 - **Might + Athletics:** Forcing a door, carrying heavy loads
 - **Grace + Athletics:** Acrobatic maneuvers, parkour
 - **Might + Combat:** Heavy weapon strikes, shield bashing
@@ -182,7 +204,7 @@ Most gameplay occurs in scenes that follow this structure:
    - **10-12:** Full success
    - **13+:** Critical success
 6. **Narrate Outcome:** GM and player collaborate on describing what happens
-7. **Flow Adjustments:** Award or deduct Flow based on outcome
+7. **Momentum Adjustments:** Award or deduct Momentum based on outcome
 
 ### Dice Conventions
 
@@ -201,10 +223,10 @@ Most gameplay occurs in scenes that follow this structure:
 
 **Player:** "I have Awareness +2 and Athletics at Competent (+0), so that's 2d6+2."
 
-*Rolls 2d6: 4, 3 = 7, plus 2 = 9*
+_Rolls 2d6: 4, 3 = 7, plus 2 = 9_
 
 **GM:** "A 9 is a partial success. You make it up, but one of the stones you thought was stable breaks loose. You're hanging by one hand, and will need another check to pull yourself up before the next volley of arrows."
 
-**Player:** "I'll spend 1 Flow to boost my roll to 10 for a full success instead."
+**Player:** "I'll spend 1 Momentum to boost my roll to 10 for a full success instead."
 
 **GM:** "Perfect. You catch yourself as the stone breaks and smoothly pull up to the next level just as arrows thunk into the spot where you were hanging."

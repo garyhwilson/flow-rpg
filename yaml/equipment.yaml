@@ -1,4 +1,4 @@
-# Flow RPG Equipment System
+# Autumn Phoenix RPG Equipment System
 # Version: 1.0-complete
 # Weapons, armor, items, and economy
 
@@ -9,7 +9,7 @@ equipment_system:
       - "Simple categories with meaningful choices"
       - "Equipment grows with characters"
       - "Quality matters more than quantity"
-      - "Integration with Flow system"
+      - "Integration with Momentum system"
 
 # ============================================
 # WEAPONS
@@ -141,7 +141,7 @@ weapons:
     thrown_weapons:
       damage: "2d6"
       range: "Close"
-      special_property: "+1 Flow when hit at Close range"
+      special_property: "+1 Momentum when hit at Close range"
       weight: "Light"
       returning: "Some enchanted versions"
       cost: "5-20 coins each"
@@ -275,9 +275,9 @@ armor:
       damage_reduction: 0
       penalties:
         grace: 0
-        flow: "None"
+        momentum: "None"
       benefits:
-        flow_when_hit: "+1 Flow when taking damage"
+        momentum_when_hit: "+1 Momentum when taking damage"
         spellcasting_bonus: "+1 to Sorcery checks"
         extra_movement: "+1 zone per turn"
       cost: 0
@@ -287,7 +287,7 @@ armor:
       damage_reduction: 1
       penalties:
         grace: 0
-        flow: "None"
+        momentum: "None"
         spellcasting: 0
       benefits:
         initiative: "+1 to act sooner in stance"
@@ -319,7 +319,7 @@ armor:
       damage_reduction: 2
       penalties:
         grace: -1
-        flow: "None"
+        momentum: "None"
         spellcasting: -1
       benefits:
         guard_bonus: "+1 Guard at scene start"
@@ -351,7 +351,7 @@ armor:
       damage_reduction: 4
       penalties:
         grace: -2
-        flow: "-1 to all Flow generation"
+        momentum: "-1 to all Momentum generation"
         spellcasting: -3
       benefits:
         knockback_immunity: "Cannot be moved"
@@ -684,7 +684,7 @@ magic_items:
         rarity: "Uncommon"
       
       ring_of_flow:
-        effect: "+1 maximum Flow"
+        effect: "+1 maximum Momentum"
         cost: 3000
         rarity: "Rare"
 

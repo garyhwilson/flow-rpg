@@ -1,4 +1,4 @@
-# Flow RPG Character System
+# Autumn Phoenix RPG Character System
 # Version: 1.0-complete
 # Character creation, species, archetypes, and callings
 
@@ -27,14 +27,14 @@ character_creation:
           note: "Can later adopt archetype abilities through milestones"
     
     step_4_calling:
-      action: "Select inner motivation providing Flow benefits"
+      action: "Select inner motivation providing Momentum benefits"
       options: ["advocate", "guardian", "exemplar", "seeker", "scholar", "sentinel", "enthusiast", "champion", "mediator"]
     
     step_5_derived_values:
       calculate:
         - "Guard"
         - "Vitality"
-        - "Flow starting value"
+        - "Momentum starting value"
         - "Movement zones"
     
     step_6_details:
@@ -65,8 +65,8 @@ species:
         type: "character_creation"
       
       determined:
-        effect: "When at negative Flow, next successful action gains +1 additional Flow"
-        type: "flow_generation"
+        effect: "When at negative Momentum, next successful action gains +1 additional Momentum"
+        type: "momentum_generation"
       
       adaptable:
         effect: "During any rest, may swap one Competent skill with another"
@@ -85,8 +85,8 @@ species:
     
     species_traits:
       fey_grace:
-        effect: "When you roll 11+ on any check, gain +1 Flow (once per round)"
-        type: "flow_generation"
+        effect: "When you roll 11+ on any check, gain +1 Momentum (once per round)"
+        type: "momentum_generation"
       
       magical_affinity:
         effect: "Can sense magic within Near range without Sorcery skill (but need skill for details)"
@@ -117,7 +117,7 @@ species:
         type: "information"
       
       steady_stance:
-        effect: "Switching from Defensive stance costs no Flow (stubborn immovability)"
+        effect: "Switching from Defensive stance costs no Momentum (stubborn immovability)"
         type: "stance"
     
     natural_callings: ["sentinel", "guardian", "advocate"]
@@ -137,8 +137,8 @@ species:
         type: "reroll"
       
       brave_heart:
-        effect: "When an ally goes to negative Flow, immediately gain +1 Flow"
-        type: "flow_generation"
+        effect: "When an ally goes to negative Momentum, immediately gain +1 Momentum"
+        type: "momentum_generation"
       
       small_but_mighty:
         effect: "Move through enemy zones without provoking. When successfully Hide, enemies get -2 to detect"
@@ -259,7 +259,7 @@ archetypes:
         When attacking from a hidden position, during a surprise round,
         or against a target you have tracked for at least 1 minute:
         - Deal +2 damage
-        - Gain +1 Flow on hit
+        - Gain +1 Momentum on hit
         - May use Survival skill instead of Combat for the attack
       starting_flow: 1
 
@@ -314,7 +314,7 @@ archetypes:
 
     archetype_feature:
       name: "Divine Grace"
-      effect: "+1 to all saving rolls, +4 Guard, start each scene at +1 Flow, ignore first point of armor penalty to divine spellcasting"
+      effect: "+1 to all saving rolls, +4 Guard, start each scene at +1 Momentum, ignore first point of armor penalty to divine spellcasting"
       note: "Divine protection shields from harm, strengthens resolve, provides blessed energy, and allows armored casting"
 
     spellcasting:
@@ -385,8 +385,8 @@ archetypes:
     archetype_feature:
       name: "Arcane Battery"
       effect: |
-        - Maximum Flow increased to +7
-        - Start each scene at +2 Flow
+        - Maximum Momentum increased to +7
+        - Start each scene at +2 Momentum
         - +2 base Guard (magical resilience)
         - Gain Arcane Ward technique (see techniques.yaml)
       note: "Greater magical reserves provide both offensive capability and basic protection"
@@ -396,19 +396,19 @@ archetypes:
         Wizards trade physical resilience for magical power:
 
         WHAT YOU GET:
-        - +2 starting Flow (can cast Tier-2 spell immediately)
-        - +7 max Flow (vs standard +6)
+        - +2 starting Momentum (can cast Tier-2 spell immediately)
+        - +7 max Momentum (vs standard +6)
         - +2 base Guard (magical protection)
-        - Arcane Ward technique (Flow-based damage reduction)
+        - Arcane Ward technique (Momentum-based damage reduction)
 
         WHAT YOU SACRIFICE:
         - Cannot effectively wear armor (penalties)
         - Still lowest Guard in party even with +2 bonus
-        - Must rely on Flow techniques and party protection
+        - Must rely on Momentum techniques and party protection
 
         PLAY STYLE:
         - Stay at Far range when possible
-        - Use Arcane Ward (1 Flow) to reduce incoming damage
+        - Use Arcane Ward (1 Momentum) to reduce incoming damage
         - Cast Shield spell for additional Guard
         - Coordinate with armored allies for protection
         - End fights fast with high-damage spells
@@ -449,7 +449,7 @@ archetypes:
 
     archetype_feature:
       name: "Divine Grace"
-      effect: "+1 to all saving rolls, +4 Guard, start each scene at +1 Flow, ignore first point of armor penalty to divine spellcasting"
+      effect: "+1 to all saving rolls, +4 Guard, start each scene at +1 Momentum, ignore first point of armor penalty to divine spellcasting"
       note: "Divine protection shields from harm, strengthens resolve, provides blessed energy, and allows armored casting"
 
     spellcasting:
@@ -486,7 +486,7 @@ archetypes:
 
     archetype_feature:
       name: "Versatile Experience"
-      effect: "One additional Novice skill of your choice, +4 Guard, start each scene at +1 Flow"
+      effect: "One additional Novice skill of your choice, +4 Guard, start each scene at +1 Momentum"
       note: "Bards learn from their travels, magical performance builds resilience and energy"
 
     spellcasting:
@@ -623,10 +623,10 @@ callings:
     fear: "Being corrupt, defective, or wrong"
     desire: "To be good, right, accurate, and virtuous"
     
-    flow_benefit:
+    momentum_benefit:
       name: "Righteous Revelation"
       trigger: "When you or ally reveals truth or exposes deception"
-      effect: "Gain +1 Flow"
+      effect: "Gain +1 Momentum"
       limit: "No limit per scene"
     
     narrative_permission:
@@ -647,10 +647,10 @@ callings:
     fear: "Being unloved or unwanted"
     desire: "To feel loved and needed by others"
     
-    flow_benefit:
+    momentum_benefit:
       name: "Protective Surge"
       trigger: "When you successfully defend or heal an ally"
-      effect: "Gain +1 Flow"
+      effect: "Gain +1 Momentum"
       limit: "Twice per scene"
     
     narrative_permission:
@@ -671,10 +671,10 @@ callings:
     fear: "Being worthless without achievements"
     desire: "To feel valuable and worthwhile"
     
-    flow_benefit:
+    momentum_benefit:
       name: "Victory Rush"
       trigger: "Any critical success (13+)"
-      effect: "Gain +1 additional Flow beyond normal critical"
+      effect: "Gain +1 additional Momentum beyond normal critical"
       limit: "No limit"
     
     narrative_permission:
@@ -695,10 +695,10 @@ callings:
     fear: "Having no identity or significance"
     desire: "To find themselves and their significance"
     
-    flow_benefit:
+    momentum_benefit:
       name: "Authentic Insight"
       trigger: "When you discover something important about yourself or others"
-      effect: "Gain +2 Flow"
+      effect: "Gain +2 Momentum"
       limit: "Twice per scene"
     
     narrative_permission:
@@ -719,10 +719,10 @@ callings:
     fear: "Being incompetent or overwhelmed"
     desire: "To be capable and understanding"
     
-    flow_benefit:
+    momentum_benefit:
       name: "Prepared Mind"
       trigger: "When you apply knowledge to solve a problem"
-      effect: "Gain +1 Flow"
+      effect: "Gain +1 Momentum"
       limit: "Three times per scene"
     
     narrative_permission:
@@ -743,10 +743,10 @@ callings:
     fear: "Being without support or security"
     desire: "To have security and support"
     
-    flow_benefit:
+    momentum_benefit:
       name: "Defensive Vigilance"
       trigger: "When you spot danger before it strikes"
-      effect: "Gain +1 Flow"
+      effect: "Gain +1 Momentum"
       limit: "Twice per scene"
     
     narrative_permission:
@@ -767,10 +767,10 @@ callings:
     fear: "Being trapped in pain or deprivation"
     desire: "To be satisfied and content"
     
-    flow_benefit:
-      name: "Joyful Flow"
-      trigger: "When you gain Flow from any source"
-      effect: "Adjacent ally also gains +1 Flow"
+    momentum_benefit:
+      name: "Joyful Momentum"
+      trigger: "When you gain Momentum from any source"
+      effect: "Adjacent ally also gains +1 Momentum"
       limit: "No limit"
     
     narrative_permission:
@@ -791,10 +791,10 @@ callings:
     fear: "Being controlled, vulnerable, or weak"
     desire: "To be self-reliant and in control"
     
-    flow_benefit:
+    momentum_benefit:
       name: "Protective Dominance"
       trigger: "When you defeat or intimidate an enemy threatening allies"
-      effect: "Gain +1 Flow"
+      effect: "Gain +1 Momentum"
       limit: "Twice per scene"
     
     narrative_permission:
@@ -815,10 +815,10 @@ callings:
     fear: "Loss of connection, separation, conflict"
     desire: "To have inner and outer peace"
     
-    flow_benefit:
+    momentum_benefit:
       name: "Harmony Restoration"
       trigger: "First time each scene you help resolve any conflict"
-      effect: "You and all involved gain +1 Flow"
+      effect: "You and all involved gain +1 Momentum"
       limit: "Once per scene"
     
     narrative_permission:
@@ -855,7 +855,7 @@ derived_values:
       magical: "Varies by spell"
     progression: "Increased through milestone choices, not automatically"
   
-  flow:
+  momentum:
     starting: 0
     range: [-3, 6]
     reset: "Between scenes"
@@ -895,7 +895,7 @@ calling_evolution:
   moderate_milestone:
     options:
       - "Evolve interpretation of calling"
-      - "Modify Flow benefit trigger slightly"
+      - "Modify Momentum benefit trigger slightly"
       - "Add minor secondary benefit"
   
   major_milestone:
@@ -914,7 +914,7 @@ calling_evolution:
         calling_synthesis:
           description: "Merge two callings into unique hybrid"
           example: "Guardian + Scholar = Battle Medic (protection through preparation)"
-          benefit: "Keep both Flow benefits at 75% effectiveness"
+          benefit: "Keep both Momentum benefits at 75% effectiveness"
         
         calling_transcendence:
           description: "Rise above calling limitations"

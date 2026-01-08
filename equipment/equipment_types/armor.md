@@ -1,11 +1,12 @@
 # Armor
-*Protection, Trade-offs, and Defensive Strategy*
 
-## Philosophy of Armor in Flow
+_Protection, Trade-offs, and Defensive Strategy_
 
-Armor in Flow RPG represents meaningful defensive choices rather than simple numerical progression. Each armor category offers distinct advantages balanced by corresponding limitations, creating tactical decisions that significantly impact combat approach, character capabilities, and resource management.
+## Philosophy of Armor in Momentum
 
-The armor system integrates with Flow's core mechanics through multiple vectors—damage reduction, attribute penalties, stance restrictions, and spellcasting limitations. These interactions ensure armor choice influences overall character strategy rather than serving as a simple "equip the best armor available" decision.
+Armor in Autumn Phoenix RPG represents meaningful defensive choices rather than simple numerical progression. Each armor category offers distinct advantages balanced by corresponding limitations, creating tactical decisions that significantly impact combat approach, character capabilities, and resource management.
+
+The armor system integrates with Momentum's core mechanics through multiple vectors—damage reduction, attribute penalties, stance restrictions, and spellcasting limitations. These interactions ensure armor choice influences overall character strategy rather than serving as a simple "equip the best armor available" decision.
 
 ## Choosing Your Armor
 
@@ -17,7 +18,7 @@ Fighting unarmored represents a deliberate choice emphasizing mobility, stealth,
 
 **Damage Reduction**: 0
 **Penalties**: None
-**Flow Bonus**: +1 Flow when taking damage
+**Momentum Bonus**: +1 Momentum when taking damage
 **Casting**: +1 bonus to Sorcery checks (unrestricted magical flow)
 **Special**: Extra zone of movement per turn
 **Best For**: Spellcasters, Grace-focused characters, stealthy characters, unarmored defense specialists
@@ -26,11 +27,11 @@ Fighting unarmored represents a deliberate choice emphasizing mobility, stealth,
 
 Unarmored characters rely on avoiding damage rather than absorbing it. This approach demands careful positioning, tactical awareness, and effective use of defensive stances or abilities. Characters fighting unarmored typically build around high Grace for defense, use cover and positioning strategically, or possess supernatural defensive capabilities.
 
-The lack of armor penalties means unarmored characters can fully leverage Grace-based abilities, generate Flow through movement freely, and cast spells without restrictions. This makes unarmored combat the default choice for dedicated spellcasters and characters emphasizing mobility.
+The lack of armor penalties means unarmored characters can fully leverage Grace-based abilities, generate Momentum through movement freely, and cast spells without restrictions. This makes unarmored combat the default choice for dedicated spellcasters and characters emphasizing mobility.
 
-#### Flow and Unarmored Combat
+#### Momentum and Unarmored Combat
 
-Unarmored characters can generate Flow through graceful combat—dodging attacks, moving fluidly through battle, performing acrobatic maneuvers, or demonstrating supernatural evasion. The lack of encumbrance enables Flow generation through movement-based actions without restriction.
+Unarmored characters can generate Momentum through graceful combat—dodging attacks, moving fluidly through battle, performing acrobatic maneuvers, or demonstrating supernatural evasion. The lack of encumbrance enables Momentum generation through movement-based actions without restriction.
 
 #### Character Archetypes
 
@@ -48,7 +49,7 @@ Light armor provides modest protection through flexible materials that don't sig
 
 **Damage Reduction**: 1
 **Penalties**: None
-**Flow Generation**: Normal
+**Momentum Generation**: Normal
 **Casting**: No penalty (compatible with spellcasting)
 **Special**: +1 to initiative and movement rolls
 **Weight**: 1 significant item slot
@@ -68,9 +69,9 @@ Light armor represents the sweet spot for many characters—providing meaningful
 
 The lack of Grace penalties means light armor wearers can employ full mobility, use Grace-based combat effectively, and switch stances freely without additional encumbrance concerns.
 
-#### Flow Generation
+#### Momentum Generation
 
-Light armor doesn't restrict Flow generation, allowing wearers to generate Flow through movement normally. This makes light armor compatible with mobile combat styles and tactics emphasizing positioning.
+Light armor doesn't restrict Momentum generation, allowing wearers to generate Momentum through movement normally. This makes light armor compatible with mobile combat styles and tactics emphasizing positioning.
 
 #### Character Archetypes
 
@@ -88,7 +89,7 @@ Medium armor provides substantial protection through metal and reinforced constr
 
 **Damage Reduction**: 2
 **Penalties**: -1 to Grace-based rolls
-**Flow Generation**: Normal
+**Momentum Generation**: Normal
 **Casting**: -1 to Sorcery checks (minor restriction)
 **Special**: Gain +1 Guard at the start of each scene
 **Weight**: 2 significant item slots
@@ -102,7 +103,7 @@ Medium armor suits characters prioritizing protection over mobility—clerics su
 
 The Grace penalty affects combat rolls using Grace + Combat, mobility checks, and Finesse-based actions. Characters with high Grace can compensate, but medium armor fundamentally shifts toward Might-based combat approaches.
 
-The inability to generate Flow from movement is a significant drawback, eliminating charging bonuses and restricting Flow generation to successful attacks, defensive achievements, and tactical actions rather than positioning.
+The inability to generate Momentum from movement is a significant drawback, eliminating charging bonuses and restricting Momentum generation to successful attacks, defensive achievements, and tactical actions rather than positioning.
 
 #### Spellcasting in Medium Armor
 
@@ -126,11 +127,11 @@ Medium armor represents a middle ground—better protection than light armor wit
 
 ### Heavy Armor
 
-Heavy armor provides maximum damage reduction through comprehensive metal protection, sacrificing mobility, spellcasting ease, and Flow generation for exceptional defense.
+Heavy armor provides maximum damage reduction through comprehensive metal protection, sacrificing mobility, spellcasting ease, and Momentum generation for exceptional defense.
 
 **Damage Reduction**: 4
 **Penalties**: -2 to Grace-based rolls
-**Flow Penalty**: -1 to Flow generation from all sources
+**Momentum Penalty**: -1 to Momentum generation from all sources
 **Casting**: -3 to Sorcery checks (difficult but possible)
 **Special**: Immune to forced movement and knockback effects
 **Weight**: 3 significant item slots
@@ -155,9 +156,9 @@ Heavy armor wearers fill specific tactical roles:
 
 The severe -4 spellcasting penalty makes heavy armor challenging for casters, though determined casters with high Sorcery bonuses can still cast effectively (especially elven casters who reduce the penalty to -3).
 
-#### Flow and Heavy Armor
+#### Momentum and Heavy Armor
 
-Despite mobility restrictions, heavy armor doesn't prevent Flow generation—it redirects it toward defensive achievements and combat excellence. Heavy armor wearers generate Flow by:
+Despite mobility restrictions, heavy armor doesn't prevent Momentum generation—it redirects it toward defensive achievements and combat excellence. Heavy armor wearers generate Momentum by:
 
 - Absorbing attacks without flinching
 - Protecting vulnerable allies
@@ -334,7 +335,7 @@ Human armor varies tremendously by region and purpose:
 ### Mobile Combatants
 
 **Recommendation**: None or Light armor
-**Reasoning**: Preserve Flow generation through movement
+**Reasoning**: Preserve Momentum generation through movement
 **Example**: Skirmisher in padded armor
 
 ### Defensive Specialists
@@ -379,7 +380,7 @@ Experienced adventurers often possess armor that tells a story: enchanted plate 
 
 ## Armor Maintenance and Damage
 
-While Flow doesn't track detailed armor condition, extended adventuring without maintenance can degrade armor effectiveness:
+While Momentum doesn't track detailed armor condition, extended adventuring without maintenance can degrade armor effectiveness:
 
 ### Environmental Damage
 
@@ -414,16 +415,16 @@ Consider these factors when selecting armor:
 
 The best armor matches your character concept while supporting your intended combat role. Don't automatically choose the heaviest armor your character can physically wear—consider whether the penalties align with your tactics and capabilities.
 
-## Armor and Flow Strategy
+## Armor and Momentum Strategy
 
-Different armor categories influence Flow economy differently:
+Different armor categories influence Momentum economy differently:
 
-**No Armor**: Maximum Flow generation through movement and agility
-**Light Armor**: Normal Flow generation with minimal restrictions
-**Medium Armor**: Flow generation shifted toward combat actions rather than positioning
-**Heavy Armor**: Flow generation through defensive achievements and martial excellence
+**No Armor**: Maximum Momentum generation through movement and agility
+**Light Armor**: Normal Momentum generation with minimal restrictions
+**Medium Armor**: Momentum generation shifted toward combat actions rather than positioning
+**Heavy Armor**: Momentum generation through defensive achievements and martial excellence
 
-Understanding how armor affects Flow generation helps characters develop effective resource management strategies aligned with their equipment choices.
+Understanding how armor affects Momentum generation helps characters develop effective resource management strategies aligned with their equipment choices.
 
 ## Special Armor Considerations
 
@@ -482,4 +483,4 @@ Armor evolution parallels character growth:
 - Acquiring signature pieces at key milestones
 - Eventually wearing legendary equipment
 
-Armor in Flow represents more than statistics—it's a fundamental aspect of character identity and tactical approach, creating meaningful choices that influence both mechanical effectiveness and narrative presentation.
+Armor in Momentum represents more than statistics—it's a fundamental aspect of character identity and tactical approach, creating meaningful choices that influence both mechanical effectiveness and narrative presentation.

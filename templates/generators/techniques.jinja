@@ -19,11 +19,11 @@ Unlike spells which require specific attributes and archetypes, combat technique
 ## Basic Techniques
 
 **Available to:** {{ techniques.basic_techniques.available_to }}
-**Cost:** No Flow required
+**Cost:** No Momentum required
 
 These fundamental combat actions are available to every character from the beginning:
 
-{% for technique in techniques.basic_techniques.no_flow_cost %}
+{% for technique in techniques.basic_techniques.no_momentum_cost %}
 - {{ technique }}
 {% endfor %}
 
@@ -35,7 +35,7 @@ You don't learn these—they're inherent to combat-trained characters. Use them 
 
 **Requirement:** {{ techniques.minor_milestone_techniques.requirement }}
 
-After your first minor milestone, you can begin learning these techniques. They provide reliable tactical options that enhance your combat effectiveness without requiring significant Flow investment:
+After your first minor milestone, you can begin learning these techniques. They provide reliable tactical options that enhance your combat effectiveness without requiring significant Momentum investment:
 
 {% for tech_id, tech in techniques.minor_milestone_techniques.items() %}
 {% if tech_id != 'requirement' %}
@@ -60,7 +60,7 @@ Minor techniques form your combat foundation. Choose 1-2 that complement your fi
 
 **Requirement:** {{ techniques.moderate_milestone_techniques.requirement }}
 
-These powerful techniques require significant Flow investment but can swing combat momentum decisively. Available after reaching moderate milestones:
+These powerful techniques require significant Momentum investment but can swing combat momentum decisively. Available after reaching moderate milestones:
 
 {% for tech_id, tech in techniques.moderate_milestone_techniques.items() %}
 {% if tech_id != 'requirement' %}
@@ -77,7 +77,7 @@ These powerful techniques require significant Flow investment but can swing comb
 {% endif %}
 {% endfor %}
 
-Moderate techniques represent your character's mastery of combat beyond basic competence. You'll typically use these 1-2 times per fight when you've built sufficient Flow and need to change the tactical situation dramatically.
+Moderate techniques represent your character's mastery of combat beyond basic competence. You'll typically use these 1-2 times per fight when you've built sufficient Momentum and need to change the tactical situation dramatically.
 
 ---
 
@@ -85,7 +85,7 @@ Moderate techniques represent your character's mastery of combat beyond basic co
 
 **Requirement:** {{ techniques.major_milestone_techniques.requirement }}
 
-Ultimate combat abilities reserved for legendary warriors. These techniques deliver devastating results but require maximum Flow:
+Ultimate combat abilities reserved for legendary warriors. These techniques deliver devastating results but require maximum Momentum:
 
 {% for tech_id, tech in techniques.major_milestone_techniques.items() %}
 {% if tech_id != 'requirement' %}
@@ -102,7 +102,7 @@ Ultimate combat abilities reserved for legendary warriors. These techniques deli
 {% endif %}
 {% endfor %}
 
-Major techniques are combat-defining moments. When you've built maximum Flow and need to end a fight decisively, these abilities deliver. Use them sparingly—saving them for critical moments creates dramatic tension.
+Major techniques are combat-defining moments. When you've built maximum Momentum and need to end a fight decisively, these abilities deliver. Use them sparingly—saving them for critical moments creates dramatic tension.
 
 ---
 
@@ -114,30 +114,30 @@ Major techniques are combat-defining moments. When you've built maximum Flow and
 Build toward survivability and control. Start with Defensive Mastery for enhanced Guard in Defensive stance. Add Perfect Parry at moderate milestones to negate big hits entirely. Finish with Battlefield Control to dominate positioning.
 
 **Aggressive Striker:**
-Maximize damage output. Press Advantage provides passive bonus damage whenever you're at positive Flow. Riposte adds extra attacks when enemies miss you. Devastating Blow delivers massive damage spikes. Unstoppable Assault ensures your finishing blow can't miss.
+Maximize damage output. Press Advantage provides passive bonus damage whenever you're at positive Momentum. Riposte adds extra attacks when enemies miss you. Devastating Blow delivers massive damage spikes. Unstoppable Assault ensures your finishing blow can't miss.
 
 **Tactical Versatile:**
-Create options for varied situations. Combat Flow generates extra resources from critical successes. Quick Recovery maintains sustainability. Whirlwind Strike handles multiple opponents. Mix techniques that solve different tactical problems rather than specializing in one approach.
+Create options for varied situations. Combat Momentum generates extra resources from critical successes. Quick Recovery maintains sustainability. Whirlwind Strike handles multiple opponents. Mix techniques that solve different tactical problems rather than specializing in one approach.
 
-### Managing Flow for Techniques
+### Managing Momentum for Techniques
 
-Your Flow economy determines which techniques you can afford:
+Your Momentum economy determines which techniques you can afford:
 
-**Low Flow (Below 0):** Use only basic techniques and focus on Flow generation. Expensive techniques aren't accessible yet. Build resources before attempting power moves.
+**Low Momentum (Below 0):** Use only basic techniques and focus on Momentum generation. Expensive techniques aren't accessible yet. Build resources before attempting power moves.
 
-**Medium Flow (0-3):** Minor milestone techniques become available. Press Advantage activates passively. Riposte triggers on enemy misses. You're operating at base competence with occasional tactical flourishes.
+**Medium Momentum (0-3):** Minor milestone techniques become available. Press Advantage activates passively. Riposte triggers on enemy misses. You're operating at base competence with occasional tactical flourishes.
 
-**High Flow (3-6):** Moderate techniques unlock. Whirlwind Strike handles multiple enemies. Perfect Parry provides emergency defense. Devastating Blow delivers damage spikes. This is your optimal operating range.
+**High Momentum (3-6):** Moderate techniques unlock. Whirlwind Strike handles multiple enemies. Perfect Parry provides emergency defense. Devastating Blow delivers damage spikes. This is your optimal operating range.
 
-**Maximum Flow (6+):** Major techniques become possible. These should be saved for critical moments—turning desperate situations or finishing major threats. Don't waste Unstoppable Assault or Death Blow on trivial enemies.
+**Maximum Momentum (6+):** Major techniques become possible. These should be saved for critical moments—turning desperate situations or finishing major threats. Don't waste Unstoppable Assault or Death Blow on trivial enemies.
 
 ### Technique Combinations
 
 Different techniques synergize when combined thoughtfully:
 
-**Flow Engine:** Defensive Mastery (build Flow safely) → Combat Flow (bonus Flow from crits) → Spend on spells or other techniques
+**Momentum Engine:** Defensive Mastery (build Momentum safely) → Combat Momentum (bonus Momentum from crits) → Spend on spells or other techniques
 
-**Aggressive Combo:** Press Advantage (passive damage) → Build Flow through attacks → Devastating Blow (massive spike) → Unstoppable Assault (finish)
+**Aggressive Combo:** Press Advantage (passive damage) → Build Momentum through attacks → Devastating Blow (massive spike) → Unstoppable Assault (finish)
 
 **Defensive Wall:** Defensive Mastery (+3 Guard) → Perfect Parry (negate hits) → Quick Recovery (sustain) → Battlefield Control (control field)
 
@@ -172,14 +172,14 @@ Techniques can't:
 - Replace archetype features entirely
 - Bypass core combat mechanics
 - Scale infinitely with level
-- Function without Flow (except basic techniques and certain passives)
+- Function without Momentum (except basic techniques and certain passives)
 
 Keep techniques powerful within their niche while maintaining overall game balance. A fighter with Unstoppable Assault is formidable but not invincible.
 
 ### Common Questions
 
 **Can I use multiple techniques per turn?**
-Yes, if you have the Flow and actions. Most techniques cost Flow but not actions, letting you combine them creatively.
+Yes, if you have the Momentum and actions. Most techniques cost Momentum but not actions, letting you combine them creatively.
 
 **Do techniques work with spells?**
 Yes. Devastating Blow can enhance spell attack damage just as easily as weapon damage.
@@ -192,4 +192,4 @@ Work with players to create balanced custom techniques using existing ones as te
 
 ---
 
-*Combat techniques transform capable fighters into legendary warriors. Master your techniques and the Flow that powers them to dominate the battlefield.*
+*Combat techniques transform capable fighters into legendary warriors. Master your techniques and the Momentum that powers them to dominate the battlefield.*

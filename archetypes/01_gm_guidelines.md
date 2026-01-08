@@ -3,6 +3,7 @@
 ## Balancing Archetypes in Play
 
 ### Core Principles
+
 - **Distinct Not Dominant:** Each archetype should excel in their specialty without overshadowing others
 - **Overlapping Not Identical:** Allow areas of shared competence while maintaining unique approaches
 - **Situational Spotlight:** Create scenarios where each archetype can shine
@@ -11,21 +12,25 @@
 ### Addressing Common Balance Issues
 
 #### Combat Role Balance
+
 - **Fighters/Paladins/Rangers (Front Line):** Ensure these archetypes have appropriate defensive options but different offensive approaches
 - **Rogues/Rangers (Strikers):** Balance burst damage with positioning requirements
 - **Wizards/Clerics/Bards (Support):** Ensure utility options remain valuable alongside damage capabilities
 
 #### Skill Coverage
+
 - **High-Skill Archetypes (Rogues/Rangers/Bards):** Challenge them beyond their comfort zones
 - **Specialized Archetypes (Fighters/Wizards):** Provide opportunities where depth beats breadth
 - **Hybrid Archetypes (Clerics/Paladins):** Create scenarios that reward their versatility
 
-#### Flow Economy
-- **High Generation (Fighters/Bards):** Ensure Flow expenditure options remain interesting
-- **Efficient Users (Wizards/Rogues):** Make Flow costs meaningful to prevent spamming
-- **Consistent Output (Clerics/Paladins):** Provide occasional high-Flow situations to showcase their potential
+#### Momentum Economy
+
+- **High Generation (Fighters/Bards):** Ensure Momentum expenditure options remain interesting
+- **Efficient Users (Wizards/Rogues):** Make Momentum costs meaningful to prevent spamming
+- **Consistent Output (Clerics/Paladins):** Provide occasional high-Momentum situations to showcase their potential
 
 ### Spotlight Distribution
+
 Ensure each archetype receives regular moments of spotlight by incorporating varied challenges:
 
 - **Fighter Spotlight:** Combat mastery, endurance challenges, intimidation opportunities
@@ -39,6 +44,7 @@ Ensure each archetype receives regular moments of spotlight by incorporating var
 ## Archetype Integration in Worldbuilding
 
 ### Archetype Organizations
+
 Incorporate archetype-specific organizations to enrich your setting:
 
 - **Fighter Guilds:** Martial training halls, mercenary companies, royal guards
@@ -50,6 +56,7 @@ Incorporate archetype-specific organizations to enrich your setting:
 - **Bardic Colleges:** Performance troupes, lore keepers, diplomatic services
 
 ### Cultural Variations
+
 Diversify archetypes across cultures to create rich setting details:
 
 - **Regional Approaches:** How different regions adapt archetypes to local conditions
@@ -58,6 +65,7 @@ Diversify archetypes across cultures to create rich setting details:
 - **Resource Adaptation:** How archetypes adjust to available materials
 
 ### Status and Recognition
+
 Consider how different societies view each archetype:
 
 - **Honored Professions:** Archetypes that receive respect and authority
@@ -68,6 +76,7 @@ Consider how different societies view each archetype:
 ## Archetype Development Through Campaign
 
 ### Milestone Integration
+
 Use milestones to facilitate meaningful archetype development:
 
 - **Minor Milestones:** Refinement of existing archetype techniques
@@ -75,6 +84,7 @@ Use milestones to facilitate meaningful archetype development:
 - **Major Milestones:** Potential hybrid development or specialization options
 
 ### Creating Growth Opportunities
+
 Design scenarios that push characters to develop their archetypal capabilities:
 
 - **Mentorship Encounters:** NPCs who can teach advanced techniques
@@ -83,6 +93,7 @@ Design scenarios that push characters to develop their archetypal capabilities:
 - **Cross-Training Opportunities:** Exposure to related archetypes for potential hybrid growth
 
 ### Multi-Archetype Integration
+
 Support characters who wish to incorporate elements of multiple archetypes:
 
 - **Natural Combinations:** Fighter/Ranger, Wizard/Cleric, Rogue/Bard
@@ -93,6 +104,7 @@ Support characters who wish to incorporate elements of multiple archetypes:
 ## Implementing Archetypes in Adventures
 
 ### Encounter Design for Archetype Diversity
+
 Create encounters that engage different archetypes:
 
 - **Multi-Stage Challenges:** Combat followed by obstacle followed by social challenge
@@ -101,6 +113,7 @@ Create encounters that engage different archetypes:
 - **Opponent Diversity:** Enemies that challenge different archetypal approaches
 
 ### Adventure Hooks by Archetype
+
 Design hooks that specifically engage each archetype's interests:
 
 - **Fighter Hooks:** Tournament invitations, martial challenges, tactical problems
@@ -112,6 +125,7 @@ Design hooks that specifically engage each archetype's interests:
 - **Bard Hooks:** Performance opportunities, story collection, diplomatic missions
 
 ### NPC Archetypes
+
 Use NPCs to showcase different expressions of each archetype:
 
 - **Mentors:** Experienced practitioners who can guide PCs
@@ -123,14 +137,16 @@ Use NPCs to showcase different expressions of each archetype:
 ## Troubleshooting Common Archetype Issues
 
 ### Overshadowing
+
 When one archetype consistently outperforms others:
 
 - **Diagnosis:** Identify whether the issue is system imbalance, scenario design, or player skill
-- **System Adjustment:** Consider tweaking Flow costs or technique effects if system-related
+- **System Adjustment:** Consider tweaking Momentum costs or technique effects if system-related
 - **Scenario Balance:** Incorporate more varied challenges to engage other archetypes
 - **Player Guidance:** Encourage spotlight sharing and collaborative approaches
 
 ### Underperformance
+
 When a player feels their archetype isn't effective:
 
 - **Technique Review:** Ensure the player understands their full range of options
@@ -139,14 +155,16 @@ When a player feels their archetype isn't effective:
 - **Spotlight Design:** Deliberately create scenarios where they can excel
 
 ### Repetitive Play
+
 When archetype abilities become predictable:
 
 - **Scenario Variety:** Change the context in which abilities are used
 - **NPC Evolution:** Have opponents adapt to predictable tactics
 - **Environmental Challenges:** Create situations where standard approaches must be modified
-- **Reward Innovation:** Provide Flow bonuses for creative technique application
+- **Reward Innovation:** Provide Momentum bonuses for creative technique application
 
 ### Development Constraints
+
 When players feel limited by archetype frameworks:
 
 - **Training Narratives:** Create in-story opportunities to learn new approaches
@@ -159,36 +177,43 @@ When players feel limited by archetype frameworks:
 Occasionally spotlight specific archetypes with focused sessions:
 
 ### Fighter Focus
+
 - **Tournament Arc:** Competitive combat showcasing martial prowess
 - **Military Campaign:** Strategic warfare utilizing tactical expertise
 - **Combat School:** Training sequences developing new techniques
 
 ### Ranger Focus
+
 - **Wilderness Expedition:** Exploration of uncharted territories
 - **Tracking Mission:** Following elusive quarry through challenging terrain
 - **Beast Management:** Handling dangerous creature threats or migrations
 
 ### Paladin Focus
+
 - **Oath Quest:** Fulfilling the requirements of divine commitment
 - **Protection Detail:** Safeguarding important individuals or artifacts
 - **Corruption Cleansing:** Confronting systemic evil requiring conviction
 
 ### Rogue Focus
+
 - **Heist Operation:** Complex acquisition requiring multiple specialized skills
 - **Underworld Politics:** Navigating criminal organizations and power structures
 - **Infiltration Mission:** Gaining access to heavily secured locations
 
 ### Wizard Focus
+
 - **Arcane Investigation:** Solving mysteries through magical analysis
 - **Research Expedition:** Seeking rare magical knowledge or components
 - **Spell Innovation:** Developing new magical techniques through experimentation
 
 ### Cleric Focus
+
 - **Divine Intervention:** Responding to spiritual crisis requiring faith
 - **Healing Emergency:** Managing widespread injury or disease
 - **Religious Diplomacy:** Mediating between different faith traditions
 
 ### Bard Focus
+
 - **Performance Circuit:** Competition or tour showcasing artistic talents
 - **Lore Collection:** Gathering stories with historical or magical significance
 - **Diplomatic Mission:** Using social skills to negotiate complex agreements

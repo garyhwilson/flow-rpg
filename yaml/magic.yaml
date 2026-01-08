@@ -1,4 +1,4 @@
-# Flow RPG Magic System
+# Autumn Phoenix RPG Magic System
 # Version: 1.0-complete
 # Spells, traditions, and magical mechanics
 
@@ -8,7 +8,7 @@ magic_system:
     design_principles:
       - "Elegance over complexity"
       - "Narrative-first with mechanical depth"
-      - "Flow integration central"
+      - "Momentum integration central"
       - "Player agency in casting approach"
   
   access_requirements:
@@ -39,58 +39,58 @@ magic_system:
 
 spell_tiers:
   tier_0_cantrips:
-    flow_cost: 0
-    description: "Simple magics requiring no Flow investment"
+    momentum_cost: 0
+    description: "Simple magics requiring no Momentum investment"
     power_level: "Minor effects"
     examples: ["spark", "mage_armor", "light", "prestidigitation"]
 
     strategic_use:
-      - "Free magical pressure without Flow cost"
-      - "Maintain offense when Flow is neutral"
+      - "Free magical pressure without Momentum cost"
+      - "Maintain offense when Momentum is neutral"
       - "Fill gaps between bigger spells"
   
   tier_1_basic:
-    flow_cost: 0
-    description: "Fundamental spells, Flow neutral"
+    momentum_cost: 0
+    description: "Fundamental spells, Momentum neutral"
     power_level: "Standard combat/utility effects"
     examples: ["bolt", "shield", "charm", "blur"]
     
     strategic_use:
       - "Reliable damage/protection"
-      - "No Flow investment needed"
+      - "No Momentum investment needed"
       - "Sustained casting possible"
   
   tier_2_advanced:
-    flow_cost: -1
+    momentum_cost: -1
     description: "Powerful effects requiring momentum"
     power_level: "Significant impact"
     examples: ["fireball", "heal", "fly", "invisibility"]
     
     strategic_use:
       - "Turning point spells"
-      - "Worth Flow investment"
-      - "Combo with cantrips for Flow management"
+      - "Worth Momentum investment"
+      - "Combo with cantrips for Momentum management"
   
   tier_3_expert:
-    flow_cost: -2
+    momentum_cost: -2
     description: "Major magical effects"
     power_level: "Battle-changing"
     examples: ["lightning_storm", "teleport", "polymorph"]
     
     strategic_use:
       - "Decisive moments"
-      - "Requires Flow buildup"
+      - "Requires Momentum buildup"
       - "Often combat-ending"
   
   tier_4_master:
-    flow_cost: -3
+    momentum_cost: -3
     description: "Reality-altering magic"
     power_level: "Legendary effects"
     examples: ["time_stop", "dominate", "meteor_swarm"]
     
     strategic_use:
       - "Campaign climax moments"
-      - "Requires perfect Flow management"
+      - "Requires perfect Momentum management"
       - "Often scene-defining"
 
 # ============================================
@@ -100,7 +100,7 @@ spell_tiers:
 spell_points:
   description: "Alternative resource management for groups that prefer limited casting"
   optional: true
-  philosophy: "Trade Flow integration for traditional resource tracking"
+  philosophy: "Trade Momentum integration for traditional resource tracking"
 
   pool_calculation:
     formula: "3 + Will modifier"
@@ -132,10 +132,10 @@ spell_points:
     tier_4_master: 4
 
   interaction_with_flow:
-    description: "Spell points replace Flow costs for spells"
-    flow_generation: "Still generate Flow from critical successes and stances"
-    flow_expenditure: "Can still spend Flow for techniques and narrative advantages"
-    note: "This divorces spell resources from Flow while maintaining Flow mechanics"
+    description: "Spell points replace Momentum costs for spells"
+    momentum_generation: "Still generate Momentum from critical successes and stances"
+    momentum_expenditure: "Can still spend Momentum for techniques and narrative advantages"
+    note: "This divorces spell resources from Momentum while maintaining Momentum mechanics"
 
   design_note: "For groups that prefer vancian-style resource management. Less elegant but more familiar to traditional players."
 
@@ -222,7 +222,7 @@ spells:
       name: "Spark"
       description: "Close combat magical attack"
       base_effect: "1d6 damage, touch range"
-      flow: "0"
+      momentum: "0"
       
       attribute_variations:
         mind: 
@@ -242,7 +242,7 @@ spells:
       name: "Mage Armor"
       description: "Protective barrier, self only"
       base_effect: "+2 Guard until hit"
-      flow: "0"
+      momentum: "0"
       
       attribute_variations:
         mind:
@@ -262,7 +262,7 @@ spells:
       name: "Light"
       description: "Create illumination"
       base_effect: "Bright light for scene"
-      flow: "0"
+      momentum: "0"
       
       attribute_variations:
         mind:
@@ -282,7 +282,7 @@ spells:
       name: "Prestidigitation"
       description: "Minor magical effects"
       base_effect: "Small convenience magic"
-      flow: "0"
+      momentum: "0"
       
       attribute_variations:
         mind:
@@ -309,7 +309,7 @@ spells:
       name: "Bolt"
       description: "Ranged magical attack at Far range"
       base_effect: "Attribute + 2d6 damage"
-      flow: "0"
+      momentum: "0"
 
       attribute_variations:
         mind:
@@ -333,7 +333,7 @@ spells:
       name: "Shield"
       description: "Protective ward that grows stronger with experience"
       base_effect: "+Attribute + (total milestones ÷ 3, round down) to Guard for scene"
-      flow: "0"
+      momentum: "0"
 
       scaling_examples:
         session_1_0_milestones: "+attribute Guard (Mind +3 = +3 Guard)"
@@ -364,7 +364,7 @@ spells:
       name: "Charm"
       description: "Influence target's mind"
       base_effect: "Target becomes friendly"
-      flow: "0"
+      momentum: "0"
       duration: "Scene or until betrayed"
       
       attribute_variations:
@@ -385,7 +385,7 @@ spells:
       name: "Blur"
       description: "Defensive obscurement"
       base_effect: "+2 defense for scene"
-      flow: "0"
+      momentum: "0"
       
       attribute_variations:
         mind:
@@ -405,7 +405,7 @@ spells:
       name: "Detect Magic"
       description: "Sense magical auras"
       base_effect: "Detect magic in Near range"
-      flow: "0"
+      momentum: "0"
       
       attribute_variations:
         mind:
@@ -426,13 +426,13 @@ spells:
   # ==========================================
   
   tier_2:
-    design_note: "Damage increased to 3d6 base for meaningful Flow investment"
+    design_note: "Damage increased to 3d6 base for meaningful Momentum investment"
 
     fireball:
       name: "Fireball"
       description: "Explosive area damage"
       base_effect: "3d6 to all in zone"
-      flow: "-1"
+      momentum: "-1"
 
       attribute_variations:
         mind:
@@ -452,7 +452,7 @@ spells:
       name: "Heal"
       description: "Restore health"
       base_effect: "2d6 Vitality restored"
-      flow: "-1"
+      momentum: "-1"
       
       attribute_variations:
         mind:
@@ -466,13 +466,13 @@ spells:
           special: "Works at any range"
         presence:
           healing: "2d6"
-          special: "Inspires, +1 Flow"
+          special: "Inspires, +1 Momentum"
     
     fly:
       name: "Fly"
       description: "Grant flight"
       base_effect: "Fly for scene"
-      flow: "-1"
+      momentum: "-1"
       
       attribute_variations:
         mind:
@@ -492,7 +492,7 @@ spells:
       name: "Invisibility"
       description: "Become unseen"
       base_effect: "Invisible for scene or until attack"
-      flow: "-1"
+      momentum: "-1"
       
       attribute_variations:
         mind:
@@ -512,7 +512,7 @@ spells:
       name: "Web"
       description: "Create entangling area"
       base_effect: "Zone becomes difficult terrain"
-      flow: "-1"
+      momentum: "-1"
       
       attribute_variations:
         mind:
@@ -537,7 +537,7 @@ spells:
       name: "Lightning Storm"
       description: "Devastating area attack"
       base_effect: "3d6 to multiple zones"
-      flow: "-2"
+      momentum: "-2"
       
       attribute_variations:
         mind:
@@ -561,7 +561,7 @@ spells:
       name: "Teleport"
       description: "Instant transportation"
       base_effect: "Move anywhere instantly"
-      flow: "-2"
+      momentum: "-2"
       
       attribute_variations:
         mind:
@@ -585,7 +585,7 @@ spells:
       name: "Polymorph"
       description: "Transform creature"
       base_effect: "Change form for scene"
-      flow: "-2"
+      momentum: "-2"
       
       attribute_variations:
         mind:
@@ -605,7 +605,7 @@ spells:
       name: "Scrying"
       description: "View distant locations"
       base_effect: "See/hear remote location"
-      flow: "-2"
+      momentum: "-2"
       
       attribute_variations:
         mind:
@@ -630,7 +630,7 @@ spells:
       name: "Time Stop"
       description: "Pause time"
       base_effect: "Take extra turns"
-      flow: "-3"
+      momentum: "-3"
       
       attribute_variations:
         mind:
@@ -650,7 +650,7 @@ spells:
       name: "Dominate"
       description: "Total mental control"
       base_effect: "Control target completely"
-      flow: "-3"
+      momentum: "-3"
       duration: "Scene or longer"
       
       attribute_variations:
@@ -671,7 +671,7 @@ spells:
       name: "Meteor Swarm"
       description: "Ultimate destruction"
       base_effect: "4d6 to huge area"
-      flow: "-3"
+      momentum: "-3"
       
       attribute_variations:
         mind:
@@ -691,7 +691,7 @@ spells:
       name: "Wish"
       description: "Alter reality"
       base_effect: "Limited reality change"
-      flow: "-3"
+      momentum: "-3"
       
       attribute_variations:
         mind:
@@ -716,7 +716,7 @@ ritual_magic:
   
   mechanics:
     time_required: "10+ minutes"
-    flow_generation: "+3 on completion"
+    momentum_generation: "+3 on completion"
     interruption: "Ruins ritual, lose materials"
   
   ritual_types:
@@ -741,7 +741,7 @@ ritual_magic:
     mechanics:
       - "Each assistant grants +1 to roll"
       - "Can combine different traditions"
-      - "Share Flow cost among participants"
+      - "Share Momentum cost among participants"
 
 # ============================================
 # METAMAGIC
@@ -754,32 +754,32 @@ metamagic:
   options:
     quicken:
       effect: "Cast as swift action"
-      cost: "+1 Flow"
+      cost: "+1 Momentum"
       requirement: "Mind-based casting"
     
     extend:
       effect: "Double duration"
-      cost: "+1 Flow"
+      cost: "+1 Momentum"
       requirement: "Will-based casting"
     
     empower:
       effect: "+50% damage"
-      cost: "+2 Flow"
+      cost: "+2 Momentum"
       requirement: "Awareness-based casting"
     
     silent:
       effect: "No verbal component"
-      cost: "+1 Flow"
+      cost: "+1 Momentum"
       requirement: "Mind-based casting"
     
     still:
       effect: "No somatic component"
-      cost: "+1 Flow"
+      cost: "+1 Momentum"
       requirement: "Will-based casting"
     
     widen:
       effect: "Double area"
-      cost: "+2 Flow"
+      cost: "+2 Momentum"
       requirement: "Presence-based casting"
 
 # ============================================
@@ -797,15 +797,15 @@ counterspell:
     failure: "Spell takes effect normally"
 
   counterspell_consolation:
-    rule: "When your spell is counterspelled, gain +2 Flow"
+    rule: "When your spell is counterspelled, gain +2 Momentum"
     reasoning: "Your magical energy rebounds, empowering your next attempt"
     effect: "Being countered becomes a setback, not a total loss"
 
     example:
-      situation: "Cast Fireball (Tier 2, -1 Flow), enemy counterspells it"
-      result: "Fireball negated, but you gain +2 Flow"
-      net: "+1 Flow total (lost -1 from casting, gained +2 from being countered)"
-      benefit: "Can immediately cast another Tier 2 spell at +1 Flow"
+      situation: "Cast Fireball (Tier 2, -1 Momentum), enemy counterspells it"
+      result: "Fireball negated, but you gain +2 Momentum"
+      net: "+1 Momentum total (lost -1 from casting, gained +2 from being countered)"
+      benefit: "Can immediately cast another Tier 2 spell at +1 Momentum"
 
 # ============================================
 # MAGIC ITEMS
@@ -819,10 +819,10 @@ magic_items:
       - "Special materials"
       - "Time investment"
     
-    flow_investment:
-      minor: "5 Flow total over days"
-      moderate: "10 Flow total over weeks"
-      major: "20 Flow total over months"
+    momentum_investment:
+      minor: "5 Momentum total over days"
+      moderate: "10 Momentum total over weeks"
+      major: "20 Momentum total over months"
   
   categories:
     consumables:
@@ -836,7 +836,7 @@ magic_items:
       
       wands:
         examples: ["Specific spell, limited charges"]
-        use: "Activate with Flow"
+        use: "Activate with Momentum"
     
     permanent:
       weapons:
@@ -861,17 +861,17 @@ spell_combinations:
   examples:
     defensive_combo:
       sequence: ["mage_armor", "shield", "blur"]
-      total_cost: "0, 0, 0 = 0 Flow cost"
-      effect: "Layered defenses without Flow investment"
+      total_cost: "0, 0, 0 = 0 Momentum cost"
+      effect: "Layered defenses without Momentum investment"
 
     offensive_combo:
       sequence: ["spark", "spark", "fireball"]
-      total_cost: "0, 0, -1 = -1 Flow net"
+      total_cost: "0, 0, -1 = -1 Momentum net"
       effect: "Soften targets before big spell"
     
     utility_combo:
       sequence: ["detect_magic", "dispel", "shield"]
-      total_cost: "0, -1, 0 = -1 Flow"
+      total_cost: "0, -1, 0 = -1 Momentum"
       effect: "Counter enemy magic"
   
   advanced_combinations:

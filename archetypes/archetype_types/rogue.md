@@ -1,5 +1,6 @@
 # Rogue
-*Masters of Specialized Skills and Adaptive Problem Solving*
+
+_Masters of Specialized Skills and Adaptive Problem Solving_
 
 ## Archetype Essence
 
@@ -48,57 +49,64 @@ Most Rogues develop at least moderate scores across dexterity, perception, and m
 Rogues begin with the following skill proficiencies, reflecting their specialized training:
 
 **Professional (+1):**
+
 - Stealth (concealment, silent movement, and unobtrusive presence)
 - Finesse (fine manipulation, precise control, and delicate interaction)
 
 **Competent (+0):**
+
 - Combat (tactical fighting, precision strikes, and opportunistic attacks)
 
 **Special Advantage:**
+
 - **Dual Expertise:** Rogues are the only archetype that starts with two Professional skills, reflecting their specialized mastery of precision and concealment
 
 **Additional Skills:**
+
 - Choose three additional skills at Basic/Untrained level reflecting background and cultural training
 
 **Basic (Tier 1):**
+
 - Survival (urban adaptation and resource acquisition)
 - Two additional skills reflecting background and cultural training
 
 Rogues are typically Untrained in direct confrontation, formal leadership, or rigid procedural systems unless their background specifically includes exposure to these areas.
 
-### Flow Mechanics
+### Momentum Mechanics
 
-Rogues interact with the Flow resource through opportunistic awareness:
+Rogues interact with the Momentum resource through opportunistic awareness:
 
-**Flow Generation:**
-- Successfully accessing secured areas without detection (+1 Flow)
-- Identifying exploitable environmental elements before using them (+1 Flow)
-- Acquiring protected resources without confrontation (+1 Flow)
-- Uncovering hidden information through careful observation (+1 Flow)
-- Executing precise techniques with minimal effort (+2 Flow)
+**Momentum Generation:**
 
-**Flow Expenditure:**
+- Successfully accessing secured areas without detection (+1 Momentum)
+- Identifying exploitable environmental elements before using them (+1 Momentum)
+- Acquiring protected resources without confrontation (+1 Momentum)
+- Uncovering hidden information through careful observation (+1 Momentum)
+- Executing precise techniques with minimal effort (+2 Momentum)
+
+**Momentum Expenditure:**
+
 - Activating specialized techniques (costs vary by technique power)
-- Enhancing precision actions (+1 Flow for advantage on dexterity-based checks)
-- Seizing fleeting opportunities (+2 Flow for additional quick action)
-- Turning minor failures into success (+2 Flow to reverse failed skill check)
-- Applying specialized knowledge to specific situations (+1 Flow for advantage on knowledge application)
+- Enhancing precision actions (+1 Momentum for advantage on dexterity-based checks)
+- Seizing fleeting opportunities (+2 Momentum for additional quick action)
+- Turning minor failures into success (+2 Momentum to reverse failed skill check)
+- Applying specialized knowledge to specific situations (+1 Momentum for advantage on knowledge application)
 
-Rogues typically generate Flow through successful environmental interaction and careful opportunity identification, then spend it on precise execution or recovery from complications. This pattern reflects their approach of thorough preparation followed by decisive action.
+Rogues typically generate Momentum through successful environmental interaction and careful opportunity identification, then spend it on precise execution or recovery from complications. This pattern reflects their approach of thorough preparation followed by decisive action.
 
 ### Signature Techniques
 
 Rogues develop specialized techniques reflecting their adaptive problem-solving approach:
 
-**Perfect Timing (Flow +1):** Identify optimal moment for action through careful observation, gaining advantage on next timing-sensitive action. Represents fundamental observation-to-action loop central to Rogue methodology.
+**Perfect Timing (Momentum +1):** Identify optimal moment for action through careful observation, gaining advantage on next timing-sensitive action. Represents fundamental observation-to-action loop central to Rogue methodology.
 
-**Hidden Movement (Flow +2):** Blend environmental elements and body control into exceptional stealth, becoming effectively invisible while moving slowly through partially concealed areas. Represents advanced environmental integration.
+**Hidden Movement (Momentum +2):** Blend environmental elements and body control into exceptional stealth, becoming effectively invisible while moving slowly through partially concealed areas. Represents advanced environmental integration.
 
-**Exploit Opening (React, Flow +2):** Upon noticing opponent vulnerability, immediately execute precise attack targeting weakness. Deals additional 1d6 damage and bypasses partial Guard. Represents opportunistic action based on superior observation.
+**Exploit Opening (React, Momentum +2):** Upon noticing opponent vulnerability, immediately execute precise attack targeting weakness. Deals additional 1d6 damage and bypasses partial Guard. Represents opportunistic action based on superior observation.
 
-**Controlled Fall (React, Flow +1):** Transform uncontrolled descent into managed movement, reducing falling damage by half and landing in controlled position rather than prone. Represents physical adaptability in unexpected situations.
+**Controlled Fall (React, Momentum +1):** Transform uncontrolled descent into managed movement, reducing falling damage by half and landing in controlled position rather than prone. Represents physical adaptability in unexpected situations.
 
-**Perception Filter (Flow +3):** Manipulate observer expectations to become mentally filtered from conscious awareness despite physical presence. Observers automatically fail passive perception against your presence. Represents advanced social concealment.
+**Perception Filter (Momentum +3):** Manipulate observer expectations to become mentally filtered from conscious awareness despite physical presence. Observers automatically fail passive perception against your presence. Represents advanced social concealment.
 
 ## Cultural Variations
 
@@ -109,6 +117,7 @@ Rogue traditions vary significantly across different cultures, reflecting divers
 Dwarven rogue traditions emerge from their cultural emphasis on craftsmanship and technical precision. Unlike other cultures' rogues who often operate outside formal structures, dwarven rogues typically function as specialists within legitimate guilds, focusing on mechanism mastery, security system design, and protected knowledge management.
 
 **Key Characteristics:**
+
 - Exceptional mechanical understanding beyond conventional locksmithing
 - Complex technical puzzle solving rather than forced circumvention
 - Systematic security assessment methodology evaluating protection effectiveness
@@ -116,6 +125,7 @@ Dwarven rogue traditions emerge from their cultural emphasis on craftsmanship an
 - Strong ethical frameworks governing specialized knowledge application
 
 **Signature Methods:**
+
 - Mechanism Dialogue: Reading complex devices through subtle feedback
 - Precision Engineering: Creating specialized tools for specific technical challenges
 - Comprehensive Testing: Methodical system evaluation through standardized protocols
@@ -125,6 +135,7 @@ Dwarven rogue traditions emerge from their cultural emphasis on craftsmanship an
 Elven rogue traditions build upon their natural sensory acuity and patience, developing specialized expertise in environmental integration, advanced perception, and unobtrusive movement. They excel in natural settings but adapt their techniques to any environment requiring subtle awareness and precise action.
 
 **Key Characteristics:**
+
 - Extraordinary sensory perception beyond conventional observation
 - Phenomenal patience during extended surveillance operations
 - Perfect movement economy eliminating unnecessary motion
@@ -132,6 +143,7 @@ Elven rogue traditions build upon their natural sensory acuity and patience, dev
 - Temporal awareness identifying optimal moment for decisive action
 
 **Signature Methods:**
+
 - Perceptual Expansion: Synthesizing multiple sensory inputs into unified awareness
 - Ghostwalking: Moving without disturbing surrounding environment
 - Pattern Recognition: Identifying significant anomalies within complex systems
@@ -141,6 +153,7 @@ Elven rogue traditions build upon their natural sensory acuity and patience, dev
 Human rogue traditions reflect their cultural adaptability, developing diverse approaches responding to specific operational environments and social contexts. They excel in flexibility, cross-disciplinary integration, and pragmatic improvisation.
 
 **Key Characteristics:**
+
 - Methodological adaptation to diverse operational environments
 - Rapid technique acquisition from multiple traditions
 - Pragmatic effectiveness prioritization over theoretical purity
@@ -148,6 +161,7 @@ Human rogue traditions reflect their cultural adaptability, developing diverse a
 - Cross-cultural operational capability across diverse social environments
 
 **Signature Methods:**
+
 - Situational Integration: Adapting techniques to specific contextual requirements
 - Resource Improvisation: Creating effective solutions with available materials
 - Contextual Analysis: Identifying exploitable elements within new environments
@@ -157,6 +171,7 @@ Human rogue traditions reflect their cultural adaptability, developing diverse a
 Halfling rogue traditions emerge from their cultural experience navigating societies designed for larger beings, developing specialized expertise in social perception, expectation management, and presence control. They excel in manipulating how others perceive and respond to them.
 
 **Key Characteristics:**
+
 - Extraordinary social perception reading subtle behavioral indicators
 - Strategic presence management controlling observer attention
 - Expectation manipulation creating perception filters
@@ -164,6 +179,7 @@ Halfling rogue traditions emerge from their cultural experience navigating socie
 - Apparent harmlessness cultivation for strategic advantage
 
 **Signature Methods:**
+
 - Social Invisibility: Becoming mentally filtered from conscious attention
 - Expectation Leverage: Using assumptions to create operational advantages
 - Attention Direction: Controlling where observers focus awareness
@@ -422,6 +438,7 @@ Several distinctive Rogue character concepts illustrate the archetype's diversit
 **Motivations:** Uncovers hidden information concealed through deliberate action or contextual isolation. Develops increasingly sophisticated understanding regarding causality relationships across various domains. Demonstrates meaningful connection identification overlooked by conventional perspectives.
 
 **Distinctive Elements:**
+
 - Comprehensive observation methodology capturing details beyond apparent significance
 - Analytical framework connecting diverse information types into meaningful patterns
 - Specialized knowledge spanning multiple domains supporting interdisciplinary analysis
@@ -441,6 +458,7 @@ Several distinctive Rogue character concepts illustrate the archetype's diversit
 **Motivations:** Improves protection systems through practical testing beyond theoretical assessment. Demonstrates responsible application of specialized capability within ethical boundaries. Develops security understanding balancing technical effectiveness with practical usability.
 
 **Distinctive Elements:**
+
 - Holistic assessment methodology examining security from multiple access vectors simultaneously
 - Vulnerability documentation creating clear remediation roadmap beyond problem identification
 - Implementation guidance adapting security improvements to specific operational requirements
@@ -460,6 +478,7 @@ Several distinctive Rogue character concepts illustrate the archetype's diversit
 **Motivations:** Masters increasingly sophisticated mechanical systems through detailed analysis and practice. Preserves historical knowledge regarding traditional security design alongside contemporary innovation. Develops precise technical capability demonstrating elegance through minimal intervention.
 
 **Distinctive Elements:**
+
 - Comprehensive knowledge spanning historical lock development through contemporary security design
 - Tactile sensitivity allowing mechanism state assessment through touch feedback alone
 - Specialized tool design creating perfect implements for specific mechanism interaction
@@ -479,6 +498,7 @@ Several distinctive Rogue character concepts illustrate the archetype's diversit
 **Motivations:** Creates seamless integration within diverse environments through comprehensive adaptation. Develops increasingly refined understanding of identity perception beyond obvious signifiers. Demonstrates the constructed nature of social identity through deliberate presentation management.
 
 **Distinctive Elements:**
+
 - Contextual analysis identifying critical identity markers within specific environments
 - Behavioral integration creating consistent presence beyond mere costume elements
 - Background development supporting sustained interaction beyond initial impression
@@ -498,6 +518,7 @@ Several distinctive Rogue character concepts illustrate the archetype's diversit
 **Motivations:** Demonstrates capability independence from specialized equipment or ideal conditions. Develops increasingly creative approaches to standard challenges through unconventional application. Creates sustainable methodology accessible without extensive resource requirements.
 
 **Distinctive Elements:**
+
 - Environmental assessment identifying usable resources within immediate surroundings
 - Adaptation methodology transforming ordinary objects into specialized tools through innovative application
 - Functional analysis focusing on required outcomes rather than conventional solution paths
@@ -517,6 +538,7 @@ Several distinctive Rogue character concepts illustrate the archetype's diversit
 **Motivations:** Identifies significant patterns hidden within apparent randomness or mundane activity. Develops increasingly sophisticated understanding of causality chains across diverse contexts. Creates predictive models allowing proactive response rather than reactive adaptation.
 
 **Distinctive Elements:**
+
 - Systematic observation methodology gathering comprehensive data beyond obvious significance
 - Analytical framework connecting diverse information types into coherent patterns
 - Temporal tracking identifying cyclical behaviors, routine variations, and significant anomalies

@@ -2,7 +2,7 @@
 
 ## Running Magic in Your Game
 
-Magic in Flow RPG is designed to be both mechanically elegant and narratively rich. This guide helps you leverage the flexible casting system to create memorable magical moments while maintaining balance and pacing.
+Magic in Autumn Phoenix RPG is designed to be both mechanically elegant and narratively rich. This guide helps you leverage the flexible casting system to create memorable magical moments while maintaining balance and pacing.
 
 ## Interpreting Attribute-Based Casting
 
@@ -32,12 +32,12 @@ Sometimes a player's interpretation doesn't fit the attribute benefits. Guide th
 
 ## Balancing Magic in Combat
 
-### Flow Economy Management
+### Momentum Economy Management
 
-Magic is balanced through the Flow economy. As GM, you can:
+Magic is balanced through the Momentum economy. As GM, you can:
 
-1. **Control Starting Flow** - Tougher encounters might start with characters at lower Flow
-2. **Manage Enemy Actions** - Enemies that generate opponent Flow can limit spellcasting
+1. **Control Starting Momentum** - Tougher encounters might start with characters at lower Momentum
+2. **Manage Enemy Actions** - Enemies that generate opponent Momentum can limit spellcasting
 3. **Vary Encounter Length** - Longer fights strain spellcaster resources
 4. **Create Anti-Magic Zones** - Areas where casting is difficult or impossible
 
@@ -54,7 +54,7 @@ If your party has multiple spellcasters:
 
 Ensure martial characters remain relevant:
 
-- Magic costs Flow, weapon attacks often generate it
+- Magic costs Momentum, weapon attacks often generate it
 - Positioning and zone control matter more than pure damage
 - Some enemies resist magic but are vulnerable to physical attacks
 - Martial characters are more consistent turn-to-turn
@@ -82,12 +82,14 @@ These are narrative frameworks, not mechanical restrictions. Use them to:
 Feel free to create your own magical traditions:
 
 **Example: Blood Magic**
+
 - Primary Attribute: Will or Awareness
 - Focus Items: Ritual daggers, blood vials
 - Philosophy: Magic powered by life force
-- Mechanical Hook: Can spend Vitality instead of Flow for spells
+- Mechanical Hook: Can spend Vitality instead of Momentum for spells
 
 **Example: Rune Magic**
+
 - Primary Attribute: Mind
 - Focus Items: Carved stones, inscribed items
 - Philosophy: Magic bound into permanent forms
@@ -97,13 +99,13 @@ Keep custom traditions narratively distinct but mechanically compatible with the
 
 ## Handling Edge Cases
 
-### Casting at Negative Flow
+### Casting at Negative Momentum
 
-Will-based casting allows casting at negative Flow. Guidelines:
+Will-based casting allows casting at negative Momentum. Guidelines:
 
 1. **It's a Feature, Not a Bug** - This is the Will caster's strength
 2. **Narrative Consequences** - Going deeply negative might anger a deity/patron
-3. **Recovery Takes Time** - Negative Flow recovers slowly (see [02_system_integration.md](02_system_integration.md))
+3. **Recovery Takes Time** - Negative Momentum recovers slowly (see [02_system_integration.md](02_system_integration.md))
 4. **Physical Toll** - Describe the strain of channeling power when depleted
 
 ### Multi-Target Spells
@@ -132,20 +134,22 @@ When designing enemy spellcasters:
 
 1. **Choose Primary Attribute** - Pick one or two attributes they prefer
 2. **Select Appropriate Spells** - Match spell power to the adversary's capability
-3. **Consider Flow Economy** - Enemy casters need Flow too
+3. **Consider Momentum Economy** - Enemy casters need Momentum too
 4. **Tactical Behavior** - Show smart casting choices to teach players
 
 **Example: Bandit Wizard**
+
 - Attributes: Mind +2, others +0
 - Spells: Bolt (Mind for precision), Shield (Mind for calculated defense)
 - Tactics: Stays at Far range, uses Mind to avoid hitting allies
-- Flow: Starts at 2-3 Flow, conserves for key moments
+- Momentum: Starts at 2-3 Momentum, conserves for key moments
 
 **Example: Wild Sorcerer**
+
 - Attributes: Awareness +3, others +0
 - Spells: Spark, Bolt, Fireball (all Awareness for maximum damage)
-- Tactics: Aggressive, burns Flow quickly for big damage
-- Flow: Starts at 4 Flow, goes negative if desperate
+- Tactics: Aggressive, burns Momentum quickly for big damage
+- Momentum: Starts at 4 Momentum, goes negative if desperate
 
 ### Anti-Magic Challenges
 
@@ -169,14 +173,15 @@ Sometimes, let spellcasters shine:
 
 ### Distributing Magical Items
 
-Enchanted items interact with the Flow economy (see [spell_tiers/](spell_tiers/) for item types):
+Enchanted items interact with the Momentum economy (see [spell_tiers/](spell_tiers/) for item types):
 
-1. **Flow Batteries** - Extend spellcaster staying power
+1. **Momentum Batteries** - Extend spellcaster staying power
 2. **Spell Catalysts** - Make specific spells more efficient
 3. **Attribute Enhancers** - Improve casting effectiveness
 4. **Stance Anchors** - Provide tactical flexibility
 
 **Balance Guidelines:**
+
 - 1 minor item per character by Milestone 2
 - 1 moderate item per character by Milestone 4
 - 1 major item per character by Milestone 6
@@ -195,14 +200,15 @@ Characters can attune to items equal to their Will (minimum 1):
 
 When designing custom magical items:
 
-1. **Tie to Flow Economy** - Items should interact with Flow
+1. **Tie to Momentum Economy** - Items should interact with Momentum
 2. **Support Playstyle** - Match items to character approaches
 3. **Avoid "Must Haves"** - Don't create items every character needs
 4. **Narrative Significance** - Give items history and meaning
 
 **Example Custom Item: Stormcaller's Baton**
+
 - Category: Spell Catalyst
-- Effect: Reduce cost of lightning/storm spells by 1 Flow
+- Effect: Reduce cost of lightning/storm spells by 1 Momentum
 - Requires: Attunement
 - Story: Carved from a tree struck by lightning during a legendary duel
 
@@ -257,13 +263,13 @@ The system doesn't strictly limit known spells:
 - Narrative limits (spellbook size, learned prayers, etc.) are fine
 - Consider: All cantrips + 3 spells per tier at creation
 - Learn new spells through play (finding scrolls, training, etc.)
-- Higher-tier spells are automatically more limited by Flow cost
+- Higher-tier spells are automatically more limited by Momentum cost
 
-### "Should I use spell slots instead of Flow?"
+### "Should I use spell slots instead of Momentum?"
 
-The Flow system is core to the game's design:
+The Momentum system is core to the game's design:
 
-- Flow creates dynamic pacing
+- Momentum creates dynamic pacing
 - It unifies magic, combat, and narrative momentum
 - Slots would require significant system redesign
 - If you prefer slots, consider another system
@@ -280,4 +286,4 @@ Before starting your campaign, discuss:
 
 ---
 
-*Use these guidelines as a framework, not a straightjacket. The best ruling is the one that keeps your game moving, honors the fiction, and ensures everyone has fun.*
+_Use these guidelines as a framework, not a straightjacket. The best ruling is the one that keeps your game moving, honors the fiction, and ensures everyone has fun._

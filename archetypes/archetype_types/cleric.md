@@ -1,5 +1,6 @@
 # Cleric
-*Conduits Between Worldly and Divine Realms, Drawing Power from Spiritual Devotion*
+
+_Conduits Between Worldly and Divine Realms, Drawing Power from Spiritual Devotion_
 
 ## Archetype Essence
 
@@ -42,58 +43,65 @@ Most Clerics develop at least moderate scores in Awareness and either Presence o
 Clerics begin with the following skill proficiencies, reflecting their specialized training in spiritual matters and community service:
 
 **Professional (+1):**
+
 - Medicine (holistic healing, wound treatment, and ailment diagnosis)
 
 **Competent (+0):**
+
 - Sorcery (divine magic channeling, ritual performance, and spiritual communion)
 
 **Special Ability:**
+
 - **Divine Spellcasting:** Can cast divine spells regardless of attributes (archetype training overrides normal spellcasting requirements)
 
 **Archetype Feature - Divine Grace:**
+
 - +1 to all saving rolls
 - +4 Guard (divine protection)
-- Start each scene at +1 Flow
+- Start each scene at +1 Momentum
 - Ignore first point of armor penalty to divine spellcasting
 
 **Additional Skills:**
+
 - Choose three additional skills at Basic/Untrained level reflecting background and cultural training
 
 Clerics are typically Untrained in deceptive practices, selfish pursuits, or activities contradicting their theological principles unless their background specifically includes exposure to these areas.
 
-### Flow Mechanics
+### Momentum Mechanics
 
-Clerics interact with the Flow resource through spiritual communion and divine manifestation:
+Clerics interact with the Momentum resource through spiritual communion and divine manifestation:
 
-**Flow Generation:**
-- Successfully performing meaningful rituals (+1 Flow)
-- Witnessing spiritual manifestations or divine signs (+1 Flow)
-- Providing genuine guidance or healing to others (+1 Flow)
-- Acting in alignment with theological principles (+1 Flow)
-- Experiencing profound spiritual connection or revelation (+2 Flow)
+**Momentum Generation:**
 
-**Flow Expenditure:**
+- Successfully performing meaningful rituals (+1 Momentum)
+- Witnessing spiritual manifestations or divine signs (+1 Momentum)
+- Providing genuine guidance or healing to others (+1 Momentum)
+- Acting in alignment with theological principles (+1 Momentum)
+- Experiencing profound spiritual connection or revelation (+2 Momentum)
+
+**Momentum Expenditure:**
+
 - Channeling divine energy (costs vary by manifestation power)
-- Enhancing healing capabilities (+1 Flow for additional effect)
-- Establishing consecrated spaces (+1 Flow for area sanctification)
-- Perceiving supernatural influences (+1 Flow for enhanced awareness)
-- Manifesting direct divine intervention (+2 Flow for significant effects)
+- Enhancing healing capabilities (+1 Momentum for additional effect)
+- Establishing consecrated spaces (+1 Momentum for area sanctification)
+- Perceiving supernatural influences (+1 Momentum for enhanced awareness)
+- Manifesting direct divine intervention (+2 Momentum for significant effects)
 
-Clerics typically generate Flow through devoted practice and alignment with divine principles, then spend it on manifestations of their deity's will. This pattern reflects their approach of receptive communion followed by directed manifestation.
+Clerics typically generate Momentum through devoted practice and alignment with divine principles, then spend it on manifestations of their deity's will. This pattern reflects their approach of receptive communion followed by directed manifestation.
 
 ### Signature Techniques
 
 Clerics develop specialized techniques reflecting their theological approach to divine communion:
 
-**Divine Blessing (Flow +1):** Channel divine favor to enhance an ally's capabilities, granting temporary advantage reflecting the cleric's theological domain. This technique exemplifies the Cleric's role as intermediary between divine power and mortal recipients.
+**Divine Blessing (Momentum +1):** Channel divine favor to enhance an ally's capabilities, granting temporary advantage reflecting the cleric's theological domain. This technique exemplifies the Cleric's role as intermediary between divine power and mortal recipients.
 
-**Protective Consecration (Flow +2):** Establish a sanctified space providing spiritual defense against malevolent forces. This technique demonstrates the Cleric's ability to extend divine protection beyond personal boundaries.
+**Protective Consecration (Momentum +2):** Establish a sanctified space providing spiritual defense against malevolent forces. This technique demonstrates the Cleric's ability to extend divine protection beyond personal boundaries.
 
-**Spiritual Perception (Flow +1):** Temporarily enhance awareness of supernatural influences, detecting spiritual presences, divine manifestations, or unholy intrusions. This technique showcases the Cleric's heightened sensitivity to forces beyond ordinary perception.
+**Spiritual Perception (Momentum +1):** Temporarily enhance awareness of supernatural influences, detecting spiritual presences, divine manifestations, or unholy intrusions. This technique showcases the Cleric's heightened sensitivity to forces beyond ordinary perception.
 
-**Healing Touch (Flow +2):** Channel divine energy into restorative power, accelerating natural healing processes or alleviating suffering. This technique illustrates the Cleric's role as conduit for divine mercy and restoration.
+**Healing Touch (Momentum +2):** Channel divine energy into restorative power, accelerating natural healing processes or alleviating suffering. This technique illustrates the Cleric's role as conduit for divine mercy and restoration.
 
-**Divine Authority (Flow +1):** Manifest the spiritual weight of divine backing, enhancing social influence through genuine theological connection. This technique reflects the Cleric's status as recognized representative of higher powers.
+**Divine Authority (Momentum +1):** Manifest the spiritual weight of divine backing, enhancing social influence through genuine theological connection. This technique reflects the Cleric's status as recognized representative of higher powers.
 
 ## Cultural Variations
 
@@ -104,6 +112,7 @@ The Cleric archetype manifests differently across cultures, creating distinctive
 Dwarven Clerics maintain living connections with ancestral spirits, preserving clan wisdom and family honor through ritualized communion. Their traditions emphasize continuity between past and present, creating unbroken lineages of spiritual authority that transcend individual mortality.
 
 Distinctive features include:
+
 - Elaborate ancestor veneration ceremonies maintaining familial connection
 - Detailed genealogical records establishing spiritual legitimacy
 - Ritualized craftsmanship incorporating ancestral techniques and designs
@@ -115,6 +124,7 @@ Distinctive features include:
 Elven Clerics cultivate symbiotic relationships with natural forces, perceiving divinity through ecological balance and cyclical renewal. Their traditions incorporate centuries of environmental observation, creating theological systems that recognize divinity within natural patterns rather than separate from them.
 
 Distinctive features include:
+
 - Seasonal rituals aligning community activities with natural cycles
 - Meditation practices developing perception of ecological connections
 - Cultivation of sacred groves as living temples and divine communion sites
@@ -126,6 +136,7 @@ Distinctive features include:
 Human Clerics typically establish formalized religions with institutional structures, doctrinal frameworks, and proselytizing missions. Their traditions emphasize visible manifestations of divine favor, creating theological systems that actively respond to changing social conditions while maintaining core principles.
 
 Distinctive features include:
+
 - Organized religious hierarchies with specialized clerical roles
 - Codified theological texts establishing doctrinal foundations
 - Public ceremonies demonstrating divine power through visible signs
@@ -137,6 +148,7 @@ Distinctive features include:
 Halfling Clerics develop intimate local practices focusing on household protection, community bonds, and practical spirituality. Their traditions transform daily activities into sacred practices, creating theological approaches that enhance rather than transcend ordinary experience.
 
 Distinctive features include:
+
 - Household rituals integrating spiritual practices with daily activities
 - Communal ceremonies strengthening intergenerational bonds
 - Practical divination focused on agricultural success and family wellbeing
@@ -396,6 +408,7 @@ Clerics develop distinctive interactions with other archetypes, creating special
 This combination integrates spiritual authority with combat capability, creating practitioners who maintain divine connection within martial contexts. These individuals provide theological grounding for military activities, combat support through divine enhancement, and ethical guidance preventing unnecessary brutality.
 
 **Key Synergies:**
+
 - Combat blessing techniques enhancing allied effectiveness
 - Protective consecrations creating defended positions
 - Battle rituals maintaining moral clarity during conflict
@@ -403,6 +416,7 @@ This combination integrates spiritual authority with combat capability, creating
 - Casualty ministration addressing both physical and spiritual injuries
 
 **Distinctive Challenges:**
+
 - Reconciling theological principles with combat necessities
 - Maintaining spiritual authenticity within military hierarchy
 - Preventing moral compromise through combat habituation
@@ -414,6 +428,7 @@ This combination integrates spiritual authority with combat capability, creating
 This combination integrates divine connection with arcane methodology, creating practitioners who apply systematic analysis to spiritual phenomena. These individuals bridge mystical traditions through comparative study, develop enhanced understanding through complementary approaches, and create innovative techniques incorporating both divine and arcane elements.
 
 **Key Synergies:**
+
 - Analytical rituals examining spiritual manifestations through precise methodology
 - Enhanced divination combining technical precision with divine guidance
 - Comprehensive protection integrating arcane barriers with divine consecration
@@ -421,6 +436,7 @@ This combination integrates divine connection with arcane methodology, creating 
 - Educational effectiveness communicating complex concepts through multiple frameworks
 
 **Distinctive Challenges:**
+
 - Preventing technical analysis from reducing spiritual experience to mechanical process
 - Maintaining authentic divine connection while applying analytical methods
 - Reconciling contradictory explanations for similar phenomena
@@ -432,6 +448,7 @@ This combination integrates divine connection with arcane methodology, creating 
 This combination integrates spiritual authority with performance capability, creating practitioners who communicate theological concepts through artistic expression. These individuals make abstract principles accessible through emotional connection, preserve traditions through memorable forms, and create communal spiritual experiences through participatory performance.
 
 **Key Synergies:**
+
 - Ceremonial performances enhancing ritual impact through artistic elements
 - Theological preservation through memorizable artistic forms
 - Emotional engagement connecting abstract principles with personal experience
@@ -439,6 +456,7 @@ This combination integrates spiritual authority with performance capability, cre
 - Educational effectiveness communicating complex concepts through accessible presentation
 
 **Distinctive Challenges:**
+
 - Maintaining theological accuracy within artistic constraints
 - Preventing performance appreciation from displacing spiritual content
 - Balancing accessibility against theological depth
@@ -450,6 +468,7 @@ This combination integrates spiritual authority with performance capability, cre
 This combination integrates spiritual authority with infiltration capability, creating practitioners who extend divine presence into marginalized communities. These individuals provide ministry to populations outside established religious structures, understand nuanced ethical contexts beyond simplistic categories, and create innovative outreach approaches addressing unconventional spiritual needs.
 
 **Key Synergies:**
+
 - Adaptive ritual forms functioning within concealed or restricted environments
 - Enhanced perception identifying spiritual needs beneath surface presentations
 - Ethical discernment navigating complex moral situations with nuanced understanding
@@ -457,6 +476,7 @@ This combination integrates spiritual authority with infiltration capability, cr
 - Crisis ministry addressing immediate spiritual needs within unstable situations
 
 **Distinctive Challenges:**
+
 - Maintaining theological integrity while adapting to unconventional contexts
 - Reconciling institutional responsibilities with marginalized community needs
 - Managing personal safety while ministering in volatile environments
@@ -478,6 +498,7 @@ The Cleric archetype supports diverse interpretations creating distinctive chara
 **Motivations:** Prevents spiritual damage during traumatic experiences. Creates meaning frameworks sustaining hope within apparent chaos. Demonstrates divine presence within extreme suffering rather than only comfortable circumstances.
 
 **Distinctive Elements:**
+
 - Simplified ritual forms functioning within crisis constraints
 - Theological framework addressing suffering without minimizing genuine pain
 - Adaptive ministry responding to immediate needs rather following predetermined formats
@@ -497,6 +518,7 @@ The Cleric archetype supports diverse interpretations creating distinctive chara
 **Motivations:** Creates coherent understanding reconciling diverse divine manifestations. Preserves theological knowledge against oversimplification or distortion. Demonstrates intellectual rigor within spiritual contexts challenging perceived opposition between reason and faith.
 
 **Distinctive Elements:**
+
 - Extensive textual knowledge spanning multiple theological traditions
 - Analytical methodology examining spiritual claims through systematic evaluation
 - Documentation practices preserving contemporary experiences for future study
@@ -516,6 +538,7 @@ The Cleric archetype supports diverse interpretations creating distinctive chara
 **Motivations:** Sustains theological continuity across generational transitions. Integrates spiritual principles within everyday community activities. Maintains sacred perspective within ordinary circumstances rather than restricting spirituality to exceptional moments.
 
 **Distinctive Elements:**
+
 - Lifecycle ritual expertise addressing birth, maturation, partnership, and death
 - Comprehensive knowledge of community relationships, history, and dynamics
 - Adaptive spiritual counseling respecting individual differences within community context
@@ -535,6 +558,7 @@ The Cleric archetype supports diverse interpretations creating distinctive chara
 **Motivations:** Demonstrates divine reality through tangible manifestations. Addresses impossible situations through supernatural intervention. Maintains authentic connection preventing corruption of divine power through personal agenda.
 
 **Distinctive Elements:**
+
 - Manifestation techniques producing visible divine effects
 - Trance methodologies creating receptive states for divine possession
 - Physical discipline supporting energy channeling requirements
@@ -554,6 +578,7 @@ The Cleric archetype supports diverse interpretations creating distinctive chara
 **Motivations:** Experiences diverse divine manifestations across different environments. Connects isolated communities with broader theological developments. Prevents spiritual stagnation through continuous exposure to new circumstances.
 
 **Distinctive Elements:**
+
 - Adaptable ritual forms functioning across diverse environments
 - Portable shrine creating sacred space within wilderness settings
 - Extensive geographical knowledge of sacred sites and spiritual phenomena

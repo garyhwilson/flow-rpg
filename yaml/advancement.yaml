@@ -1,4 +1,4 @@
-# Flow RPG Advancement System
+# Autumn Phoenix RPG Advancement System
 # Version: 2.0-restructured
 # Rebalanced milestone progression and character development
 
@@ -130,8 +130,8 @@ minor_milestones:
           effect: "Reroll one damage die per attack"
           limit: "Once only"
         
-        flow_harmony:
-          effect: "+1 maximum Flow"
+        momentum_harmony:
+          effect: "+1 maximum Momentum"
           limit: "Three times maximum"
         
         defensive_fighter:
@@ -245,7 +245,7 @@ moderate_milestones:
       components:
         name: "Unique to character"
         effect: "Combines existing abilities"
-        cost: "1 less Flow than normal (minimum 0)"
+        cost: "1 less Momentum than normal (minimum 0)"
         narrative: "Dramatic description"
       
       examples:
@@ -272,18 +272,18 @@ moderate_milestones:
     
     advanced_technique:
       description: "Gain powerful ability"
-      requirement: "Flow +3 to use"
+      requirement: "Momentum +3 to use"
       
       combat_techniques:
         whirlwind_strike: "Attack all adjacent"
         perfect_parry: "Negate all damage from source"
         devastating_blow: "Double damage dice"
-        combat_flow: "Extra Flow on criticals"
+        combat_flow: "Extra Momentum on criticals"
       
       magic_techniques:
         metamagic_mastery: "Apply 2 metamagics"
         spell_combo: "Cast 2 spells in turn"
-        flow_channeling: "Convert Vitality to Flow"
+        momentum_channeling: "Convert Vitality to Momentum"
       
       skill_techniques:
         skill_mastery: "Auto-succeed once/scene"
@@ -298,8 +298,8 @@ moderate_milestones:
         narrative_expansion: "New permission type"
       
       example:
-        original: "Guardian gains Flow when ally damaged"
-        evolved: "Also gains Flow when healing ally"
+        original: "Guardian gains Momentum when ally damaged"
+        evolved: "Also gains Momentum when healing ally"
   
   appropriate_challenges:
     after_first_moderate:
@@ -388,7 +388,7 @@ major_milestones:
     
     legendary_technique:
       description: "Ultimate ability"
-      requirement: "Flow +6 to use"
+      requirement: "Momentum +6 to use"
       
       combat:
         unstoppable_assault: "Attack cannot miss"
@@ -415,7 +415,7 @@ major_milestones:
           narrative: "Blessed by gods"
 
         planar_step:
-          effect: "Teleport at will (1 Flow)"
+          effect: "Teleport at will (1 Momentum)"
           narrative: "Tear reality's fabric"
 
         true_sight:
@@ -475,7 +475,7 @@ edges_system:
       acquisition: "Minor milestones"
       stacking: "Different specializations stack"
     
-    flow_edges:
+    momentum_edges:
       description: "Resource management"
       acquisition: "Minor milestones"
       stacking: "Limited stacking"
@@ -510,9 +510,9 @@ edges_system:
       3_incredibly_tough: "+2 more Guard, +1 DR"
     
     example_chain_magical:
-      1_flow_harmony: "+1 max Flow"
-      2_flow_resonance: "+1 more max Flow"
-      3_flow_mastery: "+1 more max, start at +1"
+      1_momentum_harmony: "+1 max Momentum"
+      2_momentum_resonance: "+1 more max Momentum"
+      3_momentum_mastery: "+1 more max, start at +1"
 
 # ============================================
 # CAMPAIGN PROGRESSION
@@ -672,7 +672,7 @@ advancement_guidelines:
     - "Skills are cheaper to improve than attributes"
     - "Specialization beats generalization early"
     - "Guard/Vitality increases are valuable but not mandatory"
-    - "Flow techniques multiply effectiveness"
+    - "Momentum techniques multiply effectiveness"
 
   recommended_progression:
     sessions_1_3:
@@ -854,11 +854,11 @@ default_build_paths:
       session_1_minor: "Lore: Untrained → Novice"
       session_2_minor: "Sorcery: Competent → Professional (+1)"
       session_3_moderate: "Advance to Expert: Sorcery (+2)"
-      session_4_minor: "Flow Harmony (+1 max Flow)"
+      session_4_minor: "Momentum Harmony (+1 max Momentum)"
       session_5_major: "Attribute Excellence: Mind +1 (to +3)"
       session_6_moderate: "Metamagic: Quicken Spell"
       session_7_minor: "Investigate: Untrained → Novice"
-      session_8_minor: "Flow Harmony (+1 max Flow again)"
+      session_8_minor: "Momentum Harmony (+1 max Momentum again)"
       session_9_moderate: "Signature Move: Prismatic Cascade"
       session_10_major: "Legendary Technique: Reality Break"
 
@@ -926,7 +926,7 @@ default_build_paths:
       session_5_major: "Attribute Excellence: Two attributes +1"
       session_6_moderate: "+3 Guard"
       session_7_minor: "Empathy: Untrained → Novice"
-      session_8_minor: "Flow Harmony (+1 max Flow)"
+      session_8_minor: "Momentum Harmony (+1 max Momentum)"
       session_9_moderate: "Combat: Professional → Expert (+2)"
       session_10_major: "Calling Synthesis: Merge two callings"
 

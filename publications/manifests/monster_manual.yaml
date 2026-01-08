@@ -1,7 +1,7 @@
-# Flow RPG Monster Manual Manifest
+# Autumn Phoenix RPG Monster Manual Manifest
 # Bestiary and NPC compendium for Game Masters
 
-title: "Flow RPG Monster Manual"
+title: "Autumn Phoenix RPG Monster Manual"
 version: "1.0 (Draft)"
 output_file: "publications/assembled/monster_manual.md"
 
@@ -14,13 +14,13 @@ sections:
 
   # ===== INTRODUCTION =====
   - title: "Introduction: Using This Manual"
-    intro: "The Flow RPG Monster Manual provides Game Masters with a comprehensive collection of creatures, adversaries, and NPCs to populate their campaigns. Each entry is designed for easy use at the table while maintaining the tactical depth that makes Flow RPG combats engaging."
+    intro: "The Autumn Phoenix RPG Monster Manual provides Game Masters with a comprehensive collection of creatures, adversaries, and NPCs to populate their campaigns. Each entry is designed for easy use at the table while maintaining the tactical depth that makes Autumn Phoenix RPG combats engaging."
     content:
       - file: "monsters/00_introduction.md"
 
   # ===== PART I: RUNNING ADVERSARIES =====
   - title: "Part I: Running Adversaries"
-    intro: "How to bring adversaries to life at the table, from creating memorable characters to managing Flow in combat."
+    intro: "How to bring adversaries to life at the table, from creating memorable characters to managing Momentum in combat."
     content:
       - file: "monsters/01_gm_guidelines.md"
       - file: "monsters/02_system_integration.md"

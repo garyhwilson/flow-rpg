@@ -1,9 +1,10 @@
 # Species GM Guidelines
-*Advice for Game Masters on Integrating Species into Campaigns*
+
+_Advice for Game Masters on Integrating Species into Campaigns_
 
 ## Introduction
 
-As a Game Master, the species system in Flow RPG offers you rich opportunities for worldbuilding, character development, and thematic exploration. This guide provides strategies for incorporating species diversity into your game world, balancing cultural representation with individual character agency, and handling common challenges that may arise during play.
+As a Game Master, the species system in Autumn Phoenix RPG offers you rich opportunities for worldbuilding, character development, and thematic exploration. This guide provides strategies for incorporating species diversity into your game world, balancing cultural representation with individual character agency, and handling common challenges that may arise during play.
 
 ## Worldbuilding with Species
 
@@ -83,7 +84,7 @@ These distinctive motivations create depth when characters from different specie
 
 ### Avoiding Stereotypes
 
-While species in Flow RPG represent genuinely different biological beings with distinctive cultures, it's important to avoid reducing individual characters to simplistic stereotypes:
+While species in Autumn Phoenix RPG represent genuinely different biological beings with distinctive cultures, it's important to avoid reducing individual characters to simplistic stereotypes:
 
 **Complex Societies:** Present each species as having diverse and complex societies containing internal disagreement, regional variation, and evolutionary change rather than monolithic cultures with uniform values.
 
@@ -113,7 +114,7 @@ Different species naturally excel in different situations, creating potential im
 
 **Unexpected Applications:** Create situations where species traits provide unexpected advantages beyond their obvious applications, allowing creative players to find novel uses for their innate abilities.
 
-**Compensating Mechanics:** Remember that the Flow system allows characters to overcome natural limitations by spending Flow, enabling characters to succeed even in challenging situations by leveraging the game's resource economy.
+**Compensating Mechanics:** Remember that the Momentum system allows characters to overcome natural limitations by spending Momentum, enabling characters to succeed even in challenging situations by leveraging the game's resource economy.
 
 **Narrative Contributions:** Encourage contributions beyond mechanical advantages by inviting players to share their character's cultural perspective on situations, providing insight that enriches the group's understanding regardless of who takes the primary action.
 
@@ -153,6 +154,6 @@ Different species naturally excel in different situations, creating potential im
 
 ## Conclusion
 
-The species system in Flow RPG provides rich foundations for worldbuilding, character development, and thematic exploration when handled with nuance and creativity. By presenting species as complex biological and cultural entities with internal diversity while maintaining their distinctive essence, you create a world where both species differences and individual character choices meaningfully impact the narrative.
+The species system in Autumn Phoenix RPG provides rich foundations for worldbuilding, character development, and thematic exploration when handled with nuance and creativity. By presenting species as complex biological and cultural entities with internal diversity while maintaining their distinctive essence, you create a world where both species differences and individual character choices meaningfully impact the narrative.
 
-Remember that species in Flow are designed to create qualitatively different experiences rather than simply providing mechanical advantages. When integrated thoughtfully into your campaign, these differences enrich the storytelling experience by offering diverse perspectives on shared challenges and creating natural complementary relationships between characters.
+Remember that species in Momentum are designed to create qualitatively different experiences rather than simply providing mechanical advantages. When integrated thoughtfully into your campaign, these differences enrich the storytelling experience by offering diverse perspectives on shared challenges and creating natural complementary relationships between characters.

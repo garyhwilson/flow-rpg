@@ -1,6 +1,6 @@
 # License
 
-**Flow RPG** - Copyright © 2025 [Your Name/Company]
+**Autumn Phoenix RPG** - Copyright © 2025 [Your Name/Company]
 
 ---
 
@@ -68,7 +68,7 @@ OPEN GAME LICENSE Version 1.0a
 [Standard OGL text would go here]
 
 This requires designating:
-- **Product Identity:** Flow RPG name, specific setting elements, character names, artwork, etc.
+- **Product Identity:** Autumn Phoenix RPG name, specific setting elements, character names, artwork, etc.
 - **Open Game Content:** Mechanical rules, stat blocks, character creation rules, etc.
 
 See: https://www.wizards.com/default.asp?x=d20/oglfaq/20040123f
@@ -102,10 +102,10 @@ See: https://paizo.com/orclicense
 **Uncomment and customize to use:**
 
 <!--
-Flow RPG is released under the following terms:
+Autumn Phoenix RPG is released under the following terms:
 
 **Game Mechanics:**
-The rules, systems, and mechanics of Flow RPG are available for use under [specify terms].
+The rules, systems, and mechanics of Autumn Phoenix RPG are available for use under [specify terms].
 
 **Setting & Content:**
 The specific setting, characters, artwork, and creative expression are [specify protections].
@@ -146,26 +146,30 @@ The specific setting, characters, artwork, and creative expression are [specify 
 
 ## Third-Party Licenses & Attribution
 
-If Flow RPG incorporates or builds upon other licensed materials, list them here:
+If Autumn Phoenix RPG incorporates or builds upon other licensed materials, list them here:
 
 ### Fonts
+
 [If using specific fonts, list licenses]
 
 ### Software
+
 - Python: PSF License
 - PyYAML: MIT License
 
 ### Inspiration & Compatibility
-[Optional: Note games that inspired Flow RPG, if any]
+
+[Optional: Note games that inspired Autumn Phoenix RPG, if any]
 
 ---
 
 ## Contact for Licensing Questions
 
 For licensing inquiries, permissions, or commercial use requests:
+
 - Email: [your email]
 - Website: [your website]
 
 ---
 
-*Choose your license before publication. During development, all rights reserved by default.*
+_Choose your license before publication. During development, all rights reserved by default._

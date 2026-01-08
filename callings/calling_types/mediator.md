@@ -1,25 +1,31 @@
 # The Mediator
-*"Harmony brings peace to all"*
+
+_"Harmony brings peace to all"_
 
 ## Core Identity
+
 - **Core Drive:** To maintain inner and outer peace and harmony
 - **Fear:** Loss of connection, separation, conflict
 - **Desire:** To have inner and outer peace
 
 ## Mechanical Benefits
-- **Flow Benefit - Bridge Builder:** The first time each scene you help resolve any conflict (combat, social, or otherwise), you and all involved parties gain +1 Flow
+
+- **Momentum Benefit - Bridge Builder:** The first time each scene you help resolve any conflict (combat, social, or otherwise), you and all involved parties gain +1 Momentum
 - **Narrative Permission - Universal Understanding:** You can understand the basic meaning and emotional content of any communication, regardless of language barriers
 
 ## Moral Compass
+
 Mediators base decisions on maintaining harmony and seeing all perspectives. They seek moral solutions that unite rather than divide, often finding middle ground others miss.
 
 ## In Action
+
 - Seeks consensus and avoids conflict
 - Can be wise peacemakers or passive avoiders
 - Sees validity in multiple viewpoints
 - May become indecisive or neglect own needs
 
 ## Background Hooks
+
 - Diplomat from war-torn lands
 - Monk seeking universal balance
 - Innkeeper who brings people together
@@ -28,24 +34,30 @@ Mediators base decisions on maintaining harmony and seeing all perspectives. The
 - Translator between hostile cultures
 
 ## Playing a Mediator
+
 Your ability to see all sides helps the party navigate conflicts. Build bridges while maintaining your own position. Growth comes from learning that some conflicts need resolution, not avoidance, and that your perspective matters too.
 
 ## Tactical Approach
+
 ### Mediator in Combat
-- Gain Flow through successful conflict resolution
-- Spend Flow on defensive actions
+
+- Gain Momentum through successful conflict resolution
+- Spend Momentum on defensive actions
 - Understand enemy motivations
 - Find non-violent solutions
 
 ### Stance Synergies
+
 - **Aggressive:** Rarely used, except when decisive action promotes greater harmony
 - **Balanced:** Common choice, allowing flexible responses to developing situations
 - **Defensive:** Preferred stance, supporting observation and non-violent options
 
 ## Example in Play
-*Tamara the Mediator successfully negotiates with the orc chieftain, defusing what could have been a deadly battle. Her Harmony Restoration triggers, granting her and all participants 1 Flow. Earlier, when encountering angry sprites speaking Sylvan, she understood their grief over destroyed trees despite not knowing the language.*
+
+_Tamara the Mediator successfully negotiates with the orc chieftain, defusing what could have been a deadly battle. Her Harmony Restoration triggers, granting her and all participants 1 Momentum. Earlier, when encountering angry sprites speaking Sylvan, she understood their grief over destroyed trees despite not knowing the language._
 
 ## Calling Evolution
+
 - **Growth:** Finding your own voice while maintaining peace
 - **Stress:** Becoming passive or neglectful
 - **Integration:** Harmony includes healthy conflict
@@ -53,11 +65,13 @@ Your ability to see all sides helps the party navigate conflicts. Build bridges 
 ## Relationships with Other Callings
 
 ### Natural Allies
+
 - **Guardian:** Both value care for others, with complementary approaches
 - **Sentinel:** Can appreciate the Sentinel's concern for security
 - **Enthusiast:** Share optimistic outlook and people-centered focus
 
 ### Potential Tensions
+
 - **Advocate:** May clash over harmony versus justice
 - **Champion:** Different approaches to problem-solving (reconciliation vs. force)
 - **Exemplar:** May view the Exemplar's ambition as potentially divisive
@@ -65,21 +79,25 @@ Your ability to see all sides helps the party navigate conflicts. Build bridges 
 ## Archetype Synergies
 
 ### Strong Combinations
+
 - **Mediator Bard:** The diplomatic performer who brings people together
 - **Mediator Cleric:** The spiritual counselor facilitating inner and outer peace
 - **Mediator Rogue:** The negotiator who navigates social complexities
 
 ### Challenging Combinations
+
 - **Mediator Fighter:** Reconciling combat prowess with peaceful resolution
 - **Mediator Wizard:** Balancing arcane power with humble facilitation
 
 ## Species Considerations
+
 - **Human Mediators:** Often build bridges between diverse communities
 - **Dwarf Mediators:** Typically focus on clan harmony and tradition reconciliation
 - **Elf Mediators:** May mediate conflicts spanning generations
 - **Halfling Mediators:** Naturally skilled at diffusing tensions through hospitality
 
 ## Harmony Methods
+
 How Mediators create and maintain peace:
 
 - **Active Listening:** Truly hearing all perspectives without judgment
@@ -89,6 +107,7 @@ How Mediators create and maintain peace:
 - **Balance Restoration:** Creating solutions where everyone gains something important
 
 ## Conflict Resolution Approaches
+
 The Mediator's toolkit for handling disagreements:
 
 - **Pre-emptive De-escalation:** Identifying and addressing tensions before they explode
@@ -98,6 +117,7 @@ The Mediator's toolkit for handling disagreements:
 - **Peace Maintenance:** Establishing systems for ongoing harmony
 
 ## Inner Peace Practices
+
 Personal techniques that support the Mediator's work:
 
 - **Emotional Equilibrium:** Maintaining calm in charged situations
@@ -106,15 +126,17 @@ Personal techniques that support the Mediator's work:
 - **Compassion Practice:** Developing genuine care for all involved
 - **Detachment Balance:** Caring deeply without becoming overwhelmed
 
-## The Mediator's Flow
-The Mediator's relationship with Flow reflects their harmonizing nature:
+## The Mediator's Momentum
 
-- **Flow Generation:** Through successful peaceful resolution of conflicts
-- **Flow Distribution:** Benefits extend to all participants, not just the Mediator
-- **Flow Expenditure:** On techniques that promote understanding and connection
-- **Flow Philosophy:** Views Flow as the energy of harmonious relationship
+The Mediator's relationship with Momentum reflects their harmonizing nature:
+
+- **Momentum Generation:** Through successful peaceful resolution of conflicts
+- **Momentum Distribution:** Benefits extend to all participants, not just the Mediator
+- **Momentum Expenditure:** On techniques that promote understanding and connection
+- **Momentum Philosophy:** Views Momentum as the energy of harmonious relationship
 
 ## Growth Challenges
+
 The Mediator's journey involves several key developments:
 
 - **Healthy Assertion:** Finding and expressing personal needs and boundaries

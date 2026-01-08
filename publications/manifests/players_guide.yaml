@@ -1,7 +1,7 @@
-# Flow RPG Player's Guide Manifest
+# Autumn Phoenix RPG Player's Guide Manifest
 # Player-focused content only - no GM guidelines or balance discussions
 
-title: "Flow RPG Player's Guide"
+title: "Autumn Phoenix RPG Player's Guide"
 version: "1.0 (Draft)"
 output_file: "publications/assembled/players_guide.md"
 
@@ -14,7 +14,7 @@ sections:
 
   # ===== INTRODUCTION =====
   - title: "Introduction"
-    intro: "Welcome to Flow RPG! This guide contains everything you need to create characters and play the game."
+    intro: "Welcome to Autumn Phoenix RPG! This guide contains everything you need to create characters and play the game."
     content:
       - file: "core_rules/01_introduction.md"
       - file: "core_rules/02_basic_mechanics.md"
@@ -88,7 +88,7 @@ sections:
 
   # ===== COMBAT =====
   - title: "Part IV: Combat & Stances"
-    intro: "Combat in Flow RPG is dynamic and tactical. Your stance choice shapes how you fight and manage resources."
+    intro: "Combat in Autumn Phoenix RPG is dynamic and tactical. Your stance choice shapes how you fight and manage resources."
     content:
       - file: "core_rules/04_combat_system.md"
         exclude_sections:
@@ -97,7 +97,7 @@ sections:
 
   # ===== MAGIC =====
   - title: "Part V: Magic & Spellcasting"
-    intro: "Magic in Flow RPG adapts to your approach. The same spell creates different effects based on whether you cast with Mind, Awareness, Will, or Presence."
+    intro: "Magic in Autumn Phoenix RPG adapts to your approach. The same spell creates different effects based on whether you cast with Mind, Awareness, Will, or Presence."
     content:
       - file: "spells/00_introduction.md"
       - file: "spells/02_system_integration.md"

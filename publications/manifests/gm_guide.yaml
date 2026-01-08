@@ -1,7 +1,7 @@
-# Flow RPG Game Master's Guide Manifest
+# Autumn Phoenix RPG Game Master's Guide Manifest
 # GM-focused content: running games, balance, encounter design
 
-title: "Flow RPG Game Master's Guide"
+title: "Autumn Phoenix RPG Game Master's Guide"
 version: "1.0 (Draft)"
 output_file: "publications/assembled/gm_guide.md"
 
@@ -14,7 +14,7 @@ sections:
 
   # ===== INTRODUCTION =====
   - title: "Introduction to Game Mastering"
-    intro: "Welcome, Game Master! This guide provides everything you need to run compelling Flow RPG adventures."
+    intro: "Welcome, Game Master! This guide provides everything you need to run compelling Autumn Phoenix RPG adventures."
     content:
       - file: "core_rules/08_gm_guide.md"
 
@@ -54,7 +54,7 @@ sections:
 
   # ===== ENCOUNTER DESIGN =====
   - title: "Part III: Encounter Design"
-    intro: "Using the Flow economy to create balanced, engaging encounters."
+    intro: "Using the Momentum economy to create balanced, engaging encounters."
     content:
       - file: "core_rules/04_combat_system.md"
         exclude_sections:
@@ -63,19 +63,19 @@ sections:
           - "Example Combat"
         # Keep only GM-relevant sections
 
-  # ===== FLOW ECONOMY MANAGEMENT =====
-  - title: "Part IV: Managing the Flow Economy"
-    intro: "The Flow economy is the heart of the game. Here's how to use it to create dramatic pacing."
+  # ===== MOMENTUM ECONOMY MANAGEMENT =====
+  - title: "Part IV: Managing the Momentum Economy"
+    intro: "The Momentum economy is the heart of the game. Here's how to use it to create dramatic pacing."
     content:
       - file: "core_rules/02_basic_mechanics.md"
         exclude_sections:
           - "Making Checks"
           - "Skills"
-        # Focus on Flow management aspects
+        # Focus on Momentum management aspects
 
   # ===== CAMPAIGN FRAMEWORKS =====
   - title: "Part V: Campaign Frameworks"
-    intro: "Structure your campaign around the Flow RPG systems for maximum engagement."
+    intro: "Structure your campaign around the Autumn Phoenix RPG systems for maximum engagement."
     content:
       - file: "callings/growth_patterns/calling_evolution.md"
         rename_to: "Using Calling Evolution in Campaigns"
@@ -100,7 +100,7 @@ sections:
         rename_to: "Species Balance and Diversity"
 
       - file: "spells/02_system_integration.md"
-        rename_to: "Magic Balance and Flow Management"
+        rename_to: "Magic Balance and Momentum Management"
 
       - file: "equipment/02_system_integration.md"
         rename_to: "Equipment Balance and Treasure"

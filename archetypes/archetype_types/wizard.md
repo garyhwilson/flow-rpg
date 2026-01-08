@@ -1,5 +1,6 @@
 # Wizard
-*Master of arcane knowledge and magical manipulation*
+
+_Master of arcane knowledge and magical manipulation_
 
 ## Core Identity
 
@@ -12,6 +13,7 @@ The Wizard represents the mastery of arcane knowledge and magical manipulation t
 ## Mechanical Foundations
 
 ### Key Attributes
+
 Wizards typically develop attribute distributions emphasizing mental capability, perceptive awareness, and disciplined will:
 
 **Mind:** Primary attribute supporting analytical understanding, theoretical development, and spell formulation. Contributes to magical complexity management, interdisciplinary integration, and arcane innovation.
@@ -31,53 +33,59 @@ Wizards typically develop attribute distributions emphasizing mental capability,
 Wizards begin with the following skill proficiencies, reflecting their specialized training combining arcane practice with scholarly research:
 
 **Professional (+1):**
+
 - Sorcery (magical theory, energy manipulation, and spell formulation)
 - Lore (academic knowledge, research methodology, and historical context)
 
 **Novice (-1):**
+
 - Investigate (detailed observation, pattern recognition, and experimental design)
 
 **Special Ability:**
+
 - **Arcane Spellcasting:** Can cast arcane spells regardless of attributes (archetype training overrides normal spellcasting requirements)
 
 **Additional Skills:**
+
 - Choose three additional skills at Basic/Untrained level reflecting background and cultural training
 
 Wizards are typically Untrained in heavy physical activity, deceptive arts, or wilderness survival unless their background specifically includes exposure to these areas.
 
-### Flow Mechanics
+### Momentum Mechanics
 
-Wizards interact with the Flow resource through disciplined magical manipulation:
+Wizards interact with the Momentum resource through disciplined magical manipulation:
 
-**Flow Generation:**
-- Successfully casting complex spells with precise execution (+1 Flow)
-- Identifying magical patterns or phenomena through observation (+1 Flow)
-- Solving arcane puzzles or theoretical challenges (+1 Flow)
-- Applying magical knowledge to practical problems (+1 Flow)
-- Achieving experimental breakthrough in magical research (+2 Flow)
+**Momentum Generation:**
 
-**Flow Expenditure:**
+- Successfully casting complex spells with precise execution (+1 Momentum)
+- Identifying magical patterns or phenomena through observation (+1 Momentum)
+- Solving arcane puzzles or theoretical challenges (+1 Momentum)
+- Applying magical knowledge to practical problems (+1 Momentum)
+- Achieving experimental breakthrough in magical research (+2 Momentum)
+
+**Momentum Expenditure:**
+
 - Casting formulated spells (costs vary by spell power and complexity)
-- Enhancing spell effects (+1 Flow for additional effect magnitude or duration)
-- Stabilizing volatile magical phenomena (+2 Flow to control unstable energies)
-- Adapting spell formulations for unusual conditions (+1 Flow for circumstantial modification)
-- Countering opposing magical effects (+2 Flow for targeted dispelling or negation)
+- Enhancing spell effects (+1 Momentum for additional effect magnitude or duration)
+- Stabilizing volatile magical phenomena (+2 Momentum to control unstable energies)
+- Adapting spell formulations for unusual conditions (+1 Momentum for circumstantial modification)
+- Countering opposing magical effects (+2 Momentum for targeted dispelling or negation)
 
-Wizards typically generate Flow through successful application of magical knowledge and careful observation, then spend it on spell casting or arcane manipulation. This pattern reflects their approach of thorough understanding followed by precise application.
+Wizards typically generate Momentum through successful application of magical knowledge and careful observation, then spend it on spell casting or arcane manipulation. This pattern reflects their approach of thorough understanding followed by precise application.
 
 ### Signature Techniques
 
 Wizards develop specialized techniques reflecting their systematic approach to magical manipulation:
 
-**Pattern Recognition (Flow 1):** Apply analytical training to identify magical signatures, energy patterns, or arcane phenomena. Provides detailed information about magical effects, sources, or properties.
+**Pattern Recognition (Momentum 1):** Apply analytical training to identify magical signatures, energy patterns, or arcane phenomena. Provides detailed information about magical effects, sources, or properties.
 
-**Counterspell (Flow 2):** Analyze and disrupt opposing magical effects through precise interference patterns. More effective against spells with structures similar to those in wizard's own repertoire.
+**Counterspell (Momentum 2):** Analyze and disrupt opposing magical effects through precise interference patterns. More effective against spells with structures similar to those in wizard's own repertoire.
 
-**Formulaic Enhancement (Flow 2):** Apply theoretical understanding to enhance a spell's effect, range, duration, or precision beyond its standard parameters.
+**Formulaic Enhancement (Momentum 2):** Apply theoretical understanding to enhance a spell's effect, range, duration, or precision beyond its standard parameters.
 
-**Arcane Analysis (Flow 1):** Examine magical item, location, or phenomenon to determine its properties, activation methods, or potential dangers through systematic assessment.
+**Arcane Analysis (Momentum 1):** Examine magical item, location, or phenomenon to determine its properties, activation methods, or potential dangers through systematic assessment.
 
-**Spell Adaptation (Flow 3):** Modify prepared spell to address circumstances different from standard casting conditions, applying theoretical understanding to practical necessity.
+**Spell Adaptation (Momentum 3):** Modify prepared spell to address circumstances different from standard casting conditions, applying theoretical understanding to practical necessity.
 
 ## Cultural Variations
 
@@ -92,6 +100,7 @@ This common Wizard approach emphasizes theoretical understanding, systematic res
 **Motivations:** Advances magical understanding through research and experimentation. Develops theoretical models explaining observed phenomena. Contributes to cumulative academic knowledge through documentation and publication.
 
 **Distinctive Elements:**
+
 - Comprehensive research notes documenting experimental processes
 - Systematic classification system organizing magical phenomena
 - Theoretical models explaining relationships between different effects
@@ -111,6 +120,7 @@ This Wizard variant focuses on practical magical application through enchanted i
 **Motivations:** Creates reliable magical solutions addressing practical needs. Develops efficient enchantment methods maximizing effect while minimizing resource requirements. Translates complex arcane concepts into accessible applications.
 
 **Distinctive Elements:**
+
 - Workshop space equipped for enchantment processes
 - Efficiency-focused spell modifications reducing casting requirements
 - Application-driven research addressing specific practical challenges
@@ -130,6 +140,7 @@ This less common Wizard approach emphasizes new magical development through stru
 **Motivations:** Expands boundaries of known magical capability through experimental approach. Develops new theoretical frameworks addressing unexplained phenomena. Creates innovative magical techniques through cross-disciplinary synthesis.
 
 **Distinctive Elements:**
+
 - Controlled experimental environments for testing theoretical predictions
 - Original notation systems documenting new magical phenomena
 - Safety protocols managing risks of experimental procedures
@@ -149,6 +160,7 @@ This specialized Wizard preserves and practices magical traditions predating con
 **Motivations:** Preserves endangered magical knowledge through continued practice. Demonstrates validity of alternative arcane approaches. Maintains cultural context surrounding traditional magical systems.
 
 **Distinctive Elements:**
+
 - Traditional implements reflecting historical magical practices
 - Distinctive ritual components connecting to ancestral methodologies
 - Oral tradition elements supplementing written documentation
@@ -168,6 +180,7 @@ This uncommon Wizard approach integrates magical theory with other knowledge dom
 **Motivations:** Creates innovative applications through interdisciplinary synthesis. Translates concepts between knowledge domains creating new understanding. Solves problems resistant to single-discipline approaches.
 
 **Distinctive Elements:**
+
 - Reference materials spanning diverse knowledge areas
 - Terminology systems bridging different disciplinary languages
 - Collaborative methodology engaging non-magical specialists
@@ -274,7 +287,7 @@ Many Wizards develop extraordinary capability within specific magical theory dom
 
 **Translocation Theory:** Focused expertise on spatial relationships, dimensional boundaries, and positional manipulation, supporting movement effects from simple teleportation to complex dimensional manipulation.
 
-**Temporal Studies:** Rare specialization examining time-related magical phenomena, including perception manipulation, limited flow alteration, and theoretical paradox management.
+**Temporal Studies:** Rare specialization examining time-related magical phenomena, including perception manipulation, limited momentum alteration, and theoretical paradox management.
 
 **Mental Influence:** Specialized focus on consciousness interaction, including perception modification, thought pattern influence, and memory manipulation principles.
 
@@ -359,24 +372,28 @@ Most Wizards maintain extensive knowledge collections organized through personal
 Different species bring distinctive qualities to the Wizard archetype:
 
 **Human Wizards:**
+
 - Intellectual flexibility supports abstract magical thinking
 - Cultural knowledge transmission accelerates magical learning
 - Human innovative tendencies encourage spell experimentation
 - Ambition drives pursuit of powerful magical knowledge
 
 **Dwarf Wizards:**
+
 - Natural resilience supports sustained concentration
 - Methodical approach enhances experimental precision
 - Traditional respect encourages detailed documentation
 - Practical focus guides application-oriented research
 
 **Elf Wizards:**
+
 - Extended lifespan allows extraordinarily deep specialization
 - Natural magical affinity enhances energy perception
 - Ancient traditions provide unique theoretical frameworks
 - Pattern recognition supports complex spell formulation
 
 **Halfling Wizards:**
+
 - Perceptive nature enhances subtle energy detection
 - Adaptability supports innovative application development
 - Community orientation guides beneficial magical use
@@ -433,6 +450,7 @@ Wizards develop distinctive relationships with other archetypes:
 **Motivations:** Advances fundamental understanding of magical principles beyond practical application. Develops increasingly refined theoretical models explaining observed phenomena through elegant fundamental principles. Creates predictive frameworks identifying previously unrecognized possibilities through theoretical extension.
 
 **Distinctive Elements:**
+
 - Abstraction capability identifying essential patterns beneath surface diversity
 - Mathematical representation creating precise formalism capturing relationships
 - Experimental design testing theoretical predictions through controlled observation
@@ -452,6 +470,7 @@ Wizards develop distinctive relationships with other archetypes:
 **Motivations:** Creates reliable magical solutions addressing practical needs. Develops efficient enchantment methods maximizing effect while minimizing resource requirements. Translates complex arcane concepts into accessible applications.
 
 **Distinctive Elements:**
+
 - Workshop space equipped for enchantment processes
 - Efficiency-focused spell modifications reducing casting requirements
 - Application-driven research addressing specific practical challenges
@@ -471,6 +490,7 @@ Wizards develop distinctive relationships with other archetypes:
 **Motivations:** Preserves valuable magical heritage through proper recovery and documentation. Reconstructs historical magical practices through material evidence analysis. Verifies or challenges historical accounts through direct examination of magical artifacts.
 
 **Distinctive Elements:**
+
 - Detection methodology identifying magical remnants despite degradation
 - Preservation techniques stabilizing fragile magical structures
 - Documentation practices recording complete contextual information
@@ -490,6 +510,7 @@ Wizards develop distinctive relationships with other archetypes:
 **Motivations:** Creates more effective knowledge transmission systems supporting broader magical capability development. Adapts traditional content to contemporary learning needs without compromising essential understanding. Develops personalized approaches maximizing individual potential.
 
 **Distinctive Elements:**
+
 - Learning assessment identifying specific developmental needs
 - Representational diversity presenting concepts through multiple channels
 - Progressive sequencing creating manageable learning increments
@@ -509,6 +530,7 @@ Wizards develop distinctive relationships with other archetypes:
 **Motivations:** Prevents unnecessary conflicts between magical practitioners through mutual understanding facilitation. Addresses dangerous magical manifestations through containment rather than confrontation when possible. Creates sustainable agreements acknowledging legitimate interests.
 
 **Distinctive Elements:**
+
 - Multi-tradition expertise providing genuine understanding across diverse approaches
 - Neutral assessment methodology evaluating magical claims through evidence
 - Containment techniques stabilizing dangerous magical manifestations

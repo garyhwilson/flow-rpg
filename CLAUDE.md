@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This repository contains **Flow RPG Sweet Spot Edition**, a tabletop RPG system designed for 8-12 session campaigns with bounded accuracy mechanics. The system is implemented in two parallel formats:
+This repository contains **Autumn Phoenix RPG Sweet Spot Edition**, a tabletop RPG system designed for 8-12 session campaigns with bounded accuracy mechanics. The system is implemented in two parallel formats:
 
 1. **YAML structured data** (yaml/ directory) - Machine-readable game rules
 2. **Markdown narrative** (core_rules/, callings/, etc.) - Human-readable documentation
@@ -22,6 +22,7 @@ Both formats contain the same game system but serve different purposes: YAML for
 Video game design patterns are fundamentally incompatible with TTRPG play:
 
 **Forbidden Patterns**:
+
 - Formulaic stat scaling (e.g., "Guard = 8 + milestones × 2")
 - Enemy "types" or "tiers" as interchangeable units
 - "Squad composition" language (e.g., "1 Elite + 4 Henchmen")
@@ -30,22 +31,26 @@ Video game design patterns are fundamentally incompatible with TTRPG play:
 - Treating adversaries as stat blocks without personality
 
 **What This Looks Like in Practice**:
+
 - WRONG: "For a Medium encounter, use 2 Standards OR 4 Henchmen + 1 Standard"
 - RIGHT: "Captain Vex (experienced Guard officer) might bring 3-5 soldiers depending on the situation"
 
 ### Required TTRPG Approach
 
 **Named adversaries with motivations**:
+
 - Every significant opponent should have a name and reason for opposing the PCs
 - Stats serve the story, not the other way around
 - GMs should create specific individuals, not fill "roles"
 
 **Narrative-driven opposition**:
+
 - Scene difficulty comes from circumstances, not stat block math
 - Consequences matter more than hit points
 - Social and environmental challenges are as important as combat
 
 **GM judgment over formulas**:
+
 - Provide ranges and examples, not rigid formulas
 - Emphasize "create what feels right for your story"
 - Trust GMs to balance their own campaigns
@@ -55,6 +60,7 @@ Video game design patterns are fundamentally incompatible with TTRPG play:
 When reviewing or creating content, watch for these indicators:
 
 **Red Flags (Video Game Thinking)**:
+
 - Words like: boss, minion, elite squad, raid, aggro, DPS
 - Phrases like: "encounter composition", "threat level", "stat block template"
 - Mathematical scaling formulas tied to character level/milestones
@@ -62,6 +68,7 @@ When reviewing or creating content, watch for these indicators:
 - Role-based design (controller, striker, defender, etc.)
 
 **Green Flags (TTRPG Thinking)**:
+
 - Named characters with motivations: "Captain Vex wants revenge"
 - Situational guidance: "A squad of guards typically has..."
 - Story-first design: "What would make sense for this villain?"
@@ -81,13 +88,14 @@ If it sounds like video game design, rewrite it with TTRPG principles.
 
 ## Documentation Presentation Standards
 
-**CRITICAL**: How we present information is as important as what information we present. Traditional TTRPG documentation shows examples and lets patterns emerge naturally. Video game design documents categorize first and provide examples second. Flow RPG must follow TTRPG traditions.
+**CRITICAL**: How we present information is as important as what information we present. Traditional TTRPG documentation shows examples and lets patterns emerge naturally. Video game design documents categorize first and provide examples second. Autumn Phoenix RPG must follow TTRPG traditions.
 
 ### Examples-First Philosophy
 
 **Always show concrete examples before theory or categorization:**
 
 **RIGHT - Examples First:**
+
 ```markdown
 ## Captain Sera Blackthorn Hunts Heretics
 
@@ -111,19 +119,23 @@ Every adversary should be a character with a name, motivation, and personality..
 ```
 
 **WRONG - Categories First:**
+
 ```markdown
 ## Opposition Patterns
 
 ### Organized Authority
+
 This pattern represents law enforcement and military forces.
 **Example:** Captain Sera Blackthorn
 
 ### Criminal Elements
+
 This pattern represents criminal organizations.
 **Example:** The Red Cloak Gang
 ```
 
 **Why Examples-First Works:**
+
 - GMs see what to do immediately (concrete examples)
 - Patterns emerge naturally from studying examples
 - Inspires creativity rather than constraining it
@@ -135,26 +147,31 @@ This pattern represents criminal organizations.
 **Forbidden taxonomic patterns:**
 
 **Numbered Threat/Tier Systems:**
+
 - "Threat 1: Henchmen", "Threat 2: Standard", "Threat 3: Champions", "Threat 4: Legendary"
 - "Tier 1-5 Encounters", "Level 1-20 Appropriate Challenges"
 - Formal numerical categorization of any kind
 
 **Formal Type Systems as Primary Organization:**
-- "Edge Categories: Combat Edges, Skill Edges, Flow Edges"
+
+- "Edge Categories: Combat Edges, Skill Edges, Momentum Edges"
 - "Opposition Patterns: Authority, Criminal, Wilderness, Supernatural"
 - "NPC Types: Social, Combat, Specialist"
 
 **Design Document Language:**
+
 - Section headers like "Stat Guidance by Power Level"
 - "Encounter Composition Guidelines"
 - "Balance Formulas for Challenge Rating"
 
 **MMO-Style Categorization:**
+
 - Treating anything as interchangeable units in categories
 - "Squad composition" thinking (1 Elite + 4 Henchmen)
 - Formulaic approach to content creation
 
 **Why Taxonomy Is Poison:**
+
 - Makes documentation read like design docs, not game books
 - Encourages formulaic thinking over creative adaptation
 - Feels like video game wikis or D&D 4th Edition
@@ -166,6 +183,7 @@ This pattern represents criminal organizations.
 **Follow these established TTRPG models:**
 
 **D&D Monster Manual / Pathfinder Bestiary Approach:**
+
 - Show specific creatures/NPCs with full details
 - Provide 5-7 varied examples in each section
 - Let GMs extrapolate patterns themselves
@@ -173,17 +191,20 @@ This pattern represents criminal organizations.
 - Prioritize inspiration over instruction
 
 **Good Section Headers:**
+
 - "Creating Memorable Conflicts" (not "Opposition Patterns")
 - "Available Edges" (not "Edge Categories")
 - "Captain Sera Blackthorn Hunts Heretics" (not "Organized Authority Example")
 
 **Good Organization:**
+
 - Flat lists with concrete examples
 - Descriptive phrases over formal type names ("Lesser adversaries" not "Henchmen Type")
 - Guidance sections AFTER examples, not before
 - Build examples showing how pieces fit together, not category definitions
 
 **Good Presentation:**
+
 - Named characters as primary examples
 - Motivations and personality before mechanics
 - Tactical variety shown through examples
@@ -194,6 +215,7 @@ This pattern represents criminal organizations.
 **These words as section headers suggest wrong approach:**
 
 **Category/Type Language:**
+
 - "Pattern" (as in "Opposition Patterns")
 - "Category" (as in "Edge Categories")
 - "Type" (as in "Enemy Types")
@@ -202,11 +224,13 @@ This pattern represents criminal organizations.
 - "Level" (as in "Challenge Levels")
 
 **Okay in Body Text, Wrong as Headers:**
+
 - These words are fine when describing things naturally
 - "Different types of enemies" in a sentence = okay
 - "Enemy Types" as a section header = wrong
 
 **Better Alternatives:**
+
 - "Creating [X]" instead of "[X] Categories"
 - "Available [X]" instead of "[X] Types"
 - "[Specific Named Example]" instead of "Example of [Category]"
@@ -219,6 +243,7 @@ This pattern represents criminal organizations.
 **"Is this a published game book or internal design documentation?"**
 
 **Published Game Book (RIGHT):**
+
 - "Captain Vex is a veteran mercenary commander who leads through respect, not fear. Her soldiers are loyal because she protects them..."
 - Shows what GMs need: inspiration and guidelines
 - Reads like fantasy fiction with mechanics attached
@@ -226,6 +251,7 @@ This pattern represents criminal organizations.
 - Provides ranges and examples, not formulas
 
 **Internal Design Doc (WRONG):**
+
 - "Threat 3 (Champion): Use when party has 6-8 milestones. Formula: Guard = 40 + (milestones × 8)"
 - Shows what designers need: balance formulas and categorization
 - Reads like technical specifications
@@ -233,6 +259,7 @@ This pattern represents criminal organizations.
 - Provides rigid formulas and type definitions
 
 **The Test:**
+
 - Would this appear in a D&D or Pathfinder book? (Good)
 - Would this appear in an MMO strategy guide or game wiki? (Bad)
 - Does it inspire me to create my own content? (Good)
@@ -241,6 +268,7 @@ This pattern represents criminal organizations.
 ### Red Flags vs Green Flags for Documentation
 
 **Red Flags (Wrong Approach):**
+
 - Section organized by categories/types/patterns
 - Numbered tier/threat/level systems
 - Examples listed under category headers
@@ -250,6 +278,7 @@ This pattern represents criminal organizations.
 - Feels like filling out a template
 
 **Green Flags (Right Approach):**
+
 - Section organized by concrete examples
 - Natural language descriptions
 - Categories emerge from studying examples
@@ -263,26 +292,31 @@ This pattern represents criminal organizations.
 **These recent issues illustrate the problems:**
 
 **"Paragon Paths" (advancement.yaml):**
+
 - D&D 4th Edition terminology that snuck in
 - Formal categorization system for character advancement
 - Fixed by folding into mythic_edge with concrete examples
 
 **"Opposition Patterns" (encounters.md):**
+
 - Video game taxonomy (Organized Authority, Criminal Elements, etc.)
 - Categories first, examples second
 - Fixed by replacing with 5 named conflicts (Captain Sera Blackthorn, Red Cloak Gang, etc.)
 
 **"Threat Levels" (monsters_reference.md):**
+
 - MMO-style numbered threat system (Threat 1-4)
 - Formal type classifications (Henchmen, Standard, Champions, Legendary)
 - Fixed by deleting file entirely - moved to descriptive language in context
 
 **"Edge Categories" (edges_mechanics.md):**
-- Explicit categorization (Combat Edges, Skill Edges, Flow Edges, etc.)
+
+- Explicit categorization (Combat Edges, Skill Edges, Momentum Edges, etc.)
 - Category headers with examples under each
 - Fixed by presenting flat list with build examples
 
 **What These Have in Common:**
+
 - All imposed video game/design doc structure
 - All prioritized categorization over examples
 - All felt like 4th Edition D&D or MMO wikis
@@ -293,21 +327,25 @@ This pattern represents criminal organizations.
 **When creating new documentation:**
 
 1. **Start with 5-7 concrete, named examples**
+
    - Captain Sera Blackthorn, not "Example of Organized Authority"
    - Specific builds showing edge combinations, not "Edge Categories"
    - Named spells with flavor, not "Spell Type: Evocation"
 
 2. **Add guidance section AFTER examples**
+
    - "Building Your Own Conflicts" comes after the 5 conflict examples
    - "Customizing Your Build" comes after the example builds
    - Theory emerges from examples, not vice versa
 
 3. **Use natural language groupings if you must group**
+
    - "Lesser adversaries" not "Henchmen Type"
    - "Dangerous in groups" not "Threat Level 1"
    - Descriptive phrases, not formal type names
 
 4. **Always ask: "Bestiary or Design Doc?"**
+
    - If it reads like a design doc, rewrite it
    - If you can't tell, show it to someone who plays TTRPGs
    - When in doubt, add more named examples
@@ -321,16 +359,19 @@ This pattern represents criminal organizations.
 **When reviewing existing documentation:**
 
 1. **Look for taxonomic organization**
+
    - Are things organized by type/category/pattern?
    - Do section headers use classification language?
    - Is theory presented before examples?
 
 2. **Check presentation order**
+
    - Examples should come first
    - Guidance should follow examples
    - Theory should emerge from studying examples
 
 3. **Verify TTRPG voice**
+
    - Does it sound like D&D/Pathfinder?
    - Or does it sound like WoW/design docs?
    - Would a veteran TTRPG player recognize this as tabletop content?
@@ -345,28 +386,32 @@ This pattern represents criminal organizations.
 **These presentation standards complement the existing video game content warnings:**
 
 **Video Game Content Warnings (existing):** Focus on terminology and mechanical patterns
+
 - Forbids boss/minion/elite/tank/DPS language
 - Prevents formulaic stat scaling
 - Stops squad composition thinking
 
 **Documentation Presentation Standards (this section):** Focus on organization and structure
+
 - Forbids category-first organization
 - Prevents taxonomic thinking
 - Stops design-doc presentation
 
-**Together they ensure:** Flow RPG reads like a traditional TTRPG book, not a video game design document or MMO strategy guide.
+**Together they ensure:** Autumn Phoenix RPG reads like a traditional TTRPG book, not a video game design document or MMO strategy guide.
 
 ## Core Architecture
 
 ### Dual-Format System
 
 **YAML Files** (`yaml/` directory):
+
 - Complete game rules as structured data
 - 10 component files referenced by `index.yaml`
 - Used for validation, tooling, and future digital implementations
 - **Master files**: All balance fixes and playtesting changes happen here first
 
 **Markdown Files** (multiple directories):
+
 - Narrative documentation of the same system
 - Organized for human reading and publication
 - Assembled into books via `scripts/assemble_book.py`
@@ -427,13 +472,16 @@ Mechanical content in markdown files can be marked with HTML comments to indicat
 
 ```markdown
 <!-- YAML-SOURCE: character.yaml > derived_values > guard -->
+
 **Guard:** 12 + max(Might, Grace, Will)
+
 <!-- /YAML-SOURCE -->
 ```
 
 ### Editing Rules
 
 **When making MECHANICAL changes:**
+
 1. Edit the YAML file first (source of truth)
 2. Find the corresponding section in markdown
 3. Update the markdown to match
@@ -441,6 +489,7 @@ Mechanical content in markdown files can be marked with HTML comments to indicat
 5. Reassemble publications
 
 **When making NARRATIVE changes:**
+
 1. Edit markdown directly (no YAML involved)
 2. Keep edits outside of YAML-SOURCE markers
 3. Reassemble publications
@@ -450,6 +499,7 @@ Mechanical content in markdown files can be marked with HTML comments to indicat
 ### Preventing Documentation Drift
 
 Common drift issues to watch for:
+
 - Formula discrepancies (e.g., Guard = "12 + max" vs "8 + Higher")
 - Session timing differences (e.g., Major milestones at 5/10 vs 18/30)
 - Skill tier modifiers (e.g., Professional = +1 vs +2)
@@ -464,7 +514,7 @@ When making balance changes, **always edit YAML first**, then sync to markdown:
 ### Core System Files (yaml/ directory)
 
 1. **index.yaml** - Master reference, version info, design philosophy
-2. **core_rules.yaml** - Resolution mechanics, Flow system, attributes, skills
+2. **core_rules.yaml** - Resolution mechanics, Momentum system, attributes, skills
 3. **advancement.yaml** - Milestone system, edges, build paths, power progression
 4. **gm_tools.yaml** - Encounter building, enemy templates, TN scaling guidance
 5. **combat.yaml** - Stance system, health, death saves
@@ -477,19 +527,22 @@ When making balance changes, **always edit YAML first**, then sync to markdown:
 ### Recently Fixed Issues (DO NOT REVERT)
 
 **Phase 1 - Critical Fixes**:
+
 - Powerful adversary action economy: Maximum 2 attacks per round (gm_tools.yaml:133-167)
 - Deepen Expertise: Requires 3 consecutive minors, not 2 (advancement.yaml:67-76)
 - Example characters: All Guard/skill values corrected (examples.yaml)
 
 **Phase 2 - Balance Tuning**:
-- Flow generation: "Taking damage" limited to once per round (core_rules.yaml:176-180)
-- High Flow bonus: Removed "+1 to all rolls" at Flow 4-6 (core_rules.yaml:160-167)
+
+- Momentum generation: "Taking damage" limited to once per round (core_rules.yaml:176-180)
+- High Momentum bonus: Removed "+1 to all rolls" at Momentum 4-6 (core_rules.yaml:160-167)
 - TN scaling: Comprehensive guidance for GMs (gm_tools.yaml:507-573)
 
 **Phase 3 - Accessibility**:
+
 - Simplified rules for first sessions (examples.yaml:24-93)
 - Default build paths to reduce option paralysis (advancement.yaml:862-982)
-- Optional GM Flow pool with guidance (gm_tools.yaml:162-200)
+- Optional GM Momentum pool with guidance (gm_tools.yaml:162-200)
 
 ## Key Mathematical Constraints
 
@@ -514,7 +567,7 @@ Do not use the old formula - all examples have been corrected.
 - Professional: +1 (not +2)
 - Expert: +2 (max, not +3)
 
-### Flow Range
+### Momentum Range
 
 -3 to +6 (not -5 to +10 from older versions)
 
@@ -543,7 +596,7 @@ When updating game content:
 drafts/
 ├── yaml/                    # YAML structured rules (EDIT HERE FIRST)
 │   ├── index.yaml          # Master reference
-│   ├── core_rules.yaml     # Resolution & Flow mechanics
+│   ├── core_rules.yaml     # Resolution & Momentum mechanics
 │   ├── advancement.yaml    # Milestones, build paths
 │   ├── gm_tools.yaml       # Adversary guidance, TN scaling
 │   └── [6 other component files]
@@ -564,18 +617,21 @@ drafts/
 ### Adding New Content
 
 **New spell**:
+
 1. Add to `yaml/magic.yaml` in appropriate tier
 2. Update spell count in `index.yaml`
 3. Add narrative description to `core_rules/05_magic_system.md`
 4. Reassemble grimoire: `python scripts/assemble_book.py publications/manifests/grimoire.yaml`
 
 **New adversary**:
+
 1. Start with narrative concept (who they are, what they want)
 2. Use stat guidance from `gm_tools.yaml` as starting point
 3. Adjust based on story needs - stats serve the narrative
 4. Give them a name and motivation, not just a stat block
 
 **Balance change**:
+
 1. Edit YAML file (e.g., `advancement.yaml` for milestone options)
 2. Update design notes in `index.yaml` if philosophy changed
 3. Sync to markdown documentation
@@ -584,23 +640,26 @@ drafts/
 ### Verifying Balance
 
 **Check modifier caps**:
+
 ```yaml
 # In advancement.yaml or character.yaml
-total_modifier_maximum: "+5"
-formula: "Attribute + Skill + Edges ≤ 5"
+total_modifier_maximum: '+5'
+formula: 'Attribute + Skill + Edges ≤ 5'
 ```
 
 **Check Guard formula**:
+
 ```yaml
 # In core_rules.yaml or examples.yaml
-guard: "12 + max(Might, Grace, Will)"  # CORRECT
+guard: '12 + max(Might, Grace, Will)' # CORRECT
 # NOT: "8 + attribute + milestones"     # OLD/WRONG
 ```
 
 **Check powerful adversary action economy**:
+
 ```yaml
 # In gm_tools.yaml
-critical_rule: "Champions can make MAXIMUM 2 ATTACKS per round"
+critical_rule: 'Champions can make MAXIMUM 2 ATTACKS per round'
 ```
 
 ## Design Philosophy
@@ -619,7 +678,7 @@ From `index.yaml` - keep these principles in mind:
 - Champion/powerful adversary 2-attack maximum (causes TPK with 3 attacks)
 - Deepen Expertise 3-minor requirement (2 minors hits cap too early)
 - Guard formula (12 + max, not 8 + attribute)
-- Flow range -3 to +6 (other ranges tested and rejected)
+- Momentum range -3 to +6 (other ranges tested and rejected)
 - Skill tier modifiers (Professional = +1, not +2)
 
 These were all extensively playtested and mathematically validated.

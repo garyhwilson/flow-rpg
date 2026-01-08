@@ -1,4 +1,4 @@
-# Flow RPG Examples & Quick Start
+# Autumn Phoenix RPG Examples & Quick Start
 # Version: 1.0-complete
 # Pre-generated characters, play examples, and tutorials
 
@@ -11,7 +11,7 @@ quick_start:
       - "This reference"
     
     optional:
-      - "Tokens for Flow tracking"
+      - "Tokens for Momentum tracking"
       - "Battle map and miniatures"
       - "Initiative tracker"
 
@@ -38,7 +38,7 @@ quick_start:
       skills: "Professional +1, Novice +0, Untrained -2"
       guard: "Your health in combat (recovers after fights)"
       vitality: "Serious injuries (harder to recover)"
-      flow: "Ranges from -3 to +6, starts at 0 each scene"
+      momentum: "Ranges from -3 to +6, starts at 0 each scene"
 
     combat_simplified:
       attacking: "Roll 2d6 + best attribute + Combat skill vs TN 8"
@@ -46,31 +46,31 @@ quick_start:
       being_hit: "Lose Guard first, then Vitality"
 
       stances:
-        aggressive: "Go first, deal +1 damage, gain Flow when you hit"
+        aggressive: "Go first, deal +1 damage, gain Momentum when you hit"
         balanced: "Go second, most flexible, can switch stances easily"
-        defensive: "Go last, +2 to defense rolls, gain Flow when attacked"
+        defensive: "Go last, +2 to defense rolls, gain Momentum when attacked"
 
-      flow_simple:
+      momentum_simple:
         gain: "Critical hit (+1), taking damage (+1, once per round), stance bonuses"
-        spend: "Add +1 to any roll per Flow spent (max +3)"
+        spend: "Add +1 to any roll per Momentum spent (max +3)"
 
     magic_simplified:
-      cantrips: "Minor spells (give +1 Flow when cast)"
-      tier_1: "Basic spells (cost 0 Flow)"
-      tier_2_plus: "Powerful spells (cost Flow)"
+      cantrips: "Minor spells (give +1 Momentum when cast)"
+      tier_1: "Basic spells (cost 0 Momentum)"
+      tier_2_plus: "Powerful spells (cost Momentum)"
 
       casting: "Roll 2d6 + Mind/Awareness/Will/Presence + Sorcery"
-      advice: "Use cantrips to build Flow, then cast big spells"
+      advice: "Use cantrips to build Momentum, then cast big spells"
 
     skip_for_now:
-      - "GM Flow pool (just wing it)"
+      - "GM Momentum pool (just wing it)"
       - "Signature moves (add after session 1)"
       - "Complex techniques (introduce gradually)"
       - "Social combat (just roleplay it)"
       - "Death saves (if PC reaches 0 Vitality, they're unconscious but stable)"
 
     add_later:
-      session_2: "Introduce GM Flow pool for complications"
+      session_2: "Introduce GM Momentum pool for complications"
       session_3: "Add signature moves and advanced techniques"
       session_4: "Full social combat rules if needed"
 
@@ -125,7 +125,7 @@ pregenerated_characters:
     derived_values:
       guard: 15  # 12 + max(3 Might, 0 Grace, 2 Will) = 12 + 3
       vitality: 12  # 10 + 2(Will)
-      flow: 
+      momentum: 
         current: 0
         max: 6
       movement: 1
@@ -141,7 +141,7 @@ pregenerated_characters:
         craftwise: "Ask one question about worked materials"
         steady_stance: "Free switch from Defensive"
       calling:
-        protective_surge: "When ally takes damage, gain +1 Flow"
+        protective_surge: "When ally takes damage, gain +1 Momentum"
         helpers_intuition: "Know when someone needs help"
       edge:
         tough: "+2 Guard (included)"
@@ -155,7 +155,7 @@ pregenerated_characters:
     tactics:
       preferred_stance: "Defensive"
       strategy: "Draw attacks, protect allies"
-      flow_use: "Rally and defensive techniques"
+      momentum_use: "Rally and defensive techniques"
   
   silvara_moonwhisper:
     concept: "Elven Scout"
@@ -182,7 +182,7 @@ pregenerated_characters:
     derived_values:
       guard: 15  # 12 + max(0 Might, 3 Grace, -1 Will) = 12 + 3
       vitality: 9   # 10 + (-1)(Will)
-      flow:
+      momentum:
         current: 0
         max: 6
       movement: 1
@@ -194,11 +194,11 @@ pregenerated_characters:
     
     special_abilities:
       species:
-        fey_grace: "+1 Flow on critical success"
+        fey_grace: "+1 Momentum on critical success"
         magical_affinity: "Sense magic in Near range"
         elven_focus: "Ignore first armor penalty to casting"
       calling:
-        authentic_insight: "+3 Flow when trying new approach"
+        authentic_insight: "+3 Momentum when trying new approach"
         soul_reading: "Ask one deep question per scene"
       edge:
         precise_strike: "Reroll one damage die"
@@ -212,7 +212,7 @@ pregenerated_characters:
     tactics:
       preferred_stance: "Balanced"
       strategy: "Ranged support, scouting"
-      flow_use: "Enhanced shots, perception"
+      momentum_use: "Enhanced shots, perception"
   
   elena_lightbringer:
     concept: "Human Healer"
@@ -239,7 +239,7 @@ pregenerated_characters:
     derived_values:
       guard: 13  # 12 + max(0 Might, 0 Grace, 1 Will) = 12 + 1
       vitality: 11  # 10 + 1(Will)
-      flow:
+      momentum:
         current: 0
         max: 6
       movement: 1
@@ -253,10 +253,10 @@ pregenerated_characters:
     special_abilities:
       species:
         versatile: "Extra Competent skill"
-        determined: "+1 Flow when recovering from negative"
+        determined: "+1 Momentum when recovering from negative"
         adaptable: "Swap skills during rest"
       calling:
-        harmony_restoration: "+1 Flow to all when resolving conflict"
+        harmony_restoration: "+1 Momentum to all when resolving conflict"
         universal_understanding: "Understand any communication"
       spellcasting:
         tradition: "Divine"
@@ -271,7 +271,7 @@ pregenerated_characters:
     tactics:
       preferred_stance: "Defensive"
       strategy: "Heal and support"
-      flow_use: "Healing spells, protection"
+      momentum_use: "Healing spells, protection"
   
   # After Minor Milestones (Session 3-4)
   
@@ -300,9 +300,9 @@ pregenerated_characters:
     derived_values:
       guard: 17  # 12 + max(-2 Might, 3 Grace, 0 Will) + 2 (minor milestone) = 17
       vitality: 10  # 10 + 0
-      flow:
+      momentum:
         current: 0
-        max: 7  # Flow Harmony edge
+        max: 7  # Momentum Harmony edge
       movement: 2  # Fast Movement edge
     
     equipment:
@@ -312,14 +312,14 @@ pregenerated_characters:
     
     special_abilities:
       species:
-        lucky: "Flow stops at 0 once per scene"
-        brave_heart: "+1 Flow when ally goes negative"
+        lucky: "Momentum stops at 0 once per scene"
+        brave_heart: "+1 Momentum when ally goes negative"
         small_but_mighty: "Move through enemies, +2 to hide"
       calling:
-        joyful_flow: "Share Flow with adjacent allies"
+        joyful_flow: "Share Momentum with adjacent allies"
         silver_lining: "Find benefit in any situation"
       edges:
-        flow_harmony: "+1 max Flow"
+        momentum_harmony: "+1 max Momentum"
         fast_movement: "+1 zone movement"
         riposte: "Counter after successful defense"
     
@@ -331,8 +331,8 @@ pregenerated_characters:
     
     tactics:
       preferred_stance: "Aggressive"
-      strategy: "Flank, sneak attack, share Flow"
-      flow_use: "Mobility and team support"
+      strategy: "Flank, sneak attack, share Momentum"
+      momentum_use: "Mobility and team support"
   
   # After Moderate Milestone (Session 6)
   
@@ -363,32 +363,32 @@ pregenerated_characters:
     derived_values:
       guard: 15  # 12 + max(-1 Might, 1 Grace, 0 Will) + 2 (milestone choice) = 15
       vitality: 10  # 10 + 0
-      flow:
+      momentum:
         current: 1  # Scholar starts at +1
-        max: 7  # Flow Harmony edge
+        max: 7  # Momentum Harmony edge
       movement: 2  # No armor bonus
       spellcasting: "Yes (Mind 3 + Awareness 1 = 4)"
     
     equipment:
-      armor: "None (DR 0, +1 Flow when hit, +1 Sorcery)"
+      armor: "None (DR 0, +1 Momentum when hit, +1 Sorcery)"
       weapons: ["Staff (2d6)", "Wand focus"]
       gear: ["Spellbook", "Component pouch", "Research notes", "200 gold"]
     
     special_abilities:
       species:
         versatile: "Extra skill"
-        determined: "+1 Flow recovery"
+        determined: "+1 Momentum recovery"
         adaptable: "Swap skills"
       calling:
-        prepared_mind: "Start at +1 Flow"
+        prepared_mind: "Start at +1 Momentum"
         contingency_planning: "Declare preparation once/scene"
       signature_move:
         name: "Arcane Tempest"
         effect: "3d6 to all in zone"
-        cost: "2 Flow (reduced from 3)"
+        cost: "2 Momentum (reduced from 3)"
       metamagic:
-        quicken: "+1 Flow to cast as swift action"
-        empower: "+2 Flow for +50% damage"
+        quicken: "+1 Momentum to cast as swift action"
+        empower: "+2 Momentum for +50% damage"
     
     known_spells:
       cantrips: ["Spark", "Mage Armor", "Light", "Prestidigitation"]
@@ -405,7 +405,7 @@ pregenerated_characters:
     tactics:
       preferred_stance: "Balanced"
       strategy: "Control battlefield with spells"
-      flow_use: "Big spells at key moments"
+      momentum_use: "Big spells at key moments"
 
 # ============================================
 # PLAY EXAMPLES
@@ -431,7 +431,7 @@ play_examples:
       gm: "10 is a full success. The door bursts open cleanly. You're through and ready for action."
     
     step_4_flow:
-      change: "No Flow change on full success (Flow only on crit 13+)"
+      change: "No Momentum change on full success (Momentum only on crit 13+)"
   
   combat_round:
     scenario: "Party fights goblin ambushers"
@@ -453,7 +453,7 @@ play_examples:
         total: 11
         result: "Hits for 7 damage, reduced to 5 by armor"
         marcus_guard: "15 → 10"
-        flow: "Chief gains +1 (Aggressive hit)"
+        momentum: "Chief gains +1 (Aggressive hit)"
     
     turn_2_balanced:
       silvara:
@@ -462,7 +462,7 @@ play_examples:
         modifiers: "+3 Grace, +0 Combat"
         total: 14
         result: "Critical! 2d6 damage: 9 to Chief"
-        flow: "Silvara gains +1 (critical)"
+        momentum: "Silvara gains +1 (critical)"
     
     turn_3_defensive:
       marcus:
@@ -472,7 +472,7 @@ play_examples:
         total: 9
         result: "Partial success, +1 Guard until next turn"
         guard: "10 → 11 temporary"
-        flow: "+1 (attacked in Defensive stance)"
+        momentum: "+1 (attacked in Defensive stance)"
       
       elena:
         action: "Casts Heal on Marcus"
@@ -481,7 +481,7 @@ play_examples:
         total: 12
         result: "Full success, Marcus regains 2d6: 8 Guard"
         marcus_guard: "11 → 15 (full)"
-        flow: "Elena at 0 (Tier 1 spell costs 0)"
+        momentum: "Elena at 0 (Tier 1 spell costs 0)"
       
       goblin_archers:
         action: "Fire at Silvara"
@@ -505,14 +505,14 @@ play_examples:
         modifiers: "+1 Awareness, +1 Empathy"
         total: 13
         result: "Critical! Learn guard lost family to adventurers"
-        flow: "+1 (Defensive in social)"
+        momentum: "+1 (Defensive in social)"
     
     round_2:
       elena:
         stance: "Balanced"
         action: "I acknowledge his loss and explain we're here to help"
         roll: [3, 4]
-        modifiers: "+0 Presence, +0 Persuade, +1 Flow spent"
+        modifiers: "+0 Presence, +0 Persuade, +1 Momentum spent"
         total: 8
         result: "Partial success. He's listening but needs proof"
         composure: "Guard at 3/5"
@@ -523,37 +523,37 @@ play_examples:
         calling_benefit: "Universal Understanding - no roll needed"
         result: "Automatic success through calling"
         resolution: "Guard allows entry with escort"
-        flow: "+1 to all (Mediator resolved conflict)"
+        momentum: "+1 to all (Mediator resolved conflict)"
   
   spellcasting_example:
     scenario: "Aldric uses magic in combat"
     
     turn_1_setup:
       aldric:
-        flow: 1  # Scholar starts at +1
+        momentum: 1  # Scholar starts at +1
         stance: "Aggressive"
         action: "Cast Spark cantrip"
         roll: [4, 5]
         modifiers: "+3 Mind, +2 Sorcery"
         total: 14
         result: "Hit! 1d6: 4 damage"
-        flow: "+2 total (cantrip +1, Aggressive +1)"
+        momentum: "+2 total (cantrip +1, Aggressive +1)"
         new_flow: 3
     
     turn_2_buildup:
       aldric:
-        flow: 3
+        momentum: 3
         action: "Cast Bolt (Tier 1)"
         attribute_choice: "Mind for precision"
         effect: "3+d6 damage, ignores cover"
         roll: "Auto-hits behind cover"
         damage: "3+4 = 7"
-        flow_cost: 0
+        momentum_cost: 0
         new_flow: 3
     
     turn_3_nova:
       aldric:
-        flow: 3
+        momentum: 3
         action: "Signature Move: Arcane Tempest"
         cost: 2  # Reduced from 3
         effect: "3d6 to all enemies in zone"
@@ -572,9 +572,9 @@ rules_reference:
     "6_or_less": "Failure"
     "7_to_9": "Partial Success"
     "10_to_12": "Full Success"
-    "13_plus": "Critical Success (+1 Flow)"
+    "13_plus": "Critical Success (+1 Momentum)"
   
-  flow_quick:
+  momentum_quick:
     range: "-3 to +6"
     gain:
       - "Critical success: +1"
@@ -588,7 +588,7 @@ rules_reference:
   stance_summary:
     aggressive:
       order: "First"
-      bonus: "+1 damage, +1 Flow on hit"
+      bonus: "+1 damage, +1 Momentum on hit"
       penalty: "-1 defense"
     balanced:
       order: "Second"
@@ -596,7 +596,7 @@ rules_reference:
       special: "Free stance switch 1/combat"
     defensive:
       order: "Last"
-      bonus: "+2 defense, +1 Flow when attacked"
+      bonus: "+2 defense, +1 Momentum when attacked"
       penalty: "-1 damage"
   
   combat_actions:
@@ -607,11 +607,11 @@ rules_reference:
     move: "1 zone"
   
   spell_costs:
-    tier_0: "+1 Flow (generates)"
-    tier_1: "0 Flow"
-    tier_2: "-1 Flow"
-    tier_3: "-2 Flow"
-    tier_4: "-3 Flow"
+    tier_0: "+1 Momentum (generates)"
+    tier_1: "0 Momentum"
+    tier_2: "-1 Momentum"
+    tier_3: "-2 Momentum"
+    tier_4: "-3 Momentum"
 
 # ============================================
 # FIRST SESSION GUIDE
@@ -623,7 +623,7 @@ first_session:
       - "Read basic mechanics"
       - "Choose starting scenario"
       - "Print character sheets"
-      - "Prepare tokens for Flow"
+      - "Prepare tokens for Momentum"
     
     session_zero_topics:
       - "Tone and content boundaries"
@@ -652,7 +652,7 @@ first_session:
         stealth: "Sneak past wolf pack"
         survival: "Find safe path"
         combat: "Fight through"
-      flow_opportunity: "Build Flow for mine"
+      momentum_opportunity: "Build Momentum for mine"
     
     scene_3_mine_entrance:
       location: "Abandoned mine"
@@ -662,7 +662,7 @@ first_session:
           - "2 Goblin scouts (Defensive)"
           - "1 Goblin warrior (Aggressive)"
         environment: "Can use mine carts"
-        flow_use: "First combat techniques"
+        momentum_use: "First combat techniques"
     
     scene_4_confrontation:
       location: "Mine depths"
@@ -692,13 +692,13 @@ first_session:
     first_combat:
       - "Go slow, explain each step"
       - "Demonstrate stance benefits"
-      - "Show Flow generation"
+      - "Show Momentum generation"
       - "Allow takebacks for learning"
     
-    flow_management:
-      - "Remind players when they gain Flow"
-      - "Suggest Flow uses"
-      - "Show GM Flow pool"
+    momentum_management:
+      - "Remind players when they gain Momentum"
+      - "Suggest Momentum uses"
+      - "Show GM Momentum pool"
       - "Demonstrate complications"
     
     calling_integration:
@@ -709,14 +709,14 @@ first_session:
   
   common_mistakes:
     players:
-      - "Forgetting Flow gains"
+      - "Forgetting Momentum gains"
       - "Not using stance benefits"
-      - "Hoarding Flow too long"
+      - "Hoarding Momentum too long"
       - "Ignoring calling benefits"
     
     gm:
-      - "Forgetting Flow for damage"
-      - "Not using GM Flow pool"
+      - "Forgetting Momentum for damage"
+      - "Not using GM Momentum pool"
       - "Making single enemies too weak"
       - "Ignoring partial success"
   

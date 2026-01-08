@@ -1,7 +1,7 @@
-# Flow RPG Spell Grimoire Manifest
+# Autumn Phoenix RPG Spell Grimoire Manifest
 # Deep dive into the magic system with all spells and extensive examples
 
-title: "Flow RPG: The Grimoire"
+title: "Autumn Phoenix RPG: The Grimoire"
 version: "1.0 (Draft)"
 output_file: "publications/assembled/grimoire.md"
 
@@ -14,7 +14,7 @@ sections:
 
   # ===== INTRODUCTION =====
   - title: "Introduction: The Art of Magic"
-    intro: "Magic in Flow RPG is revolutionary. This grimoire explores the complete spell system in depth."
+    intro: "Magic in Autumn Phoenix RPG is revolutionary. This grimoire explores the complete spell system in depth."
     content:
       - file: "spells/00_introduction.md"
 

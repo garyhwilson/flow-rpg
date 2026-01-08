@@ -4,7 +4,7 @@ Generates spell documentation from YAML magic data with professional TTRPG prose
 #}
 # Spells
 
-Magic in Flow RPG adapts to the caster. The same spell produces different effects depending on whether you cast it through intellect, instinct, determination, or force of personality. This flexibility means every spellcaster develops their own unique style.
+Magic in Autumn Phoenix RPG adapts to the caster. The same spell produces different effects depending on whether you cast it through intellect, instinct, determination, or force of personality. This flexibility means every spellcaster develops their own unique style.
 
 ## Casting Spells
 
@@ -21,7 +21,7 @@ You weave magic through pure intellect, achieving surgical control. Your spells 
 You channel magic through intuition and perception, sensing weaknesses and vulnerabilities. Your spells hit harder and exploit what others miss.
 
 **Will + Sorcery - Unyielding Determination**
-You impose your will on reality through sheer force of determination. You can cast even at negative Flow, and your magic persists through resistance.
+You impose your will on reality through sheer force of determination. You can cast even at negative Momentum, and your magic persists through resistance.
 
 **Presence + Sorcery - Commanding Reality**
 You reshape the world through personality and conviction. Your magic affects minds and emotions, creating effects that transcend mere physics.
@@ -35,8 +35,8 @@ Most spellcasters favor one approach but use all four when circumstances demand 
 
 # {{ tier_name.replace('_', ' ').replace('tier ', 'Tier ').replace('0', 'Zero (Cantrips)') }}
 
-{% if tier_data.get('flow_cost') %}
-**Flow Cost:** {{ tier_data.flow_cost }}
+{% if tier_data.get('momentum_cost') %}
+**Momentum Cost:** {{ tier_data.momentum_cost }}
 {% endif %}
 
 {% if tier_data.get('description') %}
@@ -59,7 +59,7 @@ Most spellcasters favor one approach but use all four when circumstances demand 
 ---
 
 {% for spell_id, spell_data in tier_data.items() %}
-{% if spell_data is mapping and spell_id not in ['flow_cost', 'description', 'power_level', 'examples', 'strategic_use'] %}
+{% if spell_data is mapping and spell_id not in ['momentum_cost', 'description', 'power_level', 'examples', 'strategic_use'] %}
 
 ## {{ spell_data.name }}
 
@@ -69,8 +69,8 @@ Most spellcasters favor one approach but use all four when circumstances demand 
 {{ spell_data.base_effect }}
 {% endif %}
 
-{% if spell_data.flow %}
-**Flow Cost:** {{ spell_data.flow }}
+{% if spell_data.momentum %}
+**Momentum Cost:** {{ spell_data.momentum }}
 {% endif %}
 {% if spell_data.range %}
 **Range:** {{ spell_data.range }}
@@ -181,7 +181,7 @@ Different spellcasters will build different repertoires based on their attribute
 
 ### Essential Cantrips
 
-**Spark** - Combat Flow generation. Cast this in Aggressive stance to build Flow rapidly.
+**Spark** - Combat Momentum generation. Cast this in Aggressive stance to build Momentum rapidly.
 
 **Mage Armor** - Survivability foundation. Most spellcasters want this active.
 
@@ -191,7 +191,7 @@ Different spellcasters will build different repertoires based on their attribute
 
 ### Core Spell Toolkit
 
-**Bolt** - Reliable ranged damage at 0 Flow cost. Your bread-and-butter attack.
+**Bolt** - Reliable ranged damage at 0 Momentum cost. Your bread-and-butter attack.
 
 **Shield** - Emergency protection. Saves lives when you need it.
 
@@ -215,28 +215,28 @@ Choose advanced and master spells based on:
 - Campaign needs (urban vs wilderness vs dungeon)
 - Party composition (what gaps need filling)
 - Your preferred magical tradition (Mind/Awareness/Will/Presence)
-- Flow economy planning (can you afford expensive spells)
+- Momentum economy planning (can you afford expensive spells)
 
 ---
 
 ## Playing a Spellcaster
 
-### Managing Your Flow Economy
+### Managing Your Momentum Economy
 
 Spellcasters move through predictable phases in combat:
 
 **Building Phase (Rounds 1-2)**
-Cast Spark repeatedly in Aggressive stance. Each hit generates +2 Flow (Aggressive stance bonus +1, spell hit +1). You're building toward +3 or +4 Flow while contributing damage.
+Cast Spark repeatedly in Aggressive stance. Each hit generates +2 Momentum (Aggressive stance bonus +1, spell hit +1). You're building toward +3 or +4 Momentum while contributing damage.
 
 Maintain Mage Armor for defense. It costs nothing after initial cast and significantly improves your survivability.
 
 **Power Phase (Rounds 3-4)**
-Cast your advanced spells (typically -1 Flow). If they deal damage and you're in Aggressive stance, you recover +1 Flow immediately.
+Cast your advanced spells (typically -1 Momentum). If they deal damage and you're in Aggressive stance, you recover +1 Momentum immediately.
 
-Use expert spells (-2 Flow typically) for decisive moments. These should feel like big moves, not routine actions.
+Use expert spells (-2 Momentum typically) for decisive moments. These should feel like big moves, not routine actions.
 
 **Recovery Phase (If Needed)**
-Return to cantrips to rebuild Flow if the fight continues. Switch to Defensive stance if you're taking attention.
+Return to cantrips to rebuild Momentum if the fight continues. Switch to Defensive stance if you're taking attention.
 
 The cycle repeats. Good spellcasters know when to conserve and when to unload.
 
@@ -246,7 +246,7 @@ Don't always use your highest attribute. Consider:
 
 **Use Mind When:**
 - You need precision (avoiding allies in area effects)
-- Efficiency matters (maximize healing per Flow)
+- Efficiency matters (maximize healing per Momentum)
 - You want technical control over raw power
 
 **Use Awareness When:**
@@ -255,7 +255,7 @@ Don't always use your highest attribute. Consider:
 - Raw power trumps precision
 
 **Use Will When:**
-- You're at negative Flow but must cast anyway
+- You're at negative Momentum but must cast anyway
 - You need persistence or duration
 - Determination matters more than finesse
 
@@ -284,9 +284,9 @@ Don't penalize players for suboptimal choices. If someone wants to cast through 
 
 **Attribute Flexibility:** Avoid treating all spells as Mind-based. That's how other games work—this system is deliberately different.
 
-**Will's Negative Flow Casting:** This is powerful and intentional. Will casters sacrifice other benefits to cast when desperate.
+**Will's Negative Momentum Casting:** This is powerful and intentional. Will casters sacrifice other benefits to cast when desperate.
 
-**Cantrip Economy:** Players sometimes undervalue cantrips. Remind them that Spark generates Flow in combat.
+**Cantrip Economy:** Players sometimes undervalue cantrips. Remind them that Spark generates Momentum in combat.
 
 ### Balancing the Four Traditions
 
@@ -294,7 +294,7 @@ All four attribute approaches should feel viable. Design encounters that reward 
 
 - Tight quarters favor Mind (precision with allies nearby)
 - Dangerous enemies favor Awareness (maximize damage quickly)
-- Resource-depleted scenarios favor Will (cast at negative Flow)
+- Resource-depleted scenarios favor Will (cast at negative Momentum)
 - Social conflicts favor Presence (affect minds and morale)
 
 When all four traditions have moments to shine, magic feels truly flexible.

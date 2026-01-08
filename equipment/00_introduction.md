@@ -1,11 +1,12 @@
 # Equipment
-*Tools, Weapons, Armor, and Gear for Adventure*
+
+_Tools, Weapons, Armor, and Gear for Adventure_
 
 ## Introduction
 
-In the Flow RPG system, equipment represents more than mere statistical bonuses—it embodies practical tools through which characters interact with their world, express their identity, and overcome challenges. This compendium provides comprehensive information on the various items available to adventurers, from basic necessities to specialized implements reflecting unique cultural traditions and professional expertise.
+In the Autumn Phoenix RPG system, equipment represents more than mere statistical bonuses—it embodies practical tools through which characters interact with their world, express their identity, and overcome challenges. This compendium provides comprehensive information on the various items available to adventurers, from basic necessities to specialized implements reflecting unique cultural traditions and professional expertise.
 
-Equipment in Flow is designed to offer meaningful choices rather than simple numerical progression. Each item presents distinctive advantages, limitations, and contextual benefits that support different approaches to problem-solving rather than establishing a clear "best option" applicable to all situations.
+Equipment in Momentum is designed to offer meaningful choices rather than simple numerical progression. Each item presents distinctive advantages, limitations, and contextual benefits that support different approaches to problem-solving rather than establishing a clear "best option" applicable to all situations.
 
 ## Equipment Categories
 
@@ -17,7 +18,7 @@ The equipment system encompasses several major categories, each serving differen
 - **Specialized Equipment** encompasses items particular to specific archetypes, professions, or activities
 - **Cultural Items** represent unique implements developed by different species and regional traditions
 
-These categories interact with Flow RPG's core systems in distinctive ways, creating meaningful equipment choices that reflect both practical considerations and character identity rather than merely optimizing numerical advantages.
+These categories interact with Autumn Phoenix RPG's core systems in distinctive ways, creating meaningful equipment choices that reflect both practical considerations and character identity rather than merely optimizing numerical advantages.
 
 ## Using This Compendium
 
@@ -35,7 +36,7 @@ Each equipment section follows a consistent structure designed to provide both m
 
 ## Design Philosophy
 
-The equipment system in Flow RPG was designed with several key principles in mind:
+The equipment system in Autumn Phoenix RPG was designed with several key principles in mind:
 
 **Meaningful Choices over Statistical Progression**  
 Equipment options present legitimate alternatives rather than clear hierarchical progression. A dagger isn't simply an inferior sword but a different tool with distinct advantages in certain situations. This approach encourages thoughtful equipment selection based on anticipated challenges rather than automatic adoption of numerically superior options.
@@ -47,33 +48,33 @@ Items perform differently depending on circumstances rather than providing const
 Equipment serves both functional and expressive purposes, allowing characters to demonstrate cultural background, personal values, and professional identity through their gear choices. These narrative dimensions enhance mechanical functions without compromising practical effectiveness.
 
 **Integration with Core Systems**  
-Equipment interacts meaningfully with Flow's stance system, skill mechanics, and resource management rather than functioning as an isolated subsystem. This integration ensures that equipment selection influences and is influenced by other character decisions, creating cohesive gameplay experience.
+Equipment interacts meaningfully with Momentum's stance system, skill mechanics, and resource management rather than functioning as an isolated subsystem. This integration ensures that equipment selection influences and is influenced by other character decisions, creating cohesive gameplay experience.
 
-These principles create an equipment system that enhances tactical depth, supports character expression, and integrates seamlessly with Flow's other mechanics, making gear selection an engaging aspect of character development rather than a simple optimization exercise.
+These principles create an equipment system that enhances tactical depth, supports character expression, and integrates seamlessly with Momentum's other mechanics, making gear selection an engaging aspect of character development rather than a simple optimization exercise.
 
-## Equipment and Flow
+## Equipment and Momentum
 
-The Flow resource interacts with equipment in several important ways:
+The Momentum resource interacts with equipment in several important ways:
 
-**Generating Flow through Equipment Mastery**  
-Characters can generate Flow by effectively utilizing equipment appropriate to specific situations. Using the right tool for the right job—whether the perfect weapon against a particular enemy or the ideal climbing gear for a specific terrain—can generate Flow through demonstrated mastery and appropriate preparation.
+**Generating Momentum through Equipment Mastery**  
+Characters can generate Momentum by effectively utilizing equipment appropriate to specific situations. Using the right tool for the right job—whether the perfect weapon against a particular enemy or the ideal climbing gear for a specific terrain—can generate Momentum through demonstrated mastery and appropriate preparation.
 
-**Equipment-Based Flow Techniques**  
-Many weapons and specialized tools enable specific Flow techniques that provide distinctive tactical options. These range from combat maneuvers only possible with certain weapons to specialized applications of tools that create unique advantages when properly employed.
+**Equipment-Based Momentum Techniques**  
+Many weapons and specialized tools enable specific Momentum techniques that provide distinctive tactical options. These range from combat maneuvers only possible with certain weapons to specialized applications of tools that create unique advantages when properly employed.
 
-**Flow-Enhanced Equipment Usage**  
-Characters can spend Flow to temporarily enhance equipment effectiveness beyond normal parameters. This might involve maintaining a broken tool through sheer determination, coaxing extraordinary performance from ordinary weapons, or improvising equipment functions beyond their intended purpose through creative application.
+**Momentum-Enhanced Equipment Usage**  
+Characters can spend Momentum to temporarily enhance equipment effectiveness beyond normal parameters. This might involve maintaining a broken tool through sheer determination, coaxing extraordinary performance from ordinary weapons, or improvising equipment functions beyond their intended purpose through creative application.
 
-**Flow and Equipment Limitations**  
-Some equipment imposes Flow limitations as part of their mechanical balance. Heavy armor restricts certain Flow-generating actions, elaborate spellcasting implements might require Flow expenditure for proper setup, and particularly cumbersome equipment could impose Flow costs for extended use.
+**Momentum and Equipment Limitations**  
+Some equipment imposes Momentum limitations as part of their mechanical balance. Heavy armor restricts certain Momentum-generating actions, elaborate spellcasting implements might require Momentum expenditure for proper setup, and particularly cumbersome equipment could impose Momentum costs for extended use.
 
-This dynamic relationship between Flow and equipment creates systems where gear choice influences resource management strategy, allowing meaningful differentiation between seemingly similar equipment options based on how they interact with the game's central resource economy.
+This dynamic relationship between Momentum and equipment creates systems where gear choice influences resource management strategy, allowing meaningful differentiation between seemingly similar equipment options based on how they interact with the game's central resource economy.
 
 ## The Fundamentals of Equipment
 
 ### Quality and Craftsmanship
 
-Equipment in Flow comes in various quality levels affecting both functionality and durability:
+Equipment in Momentum comes in various quality levels affecting both functionality and durability:
 
 **Standard Quality** represents professionally crafted items meeting normal expectations for functionality and durability. These items serve their intended purpose reliably under expected conditions without notable advantages or disadvantages.
 
@@ -101,13 +102,13 @@ Material selection creates equipment differentiation through practical propertie
 
 ### Encumbrance and Practical Limitations
 
-Rather than tracking precise weight measurements, Flow RPG uses a simplified encumbrance system focusing on practical limitations:
+Rather than tracking precise weight measurements, Autumn Phoenix RPG uses a simplified encumbrance system focusing on practical limitations:
 
 **Carrying Capacity** is determined by a character's Might attribute and size, establishing how many significant items they can carry before experiencing penalties. Most characters can carry a number of significant items equal to 8 + their Might modifier without hindrance.
 
 **Significant Items** include weapons, armor, substantial tools, and other equipment large or heavy enough to require deliberate allocation of carrying capacity. Small or lightweight items like rations, writing implements, or component pouches don't count individually but are tracked as collections occupying a single slot.
 
-**Encumbrance Penalties** apply when characters exceed their comfortable carrying capacity. These include reduced movement, disadvantage on physical checks requiring mobility, and inability to generate Flow through movement-based actions. Characters cannot carry more than double their comfortable capacity under any circumstances.
+**Encumbrance Penalties** apply when characters exceed their comfortable carrying capacity. These include reduced movement, disadvantage on physical checks requiring mobility, and inability to generate Momentum through movement-based actions. Characters cannot carry more than double their comfortable capacity under any circumstances.
 
 **Practical Accessibility** considers not just whether items can be carried but how readily they can be accessed during stressful situations. Equipment in backpacks or containers requires actions to retrieve, while items properly stowed in accessible pouches, sheaths, or harnesses can be drawn as part of other actions.
 
@@ -115,7 +116,7 @@ This system emphasizes practical considerations over mathematical accounting, en
 
 ## Equipment in Character Development
 
-Equipment selection represents a significant aspect of character development in Flow RPG, reflecting growth and evolution through concrete physical tools:
+Equipment selection represents a significant aspect of character development in Autumn Phoenix RPG, reflecting growth and evolution through concrete physical tools:
 
 **Starting Equipment** typically reflects background, initial training, and basic professional needs. These items represent the foundation of a character's problem-solving approach and establish their baseline capabilities.
 

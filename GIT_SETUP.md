@@ -1,12 +1,13 @@
-# Git & GitHub Setup Guide for Flow RPG
+# Git & GitHub Setup Guide for Autumn Phoenix RPG
 
-This document provides step-by-step instructions for initializing Git, creating a GitHub repository, and pushing your Flow RPG project.
+This document provides step-by-step instructions for initializing Git, creating a GitHub repository, and pushing your Autumn Phoenix RPG project.
 
 ---
 
 ## Prerequisites
 
 1. **Git installed** - Check with: `git --version`
+
    - If not installed: https://git-scm.com/downloads
 
 2. **GitHub account** - Create at https://github.com if needed
@@ -31,6 +32,7 @@ git config --global init.defaultBranch main
 ```
 
 Verify configuration:
+
 ```bash
 git config --list
 ```
@@ -42,7 +44,7 @@ git config --list
 Navigate to your project directory:
 
 ```bash
-cd "/Users/garywilson/Downloads/Flow RPG/drafts"
+cd "/Users/garywilson/Downloads/Autumn Phoenix RPG/drafts"
 ```
 
 Initialize Git:
@@ -79,7 +81,7 @@ You should see files in green under "Changes to be committed".
 Create your first commit:
 
 ```bash
-git commit -m "Initial commit: Complete Flow RPG modular system with publication infrastructure
+git commit -m "Initial commit: Complete Autumn Phoenix RPG modular system with publication infrastructure
 
 - Complete core rules (modularized)
 - All 10 callings documented
@@ -109,8 +111,8 @@ You should see your commit with timestamp and message.
 1. Go to https://github.com
 2. Click the **+** icon (top right) → **New repository**
 3. Fill in details:
-   - **Repository name:** `flow-rpg` (or your preferred name)
-   - **Description:** "A narrative-driven TTRPG with flexible casting and unified Flow economy"
+   - **Repository name:** `momentum-rpg` (or your preferred name)
+   - **Description:** "A narrative-driven TTRPG with flexible casting and unified Momentum economy"
    - **Visibility:**
      - **Private:** Keep it private during development (recommended initially)
      - **Public:** Make it public to share with community
@@ -123,32 +125,33 @@ GitHub will show you setup instructions - **ignore them** and continue below.
 
 ```bash
 # Create private repo
-gh repo create flow-rpg --private --source=. --remote=origin
+gh repo create momentum-rpg --private --source=. --remote=origin
 
 # Or create public repo
-gh repo create flow-rpg --public --source=. --remote=origin
+gh repo create momentum-rpg --public --source=. --remote=origin
 ```
 
 ---
 
 ## Step 5: Connect Local Repository to GitHub
 
-Copy the repository URL from GitHub (looks like: `https://github.com/username/flow-rpg.git`)
+Copy the repository URL from GitHub (looks like: `https://github.com/username/momentum-rpg.git`)
 
 Add GitHub as remote:
 
 ```bash
 # Replace [username] with your GitHub username
-git remote add origin https://github.com/[username]/flow-rpg.git
+git remote add origin https://github.com/[username]/momentum-rpg.git
 
 # Verify remote was added
 git remote -v
 ```
 
 You should see:
+
 ```
-origin  https://github.com/[username]/flow-rpg.git (fetch)
-origin  https://github.com/[username]/flow-rpg.git (push)
+origin  https://github.com/[username]/momentum-rpg.git (fetch)
+origin  https://github.com/[username]/momentum-rpg.git (push)
 ```
 
 ---
@@ -163,6 +166,7 @@ git push -u origin main
 ```
 
 You may be prompted for GitHub credentials:
+
 - **Username:** Your GitHub username
 - **Password:** Use a Personal Access Token (not your account password)
   - Create token at: https://github.com/settings/tokens
@@ -170,7 +174,8 @@ You may be prompted for GitHub credentials:
   - Save the token securely - you won't see it again!
 
 After successful push, verify on GitHub:
-1. Go to https://github.com/[username]/flow-rpg
+
+1. Go to https://github.com/[username]/momentum-rpg
 2. You should see all your files!
 
 ---
@@ -194,6 +199,7 @@ git branch
 ```
 
 Visit your GitHub repository page - you should see:
+
 - ✅ README.md displayed on front page
 - ✅ All your directories (drafts/, publications/, scripts/)
 - ✅ LICENSE.md and CONTRIBUTING.md
@@ -206,12 +212,14 @@ Visit your GitHub repository page - you should see:
 After setup, your daily workflow becomes:
 
 ### Make Changes
+
 ```bash
 # Edit files (working with Claude)
 # Claude creates/edits files as you work together
 ```
 
 ### Review Changes
+
 ```bash
 # See what changed
 git status
@@ -224,6 +232,7 @@ git diff path/to/file.md
 ```
 
 ### Commit Changes
+
 ```bash
 # Add specific files
 git add drafts/spells/spell_tiers/cantrips.md
@@ -240,6 +249,7 @@ git commit -m "Add frost-themed cantrips
 ```
 
 ### Push to GitHub
+
 ```bash
 # Push to GitHub
 git push
@@ -253,6 +263,7 @@ git push origin main
 ## Useful Git Commands
 
 ### Viewing History
+
 ```bash
 # See commit history
 git log
@@ -268,6 +279,7 @@ git show [commit-hash]
 ```
 
 ### Undoing Changes
+
 ```bash
 # Discard changes to a file (careful!)
 git checkout -- path/to/file.md
@@ -280,6 +292,7 @@ git commit --amend -m "New commit message"
 ```
 
 ### Checking Status
+
 ```bash
 # Current status
 git status
@@ -338,7 +351,7 @@ Reducing to -1 maintains flavor while preserving competitiveness."
 git commit -m "Rebalance defensive spells
 
 - Increase Mage Armor absorption from 2 to 3
-- Reduce Shield cost from -1 to 0 Flow
+- Reduce Shield cost from -1 to 0 Momentum
 - Update quick reference tables"
 ```
 
@@ -359,21 +372,25 @@ git commit -m "Updated the spell system to fix several balance issues that came 
 ## Troubleshooting
 
 ### "Repository not found"
+
 - Check remote URL: `git remote -v`
 - Verify repository exists on GitHub
 - Check spelling of username/repo name
 
 ### "Permission denied"
+
 - Generate Personal Access Token on GitHub
 - Use token as password (not account password)
 - Or set up SSH keys: https://docs.github.com/en/authentication
 
 ### "Merge conflict"
+
 - Usually won't happen if working alone
 - If it does: edit files to resolve conflicts
 - Then: `git add .` and `git commit`
 
 ### "Diverged branches"
+
 ```bash
 # Pull changes from GitHub first
 git pull origin main
@@ -387,7 +404,9 @@ git push origin main
 ## GitHub Features to Use
 
 ### Issues
+
 Track bugs, features, design questions:
+
 ```
 Title: Balance - Guard scaling too high
 Labels: balance, design-question
@@ -395,19 +414,25 @@ Description: [Your detailed description]
 ```
 
 ### Projects
+
 Organize development:
+
 - Create Kanban board
 - Track progress
 - Organize tasks
 
 ### Releases
+
 Mark milestones:
+
 - v0.1.0 - Alpha Playtest
 - v0.2.0 - Beta Playtest
 - v1.0.0 - First Complete Draft
 
 ### Discussions
+
 Community Q&A:
+
 - Ask questions
 - Share ideas
 - Get feedback
@@ -417,20 +442,24 @@ Community Q&A:
 ## Next Steps After Setup
 
 1. **Verify GitHub page looks good**
+
    - README displays correctly
    - Files are organized properly
 
 2. **Set repository settings**
+
    - Add description
    - Add topics/tags (ttrpg, rpg, tabletop, game-design)
    - Configure Issues/Projects if using
 
 3. **Start using Issues**
+
    - Create issues for design questions
    - Track playtesting feedback
    - Organize TODOs
 
 4. **Continue development**
+
    - Work with Claude locally
    - Commit regularly
    - Push to GitHub for backup
@@ -473,4 +502,4 @@ git reset HEAD file    # Unstage file
 
 **You're ready to go! Start with Step 1 and work through in order.**
 
-*Questions? Check the troubleshooting section or ask Claude for help with specific Git commands.*
+_Questions? Check the troubleshooting section or ask Claude for help with specific Git commands._

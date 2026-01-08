@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Flow RPG Book Assembly Script
+Autumn Phoenix RPG Book Assembly Script
 
 Assembles publication-ready markdown documents from modular source files
 based on YAML manifest definitions.

@@ -4,7 +4,7 @@ Generates armor documentation with professional TTRPG prose
 #}
 # Armor and Protection
 
-How you protect yourself shapes everything about how you fight. Armor isn't just about reducing damage—it's a fundamental tactical choice that affects your mobility, your spellcasting, your Flow generation, and your entire approach to combat.
+How you protect yourself shapes everything about how you fight. Armor isn't just about reducing damage—it's a fundamental tactical choice that affects your mobility, your spellcasting, your Momentum generation, and your entire approach to combat.
 
 The heavily armored paladin standing immovable on the front line and the unarmored monk flowing around attacks represent opposite ends of the protection spectrum. Both work mechanically. Neither is universally better. The question isn't "which armor is best" but "which armor suits how I want to play."
 
@@ -37,13 +37,13 @@ This penalty applies to Athletics, Stealth, Finesse, and any other action using 
 Armor interferes with the precise movements and gestures required for spellcasting. This penalty applies to all spell casting rolls.
 {% endif %}
 
-{% if armor_data.penalties.flow and armor_data.penalties.flow != "None" %}
-**Flow Generation Impact:** {{ armor_data.penalties.flow }}
+{% if armor_data.penalties.momentum and armor_data.penalties.momentum != "None" %}
+**Momentum Generation Impact:** {{ armor_data.penalties.momentum }}
 
-The weight and restriction of heavy armor affects your ability to generate and maintain Flow during combat.
+The weight and restriction of heavy armor affects your ability to generate and maintain Momentum during combat.
 {% endif %}
 
-{% if armor_data.penalties.grace == 0 and (not armor_data.penalties.flow or armor_data.penalties.flow == "None") %}
+{% if armor_data.penalties.grace == 0 and (not armor_data.penalties.momentum or armor_data.penalties.momentum == "None") %}
 **No Penalties**
 
 This armor category doesn't impose mechanical penalties{% if armor_id == "no_armor" %}, though you also gain no damage reduction from it{% endif %}.
@@ -85,13 +85,13 @@ DR {{ example_data.dr }}{% if example_data.special %}, {{ example_data.special }
 
 Armor represents a spectrum from complete freedom of movement to maximum physical protection:
 
-**No Armor** provides zero damage reduction but maximizes your capabilities in every other area. You move fastest, cast spells most effectively, and generate Flow most efficiently. Your defense comes from Guard (your active defense skill), positioning, and not getting hit in the first place. This suits characters who can avoid attacks or who have alternative protection (Mage Armor cantrip, high Grace, Defensive stance bonuses).
+**No Armor** provides zero damage reduction but maximizes your capabilities in every other area. You move fastest, cast spells most effectively, and generate Momentum most efficiently. Your defense comes from Guard (your active defense skill), positioning, and not getting hit in the first place. This suits characters who can avoid attacks or who have alternative protection (Mage Armor cantrip, high Grace, Defensive stance bonuses).
 
 **Light Armor** provides modest damage reduction (DR 1) without penalizing your capabilities. You sacrifice one point of protection for maintained agility and spellcasting. This balanced option suits characters who want some insurance against hits while preserving mobility—rangers who need to move quickly, rogues who need to climb and sneak, spellcasters who cast frequently enough that even -1 Sorcery matters.
 
 **Medium Armor** offers solid protection (DR 2) for manageable penalties. The -1 Grace affects athletic maneuvers and sneaking, making you slightly less agile. The -1 Sorcery makes spellcasting slightly harder. This middle ground suits characters who face danger regularly but need to maintain some versatility—fighters who want protection without giving up all mobility, clerics who balance martial and magical actions.
 
-**Heavy Armor** maximizes physical protection (DR 4) at the cost of significant penalties. You become substantially harder to hurt but less agile (-2 Grace), less effective at spellcasting (-3 Sorcery), and slower to generate Flow (-1 to all Flow generation). This extreme suits characters committed to standing their ground and absorbing attacks—paladins who protect allies by being too tough to ignore, defenders whose job is surviving focused enemy attention.
+**Heavy Armor** maximizes physical protection (DR 4) at the cost of significant penalties. You become substantially harder to hurt but less agile (-2 Grace), less effective at spellcasting (-3 Sorcery), and slower to generate Momentum (-1 to all Momentum generation). This extreme suits characters committed to standing their ground and absorbing attacks—paladins who protect allies by being too tough to ignore, defenders whose job is surviving focused enemy attention.
 
 ### Armor and Your Role
 
@@ -108,9 +108,9 @@ Armor represents a spectrum from complete freedom of movement to maximum physica
 Your armor choice interacts significantly with combat stances:
 
 **Aggressive Stance:**
-- No/Light Armor: Act first with full mobility, generate Flow through successful attacks
-- Medium Armor: Balanced approach, modest Flow generation
-- Heavy Armor: Slower Flow generation but devastating when hits connect
+- No/Light Armor: Act first with full mobility, generate Momentum through successful attacks
+- Medium Armor: Balanced approach, modest Momentum generation
+- Heavy Armor: Slower Momentum generation but devastating when hits connect
 
 **Balanced Stance:**
 - No/Light Armor: Maximum flexibility, easy stance switching
@@ -186,7 +186,7 @@ Remember that DR reduces **all** incoming damage, making heavily armored charact
 
 **Don't forget:**
 - Armor penalties apply constantly, not just in combat
-- Heavy armor's Flow penalty affects all Flow generation triggers
+- Heavy armor's Momentum penalty affects all Momentum generation triggers
 - Grace penalties impact Athletics, Stealth, and Finesse
 - Spellcasting penalties apply to every spell cast
 - No-armor bonuses only apply when truly unarmored (shields don't count as armor)

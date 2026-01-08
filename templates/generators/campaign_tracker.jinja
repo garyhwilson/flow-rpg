@@ -12,7 +12,7 @@ Good campaign tracking answers three critical questions: Where have we been? Whe
 
 ## Milestone Tracking
 
-The most critical tracking: character advancement. Flow RPG uses milestone advancement rather than experience points—characters advance when they accomplish significant story beats. Track these systematically to ensure consistent progression:
+The most critical tracking: character advancement. Autumn Phoenix RPG uses milestone advancement rather than experience points—characters advance when they accomplish significant story beats. Track these systematically to ensure consistent progression:
 
 ### Milestone Types and Timing
 
@@ -190,10 +190,10 @@ Maintain pacing by structuring sessions consistently:
 
 {% else %}
 
-**Opening:** Recap, intentions, Flow check, scene setting
+**Opening:** Recap, intentions, Momentum check, scene setting
 **Rising Action:** 2-3 encounters, building tension, complications
 **Climax:** Major challenge, peak resources, decisive moment
-**Resolution:** Consequences, rewards, hooks, Flow reset
+**Resolution:** Consequences, rewards, hooks, Momentum reset
 
 {% endif %}
 
@@ -208,7 +208,7 @@ Different campaign styles require different tracking approaches:
 ### {{ type_id.replace('_', ' ').title() }}
 
 **Description:** {{ campaign_type.description if campaign_type.description else "Campaign focusing on different storytelling approach" }}
-{% if campaign_type.flow_reset %}**Flow Reset:** {{ campaign_type.flow_reset }}{% endif %}
+{% if campaign_type.momentum_reset %}**Momentum Reset:** {{ campaign_type.momentum_reset }}{% endif %}
 {% if campaign_type.advancement %}**Advancement:** {{ campaign_type.advancement }}{% endif %}
 {% if campaign_type.benefits %}**Benefits:** {{ campaign_type.benefits }}{% endif %}
 
@@ -253,10 +253,10 @@ Different campaign styles require different tracking approaches:
 {% endif %}
 {% endif %}
 
-{% if campaign_management.pacing_tools.flow_pacing %}
-### Flow Pacing Across Session
+{% if campaign_management.pacing_tools.momentum_pacing %}
+### Momentum Pacing Across Session
 
-{% for phase, description in campaign_management.pacing_tools.flow_pacing.items() %}
+{% for phase, description in campaign_management.pacing_tools.momentum_pacing.items() %}
 **{{ phase.replace('_', ' ').title() }}:** {{ description }}
 {% endfor %}
 {% endif %}
@@ -266,7 +266,7 @@ Different campaign styles require different tracking approaches:
 **Build Tension:** Add time pressure, reveal stakes gradually, increase hazards
 **Release Tension:** Comic relief, safe havens, minor victories, resource discovery
 
-**Flow Pacing:** Slow start → midpoint spike → climax (max Flow) → denouement
+**Momentum Pacing:** Slow start → midpoint spike → climax (max Momentum) → denouement
 
 {% endif %}
 
@@ -307,7 +307,7 @@ Use this format for session-by-session tracking:
 ## Campaign Conclusion Tracking
 
 {% if sweet_spot_edition and sweet_spot_edition.campaign_parameters %}
-Flow RPG campaigns naturally conclude after 8-12 sessions when characters reach peak power. Track toward this conclusion:
+Autumn Phoenix RPG campaigns naturally conclude after 8-12 sessions when characters reach peak power. Track toward this conclusion:
 
 **Campaign Length:** {{ sweet_spot_edition.campaign_parameters.ideal_length if sweet_spot_edition.campaign_parameters.ideal_length else "8-12 sessions" }}
 **Current Session:** ___

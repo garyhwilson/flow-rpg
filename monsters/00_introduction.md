@@ -4,7 +4,7 @@
 
 This chapter presents adversaries differently than you might expect. Instead of stat blocks organized by power level or combat role, you'll find named characters with motivations, personalities, and reasons to oppose your players.
 
-Every adversary in Flow RPG should be a character first and a set of statistics second.
+Every adversary in Autumn Phoenix RPG should be a character first and a set of statistics second.
 
 ## The Core Principle
 
@@ -24,6 +24,7 @@ A bandit named Mal who robs travelers because he owes money to a dangerous credi
 The [bestiary.md](bestiary.md) contains example adversaries - named characters with personalities, motivations, and statistics. These are meant as inspiration, not a catalog to fill encounter slots from.
 
 When you need opposition for your game:
+
 1. Find an adversary that fits your story
 2. Adapt their motivation to your situation
 3. Adjust statistics if needed (guidance follows)
@@ -44,15 +45,19 @@ Guard represents how hard someone is to hurt - armor, toughness, defensive skill
 Here are typical ranges to help you assign appropriate values:
 
 **Inexperienced or fragile opponents** - new recruits, wild animals, desperate civilians
+
 - Guard 8-14, Vitality 8-14
 
 **Trained combatants** - professional soldiers, dangerous predators, skilled criminals
+
 - Guard 14-20, Vitality 14-24
 
 **Veterans and magical creatures** - experienced warriors, young dragons, vampire spawn
+
 - Guard 20-32, Vitality 24-40
 
 **Legendary threats** - ancient dragons, demon lords, archmages
+
 - Guard 35-60, Vitality 40-70
 
 These are starting points, not formulas. If your story needs a grizzled veteran city guard who's tougher than most knights, give him Guard 28. If it needs a young dragon who's sickly and weak, drop the numbers. The story dictates the stats, not vice versa.
@@ -65,15 +70,15 @@ Creatures attack and defend using the same 2d6 + modifier system as player chara
 - Trained combatants: +2 to +3
 - Experts and dangerous creatures: +4 to +5
 
-### Flow
+### Momentum
 
-Adversaries can use Flow just like player characters. Consider:
+Adversaries can use Momentum just like player characters. Consider:
 
-- Most minor opponents start with 0-2 Flow
-- Skilled adversaries might start with 3-4 Flow
-- Major villains might start with 5-6 Flow
+- Most minor opponents start with 0-2 Momentum
+- Skilled adversaries might start with 3-4 Momentum
+- Major villains might start with 5-6 Momentum
 
-Intelligent adversaries should spend Flow on abilities tactically, just like players do.
+Intelligent adversaries should spend Momentum on abilities tactically, just like players do.
 
 ---
 
@@ -88,6 +93,7 @@ Two adversaries with identical statistics can feel completely different:
 **Grakka Blood-Axe** howls battle cries and charges the biggest threat, fighting for glory above all. She'll accept surrender only if impressed by the party's prowess - and might recruit them instead.
 
 Give each significant adversary:
+
 - A fighting style that reflects their personality
 - Conditions under which they'd stop fighting
 - A tactical preference (cautious, aggressive, protective of allies, self-preserving)
@@ -95,11 +101,13 @@ Give each significant adversary:
 ### Retreat and Surrender
 
 Not every fight ends in death. Intelligent adversaries should:
+
 - Flee when clearly losing (unless motivated otherwise)
 - Surrender when defeat is certain (if they believe mercy possible)
 - Use tactical retreats to regroup
 
 This creates:
+
 - Recurring villains
 - Opportunities for negotiation
 - Information for players
@@ -108,6 +116,7 @@ This creates:
 ### Environmental Storytelling
 
 Combat happens in places, not on blank maps. Consider:
+
 - **Terrain that matters** - high ground, cover, obstacles, hazards
 - **Interactive elements** - chandeliers to drop, tables to overturn, doors to bar
 - **Time pressure** - the building is on fire, reinforcements are coming, the ritual is nearly complete
@@ -121,6 +130,7 @@ Some adversaries - ancient dragons, demon lords, legendary archmages - are beyon
 ### Multiple Actions
 
 Very powerful creatures might act more than once per round. A dragon might:
+
 - Bite one character
 - Sweep its tail at another
 - Breathe fire on a group
@@ -138,6 +148,7 @@ Use this sparingly - perhaps 2-3 times per battle. Players should feel their abi
 ### Lair Advantages
 
 When fighting in their lair, powerful creatures might have:
+
 - Environmental hazards they're immune to
 - Reinforcements that arrive to assist
 - Magical effects woven into the location
@@ -151,7 +162,7 @@ This makes where you fight as important as who you fight.
 
 - **[bestiary.md](bestiary.md)** - Named adversaries and creatures
 - **[01_gm_guidelines.md](01_gm_guidelines.md)** - Running adversaries effectively
-- **[02_system_integration.md](02_system_integration.md)** - How adversaries work with Flow
+- **[02_system_integration.md](02_system_integration.md)** - How adversaries work with Momentum
 - **[03_quick_reference.md](03_quick_reference.md)** - Fast lookup during play
 - **[monster_types/npcs.md](monster_types/npcs.md)** - Non-combat character creation
 

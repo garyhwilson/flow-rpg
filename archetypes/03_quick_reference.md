@@ -2,130 +2,144 @@
 
 ## Archetype Core Summary
 
-| Archetype | Core Concept | Key Skills | Attributes | Natural Callings |
-|-----------|--------------|------------|------------|------------------|
-| **Fighter** | Martial combat master | Combat, Athletics, Command | Might, Grace, Will | Champion, Guardian, Sentinel |
-| **Ranger** | Wilderness survivor | Survival, Combat, Investigate | Awareness, Grace, Might | Seeker, Scholar, Sentinel |
-| **Paladin** | Divine protector | Command, Combat, Medicine | Will, Presence, Might | Advocate, Guardian, Champion |
-| **Rogue** | Skilled opportunist | Stealth, Finesse, Deceive | Grace, Mind, Awareness | Seeker, Enthusiast, Scholar |
-| **Wizard** | Arcane scholar | Sorcery, Lore, Investigate | Mind, Awareness, Will | Scholar, Seeker, Advocate |
-| **Cleric** | Divine conduit | Medicine, Empathy, Sorcery | Will, Presence, Mind | Guardian, Mediator, Advocate |
-| **Bard** | Inspiring performer | Perform, Deceive, Sorcery | Presence, Mind, Grace | Enthusiast, Mediator, Seeker |
+| Archetype   | Core Concept          | Key Skills                    | Attributes              | Natural Callings             |
+| ----------- | --------------------- | ----------------------------- | ----------------------- | ---------------------------- |
+| **Fighter** | Martial combat master | Combat, Athletics, Command    | Might, Grace, Will      | Champion, Guardian, Sentinel |
+| **Ranger**  | Wilderness survivor   | Survival, Combat, Investigate | Awareness, Grace, Might | Seeker, Scholar, Sentinel    |
+| **Paladin** | Divine protector      | Command, Combat, Medicine     | Will, Presence, Might   | Advocate, Guardian, Champion |
+| **Rogue**   | Skilled opportunist   | Stealth, Finesse, Deceive     | Grace, Mind, Awareness  | Seeker, Enthusiast, Scholar  |
+| **Wizard**  | Arcane scholar        | Sorcery, Lore, Investigate    | Mind, Awareness, Will   | Scholar, Seeker, Advocate    |
+| **Cleric**  | Divine conduit        | Medicine, Empathy, Sorcery    | Will, Presence, Mind    | Guardian, Mediator, Advocate |
+| **Bard**    | Inspiring performer   | Perform, Deceive, Sorcery     | Presence, Mind, Grace   | Enthusiast, Mediator, Seeker |
 
 ## Starting Skills
 
 ### Fighter
+
 - **Professional (+1):** Combat
 - **Novice (-1):** Athletics, Command
 - **Equipment:** Medium armor, martial weapon, shield
 
 ### Ranger
+
 - **Professional (+1):** Survival
 - **Novice (-1):** Combat, Investigate
 - **Equipment:** Light armor, bow, tracking kit
 
 ### Paladin
+
 - **Professional (+1):** Command
 - **Competent (+0):** Combat
 - **Novice (-1):** Medicine, Sorcery
 - **Equipment:** Heavy armor, weapon, holy symbol
 
 ### Rogue
+
 - **Professional (+1):** Stealth, Finesse
 - **Competent (+0):** Combat
 - **Equipment:** Light armor, daggers, thieves' tools
 
 ### Wizard
+
 - **Professional (+1):** Sorcery, Lore
 - **Novice (-1):** Investigate
 - **Equipment:** Robes, spellbook, component pouch
 
 ### Cleric
+
 - **Professional (+1):** Medicine, Empathy
 - **Competent (+0):** Sorcery
 - **Equipment:** Medium armor, mace, holy symbol
 
 ### Bard
+
 - **Professional (+1):** Perform
 - **Competent (+0):** Sorcery
 - **Novice (-1):** Deceive
 - **Equipment:** Light armor, instrument, rapier
 
-## Flow Mechanics by Archetype
+## Momentum Mechanics by Archetype
 
-| Archetype | Flow Generation | Flow Expenditure | Optimal Flow State |
-|-----------|-----------------|------------------|-------------------|
-| **Fighter** | Tactical positioning, successful combat techniques | Combat maneuvers, defensive reactions | Steady positive Flow |
-| **Ranger** | Environmental advantage, adaptability | Terrain techniques, tracking enhancement | Adaptive Flow |
-| **Paladin** | Protection, oath fulfillment | Protective abilities, inspiring presence | Conviction-based reserve |
-| **Rogue** | Advantageous position, opportunity exploitation | Precision strikes, skill enhancement | Opportunistic spikes |
-| **Wizard** | Spell success, knowledge application | Spell enhancement, magical analysis | Carefully managed Flow |
-| **Cleric** | Faith demonstration, healing | Divine manifestation, protective effects | Faith-sustained Flow |
-| **Bard** | Performance, inspiration | Effect enhancement, ally inspiration | Performative Flow |
+| Archetype   | Momentum Generation                                | Momentum Expenditure                     | Optimal Momentum State     |
+| ----------- | -------------------------------------------------- | ---------------------------------------- | -------------------------- |
+| **Fighter** | Tactical positioning, successful combat techniques | Combat maneuvers, defensive reactions    | Steady positive Momentum   |
+| **Ranger**  | Environmental advantage, adaptability              | Terrain techniques, tracking enhancement | Adaptive Momentum          |
+| **Paladin** | Protection, oath fulfillment                       | Protective abilities, inspiring presence | Conviction-based reserve   |
+| **Rogue**   | Advantageous position, opportunity exploitation    | Precision strikes, skill enhancement     | Opportunistic spikes       |
+| **Wizard**  | Spell success, knowledge application               | Spell enhancement, magical analysis      | Carefully managed Momentum |
+| **Cleric**  | Faith demonstration, healing                       | Divine manifestation, protective effects | Faith-sustained Momentum   |
+| **Bard**    | Performance, inspiration                           | Effect enhancement, ally inspiration     | Performative Momentum      |
 
 ## Combat Stance Preferences
 
-| Archetype | Preferred Stance | Secondary Stance | Stance Switching Trigger |
-|-----------|------------------|------------------|--------------------------|
-| **Fighter** | Balanced | Varies by specialization | Tactical assessment |
-| **Ranger** | Aggressive | Balanced | Environmental conditions |
-| **Paladin** | Defensive | Balanced | Ally protection needs |
-| **Rogue** | Aggressive | Balanced | Opportunity recognition |
-| **Wizard** | Balanced | Defensive | Spell requirements |
-| **Cleric** | Defensive | Balanced | Healing priorities |
-| **Bard** | Balanced | Varies | Performance requirements |
+| Archetype   | Preferred Stance | Secondary Stance         | Stance Switching Trigger |
+| ----------- | ---------------- | ------------------------ | ------------------------ |
+| **Fighter** | Balanced         | Varies by specialization | Tactical assessment      |
+| **Ranger**  | Aggressive       | Balanced                 | Environmental conditions |
+| **Paladin** | Defensive        | Balanced                 | Ally protection needs    |
+| **Rogue**   | Aggressive       | Balanced                 | Opportunity recognition  |
+| **Wizard**  | Balanced         | Defensive                | Spell requirements       |
+| **Cleric**  | Defensive        | Balanced                 | Healing priorities       |
+| **Bard**    | Balanced         | Varies                   | Performance requirements |
 
 ## Magic System Integration
 
-| Archetype | Magic Access | Casting Attributes | Spell Affinities |
-|-----------|--------------|-------------------|------------------|
-| **Fighter** | Limited/None | N/A | Combat enhancement |
-| **Ranger** | Nature-based | Awareness, Will | Animal, plant, tracking |
-| **Paladin** | Divine-limited | Will, Presence | Protection, purification |
-| **Rogue** | Trick-based | Grace, Mind | Enhancement, illusion |
-| **Wizard** | Comprehensive | Mind, Awareness | Any through study |
-| **Cleric** | Divine-based | Will, Presence | Domain-specific, healing |
-| **Bard** | Performance-based | Presence, Mind | Emotion, illusion, enhancement |
+| Archetype   | Magic Access      | Casting Attributes | Spell Affinities               |
+| ----------- | ----------------- | ------------------ | ------------------------------ |
+| **Fighter** | Limited/None      | N/A                | Combat enhancement             |
+| **Ranger**  | Nature-based      | Awareness, Will    | Animal, plant, tracking        |
+| **Paladin** | Divine-limited    | Will, Presence     | Protection, purification       |
+| **Rogue**   | Trick-based       | Grace, Mind        | Enhancement, illusion          |
+| **Wizard**  | Comprehensive     | Mind, Awareness    | Any through study              |
+| **Cleric**  | Divine-based      | Will, Presence     | Domain-specific, healing       |
+| **Bard**    | Performance-based | Presence, Mind     | Emotion, illusion, enhancement |
 
 ## Common Specializations
 
 ### Fighter Specializations
+
 - **Weapon Master:** Expertise with specific weapons
 - **Tactical Commander:** Battlefield control specialist
 - **Defensive Expert:** Damage mitigation specialist
 - **Combat Athlete:** Mobility and physical prowess
 
 ### Ranger Specializations
+
 - **Beast Master:** Animal companion specialist
 - **Wilderness Survivor:** Extreme environment expert
 - **Hunter:** Combat tracking specialist
 - **Explorer:** Discovery and navigation expert
 
 ### Paladin Specializations
+
 - **Divine Champion:** Direct divine power channel
 - **Oath Exemplar:** Principle embodiment specialist
 - **Shield Bearer:** Protection specialist
 - **Radiant Knight:** Divine energy manifestation
 
 ### Rogue Specializations
+
 - **Shadow Artist:** Stealth specialist
 - **Skilled Manipulator:** Social deception expert
 - **Trap Expert:** Mechanism specialist
 - **Combat Opportunist:** Advantage exploitation expert
 
 ### Wizard Specializations
+
 - **Theoretical Innovator:** Magical researcher
 - **Spell Master:** Execution perfectionist
 - **School Specialist:** Focused magical domain expert
 - **Magical Researcher:** Ancient magic discoverer
 
 ### Cleric Specializations
+
 - **Divine Oracle:** Deity communication specialist
 - **Community Leader:** Faith organization specialist
 - **Miracle Worker:** Extraordinary healer
 - **Spiritual Warrior:** Faith-based combatant
 
 ### Bard Specializations
+
 - **Renowned Performer:** Art form specialist
 - **Lore Keeper:** Story and history expert
 - **Magical Composer:** Reality-altering artist
@@ -133,19 +147,20 @@
 
 ## Social Roles
 
-| Archetype | Primary Role | Secondary Role | Status Indicators |
-|-----------|--------------|----------------|-------------------|
-| **Fighter** | Defender | Peacekeeper | Battle reputation |
-| **Ranger** | Scout | Environmental advisor | Survival capability |
-| **Paladin** | Protector | Moral judge | Oath affiliation |
-| **Rogue** | Acquisitor | Problem solver | Valuable connections |
-| **Wizard** | Magical advisor | Researcher | Academic position |
-| **Cleric** | Spiritual guide | Healer | Religious position |
-| **Bard** | Entertainer | Diplomat | Performance reputation |
+| Archetype   | Primary Role    | Secondary Role        | Status Indicators      |
+| ----------- | --------------- | --------------------- | ---------------------- |
+| **Fighter** | Defender        | Peacekeeper           | Battle reputation      |
+| **Ranger**  | Scout           | Environmental advisor | Survival capability    |
+| **Paladin** | Protector       | Moral judge           | Oath affiliation       |
+| **Rogue**   | Acquisitor      | Problem solver        | Valuable connections   |
+| **Wizard**  | Magical advisor | Researcher            | Academic position      |
+| **Cleric**  | Spiritual guide | Healer                | Religious position     |
+| **Bard**    | Entertainer     | Diplomat              | Performance reputation |
 
 ## Advancement Milestones
 
 ### Minor Milestone Examples
+
 - **Fighter:** Master a new weapon or combat technique
 - **Ranger:** Adapt to a new environment type
 - **Paladin:** Fulfill an oath requirement under difficult circumstances
@@ -155,6 +170,7 @@
 - **Bard:** Learn a new performance style or tradition
 
 ### Moderate Milestone Examples
+
 - **Fighter:** Develop a personal fighting style
 - **Ranger:** Form a deep connection with specific territory
 - **Paladin:** Inspire others through conviction demonstration
@@ -164,6 +180,7 @@
 - **Bard:** Create a work with lasting cultural impact
 
 ### Major Milestone Examples
+
 - **Fighter:** Create a new combat approach or school
 - **Ranger:** Achieve harmony with a challenging environment
 - **Paladin:** Receive divine recognition for exceptional service
@@ -175,6 +192,7 @@
 ## Archetype Combinations
 
 ### Natural Pairings
+
 - **Fighter/Paladin:** Combat prowess with divine purpose
 - **Ranger/Druid:** Environmental mastery with natural magic
 - **Wizard/Scholar:** Academic magic with comprehensive knowledge
@@ -182,6 +200,7 @@
 - **Cleric/Healer:** Divine and practical healing approaches
 
 ### Challenging Combinations
+
 - **Fighter/Wizard:** Physical and magical paradigm integration
 - **Paladin/Rogue:** Principled and opportunistic approach balance
 - **Cleric/Warlock:** Divine and pact-based power reconciliation
@@ -190,6 +209,7 @@
 ## Equipment Preferences
 
 ### Weapon Preferences
+
 - **Fighter:** Versatile martial weapons
 - **Ranger:** Ranged primary, versatile backup
 - **Paladin:** Symbol-appropriate melee
@@ -199,6 +219,7 @@
 - **Bard:** Elegant, performance-compatible
 
 ### Armor Preferences
+
 - **Fighter:** Medium to heavy
 - **Ranger:** Light to medium
 - **Paladin:** Heavy
@@ -210,6 +231,7 @@
 ## Suggested Character Concepts
 
 ### Fighter Concepts
+
 - Disciplined knight seeking worthy challenges
 - Mercenary veteran with practical approach
 - Gladiatorial champion seeking freedom
@@ -217,6 +239,7 @@
 - Self-taught defender of remote village
 
 ### Ranger Concepts
+
 - Frontier scout navigating dangerous territories
 - Beast hunter specializing in monster tracking
 - Wilderness guide connecting remote communities
@@ -224,6 +247,7 @@
 - Displaced native returning to ancestral lands
 
 ### Paladin Concepts
+
 - Divine champion chosen for specific purpose
 - Reformer addressing corruption within an order
 - Last knight of a fallen order preserving tradition
@@ -231,6 +255,7 @@
 - Protector devoted to specific vulnerable group
 
 ### Rogue Concepts
+
 - Skilled infiltrator working for justice
 - Treasure hunter seeking historical artifacts
 - Information broker trading in valuable secrets
@@ -238,6 +263,7 @@
 - Former criminal using skills for redemption
 
 ### Wizard Concepts
+
 - Academic researcher exploring theoretical magic
 - Magical archaeologist recovering ancient knowledge
 - Practical enchanter creating useful magical items
@@ -245,6 +271,7 @@
 - Interdisciplinary scholar bridging magical traditions
 
 ### Cleric Concepts
+
 - Community healer serving local populations
 - Divine oracle interpreting deity's will
 - Wandering priest bringing faith to remote areas
@@ -252,6 +279,7 @@
 - Crisis counselor helping those in spiritual need
 
 ### Bard Concepts
+
 - Cultural ambassador bridging different societies
 - Historical chronicler preserving important events
 - Magical performer whose art affects reality

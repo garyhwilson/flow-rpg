@@ -1,5 +1,6 @@
 # Elf
-*Harmony with Natural Cycles, Extended Lifespans, and Cultures Valuing Patience and Preservation*
+
+_Harmony with Natural Cycles, Extended Lifespans, and Cultures Valuing Patience and Preservation_
 
 ## Species Essence
 
@@ -18,6 +19,7 @@ Elves possess distinctive biological traits reflecting their unique heritage and
 **Physical Appearance:** Elves typically stand between 5'6" and 6'4" tall, with slender, lightweight builds averaging 110-170 pounds. Despite their apparent delicacy, elven bodies possess remarkable resilience and flexibility. Their lighter skeletal structure and efficient muscle arrangement allow for exceptional grace and agility, creating flowing, precise movements often described as dance-like even in ordinary activities.
 
 **Distinctive Features:** All elves share certain characteristic traits:
+
 - Pointed ears (length and angle vary by subrace)
 - Almond-shaped eyes with vibrant, sometimes luminous irises
 - Lack of facial and body hair (except for eyebrows and scalp)
@@ -25,6 +27,7 @@ Elves possess distinctive biological traits reflecting their unique heritage and
 - Natural grace in movement, described as "liquid" or "flowing"
 
 **Sensory Capabilities:** Elven senses significantly exceed human baseline, particularly regarding:
+
 - Low-light vision allowing perfect sight in all but absolute darkness
 - Ability to perceive colors beyond the normal spectrum
 - Hearing sensitive enough to detect heartbeats at close range
@@ -32,6 +35,7 @@ Elves possess distinctive biological traits reflecting their unique heritage and
 - Capacity to sense magical energy through a specialized "sixth sense"
 
 **Internal Physiology:** Elves function through extraordinarily efficient biological systems:
+
 - Cardiovascular system with heart rates 30-40 beats per minute at rest (half human average)
 - Respiratory system extracting oxygen with remarkable efficiency (6-8 breaths per minute)
 - Metabolism operating at lower energy expenditure while maintaining high performance
@@ -39,6 +43,7 @@ Elves possess distinctive biological traits reflecting their unique heritage and
 - Neurological structure supporting perfect memory recall and altered time perception
 
 **Reverie State:** Rather than traditional unconscious sleep, elves enter a meditative state called "reverie" or "trance":
+
 - Requires only 4 hours to gain the benefits of an 8-hour sleep
 - Remain semi-aware of surroundings during trance
 - Experience vivid memory recall rather than dreams
@@ -46,6 +51,7 @@ Elves possess distinctive biological traits reflecting their unique heritage and
 - Can be interrupted more easily than sleep without harmful effects
 
 **Magical Biology:** Elven physiology incorporates innate magical qualities:
+
 - Natural magical affinity manifesting even without formal training
 - Enhanced resistance to enchantment magic targeting the mind
 - Capacity to recognize magical signatures unique to specific casters
@@ -151,6 +157,7 @@ Elven cultural diversity extends across numerous environments and historical tra
 **Geographic Distribution:** Inhabit ancient woodlands, particularly old-growth forests with centuries or millennia of continuous growth. Communities typically develop in harmony with natural features, incorporating living trees into architectural designs rather than clearing areas for conventional construction.
 
 **Defining Characteristics:**
+
 - Bioregional governance connecting political structures with natural patterns
 - Seasonal lifestyles adapting activities to natural cycles
 - Strong conservationist ethics regarding ancient ecosystems
@@ -174,6 +181,7 @@ Elven cultural diversity extends across numerous environments and historical tra
 **Geographic Distribution:** Established along protected shorelines, island chains, and sheltered harbors where land meets sea. Communities typically develop in areas balancing maritime access with defensive positions against storms and raiders.
 
 **Defining Characteristics:**
+
 - Maritime focus integrating aquatic and terrestrial environments
 - Tidal governance systems synchronized with oceanic cycles
 - Architectural styles accommodating water level fluctuations
@@ -197,6 +205,7 @@ Elven cultural diversity extends across numerous environments and historical tra
 **Geographic Distribution:** Established in elevated alpine environments, particularly near distinctive geological features with magical significance. Communities typically develop in defensible locations with clear sight lines and difficult access routes.
 
 **Defining Characteristics:**
+
 - Vertical orientation with multilevel architecture
 - Astronomical focus facilitated by elevated positioning
 - Cultural emphasis on perspective and expanded vision
@@ -220,6 +229,7 @@ Elven cultural diversity extends across numerous environments and historical tra
 **Geographic Distribution:** Established within or alongside communities of other species, particularly in cosmopolitan cities with significant magical presence. These enclaves typically develop in areas offering both cultural exchange opportunities and sufficient privacy for maintaining distinctive traditions.
 
 **Defining Characteristics:**
+
 - Adaptive cultural approaches balancing tradition with innovation
 - Diplomatic emphasis facilitating intercultural communication
 - Architectural styles blending elven aesthetics with local methods
@@ -407,27 +417,29 @@ Elves receive +2 Grace, +1 Awareness, and -1 Might, reflecting their natural agi
 
 **Reverie:** You need only 4 hours of meditative rest to gain the benefits of a full rest cycle, though you must still limit strenuous activity appropriately. This ability represents the distinctive elven consciousness state combining rest with memory processing and environmental awareness.
 
-**Natural Precision:** When in natural environments, you gain +1 Flow when succeeding on checks requiring physical precision or environmental attunement. This ability reflects the elven capacity for perfect integration with natural surroundings, producing extraordinary results through harmony rather than force.
+**Natural Precision:** When in natural environments, you gain +1 Momentum when succeeding on checks requiring physical precision or environmental attunement. This ability reflects the elven capacity for perfect integration with natural surroundings, producing extraordinary results through harmony rather than force.
 
-### Flow Interactions
+### Momentum Interactions
 
-Elves interact with the Flow resource through their distinctive perceptual capabilities:
+Elves interact with the Momentum resource through their distinctive perceptual capabilities:
 
-**Flow Generation:**
-- Successfully perceiving hidden patterns or connections (+1 Flow)
-- Perfectly executing techniques requiring extraordinary precision (+1 Flow)
-- Harmoniously integrating with natural environments (+1 Flow)
-- Applying historical knowledge to current challenges (+1 Flow)
-- Achieving perfect aesthetic harmony in creative expression (+2 Flow)
+**Momentum Generation:**
 
-**Flow Expenditure:**
+- Successfully perceiving hidden patterns or connections (+1 Momentum)
+- Perfectly executing techniques requiring extraordinary precision (+1 Momentum)
+- Harmoniously integrating with natural environments (+1 Momentum)
+- Applying historical knowledge to current challenges (+1 Momentum)
+- Achieving perfect aesthetic harmony in creative expression (+2 Momentum)
+
+**Momentum Expenditure:**
+
 - Enhanced perception revealing hidden details (variable cost)
-- Perfect physical execution requiring extraordinary precision (+1 Flow)
-- Environmental communication creating temporary harmony (+2 Flow)
-- Access to ancestral or historical memory beyond personal experience (+1 Flow)
-- Timeless focus allowing simultaneous awareness of past, present and future (+2 Flow)
+- Perfect physical execution requiring extraordinary precision (+1 Momentum)
+- Environmental communication creating temporary harmony (+2 Momentum)
+- Access to ancestral or historical memory beyond personal experience (+1 Momentum)
+- Timeless focus allowing simultaneous awareness of past, present and future (+2 Momentum)
 
-This relationship with Flow emphasizes the elven capacity for perception, precision, and pattern recognition—transforming their patient observation into profound insight through accumulated understanding and perfect execution.
+This relationship with Momentum emphasizes the elven capacity for perception, precision, and pattern recognition—transforming their patient observation into profound insight through accumulated understanding and perfect execution.
 
 ## Archetype Synergies
 
@@ -436,18 +448,21 @@ Elven biology and culture create effective combinations with all archetypes, tho
 ### Natural Synergies
 
 **Elf Wizard**
+
 - Enhanced magical affinity complements arcane study
 - Long lifespan allows mastery of complex magical systems
 - Natural perception supports subtle energy manipulation
 - Accumulated knowledge provides historical magical context
 
 **Elf Ranger**
+
 - Environmental awareness enhances tracking and survival
 - Enhanced senses improve detection and ranged combat
 - Natural connection with animals and plants
 - Patience supports ambush and observation techniques
 
 **Elf Druid**
+
 - Natural attunement enhances environmental connection
 - Cyclical perspective aligns with natural transformation
 - Patience supports gradual approach to ecosystem management
@@ -456,18 +471,21 @@ Elven biology and culture create effective combinations with all archetypes, tho
 ### Interesting Tensions
 
 **Elf Fighter**
+
 - Cultural tendency toward indirect approaches vs. direct combat focus
 - Preference for finesse over brute force
 - Balancing martial discipline with elven individualism
 - Reconciling combat specialization with broader perspective
 
 **Elf Cleric**
+
 - Reconciling elven spiritual traditions with structured religion
 - Long-term perspective on faith vs. immediate divine intervention
 - Integrating cyclical elven philosophy with linear religious narratives
 - Balancing communal worship with personal spiritual experience
 
 **Elf Rogue**
+
 - Using patience and planning vs. opportunistic tactics
 - Cultural values around beauty and harmony vs. pragmatic thievery
 - Applying centuries of observation to understanding security systems
@@ -478,30 +496,35 @@ Elven biology and culture create effective combinations with all archetypes, tho
 The elven species supports diverse character concepts reflecting their extended perspective and varied cultural backgrounds:
 
 ### "The Reluctant Sentinel"
+
 - **Background:** High elf wizard who witnessed the fall of an ancient elven realm
 - **Motivation:** Prevents similar catastrophes by monitoring threats to civilization
 - **Conflict:** Desires solitude and study but feels obligated to involve themselves
 - **Gameplay Focus:** Information gathering, protective magic, reluctant leadership
 
 ### "The Timeless Wanderer"
+
 - **Background:** Wood elf ranger separated from their community centuries ago
 - **Motivation:** Searches for purpose after outliving everyone they once knew
 - **Conflict:** Balancing attachment to new companions with fear of inevitable loss
 - **Gameplay Focus:** Survival, adaptation, emotional growth, finding home
 
 ### "The Pattern Observer"
+
 - **Background:** Moon elf bard who studies societal rise and fall across centuries
 - **Motivation:** Documents repeating historical patterns through art and story
 - **Conflict:** When to intervene vs. when to merely observe and record
 - **Gameplay Focus:** Knowledge, cultural adaptation, performance as preservation
 
 ### "The Tradition Breaker"
+
 - **Background:** Star elf raised in isolationist community who rejected its limiting ways
 - **Motivation:** Brings ancient elven knowledge into productive contact with other cultures
 - **Conflict:** Honoring heritage while challenging its problematic aspects
 - **Gameplay Focus:** Cultural translation, magical innovation, diplomatic bridge-building
 
 ### "The Lost Generation"
+
 - **Background:** Sea elf displaced by cataclysm that destroyed underwater realm
 - **Motivation:** Adapts to surface world while preserving cultural heritage
 - **Conflict:** Nostalgia for lost home vs. necessity of creating new identity
@@ -512,30 +535,35 @@ The elven species supports diverse character concepts reflecting their extended 
 Elven characters experience distinctive development arcs shaped by their extended lifespans, perceptual capabilities, and cultural frameworks.
 
 ### Perspective Expansion
+
 - **Beginning:** Isolated within elven community with limited worldview
 - **Development:** Exposure to diverse species and cultures challenges assumptions
 - **Growth:** Integration of multiple perspectives while maintaining elven identity
 - **Mastery:** Ability to serve as cultural bridge between disparate groups
 
 ### Temporal Adaptation
+
 - **Beginning:** Frustration with shorter-lived species' "hasty" approaches
 - **Development:** Recognition of value in different temporal perspectives
 - **Growth:** Learning to operate on multiple timescales simultaneously
 - **Mastery:** Strategic thinking that balances immediate action with long-term planning
 
 ### Emotional Evolution
+
 - **Beginning:** Emotional distance as self-protection against inevitable loss
 - **Development:** Forming attachments despite knowing they are temporary
 - **Growth:** Finding value in connections regardless of duration
 - **Mastery:** Full emotional engagement without being crippled by accumulated grief
 
 ### Tradition & Innovation Balance
+
 - **Beginning:** Rigid adherence to ancient practices and perspectives
 - **Development:** Questioning traditional approaches when ineffective
 - **Growth:** Selective adaptation while maintaining cultural continuity
 - **Mastery:** Revitalizing traditions through thoughtful innovation
 
 ### Immortality Reckoning
+
 - **Beginning:** Taking extended lifespan for granted
 - **Development:** Confronting mortality through loss and danger
 - **Growth:** Developing philosophy about meaning within finite existence

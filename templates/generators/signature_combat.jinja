@@ -33,7 +33,7 @@ Your signature move requires four components:
 
 {% if signature_moves.creation.creation_guidelines.base_technique %}**Base Technique:** {{ signature_moves.creation.creation_guidelines.base_technique }}{% endif %}
 
-{% if signature_moves.creation.creation_guidelines.discount %}**Flow Discount:** {{ signature_moves.creation.creation_guidelines.discount }}{% endif %}
+{% if signature_moves.creation.creation_guidelines.discount %}**Momentum Discount:** {{ signature_moves.creation.creation_guidelines.discount }}{% endif %}
 
 {% if signature_moves.creation.creation_guidelines.restrictions %}**Requirement:** {{ signature_moves.creation.creation_guidelines.restrictions }}{% endif %}
 
@@ -51,7 +51,7 @@ These examples show how different characters create signature moves from their c
 ### {{ move.name if move.name else char_id.replace('_', ' ').title() }}
 
 {% if move.effect %}**Effect:** {{ move.effect }}{% endif %}
-{% if move.normal_cost and move.signature_cost %}**Cost:** {{ move.signature_cost }} Flow (normally {{ move.normal_cost }}){% endif %}
+{% if move.normal_cost and move.signature_cost %}**Cost:** {{ move.signature_cost }} Momentum (normally {{ move.normal_cost }}){% endif %}
 {% if move.description %}**Description:** {{ move.description }}{% endif %}
 
 ---
@@ -63,11 +63,11 @@ These examples show how different characters create signature moves from their c
 Signature moves personalize combat techniques:
 
 **Creation:** Moderate milestone
-**Components:** Name, mechanical effect, Flow cost (1 less than normal), narrative description
+**Components:** Name, mechanical effect, Momentum cost (1 less than normal), narrative description
 **Examples:**
-- Thunder Strike: Attack all enemies in zone (2 Flow instead of 3)
-- Arcane Eruption: 3d6 force damage at Close range (1 Flow instead of 2)
-- Divine Grace: Heal 2d6 to all allies in zone (2 Flow instead of 3)
+- Thunder Strike: Attack all enemies in zone (2 Momentum instead of 3)
+- Arcane Eruption: 3d6 force damage at Close range (1 Momentum instead of 2)
+- Divine Grace: Heal 2d6 to all allies in zone (2 Momentum instead of 3)
 
 {% endif %}
 
@@ -114,7 +114,7 @@ For comprehensive rules on creating, using, and evolving signature moves, includ
 
 **See the full [Signature Moves](signature_moves.md) documentation.**
 
-This reference provides a quick overview. The complete documentation covers signature move creation in depth, including how to choose appropriate base techniques, balance Flow costs, develop narrative descriptions, and evolve signature moves through campaign progression.
+This reference provides a quick overview. The complete documentation covers signature move creation in depth, including how to choose appropriate base techniques, balance Momentum costs, develop narrative descriptions, and evolve signature moves through campaign progression.
 
 ---
 

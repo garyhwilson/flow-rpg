@@ -1,4 +1,4 @@
-# FLOW RPG
+# MOMENTUM RPG
 
 ## MONSTER MANUAL
 
@@ -18,10 +18,10 @@ Populate your world with memorable creatures and compelling NPCs. This manual pr
 - **Quick Reference Tables** for easy table use
 - **Tactical Notes** to bring creatures to life
 
-Whether you need a band of goblins for tonight's session or a legendary dragon to culminate your campaign, the Flow RPG Monster Manual has you covered.
+Whether you need a band of goblins for tonight's session or a legendary dragon to culminate your campaign, the Autumn Phoenix RPG Monster Manual has you covered.
 
 ---
 
 **Version 1.0 (Draft)**
 
-*For use with Flow RPG*
+_For use with Momentum RPG_

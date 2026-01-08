@@ -1,5 +1,6 @@
 # Halfling
-*Practical Comfort and Community Bonds, with Modest Physical Stature but Extraordinary Social Resilience*
+
+_Practical Comfort and Community Bonds, with Modest Physical Stature but Extraordinary Social Resilience_
 
 ## Species Essence
 
@@ -18,6 +19,7 @@ Halflings possess distinctive biological traits reflecting their evolutionary hi
 **Physical Proportions:** Halflings typically stand between 3'0" and 3'6" tall, with weight ranging from 30 to 45 pounds depending on build, ancestry, and lifestyle. Their bodies maintain child-like proportions into adulthood, with larger heads relative to bodies, shorter limbs, and softer features than humans. Despite these seemingly juvenile characteristics, mature halflings display distinctive adult muscle development, facial structure, and proportional adjustments clearly distinguishing them from human children upon close observation.
 
 **Distinctive Features:** All halflings share certain characteristic traits:
+
 - Exceptionally dexterous hands with tactile sensitivity exceeding human capability
 - Resilient digestive systems capable of processing diverse food sources
 - Feet with tough soles and excellent balance, often covered with fine hair
@@ -25,6 +27,7 @@ Halflings possess distinctive biological traits reflecting their evolutionary hi
 - Proportionally larger eyes with excellent low-light vision
 
 **Sensory Capabilities:** Halfling senses show specialized adaptation to their historical need for threat awareness:
+
 - Enhanced peripheral vision covering wider visual field
 - Superior hearing particularly sensitive to approaching footsteps or whispered conversation
 - Acute smell capable of detecting subtle food ingredients or environmental changes
@@ -32,6 +35,7 @@ Halflings possess distinctive biological traits reflecting their evolutionary hi
 - Sensitive touch facilitating both craft precision and environmental awareness
 
 **Internal Physiology:** Halflings function through remarkably efficient biological systems:
+
 - Cardiovascular system requiring fewer calories while maintaining high energy levels
 - Respiratory efficiency supporting sustained moderate activity without fatigue
 - Digestive system extracting maximum nutrition from minimal intake
@@ -52,7 +56,7 @@ Despite significant variation across halfling societies, certain core values con
 
 **Comfort without Excess**
 
-Where humans strive for luxury and dwarves for durability, halflings excel at creating genuine comfort through balanced sufficiency. This approach involves developing precisely what's needed for contentment without wasteful excess or ostentatious display. The halfling concept of "*haimêlë*" (roughly translating as "perfect sufficiency") represents this balanced approach—having exactly enough of the right things rather than excessive quantities or extravagant quality.
+Where humans strive for luxury and dwarves for durability, halflings excel at creating genuine comfort through balanced sufficiency. This approach involves developing precisely what's needed for contentment without wasteful excess or ostentatious display. The halfling concept of "_haimêlë_" (roughly translating as "perfect sufficiency") represents this balanced approach—having exactly enough of the right things rather than excessive quantities or extravagant quality.
 
 This comfort focus manifests through practical elegance in everything from architecture (emphasizing convenience, warmth, and accessibility) to cuisine (prioritizing satisfying flavors and proper portions) to clothing (valuing functionality, durability, and subtle beauty over elaborate fashion). Halfling achievements typically improve daily experience rather than demonstrating status, creating communities where everyday objects and experiences reflect extraordinary attention to practical detail.
 
@@ -125,6 +129,7 @@ Halfling cultural diversity extends across numerous environments and historical 
 **Geographic Distribution:** Established in fertile lowland areas, river valleys, and productive agricultural regions. Communities typically develop in small settlements scattered across productive farmland rather than concentrating in large towns, creating networks of interconnected villages sharing resources and labor.
 
 **Defining Characteristics:**
+
 - Agricultural focus with sophisticated crop rotation systems
 - Seasonal lifestyle following natural growing cycles
 - Strong oral traditions preserving practical knowledge
@@ -148,6 +153,7 @@ Halfling cultural diversity extends across numerous environments and historical 
 **Geographic Distribution:** Established in hillsides, sloped landscapes, and areas with suitable soil composition for underground construction. Communities typically develop complex warrens extending horizontally rather than vertically, with multiple entrance points concealed within landscape features.
 
 **Defining Characteristics:**
+
 - Underground architecture emphasizing comfort and concealment
 - Engineering focus on ventilation, water management, and structural integrity
 - Specialized crafting traditions optimized for limited space
@@ -171,6 +177,7 @@ Halfling cultural diversity extends across numerous environments and historical 
 **Geographic Distribution:** Mobile communities following established trade routes between larger settlements, particularly along major roads, river systems, or traditional fair circuits. Rather than claiming specific territories, these groups maintain traditional travel patterns with recognized seasonal stopping points.
 
 **Defining Characteristics:**
+
 - Mobility-oriented social structures with portable traditions
 - Trading expertise facilitating intercultural exchange
 - Adaptable celebrations accommodating changing locations
@@ -194,6 +201,7 @@ Halfling cultural diversity extends across numerous environments and historical 
 **Geographic Distribution:** Established along major river systems, lake shores, and coastal regions where water provides both resources and transportation. Communities typically develop in linear settlements following waterways or circular arrangements surrounding lakes rather than compact village clusters.
 
 **Defining Characteristics:**
+
 - Water-integrated lifestyle balancing aquatic and terrestrial activities
 - Transportation networks using waterways as primary routes
 - Fishing and aquatic resource management traditions
@@ -217,6 +225,7 @@ Halfling cultural diversity extends across numerous environments and historical 
 **Geographic Distribution:** Established within forests, natural clearings, and wilderness regions with minimal previous development. Communities typically develop in dispersed settlement patterns with individual dwellings separated by natural features yet connected through well-maintained trails and common gathering spaces.
 
 **Defining Characteristics:**
+
 - Environmental integration with minimal habitat disruption
 - Foraging and hunting expertise supplementing limited agriculture
 - Nature-based spiritual traditions emphasizing respect and reciprocity
@@ -405,29 +414,31 @@ Halflings receive +2 Presence, +1 Grace, and -2 Might, reflecting their natural 
 
 **Inconspicuous:** When attempting to avoid notice through social means (blending into a crowd, seeming harmless, etc.), you gain advantage on Stealth checks. This ability reflects the halfling natural capacity to avoid drawing attention without requiring magical concealment or special equipment.
 
-**Homefield Advantage:** When in familiar environments or communities, you gain +1 Flow when succeeding on social interactions or comfort-focused skill checks. This ability represents the halfling talent for creating and leveraging comfortable environments to enhance effectiveness.
+**Homefield Advantage:** When in familiar environments or communities, you gain +1 Momentum when succeeding on social interactions or comfort-focused skill checks. This ability represents the halfling talent for creating and leveraging comfortable environments to enhance effectiveness.
 
 **Lucky:** Once per session, you may reroll any 1s showing on your dice for a single check, representing your uncanny knack for avoiding disaster. This ability reflects the halfling combination of careful preparation, risk awareness, and natural fortune creating better outcomes than probability would suggest.
 
-### Flow Interactions
+### Momentum Interactions
 
-Halflings interact with the Flow resource through their distinctive social capabilities and adaptive resilience:
+Halflings interact with the Momentum resource through their distinctive social capabilities and adaptive resilience:
 
-**Flow Generation:**
-- Successfully creating comfort in difficult circumstances (+1 Flow)
-- Building connections between different individuals or groups (+1 Flow)
-- Finding practical solutions to immediate problems (+1 Flow)
-- Transforming potential conflict into productive dialogue (+1 Flow)
-- Creating genuine celebration despite challenging conditions (+2 Flow)
+**Momentum Generation:**
 
-**Flow Expenditure:**
+- Successfully creating comfort in difficult circumstances (+1 Momentum)
+- Building connections between different individuals or groups (+1 Momentum)
+- Finding practical solutions to immediate problems (+1 Momentum)
+- Transforming potential conflict into productive dialogue (+1 Momentum)
+- Creating genuine celebration despite challenging conditions (+2 Momentum)
+
+**Momentum Expenditure:**
+
 - Enhanced observation revealing hidden opportunities (variable cost)
-- Perfect timing creating maximum effect from minimal effort (+1 Flow)
-- Extraordinary luck transforming potential disaster into advantage (+2 Flow)
-- Social intuition revealing unstated motivations or concerns (+1 Flow)
-- Community coordination enhancing group effectiveness (+2 Flow)
+- Perfect timing creating maximum effect from minimal effort (+1 Momentum)
+- Extraordinary luck transforming potential disaster into advantage (+2 Momentum)
+- Social intuition revealing unstated motivations or concerns (+1 Momentum)
+- Community coordination enhancing group effectiveness (+2 Momentum)
 
-This relationship with Flow emphasizes the halfling capacity for adaptation, social awareness, and practical problem-solving—transforming apparent limitations into distinctive advantages through clever application and perfect timing rather than raw power.
+This relationship with Momentum emphasizes the halfling capacity for adaptation, social awareness, and practical problem-solving—transforming apparent limitations into distinctive advantages through clever application and perfect timing rather than raw power.
 
 ## Archetype Synergies
 
@@ -436,18 +447,21 @@ Halfling biology and culture create effective combinations with all archetypes, 
 ### Natural Synergies
 
 **Halfling Rogue**
+
 - Natural stealth and dexterity enhance rogue abilities
 - Cultural emphasis on adaptability supports flexible thinking
 - Size advantages allow access to spaces others cannot enter
 - Community networks provide valuable contacts and resources
 
 **Halfling Ranger**
+
 - Connection to natural environments enhances tracking and survival
 - Size advantages support unobtrusive observation and movement
 - Traditional hunting techniques transfer well to ranger skills
 - Practical problem-solving suits wilderness challenges
 
 **Halfling Bard**
+
 - Rich storytelling traditions support performance abilities
 - Community celebration experience translates to entertainment skills
 - Natural empathy enhances inspirational capabilities
@@ -456,18 +470,21 @@ Halfling biology and culture create effective combinations with all archetypes, 
 ### Interesting Tensions
 
 **Halfling Paladin**
+
 - Contrasting small stature with heavy armor and weapons
 - Reconciling community-based ethics with absolute moral codes
 - Adapting halfling practicality to paladin's idealistic worldview
 - Finding balance between protection capability and physical limitations
 
 **Halfling Wizard**
+
 - Overcoming cultural preference for practical knowledge over theory
 - Managing physical limitations of carrying spellbooks and components
 - Adapting intuitive learning style to structured arcane education
 - Translating abstract magical concepts into practical applications
 
 **Halfling Fighter**
+
 - Developing combat techniques accounting for size disadvantage
 - Creating specialized equipment suitable for halfling proportions
 - Adapting defensive fighting styles to maximize natural agility
@@ -478,30 +495,35 @@ Halfling biology and culture create effective combinations with all archetypes, 
 The halfling species supports diverse character concepts reflecting their practical nature and varied cultural backgrounds:
 
 ### "The Wandering Hearth"
+
 - **Background:** Halfling cook who brings homeland traditions to dangerous frontiers
 - **Motivation:** Creates pockets of comfort and community in hostile environments
 - **Conflict:** Maintaining halfling values while adapting to survival necessities
 - **Gameplay Focus:** Support, morale maintenance, unexpected resource utilization
 
 ### "The Boundary Walker"
+
 - **Background:** Halfling raised between multiple species' settlements
 - **Motivation:** Bridges cultural divides through diplomacy and translation
 - **Conflict:** Finding personal identity while serving as cultural interpreter
 - **Gameplay Focus:** Social navigation, diplomatic resolution, cultural adaptation
 
 ### "The Legacy Bearer"
+
 - **Background:** Last survivor of destroyed halfling community
 - **Motivation:** Preserves and shares cultural traditions that would otherwise be lost
 - **Conflict:** Honoring past while building new future
 - **Gameplay Focus:** Skill preservation, community building, memory keeping
 
 ### "The Unlikely Guardian"
+
 - **Background:** Halfling sworn to protect something much larger than themselves
 - **Motivation:** Proves that determination outweighs physical stature
 - **Conflict:** Overcoming others' underestimation of their capabilities
 - **Gameplay Focus:** Creative problem-solving, unexpected heroics, defying expectations
 
 ### "The Pattern Breaker"
+
 - **Background:** Halfling rejecting traditional community-centric values
 - **Motivation:** Seeks individual accomplishment and recognition
 - **Conflict:** Balancing individual ambition with cultural background
@@ -512,30 +534,35 @@ The halfling species supports diverse character concepts reflecting their practi
 Halfling characters experience distinctive development arcs shaped by their cultural values, practical mindset, and adaptive capabilities.
 
 ### Community to Independence
+
 - **Beginning:** Defining self primarily through community role and relationships
 - **Development:** Discovering personal identity separate from communal context
 - **Growth:** Building individual confidence and independent capability
 - **Mastery:** Creating new community connections from position of self-knowledge
 
 ### Practical to Philosophical
+
 - **Beginning:** Focus on immediate, practical solutions to concrete problems
 - **Development:** Recognition of patterns connecting individual situations
 - **Growth:** Development of personal ethical framework beyond community norms
 - **Mastery:** Integration of practical wisdom with philosophical understanding
 
 ### Comfort to Courage
+
 - **Beginning:** Preference for safety and known environments
 - **Development:** Tentative exploration beyond comfort boundaries
 - **Growth:** Willingness to face significant danger for worthy purposes
 - **Mastery:** Finding comfort in discomfort, adapting to any circumstance
 
 ### Local to Global
+
 - **Beginning:** Concern primarily with immediate community and surroundings
 - **Development:** Expanding awareness of larger regional issues and connections
 - **Growth:** Understanding how local actions affect distant communities
 - **Mastery:** Maintaining local connections while operating effectively at larger scale
 
 ### Traditions to Innovations
+
 - **Beginning:** Reliance on established cultural patterns and solutions
 - **Development:** Adaptation of traditional approaches to new circumstances
 - **Growth:** Creation of novel solutions drawing on traditional principles

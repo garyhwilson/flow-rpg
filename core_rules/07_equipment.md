@@ -7,42 +7,54 @@ Weapons are categorized by type, with each category offering different advantage
 ### Weapon Categories
 
 #### Light Weapons
+
 **Examples:** Dagger, club, short sword, hand axe
+
 - **Damage:** 2d6
 - **Special:** +1 to Finesse actions while wielding
-- **Flow:** Normal generation
+- **Momentum:** Normal generation
 - **Best For:** Rogues, dual-wielders, spellcasters who need a backup weapon
 
 #### Medium Weapons
+
 **Examples:** Longsword, mace, battle axe, scimitar
+
 - **Damage:** 2d6+1
 - **Special:** No bonuses or penalties
-- **Flow:** Normal generation
+- **Momentum:** Normal generation
 - **Best For:** Versatile fighters, characters who switch stances frequently
 
 #### Heavy Weapons
+
 **Examples:** Greatsword, maul, greataxe, flail
+
 - **Damage:** 2d6+2
 - **Penalty:** -1 Grace while wielding
-- **Flow:** Normal generation
+- **Momentum:** Normal generation
 - **Best For:** Damage-focused characters, Might-based fighters
 
 #### Reach Weapons
+
 **Examples:** Spear, pike, halberd, glaive
+
 - **Damage:** 2d6
 - **Special:** Can attack from Close range (not just Engaged)
-- **Flow:** +1 when keeping enemies at bay
+- **Momentum:** +1 when keeping enemies at bay
 - **Best For:** Zone control, defensive fighters, frontline support
 
 #### Thrown Weapons
+
 **Examples:** Javelin, throwing knife, throwing axe
+
 - **Damage:** 2d6
-- **Special:** +1 Flow when thrown from Close range
+- **Special:** +1 Momentum when thrown from Close range
 - **Range:** Close (optimal), cannot reach Far
 - **Best For:** Mobile fighters, skirmishers, opening attacks
 
 #### Ranged Weapons
+
 **Examples:** Shortbow, longbow, crossbow
+
 - **Damage:** 2d6
 - **Special:** +1 damage at Far range, -2 penalty in melee (Engaged)
 - **Range:** Far (optimal), Close (normal), Engaged (penalty)
@@ -53,21 +65,27 @@ Weapons are categorized by type, with each category offering different advantage
 Weapons may also have special properties that provide additional tactical options:
 
 **Dual-Wield:** Can be used in off-hand (typically light weapons)
+
 - Allows attack with both weapons at -1 penalty to each
 
 **Defensive:** Provides +1 Guard while wielded
+
 - Examples: Certain swords with crossguards, specialized weapons
 
 **Disarming:** +2 to disarm attempts
+
 - Examples: Whips, specialized hooked weapons
 
 **Concealed:** Easy to hide from detection
+
 - Examples: Daggers, small bladed weapons
 
 **Stun:** On critical hit, target loses next action
+
 - Examples: Clubs, hammers, maces
 
 **Armor-Piercing:** Ignore 1 point of armor damage reduction
+
 - Examples: War picks, specialized points
 
 ---
@@ -79,30 +97,37 @@ Armor provides damage reduction but may impose penalties on certain actions. The
 ### Armor Categories
 
 #### No Armor
+
 - **Damage Reduction:** 0
 - **Penalties:** None
-- **Flow:** Normal generation
+- **Momentum:** Normal generation
 - **Casting:** No penalties
 - **Best For:** Spellcasters, characters relying on Grace, stealthy characters
 
 #### Light Armor
+
 **Examples:** Leather armor, padded jerkin, hide armor
+
 - **Damage Reduction:** -1
 - **Penalties:** None
-- **Flow:** Normal generation
+- **Momentum:** Normal generation
 - **Casting:** -1 to Sorcery rolls
 - **Best For:** Rogues, rangers, bards, lightly armored spellcasters
 
 #### Medium Armor
+
 **Examples:** Chain shirt, scale mail, breastplate
+
 - **Damage Reduction:** -2
 - **Penalties:** -1 to Grace-based rolls (including Grace + Combat)
-- **Flow:** Cannot generate Flow from movement (no charging bonus)
+- **Momentum:** Cannot generate Momentum from movement (no charging bonus)
 - **Casting:** -2 to Sorcery rolls
 - **Best For:** Clerics, paladins, versatile fighters
 
 #### Heavy Armor
+
 **Examples:** Full plate, heavy field plate
+
 - **Damage Reduction:** -4
 - **Penalties:** -2 to Grace-based rolls
 - **Stance Restriction:** Cannot use Aggressive stance
@@ -110,7 +135,9 @@ Armor provides damage reduction but may impose penalties on certain actions. The
 - **Best For:** Defenders, front-line fighters, strength-based characters
 
 #### Shields
+
 Shields are held in one hand and provide Guard bonuses rather than damage reduction.
+
 - **Small Shield:** +1 Guard
 - **Large Shield:** +2 Guard, -1 to Grace when attacking
 - **Tower Shield:** +3 Guard, -2 to Grace for all actions, can provide cover to adjacent ally
@@ -137,6 +164,7 @@ Beyond weapons and armor, characters need equipment for exploration, survival, a
 ### General Equipment Categories
 
 #### Exploration Gear
+
 - **Rope (50ft):** 5 silver pieces
 - **Grappling Hook:** 2 silver pieces
 - **Climbing Kit:** 5 silver pieces
@@ -149,6 +177,7 @@ Beyond weapons and armor, characters need equipment for exploration, survival, a
 - **Compass:** 10 silver pieces
 
 #### Survival Gear
+
 - **Rations (1 week):** 5 silver pieces
 - **Waterskin:** 1 silver piece
 - **Flint and Steel:** 1 silver piece
@@ -161,6 +190,7 @@ Beyond weapons and armor, characters need equipment for exploration, survival, a
 - **Antitoxin:** 10 silver pieces
 
 #### Social Gear
+
 - **Fine Clothes:** 15 silver pieces
 - **Common Clothes:** 5 silver pieces
 - **Traveler's Clothes:** 2 silver pieces
@@ -173,6 +203,7 @@ Beyond weapons and armor, characters need equipment for exploration, survival, a
 - **Scroll Case:** 1 silver piece
 
 #### Specialized Tools
+
 - **Thieves' Tools:** 10 silver pieces
 - **Alchemist's Supplies:** 20 silver pieces
 - **Herbalism Kit:** 15 silver pieces
@@ -187,6 +218,7 @@ Beyond weapons and armor, characters need equipment for exploration, survival, a
 ### Archetype-Specific Gear
 
 #### Fighter
+
 - **Whetstone:** 1 silver piece
 - **Armor Maintenance Kit:** 5 silver pieces
 - **Banner/Heraldry:** 10 silver pieces
@@ -194,6 +226,7 @@ Beyond weapons and armor, characters need equipment for exploration, survival, a
 - **Combat Manual:** 20 silver pieces
 
 #### Ranger
+
 - **Animal Lure:** 5 silver pieces
 - **Snares (5):** 5 silver pieces
 - **Tracking Chalk:** 1 silver piece
@@ -201,6 +234,7 @@ Beyond weapons and armor, characters need equipment for exploration, survival, a
 - **Camouflage Cloak:** 10 silver pieces
 
 #### Paladin
+
 - **Holy Symbol:** 5 silver pieces
 - **Prayer Book:** 10 silver pieces
 - **Sacred Ointment:** 5 silver pieces
@@ -208,6 +242,7 @@ Beyond weapons and armor, characters need equipment for exploration, survival, a
 - **Consecrated Salt:** 2 silver pieces
 
 #### Rogue
+
 - **Caltrops (bag):** 2 silver pieces
 - **Smoke Bombs (3):** 10 silver pieces
 - **Lockpicks (fine):** 15 silver pieces
@@ -215,6 +250,7 @@ Beyond weapons and armor, characters need equipment for exploration, survival, a
 - **Marked Cards:** 2 silver pieces
 
 #### Wizard
+
 - **Spellbook:** 50 silver pieces
 - **Spell Components Pouch:** 15 silver pieces
 - **Focusing Crystal:** 10 silver pieces
@@ -222,6 +258,7 @@ Beyond weapons and armor, characters need equipment for exploration, survival, a
 - **Arcane Ink:** 10 silver pieces
 
 #### Cleric
+
 - **Holy Water (vial):** 10 silver pieces
 - **Religious Vestments:** 15 silver pieces
 - **Ceremonial Candles (10):** 5 silver pieces
@@ -229,6 +266,7 @@ Beyond weapons and armor, characters need equipment for exploration, survival, a
 - **Blessing Oil:** 10 silver pieces
 
 #### Bard
+
 - **Quality Instrument:** 25 silver pieces
 - **Songbook:** 10 silver pieces
 - **Costume Elements:** 15 silver pieces
@@ -295,36 +333,41 @@ While magical items are detailed further in the Magic Compendium, here are some 
 ### Magical Item Categories
 
 #### Potions & Consumables
+
 - **Healing Potion:** Restores 2d6 Vitality (50 sp)
 - **Antidote:** Neutralizes poison (25 sp)
-- **Flow Elixir:** Grants +2 Flow for one scene (75 sp)
+- **Momentum Elixir:** Grants +2 Momentum for one scene (75 sp)
 - **Wildfire Oil:** Adds 1d6 fire damage to weapon (30 sp)
 - **Clarity Draught:** Advantage on Mind rolls for one hour (40 sp)
 
 #### Minor Magical Items
+
 - **Everburning Torch:** Never extinguishes (50 sp)
 - **Featherfall Cloak:** Negates falling damage once per day (100 sp)
 - **Boots of Sure Footing:** +2 to avoid being knocked prone (75 sp)
 - **Ring of Sustenance:** Wearer needs half as much food and water (80 sp)
 - **Traveler's Walking Stick:** Detects dangerous terrain within 30 feet (60 sp)
 
-#### Flow-Enhanced Items
-- **Flow Crystal (Minor):** Stores 1 Flow point for later use (150 sp)
-- **Stance Bracers:** No Flow cost to switch from Balanced once per scene (200 sp)
+#### Momentum-Enhanced Items
+
+- **Momentum Crystal (Minor):** Stores 1 Momentum point for later use (150 sp)
+- **Stance Bracers:** No Momentum cost to switch from Balanced once per scene (200 sp)
 - **Resonant Weapon:** Critical on 12+ instead of 13+ (250 sp)
-- **Reactive Shield:** Spend 1 Flow to automatically block one attack per day (225 sp)
-- **Focus Band:** Recover 1 Flow when reduced to 0 Flow, once per day (175 sp)
+- **Reactive Shield:** Spend 1 Momentum to automatically block one attack per day (225 sp)
+- **Focus Band:** Recover 1 Momentum when reduced to 0 Momentum, once per day (175 sp)
 
 ### Enchanted Armor & Weapons
 
 Magical armor and weapons follow a +1/+2/+3 bonus system:
 
 #### Enchanted Weapons
+
 - **+1 Weapon:** +1 to attack and damage rolls (250 sp)
 - **+2 Weapon:** +2 to attack and damage rolls (500 sp)
 - **+3 Weapon:** +3 to attack and damage rolls (1000 sp)
 
 #### Enchanted Armor
+
 - **+1 Armor:** +1 to damage reduction (250 sp)
 - **+2 Armor:** +2 to damage reduction (500 sp)
 - **+3 Armor:** +3 to damage reduction (1000 sp)
@@ -336,6 +379,7 @@ Magical armor and weapons follow a +1/+2/+3 bonus system:
 For quick character creation, pre-assembled equipment packages are available:
 
 ### Dungeon Delver Package
+
 - Backpack
 - Rope (50ft)
 - Grappling Hook
@@ -350,6 +394,7 @@ For quick character creation, pre-assembled equipment packages are available:
 - **Cost:** 20 sp
 
 ### Wilderness Explorer Package
+
 - Backpack
 - Tent
 - Bedroll
@@ -364,6 +409,7 @@ For quick character creation, pre-assembled equipment packages are available:
 - **Cost:** 30 sp
 
 ### Urban Agent Package
+
 - Fine Clothes
 - Common Clothes
 - Disguise Kit
@@ -377,6 +423,7 @@ For quick character creation, pre-assembled equipment packages are available:
 - **Cost:** 40 sp
 
 ### Scholar's Package
+
 - Backpack
 - Ink and Quill
 - Parchment (20 sheets)
@@ -394,6 +441,7 @@ For quick character creation, pre-assembled equipment packages are available:
 ## Equipment Customization
 
 ### Weapon Modifications
+
 Characters can customize their weapons with special features:
 
 - **Balanced:** +1 to parry attempts (15 sp)
@@ -403,6 +451,7 @@ Characters can customize their weapons with special features:
 - **Reinforced:** +1 damage against armored opponents (20 sp)
 
 ### Armor Modifications
+
 Armor can be modified for specific advantages:
 
 - **Reinforced:** +1 damage reduction vs. one damage type (25 sp)
@@ -412,10 +461,10 @@ Armor can be modified for specific advantages:
 - **Decorated:** +1 to social checks with appropriate groups (10-50 sp)
 
 ### Cultural Variants
+
 Different cultures craft equipment with unique characteristics:
 
 - **Elven Craft:** -1 weight category, -1 damage (if weapon)
 - **Dwarven Make:** +1 durability, cannot be broken by critical fails
 - **Halfling Design:** Concealable, usable by smaller creatures without penalty
 - **Human Innovation:** One additional minor feature or property
-

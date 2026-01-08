@@ -1,9 +1,9 @@
-# Flow RPG Core Rules
+# Autumn Phoenix RPG Core Rules
 # Version: 1.0-complete
 # Last Updated: 2024
 
 metadata:
-  game_name: "Flow RPG"
+  game_name: "Autumn Phoenix RPG"
   version: "1.0-complete"
   complexity: "rules-moderate"
   dice_system: "2d6"
@@ -11,7 +11,7 @@ metadata:
     - "Elegance over complexity"
     - "Perceived simplicity over dumb-simple"
     - "Narrative-first with tactical depth option"
-    - "Flow as central unifying mechanic"
+    - "Momentum as central unifying mechanic"
     - "Fail-forward built into resolution"
     - "65% baseline success rate"
 
@@ -99,26 +99,26 @@ resolution_system:
     failure:
       range: "6 or less"
       effect: "Action fails"
-      flow_change: "+1 to opponent or creates consequence"
+      momentum_change: "+1 to opponent or creates consequence"
       narrative: "Complication or setback occurs"
     
     partial_success:
       range: "7-9"
       effect: "Success with cost or complication"
-      flow_change: "No automatic change"
+      momentum_change: "No automatic change"
       narrative: "Yes, but..."
     
     full_success:
       range: "10-12"
       effect: "Complete success as intended"
-      flow_change: "No automatic change"
+      momentum_change: "No automatic change"
       narrative: "Yes, and..."
     
     critical_success:
       base_threshold: 13
       scaling_rule: "13 + (total_modifier ÷ 3, rounded down)"
       effect: "Exceptional success with benefits"
-      flow_change: "+1 Flow to character"
+      momentum_change: "+1 Momentum to character"
       narrative: "Yes, and something exceptional"
 
       threshold_by_modifier:
@@ -152,13 +152,13 @@ resolution_system:
     enhanced_success:
       trigger: "Beat TN by 5+"
       effect: "Gain advantage on next roll"
-      flow_change: "Normal for tier"
+      momentum_change: "Normal for tier"
       narrative: "Minor narrative permission"
     
     legendary_success:
       trigger: "Beat TN by 8+"
       effect: "Major narrative impact"
-      flow_change: "+2 Flow total"
+      momentum_change: "+2 Momentum total"
       narrative: "Major narrative permission"
 
   advantage_disadvantage:
@@ -183,23 +183,23 @@ resolution_system:
       maximum: "Never roll more than 4d6 total"
 
 # ============================================
-# FLOW SYSTEM
+# MOMENTUM SYSTEM
 # ============================================
 
-flow_system:
+momentum_system:
   basics:
     range:
       minimum: -3
       maximum: 6
-    excess_rule: "Flow cannot exceed your maximum. Any excess Flow generation is lost."
-    stacking_rule: "You can gain Flow from multiple different triggers in the same round. Each trigger's 'once per round' limit applies separately."
+    excess_rule: "Momentum cannot exceed your maximum. Any excess Momentum generation is lost."
+    stacking_rule: "You can gain Momentum from multiple different triggers in the same round. Each trigger's 'once per round' limit applies separately."
     starting_flow: 0
     reset: "Between scenes"
     
   starting_exceptions:
-    none: "All callings now start at 0 Flow"
+    none: "All callings now start at 0 Momentum"
     
-  flow_states:
+  momentum_states:
     negative:
       range: [-3, -1]
       description: "Disrupted, struggling, disadvantage"
@@ -219,17 +219,17 @@ flow_system:
       range: [1, 3]
       description: "In the flow, momentum building"
       effects:
-        - "Can activate Flow techniques"
+        - "Can activate Momentum techniques"
         - "Narrative shows confidence"
     
     high_positive:
       range: [4, 6]
       description: "Perfect flow, commanding presence"
       effects:
-        - "Can activate advanced techniques (cost 3 Flow)"
+        - "Can activate advanced techniques (cost 3 Momentum)"
         - "Narrative shows mastery and confidence"
         - "Access to powerful narrative permissions"
-      design_note: "Removed '+1 to all rolls' bonus that stacked with +5 cap to create bounded accuracy issues. High Flow remains desirable for technique access without breaking math."
+      design_note: "Removed '+1 to all rolls' bonus that stacked with +5 cap to create bounded accuracy issues. High Momentum remains desirable for technique access without breaking math."
   
   generation_sources:
     universal:
@@ -243,7 +243,7 @@ flow_system:
         trigger: "Take any damage to Guard or Vitality"
         amount: 1
         limit: "Once per round"
-        note: "Limited to prevent excessive Flow generation from multiple hits"
+        note: "Limited to prevent excessive Momentum generation from multiple hits"
     
     stance_specific:
       aggressive:
@@ -288,7 +288,7 @@ flow_system:
   expenditure:
     enhance_roll:
       cost: 1
-      effect: "+1 to roll per Flow spent"
+      effect: "+1 to roll per Momentum spent"
       limit: "Maximum +3"
     
     combat_techniques:
@@ -305,7 +305,7 @@ flow_system:
     spells:
       tier_0_cantrip:
         cost: 0
-        note: "Flow-neutral magic"
+        note: "Momentum-neutral magic"
       tier_1_basic:
         cost: 0
       tier_2_advanced: 
@@ -354,7 +354,7 @@ scene_resolution:
         mixed: "Combine systems as needed"
     
     3_resolution:
-      flow_reset: "All Flow returns to 0"
+      momentum_reset: "All Momentum returns to 0"
       guard_recovery: "Full Guard restoration"
       consequences: "Apply lasting effects"
       experience: "Note for milestone consideration"
@@ -362,25 +362,25 @@ scene_resolution:
   scene_types:
     combat:
       typical_length: "3-5 rounds"
-      flow_range: [-3, 6]
+      momentum_range: [-3, 6]
       stance_based: true
       reference: "combat.yaml"
     
     social:
       typical_length: "3-7 exchanges"
-      flow_range: [-2, 4]
+      momentum_range: [-2, 4]
       stance_based: true
       uses_composure: true
     
     exploration:
       typical_length: "4-6 skill checks"
-      flow_range: [-1, 3]
+      momentum_range: [-1, 3]
       stance_based: false
       clock_based: true
     
     downtime:
       typical_length: "Narrative"
-      flow_range: [0, 1]
+      momentum_range: [0, 1]
       stance_based: false
       project_based: true
 
@@ -669,8 +669,8 @@ dice_conventions:
       stacks: true
   
   special_dice:
-    flow_die:
-      when: "Spending 3+ Flow on single roll"
+    momentum_die:
+      when: "Spending 3+ Momentum on single roll"
       effect: "Add 1d6 to roll"
       color: "Different color die"
     

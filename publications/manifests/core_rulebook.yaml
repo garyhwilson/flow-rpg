@@ -1,7 +1,7 @@
-# Flow RPG Core Rulebook Manifest
+# Autumn Phoenix RPG Core Rulebook Manifest
 # This defines the structure and content of the complete Core Rulebook
 
-title: "Flow RPG Core Rulebook"
+title: "Autumn Phoenix RPG Core Rulebook"
 version: "1.0 (Draft)"
 output_file: "publications/assembled/core_rulebook.md"
 
@@ -15,7 +15,7 @@ sections:
 
   # ===== PART I: INTRODUCTION & CORE RULES =====
   - title: "Part I: Core Rules"
-    intro: "These are the fundamental rules that power Flow RPG. Master these concepts and you'll be ready to play."
+    intro: "These are the fundamental rules that power Autumn Phoenix RPG. Master these concepts and you'll be ready to play."
     content:
       - file: "core_rules/01_introduction.md"
       - file: "core_rules/02_basic_mechanics.md"
@@ -81,7 +81,7 @@ sections:
 
   # ===== PART V: MAGIC SYSTEM =====
   - title: "Part V: Magic - The Art of Spellcasting"
-    intro: "Magic in Flow RPG is revolutionary—the same spell adapts to your approach, creating unique effects based on whether you cast with mind, awareness, will, or presence."
+    intro: "Magic in Autumn Phoenix RPG is revolutionary—the same spell adapts to your approach, creating unique effects based on whether you cast with mind, awareness, will, or presence."
     content:
       - file: "spells/00_introduction.md"
       - file: "spells/02_system_integration.md"
@@ -121,7 +121,7 @@ sections:
 
   # ===== PART VIII: GAME MASTER'S SECTION =====
   - title: "Part VIII: Running the Game"
-    intro: "This section provides Game Masters with the tools and guidance needed to run compelling Flow RPG adventures."
+    intro: "This section provides Game Masters with the tools and guidance needed to run compelling Autumn Phoenix RPG adventures."
     content:
       - file: "core_rules/08_gm_guide.md"
 

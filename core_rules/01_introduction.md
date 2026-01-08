@@ -7,14 +7,14 @@ Welcome to a tabletop roleplaying game that prioritizes narrative-first gameplay
 Every character in this game is defined by three core elements that work together to create a unique hero:
 
 1. **SPECIES** - Your heritage and ancestry (What you ARE)
-2. **ARCHETYPE** - Your training and profession (What you DO)  
+2. **ARCHETYPE** - Your training and profession (What you DO)
 3. **CALLING** - Your inner drive and motivation (WHY you adventure)
 
 This three-pillar approach creates 252 possible character combinations, each mechanically viable and narratively rich.
 
 ### What Makes This System Unique
 
-**Flow-Based Gameplay:** The Flow system unifies combat, magic, and dramatic scenes through a single resource economy that rises and falls throughout each encounter.
+**Momentum-Based Gameplay:** The Momentum system unifies combat, magic, and dramatic scenes through a single resource economy that rises and falls throughout each encounter.
 
 **Stance-Based Combat:** No traditional initiative system - your tactical choices determine when you act through an elegant stance system that rewards positioning and strategy.
 
@@ -29,8 +29,7 @@ This system is built on the following principles:
 - **Elegance over complexity**
 - **Perceived simplicity over dumb-simple**
 - **Narrative-first with tactical depth option**
-- **Flow as central unifying mechanic**
+- **Momentum as central unifying mechanic**
 - **Fail-forward built into resolution**
 - **65% baseline success rate**
 - **Rules-moderate** (less complex than D&D 5e)
-

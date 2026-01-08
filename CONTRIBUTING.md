@@ -1,15 +1,17 @@
-# Contributing to Flow RPG
+# Contributing to Autumn Phoenix RPG
 
-Thank you for your interest in Flow RPG! This document provides guidelines for contributing to the project through playtesting, feedback, and suggestions.
+Thank you for your interest in Autumn Phoenix RPG! This document provides guidelines for contributing to the project through playtesting, feedback, and suggestions.
 
 ---
 
 ## 🎲 How to Contribute
 
-There are several ways to help improve Flow RPG:
+There are several ways to help improve Autumn Phoenix RPG:
 
 ### 1. Playtesting
+
 Run games and provide feedback on:
+
 - Character creation experience
 - Combat balance
 - Magic system functionality
@@ -17,21 +19,27 @@ Run games and provide feedback on:
 - Overall fun factor
 
 ### 2. Feedback & Suggestions
+
 Share your thoughts on:
+
 - Rule clarity
 - Balance issues
 - Missing content
 - Quality of life improvements
 
 ### 3. Bug Reports
+
 Report issues like:
+
 - Rule contradictions
 - Math errors
 - Typos and formatting
 - Broken cross-references
 
 ### 4. Documentation
+
 Help improve:
+
 - Clarity of explanations
 - Examples and scenarios
 - Quick reference materials
@@ -44,30 +52,34 @@ Help improve:
 ### Before Your Session
 
 1. **Read the Core Rules**
+
    - Generate the Core Rulebook (see README.md)
    - Or browse modular files in `drafts/`
    - Focus on systems you'll use
 
 2. **Create Characters**
+
    - Test character creation process
    - Note any unclear steps
    - Try different combinations (calling + archetype + species)
 
 3. **Prepare Your Session**
-   - Plan encounters using the Flow economy
+   - Plan encounters using the Momentum economy
    - Consider different combat scenarios
    - Include magic use if relevant
 
 ### During Your Session
 
 **Track these areas:**
-- Flow generation and spending
+
+- Momentum generation and spending
 - Spell usage and attribute choices
 - Calling benefit triggers
 - Combat pacing and stance changes
 - Any rules questions that arise
 
 **Keep notes on:**
+
 - What worked well
 - What felt confusing
 - What seemed overpowered/underpowered
@@ -92,6 +104,7 @@ Use GitHub Issues for bug reports and suggestions.
 **Type:** [Rule Error / Typo / Balance Issue / Other]
 
 **Location:**
+
 - File: [e.g., drafts/spells/spell_tiers/cantrips.md]
 - Section: [e.g., "Spark - Mind + Sorcery"]
 - Line: [if known]
@@ -131,9 +144,10 @@ Use GitHub Issues for bug reports and suggestions.
 Copy this template for playtest reports:
 
 ```markdown
-# Flow RPG Playtest Report
+# Autumn Phoenix RPG Playtest Report
 
 ## Session Information
+
 - **Date:** [Date of session]
 - **GM:** [Your name]
 - **Players:** [Number of players]
@@ -141,19 +155,25 @@ Copy this template for playtest reports:
 - **Character Levels:** [Milestone levels]
 
 ## Party Composition
+
 List each PC:
+
 - **Character Name:** [Name] - [Calling] [Archetype] [Species]
   - Notable build choices: [Key attributes, signature spells, etc.]
 
 ## Scenarios Tested
+
 What did you do in the session?
+
 - Combat encounters (how many, against what?)
 - Social encounters
 - Exploration
 - Other activities
 
 ## Systems Used
+
 Which systems got tested?
+
 - [ ] Character Creation
 - [ ] Basic Mechanics (2d6 rolls)
 - [ ] Combat System & Stances
@@ -163,55 +183,73 @@ Which systems got tested?
 - [ ] Advancement (if applicable)
 
 ## What Worked Well ✅
+
 What felt good? What did players enjoy?
 
 Examples:
+
 - "The flexible casting system was a hit - players loved choosing different attributes"
-- "Flow economy created great tactical tension"
+- "Momentum economy created great tactical tension"
 - "Callings made characters feel unique beyond mechanics"
 
 ## What Felt Off ⚠️
+
 What seemed problematic? What confused players?
 
 Examples:
+
 - "Guard scaling made later combats trivial"
-- "Will casting at negative Flow felt too powerful"
+- "Will casting at negative Momentum felt too powerful"
 - "Wasn't clear when calling benefits triggered"
 
 ## Balance Observations
+
 Any balance issues?
 
 **Overpowered:**
+
 - [What seemed too strong?]
 
 **Underpowered:**
+
 - [What seemed too weak?]
 
 **Just Right:**
+
 - [What felt balanced?]
 
 ## Rules Questions
+
 Questions that came up during play:
+
 1. [Question about how X works]
 2. [Unclear interaction between Y and Z]
 
 ## House Rules Used
+
 Any modifications you made:
+
 - [Rule change and why]
 
 ## Player Feedback
+
 Direct quotes or summaries from players:
+
 - "This was fun because..."
 - "I didn't like..."
 - "I wish..."
 
 ## Specific Examples
+
 Concrete examples of play:
+
 - **Cool Moment:** [Describe awesome thing that happened]
 - **Problem Moment:** [Describe problematic situation]
 
 ## Overall Rating
+
 Rate each area (1-5, where 5 is excellent):
+
 - **Fun Factor:** [ /5]
 - **Rule Clarity:** [ /5]
 - **Balance:** [ /5]
@@ -219,11 +257,14 @@ Rate each area (1-5, where 5 is excellent):
 - **Would play again:** [Yes/No/Maybe]
 
 ## Suggestions
+
 Specific recommendations for improvement:
+
 1. [Suggestion]
 2. [Suggestion]
 
 ## Additional Notes
+
 Anything else worth mentioning?
 ```
 
@@ -232,6 +273,7 @@ Anything else worth mentioning?
 ## 💡 Suggesting Changes
 
 ### Good Suggestions Include:
+
 - **Problem Statement:** What's not working?
 - **Evidence:** Playtesting experience, examples, math
 - **Proposed Solution:** Specific suggestion
@@ -247,6 +289,7 @@ Anything else worth mentioning?
 > **Proposed Solution:** Cap Guard bonus from attributes at +3, or introduce armor penetration for high-level enemies.
 >
 > **Alternatives:**
+>
 > - Scale enemy attack bonuses more aggressively
 > - Add "touch attack" spells that bypass armor
 > - Diminishing returns on Guard stacking
@@ -268,7 +311,8 @@ Anything else worth mentioning?
 
 ### Version Control
 
-Flow RPG uses Git for version control:
+Autumn Phoenix RPG uses Git for version control:
+
 - **Main branch:** Stable, tested content
 - **Feature branches:** Experimental changes
 - **Releases:** Major milestones (v0.1, v0.2, v1.0, etc.)
@@ -280,19 +324,23 @@ Flow RPG uses Git for version control:
 If contributing content (advanced contributors):
 
 ### Writing Style
+
 - **Clear and Concise:** Short sentences, active voice
 - **Consistent Terminology:** Use established terms
 - **Examples Included:** Provide concrete examples
 - **Cross-Referenced:** Link to related sections
 
 ### Formatting
+
 - **Markdown:** Use standard markdown
 - **Headers:** Consistent hierarchy (# ## ###)
 - **Lists:** Use for readability
 - **Tables:** For quick reference data
 
 ### Structure
+
 Follow the established modular structure:
+
 ```
 system_name/
 ├── 00_introduction.md
@@ -310,18 +358,21 @@ system_name/
 Currently seeking feedback on:
 
 ### High Priority
+
 - [ ] **Guard Scaling** - Balance at high levels
 - [ ] **Halfling Weapon Damage** - Viability in combat
-- [ ] **Will Casting** - Negative Flow casting balance
+- [ ] **Will Casting** - Negative Momentum casting balance
 - [ ] **Scholar Calling** - Retroactive dice benefit
 
 ### Medium Priority
+
 - [ ] Magic access requirements (Mind + Awareness ≥ +2)
 - [ ] Stance/Calling interactions
 - [ ] Spell balance across tiers
 - [ ] Equipment pricing
 
 ### Low Priority (Future)
+
 - [ ] Additional archetypes
 - [ ] More spells
 - [ ] Monster creation system
@@ -334,24 +385,28 @@ Currently seeking feedback on:
 ### Our Standards
 
 **Positive Environment:**
+
 - Be respectful and constructive
 - Focus on the game, not personalities
 - Welcome diverse perspectives
 - Assume good faith
 
 **Constructive Feedback:**
+
 - Be specific and actionable
 - Provide evidence when possible
 - Suggest solutions, not just problems
 - Acknowledge what works well
 
 **Collaborative Spirit:**
+
 - Build on others' ideas
 - Give credit where due
 - Help newcomers
 - Share your expertise
 
 **Not Acceptable:**
+
 - Personal attacks
 - Harassment or discrimination
 - Trolling or deliberate disruption
@@ -370,6 +425,7 @@ Currently seeking feedback on:
 ## 🙏 Recognition
 
 Contributors will be acknowledged in:
+
 - README.md acknowledgments section
 - Published game credits (if applicable)
 - Release notes for significant contributions
@@ -379,13 +435,14 @@ Contributors will be acknowledged in:
 ## ⚖️ Legal
 
 By contributing, you agree that:
-- Your contributions may be included in Flow RPG
+
+- Your contributions may be included in Autumn Phoenix RPG
 - You have the right to submit the contribution
 - Your contribution will be licensed under the project's license
 - You retain copyright to your contributions
 
 ---
 
-**Thank you for helping make Flow RPG better!**
+**Thank you for helping make Autumn Phoenix RPG better!**
 
-*Every playtest session, bug report, and suggestion helps create a better game for everyone.*
+_Every playtest session, bug report, and suggestion helps create a better game for everyone._

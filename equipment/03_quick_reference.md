@@ -2,14 +2,14 @@
 
 ## Weapon Categories At-a-Glance
 
-| Category | Damage | Special Property | Best For |
-|----------|--------|------------------|----------|
-| Light | 2d6 | +1 to Finesse actions | Rogues, dual-wielders, spellcasters |
-| Medium | 2d6+1 | None | Versatile fighters, stance-switchers |
-| Heavy | 2d6+2 | -1 Grace penalty | Might-focused damage dealers |
-| Reach | 2d6 | Attack from Close range | Zone control, defensive fighters |
-| Thrown | 2d6 | +1 Flow when thrown (Close) | Mobile skirmishers, openers |
-| Ranged | 2d6 | +1 damage at Far, -2 Engaged | Ranged specialists, hunters |
+| Category | Damage | Special Property                | Best For                             |
+| -------- | ------ | ------------------------------- | ------------------------------------ |
+| Light    | 2d6    | +1 to Finesse actions           | Rogues, dual-wielders, spellcasters  |
+| Medium   | 2d6+1  | None                            | Versatile fighters, stance-switchers |
+| Heavy    | 2d6+2  | -1 Grace penalty                | Might-focused damage dealers         |
+| Reach    | 2d6    | Attack from Close range         | Zone control, defensive fighters     |
+| Thrown   | 2d6    | +1 Momentum when thrown (Close) | Mobile skirmishers, openers          |
+| Ranged   | 2d6    | +1 damage at Far, -2 Engaged    | Ranged specialists, hunters          |
 
 ### Common Weapon Properties
 
@@ -22,12 +22,12 @@
 
 ## Armor Categories At-a-Glance
 
-| Category | DR | Grace Penalty | Casting Penalty | Other Effects |
-|----------|----|--------------|-----------------|-----------------|
-| None | 0 | None | None | - |
-| Light | -1 | None | -1 Sorcery | - |
-| Medium | -2 | -1 | -2 Sorcery | No Flow from movement |
-| Heavy | -4 | -2 | Cannot cast | Cannot use Aggressive stance |
+| Category | DR  | Grace Penalty | Casting Penalty | Other Effects                |
+| -------- | --- | ------------- | --------------- | ---------------------------- |
+| None     | 0   | None          | None            | -                            |
+| Light    | -1  | None          | -1 Sorcery      | -                            |
+| Medium   | -2  | -1            | -2 Sorcery      | No Momentum from movement    |
+| Heavy    | -4  | -2            | Cannot cast     | Cannot use Aggressive stance |
 
 ### Shields
 
@@ -50,12 +50,14 @@
 ## Common Equipment Prices
 
 ### Weapons
+
 - Light weapons: 5-10 sp
 - Medium weapons: 10-15 sp
 - Heavy weapons: 20-30 sp
 - Ranged weapons: 15-25 sp
 
 ### Armor
+
 - Light armor: 20-40 sp
 - Medium armor: 40-80 sp
 - Heavy armor: 100-200 sp
@@ -64,6 +66,7 @@
 - Tower shield: 20 sp
 
 ### Essential Adventuring Gear
+
 - Backpack: 2 sp
 - Rope (50ft): 5 sp
 - Torches (10): 1 sp
@@ -72,6 +75,7 @@
 - Healing kit: 5 sp
 
 ### Lifestyle Costs (per day)
+
 - Destitute: Free
 - Poor: 1 sp
 - Modest: 2 sp
@@ -82,34 +86,41 @@
 ## Equipment Packages
 
 ### Dungeon Delver (20 sp)
+
 Backpack, rope, grappling hook, torches, flint & steel, rations, waterskin, bedroll, hammer, iron spikes, chalk
 
 ### Wilderness Explorer (30 sp)
+
 Backpack, tent, bedroll, flint & steel, fishing kit, hunting trap, rations, waterskin, compass, clothes, survival kit
 
 ### Urban Agent (40 sp)
+
 Fine clothes, common clothes, disguise kit, ink & quill, parchment, scroll case, mirror, pouch, candles, perfume
 
 ### Scholar's Package (35 sp)
+
 Backpack, ink & quill, parchment, scroll cases, reference book, magnifying glass, measuring tools, maps, lantern, oil
 
 ## Common Magical Items
 
 ### Potions
+
 - Healing Potion (2d6 Vitality): 50 sp
-- Flow Elixir (+2 Flow for scene): 75 sp
+- Momentum Elixir (+2 Momentum for scene): 75 sp
 - Clarity Draught (Advantage on Mind rolls): 40 sp
 
 ### Enchanted Equipment
+
 - +1 Weapon/Armor: 250 sp
 - +2 Weapon/Armor: 500 sp
 - +3 Weapon/Armor: 1000 sp
 
-### Flow Items
-- Flow Crystal (Minor, stores 1 Flow): 150 sp
+### Momentum Items
+
+- Momentum Crystal (Minor, stores 1 Momentum): 150 sp
 - Stance Bracers (free switch once/scene): 200 sp
 - Resonant Weapon (crit on 12+): 250 sp
-- Focus Band (recover 1 Flow at 0): 175 sp
+- Focus Band (recover 1 Momentum at 0): 175 sp
 
 ## Weapon Modifications
 
@@ -137,7 +148,7 @@ Backpack, ink & quill, parchment, scroll cases, reference book, magnifying glass
 ## Encumbrance Rules
 
 **Carrying Capacity**: 8 + Might modifier significant items
-**Encumbered**: Reduced movement, disadvantage on mobility checks, no Flow from movement
+**Encumbered**: Reduced movement, disadvantage on mobility checks, no Momentum from movement
 **Maximum**: Double comfortable capacity
 
 **Significant Items**: Weapons, armor, substantial tools
@@ -152,36 +163,44 @@ Most adventurers start with standard equipment and acquire better gear through a
 ## Archetype Starting Equipment
 
 ### Fighter
+
 Weapon of choice, shield or second weapon, medium/heavy armor, adventuring pack, whetstone
 
 ### Ranger
+
 Bow and arrows, light melee weapon, light armor, wilderness explorer package, animal lure
 
 ### Paladin
+
 Medium weapon, shield, medium/heavy armor, holy symbol, prayer book, adventuring pack
 
 ### Rogue
+
 Two light weapons, leather armor, thieves' tools, urban agent package, smoke bombs
 
 ### Wizard
+
 Staff or dagger, robes, spellbook, component pouch, scholar's package, ritual chalk
 
 ### Cleric
+
 Medium weapon, shield, medium armor, holy symbol, prayer beads, healer's kit
 
 ### Bard
+
 Light weapon, leather armor, quality instrument, fine clothes, performance gear
 
-## Flow and Equipment Interactions
+## Momentum and Equipment Interactions
 
-**Generate Flow**: Using the right tool effectively
-**Spend Flow**: Enhance equipment beyond normal limits
-**Flow Restrictions**: Some equipment limits Flow generation
-**Flow Techniques**: Special maneuvers with specific equipment
+**Generate Momentum**: Using the right tool effectively
+**Spend Momentum**: Enhance equipment beyond normal limits
+**Momentum Restrictions**: Some equipment limits Momentum generation
+**Momentum Techniques**: Special maneuvers with specific equipment
 
 ## Equipment Maintenance
 
 Equipment generally doesn't require detailed tracking, but extended adventuring without access to proper care might impose:
+
 - Disadvantage on certain checks
 - Reduced effectiveness
 - Need for repair before regaining full function
@@ -191,6 +210,7 @@ Quality equipment is more resilient to these effects.
 ## Quick Selection Guide
 
 ### For New Players
+
 1. Choose weapon based on combat style preference
 2. Select armor balancing protection vs. mobility needs
 3. Pick equipment package matching adventure type
@@ -206,6 +226,7 @@ Quality equipment is more resilient to these effects.
 **Versatile Adventurer**: Light weapons, light/medium armor, utility items
 
 ### Spellcaster Considerations
+
 - Light/no armor for full casting ability
 - Elven characters can use light armor more effectively
 - Medium armor viable for clerics/paladins

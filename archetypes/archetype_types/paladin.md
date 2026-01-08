@@ -1,5 +1,6 @@
 # Paladin
-*Channeling Conviction into Protective Capabilities, Standing as Bulwarks Against Threats*
+
+_Channeling Conviction into Protective Capabilities, Standing as Bulwarks Against Threats_
 
 ## Archetype Essence
 
@@ -42,62 +43,70 @@ Most Paladins develop at least moderate scores in Will and either Might or Prese
 Paladins begin with the following skill proficiencies, reflecting their specialized training in principle-guided combat and protective service:
 
 **Professional (+1):**
+
 - Command (inspirational leadership, authoritative presence, and decisive direction)
 
 **Competent (+0):**
+
 - Combat (martial techniques, defensive positioning, and protective tactics)
 
 **Novice (-1):**
+
 - Medicine (treatment of battle injuries, particularly for protected individuals)
 - Sorcery (divine magic channeling for protective and smiting effects)
 
 **Special Ability:**
+
 - **Divine Spellcasting:** Can cast divine spells regardless of attributes (archetype training overrides normal spellcasting requirements)
 
 **Archetype Feature - Divine Grace:**
+
 - +1 to all saving rolls
 - +4 Guard (divine protection)
-- Start each scene at +1 Flow
+- Start each scene at +1 Momentum
 - Ignore first point of armor penalty to divine spellcasting
 
 **Additional Skills:**
+
 - Choose three additional skills at Basic/Untrained level reflecting background and cultural training
 
 Paladins are typically Untrained in deceptive practices, self-serving activities, or any skills contradicting their sworn principles unless their background specifically includes exposure to these areas before taking their oaths.
 
-### Flow Mechanics
+### Momentum Mechanics
 
-Paladins interact with the Flow resource through principled action and oath fulfillment:
+Paladins interact with the Momentum resource through principled action and oath fulfillment:
 
-**Flow Generation:**
-- Acting in accordance with sworn principles despite personal cost (+1 Flow)
-- Successfully protecting vulnerable individuals or values (+1 Flow)
-- Confronting significant threats to sacred principles (+1 Flow)
-- Inspiring others through principled example (+1 Flow)
-- Overcoming temptations to compromise core values (+2 Flow)
+**Momentum Generation:**
 
-**Flow Expenditure:**
+- Acting in accordance with sworn principles despite personal cost (+1 Momentum)
+- Successfully protecting vulnerable individuals or values (+1 Momentum)
+- Confronting significant threats to sacred principles (+1 Momentum)
+- Inspiring others through principled example (+1 Momentum)
+- Overcoming temptations to compromise core values (+2 Momentum)
+
+**Momentum Expenditure:**
+
 - Manifesting oath-bound power (costs vary by manifestation type)
-- Enhancing protective capabilities (+1 Flow for additional effect)
-- Establishing sanctified spaces (+1 Flow for area protection)
-- Detecting threats to protected principles (+1 Flow for enhanced perception)
-- Manifesting extraordinary oath fulfillment (+2 Flow for significant effects)
+- Enhancing protective capabilities (+1 Momentum for additional effect)
+- Establishing sanctified spaces (+1 Momentum for area protection)
+- Detecting threats to protected principles (+1 Momentum for enhanced perception)
+- Manifesting extraordinary oath fulfillment (+2 Momentum for significant effects)
 
-Paladins typically maintain stable Flow reserves through consistent adherence to principles, then spend it on manifestations of their oath-bound power during moments of critical need. This pattern reflects their approach of steadfast preparation followed by decisive action when principles face genuine threat.
+Paladins typically maintain stable Momentum reserves through consistent adherence to principles, then spend it on manifestations of their oath-bound power during moments of critical need. This pattern reflects their approach of steadfast preparation followed by decisive action when principles face genuine threat.
 
 ### Signature Techniques
 
 Paladins develop specialized techniques reflecting their oath-bound approach to protection:
 
-**Protective Interposition (Flow +1):** Place yourself between danger and vulnerable individuals, channeling oath power into enhanced defensive capabilities. This technique exemplifies the Paladin's core role as physical manifestation of protective principles.
+**Protective Interposition (Momentum +1):** Place yourself between danger and vulnerable individuals, channeling oath power into enhanced defensive capabilities. This technique exemplifies the Paladin's core role as physical manifestation of protective principles.
 
-**Smite (Flow +2):** Channel conviction directly into overwhelming attack against threats to sworn principles, manifesting righteous judgment through focused combat application. This technique demonstrates the Paladin's capability to serve as both judge and executioner when principles demand direct opposition.
+**Smite (Momentum +2):** Channel conviction directly into overwhelming attack against threats to sworn principles, manifesting righteous judgment through focused combat application. This technique demonstrates the Paladin's capability to serve as both judge and executioner when principles demand direct opposition.
 
-**Oath Presence (Flow +1):** Manifest the spiritual weight of sworn principles, enhancing social authority through genuine conviction. This technique reflects the Paladin's status as living embodiment of abstract values made tangible through personal commitment.
+**Oath Presence (Momentum +1):** Manifest the spiritual weight of sworn principles, enhancing social authority through genuine conviction. This technique reflects the Paladin's status as living embodiment of abstract values made tangible through personal commitment.
 
-**Sanctifying Aura (Flow +2):** Extend protective influence beyond personal boundaries, creating consecrated space that strengthens allies while hindering malevolent forces. This technique illustrates the Paladin's ability to transform surrounding environment through projected conviction.
+**Sanctifying Aura (Momentum +2):** Extend protective influence beyond personal boundaries, creating consecrated space that strengthens allies while hindering malevolent forces. This technique illustrates the Paladin's ability to transform surrounding environment through projected conviction.
 
-**Unwavering Resolve (Flow +1):** Maintain effectiveness despite overwhelming adversity through perfect alignment with sworn principles. This technique showcases the Paladin's defining characteristic—their capacity to continue functioning through challenges that would break individuals lacking their moral clarity.
+**Unwavering Resolve (Momentum +1):** Maintain effectiveness despite overwhelming adversity through perfect alignment with sworn principles. This technique showcases the Paladin's defining characteristic—their capacity to continue functioning through challenges that would break individuals lacking their moral clarity.
 
 ## Cultural Variations
 
@@ -108,6 +117,7 @@ The Paladin archetype manifests differently across cultures, creating distinctiv
 Dwarven Paladins approach oaths as unbreakable contracts with absolute binding power transcending personal circumstances or changing conditions. Their traditions emphasize perfect fulfillment of sworn obligations without qualification or exception, creating reputation for absolute reliability regardless of circumstance.
 
 Distinctive features include:
+
 - Formalized oath ceremonies creating binding commitments witnessed by community
 - Runic inscription of personal oaths upon armor or weapons as constant reminder
 - Generational oath traditions passing specific commitments through family lines
@@ -119,6 +129,7 @@ Distinctive features include:
 Elven Paladins develop protection approaches focused on maintaining natural balance and harmonious relationships against corrupting influences. Their traditions incorporate centuries of ecological understanding, creating defensive systems perceiving subtle imbalances before they manifest as obvious threats.
 
 Distinctive features include:
+
 - Cyclical renewal of oath commitments aligned with seasonal transitions
 - Integration of natural elements within armor and weapon design
 - Meditative disciplines enhancing perception of environmental harmony
@@ -130,6 +141,7 @@ Distinctive features include:
 Human Paladins typically establish formalized orders with institutional structures, recruitment systems, and territorial responsibilities. Their traditions emphasize visible manifestations of oath-bound power, creating unmistakable demonstrations of principle-driven authority within chaotic environments.
 
 Distinctive features include:
+
 - Distinctive heraldry identifying specific order affiliations and rank
 - Formalized progression through oath-development stages
 - Public ceremonies demonstrating commitment through visible sacrifice
@@ -141,6 +153,7 @@ Distinctive features include:
 Halfling Paladins develop protective traditions focused on community safety, household defense, and maintaining peaceful environments for family flourishing. Their approach transforms apparent physical limitations into specialized defensive advantages through determination and clever tactical application.
 
 Distinctive features include:
+
 - Oath ceremonies integrated with community celebratory events
 - Defensive techniques specialized for protecting non-combatants
 - Equipment designed for extended vigilance rather than brief intensive combat
@@ -400,6 +413,7 @@ Paladins develop distinctive interactions with other archetypes, creating specia
 This combination integrates oath-bound purpose with combat mastery, creating practitioners who elevate martial skill through principled application. These individuals transform ordinary combat capability into sacred duty through dedicated purpose, bringing moral clarity to battlefield chaos through disciplined focus.
 
 **Key Synergies:**
+
 - Principled combat methodology maintaining ethical standards during conflict
 - Tactical leadership providing moral foundation for military operations
 - Enhanced physical training sustaining protective capability
@@ -407,6 +421,7 @@ This combination integrates oath-bound purpose with combat mastery, creating pra
 - Battle resilience supported by unwavering conviction
 
 **Distinctive Challenges:**
+
 - Reconciling efficient combat techniques with ethical constraints
 - Maintaining principle consistency across diverse battlefield situations
 - Developing appropriate restraint alongside enhanced combat capability
@@ -418,6 +433,7 @@ This combination integrates oath-bound purpose with combat mastery, creating pra
 This combination integrates oath-bound protection with divine communion, creating practitioners who manifest sacred defense through theological authority. These individuals represent divine principles through physical embodiment, connecting abstract spiritual concepts with tangible protective action in perfect theological integration.
 
 **Key Synergies:**
+
 - Sanctified protection drawing directly on divine power sources
 - Ritual expertise enhancing protective consecrations through theological precision
 - Comprehensive spiritual understanding supporting principled judgment
@@ -425,6 +441,7 @@ This combination integrates oath-bound protection with divine communion, creatin
 - Enhanced healing capability addressing consequences of protection failures
 
 **Distinctive Challenges:**
+
 - Balancing institutional religious responsibility with protective obligations
 - Reconciling diverse theological interpretations of similar principles
 - Managing extraordinary expectations from communities regarding divine capabilities
@@ -436,6 +453,7 @@ This combination integrates oath-bound protection with divine communion, creatin
 This combination integrates oath-bound dedication with arcane methodology, creating practitioners who apply systematic magical understanding within ethical frameworks. These individuals develop controlled applications of powerful forces through disciplined constraint, bringing moral clarity to potentially corrupting power through principled channeling.
 
 **Key Synergies:**
+
 - Ethical magical application determining appropriate power utilization
 - Protective enchantments enhancing defensive capabilities
 - Analytical understanding applying systematic approach to principle clarification
@@ -443,6 +461,7 @@ This combination integrates oath-bound dedication with arcane methodology, creat
 - Comprehensive protection addressing both physical and arcane dangers
 
 **Distinctive Challenges:**
+
 - Resisting temptation toward convenient magical shortcuts violating principles
 - Developing appropriate constraints for inherently dangerous capabilities
 - Reconciling traditional oath systems with evolving magical understanding
@@ -454,6 +473,7 @@ This combination integrates oath-bound dedication with arcane methodology, creat
 This combination integrates oath-bound purpose with infiltration capability, creating practitioners who extend protective influence into environments inaccessible to conventional approaches. These individuals apply firm principles through adaptable methods, bringing ethical clarity to ambiguous situations through discerning application.
 
 **Key Synergies:**
+
 - Expanded protection reaching populations beyond conventional access
 - Enhanced intelligence gathering supporting preventative protection
 - Discriminating judgment navigating morally complex environments
@@ -461,6 +481,7 @@ This combination integrates oath-bound purpose with infiltration capability, cre
 - Undercover capability extending influence without visible presence
 
 **Distinctive Challenges:**
+
 - Determining appropriate deception boundaries without principle compromise
 - Maintaining ethical clarity while operating within corrupt environments
 - Developing legitimate trust with populations suspicious of conventional authority
@@ -482,6 +503,7 @@ The Paladin archetype supports diverse interpretations creating distinctive char
 **Motivations:** Prevents harm similar to personal past actions. Demonstrates genuine transformation possibility through living example. Creates meaning from previous failure through constructive service rather than mere regret.
 
 **Distinctive Elements:**
+
 - Deep understanding of specific temptation patterns from personal experience
 - Unusual compassion toward those experiencing moral struggles
 - Principle commitment deriving strength directly from past failure
@@ -501,6 +523,7 @@ The Paladin archetype supports diverse interpretations creating distinctive char
 **Motivations:** Maintains ancestral honor through continued principled service. Adapts traditional commitments to contemporary challenges without compromising core values. Preserves accumulated family wisdom through active application rather than mere historical reverence.
 
 **Distinctive Elements:**
+
 - Inherited equipment carrying ancestral modifications and historical significance
 - Comprehensive understanding of tradition development through family narratives
 - Distinctive training incorporating specialized techniques refined across generations
@@ -520,6 +543,7 @@ The Paladin archetype supports diverse interpretations creating distinctive char
 **Motivations:** Demonstrates transformative possibility through personal example. Engages former allies with uniquely informed perspective. Brings comprehensive understanding of opposition thinking to current protective service.
 
 **Distinctive Elements:**
+
 - Intimate knowledge of opposition methodology from direct experience
 - Persuasive capability derived from personal credibility regarding both perspectives
 - Specialized approach addressing particular misconceptions based on former beliefs
@@ -539,6 +563,7 @@ The Paladin archetype supports diverse interpretations creating distinctive char
 **Motivations:** Ensures absolute safety for specific protection subject. Develops comprehensive security addressing unique vulnerability factors. Represents broader principles through perfect fulfillment of focused responsibility.
 
 **Distinctive Elements:**
+
 - Specialized threat assessment focused on protection subject's specific vulnerabilities
 - Intimate knowledge of protection subject beyond general understanding
 - Equipment customization addressing particular protection challenges
@@ -558,6 +583,7 @@ The Paladin archetype supports diverse interpretations creating distinctive char
 **Motivations:** Demonstrates principle viability through practical embodiment. Inspires principle adoption by others through visible benefits rather than intellectual argument. Creates aspirational model raising community standards through exemplary conduct.
 
 **Distinctive Elements:**
+
 - Perfect behavioral consistency regarding specific principle manifestation
 - Inspirational presence naturally drawing others toward emulation
 - Public commitment creating accountability through visibility

@@ -1,4 +1,4 @@
-# Flow RPG Combat System
+# Autumn Phoenix RPG Combat System
 # Version: 1.0-complete
 # Combat mechanics, stances, techniques, and health
 
@@ -6,7 +6,7 @@ combat_system:
   overview:
     typical_length: "3-5 rounds"
     turn_structure: "Stance-based initiative"
-    flow_importance: "Central to all combat actions"
+    momentum_importance: "Central to all combat actions"
     zones: "Abstract positioning system"
 
 # ============================================
@@ -21,7 +21,7 @@ stances:
 
     turn_order: 1
 
-    flow_generation:
+    momentum_generation:
       successful_attack: 1
       note: "Removed charging bonus for balance"
 
@@ -37,9 +37,9 @@ stances:
 
     special_ability:
       name: "Overwhelming Assault"
-      effect: "Critical hits generate +1 additional Flow"
+      effect: "Critical hits generate +1 additional Momentum"
 
-    tactical_notes: "High risk, high reward - generates Flow through decisive action"
+    tactical_notes: "High risk, high reward - generates Momentum through decisive action"
 
     restrictions:
       heavy_armor: "None - all armor types can use aggressive stance"
@@ -51,7 +51,7 @@ stances:
 
     turn_order: 2
 
-    flow_generation:
+    momentum_generation:
       excellence:
         trigger: "Any roll of 8+ (natural, before modifiers)"
         amount: 1
@@ -69,7 +69,7 @@ stances:
       name: "Tactical Flexibility"
       effect: "Once per combat, switch stance as free action"
 
-    tactical_notes: "Rewards skill and adaptability - no bonuses or penalties, but generates Flow from excellence and can adjust to changing battlefield conditions"
+    tactical_notes: "Rewards skill and adaptability - no bonuses or penalties, but generates Momentum from excellence and can adjust to changing battlefield conditions"
 
     advantages:
       - "Most versatile option"
@@ -83,12 +83,12 @@ stances:
 
     turn_order: 3
     
-    flow_generation:
+    momentum_generation:
       being_attacked:
         trigger: "Targeted by attack"
         amount: 1
         limit: "Once per round total (not per attacker)"
-        note: "First time you're attacked each round, gain +1 Flow regardless of how many attackers"
+        note: "First time you're attacked each round, gain +1 Momentum regardless of how many attackers"
       successful_defense:
         trigger: "Successfully defend"
         amount: 1
@@ -107,7 +107,7 @@ stances:
       name: "Perfect Counter"
       effect: "On critical defense success, make free counterattack"
 
-    tactical_notes: "Generates Flow reliably through being targeted - turns enemy aggression into resource advantage while protecting yourself and allies"
+    tactical_notes: "Generates Momentum reliably through being targeted - turns enemy aggression into resource advantage while protecting yourself and allies"
 
 stance_interactions:
   switching:
@@ -119,7 +119,7 @@ stance_interactions:
   stance_dancing:
     description: "Advanced technique of switching stances tactically"
     requirements: "Moderate milestone technique"
-    benefit: "Switch stance as reaction for 1 Flow"
+    benefit: "Switch stance as reaction for 1 Momentum"
   
   team_tactics:
     formation_fighting:
@@ -127,7 +127,7 @@ stance_interactions:
       benefit: "+1 to all rolls"
     
     complementary_stances:
-      aggressive_defensive: "Aggressive draws attacks, Defensive generates Flow"
+      aggressive_defensive: "Aggressive draws attacks, Defensive generates Momentum"
       balanced_support: "Balanced switches to fill gaps"
 
 # ============================================
@@ -150,7 +150,7 @@ zones:
       description: "Throwing range, near combat"
       weapon_use:
         melee: "Cannot attack"
-        thrown: "+1 Flow on hit"
+        thrown: "+1 Momentum on hit"
         ranged: "Normal"
       movement: "Can engage or stay at range"
     
@@ -297,7 +297,7 @@ damage_resolution:
 
     effect_in_combat:
       damage: "Roll damage normally, then add +1d6 bonus damage"
-      flow: "+1 Flow as normal for critical success"
+      momentum: "+1 Momentum as normal for critical success"
       narrative: "Describe exceptional impact"
 
     important_note: "Critical hits do NOT double damage dice"
@@ -406,9 +406,9 @@ armor:
     damage_reduction: 0
     penalties:
       grace: 0
-      flow: "None"
+      momentum: "None"
     benefits:
-      flow_generation: "+1 when taking damage"
+      momentum_generation: "+1 when taking damage"
       spellcasting: "+1 to Sorcery checks"
       movement: "+1 zone per turn"
     description: "Maximum mobility and magical attunement"
@@ -417,7 +417,7 @@ armor:
     damage_reduction: 1
     penalties:
       grace: 0
-      flow: "None"
+      momentum: "None"
       spellcasting: 0
     benefits:
       initiative: "+1 to act sooner in stance"
@@ -429,7 +429,7 @@ armor:
     damage_reduction: 2
     penalties:
       grace: -1
-      flow: "None"
+      momentum: "None"
       spellcasting: 0
     benefits:
       guard: "+2 Guard at scene start"
@@ -441,7 +441,7 @@ armor:
     damage_reduction: 4
     penalties:
       grace: -2
-      flow: "None"
+      momentum: "None"
       spellcasting: -2
       movement: "Maximum 1 zone per turn (cannot be increased by edges)"
     benefits:
@@ -497,7 +497,7 @@ weapons:
     thrown:
       damage: "2d6"
       range: "Close"
-      special: "+1 Flow at Close range"
+      special: "+1 Momentum at Close range"
       examples: ["Javelin", "Throwing axe", "Dagger"]
     
     ranged:
@@ -557,7 +557,7 @@ combat_actions:
     defend:
       roll: "2d6 + grace + combat"
       effect: "+2 Guard until next turn"
-      critical: "Gain +1 Flow"
+      critical: "Gain +1 Momentum"
     
     maneuver:
       roll: "2d6 + attribute + skill"
@@ -565,7 +565,7 @@ combat_actions:
         - "Reposition for advantage"
         - "Create environmental hazard"
         - "Disarm opponent"
-      success: "Situational benefit + possible Flow"
+      success: "Situational benefit + possible Momentum"
     
     rally:
       effect: "Recover 1d6 Guard"
@@ -579,13 +579,13 @@ combat_actions:
   reactions:
     counter:
       trigger: "Attacked in Defensive stance"
-      cost: "1 Flow"
+      cost: "1 Momentum"
       roll: "Opposed combat check"
       success: "Negate attack, possibly counter"
     
     interpose:
       trigger: "Adjacent ally attacked"
-      cost: "1 Flow"
+      cost: "1 Momentum"
       effect: "Become target instead"
       requirement: "Defensive stance"
     
@@ -598,7 +598,7 @@ combat_actions:
     charge:
       requirement: "Aggressive stance"
       effect: "Move 2 zones + attack with +2 damage"
-      flow: "+2 Flow if successful"
+      momentum: "+2 Momentum if successful"
     
     full_defense:
       effect: "+4 to defense, +2 Guard"
@@ -621,7 +621,7 @@ combat_techniques:
   
   basic_techniques:
     available_to: "Anyone"
-    no_flow_cost:
+    no_momentum_cost:
       - "Strike (standard attack)"
       - "Defend (increase Guard)"
       - "Maneuver (tactical advantage)"
@@ -633,10 +633,10 @@ combat_techniques:
     riposte:
       trigger: "After successful Defend"
       effect: "Immediately Strike"
-      cost: "1 Flow"
+      cost: "1 Momentum"
     
     press_advantage:
-      trigger: "While Flow positive"
+      trigger: "While Momentum positive"
       effect: "+1d6 damage"
       cost: "Passive while condition met"
     
@@ -646,47 +646,47 @@ combat_techniques:
     
     quick_recovery:
       effect: "Regain 1d6 Guard between rounds"
-      cost: "1 Flow"
+      cost: "1 Momentum"
       limit: "Once per combat"
   
   moderate_milestone_techniques:
-    requirement: "Flow +3 to activate"
+    requirement: "Momentum +3 to activate"
     
     whirlwind_strike:
       effect: "Hit all adjacent enemies"
-      cost: "3 Flow"
+      cost: "3 Momentum"
       damage: "Normal weapon damage to each"
     
     perfect_parry:
       effect: "Negate all damage from one source"
-      cost: "2 Flow"
+      cost: "2 Momentum"
       timing: "Reaction"
     
     devastating_blow:
       effect: "Double damage dice"
-      cost: "3 Flow"
+      cost: "3 Momentum"
       limit: "Once per scene"
     
     combat_flow:
-      effect: "Extra Flow on any critical"
+      effect: "Extra Momentum on any critical"
       cost: "Passive once learned"
   
   major_milestone_techniques:
-    requirement: "Flow +6 to activate"
+    requirement: "Momentum +6 to activate"
     
     unstoppable_assault:
       effect: "Next attack cannot miss"
-      cost: "6 Flow"
+      cost: "6 Momentum"
       damage: "Maximum damage"
     
     death_blow:
       effect: "Instant kill if target below 50% Vitality"
-      cost: "6 Flow"
+      cost: "6 Momentum"
       save: "Will TN 12 to reduce to normal damage"
     
     battlefield_control:
       effect: "Reposition all combatants"
-      cost: "6 Flow"
+      cost: "6 Momentum"
       limit: "Once per scene"
 
 # ============================================
@@ -703,27 +703,27 @@ signature_moves:
     components:
       - "Name (personal to character)"
       - "Mechanical effect (based on existing technique)"
-      - "Flow cost (1 less than normal technique, minimum 0)"
+      - "Momentum cost (1 less than normal technique, minimum 0)"
       - "Narrative description (how it looks and feels)"
 
     creation_guidelines:
       base_technique: "Choose any technique you know as foundation"
-      discount: "Costs 1 Flow less than normal (minimum 0)"
+      discount: "Costs 1 Momentum less than normal (minimum 0)"
       restrictions: "Must have used the base technique successfully in play"
       balance: "Should feel earned through character development"
 
     examples:
       riposte_signature:
-        base: "Riposte (normally 1 Flow)"
+        base: "Riposte (normally 1 Momentum)"
         signature_cost: 0
         name: "Example: 'Viper's Response'"
         requirement: "Must have successfully used Riposte at least twice"
 
       press_advantage_signature:
-        base: "Press Advantage (normally passive at Flow +2)"
-        signature_version: "Activates at Flow +1 instead"
+        base: "Press Advantage (normally passive at Momentum +2)"
+        signature_version: "Activates at Momentum +1 instead"
         name: "Example: 'Relentless Assault'"
-        requirement: "Must have maintained Flow +2 in multiple combats"
+        requirement: "Must have maintained Momentum +2 in multiple combats"
   
   examples:
     fighter_magnus:
@@ -814,11 +814,11 @@ retreat_mechanics:
     description: "Orderly retreat while defending"
     requirement: "All party members use Defensive stance"
     effect: "Party can disengage from combat"
-    cost: "Each character loses 1 Flow"
+    cost: "Each character loses 1 Momentum"
 
     procedure:
       1: "All party members switch to Defensive stance"
-      2: "Each member loses 1 Flow (can go negative)"
+      2: "Each member loses 1 Momentum (can go negative)"
       3: "Party moves 1 zone away as coordinated action"
       4: "Enemies may make one final attack at -2"
 
@@ -832,10 +832,10 @@ retreat_mechanics:
     effect: "Party scatters and escapes"
     consequences:
       immediate: "Enemies get one free attack per party member"
-      flow: "All party members drop to -3 Flow"
+      momentum: "All party members drop to -3 Momentum"
       narrative: "Must regroup at safe location"
 
-    recovery: "Party must take short rest before regaining Flow or continuing"
+    recovery: "Party must take short rest before regaining Momentum or continuing"
 
   tactical_retreat:
     description: "Abandoning position while minimizing losses"
@@ -846,7 +846,7 @@ retreat_mechanics:
       role: "Covers party escape"
       benefit: "Party members escape without attacks"
       cost: "Rear guard faces all enemies alone for 1 round"
-      reward: "Rear guard gains +2 Flow for bravery"
+      reward: "Rear guard gains +2 Momentum for bravery"
 
     design_note: "Creates heroic moments while enabling escape"
 
@@ -885,17 +885,17 @@ social_combat:
   social_stances:
     aggressive:
       approach: "Direct argument, intimidation"
-      flow: "+1 on successful social attacks"
+      momentum: "+1 on successful social attacks"
       vulnerability: "Easier to provoke"
     
     balanced:
       approach: "Negotiation, finding common ground"
-      flow: "Normal generation"
+      momentum: "Normal generation"
       flexibility: "Can adapt approach"
     
     defensive:
       approach: "Listening, gathering information"
-      flow: "+1 when learning secrets"
+      momentum: "+1 when learning secrets"
       advantage: "Harder to persuade"
   
   social_damage:

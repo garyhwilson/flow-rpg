@@ -4,23 +4,23 @@ Generates advanced techniques documentation with professional TTRPG prose
 #}
 # Advanced Techniques
 
-Basic techniques define competent adventurers. Anyone can swing a sword, cast a cantrip, or make a skill check. But advanced techniques—the devastating combos, impossible maneuvers, and reality-bending abilities that require significant Flow investment—separate heroes from legends.
+Basic techniques define competent adventurers. Anyone can swing a sword, cast a cantrip, or make a skill check. But advanced techniques—the devastating combos, impossible maneuvers, and reality-bending abilities that require significant Momentum investment—separate heroes from legends.
 
-Advanced techniques become available at moderate milestones (typically sessions 3, 6, and 9). They require Flow +3 to activate, meaning you must build Flow reserves through successful actions before unleashing them. This requirement ensures advanced techniques feel climactic rather than routine—you don't spam them every turn, you build toward dramatic moments when they matter most.
+Advanced techniques become available at moderate milestones (typically sessions 3, 6, and 9). They require Momentum +3 to activate, meaning you must build Momentum reserves through successful actions before unleashing them. This requirement ensures advanced techniques feel climactic rather than routine—you don't spam them every turn, you build toward dramatic moments when they matter most.
 
 ---
 
 ## Understanding Advanced Techniques
 
-### Flow Requirement: +3
+### Momentum Requirement: +3
 
-Advanced techniques activate only when you've accumulated +3 Flow or higher. This creates natural pacing:
+Advanced techniques activate only when you've accumulated +3 Momentum or higher. This creates natural pacing:
 
-**Build Phase:** Generate Flow through successful attacks, excellent rolls, or stance-specific triggers
-**Activation Window:** Once you reach +3 Flow, advanced techniques become available
-**Decision Point:** Spend Flow on advanced technique now, or save for even more powerful options later?
+**Build Phase:** Generate Momentum through successful attacks, excellent rolls, or stance-specific triggers
+**Activation Window:** Once you reach +3 Momentum, advanced techniques become available
+**Decision Point:** Spend Momentum on advanced technique now, or save for even more powerful options later?
 
-The Flow requirement means advanced techniques emerge from success, not desperation. You can't use them when losing badly—you must be winning enough to have built Flow reserves.
+The Momentum requirement means advanced techniques emerge from success, not desperation. You can't use them when losing badly—you must be winning enough to have built Momentum reserves.
 
 ### Moderate Milestone Acquisition
 
@@ -46,10 +46,10 @@ Advanced combat techniques turn fights decisively. These aren't minor improvemen
 
 {{ tech_desc }}
 
-**Requirement:** Flow +3
+**Requirement:** Momentum +3
 **Type:** Advanced Combat Technique
 
-**Tactical Use:** {% if 'all adjacent' in tech_desc|lower %}Devastating when surrounded by multiple enemies. Position yourself amid clustered foes, build Flow to +3, then eliminate entire groups in single actions.{% elif 'negate' in tech_desc|lower or 'parry' in tech_desc|lower %}Ultimate defense against overwhelming attacks. When facing enemy signature moves or devastating strikes, spend Flow to completely nullify threats that would otherwise end you.{% elif 'double' in tech_desc|lower or 'damage dice' in tech_desc|lower %}Massive single-target elimination. Build Flow, target priority threats, then obliterate them before they can act. Best against major adversaries and powerful foes.{% elif 'critical' in tech_desc|lower or 'crit' in tech_desc|lower %}Passive Flow generation enhancement. Every critical hit generates additional Flow, enabling more frequent advanced technique use. Snowballs advantage once you start succeeding.{% else %}Powerful combat capability that requires Flow +3 to activate. Plan battles around building sufficient Flow to unleash this when it matters most.{% endif %}
+**Tactical Use:** {% if 'all adjacent' in tech_desc|lower %}Devastating when surrounded by multiple enemies. Position yourself amid clustered foes, build Momentum to +3, then eliminate entire groups in single actions.{% elif 'negate' in tech_desc|lower or 'parry' in tech_desc|lower %}Ultimate defense against overwhelming attacks. When facing enemy signature moves or devastating strikes, spend Momentum to completely nullify threats that would otherwise end you.{% elif 'double' in tech_desc|lower or 'damage dice' in tech_desc|lower %}Massive single-target elimination. Build Momentum, target priority threats, then obliterate them before they can act. Best against major adversaries and powerful foes.{% elif 'critical' in tech_desc|lower or 'crit' in tech_desc|lower %}Passive Momentum generation enhancement. Every critical hit generates additional Momentum, enabling more frequent advanced technique use. Snowballs advantage once you start succeeding.{% else %}Powerful combat capability that requires Momentum +3 to activate. Plan battles around building sufficient Momentum to unleash this when it matters most.{% endif %}
 
 ---
 {% endfor %}
@@ -65,10 +65,10 @@ Advanced magic techniques break normal spellcasting limitations. These abilities
 
 {{ tech_desc }}
 
-**Requirement:** Flow +3
+**Requirement:** Momentum +3
 **Type:** Advanced Magic Technique
 
-**Tactical Use:** {% if 'metamagic' in tech_desc|lower %}Apply multiple metamagic options to single spells, creating triple-enhanced effects. Quickened Heightened Widened Fireball becomes devastating room-clearing inferno costing massive Flow but solving entire encounters.{% elif 'cast 2' in tech_desc|lower or 'two spells' in tech_desc|lower %}Cast two complete spells in single turn, doubling magical output. Fireball + Lightning Bolt in one action eliminates multiple threat groups simultaneously. Unprecedented action economy advantage.{% elif 'vitality' in tech_desc|lower and 'flow' in tech_desc|lower %}Convert hit points to magical power when desperate. Dangerous but enables casting when Flow depleted. Last-resort option for critical moments when spell failure means death.{% else %}Powerful magical capability requiring Flow +3. Fundamentally changes how spellcasting works during activation.{% endif %}
+**Tactical Use:** {% if 'metamagic' in tech_desc|lower %}Apply multiple metamagic options to single spells, creating triple-enhanced effects. Quickened Heightened Widened Fireball becomes devastating room-clearing inferno costing massive Momentum but solving entire encounters.{% elif 'cast 2' in tech_desc|lower or 'two spells' in tech_desc|lower %}Cast two complete spells in single turn, doubling magical output. Fireball + Lightning Bolt in one action eliminates multiple threat groups simultaneously. Unprecedented action economy advantage.{% elif 'vitality' in tech_desc|lower and 'momentum' in tech_desc|lower %}Convert hit points to magical power when desperate. Dangerous but enables casting when Momentum depleted. Last-resort option for critical moments when spell failure means death.{% else %}Powerful magical capability requiring Momentum +3. Fundamentally changes how spellcasting works during activation.{% endif %}
 
 ---
 {% endfor %}
@@ -84,10 +84,10 @@ Advanced skill techniques enable accomplishments beyond normal capability limits
 
 {{ tech_desc }}
 
-**Requirement:** Flow +3
+**Requirement:** Momentum +3
 **Type:** Advanced Skill Technique
 
-**Tactical Use:** {% if 'auto' in tech_desc|lower or 'automatic' in tech_desc|lower %}Automatically succeed at critical skill checks once per scene. No roll, no uncertainty—just success. Pick locks during guard patrols without risk, negotiate crucial deals without failure, climb impossible surfaces with confidence.{% elif 'allies' in tech_desc|lower or 'team' in tech_desc|lower %}Grant your expertise to entire party temporarily. The master lockpick guides allies through security systems, the expert diplomat coaches party through negotiations, the legendary climber enables party-wide ascents.{% elif 'turn order' in tech_desc|lower or 'initiative' in tech_desc|lower %}Act outside normal initiative, seizing perfect timing. Interrupt enemy actions, respond instantly to threats, or execute plans before enemies react. Unparalleled tactical flexibility.{% else %}Powerful skill application requiring Flow +3. Enables feats impossible through normal skill checks.{% endif %}
+**Tactical Use:** {% if 'auto' in tech_desc|lower or 'automatic' in tech_desc|lower %}Automatically succeed at critical skill checks once per scene. No roll, no uncertainty—just success. Pick locks during guard patrols without risk, negotiate crucial deals without failure, climb impossible surfaces with confidence.{% elif 'allies' in tech_desc|lower or 'team' in tech_desc|lower %}Grant your expertise to entire party temporarily. The master lockpick guides allies through security systems, the expert diplomat coaches party through negotiations, the legendary climber enables party-wide ascents.{% elif 'turn order' in tech_desc|lower or 'initiative' in tech_desc|lower %}Act outside normal initiative, seizing perfect timing. Interrupt enemy actions, respond instantly to threats, or execute plans before enemies react. Unparalleled tactical flexibility.{% else %}Powerful skill application requiring Momentum +3. Enables feats impossible through normal skill checks.{% endif %}
 
 ---
 {% endfor %}
@@ -99,17 +99,17 @@ Advanced skill techniques enable accomplishments beyond normal capability limits
 
 ## Using Advanced Techniques Effectively
 
-### Building Flow for Activation
+### Building Momentum for Activation
 
-Advanced techniques require +3 Flow, which you accumulate through:
+Advanced techniques require +3 Momentum, which you accumulate through:
 
-**Aggressive Stance:** Generate +1 Flow per successful attack. Three hits builds enough Flow.
+**Aggressive Stance:** Generate +1 Momentum per successful attack. Three hits builds enough Momentum.
 
-**Balanced Stance:** Generate +1 Flow on rolls of 10+. Consistent excellence builds reserves.
+**Balanced Stance:** Generate +1 Momentum on rolls of 10+. Consistent excellence builds reserves.
 
-**Defensive Stance:** Generate +1 Flow when attacked. Being targeted builds activation opportunities.
+**Defensive Stance:** Generate +1 Momentum when attacked. Being targeted builds activation opportunities.
 
-Plan several turns ahead. Don't spend Flow carelessly on minor techniques when advanced technique activation is close.
+Plan several turns ahead. Don't spend Momentum carelessly on minor techniques when advanced technique activation is close.
 
 ### Timing Your Activation
 
@@ -140,7 +140,7 @@ You'll learn 3-4 advanced techniques across typical campaigns. Choose carefully�
 Advanced techniques work alongside basic techniques and class abilities:
 
 **Layer effects:** Perfect Parry (advanced) + Riposte (basic) = negate attack then counterattack
-**Sequence actions:** Whirlwind Strike (advanced) hits all enemies, generate Flow, use basic techniques with new Flow
+**Sequence actions:** Whirlwind Strike (advanced) hits all enemies, generate Momentum, use basic techniques with new Momentum
 **Multiply benefits:** Cast 2 Spells (advanced) + Metamagic (wizard feature) = two enhanced spells simultaneously
 
 Advanced techniques are capstones, not replacements. Master basic techniques first, then add advanced options for tactical depth.
@@ -151,9 +151,9 @@ Advanced techniques are capstones, not replacements. Master basic techniques fir
 
 ### Combat Synergies
 
-**Whirlwind Strike + Aggressive Stance:** Hit all adjacent enemies, generate massive Flow from multiple hits, enable follow-up techniques.
+**Whirlwind Strike + Aggressive Stance:** Hit all adjacent enemies, generate massive Momentum from multiple hits, enable follow-up techniques.
 
-**Perfect Parry + Defensive Stance:** Already generating Flow when attacked, Perfect Parry ensures survival against overwhelming threats.
+**Perfect Parry + Defensive Stance:** Already generating Momentum when attacked, Perfect Parry ensures survival against overwhelming threats.
 
 **Devastating Blow + Critical-focused build:** Double already-impressive critical damage, eliminate targets that survive normal attacks.
 
@@ -163,7 +163,7 @@ Advanced techniques are capstones, not replacements. Master basic techniques fir
 
 **Spell Combo + Area Spells:** Cast Fireball + Lightning Bolt in single turn, devastate clustered enemies or multiple groups.
 
-**Flow Channeling + Desperate Situations:** Convert Vitality to Flow when magical reserves depleted, continue casting when others would fail.
+**Momentum Channeling + Desperate Situations:** Convert Vitality to Momentum when magical reserves depleted, continue casting when others would fail.
 
 ### Skill Synergies
 
@@ -181,15 +181,15 @@ Advanced techniques are capstones, not replacements. Master basic techniques fir
 
 Advanced techniques should feel powerful without dominating play:
 
-**Appropriate power level:** Worth the Flow +3 investment but not auto-win buttons
+**Appropriate power level:** Worth the Momentum +3 investment but not auto-win buttons
 
 **Situational value:** Extremely strong in right circumstances, less overwhelming otherwise
 
-**Resource cost:** Flow requirement prevents spamming, ensures dramatic timing
+**Resource cost:** Momentum requirement prevents spamming, ensures dramatic timing
 
 **Build investment:** Moderate milestone opportunity cost means characters choose carefully
 
-If advanced techniques feel too weak, reduce Flow cost to +2. If too strong, increase to +4 or limit uses per scene.
+If advanced techniques feel too weak, reduce Momentum cost to +2. If too strong, increase to +4 or limit uses per scene.
 
 ### Encounter Design
 
@@ -212,7 +212,7 @@ Adversaries can use advanced techniques too:
 
 When NPCs use advanced techniques, telegraph them:
 
-"The warlord's eyes glow with battle-fury—he's building Flow for something devastating."
+"The warlord's eyes glow with battle-fury—he's building Momentum for something devastating."
 
 Players appreciate knowing major abilities are coming and can plan counters.
 
@@ -228,4 +228,4 @@ If your campaign pacing differs, adjust milestone timing but maintain 3-session 
 
 ---
 
-*Advanced techniques represent capabilities beyond normal mortal limits. Master Flow generation to activate them reliably, choose techniques that complement your build, and unleash them at moments when they turn impossible situations into legendary victories.*
+*Advanced techniques represent capabilities beyond normal mortal limits. Master Momentum generation to activate them reliably, choose techniques that complement your build, and unleash them at moments when they turn impossible situations into legendary victories.*

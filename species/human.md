@@ -1,5 +1,6 @@
 # Human
-*Adaptability and Innovation, Reshaping the World Through Ambition and Creativity*
+
+_Adaptability and Innovation, Reshaping the World Through Ambition and Creativity_
 
 ## Species Essence
 
@@ -116,6 +117,7 @@ Human cultural diversity defies comprehensive documentation, with thousands of d
 **Geographic Distribution:** Inhabit harsh northern territories including tundra, taiga forests, and cold mountain ranges. Communities typically establish settlements along coastlines, riverways, and resource-rich valleys with defensible positions.
 
 **Defining Characteristics:**
+
 - Resilience-focused social structures emphasizing communal survival
 - Seasonal lifestyle alternating between winter consolidation and summer expansion
 - Strong oral traditions preserving practical knowledge through storytelling
@@ -139,6 +141,7 @@ Human cultural diversity defies comprehensive documentation, with thousands of d
 **Geographic Distribution:** Occupy fertile river valleys, productive agricultural plains, and strategic highlands controlling major trade routes. Communities develop in concentrated settlement patterns with clear urban-rural relationships and formalized boundaries.
 
 **Defining Characteristics:**
+
 - Institutionalized hierarchy with complex social stratification
 - Formalized knowledge transmission through established academies
 - Elaborate cultural codes governing interpersonal relationships
@@ -162,6 +165,7 @@ Human cultural diversity defies comprehensive documentation, with thousands of d
 **Geographic Distribution:** Control archipelagos, extensive coastlines, and major maritime trade routes connecting diverse regions. Communities develop primarily along shorelines with secondary settlements extending along river systems providing access to interior resources.
 
 **Defining Characteristics:**
+
 - Maritime orientation integrating diverse cultural influences
 - Pragmatic governance balancing central coordination with local autonomy
 - Commercial emphasis creating wealth-based social mobility
@@ -185,6 +189,7 @@ Human cultural diversity defies comprehensive documentation, with thousands of d
 **Geographic Distribution:** Inhabit vast prairie systems, savanna expanses, and seasonal grasslands supporting both nomadic herding and settled agriculture. Communities follow distribution patterns ranging from dispersed mobile groups to concentrated settlements at critical resource points.
 
 **Defining Characteristics:**
+
 - Mobility-oriented social structures with flexible membership
 - Sophisticated animal husbandry traditions forming economic foundation
 - Strong kinship systems transcending geographical separation
@@ -208,6 +213,7 @@ Human cultural diversity defies comprehensive documentation, with thousands of d
 **Geographic Distribution:** Control varied territories including fertile valleys, defensive hill countries, and strategically valuable coastal regions. Communities develop in networked settlement patterns combining urban centers with supporting agricultural regions connected through robust infrastructure.
 
 **Defining Characteristics:**
+
 - Participatory governance systems with formalized citizenship concepts
 - Philosophical traditions emphasizing rational inquiry and debate
 - Institutional structures balancing competing societal interests
@@ -397,25 +403,27 @@ Humans receive a +1 bonus to any two attributes of their choice, representing th
 
 **Rapid Learning:** You require only 3 training sessions to increase a skill rating instead of the standard 4, representing your accelerated learning capability and cultural systems optimized for efficient knowledge transmission. This ability reflects the human compensatory adaptation for shortened lifespan through accelerated development.
 
-### Flow Interactions
+### Momentum Interactions
 
-Humans interact with the Flow resource through their distinctive adaptive capabilities:
+Humans interact with the Momentum resource through their distinctive adaptive capabilities:
 
-**Flow Generation:**
-- Successfully implementing innovative solutions (+1 Flow)
-- Adapting effectively to unexpected challenges (+1 Flow)
-- Learning valuable lessons from failure (+1 Flow)
-- Building connections across different groups (+1 Flow)
-- Achieving ambitious goals against significant odds (+2 Flow)
+**Momentum Generation:**
 
-**Flow Expenditure:**
+- Successfully implementing innovative solutions (+1 Momentum)
+- Adapting effectively to unexpected challenges (+1 Momentum)
+- Learning valuable lessons from failure (+1 Momentum)
+- Building connections across different groups (+1 Momentum)
+- Achieving ambitious goals against significant odds (+2 Momentum)
+
+**Momentum Expenditure:**
+
 - Sudden insight revealing novel solutions (variable cost)
-- Rapid adjustment to changing circumstances (+1 Flow)
-- Pushing beyond normal endurance limits (+2 Flow)
-- Intuitive understanding of complex social situations (+1 Flow)
-- Extraordinary focus for accelerated learning (+2 Flow)
+- Rapid adjustment to changing circumstances (+1 Momentum)
+- Pushing beyond normal endurance limits (+2 Momentum)
+- Intuitive understanding of complex social situations (+1 Momentum)
+- Extraordinary focus for accelerated learning (+2 Momentum)
 
-This relationship with Flow emphasizes the human capacity for adaptation, innovation, and urgency—transforming their compressed timeframe from limitation into distinctive advantage through intensified experience and accelerated development.
+This relationship with Momentum emphasizes the human capacity for adaptation, innovation, and urgency—transforming their compressed timeframe from limitation into distinctive advantage through intensified experience and accelerated development.
 
 ## Archetype Synergies
 
@@ -424,18 +432,21 @@ Human adaptability creates effective combinations with all archetypes, though ce
 ### Natural Synergies
 
 **Human Fighter**
+
 - Cultural martial traditions provide diverse fighting styles
 - Physical adaptability supports various combat approaches
 - Human drive for excellence creates specialized mastery
 - Shorter lifespan encourages risk-taking combat strategies
 
 **Human Wizard**
+
 - Intellectual flexibility supports abstract magical thinking
 - Cultural knowledge transmission accelerates magical learning
 - Human innovative tendencies encourage spell experimentation
 - Ambition drives pursuit of powerful magical knowledge
 
 **Human Bard**
+
 - Cultural diversity provides rich performance traditions
 - Human emotional intensity enhances artistic expression
 - Adaptability allows incorporation of multiple influences
@@ -444,18 +455,21 @@ Human adaptability creates effective combinations with all archetypes, though ce
 ### Interesting Tensions
 
 **Human Ranger**
+
 - Balancing civilizational background with wilderness immersion
 - Developing sustainable relationship with natural environments
 - Overcoming human tendencies toward resource exploitation
 - Finding middle path between isolation and community connection
 
 **Human Cleric**
+
 - Reconciling human ambition with divine service requirements
 - Navigating tension between dogma and innovation
 - Addressing mortality anxiety through spiritual framework
 - Balancing personal advancement with community obligations
 
 **Human Druid**
+
 - Overcoming human separation from natural cycles
 - Developing patience despite shorter lifespan urgency
 - Finding balance between transformation and identity retention
@@ -466,30 +480,35 @@ Human adaptability creates effective combinations with all archetypes, though ce
 The human species supports diverse character concepts reflecting their adaptability and varied cultural backgrounds:
 
 ### "The Cultural Bridge"
+
 - **Background:** Human raised between multiple species' communities
 - **Motivation:** Creates understanding across cultural boundaries
 - **Conflict:** Maintaining authentic identity while serving as translator
 - **Gameplay Focus:** Diplomacy, knowledge application, prejudice navigation
 
 ### "The Legacy Builder"
+
 - **Background:** Human acutely aware of mortality seeking lasting impact
 - **Motivation:** Creates works or institutions outlasting individual lifespan
 - **Conflict:** Balancing present sacrifices against future benefits
 - **Gameplay Focus:** Long-term planning, mentorship, institutional development
 
 ### "The Accelerated Learner"
+
 - **Background:** Human with extraordinary talent condensing normal development timeline
 - **Motivation:** Masters skills typically requiring decades within compressed timeframe
 - **Conflict:** Managing expectations and relationships with longer-lived mentors
 - **Gameplay Focus:** Skill acquisition, knowledge integration, reputation management
 
 ### "The Tradition Challenger"
+
 - **Background:** Human questioning established practices of their own culture
 - **Motivation:** Develops improved approaches through experimentation and synthesis
 - **Conflict:** Facing resistance from traditional authorities while seeking validation
 - **Gameplay Focus:** Innovation, persuasion, evidence gathering, coalition building
 
 ### "The Pattern Observer"
+
 - **Background:** Human with exceptional ability to recognize systemic connections
 - **Motivation:** Discovers hidden relationships between apparently separate phenomena
 - **Conflict:** Communicating insights that others cannot easily perceive
@@ -500,30 +519,35 @@ The human species supports diverse character concepts reflecting their adaptabil
 Human characters experience distinctive development arcs shaped by their shorter lifespans, adaptability, and cultural diversity.
 
 ### Acceleration to Mastery
+
 - **Beginning:** Rapid skill acquisition through intensive application
 - **Development:** Integration of diverse influences into personal style
 - **Growth:** Innovation building upon established foundations
 - **Mastery:** Creation of distinctive approach worthy of transmission
 
 ### Individual to Legacy
+
 - **Beginning:** Focus on personal capability and achievement
 - **Development:** Recognition of mortality and accomplishment limitations
 - **Growth:** Shift toward developing others and creating lasting structures
 - **Mastery:** Establishment of continuing influence beyond personal lifespan
 
 ### Specialization to Integration
+
 - **Beginning:** Deep focus on specific skills or knowledge domains
 - **Development:** Recognition of connections between specialized areas
 - **Growth:** Deliberate expansion beyond initial specialization
 - **Mastery:** Synthetic understanding transcending traditional boundaries
 
 ### Cultural to Universal
+
 - **Beginning:** Operation within specific cultural framework and assumptions
 - **Development:** Exposure to diverse perspectives challenging original viewpoint
 - **Growth:** Identification of patterns transcending specific cultural contexts
 - **Mastery:** Development of principles applicable across diverse environments
 
 ### Ambition to Purpose
+
 - **Beginning:** Pursuit of conventional success markers and recognition
 - **Development:** Questioning value of achievements lacking deeper meaning
 - **Growth:** Identification of personally significant contribution possibilities

@@ -1,8 +1,8 @@
-# Flow RPG - Living Design Document
+# Autumn Phoenix RPG - Living Design Document
 
 _Last Updated: November 14, 2025_
 
-This document tracks ongoing design decisions, outstanding issues, and development priorities for the Flow RPG system. It serves as a continuity reference between development sessions and should be regularly updated and pruned as items are addressed.
+This document tracks ongoing design decisions, outstanding issues, and development priorities for the Autumn Phoenix RPG system. It serves as a continuity reference between development sessions and should be regularly updated and pruned as items are addressed.
 
 **Technical Reference**: For system architecture, mathematical constraints, and recently fixed issues, see [CLAUDE.md](../CLAUDE.md).
 
@@ -71,7 +71,7 @@ This document tracks ongoing design decisions, outstanding issues, and developme
    - ✓ Create threat level 3 monsters - 6 champion enemy stat blocks
    - ✓ Create threat level 4 monsters - 5 legendary adversary stat blocks
    - ✓ Create NPC templates and guidelines
-   - ✓ Integrate with Flow economy and PC systems
+   - ✓ Integrate with Momentum economy and PC systems
 
 7. **✓ YAML System Conversion**
 
@@ -88,31 +88,31 @@ This document tracks ongoing design decisions, outstanding issues, and developme
 
 9. **✓ Playtesting Fixes - Phase 2 (Balance Tuning)**
 
-   - ✓ Flow generation limit (once per round)
-   - ✓ High Flow bonus removal (flat +6 maximum)
+   - ✓ Momentum generation limit (once per round)
+   - ✓ High Momentum bonus removal (flat +6 maximum)
    - ✓ TN scaling guidance (TN 10-12 for late game challenges)
-   - ✓ GM Flow examples and guidance
+   - ✓ GM Momentum examples and guidance
 
 10. **✓ Playtesting Fixes - Phase 3 (Accessibility & Polish)**
     - ✓ Simplified rules for new players (examples.yaml)
     - ✓ Default build paths to reduce option paralysis (advancement.yaml)
-    - ✓ Optional GM Flow pool guidance (gm_tools.yaml)
+    - ✓ Optional GM Momentum pool guidance (gm_tools.yaml)
 
 ## Outstanding Design Issues
 
 ### Balance Concerns
 
-- **Will Casting as Emergency Button**: Ability to cast at negative Flow may undermine Flow management
+- **Will Casting as Emergency Button**: Ability to cast at negative Momentum may undermine Momentum management
 
-  - _Potential Solution_: Add consequences or limitations to Will casting at negative Flow
-  - _Status_: Needs playtesting with new Flow generation rules (once per round limit now in place)
+  - _Potential Solution_: Add consequences or limitations to Will casting at negative Momentum
+  - _Status_: Needs playtesting with new Momentum generation rules (once per round limit now in place)
 
 - **Calling Ability Power Levels**: Some calling abilities may be stronger than others
-  - Champion's +1 Flow per round in Aggressive (when protecting) is very strong
-  - Sentinel's +1 Guard per Flow gain could stack rapidly
-  - Scholar's banking 2 Flow between scenes is unique but situational
+  - Champion's +1 Momentum per round in Aggressive (when protecting) is very strong
+  - Sentinel's +1 Guard per Momentum gain could stack rapidly
+  - Scholar's banking 2 Momentum between scenes is unique but situational
   - _Status_: Needs comparative playtesting
-  - _Note_: Less urgent now with bounded accuracy +5 cap and Flow generation limit
+  - _Note_: Less urgent now with bounded accuracy +5 cap and Momentum generation limit
 
 ### Missing Subsystems
 
@@ -138,7 +138,7 @@ Critical gameplay systems not yet documented:
   - _Status_: Not started
   - _Priority_: Low (can use general scene resolution)
 
-- **Rest and Recovery Mechanics**: How do characters recover Flow, Guard, and Vitality?
+- **Rest and Recovery Mechanics**: How do characters recover Momentum, Guard, and Vitality?
 
   - _Status_: Partially documented, needs expansion
   - _Priority_: High (fundamental to gameplay)
@@ -178,22 +178,22 @@ Critical gameplay systems not yet documented:
 
 **Phase 2 - Balance Tuning:**
 
-- ✓ **Flow Generation Limit** (core_rules.yaml:458-465): Maximum once per round to prevent runaway economy
-- ✓ **High Flow Bonus Removal** (core_rules.yaml:455-456): Removed +2 bonus at 6+ Flow, now flat +6 maximum
+- ✓ **Momentum Generation Limit** (core_rules.yaml:458-465): Maximum once per round to prevent runaway economy
+- ✓ **High Momentum Bonus Removal** (core_rules.yaml:455-456): Removed +2 bonus at 6+ Momentum, now flat +6 maximum
 - ✓ **TN Scaling Guidance** (gm_tools.yaml:64-110): Added guidance for TN 10-12 challenges at late game (+5 cap sweet spot)
-- ✓ **GM Flow Examples** (gm_tools.yaml:34-63): Added complete worked examples for spending GM Flow pool
+- ✓ **GM Momentum Examples** (gm_tools.yaml:34-63): Added complete worked examples for spending GM Momentum pool
 
 **Phase 3 - Accessibility & Polish:**
 
 - ✓ **Simplified Rules** (examples.yaml:24-93): Created quick-start variant for first 1-2 sessions
 - ✓ **Default Build Paths** (advancement.yaml:862-982): Added 6 pre-planned advancement paths to reduce option paralysis
-- ✓ **Optional GM Flow** (gm_tools.yaml:162-200): Made GM Flow pool explicitly optional with guidance for when to skip it
+- ✓ **Optional GM Momentum** (gm_tools.yaml:162-200): Made GM Momentum pool explicitly optional with guidance for when to skip it
 
 ### Earlier Addressed Items (Pre-YAML)
 
 - ✓ **Guard Calculation Rebalanced** (11/12/25): Changed from 5 + Might to 7 + Might, narrowing viability gap
 - ✓ **Halfling Small but Mighty Fixed** (11/12/25): Removed punitive -1 damage penalty, added stealth benefit
-- ✓ **Spell Flow Generation Added** (11/12/25): Offensive spells now generate +1 Flow in Aggressive stance
+- ✓ **Spell Momentum Generation Added** (11/12/25): Offensive spells now generate +1 Momentum in Aggressive stance
 - ✓ **Armor Penalties Reduced** (11/12/25): Medium armor -1 Sorcery (was -2), Heavy armor -4 (was prohibition)
 - ✓ **Calling Inconsistencies Resolved** (11/12/25): Standardized Champion, Scholar, Sentinel abilities
 - ✓ **Skill Decision Tree Added** (11/12/25): Clarified when to use Combat/Athletics/Finesse
@@ -225,7 +225,7 @@ These core principles should guide all design decisions:
    - Tactical options for those who want them
    - Every rule supports the fiction
 
-3. **Flow as Universal Resource**
+3. **Momentum as Universal Resource**
 
    - Single resource unifying all subsystems
    - Dynamic economy creating dramatic pacing
@@ -249,7 +249,7 @@ These core principles should guide all design decisions:
 
 **This section must be reviewed before ANY content creation or modification.**
 
-Flow RPG is a traditional tabletop roleplaying game. Every design decision, piece of content, and word choice must reflect TTRPG principles, not video game (especially MMO) patterns. This is not negotiable.
+Autumn Phoenix RPG is a traditional tabletop roleplaying game. Every design decision, piece of content, and word choice must reflect TTRPG principles, not video game (especially MMO) patterns. This is not negotiable.
 
 ### The Video Game Trap
 
@@ -417,7 +417,7 @@ Green Flags (TTRPG):
 
 **Core Principle: Examples First, Always**
 
-Traditional TTRPGs (D&D Monster Manual, Pathfinder Bestiary) show concrete examples and let patterns emerge naturally. Video game design docs categorize first and provide examples second. Flow RPG must follow TTRPG traditions.
+Traditional TTRPGs (D&D Monster Manual, Pathfinder Bestiary) show concrete examples and let patterns emerge naturally. Video game design docs categorize first and provide examples second. Autumn Phoenix RPG must follow TTRPG traditions.
 
 **Quick Audit Checklist:**
 
@@ -494,7 +494,7 @@ When creating templates or documentation:
 ## Project Organization
 
 ```
-flow-rpg/
+momentum-rpg/
 ├── core_rules/           # Core system files
 │   ├── 01_introduction.md
 │   ├── 02_basic_mechanics.md
@@ -738,7 +738,7 @@ Suggested commit message:
 "Add Monk archetype with ki point system
 
 - Created monk.md with complete archetype documentation
-- Added ki points as alternative resource to Flow
+- Added ki points as alternative resource to Momentum
 - Integrated with existing combat stance system
 - Updated archetype quick reference"
 
@@ -813,7 +813,7 @@ git commit -m "Add Monk archetype with ki point system"
 git commit -m "Add Monk archetype with ki point system
 
 - Created complete Monk archetype documentation
-- Ki points as alternative resource to Flow
+- Ki points as alternative resource to Momentum
 - Unarmed combat specialization
 - Integrated with existing stance system"
 ```
@@ -856,7 +856,7 @@ git status
 
 - Commit after each completed task (not mid-task)
 - Batch small related changes together
-- Don't interrupt flow with too-frequent commit prompts
+- Don't interrupt momentum with too-frequent commit prompts
 - Group related file changes into single commit
 
 **At Session End:**
@@ -952,7 +952,7 @@ I should actively warn about:
 
 ### Example Interaction
 
-**Good Flow:**
+**Good Momentum:**
 
 ```
 User: "Let's add a Monk archetype"
@@ -968,7 +968,7 @@ git add drafts/archetypes/archetype_types/monk.md
 git commit -m 'Add Monk archetype with ki point system
 
 - Created complete Monk archetype documentation
-- Ki points as alternative resource to Flow
+- Ki points as alternative resource to Momentum
 - Unarmed combat specialization
 - Integrated with existing stance system'
 
@@ -1011,7 +1011,7 @@ Let me verify the .gitignore is working correctly first."
 ## Future Enhancements
 
 - **Character Generator Tool**: Interactive tool for character creation
-- **Scenario Builder**: Structured approach to adventure design using Flow
+- **Scenario Builder**: Structured approach to adventure design using Momentum
 - **Monster Creation System**: Standardized approach to creating balanced threats
 - **Additional Publication Manifests**: Player's Guide, GM Guide, Grimoire, etc.
 

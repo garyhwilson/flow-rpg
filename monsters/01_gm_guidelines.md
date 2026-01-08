@@ -9,16 +9,19 @@ This guide helps you bring adversaries to life at the table, making combat encou
 Before combat begins, answer these questions:
 
 **Who are they?**
+
 - Name (always give them one, even if players never learn it)
 - Role in the world (guard captain, pack leader, ancient protector)
 - Current emotional state (confident, desperate, enraged, curious)
 
 **What do they want?**
+
 - Immediate goal (kill intruders, defend territory, capture alive)
 - Underlying motivation (loyalty, fear, hunger, duty)
 - What would make them stop (surrender accepted, warning delivered, enough food secured)
 
 **How do they fight?**
+
 - Preferred tactics (aggressive charge, defensive positioning, hit-and-run)
 - Who do they target (weakest opponent, biggest threat, whoever hurt them)
 - What triggers a change in behavior (ally falls, takes significant damage, objectives threatened)
@@ -43,18 +46,21 @@ A fight in a crowded tavern feels different from a fight in that same tavern whe
 Make each significant adversary memorable through how they fight:
 
 **The Calculating Captain**
+
 - Calls out tactical orders to allies
 - Targets healers and spellcasters first
 - Uses terrain advantages methodically
 - Offers surrender when victory is assured
 
 **The Berserker**
+
 - Howls and charges the nearest enemy
 - Ignores wounds to press the attack
 - Targets whoever wounded them most recently
 - Never retreats, but might be talked down with shows of strength
 
 **The Coward**
+
 - Hangs back behind allies
 - Uses ranged attacks or spells from cover
 - Flees the moment the fight turns
@@ -71,12 +77,14 @@ When facing groups:
 ### When Adversaries Should Retreat
 
 Intelligent adversaries flee when:
+
 - Their leader falls (unless seeking revenge)
 - They're clearly losing and can escape
 - The cost exceeds the benefit (risking death for a patrol mission?)
 - They need to warn others or get reinforcements
 
 This isn't weakness - it's intelligent behavior. It also:
+
 - Creates recurring villains
 - Gives players valuable prisoners
 - Makes the world feel alive
@@ -96,23 +104,23 @@ Major adversaries should feel dangerous. Techniques to achieve this:
 
 ---
 
-## Flow in Combat
+## Momentum in Combat
 
-### Adversary Flow
+### Adversary Momentum
 
-Adversaries use Flow like player characters:
+Adversaries use Momentum like player characters:
 
-- **Starting Flow** depends on the adversary (see bestiary entries)
-- **Generating Flow** through stance bonuses and successful attacks
-- **Spending Flow** on abilities, enhanced attacks, defensive reactions
+- **Starting Momentum** depends on the adversary (see bestiary entries)
+- **Generating Momentum** through stance bonuses and successful attacks
+- **Spending Momentum** on abilities, enhanced attacks, defensive reactions
 
-Intelligent adversaries should manage Flow tactically. A goblin shaman saves Flow for emergency healing. A demon lord spends freely, confident in power. A cornered bandit burns everything on desperation attacks.
+Intelligent adversaries should manage Momentum tactically. A goblin shaman saves Momentum for emergency healing. A demon lord spends freely, confident in power. A cornered bandit burns everything on desperation attacks.
 
-### Flow When Adversaries Fall
+### Momentum When Adversaries Fall
 
-When players defeat an adversary, they gain +1 Flow. This creates natural momentum - as the fight progresses, players accumulate resources and gain advantage.
+When players defeat an adversary, they gain +1 Momentum. This creates natural momentum - as the fight progresses, players accumulate resources and gain advantage.
 
-For particularly significant victories (defeating a major villain, saving the town), consider awarding +2 Flow or other narrative rewards.
+For particularly significant victories (defeating a major villain, saving the town), consider awarding +2 Momentum or other narrative rewards.
 
 ---
 
@@ -121,12 +129,14 @@ For particularly significant victories (defeating a major villain, saving the to
 ### Ambushes
 
 When adversaries ambush the party:
+
 - Describe the setup before springing the trap
 - Give players a chance to notice (Awareness check)
 - Even failed checks might give partial warning
 - Position matters more than raw damage
 
 When players ambush adversaries:
+
 - Let their planning pay off
 - Adversaries who survive might flee or surrender quickly
 - Don't punish clever play with sudden reinforcements
@@ -134,6 +144,7 @@ When players ambush adversaries:
 ### Hostage Situations
 
 When adversaries have leverage:
+
 - Make the hostage sympathetic (name them!)
 - Give adversaries clear demands
 - Let negotiation be a real option
@@ -142,6 +153,7 @@ When adversaries have leverage:
 ### Fighting Retreat
 
 When adversaries retreat while fighting:
+
 - Each round, they move toward escape
 - They use delaying tactics (overturning furniture, throwing smoke)
 - They might leave wounded behind or try to rescue them
@@ -154,6 +166,7 @@ When adversaries retreat while fighting:
 ### Aftermath
 
 Combat has consequences:
+
 - **Wounded adversaries** - Do players stabilize them or let them die?
 - **Prisoners** - What do players do with captured foes?
 - **Survivors who fled** - Will they return with reinforcements? Spread news?
@@ -162,6 +175,7 @@ Combat has consequences:
 ### Information and Loot
 
 Defeated adversaries provide:
+
 - **Information** - What do they know? Will they talk?
 - **Equipment** - Weapons, armor, items they were carrying
 - **Connections** - Who do they work for? Who will miss them?
@@ -170,6 +184,7 @@ Defeated adversaries provide:
 ### Recurring Adversaries
 
 Foes who escape can return:
+
 - **Improved** - They've trained, recruited allies, prepared countermeasures
 - **Changed** - Their defeat changed them (humbled, enraged, obsessed)
 - **Informed** - They know the party's tactics and have adapted
@@ -186,6 +201,7 @@ The bandit who escaped in session 2 returning as a mercenary captain in session 
 Most combats should resolve in 4-6 rounds. Longer fights risk becoming tedious.
 
 **If combat is dragging:**
+
 - Adversaries make decisive moves (all-out attacks, dramatic retreats)
 - Environmental changes force action (building collapses, reinforcements arrive)
 - Narratively resolve the end ("With their leader fallen, the remaining bandits throw down their weapons")
@@ -193,6 +209,7 @@ Most combats should resolve in 4-6 rounds. Longer fights risk becoming tedious.
 ### Group Initiatives
 
 To speed play with multiple adversaries:
+
 - All similar adversaries act on the same initiative
 - Roll attacks for groups simultaneously
 - Track damage to groups, not individuals ("The guard patrol has taken 30 damage total, two are down")
@@ -200,6 +217,7 @@ To speed play with multiple adversaries:
 ### Know When to End
 
 When the outcome is obvious:
+
 - Offer surrender terms
 - Describe the conclusion narratively
 - Move on to consequences and aftermath
@@ -235,20 +253,23 @@ Don't force players to roll through every remaining hit point when victory is as
 ## Quick Reminders
 
 **Before combat:**
+
 - Name your adversaries
 - Know what they want
 - Prepare the environment
 
 **During combat:**
+
 - Give adversaries personality
-- Use Flow tactically
+- Use Momentum tactically
 - Let adversaries retreat when sensible
 
 **After combat:**
+
 - Consequences matter
 - Survivors remember
 - Stories continue
 
 ---
 
-*The best combat encounters are ones your players remember as stories, not as dice rolls. Give your adversaries names, motivations, and personalities - then let them loose.*
+_The best combat encounters are ones your players remember as stories, not as dice rolls. Give your adversaries names, motivations, and personalities - then let them loose._

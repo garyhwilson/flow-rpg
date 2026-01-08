@@ -1,5 +1,6 @@
 # Fighter
-*Master of weapons and combat techniques*
+
+_Master of weapons and combat techniques_
 
 ## Core Identity
 
@@ -12,6 +13,7 @@ The Fighter represents the mastery of physical combat through disciplined traini
 ## Mechanical Foundations
 
 ### Key Attributes
+
 Fighters typically develop attribute distributions emphasizing physical capability and tactical awareness:
 
 **Might:** Primary attribute supporting striking power, carrying capacity, and endurance. Contributes to damage output, intimidation presence, and combat longevity.
@@ -31,55 +33,61 @@ Fighters typically develop attribute distributions emphasizing physical capabili
 Fighters begin with the following skill proficiencies, reflecting their specialized combat training:
 
 **Professional (+1):**
+
 - Combat (weapon mastery, tactical positioning, and fighting techniques)
 
 **Novice (-1):**
+
 - Athletics (physical capability beyond combat applications)
 - Command (battlefield leadership and intimidation)
 
 **Starting Edge:**
 Choose one Edge at character creation:
+
 - **Weapon Focus:** +1 damage with one specific weapon type
 - **Tough:** +2 Guard
 
 **Additional Skills:**
+
 - Choose three additional skills at Basic/Untrained level reflecting background and cultural training
 
 Fighters are typically Untrained in arcane knowledge, subtle social manipulation, or esoteric lore unless their background specifically includes exposure to these areas.
 
-### Flow Mechanics
+### Momentum Mechanics
 
-Fighters interact with the Flow resource through disciplined martial application:
+Fighters interact with the Momentum resource through disciplined martial application:
 
-**Flow Generation:**
-- Successfully executing combat techniques with proper form (+1 Flow)
-- Achieving advantageous tactical positioning (+1 Flow)
-- Maintaining discipline under challenging combat conditions (+1 Flow)
-- Overcoming significant opponent through martial skill (+1 Flow)
-- Leading allies successfully in coordinated maneuvers (+2 Flow)
+**Momentum Generation:**
 
-**Flow Expenditure:**
+- Successfully executing combat techniques with proper form (+1 Momentum)
+- Achieving advantageous tactical positioning (+1 Momentum)
+- Maintaining discipline under challenging combat conditions (+1 Momentum)
+- Overcoming significant opponent through martial skill (+1 Momentum)
+- Leading allies successfully in coordinated maneuvers (+2 Momentum)
+
+**Momentum Expenditure:**
+
 - Executing advanced combat techniques (costs vary by complexity)
-- Enhancing standard attacks (+1 Flow for additional effect)
-- Improving defensive reactions (+1 Flow for enhanced protection)
-- Maintaining endurance beyond normal limits (+2 Flow for continued effectiveness)
-- Performing exceptional feats of martial prowess (+3 Flow for signature moves)
+- Enhancing standard attacks (+1 Momentum for additional effect)
+- Improving defensive reactions (+1 Momentum for enhanced protection)
+- Maintaining endurance beyond normal limits (+2 Momentum for continued effectiveness)
+- Performing exceptional feats of martial prowess (+3 Momentum for signature moves)
 
-Fighters typically generate Flow through successful application of training and technique, then spend it on enhanced combat maneuvers. This pattern reflects their approach of disciplined practice followed by effective execution.
+Fighters typically generate Momentum through successful application of training and technique, then spend it on enhanced combat maneuvers. This pattern reflects their approach of disciplined practice followed by effective execution.
 
 ### Signature Techniques
 
 Fighters develop specialized techniques reflecting their systematic approach to combat:
 
-**Perfect Guard (Flow 2):** Channel training into flawless defensive position, reducing incoming damage by 2 DR until next turn. When used to protect an adjacent ally, also generates +1 Flow.
+**Perfect Guard (Momentum 2):** Channel training into flawless defensive position, reducing incoming damage by 2 DR until next turn. When used to protect an adjacent ally, also generates +1 Momentum.
 
-**Combat Assessment (Flow 1):** Analyze opponent's fighting style, identifying one weakness or tactical vulnerability. Subsequent attacks targeting this weakness gain +1 to hit.
+**Combat Assessment (Momentum 1):** Analyze opponent's fighting style, identifying one weakness or tactical vulnerability. Subsequent attacks targeting this weakness gain +1 to hit.
 
-**Weapon Mastery (Flow 2):** Execute perfect technique with chosen weapon, adding weapon's quality rating to damage. With masterwork weapons, also generates +1 Flow on critical hits.
+**Weapon Mastery (Momentum 2):** Execute perfect technique with chosen weapon, adding weapon's quality rating to damage. With masterwork weapons, also generates +1 Momentum on critical hits.
 
-**Battle Focus (Flow 3):** Enter state of complete combat concentration, gaining +1 to all Combat rolls for the scene. If maintaining Flow above +3, also gain +1 Guard.
+**Battle Focus (Momentum 3):** Enter state of complete combat concentration, gaining +1 to all Combat rolls for the scene. If maintaining Momentum above +3, also gain +1 Guard.
 
-**Tactical Repositioning (Flow 1):** Move through combat with perfect efficiency, gaining free zone movement without triggering reaction attacks. When positioning enables ally advantage, also generates +1 Flow.
+**Tactical Repositioning (Momentum 1):** Move through combat with perfect efficiency, gaining free zone movement without triggering reaction attacks. When positioning enables ally advantage, also generates +1 Momentum.
 
 ## Cultural Variations
 
@@ -94,6 +102,7 @@ The most common Fighter approach emphasizes formalized training, codified techni
 **Motivations:** Masters the complete scope of their fighting tradition. Maintains discipline as both practical methodology and philosophical approach. Represents their martial lineage through technical excellence.
 
 **Distinctive Elements:**
+
 - Structured training routines maintaining and advancing skill
 - Formalized stances and techniques with specific applications
 - Technical terminology describing combat principles
@@ -113,6 +122,7 @@ This Fighter variant prioritizes functional effectiveness over traditional forms
 **Motivations:** Survives and wins through whatever methods work. Approaches combat as practical problem-solving rather than art form. Evaluates techniques solely on battlefield results.
 
 **Distinctive Elements:**
+
 - Pragmatic techniques prioritizing reliability over form
 - Adaptable methodology incorporating diverse influences
 - Experience-based assessment of equipment and tactics
@@ -132,6 +142,7 @@ This uncommon Fighter approach treats martial prowess as an intellectual discipl
 **Motivations:** Develops comprehensive understanding of combat principles. Applies analytical insights to practical technique. Creates theoretical frameworks explaining martial effectiveness.
 
 **Distinctive Elements:**
+
 - Extensive documentation recording technique variations and applications
 - Analytical system comparing effectiveness across different fighting traditions
 - Teaching methodology balancing physical training with theoretical understanding
@@ -151,6 +162,7 @@ This Fighter developed through practical experience rather than formal training,
 **Motivations:** Survives increasingly dangerous challenges through practical skill application. Protects others from experiencing similar traumatic development. Reconciles combat identity with civilian self-concept.
 
 **Distinctive Elements:**
+
 - Unorthodox techniques prioritizing effectiveness over form or tradition
 - Improvisational approach adapting to immediate circumstances rather than following prescribed patterns
 - Psychological resilience developed through repeated survival situations
@@ -170,6 +182,7 @@ This specialized Fighter maintains endangered martial traditions with cultural s
 **Motivations:** Ensures endangered tradition survives through qualified transmission. Maintains cultural context alongside technical instruction. Adapts ancient system to contemporary challenges while preserving core principles.
 
 **Distinctive Elements:**
+
 - Ritualized training incorporating cultural elements beyond mechanical technique
 - Distinctive equipment reflecting traditional designs with modern materials
 - Teaching methodology emphasizing philosophical foundations alongside physical training
@@ -361,24 +374,28 @@ Beyond weapons and armor, Fighters utilize various specialized tools:
 Different species bring distinctive qualities to the Fighter archetype:
 
 **Human Fighters:**
+
 - Cultural martial traditions provide diverse fighting styles
 - Physical adaptability supports various combat approaches
 - Human drive for excellence creates specialized mastery
 - Shorter lifespan encourages risk-taking combat strategies
 
 **Dwarf Fighters:**
+
 - Natural endurance enhances sustained combat capability
 - Cultural weapon traditions emphasize quality and technique
 - Physical strength compensates for shorter reach
 - Defensive fighting styles utilizing stability and leverage
 
 **Elf Fighters:**
+
 - Grace and precision enable sophisticated technique
 - Extended lifespan allows mastery of multiple weapon systems
 - Sensory advantages create combat awareness
 - Traditional fighting styles emphasizing efficiency and elegance
 
 **Halfling Fighters:**
+
 - Size creates unique defensive advantages
 - Agility compensates for strength limitations
 - Specialized techniques utilizing opponent expectations
@@ -435,6 +452,7 @@ Fighters develop distinctive relationships with other archetypes:
 **Motivations:** Achieves technical perfection with chosen weapon. Preserves or advances specialized weapon tradition. Demonstrates weapon's capabilities beyond common perception.
 
 **Distinctive Elements:**
+
 - Exceptional quality primary weapon with personal modifications
 - Training regimen focusing on weapon-specific techniques
 - Combat approach maximizing chosen weapon's unique properties
@@ -454,6 +472,7 @@ Fighters develop distinctive relationships with other archetypes:
 **Motivations:** Maximizes overall combat effectiveness through coordination. Protects those under command through tactical advantage. Achieves objectives through optimal resource application.
 
 **Distinctive Elements:**
+
 - Command-oriented equipment including signaling tools
 - Tactical analysis capability assessing battlefield holistically
 - Leadership techniques enhancing allied combat performance
@@ -473,6 +492,7 @@ Fighters develop distinctive relationships with other archetypes:
 **Motivations:** Ensures endangered tradition survives through qualified transmission. Maintains cultural context alongside technical instruction. Adapts ancient system to contemporary challenges while preserving core principles.
 
 **Distinctive Elements:**
+
 - Ritualized training incorporating cultural elements beyond mechanical technique
 - Distinctive equipment reflecting traditional designs with modern materials
 - Teaching methodology emphasizing philosophical foundations alongside physical training
@@ -492,6 +512,7 @@ Fighters develop distinctive relationships with other archetypes:
 **Motivations:** Survives increasingly dangerous challenges through practical skill application. Protects others from experiencing similar traumatic development. Reconciles combat identity with civilian self-concept.
 
 **Distinctive Elements:**
+
 - Unorthodox techniques prioritizing effectiveness over form or tradition
 - Improvisational approach adapting to immediate circumstances rather than following prescribed patterns
 - Psychological resilience developed through repeated survival situations
@@ -511,6 +532,7 @@ Fighters develop distinctive relationships with other archetypes:
 **Motivations:** Protects vulnerable individuals through specialized defensive techniques. Demonstrates superiority of preventative approach over reactive combat. Develops protection systems addressing diverse threat types.
 
 **Distinctive Elements:**
+
 - Shield mastery with specialized techniques maximizing protective coverage
 - Positional control maintaining optimal defensive configuration
 - Threat assessment prioritizing prevention over engagement

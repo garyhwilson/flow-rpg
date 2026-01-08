@@ -1,11 +1,12 @@
 # Species System Integration
-*How Species Interacts with Core Game Mechanics*
+
+_How Species Interacts with Core Game Mechanics_
 
 ## Introduction
 
-Species in Flow RPG isn't merely a character creation choice but a foundational element that influences how characters interact with all major game systems. This integration creates distinctive gameplay experiences beyond simple attribute adjustments, with each species approaching core mechanics in qualitatively different ways that reflect their biological nature and cultural values.
+Species in Autumn Phoenix RPG isn't merely a character creation choice but a foundational element that influences how characters interact with all major game systems. This integration creates distinctive gameplay experiences beyond simple attribute adjustments, with each species approaching core mechanics in qualitatively different ways that reflect their biological nature and cultural values.
 
-This document outlines how the four core species interact with Flow RPG's major systems, providing both mechanical guidance and thematic context for these relationships.
+This document outlines how the four core species interact with Autumn Phoenix RPG's major systems, providing both mechanical guidance and thematic context for these relationships.
 
 ## Attributes & Species
 
@@ -14,44 +15,50 @@ Each species has natural tendencies toward certain attribute distributions refle
 ### Physical Attributes
 
 **Might**
-- *Humans:* Moderate adaptability (+0)
-- *Elves:* Lighter musculature (-1)
-- *Dwarves:* Dense muscular structure (+1)
-- *Halflings:* Small stature limitations (-2)
+
+- _Humans:_ Moderate adaptability (+0)
+- _Elves:_ Lighter musculature (-1)
+- _Dwarves:_ Dense muscular structure (+1)
+- _Halflings:_ Small stature limitations (-2)
 
 **Grace**
-- *Humans:* Moderate adaptability (+0)
-- *Elves:* Natural fluidity and precision (+2)
-- *Dwarves:* Compact stability over agility (-1)
-- *Halflings:* Small size advantages (+1)
+
+- _Humans:_ Moderate adaptability (+0)
+- _Elves:_ Natural fluidity and precision (+2)
+- _Dwarves:_ Compact stability over agility (-1)
+- _Halflings:_ Small size advantages (+1)
 
 ### Mental Attributes
 
 **Mind**
-- *Humans:* Learning adaptability (+1)
-- *Elves:* Pattern recognition from longevity (+1)
-- *Dwarves:* Methodical analytical approach (+0)
-- *Halflings:* Practical rather than abstract focus (-1)
+
+- _Humans:_ Learning adaptability (+1)
+- _Elves:_ Pattern recognition from longevity (+1)
+- _Dwarves:_ Methodical analytical approach (+0)
+- _Halflings:_ Practical rather than abstract focus (-1)
 
 **Awareness**
-- *Humans:* Environment adaptation focus (+0)
-- *Elves:* Enhanced sensory perception (+2)
-- *Dwarves:* Underground adaptation (+0)
-- *Halflings:* Social rather than environmental attunement (+0)
+
+- _Humans:_ Environment adaptation focus (+0)
+- _Elves:_ Enhanced sensory perception (+2)
+- _Dwarves:_ Underground adaptation (+0)
+- _Halflings:_ Social rather than environmental attunement (+0)
 
 ### Social Attributes
 
 **Will**
-- *Humans:* Adaptable determination (+0)
-- *Elves:* Long-term perspective (+1)
-- *Dwarves:* Legendary stubbornness (+2)
-- *Halflings:* Resilient flexibility (+1)
+
+- _Humans:_ Adaptable determination (+0)
+- _Elves:_ Long-term perspective (+1)
+- _Dwarves:_ Legendary stubbornness (+2)
+- _Halflings:_ Resilient flexibility (+1)
 
 **Presence**
-- *Humans:* Social adaptation specialty (+1)
-- *Elves:* Alien perspective limitation (+0)
-- *Dwarves:* Cultural directness over charm (-1)
-- *Halflings:* Natural empathy and charisma (+2)
+
+- _Humans:_ Social adaptation specialty (+1)
+- _Elves:_ Alien perspective limitation (+0)
+- _Dwarves:_ Cultural directness over charm (-1)
+- _Halflings:_ Natural empathy and charisma (+2)
 
 ### Implications
 
@@ -71,24 +78,28 @@ Different species typically develop distinctive skill preferences shaped by cult
 ### Natural Affinities
 
 **Humans**
-- *Exceptional:* Innovate (developing new approaches)
-- *Natural:* Adapt, Persuade, Craft
-- *Challenging:* None (adaptable to all skills)
+
+- _Exceptional:_ Innovate (developing new approaches)
+- _Natural:_ Adapt, Persuade, Craft
+- _Challenging:_ None (adaptable to all skills)
 
 **Elves**
-- *Exceptional:* Perceive (environmental awareness)
-- *Natural:* Stealth, Nature, Performance
-- *Challenging:* Endure (physical rather than psychological)
+
+- _Exceptional:_ Perceive (environmental awareness)
+- _Natural:_ Stealth, Nature, Performance
+- _Challenging:_ Endure (physical rather than psychological)
 
 **Dwarves**
-- *Exceptional:* Endure (physical and mental resilience)
-- *Natural:* Craft, Stonework, Tradition
-- *Challenging:* Deception (cultural directness)
+
+- _Exceptional:_ Endure (physical and mental resilience)
+- _Natural:_ Craft, Stonework, Tradition
+- _Challenging:_ Deception (cultural directness)
 
 **Halflings**
-- *Exceptional:* Empathize (social perception)
-- *Natural:* Stealth, Cooking, Negotiate
-- *Challenging:* Intimidate (size limitations)
+
+- _Exceptional:_ Empathize (social perception)
+- _Natural:_ Stealth, Cooking, Negotiate
+- _Challenging:_ Intimidate (size limitations)
 
 ### How Each Species Learns
 
@@ -111,40 +122,40 @@ These different learning approaches create distinctive skill development pattern
 - **Dwarves** develop reliable competence across traditional skills with exceptional depth in specialty areas
 - **Halflings** excel at practical applications and adaptations of skills to specific situations
 
-## Flow & Species
+## Momentum & Species
 
-The Flow resource interacts distinctively with each species, reflecting different approaches to managing and utilizing this fundamental energy:
+The Momentum resource interacts distinctively with each species, reflecting different approaches to managing and utilizing this fundamental energy:
 
-### Generating Flow
+### Generating Momentum
 
-**Humans** generate Flow through successful adaptation and innovation, earning rewards for creative approaches, adaptability under pressure, and effective improvisation. This pattern reflects their core strength of finding novel solutions to immediate challenges.
+**Humans** generate Momentum through successful adaptation and innovation, earning rewards for creative approaches, adaptability under pressure, and effective improvisation. This pattern reflects their core strength of finding novel solutions to immediate challenges.
 
-**Elves** accumulate Flow through perception and pattern recognition, earning rewards for environmental awareness, predictive insights, and harmonious interaction with natural cycles. This pattern reflects their attunement to subtle patterns invisible to shorter-lived species.
+**Elves** accumulate Momentum through perception and pattern recognition, earning rewards for environmental awareness, predictive insights, and harmonious interaction with natural cycles. This pattern reflects their attunement to subtle patterns invisible to shorter-lived species.
 
-**Dwarves** build Flow through endurance and persistence, earning rewards for maintaining commitment despite adversity, applying traditional knowledge effectively, and demonstrating exceptional resilience. This pattern reflects their legendary determination and connection to proven methods.
+**Dwarves** build Momentum through endurance and persistence, earning rewards for maintaining commitment despite adversity, applying traditional knowledge effectively, and demonstrating exceptional resilience. This pattern reflects their legendary determination and connection to proven methods.
 
-**Halflings** create Flow through social harmony and practical comfort, earning rewards for building community connections, enhancing shared experiences, and finding simple solutions to complex problems. This pattern reflects their focus on quality of life and interpersonal bonds.
+**Halflings** create Momentum through social harmony and practical comfort, earning rewards for building community connections, enhancing shared experiences, and finding simple solutions to complex problems. This pattern reflects their focus on quality of life and interpersonal bonds.
 
 ### Utilization Tendencies
 
-Different species typically favor distinctive approaches to spending Flow:
+Different species typically favor distinctive approaches to spending Momentum:
 
-**Humans** tend to spend Flow opportunistically on immediate advantages, using it as an adaptive resource to overcome specific challenges rather than conserving it for later use. This approach creates a volatile Flow economy with rapid cycles of generation and expenditure.
+**Humans** tend to spend Momentum opportunistically on immediate advantages, using it as an adaptive resource to overcome specific challenges rather than conserving it for later use. This approach creates a volatile Momentum economy with rapid cycles of generation and expenditure.
 
-**Elves** typically maintain stable Flow reserves, spending carefully on high-impact moments where precision and timing create extraordinary results. This approach creates a measured Flow economy focused on quality over quantity of expenditure.
+**Elves** typically maintain stable Momentum reserves, spending carefully on high-impact moments where precision and timing create extraordinary results. This approach creates a measured Momentum economy focused on quality over quantity of expenditure.
 
-**Dwarves** often accumulate substantial Flow reserves before making significant expenditures, creating security margins ensuring capability even under adverse conditions. This approach creates a conservative Flow economy prioritizing sustainability over immediate advantage.
+**Dwarves** often accumulate substantial Momentum reserves before making significant expenditures, creating security margins ensuring capability even under adverse conditions. This approach creates a conservative Momentum economy prioritizing sustainability over immediate advantage.
 
-**Halflings** frequently circulate Flow within their community, spending it to enhance group capabilities and support allies rather than maximizing personal effectiveness. This approach creates a communal Flow economy where resources flow naturally toward greatest need.
+**Halflings** frequently circulate Momentum within their community, spending it to enhance group capabilities and support allies rather than maximizing personal effectiveness. This approach creates a communal Momentum economy where resources flow naturally toward greatest need.
 
 ### Implications
 
-These distinctive relationships with Flow create different gameplay rhythms for each species while maintaining the cohesive resource economy that unifies the game system:
+These distinctive relationships with Momentum create different gameplay rhythms for each species while maintaining the cohesive resource economy that unifies the game system:
 
-- **Human** characters experience dynamic Flow patterns requiring adaptive resource management
-- **Elven** characters maintain consistent Flow levels with precise expenditure timing
-- **Dwarven** characters build sustainable Flow reserves creating reliable capability under pressure
-- **Halfling** characters develop interconnected Flow economies supporting group effectiveness
+- **Human** characters experience dynamic Momentum patterns requiring adaptive resource management
+- **Elven** characters maintain consistent Momentum levels with precise expenditure timing
+- **Dwarven** characters build sustainable Momentum reserves creating reliable capability under pressure
+- **Halfling** characters develop interconnected Momentum economies supporting group effectiveness
 
 ## Combat & Species
 
@@ -344,7 +355,7 @@ These different advancement patterns create distinctive character development ex
 
 ## Conclusion
 
-The species system in Flow RPG creates qualitatively different gameplay experiences through meaningful integration with all major game systems. These differences extend far beyond simple attribute adjustments to include distinctive relationships with Flow, combat approaches, magical affinities, social patterns, and development trajectories.
+The species system in Autumn Phoenix RPG creates qualitatively different gameplay experiences through meaningful integration with all major game systems. These differences extend far beyond simple attribute adjustments to include distinctive relationships with Momentum, combat approaches, magical affinities, social patterns, and development trajectories.
 
 When combined with the archetype and calling systems, these species interactions create extraordinarily diverse character possibilities while maintaining both mechanical balance and thematic consistency. The resulting combinations allow players to express unique character concepts through mechanically supported narrative elements rather than purely cosmetic differences.
 

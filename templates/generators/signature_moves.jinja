@@ -4,10 +4,10 @@ Generates signature moves documentation with professional TTRPG prose
 #}
 # Signature Moves
 
-Every fighter can execute a perfect sword strike. Every wizard can cast Fireball. But only you have *your* signature move—the personal technique that defines your fighting style, bears your name, and costs less Flow than anyone else could manage. Signature moves aren't just mechanically efficient; they're expressions of character identity made manifest in combat.
+Every fighter can execute a perfect sword strike. Every wizard can cast Fireball. But only you have *your* signature move—the personal technique that defines your fighting style, bears your name, and costs less Momentum than anyone else could manage. Signature moves aren't just mechanically efficient; they're expressions of character identity made manifest in combat.
 
 {% if milestone_data and milestone_data.moderate_milestones and milestone_data.moderate_milestones.options and milestone_data.moderate_milestones.options.signature_move %}{{ milestone_data.moderate_milestones.options.signature_move.description }} This personalization transforms generic techniques into abilities that feel uniquely yours.
-{% else %}Signature moves are personalized techniques created at moderate milestones. They take existing abilities and make them distinctly yours—reduced Flow cost, enhanced effects, or unique narrative descriptions.{% endif %}
+{% else %}Signature moves are personalized techniques created at moderate milestones. They take existing abilities and make them distinctly yours—reduced Momentum cost, enhanced effects, or unique narrative descriptions.{% endif %}
 
 Signature moves typically arrive at your first moderate milestone (session 3 usually), though you can create additional signature moves at later moderate milestones. Most characters have 1-2 signature moves across entire campaigns—these are defining abilities, not a full arsenal.
 
@@ -31,7 +31,7 @@ Every signature move needs:
 
 **Name:** Personal to your character—"Kara's Devastating Charge" not "Generic Charge"
 **Mechanical Effect:** Based on existing technique but with modifications
-**Flow Cost:** 1 less than normal technique (minimum 0 Flow)
+**Momentum Cost:** 1 less than normal technique (minimum 0 Momentum)
 **Narrative Description:** How it looks and feels when activated
 
 {% endif %}
@@ -47,19 +47,19 @@ Choose an existing technique you've used successfully in actual play. Signature 
 
 Don't create signature move for technique you've never actually used. The mechanic exists to reward and enhance existing playstyle, not introduce entirely new capabilities.
 
-### Flow Cost Reduction
+### Momentum Cost Reduction
 
-The defining mechanical benefit: your signature move costs 1 Flow less than the base technique (minimum 0).
+The defining mechanical benefit: your signature move costs 1 Momentum less than the base technique (minimum 0).
 
-**Standard technique costs 2 Flow → Signature costs 1 Flow**
-**Standard technique costs 1 Flow → Signature costs 0 Flow**
-**Standard technique costs 0 Flow → Remains 0 Flow (but might gain other enhancements)**
+**Standard technique costs 2 Momentum → Signature costs 1 Momentum**
+**Standard technique costs 1 Momentum → Signature costs 0 Momentum**
+**Standard technique costs 0 Momentum → Remains 0 Momentum (but might gain other enhancements)**
 
-This reduction makes signature moves your go-to abilities. Where others must build Flow reserves, you execute your signature move more easily.
+This reduction makes signature moves your go-to abilities. Where others must build Momentum reserves, you execute your signature move more easily.
 
 ### Personal Enhancements
 
-Beyond Flow reduction, signature moves can include minor enhancements:
+Beyond Momentum reduction, signature moves can include minor enhancements:
 
 **Slight damage increase:** +1 or +1d6 damage
 **Extended range:** Affect additional target or slightly larger area
@@ -80,10 +80,10 @@ These examples show how different archetypes create signature moves from existin
 
 **Base Technique:** {{ move.base_technique if move.base_technique else move.base_spell }}
 **Enhancement:** {{ move.enhancement }}
-**Standard Cost:** {{ move.normal_cost }} Flow
-**Signature Cost:** {{ move.signature_cost }} Flow
+**Standard Cost:** {{ move.normal_cost }} Momentum
+**Signature Cost:** {{ move.signature_cost }} Momentum
 
-**In Play:** {% if archetype == 'fighter' %}The fighter builds +2 Flow instead of +3, activates immediately. The enhanced technique knocks enemies prone after damage, controlling battlefield positioning. Used every major fight when enemies cluster or need repositioning.{% elif archetype == 'wizard' %}Fireball with random energy type makes every casting unpredictable—enemies can't prepare resistances. Zero Flow cost means it's freely castable once per turn like enhanced cantrip. The wizard's signature combat spell.{% elif archetype == 'rogue' %}Shadow teleportation enables impossible positioning—appear behind enemies, strike, vanish. The definitive rogue move combining stealth, positioning, and damage. Costs 2 Flow instead of 3, enabling more frequent use.{% else %}This signature move defines the character's combat identity while providing mechanical advantage through reduced Flow cost.{% endif %}
+**In Play:** {% if archetype == 'fighter' %}The fighter builds +2 Momentum instead of +3, activates immediately. The enhanced technique knocks enemies prone after damage, controlling battlefield positioning. Used every major fight when enemies cluster or need repositioning.{% elif archetype == 'wizard' %}Fireball with random energy type makes every casting unpredictable—enemies can't prepare resistances. Zero Momentum cost means it's freely castable once per turn like enhanced cantrip. The wizard's signature combat spell.{% elif archetype == 'rogue' %}Shadow teleportation enables impossible positioning—appear behind enemies, strike, vanish. The definitive rogue move combining stealth, positioning, and damage. Costs 2 Momentum instead of 3, enabling more frequent use.{% else %}This signature move defines the character's combat identity while providing mechanical advantage through reduced Momentum cost.{% endif %}
 
 ---
 {% endfor %}
@@ -93,7 +93,7 @@ These examples show how different archetypes create signature moves from existin
 
 **Base Technique:** Charge Attack
 **Enhancement:** Knocks prone on hit
-**Standard Cost:** 3 Flow → **Signature Cost:** 2 Flow
+**Standard Cost:** 3 Momentum → **Signature Cost:** 2 Momentum
 
 The fighter's signature move combines aggressive movement with crowd control. Instead of standard charge damage, Thundering Charge knocks enemies prone, enabling follow-up attacks with advantage.
 
@@ -103,9 +103,9 @@ The fighter's signature move combines aggressive movement with crowd control. In
 
 **Base Spell:** Fireball
 **Enhancement:** Random energy type (fire, cold, lightning, acid)
-**Standard Cost:** 1 Flow → **Signature Cost:** 0 Flow
+**Standard Cost:** 1 Momentum → **Signature Cost:** 0 Momentum
 
-The wizard's signature spell costs zero Flow—freely castable like enhanced cantrip. The random energy type prevents enemy resistance preparation while providing visual distinctiveness.
+The wizard's signature spell costs zero Momentum—freely castable like enhanced cantrip. The random energy type prevents enemy resistance preparation while providing visual distinctiveness.
 
 ---
 
@@ -113,7 +113,7 @@ The wizard's signature spell costs zero Flow—freely castable like enhanced can
 
 **Base Technique:** Sneak Attack
 **Enhancement:** Teleport behind target before striking
-**Standard Cost:** 3 Flow → **Signature Cost:** 2 Flow
+**Standard Cost:** 3 Momentum → **Signature Cost:** 2 Momentum
 
 The rogue's signature move adds impossible positioning to damage. Shadow-teleportation enables attacks from complete concealment, guaranteeing sneak attack conditions.
 
@@ -138,7 +138,7 @@ Work with your Game Master to design balanced signature moves:
 
 **Discuss base technique:** Ensure you're eligible (used it 2+ times successfully)
 **Propose enhancements:** What minor improvements make sense?
-**Set appropriate cost:** Usually 1 less Flow, minimum 0
+**Set appropriate cost:** Usually 1 less Momentum, minimum 0
 **Write narrative description:** How does this look when you use it?
 
 Good GMs encourage signature move creation—it increases player investment and creates memorable combat moments.
@@ -147,7 +147,7 @@ Good GMs encourage signature move creation—it increases player investment and 
 
 Signature moves can improve at later milestones:
 
-**Session 6 moderate milestone:** Reduce cost by additional 1 Flow OR add minor enhancement
+**Session 6 moderate milestone:** Reduce cost by additional 1 Momentum OR add minor enhancement
 **Session 9 moderate milestone:** Add narrative permission OR slightly boost effect
 
 These improvements keep signature moves relevant as characters grow in power. The signature move you created at session 3 shouldn't become obsolete by session 9.
@@ -178,10 +178,10 @@ Encourage other players to recognize your signature move: "Oh no, here comes Sha
 
 ### Mechanical Efficiency
 
-Because signature moves cost less Flow, they create advantageous action economy:
+Because signature moves cost less Momentum, they create advantageous action economy:
 
 **More frequent activation:** Build to threshold faster
-**Flow conservation:** Spend less, have more for other techniques
+**Momentum conservation:** Spend less, have more for other techniques
 **Sustainable tactics:** Can repeat signature move across multiple encounters
 
 Signature moves should feel like your bread-and-butter technique, not desperate last resort.
@@ -205,7 +205,7 @@ Some players embrace signature moves immediately; others prefer generic techniqu
 Signature moves should feel special without overshadowing everything:
 
 **Appropriate enhancements:**
-- Flow cost reduction (always appropriate)
+- Momentum cost reduction (always appropriate)
 - +1d6 damage or equivalent minor boost
 - Small area or range increase
 - Narrative flavor making technique distinctive

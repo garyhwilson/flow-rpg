@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Flow RPG Documentation Generator
+Autumn Phoenix RPG Documentation Generator
 
 Generates markdown documentation from YAML source files using Jinja2 templates.
 Enables rapid iteration on game mechanics while maintaining narrative context.
@@ -76,7 +76,7 @@ TEMPLATE_DIR = PROJECT_ROOT / 'templates'
 OUTPUT_DIR = TEMPLATE_DIR / 'output'
 
 class FlowRPGGenerator:
-    """Main generator class for Flow RPG documentation."""
+    """Main generator class for Autumn Phoenix RPG documentation."""
 
     def __init__(self):
         """Initialize the generator with Jinja2 environment."""
@@ -145,21 +145,21 @@ class FlowRPGGenerator:
 
                 # Validate each calling has required fields
                 for calling_name, calling_data in callings.items():
-                    if 'flow_benefit' not in calling_data:
+                    if 'momentum_benefit' not in calling_data:
                         errors.append(
-                            f"Calling '{calling_name}' missing flow_benefit"
+                            f"Calling '{calling_name}' missing momentum_benefit"
                         )
-                    elif not isinstance(calling_data['flow_benefit'], dict):
+                    elif not isinstance(calling_data['momentum_benefit'], dict):
                         errors.append(
-                            f"Calling '{calling_name}' flow_benefit must be a dict"
+                            f"Calling '{calling_name}' momentum_benefit must be a dict"
                         )
                     else:
-                        benefit = calling_data['flow_benefit']
+                        benefit = calling_data['momentum_benefit']
                         required_fields = ['name', 'trigger', 'effect']
                         for field in required_fields:
                             if field not in benefit:
                                 errors.append(
-                                    f"Calling '{calling_name}' flow_benefit missing '{field}'"
+                                    f"Calling '{calling_name}' momentum_benefit missing '{field}'"
                                 )
 
         # Check equipment armor data
@@ -1243,7 +1243,7 @@ class FlowRPGGenerator:
 def main():
     """Main entry point for the generator."""
     parser = argparse.ArgumentParser(
-        description='Generate Flow RPG documentation from YAML sources'
+        description='Generate Autumn Phoenix RPG documentation from YAML sources'
     )
     parser.add_argument(
         '--all', action='store_true',
@@ -1410,7 +1410,7 @@ def main():
         return
 
     # Initialize generator
-    print("🎲 Flow RPG Documentation Generator")
+    print("🎲 Autumn Phoenix RPG Documentation Generator")
     print("=" * 50)
     generator = FlowRPGGenerator()
 

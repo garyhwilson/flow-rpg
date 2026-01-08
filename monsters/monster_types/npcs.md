@@ -5,6 +5,7 @@ NPCs are the supporting cast of your campaign—allies, rivals, merchants, noble
 ## Design Philosophy
 
 NPCs should be:
+
 - **Quick to create** - Use simplified stat blocks
 - **Narratively rich** - Personality and goals drive behavior
 - **Flexible** - Easy to scale up/down for different situations
@@ -25,7 +26,7 @@ ATTRIBUTES (if combat occurs)
 Primary: [+X]  Secondary: [+X]  Other: [+0 to +1]
 
 DEFENSES (if needed)
-Vitality: [X]  Guard: [X]  Flow: [X]
+Vitality: [X]  Guard: [X]  Momentum: [X]
 
 KEY SKILLS
 - [What they're good at]
@@ -44,10 +45,13 @@ CONNECTIONS
 ## Quick NPC Creation
 
 ### Step 1: Define Role
+
 What function does this NPC serve?
+
 - Questgiver, ally, rival, merchant, authority figure, sage, etc.
 
 ### Step 2: Determine Capability
+
 - **Commoner** - No combat training, flees danger
 - **Trained** - Basic competence, can defend themselves
 - **Professional** - Skilled at their trade, dangerous if provoked
@@ -55,16 +59,20 @@ What function does this NPC serve?
 - **Legendary** - World-class capability, renowned throughout the land
 
 ### Step 3: Assign Key Attributes
+
 Only detail what matters for their role:
+
 - Combat NPC: Body, Awareness
 - Social NPC: Presence, Will
 - Knowledge NPC: Mind
 - Perceptive NPC: Awareness
 
 ### Step 4: Add Personality
+
 3-5 descriptive traits that drive behavior
 
 ### Step 5: Establish Connections
+
 Who they know, what resources they control
 
 ---
@@ -72,7 +80,8 @@ Who they know, what resources they control
 ## NPC TEMPLATES BY ROLE
 
 ### MERCHANT
-*Shopkeeper, trader, fence*
+
+_Shopkeeper, trader, fence_
 
 **Role:** Buy and sell goods
 **Motivation:** Profit, reputation, connections
@@ -80,6 +89,7 @@ Who they know, what resources they control
 **Attributes:** Presence +2, Mind +1, Awareness +1
 
 **Key Skills:**
+
 - Appraise items accurately
 - Negotiate prices
 - Know market trends
@@ -95,18 +105,20 @@ Who they know, what resources they control
 ---
 
 ### TOWN GUARD
-*City watch, patrol officer*
+
+_City watch, patrol officer_
 
 **Role:** Keep order, enforce laws
 **Motivation:** Duty, paycheck, city safety
 
 **Attributes:** Body +2, Awareness +1, Will +1
 
-**Defenses:** Vitality 8, Guard 11 (leather armor + shield), Flow 2
+**Defenses:** Vitality 8, Guard 11 (leather armor + shield), Momentum 2
 
 **Offense:** Spear (+2): 1d6+2 damage
 
 **Key Skills:**
+
 - Know local laws
 - Recognize troublemakers
 - Work as team with other guards
@@ -122,7 +134,8 @@ Who they know, what resources they control
 ---
 
 ### NOBLE
-*Lord, lady, wealthy patron*
+
+_Lord, lady, wealthy patron_
 
 **Role:** Authority figure, patron, political player
 **Motivation:** Power, legacy, family honor
@@ -130,6 +143,7 @@ Who they know, what resources they control
 **Attributes:** Presence +3, Mind +2, Will +2
 
 **Key Skills:**
+
 - Command respect and obedience
 - Understand politics and intrigue
 - Access to wealth and resources
@@ -145,7 +159,8 @@ Who they know, what resources they control
 ---
 
 ### SAGE / SCHOLAR
-*Wizard, priest, librarian, researcher*
+
+_Wizard, priest, librarian, researcher_
 
 **Role:** Source of knowledge, magical services
 **Motivation:** Knowledge, discovery, legacy
@@ -153,6 +168,7 @@ Who they know, what resources they control
 **Attributes:** Mind +4, Awareness +2, Will +2
 
 **Key Skills:**
+
 - Vast knowledge (history, arcana, religion, nature)
 - Research and investigation
 - Identify magical items
@@ -168,7 +184,8 @@ Who they know, what resources they control
 ---
 
 ### INNKEEPER
-*Tavern owner, information broker*
+
+_Tavern owner, information broker_
 
 **Role:** Provide lodging, food, rumors
 **Motivation:** Profit, community standing, gossip
@@ -176,6 +193,7 @@ Who they know, what resources they control
 **Attributes:** Presence +2, Awareness +2, Mind +1
 
 **Key Skills:**
+
 - Manage establishment
 - Remember faces and stories
 - Hear rumors and gossip
@@ -191,7 +209,8 @@ Who they know, what resources they control
 ---
 
 ### BLACKSMITH
-*Weaponsmith, armorer, craftsperson*
+
+_Weaponsmith, armorer, craftsperson_
 
 **Role:** Craft and repair equipment
 **Motivation:** Craft pride, income, community service
@@ -199,6 +218,7 @@ Who they know, what resources they control
 **Attributes:** Body +3, Mind +1, Awareness +1
 
 **Key Skills:**
+
 - Craft and repair weapons/armor
 - Assess quality of metalwork
 - Understand metallurgy
@@ -214,16 +234,18 @@ Who they know, what resources they control
 ---
 
 ### PRIEST / CLERIC
-*Temple servant, tender of wounds, spiritual guide*
+
+_Temple servant, tender of wounds, spiritual guide_
 
 **Role:** Spiritual guidance, healing, divine magic
 **Motivation:** Serve deity, help community, spread faith
 
 **Attributes:** Will +3, Mind +2, Presence +2
 
-**Defenses:** Vitality 10, Guard 9, Flow 4
+**Defenses:** Vitality 10, Guard 9, Momentum 4
 
 **Key Skills:**
+
 - Cast divine spells (Heal, Bless, etc.)
 - Knowledge of religion and theology
 - Perform religious ceremonies
@@ -239,7 +261,8 @@ Who they know, what resources they control
 ---
 
 ### GUILD LEADER
-*Thieves' guild master, merchant prince, craft guild head*
+
+_Thieves' guild master, merchant prince, craft guild head_
 
 **Role:** Lead organization, political influence
 **Motivation:** Guild prosperity, personal power, legacy
@@ -247,6 +270,7 @@ Who they know, what resources they control
 **Attributes:** Presence +4, Mind +3, Awareness +2, Will +3
 
 **Key Skills:**
+
 - Command organization resources
 - Political maneuvering
 - Read people and situations
@@ -262,7 +286,8 @@ Who they know, what resources they control
 ---
 
 ### MASTER CRAFTSPERSON
-*Legendary artisan, renowned expert*
+
+_Legendary artisan, renowned expert_
 
 **Role:** Create masterwork items, mentor
 **Motivation:** Perfect craft, reputation, worthy apprentices
@@ -270,6 +295,7 @@ Who they know, what resources they control
 **Attributes:** Primary craft attribute +5, Mind +3
 
 **Key Skills:**
+
 - Create exceptional quality items
 - Identify fakes and quality
 - Extensive knowledge of craft history
@@ -285,18 +311,20 @@ Who they know, what resources they control
 ---
 
 ### COURT WIZARD
-*Royal advisor, magical expert, arcane researcher*
+
+_Royal advisor, magical expert, arcane researcher_
 
 **Role:** Magical services, counsel, arcane knowledge
 **Motivation:** Advance magical understanding, serve patron, prestige
 
 **Attributes:** Mind +5, Awareness +3, Will +4, Presence +2
 
-**Defenses:** Vitality 16, Guard 14, Flow 8
+**Defenses:** Vitality 16, Guard 14, Momentum 8
 
 **Offense:** Spells cast with Mind +5
 
 **Key Skills:**
+
 - Master spellcaster (Advanced tier spells)
 - Arcane research and theory
 - Political advising
@@ -312,18 +340,20 @@ Who they know, what resources they control
 ---
 
 ### VETERAN SOLDIER
-*Retired warrior, mercenary captain, drill sergeant*
+
+_Retired warrior, mercenary captain, drill sergeant_
 
 **Role:** Military expertise, training, leadership
 **Motivation:** Glory days nostalgia, honor, duty
 
 **Attributes:** Body +4, Awareness +3, Will +3
 
-**Defenses:** Vitality 14, Guard 13, Flow 4
+**Defenses:** Vitality 14, Guard 13, Momentum 4
 
 **Offense:** Longsword (+4): 2d6+4 damage
 
 **Key Skills:**
+
 - Expert combat tactics and strategy
 - Train others in combat
 - Leadership and command
@@ -339,7 +369,8 @@ Who they know, what resources they control
 ---
 
 ### CRIME LORD
-*Underworld leader, shadowy power*
+
+_Underworld leader, shadowy power_
 
 **Role:** Control criminal operations, political shadow player
 **Motivation:** Power, wealth, control territory
@@ -347,6 +378,7 @@ Who they know, what resources they control
 **Attributes:** Presence +4, Mind +4, Awareness +3, Will +4
 
 **Key Skills:**
+
 - Vast criminal network
 - Political blackmail and influence
 - Read people and detect lies
@@ -366,18 +398,21 @@ Who they know, what resources they control
 Some NPCs are designed as recurring antagonists:
 
 ### RIVAL ADVENTURER
-*Competing party, mirror of PCs*
+
+_Competing party, mirror of PCs_
 
 **Role:** Competition, foil for party
 **Motivation:** Same goals as PCs, but different methods/alignment
 
 **Creation:**
+
 - Match party's average capability
 - Use PC archetypes as templates
 - Give distinctive personality to each member
 - Establish history (past encounters, reputation)
 
 **Usage:**
+
 - Compete for same objectives
 - Create time pressure (they're ahead/behind)
 - Force difficult choices (help rivals vs. achieve goal)
@@ -386,7 +421,8 @@ Some NPCs are designed as recurring antagonists:
 ---
 
 ### CORRUPT OFFICIAL
-*Evil mayor, crooked judge, bought captain*
+
+_Evil mayor, crooked judge, bought captain_
 
 **Role:** Institutional antagonist
 **Motivation:** Greed, power, covering crimes
@@ -394,6 +430,7 @@ Some NPCs are designed as recurring antagonists:
 **Attributes:** Presence +3, Mind +3, Will +2
 
 **Key Skills:**
+
 - Legal authority to harass party
 - Influence and connections
 - Hired muscle (guards, thugs)
@@ -403,6 +440,7 @@ Some NPCs are designed as recurring antagonists:
 **Personality:** Charming publicly, corrupt privately, self-preserving
 
 **Tactics:**
+
 - Use legal system against party
 - Send underlings (deniability)
 - Frame or discredit party
@@ -413,16 +451,18 @@ Some NPCs are designed as recurring antagonists:
 ---
 
 ### DARK SORCERER
-*Evil mage, necromancer, warlock*
+
+_Evil mage, necromancer, warlock_
 
 **Role:** Magical threat, schemer
 **Motivation:** Power, forbidden knowledge, dark pacts
 
 **Attributes:** Mind +5, Will +5, Awareness +3
 
-**Defenses:** Vitality 18, Guard 14, Flow 10
+**Defenses:** Vitality 18, Guard 14, Momentum 10
 
 **Key Skills:**
+
 - Advanced/Master spellcasting
 - Summoning and binding
 - Arcane research (forbidden)
@@ -432,6 +472,7 @@ Some NPCs are designed as recurring antagonists:
 **Personality:** Arrogant, obsessed, sees people as tools
 
 **Tactics:**
+
 - Work through servants and agents
 - Prepared defenses and contingencies
 - Strike from hiding/range
@@ -443,16 +484,18 @@ Some NPCs are designed as recurring antagonists:
 ---
 
 ### CULT LEADER
-*Charismatic zealot, false prophet*
+
+_Charismatic zealot, false prophet_
 
 **Role:** Leader of dangerous followers
 **Motivation:** Power through faith, summon entity, apocalyptic vision
 
 **Attributes:** Presence +5, Will +5, Mind +2
 
-**Defenses:** Vitality 16, Guard 10, Flow 8
+**Defenses:** Vitality 16, Guard 10, Momentum 8
 
 **Key Skills:**
+
 - Charismatic leadership (followers die for them)
 - Dark magic or divine connection
 - Manipulation and indoctrination
@@ -462,6 +505,7 @@ Some NPCs are designed as recurring antagonists:
 **Personality:** Charismatic, fanatical, convinced of righteousness
 
 **Tactics:**
+
 - Send waves of cultists
 - Use followers as shields
 - Dramatic villain speeches (buy time)
@@ -479,16 +523,19 @@ Some NPCs are designed as recurring antagonists:
 NPCs shine in non-combat interactions:
 
 **Negotiation:**
+
 - Clear goals and limits
 - Willing to compromise on some points
 - Hard lines on crucial matters
 
 **Information:**
+
 - Know things PCs don't
 - Have price or condition for sharing
 - May lie or mislead based on motivation
 
 **Quests:**
+
 - Provide hooks naturally
 - Personal stake in resolution
 - Follow up on outcomes
@@ -498,16 +545,19 @@ NPCs shine in non-combat interactions:
 Build relationships over time:
 
 **Track Interactions:**
+
 - How did party treat them?
 - Did party help or hinder goals?
 - What favors are owed?
 
 **Evolve Relationships:**
+
 - Allies become friends (or betray)
 - Rivals become respected
 - Neutral becomes allied/enemy based on actions
 
 **Callback Rewards:**
+
 - Return of helpful NPC at crucial moment
 - Information from past ally
 - Reputation precedes party
@@ -517,12 +567,14 @@ Build relationships over time:
 If NPC enters combat unexpectedly:
 
 **Quick Conversion:**
+
 1. Estimate capability from narrative role
 2. Use appropriate template
 3. Focus on narrative over precision
 
 **Example:**
 "The kindly merchant reveals himself as a disguised assassin!"
+
 - Was harmless shopkeeper
 - Now revealed as trained rogue
 - Add narrative twist to abilities
@@ -534,24 +586,28 @@ If NPC enters combat unexpectedly:
 ### By Narrative Role
 
 **Commoners:**
+
 - Farmers, servants, children
 - No combat training
 - Vitality 3-5, Guard 7-8
 - Flee combat
 
 **Trained Professionals:**
+
 - Guards, soldiers, skilled workers
 - Basic to moderate training
 - Vitality 8-12, Guard 10-12
 - Fight if required by job
 
 **Veterans:**
+
 - Experienced warriors, master craftspeople, minor nobles
 - Extensive training or experience
 - Vitality 14-20, Guard 12-14
 - Competent in specialty
 
 **Legendary Figures:**
+
 - Guild masters, archmages, generals
 - World-class in their field
 - Vitality 25+, Guard 15-18
@@ -562,16 +618,19 @@ If NPC enters combat unexpectedly:
 NPCs encountered scale naturally with story:
 
 **Early Sessions:**
+
 - Most NPCs are commoners or low-level professionals
 - Veterans are rare and respected
 - Legendary figures are distant, rumored
 
 **Mid-Campaign:**
+
 - Professional NPCs are common contacts
 - Veterans become peers and rivals
 - Legendary figures may take notice
 
 **Late Campaign:**
+
 - Veterans are common in party's circles
 - Legendary figures become allies and enemies
 - Party becomes legendary themselves
@@ -585,6 +644,7 @@ NPCs encountered scale naturally with story:
 Roll or choose from each category:
 
 **Primary Drive:**
+
 1. Greed (wants wealth)
 2. Power (wants control)
 3. Knowledge (wants secrets)
@@ -593,6 +653,7 @@ Roll or choose from each category:
 6. Love (protects someone/something)
 
 **Interaction Style:**
+
 1. Friendly and open
 2. Cautious and suspicious
 3. Arrogant and dismissive
@@ -601,6 +662,7 @@ Roll or choose from each category:
 6. Mysterious and cryptic
 
 **Quirk:**
+
 1. Unusual speech pattern
 2. Distinctive appearance
 3. Obsessive hobby
@@ -609,10 +671,11 @@ Roll or choose from each category:
 6. Extreme reaction to specific topic
 
 **Example Generation:**
+
 - Drive: Knowledge
 - Style: Cautious
 - Quirk: Fidgets with coin
-= Paranoid scholar who constantly flips an ancient coin while pondering questions, unwilling to share knowledge without assurance of discretion.
+  = Paranoid scholar who constantly flips an ancient coin while pondering questions, unwilling to share knowledge without assurance of discretion.
 
 ---
 
@@ -626,6 +689,7 @@ Roll or choose from each category:
 **Attributes:** Presence +3, Mind +2, Will +2
 
 **Key Skills:**
+
 - Local politics and history
 - Resources (town guard, treasury)
 - Networking among nobles
@@ -647,6 +711,7 @@ Roll or choose from each category:
 **Attributes:** Presence +2, Mind +1, Awareness +2
 
 **Key Skills:**
+
 - Source rare items (with time)
 - Knows many locations and people
 - Appraise and identify items
@@ -657,6 +722,7 @@ Roll or choose from each category:
 **Hook:** "I can get you that magic item... for the right price. Or perhaps you have something interesting to trade? I also buy exotic goods from adventurers."
 
 **Usage:**
+
 - Buy party's loot
 - Source specific items
 - Provide rumors from travels
@@ -680,6 +746,7 @@ Roll or choose from each category:
 **Hook:** Arrives at dungeon/quest just as party does. "This discovery will be mine! Stand aside or compete fairly for the prize."
 
 **Usage:**
+
 - Compete for same objectives
 - Honorable competition (won't murder party)
 - Potential for grudging respect/alliance
@@ -694,9 +761,10 @@ Roll or choose from each category:
 
 **Attributes:** Will +3, Presence +2, Mind +2
 
-**Defenses:** Vitality 10, Guard 9, Flow 4
+**Defenses:** Vitality 10, Guard 9, Momentum 4
 
 **Key Skills:**
+
 - Cast healing spells
 - Religious knowledge
 - Counsel and comfort
@@ -707,6 +775,7 @@ Roll or choose from each category:
 **Hook:** Heals party after tough fight. "Please, rest in the temple. You look like you've been through an ordeal."
 
 **Usage:**
+
 - Healing between adventures
 - Bless party before dangerous quests
 - Provide sanctuary from enemies (churches are neutral ground)
@@ -714,4 +783,4 @@ Roll or choose from each category:
 
 ---
 
-*NPCs are the heart of your campaign world. Use them to create relationships, advance plots, and make the world feel lived-in and reactive to the party's actions.*
+_NPCs are the heart of your campaign world. Use them to create relationships, advance plots, and make the world feel lived-in and reactive to the party's actions._

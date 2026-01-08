@@ -1,10 +1,11 @@
-# Flow RPG Publication System
+# Autumn Phoenix RPG Publication System
 
 This directory contains the infrastructure for assembling publication-ready books from the modular source files in the `drafts/` directory.
 
 ## Overview
 
 The publication system uses:
+
 - **YAML manifests** to define book structure
 - **Python script** to assemble books automatically
 - **Template files** for front matter
@@ -98,24 +99,24 @@ Manifests are YAML files that define how books are assembled. They specify:
 ### Example Manifest Structure
 
 ```yaml
-title: "My Book Title"
-version: "1.0"
-output_file: "publications/assembled/my_book.md"
+title: 'My Book Title'
+version: '1.0'
+output_file: 'publications/assembled/my_book.md'
 
 sections:
-  - title: "Part I: Introduction"
-    intro: "Optional introductory text..."
+  - title: 'Part I: Introduction'
+    intro: 'Optional introductory text...'
     content:
-      - file: "drafts/core_rules/01_introduction.md"
-      - file: "drafts/core_rules/02_basics.md"
-        heading_level_adjust: 1  # Increase heading levels
-        exclude_sections:        # Remove these sections
-          - "Advanced Topics"
+      - file: 'drafts/core_rules/01_introduction.md'
+      - file: 'drafts/core_rules/02_basics.md'
+        heading_level_adjust: 1 # Increase heading levels
+        exclude_sections: # Remove these sections
+          - 'Advanced Topics'
 
-  - title: "Part II: Character Options"
+  - title: 'Part II: Character Options'
     content:
-      - section_header: "Callings"
-      - files_from_directory: "drafts/callings/calling_types/*.md"
+      - section_header: 'Callings'
+      - files_from_directory: 'drafts/callings/calling_types/*.md'
         sort: alphabetical
 
 options:
@@ -128,38 +129,42 @@ options:
 ### Content Item Types
 
 **Simple file inclusion:**
+
 ```yaml
-- file: "path/to/file.md"
+- file: 'path/to/file.md'
 ```
 
 **File with options:**
+
 ```yaml
-- file: "path/to/file.md"
-  heading_level_adjust: 1      # Adjust heading levels (+ or -)
-  exclude_sections:            # Remove specific sections
-    - "Section Title to Remove"
-  rename_to: "New Title"       # Rename first heading
+- file: 'path/to/file.md'
+  heading_level_adjust: 1 # Adjust heading levels (+ or -)
+  exclude_sections: # Remove specific sections
+    - 'Section Title to Remove'
+  rename_to: 'New Title' # Rename first heading
 ```
 
 **Section header:**
+
 ```yaml
-- section_header: "My Section Title"
+- section_header: 'My Section Title'
 ```
 
 **Directory of files:**
+
 ```yaml
-- files_from_directory: "path/to/dir/*.md"
-  sort: alphabetical           # or 'modified', 'none'
+- files_from_directory: 'path/to/dir/*.md'
+  sort: alphabetical # or 'modified', 'none'
 ```
 
 ### Assembly Options
 
 ```yaml
 options:
-  generate_toc: true          # Auto-generate table of contents
-  add_page_breaks: false      # Add --- between sections
-  fix_internal_links: false   # Update cross-references (future)
-  heading_numbering: false    # Auto-number sections (future)
+  generate_toc: true # Auto-generate table of contents
+  add_page_breaks: false # Add --- between sections
+  fix_internal_links: false # Update cross-references (future)
+  heading_numbering: false # Auto-number sections (future)
 ```
 
 ## Creating New Books
@@ -178,18 +183,18 @@ touch publications/manifests/players_guide.yaml
 Edit the manifest to specify what content to include:
 
 ```yaml
-title: "Flow RPG Player's Guide"
-version: "1.0"
-output_file: "publications/assembled/players_guide.md"
+title: "Autumn Phoenix RPG Player's Guide"
+version: '1.0'
+output_file: 'publications/assembled/players_guide.md'
 
 sections:
-  - title: "Front Matter"
+  - title: 'Front Matter'
     content:
-      - file: "publications/templates/title_page.md"
+      - file: 'publications/templates/title_page.md'
 
-  - title: "Character Creation"
+  - title: 'Character Creation'
     content:
-      - file: "drafts/callings/00_introduction.md"
+      - file: 'drafts/callings/00_introduction.md'
       # ... etc
 ```
 
@@ -204,7 +209,9 @@ python scripts/assemble_book.py publications/manifests/players_guide.yaml
 All publications are ready to assemble:
 
 ### 1. Core Rulebook (`core_rulebook.yaml`) - 899 KB
+
 **Complete game with everything**
+
 - All core rules
 - All character options (callings, archetypes, species)
 - Complete magic system
@@ -214,7 +221,9 @@ All publications are ready to assemble:
 - **Audience:** Everyone
 
 ### 2. Player's Guide (`players_guide.yaml`) - 683 KB
+
 **Player-focused content only**
+
 - Character creation
 - Combat and magic systems
 - Equipment
@@ -224,17 +233,21 @@ All publications are ready to assemble:
 - **Audience:** Players
 
 ### 3. Game Master's Guide (`gm_guide.yaml`) - 391 KB
+
 **GM-focused content only**
+
 - Running all systems
 - Complete monster & NPC compendium
 - Encounter design
-- Flow economy management
+- Momentum economy management
 - Campaign frameworks
 - Balance considerations
 - **Audience:** Game Masters
 
 ### 4. Monster Manual (`monster_manual.yaml`) - 109 KB
+
 **Bestiary and NPC compendium**
+
 - Named adversaries with motivations and tactics
 - Comprehensive NPC templates
 - Encounter building guidelines
@@ -243,7 +256,9 @@ All publications are ready to assemble:
 - **Audience:** Game Masters
 
 ### 5. The Grimoire (`grimoire.yaml`) - 169 KB
+
 **Magic system deep-dive**
+
 - Complete spell system
 - All four casting approaches
 - Magical traditions
@@ -252,7 +267,9 @@ All publications are ready to assemble:
 - **Audience:** Players and GMs who want magic mastery
 
 ### 6. Quick Reference (`quick_reference.yaml`) - 84 KB
+
 **Printable at-table reference**
+
 - All quick reference sections
 - Core mechanics summaries
 - Combat tables
@@ -273,6 +290,7 @@ For book-specific content not in drafts/:
 ### Modifying Templates
 
 Edit files in `publications/templates/`:
+
 - `title_page.md` - Book title and credits
 - `copyright.md` - Copyright and license information
 
@@ -338,19 +356,23 @@ The script performs these operations:
 ### Common Issues
 
 **"File not found" errors:**
+
 - Check file paths are relative to project root
 - Verify files exist in drafts/ directory
 - Ensure no typos in manifest
 
 **Heading levels wrong:**
+
 - Use `heading_level_adjust` to fix
 - Check source files use proper markdown headings
 
 **Missing sections:**
+
 - Verify all required files are in manifest
 - Check `exclude_sections` isn't removing needed content
 
 **Script won't run:**
+
 - Verify Python 3.6+ installed: `python --version`
 - Install PyYAML: `pip install pyyaml`
 - Make script executable: `chmod +x scripts/assemble_book.py`
@@ -372,6 +394,7 @@ Potential additions to the system:
 ## Support
 
 For questions or issues:
+
 - Check manifest syntax carefully
 - Review script output for error messages
 - Test with simple manifest first
@@ -379,4 +402,4 @@ For questions or issues:
 
 ---
 
-*This publication system enables efficient management of large TTRPG projects by maintaining modular source files while generating cohesive publication-ready documents.*
+_This publication system enables efficient management of large TTRPG projects by maintaining modular source files while generating cohesive publication-ready documents._

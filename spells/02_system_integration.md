@@ -2,56 +2,61 @@
 
 ## How Magic Integrates with Core Systems
 
-Magic in Flow RPG isn't a separate subsystem—it's fully integrated into the core mechanics through the Flow economy and stance system. This document explains how magic interacts with other game elements.
+Magic in Autumn Phoenix RPG isn't a separate subsystem—it's fully integrated into the core mechanics through the Momentum economy and stance system. This document explains how magic interacts with other game elements.
 
-## Magic and the Flow Economy
+## Magic and the Momentum Economy
 
-### Flow as Universal Power Source
+### Momentum as Universal Power Source
 
-Magic fundamentally depends on Flow:
+Magic fundamentally depends on Momentum:
 
 1. **Spell Costs**
-   - Tier 0 (Cantrips): Generate +1 Flow on success
-   - Tier 1 (Basic Spells): 0 Flow cost
-   - Tier 2 (Advanced Spells): -1 Flow
-   - Tier 3 (Expert Spells): -2 Flow
-   - Tier 4 (Master Spells): -3 Flow
 
-2. **Flow Generation**
-   - Spellcasters generate Flow through multiple methods:
-   - **Cantrips:** +1 Flow on successful casting
-   - **Aggressive Stance:** +1 Flow when offensive spells deal damage
-   - **Defensive Stance:** +1 Flow when attacked (once per round)
-   - **Taking Damage:** +1 Flow when taking any damage
-   - **Critical Success:** +1 Flow when rolling 13+ on any spell
-   - **Key Rule:** Aggressive stance combines with cantrip generation for +2 Flow per successful Spark
+   - Tier 0 (Cantrips): Generate +1 Momentum on success
+   - Tier 1 (Basic Spells): 0 Momentum cost
+   - Tier 2 (Advanced Spells): -1 Momentum
+   - Tier 3 (Expert Spells): -2 Momentum
+   - Tier 4 (Master Spells): -3 Momentum
 
-3. **Negative Flow Considerations**
-   - Most casters cannot cast at negative Flow
+2. **Momentum Generation**
+
+   - Spellcasters generate Momentum through multiple methods:
+   - **Cantrips:** +1 Momentum on successful casting
+   - **Aggressive Stance:** +1 Momentum when offensive spells deal damage
+   - **Defensive Stance:** +1 Momentum when attacked (once per round)
+   - **Taking Damage:** +1 Momentum when taking any damage
+   - **Critical Success:** +1 Momentum when rolling 13+ on any spell
+   - **Key Rule:** Aggressive stance combines with cantrip generation for +2 Momentum per successful Spark
+
+3. **Negative Momentum Considerations**
+   - Most casters cannot cast at negative Momentum
    - Will-based casting is the exception (see [00_introduction.md](00_introduction.md))
    - Going negative has narrative consequences (exhaustion, patron displeasure, etc.)
-   - Recovering from negative Flow is slower (see Recovery section below)
+   - Recovering from negative Momentum is slower (see Recovery section below)
 
-### Tactical Flow Management
+### Tactical Momentum Management
 
-Smart spellcasters manage Flow strategically:
+Smart spellcasters manage Momentum strategically:
 
 **Conservative Approach:**
-- Use cantrips (0 Flow) as your default action
-- Save Flow for critical moments
-- Cast standard spells (-1 Flow) regularly
+
+- Use cantrips (0 Momentum) as your default action
+- Save Momentum for critical moments
+- Cast standard spells (-1 Momentum) regularly
 - Reserve advanced/master spells for emergencies
 
 **Aggressive Approach:**
-- Spend Flow early for maximum impact
+
+- Spend Momentum early for maximum impact
 - Use powerful spells to end fights quickly
 - Risk going negative for victory
 - Rely on Will casting or allies to recover
 
 **Balanced Approach:**
+
 - Mix cantrips and standard spells
-- Monitor party's total Flow
-- Coordinate with allies for Flow generation
+- Monitor party's total Momentum
+- Coordinate with allies for Momentum generation
 - Keep reserve for defensive/utility casting
 
 ## Magic and Combat Stances
@@ -59,19 +64,22 @@ Smart spellcasters manage Flow strategically:
 ### Aggressive Stance Casting
 
 **Benefits:**
-- Offensive spells that defeat enemies generate +1 Flow
+
+- Offensive spells that defeat enemies generate +1 Momentum
 - Natural fit for damage-dealing magic
 - Mind precision keeps allies safe
 - Awareness maximizes damage output
 
 **Drawbacks:**
+
 - -2 to Guard makes caster vulnerable
-- Encourages burning Flow quickly
+- Encourages burning Momentum quickly
 - Less time for defensive spells
 - Risky for fragile spellcasters
 
 **Best Spells:**
-- Spark (cantrip for Flow generation)
+
+- Spark (cantrip for Momentum generation)
 - Bolt (standard ranged attack)
 - Fireball (advanced area damage)
 - Lightning Storm (master devastation)
@@ -79,18 +87,21 @@ Smart spellcasters manage Flow strategically:
 ### Balanced Stance Casting
 
 **Benefits:**
+
 - Versatile, no penalties
 - Good for utility spells
 - Can switch to other stances as needed
 - Maintains decent defense
 
 **Drawbacks:**
-- No Flow generation bonus
+
+- No Momentum generation bonus
 - No defensive bonus
 - Jack-of-all-trades, master of none
 - Less optimal than specialized stances
 
 **Best Spells:**
+
 - Any utility spells
 - Charm and social magic
 - Invisibility and stealth
@@ -99,19 +110,22 @@ Smart spellcasters manage Flow strategically:
 ### Defensive Stance Casting
 
 **Benefits:**
+
 - +2 to Guard protects vulnerable casters
-- Can build Flow (+1 per turn)
-- Can use Mage Sight instead of building Flow
+- Can build Momentum (+1 per turn)
+- Can use Mage Sight instead of building Momentum
 - Maintains concentration better
 - Will casting excels here
 
 **Drawbacks:**
-- No offensive Flow generation
+
+- No offensive Momentum generation
 - Slower pacing
 - Party may need you to act faster
 - Less dramatic casting style
 
 **Best Spells:**
+
 - Shield and protective magic
 - Blur and evasion spells
 - Dispel to counter enemy magic
@@ -122,6 +136,7 @@ Smart spellcasters manage Flow strategically:
 Changing stances is a significant decision:
 
 1. **Spell Maintenance**
+
    - Most ongoing effects persist through stance changes
    - GM may rule particularly disruptive changes break concentration
    - Will casting specifically maintains through changes
@@ -140,33 +155,38 @@ Spells automatically improve as characters gain milestones, ensuring magical pow
 ### Damage Spell Scaling
 
 **At 3 Milestones:**
+
 - Damage spells gain +1d6
 - Example: Bolt goes from Attribute + 1d6 to Attribute + 2d6
 - Applies to all damage-dealing spells (Spark, Bolt, Fireball, etc.)
 
 **At 6 Milestones:**
+
 - All spells gain +1 to their save TN
 - Enemy saves become harder to succeed
 - Increases effectiveness of control/debuff spells
 
 **At 10 Milestones:**
+
 - Damage spells gain another +1d6
 - Example: Fireball goes from 2d6 to 3d6
 - Significantly increased combat power
 
 **At 15 Milestones:**
+
 - Can cast one tier higher for same cost once per scene
-- Example: Cast a Tier 2 spell for 0 Flow, or Tier 3 for -1 Flow
+- Example: Cast a Tier 2 spell for 0 Momentum, or Tier 3 for -1 Momentum
 - Represents mastery of magical efficiency
 
 ### Spell Progression Example
 
 **Bolt (Tier 1 Basic Spell):**
-- **Start:** Attribute + 1d6 damage, 0 Flow cost
-- **3 Milestones:** Attribute + 2d6 damage, 0 Flow cost
-- **6 Milestones:** Attribute + 2d6 damage, 0 Flow cost, +1 save TN
-- **10 Milestones:** Attribute + 3d6 damage, 0 Flow cost, +1 save TN
-- **15 Milestones:** Can cast as Tier 0 (generates +1 Flow) once per scene
+
+- **Start:** Attribute + 1d6 damage, 0 Momentum cost
+- **3 Milestones:** Attribute + 2d6 damage, 0 Momentum cost
+- **6 Milestones:** Attribute + 2d6 damage, 0 Momentum cost, +1 save TN
+- **10 Milestones:** Attribute + 3d6 damage, 0 Momentum cost, +1 save TN
+- **15 Milestones:** Can cast as Tier 0 (generates +1 Momentum) once per scene
 
 This progression ensures spellcasters remain competitive with martial damage scaling throughout a campaign.
 
@@ -177,42 +197,49 @@ This progression ensures spellcasters remain competitive with martial damage sca
 Different archetypes interact with magic differently:
 
 **Wizard**
+
 - Bonuses to Mind-based casting
 - Focused on magical mastery
 - Typically starts with highest Sorcery
 - Natural fit for analytical magic
 
 **Cleric**
+
 - Bonuses to Will-based casting
 - Reliable, concentration-focused
 - Divine tradition and holy symbols
 - Can cast when injured or depleted
 
 **Bard**
+
 - Bonuses to Presence-based casting
 - Social and inspirational magic
 - Performance magic tradition
 - Makes mundane actions magical
 
 **Ranger**
+
 - May have Sorcery but not focused
 - Awareness-based if they cast
 - Wild talent tradition
 - Integrates magic with martial skill
 
 **Rogue**
+
 - Rarely has Sorcery
 - If they do, often Awareness
 - Subtle, practical magic
 - Uses spells for utility, not combat
 
 **Fighter**
+
 - Can have Sorcery (Eldritch Knight concept)
 - Any attribute approach works
 - Limited spell selection
 - Focuses on combat-enhancing magic
 
 **Paladin**
+
 - Will-based casting fits holy warrior
 - Or Presence for inspirational leader
 - Divine tradition
@@ -223,24 +250,28 @@ Different archetypes interact with magic differently:
 Species traits interact with magic:
 
 **Human** (Versatile Nature)
+
 - Extra skill point can go to Sorcery
 - Flexibility allows any casting style
 - No inherent magical advantages
 - Can build any caster concept
 
 **Elf** (Elven Focus)
+
 - Ignore first point of armor penalty when casting
 - Natural fit for armored casters (Cleric, Paladin)
 - High Awareness supports Awareness casting
 - Long-lived study of magic
 
 **Dwarf** (Stone Endurance)
+
 - High Will supports Will casting
 - Dwarven Clerics are iconic
 - Armor penalty still applies fully
 - Resilient under pressure
 
 **Halfling** (Lucky)
+
 - Reroll 1s helps casting consistency
 - Makes risky spells more reliable
 - Smaller = harder to hit while casting
@@ -251,36 +282,42 @@ Species traits interact with magic:
 Callings influence how characters approach magic:
 
 **Explorer** (Pioneering Spirit)
+
 - Experimental magic, trying new approaches
 - Might switch attributes frequently
 - Values utility and versatility
 - Discovers new spell applications
 
 **Scholar** (Pursuit of Knowledge)
+
 - Methodical, studied magic
 - Likely Mind-based casting
 - Researches spell theory
 - Retroactive dice benefit helps identify spells
 
 **Protector** (Shield of the Weak)
+
 - Defensive and healing magic
 - Will casting for reliability
 - Shield and protection spells
 - Maintains effects to guard allies
 
 **Ascendant** (Reach for Greatness)
+
 - Flashy, impressive magic
 - Presence casting for impact
 - Master-tier spells as goals
 - Signature spell showcases
 
 **Avenger** (Right Past Wrongs)
+
 - Aggressive, justice-focused magic
 - Any attribute depending on approach
 - Damage and control spells
 - Magic as tool for vengeance
 
 **Wanderer** (Journey Before Destination)
+
 - Diverse, adaptive magic
 - Switches approaches based on situation
 - Utility and travel spells
@@ -297,12 +334,14 @@ Armor interferes with spellcasting:
 - **Heavy Armor:** Cannot cast spells
 
 **Mitigating Factors:**
+
 - Elven Focus (ignore first point)
 - Magic items that reduce penalties
 - High base casting bonus offsets penalties
 - Tactical stance choices
 
 **Building Armored Casters:**
+
 1. Elf in Light Armor = no penalty
 2. High Sorcery + Mind offsets light armor penalty
 3. Defensive Stance reduces need for heavy armor
@@ -311,12 +350,14 @@ Armor interferes with spellcasting:
 ### Weapons and Casting
 
 **Free Hand Requirement:**
+
 - Most spells require a free hand for gestures
 - Weapons in one hand, casting with other
 - Two-handed weapons prevent most spellcasting
 - Some traditions use weapon as focus (staff, ritual dagger)
 
 **Weapon + Spell Combos:**
+
 - Attack with weapon, cast spell same turn (if system allows)
 - Cast defensive spell, attack with weapon
 - Use weapon in Aggressive, spell in Balanced
@@ -327,24 +368,28 @@ Armor interferes with spellcasting:
 Different traditions use different focus items:
 
 **Arcane (Mind):**
+
 - Spellbooks (for learning/reference)
 - Wands (precise channeling)
 - Staves (versatile tools)
 - Component pouches
 
 **Wild (Awareness):**
+
 - Natural items (crystals, feathers)
 - Tattoos or body art
 - Blood or life essence
 - Environmental channeling
 
 **Divine (Will):**
+
 - Holy symbols
 - Sacred texts
 - Relics
 - Prayer beads
 
 **Performance (Presence):**
+
 - Musical instruments
 - Masks or costumes
 - Props and stage tools
@@ -359,12 +404,14 @@ Focus items are **narrative elements**, not mechanical requirements, unless you 
 Characters improve magical ability through:
 
 **Milestone Advances:**
+
 1. **Increase Sorcery** - Makes all casting better
 2. **Increase Casting Attribute** - Improves chosen approach
 3. **Gain New Spells** - Expand spell repertoire
 4. **Magic-Related Skills** - Support casting narratively
 
 **In-Game Learning:**
+
 - Find spellbooks or scrolls
 - Train with mentors
 - Experiment with new approaches
@@ -375,22 +422,26 @@ Characters improve magical ability through:
 Suggested spell access progression:
 
 **Character Creation:**
+
 - All Cantrips
 - 3-4 Standard Spells
 - 1-2 Advanced Spells (if Sorcery +2 or higher)
 - 0 Master Spells
 
 **Milestone 2-3:**
+
 - Gain 1-2 more Standard Spells
 - Gain 1 Advanced Spell
 - Possibly first Master Spell (if Sorcery +3)
 
 **Milestone 4-5:**
+
 - Full access to Standard/Advanced Spells
 - Gain 1-2 Master Spells
 - Specialize in preferred approaches
 
 **Milestone 6+:**
+
 - Access to all spell tiers
 - Multiple Master Spells known
 - Custom/signature spells
@@ -404,18 +455,21 @@ These are guidelines, not hard rules. GMs should adjust based on campaign needs.
 Spells can solve problems outside combat:
 
 **Encourage Creative Use:**
+
 - Light for exploration
 - Invisibility for infiltration
 - Charm for social encounters
 - Teleport for travel
 
 **Maintain Challenge:**
+
 - Not every problem has a spell solution
 - Spell effects are temporary
 - Casting is noticeable (usually)
 - Resources are limited
 
 **Example: Locked Door**
+
 - No "knock" spell exists
 - Could use Bolt to blast it (loud, generates opposition)
 - Could use Charm on guard (social approach)
@@ -427,26 +481,31 @@ Spells can solve problems outside combat:
 Consider these worldbuilding questions:
 
 **Prevalence:**
+
 - How many people can cast? (Default: ~45% meet minimum)
 - Are casters common or rare?
 - Do non-casters fear magic?
 
 **Regulation:**
+
 - Are there magical authorities?
 - Is magic legal everywhere?
 - Are certain spells banned?
 
 **Economy:**
+
 - Can you buy magical services?
 - How much does a healing spell cost?
 - Are magic items available for purchase?
 
 **Education:**
+
 - How do casters learn?
 - Are there magical schools?
 - Is apprenticeship the norm?
 
 **Traditions:**
+
 - Which traditions exist in your world?
 - Do they conflict or cooperate?
 - Are there lost magical traditions?
@@ -458,18 +517,21 @@ These questions shape how magic feels in your game and create adventure opportun
 ### Party Composition
 
 **Multiple Spellcasters:**
+
 - Encourage different approaches (one Mind, one Will, etc.)
 - Create situations that reward variety
-- Manage Flow economy carefully
+- Manage Momentum economy carefully
 - Avoid overlapping spell selections
 
 **Mixed Party:**
-- Martial characters generate Flow
-- Casters spend Flow for impact
+
+- Martial characters generate Momentum
+- Casters spend Momentum for impact
 - Natural synergy in action economy
 - Diverse problem-solving approaches
 
 **No Spellcasters:**
+
 - Game still works fine
 - More reliance on skills and tactics
 - Different narrative feel
@@ -480,18 +542,21 @@ These questions shape how magic feels in your game and create adventure opportun
 Multiple casters can coordinate:
 
 **Sequential Casting:**
+
 - One caster Shields, another attacks
 - One caster creates advantage, another exploits
 - Stagger resource expenditure
-- Maintain Flow balance
+- Maintain Momentum balance
 
 **Complementary Approaches:**
+
 - Mind caster provides precision
 - Awareness caster provides damage
 - Will caster provides reliability
 - Presence caster provides social effects
 
 **Concentration Stacking:**
+
 - Multiple casters maintain different effects
 - Create overlapping advantages
 - Build defensive layers
@@ -502,12 +567,14 @@ Multiple casters can coordinate:
 ### Combining Magic with Other Abilities
 
 **Archetype Abilities + Spells:**
+
 - Most archetype abilities work with spells
 - Fighter's weapon expertise doesn't apply to spell attacks
 - Rogue's sneak attack doesn't work with spells (unless GM allows)
 - Bard's inspiration affects spell rolls
 
 **Skills + Spells:**
+
 - Perform skill enhances Presence casting
 - Arcana skill represents magical knowledge
 - Stealth works with Invisibility
@@ -516,12 +583,14 @@ Multiple casters can coordinate:
 ### Counterspelling
 
 **Dispel as Counter:**
+
 - Ready action to Dispel when enemy casts
 - Roll Dispel vs. enemy's casting roll
 - Success negates their spell
-- Costs your action and Flow
+- Costs your action and Momentum
 
 **Strategic Considerations:**
+
 - Worth it for stopping Master Spells
 - Less valuable vs. cantrips
 - Mind Dispel calculates what to counter
@@ -530,12 +599,14 @@ Multiple casters can coordinate:
 ### Magic and Death
 
 **Healing the Dying:**
+
 - Heal spell can restore dying characters
-- Will-cast Heal works even at negative Flow
+- Will-cast Heal works even at negative Momentum
 - Can cast even if you're dying (GM discretion)
 - Narrative weight of saving someone
 
 **Resurrection:**
+
 - Not in base spell list
 - If allowed, extremely expensive (Master Spell minimum)
 - Require significant quest/sacrifice
@@ -543,4 +614,4 @@ Multiple casters can coordinate:
 
 ---
 
-*Magic in Flow RPG is designed to integrate seamlessly with every other system. Understanding these interactions creates richer tactical play and more compelling narratives.*
+_Magic in Autumn Phoenix RPG is designed to integrate seamlessly with every other system. Understanding these interactions creates richer tactical play and more compelling narratives._

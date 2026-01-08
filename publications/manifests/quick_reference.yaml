@@ -1,13 +1,13 @@
-# Flow RPG Quick Reference Compilation Manifest
+# Autumn Phoenix RPG Quick Reference Compilation Manifest
 # All quick reference sections compiled into one printable document
 
-title: "Flow RPG Quick Reference"
+title: "Autumn Phoenix RPG Quick Reference"
 version: "1.0 (Draft)"
 output_file: "publications/assembled/quick_reference.md"
 
 sections:
   # ===== FRONT MATTER =====
-  - title: "Flow RPG Quick Reference"
+  - title: "Autumn Phoenix RPG Quick Reference"
     intro: "Fast-lookup tables and references for at-table use. Print this document for easy access during play."
 
   # ===== CORE MECHANICS =====
@@ -15,7 +15,7 @@ sections:
     content:
       - file: "core_rules/02_basic_mechanics.md"
         exclude_sections:
-          - "The Flow Economy"
+          - "The Momentum Economy"
           - "Skills in Detail"
           - "Extended Contests"
           - "Group Checks"
@@ -27,7 +27,7 @@ sections:
       - file: "core_rules/04_combat_system.md"
         exclude_sections:
           - "Combat Philosophy"
-          - "The Flow of Combat"
+          - "The Momentum of Combat"
           - "Zones in Practice"
           - "Detailed Action Descriptions"
           - "Example Combat"

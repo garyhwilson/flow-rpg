@@ -1,11 +1,12 @@
 # Weapons
-*Tools of Combat and Conflict Resolution*
 
-## Philosophy of Weapons in Flow
+_Tools of Combat and Conflict Resolution_
 
-Weapons in Flow RPG represent more than mere damage-dealing instruments—they embody tactical choices, character expression, and approaches to conflict. Each weapon category offers distinctive advantages balanced by corresponding limitations, creating meaningful decisions rather than simple hierarchical progression from inferior to superior options.
+## Philosophy of Weapons in Momentum
 
-The weapon system integrates seamlessly with Flow's stance mechanics, providing different tactical opportunities depending on how characters position themselves in combat. A reach weapon wielded by a defensive fighter creates different tactical possibilities than dual-wielded daggers used by an aggressive rogue, even when both characters possess similar attribute scores.
+Weapons in Autumn Phoenix RPG represent more than mere damage-dealing instruments—they embody tactical choices, character expression, and approaches to conflict. Each weapon category offers distinctive advantages balanced by corresponding limitations, creating meaningful decisions rather than simple hierarchical progression from inferior to superior options.
+
+The weapon system integrates seamlessly with Momentum's stance mechanics, providing different tactical opportunities depending on how characters position themselves in combat. A reach weapon wielded by a defensive fighter creates different tactical possibilities than dual-wielded daggers used by an aggressive rogue, even when both characters possess similar attribute scores.
 
 ## Choosing Your Weapon
 
@@ -17,7 +18,7 @@ Light weapons prioritize speed, precision, and versatility over raw damage outpu
 
 **Damage**: 2d6
 **Special**: +1 to Finesse actions while wielding
-**Flow Generation**: Normal
+**Momentum Generation**: Normal
 **Weight**: Negligible to 1 significant item slot
 
 **Examples**: Dagger, club, short sword, hand axe, kukri, stiletto, sickle, kama
@@ -36,7 +37,7 @@ Most light weapons possess the Dual-Wield property, allowing characters to attac
 - **Defensive Dual-Wielding**: Using off-hand weapon for parrying while attacking with primary
 - **Mixed Approach**: Attacking with one weapon while using the other for utility actions
 
-Dual-wielding generates Flow when effectively employed—striking different targets, overwhelming a single opponent's defenses, or performing coordinated attack-and-defense sequences.
+Dual-wielding generates Momentum when effectively employed—striking different targets, overwhelming a single opponent's defenses, or performing coordinated attack-and-defense sequences.
 
 #### Character Archetypes
 
@@ -54,7 +55,7 @@ Medium weapons represent the quintessential balanced armament—effective damage
 
 **Damage**: 2d6+1
 **Special**: None
-**Flow Generation**: Normal
+**Momentum Generation**: Normal
 **Weight**: 1 significant item slot
 
 **Examples**: Longsword, mace, battle axe, scimitar, warhammer, rapier, morningstar, falchion
@@ -92,7 +93,7 @@ Heavy weapons sacrifice mobility and finesse for devastating damage output, appe
 
 **Damage**: 2d6+2
 **Special**: -1 Grace while wielding
-**Flow Generation**: Normal
+**Momentum Generation**: Normal
 **Weight**: 2 significant item slots
 
 **Examples**: Greatsword, maul, greataxe, flail, two-handed hammer, zweihander, nodachi
@@ -107,11 +108,11 @@ Characters wielding heavy weapons typically emphasize Might-based combat, levera
 
 Heavy weapons naturally synergize with Aggressive stance, accepting vulnerability in exchange for devastating attacks. Characters built around this combination become terrifying offensive threats capable of ending combats quickly through overwhelming damage.
 
-However, heavy weapon users must carefully manage Flow and positioning, as their reduced Grace makes defensive reactions more challenging. Smart heavy weapon wielders position themselves to minimize exposure to multiple enemies while maximizing damage against priority targets.
+However, heavy weapon users must carefully manage Momentum and positioning, as their reduced Grace makes defensive reactions more challenging. Smart heavy weapon wielders position themselves to minimize exposure to multiple enemies while maximizing damage against priority targets.
 
-#### Flow Generation and Heavy Weapons
+#### Momentum Generation and Heavy Weapons
 
-Heavy weapons can generate substantial Flow through dramatic combat actions—cleaving through multiple enemies, shattering obstacles, and demonstrating overwhelming martial prowess. The key is leveraging the weapon's strengths while mitigating its defensive limitations.
+Heavy weapons can generate substantial Momentum through dramatic combat actions—cleaving through multiple enemies, shattering obstacles, and demonstrating overwhelming martial prowess. The key is leveraging the weapon's strengths while mitigating its defensive limitations.
 
 #### Character Archetypes
 
@@ -127,7 +128,7 @@ Reach weapons extend the wielder's threat range, enabling attacks from greater d
 
 **Damage**: 2d6
 **Special**: Can attack from Close range (not just Engaged)
-**Flow Generation**: +1 when keeping enemies at bay
+**Momentum Generation**: +1 when keeping enemies at bay
 **Weight**: 1-2 significant item slots
 
 **Examples**: Spear, pike, halberd, glaive, naginata, lance, partisan, trident
@@ -136,7 +137,7 @@ Reach weapons extend the wielder's threat range, enabling attacks from greater d
 
 Reach weapons excel at zone control and defensive fighting, allowing characters to threaten enemies before they can close to striking distance. The ability to attack from Close range means reach weapon users can fight effectively while maintaining defensive positioning.
 
-When enemies attempt to close distance, reach weapon wielders can make opportunity attacks as opponents enter their extended threat range. This creates natural synergy with Defensive stance, generating Flow while preventing enemies from engaging freely.
+When enemies attempt to close distance, reach weapon wielders can make opportunity attacks as opponents enter their extended threat range. This creates natural synergy with Defensive stance, generating Momentum while preventing enemies from engaging freely.
 
 #### Defensive Fighting
 
@@ -147,7 +148,7 @@ Reach weapons pair exceptionally well with defensive tactics:
 - **Supporting Allies**: Attacking enemies engaged with allies from safety of Close range
 - **Controlling Space**: Using reach to threaten multiple approach vectors
 
-Characters employing reach weapons defensively generate +1 Flow when successfully keeping enemies at bay—forcing them to waste actions closing distance, preventing engagement, or protecting allies by threatening advancing foes.
+Characters employing reach weapons defensively generate +1 Momentum when successfully keeping enemies at bay—forcing them to waste actions closing distance, preventing engagement, or protecting allies by threatening advancing foes.
 
 #### Mobility and Positioning
 
@@ -168,9 +169,9 @@ Despite their length, reach weapons don't inherently penalize Grace. Skilled wie
 Thrown weapons provide tactical flexibility through optional ranged attacks while remaining viable in melee, appealing to mobile skirmishers.
 
 **Damage**: 2d6
-**Special**: +1 Flow when thrown from Close range
+**Special**: +1 Momentum when thrown from Close range
 **Range**: Close (optimal), cannot reach Far
-**Flow Generation**: Normal melee, +1 when thrown
+**Momentum Generation**: Normal melee, +1 when thrown
 **Weight**: Light (negligible to 1 slot per 5 weapons)
 
 **Examples**: Javelin, throwing knife, throwing axe, shuriken, chakram, dart, bolas
@@ -179,7 +180,7 @@ Thrown weapons provide tactical flexibility through optional ranged attacks whil
 
 Thrown weapons excel as opening attacks and tactical responses to changing range situations. Characters can engage enemies at Close range with throwing attacks before switching to melee, or disengage from melee to throw while retreating.
 
-The +1 Flow when throwing from Close range rewards tactical throwing—engaging enemies before they expect combat, striking targets unable to respond effectively, or exploiting momentary vulnerabilities.
+The +1 Momentum when throwing from Close range rewards tactical throwing—engaging enemies before they expect combat, striking targets unable to respond effectively, or exploiting momentary vulnerabilities.
 
 #### Skirmishing Tactics
 
@@ -211,7 +212,7 @@ Ranged weapons enable attacks from significant distance, sacrificing melee capab
 **Damage**: 2d6 (Close), 2d6+1 (Far)
 **Special**: +1 damage at Far range, -2 penalty when Engaged in melee
 **Range**: Far (optimal), Close (normal), Engaged (severe penalty)
-**Flow Generation**: Normal
+**Momentum Generation**: Normal
 **Weight**: 1-2 significant item slots, plus ammunition
 
 **Examples**: Shortbow, longbow, crossbow, heavy crossbow, composite bow, recurve bow
@@ -231,7 +232,7 @@ Effective archers employ several key tactics:
 - **Supporting Fire**: Attacking enemies engaged with allies from safe distance
 - **Tactical Repositioning**: Moving to maintain optimal range when enemies advance
 
-Archers generate Flow through exceptional shots—hitting difficult targets, shooting through cover, making impossible shots under pressure, or eliminating multiple enemies efficiently.
+Archers generate Momentum through exceptional shots—hitting difficult targets, shooting through cover, making impossible shots under pressure, or eliminating multiple enemies efficiently.
 
 #### Ammunition Management
 
@@ -252,6 +253,7 @@ Running out of ammunition in extended engagements is a genuine concern, making a
 Beyond category, individual weapons may possess special properties providing additional tactical options:
 
 ### Dual-Wield
+
 **Effect**: Can be used in off-hand
 **Typical Weapons**: Light weapons, some medium weapons like rapiers
 **Mechanics**: Attack with both weapons at -1 penalty to each
@@ -259,6 +261,7 @@ Beyond category, individual weapons may possess special properties providing add
 Dual-wielding represents fighting with a weapon in each hand, coordinating strikes for maximum offensive pressure or using one weapon defensively while attacking with the other.
 
 ### Defensive
+
 **Effect**: +1 Guard while wielded
 **Typical Weapons**: Swords with substantial crossguards, specialized defensive weapons
 **Mechanics**: Constant passive Guard bonus
@@ -266,6 +269,7 @@ Dual-wielding represents fighting with a weapon in each hand, coordinating strik
 Defensive weapons feature design elements facilitating active defense—large crossguards for binding opponents' weapons, hooks for catching attacks, or balanced weight distribution enabling quick defensive positioning.
 
 ### Disarming
+
 **Effect**: +2 to disarm attempts
 **Typical Weapons**: Whips, hooked weapons, specialized tools
 **Mechanics**: Bonus applies when attempting to disarm opponents
@@ -273,6 +277,7 @@ Defensive weapons feature design elements facilitating active defense—large cr
 Disarming weapons feature design elements specifically intended to catch, trap, or strip weapons from opponents' grips.
 
 ### Concealed
+
 **Effect**: Easy to hide from detection
 **Typical Weapons**: Daggers, small blades, easily disguised weapons
 **Mechanics**: Advantage on checks to hide weapon
@@ -280,6 +285,7 @@ Disarming weapons feature design elements specifically intended to catch, trap, 
 Concealed weapons are designed for discrete carry, allowing characters to remain armed in situations where obvious armament would be inappropriate or dangerous.
 
 ### Stun
+
 **Effect**: On critical hit, target loses next action
 **Typical Weapons**: Clubs, hammers, maces, blunt weapons
 **Mechanics**: Critical hits incapacitate temporarily
@@ -287,6 +293,7 @@ Concealed weapons are designed for discrete carry, allowing characters to remain
 Stunning weapons can deliver blows that daze or briefly incapacitate opponents without necessarily inflicting severe wounds, making them valuable for non-lethal combat or disrupting dangerous enemies.
 
 ### Armor-Piercing
+
 **Effect**: Ignore 1 point of armor damage reduction
 **Typical Weapons**: War picks, armor spikes, specialized piercing weapons
 **Mechanics**: Reduces effectiveness of target's armor
@@ -342,6 +349,7 @@ Human weapons often incorporate innovative design elements, unusual features, or
 ## Weapon Examples by Archetype
 
 ### Fighter Weapons
+
 Fighters gravitate toward weapons emphasizing reliable combat effectiveness:
 
 - **Longsword**: Versatile, reliable, effective with shields
@@ -350,6 +358,7 @@ Fighters gravitate toward weapons emphasizing reliable combat effectiveness:
 - **Dual Wielding**: Maximum offensive pressure
 
 ### Ranger Weapons
+
 Rangers prefer weapons supporting mobile, adaptable combat:
 
 - **Longbow**: Primary ranged option
@@ -358,6 +367,7 @@ Rangers prefer weapons supporting mobile, adaptable combat:
 - **Dual Hand Axes**: Melee or thrown versatility
 
 ### Paladin Weapons
+
 Paladins favor weapons compatible with shields and armor:
 
 - **Longsword and Shield**: Classic balanced approach
@@ -366,6 +376,7 @@ Paladins favor weapons compatible with shields and armor:
 - **Mace**: Reliable damage without finesse requirements
 
 ### Rogue Weapons
+
 Rogues choose weapons emphasizing precision and versatility:
 
 - **Dual Daggers**: Fast, concealable, versatile
@@ -374,6 +385,7 @@ Rogues choose weapons emphasizing precision and versatility:
 - **Throwing Knives**: Ranged options while maintaining stealth
 
 ### Wizard Weapons
+
 Wizards select weapons requiring minimal martial focus:
 
 - **Dagger**: Light, concealable, minimal encumbrance
@@ -381,6 +393,7 @@ Wizards select weapons requiring minimal martial focus:
 - **Crossbow**: Minimal training ranged option
 
 ### Cleric Weapons
+
 Clerics choose weapons compatible with divine focus:
 
 - **Mace**: Traditional divine weapon
@@ -389,6 +402,7 @@ Clerics choose weapons compatible with divine focus:
 - **Spear and Shield**: Defensive support
 
 ### Bard Weapons
+
 Bards select weapons compatible with performance and versatility:
 
 - **Rapier**: Elegant, effective, performance-compatible
@@ -396,23 +410,23 @@ Bards select weapons compatible with performance and versatility:
 - **Whip**: Unique, performance-oriented, disarming capability
 - **Daggers**: Concealable, throwable, last-resort options
 
-## Flow and Weapon Choice
+## Momentum and Weapon Choice
 
-Different weapons generate Flow through different combat styles:
+Different weapons generate Momentum through different combat styles:
 
-**Light Weapons**: Flow from precise strikes, acrobatic combat, overwhelming speed
+**Light Weapons**: Momentum from precise strikes, acrobatic combat, overwhelming speed
 
-**Medium Weapons**: Flow from versatile adaptation, switching tactics, reliable effectiveness
+**Medium Weapons**: Momentum from versatile adaptation, switching tactics, reliable effectiveness
 
-**Heavy Weapons**: Flow from devastating strikes, overwhelming force, breaking through defenses
+**Heavy Weapons**: Momentum from devastating strikes, overwhelming force, breaking through defenses
 
-**Reach Weapons**: Flow from controlling space, keeping enemies at bay, defensive mastery
+**Reach Weapons**: Momentum from controlling space, keeping enemies at bay, defensive mastery
 
-**Thrown Weapons**: Flow from tactical throwing, opening attacks, hit-and-run combat
+**Thrown Weapons**: Momentum from tactical throwing, opening attacks, hit-and-run combat
 
-**Ranged Weapons**: Flow from impossible shots, eliminating threats efficiently, supporting allies
+**Ranged Weapons**: Momentum from impossible shots, eliminating threats efficiently, supporting allies
 
-Understanding how weapons generate Flow helps characters maximize resource generation while fighting in their preferred style.
+Understanding how weapons generate Momentum helps characters maximize resource generation while fighting in their preferred style.
 
 ## Choosing Your Weapons
 

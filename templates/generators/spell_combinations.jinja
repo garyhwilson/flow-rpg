@@ -6,7 +6,7 @@ Generates spell combination documentation with professional TTRPG prose
 
 Individual spells solve immediate problems. Fireball eliminates clustered enemies. Shield prevents incoming damage. Heal restores wounded allies. But spellcasters who think only in single-spell terms miss the deeper tactical layer—spell combinations that synergize to create effects greater than their parts.
 
-Spell combinations aren't just "cast multiple spells." They're deliberate sequences that manage Flow economy while amplifying effectiveness. The wizard who casts two Sparks before Fireball generates Flow while softening targets. The cleric who layers Mage Armor, Shield, and Blur creates defenses that cost zero net Flow. These patterns separate competent spellcasters from masters.
+Spell combinations aren't just "cast multiple spells." They're deliberate sequences that manage Momentum economy while amplifying effectiveness. The wizard who casts two Sparks before Fireball generates Momentum while softening targets. The cleric who layers Mage Armor, Shield, and Blur creates defenses that cost zero net Momentum. These patterns separate competent spellcasters from masters.
 
 ---
 
@@ -18,13 +18,13 @@ Spell combinations aren't just "cast multiple spells." They're deliberate sequen
 {{ combo_data.description }}. Smart spellcasters don't just cast powerful spells—they create cascading effects where each spell enables the next.
 {% endif %}
 
-### Flow-Positive Sequences
+### Momentum-Positive Sequences
 
-The best spell combinations generate more Flow than they consume:
+The best spell combinations generate more Momentum than they consume:
 
-**Generate then spend:** Cast cantrips or minor spells to build Flow reserves, then unleash major spells when you have resources available.
+**Generate then spend:** Cast cantrips or minor spells to build Momentum reserves, then unleash major spells when you have resources available.
 
-**Critical timing:** Save expensive spells for moments when you can follow them with Flow-generating actions.
+**Critical timing:** Save expensive spells for moments when you can follow them with Momentum-generating actions.
 
 **Layered effects:** Stack multiple zero-cost or low-cost buffs before expending resources on offense.
 
@@ -39,7 +39,7 @@ Different situations demand different spell sequences:
 
 {% if combo.sequence %}**Spell Sequence:** {{ combo.sequence|join(' → ') }}{% endif %}
 
-{% if combo.total_cost %}**Total Flow Cost:** {{ combo.total_cost }}{% endif %}
+{% if combo.total_cost %}**Total Momentum Cost:** {{ combo.total_cost }}{% endif %}
 
 {% if combo.effect %}**Tactical Effect:** {{ combo.effect }}{% endif %}
 
@@ -58,38 +58,38 @@ Different situations demand different spell sequences:
 
 Protection spells stack to create overlapping defenses:
 
-**Mage Armor (Cantrip, 0 Flow):** Base magical protection active all day
-**Shield (Cantrip, 0 Flow):** Reactive defense against specific attacks
-**Blur (Cantrip, 0 Flow):** Ongoing concealment making you harder to hit
+**Mage Armor (Cantrip, 0 Momentum):** Base magical protection active all day
+**Shield (Cantrip, 0 Momentum):** Reactive defense against specific attacks
+**Blur (Cantrip, 0 Momentum):** Ongoing concealment making you harder to hit
 
-These three cantrips cost zero Flow total but create significant defensive advantages. Cast them before combat begins—you're protected without resource expenditure.
+These three cantrips cost zero Momentum total but create significant defensive advantages. Cast them before combat begins—you're protected without resource expenditure.
 
 Add higher-tier protections as threats increase:
 - **Stoneskin** for physical damage reduction
 - **Resistance** for elemental protection
 - **Mind Blank** against psychic attacks
 
-Each layer costs Flow but solves specific threats. The key is knowing which defenses the current enemy can bypass and which they cannot.
+Each layer costs Momentum but solves specific threats. The key is knowing which defenses the current enemy can bypass and which they cannot.
 
 ### Offensive Escalation
 
-Build Flow through minor attacks, then unleash devastating finishers:
+Build Momentum through minor attacks, then unleash devastating finishers:
 
-**Phase 1 - Generate Flow:**
-- Spark (Cantrip, 0 Flow) generates Flow on hit
-- Repeated cantrip attacks build Flow reserves
+**Phase 1 - Generate Momentum:**
+- Spark (Cantrip, 0 Momentum) generates Momentum on hit
+- Repeated cantrip attacks build Momentum reserves
 - Conservative resource management
 
 **Phase 2 - Escalate:**
-- Magic Missile (Tier 1, -1 Flow) for guaranteed damage
-- Fireball (Tier 2, -1 Flow) when enemies cluster
-- Lightning Bolt (Tier 2, -1 Flow) for linear groups
+- Magic Missile (Tier 1, -1 Momentum) for guaranteed damage
+- Fireball (Tier 2, -1 Momentum) when enemies cluster
+- Lightning Bolt (Tier 2, -1 Momentum) for linear groups
 
 **Phase 3 - Finish:**
-- Disintegrate (Tier 3, -2 Flow) to eliminate priority targets
-- Meteor Swarm (Tier 3, -2 Flow) for area devastation
+- Disintegrate (Tier 3, -2 Momentum) to eliminate priority targets
+- Meteor Swarm (Tier 3, -2 Momentum) for area devastation
 
-This progression manages Flow carefully—you never cast expensive spells at negative Flow because you built reserves first.
+This progression manages Momentum carefully—you never cast expensive spells at negative Momentum because you built reserves first.
 
 ### Control and Setup
 
@@ -105,9 +105,9 @@ These combinations require planning and party coordination. The wizard creates t
 
 Healing becomes more efficient through proper sequencing:
 
-**Stabilize (Cantrip, 0 Flow):** Stop dying allies from getting worse
-**Heal (Tier 1, -1 Flow):** Restore moderate Vitality to conscious allies
-**Mass Heal (Tier 2, -1 Flow):** Restore entire party after major battle
+**Stabilize (Cantrip, 0 Momentum):** Stop dying allies from getting worse
+**Heal (Tier 1, -1 Momentum):** Restore moderate Vitality to conscious allies
+**Mass Heal (Tier 2, -1 Momentum):** Restore entire party after major battle
 
 Don't waste high-tier healing on single targets when cantrips suffice. Reserve expensive healing for emergencies or situations where healing multiple targets justifies the cost.
 
@@ -115,27 +115,27 @@ Healing during combat competes with offensive actions. Sometimes dealing damage 
 
 ---
 
-## Flow Management Through Combinations
+## Momentum Management Through Combinations
 
 ### The Cantrip Foundation
 
-Cantrips cost zero Flow, making them the backbone of sustainable spellcasting:
+Cantrips cost zero Momentum, making them the backbone of sustainable spellcasting:
 
 **Before Combat:** Layer zero-cost buffs (Mage Armor, Shield, Light)
-**During Combat:** Generate Flow through cantrip attacks (Spark, Acid Splash)
+**During Combat:** Generate Momentum through cantrip attacks (Spark, Acid Splash)
 **After Combat:** Utility cantrips solve problems without resource drain (Mending, Prestidigitation)
 
 Never feel pressured to conserve cantrips. Cast them freely—they're designed for unlimited use.
 
 ### Tier 1 Spells as Bridges
 
-Tier 1 spells cost -1 Flow but provide reliable effects:
+Tier 1 spells cost -1 Momentum but provide reliable effects:
 
 - Use them when cantrips aren't enough but Tier 2 spells are overkill
-- Cast them after generating Flow from cantrips (net 0 Flow)
+- Cast them after generating Momentum from cantrips (net 0 Momentum)
 - Combine with party actions for multiplied effectiveness
 
-Magic Missile guarantees damage when you need a specific target eliminated. Bless grants party-wide bonuses without excessive Flow investment. These spells bridge the gap between cantrip consistency and high-tier power.
+Magic Missile guarantees damage when you need a specific target eliminated. Bless grants party-wide bonuses without excessive Momentum investment. These spells bridge the gap between cantrip consistency and high-tier power.
 
 ### Tier 2+ Spells as Climaxes
 

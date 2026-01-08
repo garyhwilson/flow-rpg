@@ -1,5 +1,6 @@
 # Ranger
-*Masters of Wilderness Survival and Environmental Combat*
+
+_Masters of Wilderness Survival and Environmental Combat_
 
 ## Archetype Essence
 
@@ -37,7 +38,7 @@ Rangers typically develop balanced attribute distributions emphasizing environme
 
 **Mind:** Critical for understanding environmental patterns and specialized knowledge application. Contributes to flora/fauna identification, tactical planning, and threat assessment.
 
-**Will:** Foundational for maintaining focus during extended wilderness operations. Supports psychological resilience, sensory focus, and Flow management during prolonged tracking.
+**Will:** Foundational for maintaining focus during extended wilderness operations. Supports psychological resilience, sensory focus, and Momentum management during prolonged tracking.
 
 **Presence:** Typically receives less emphasis than other attributes, though specific Ranger traditions incorporating leadership or animal handling may develop this capability.
 
@@ -48,55 +49,61 @@ Most Rangers develop at least moderate scores across physical and perceptual att
 Rangers begin with the following skill proficiencies, reflecting their specialized training:
 
 **Professional (+1):**
+
 - Survival (resource acquisition, shelter creation, environmental adaptation, tracking, and wilderness navigation)
 
 **Novice (-1):**
+
 - Combat (wilderness-adapted fighting techniques and ranged weapon proficiency)
 - Investigate (tracking, observation, and detail-oriented search)
 
 **Starting Edge:**
 Choose one Edge at character creation:
+
 - **Fast Movement:** +1 zone of movement per turn
 - **Precise Strike:** Reroll one damage die per attack
 
 **Additional Skills:**
+
 - Choose three additional skills at Basic/Untrained level reflecting background and cultural training
 
 Rangers are typically Untrained in complex social interaction, scholarly pursuits, or urban operation unless their background specifically includes exposure to these areas.
 
-### Flow Mechanics
+### Momentum Mechanics
 
-Rangers interact with the Flow resource through environmental awareness:
+Rangers interact with the Momentum resource through environmental awareness:
 
-**Flow Generation:**
-- Successfully tracking challenging quarry through difficult terrain (+1 Flow)
-- Identifying natural resources critical to current needs (+1 Flow)
-- Neutralizing wilderness threats before they engage the group (+1 Flow)
-- Navigating through dangerous territories without incident (+1 Flow)
-- Demonstrating exceptional environmental adaptation (+2 Flow)
+**Momentum Generation:**
 
-**Flow Expenditure:**
+- Successfully tracking challenging quarry through difficult terrain (+1 Momentum)
+- Identifying natural resources critical to current needs (+1 Momentum)
+- Neutralizing wilderness threats before they engage the group (+1 Momentum)
+- Navigating through dangerous territories without incident (+1 Momentum)
+- Demonstrating exceptional environmental adaptation (+2 Momentum)
+
+**Momentum Expenditure:**
+
 - Activating specialized techniques (costs vary by technique power)
-- Enhancing perception actions (+1 Flow for advantage on awareness-based checks)
-- Executing perfect shots (+2 Flow for critical range extension)
-- Applying wilderness knowledge to specific situations (+1 Flow for advantage on knowledge application)
-- Performing emergency adaption to environmental challenges (+2 Flow to reverse failed survival check)
+- Enhancing perception actions (+1 Momentum for advantage on awareness-based checks)
+- Executing perfect shots (+2 Momentum for critical range extension)
+- Applying wilderness knowledge to specific situations (+1 Momentum for advantage on knowledge application)
+- Performing emergency adaption to environmental challenges (+2 Momentum to reverse failed survival check)
 
-Rangers typically generate Flow through successful environmental navigation and threat management, then spend it on precision execution or specialized knowledge application. This pattern reflects their approach of maintaining awareness followed by decisive action.
+Rangers typically generate Momentum through successful environmental navigation and threat management, then spend it on precision execution or specialized knowledge application. This pattern reflects their approach of maintaining awareness followed by decisive action.
 
 ### Signature Techniques
 
 Rangers develop specialized techniques reflecting their environmental mastery approach:
 
-**Terrain Reading (Flow +1):** Analyze surrounding environment to identify advantageous features, hazards, and tactical opportunities. Gain advantage on next environmental interaction check and identify one significant terrain feature invisible to casual observation.
+**Terrain Reading (Momentum +1):** Analyze surrounding environment to identify advantageous features, hazards, and tactical opportunities. Gain advantage on next environmental interaction check and identify one significant terrain feature invisible to casual observation.
 
-**Perfect Shot (Flow +2):** Combine environmental factors (wind, light, cover) with exceptional aim to execute precise ranged attack. Attack gains advantage and expanded critical range (19-20).
+**Perfect Shot (Momentum +2):** Combine environmental factors (wind, light, cover) with exceptional aim to execute precise ranged attack. Attack gains advantage and expanded critical range (19-20).
 
-**Trackless Step (Flow +2):** Move through environment without leaving discernible traces. Tracking attempts against your movement automatically fail for non-magical tracking methods.
+**Trackless Step (Momentum +2):** Move through environment without leaving discernible traces. Tracking attempts against your movement automatically fail for non-magical tracking methods.
 
-**Wilderness Adaptation (React, Flow +1):** Rapidly adjust to unexpected environmental hazards through instinctive response. Gain advantage on saving throw against natural hazards or environmental effects.
+**Wilderness Adaptation (React, Momentum +1):** Rapidly adjust to unexpected environmental hazards through instinctive response. Gain advantage on saving throw against natural hazards or environmental effects.
 
-**Coordinated Ambush (Flow +3):** Integrate group into environmental concealment for perfect ambush positioning. All allies gain surprise round advantage and position selection despite inadequate personal stealth skills.
+**Coordinated Ambush (Momentum +3):** Integrate group into environmental concealment for perfect ambush positioning. All allies gain surprise round advantage and position selection despite inadequate personal stealth skills.
 
 ## Cultural Variations
 
@@ -105,6 +112,7 @@ Rangers develop specialized techniques reflecting their environmental mastery ap
 Within densely forested regions, specialized Ranger traditions develop techniques addressing three-dimensional environments, limited sightlines, and complex ecosystems. These approaches emphasize vertical awareness, sound-based tracking, and understanding complex interdependencies between species.
 
 **Key Capabilities:**
+
 - Three-dimensional movement techniques allowing efficient travel through canopy environments
 - Sound-based tracking identifying creatures despite limited visual information
 - Specialized plant knowledge regarding medicinal, nutritional, and hazardous species
@@ -116,6 +124,7 @@ Within densely forested regions, specialized Ranger traditions develop technique
 **Social Position:** Forest communities often maintain deep respect for specialized Rangers, recognizing their critical role in resource acquisition, perimeter security, and navigation through environments hostile to untrained individuals. These specialists frequently serve as community protectors, resource managers, and traditional knowledge custodians.
 
 **Cultural Expressions:**
+
 - The Leafwalkers develop specialized canopy movement techniques creating unprecedented vertical mobility
 - The Shadow Trackers specialize in low-light navigation and hunting within dense forest environments
 - The Green Guardians emphasize forest ecosystem protection alongside human community support
@@ -126,6 +135,7 @@ Within densely forested regions, specialized Ranger traditions develop technique
 Elevated terrain specialists develop techniques addressing vertical challenges, extreme conditions, and resource scarcity. These approaches emphasize efficient vertical movement, weather prediction, and maximizing limited resource availability within harsh environmental conditions.
 
 **Key Capabilities:**
+
 - Vertical navigation techniques supporting efficient and safe travel across extreme elevation changes
 - Advanced weather prediction methodologies specific to mountain microclimates and seasonal patterns
 - Cold environment survival specialization addressing exposure risk, resource scarcity, and energy conservation
@@ -137,6 +147,7 @@ Elevated terrain specialists develop techniques addressing vertical challenges, 
 **Social Position:** Highland communities typically regard specialized mountain Rangers as essential survival resources, often integrating them into formal leadership or advisory structures. These specialists frequently serve as expedition leaders, rescue coordinators, and community protectors against environmental extremes.
 
 **Cultural Expressions:**
+
 - The Sky Watchers maintain sophisticated weather prediction methodologies supporting community safety
 - The Stone Path Wanderers specialize in efficient vertical travel techniques preserving energy in thin atmospheres
 - The Eagle Scouts develop exceptional observation capabilities across extreme distances utilizing elevated positions
@@ -147,6 +158,7 @@ Elevated terrain specialists develop techniques addressing vertical challenges, 
 Arid environment specialists develop techniques addressing resource scarcity, extreme temperature variation, and navigation challenges. These approaches emphasize water management, temperature regulation, and maximizing limited survival opportunities within seemingly barren landscapes.
 
 **Key Capabilities:**
+
 - Water location and management techniques supporting survival despite extreme scarcity
 - Temperature regulation methodologies addressing both scorching days and freezing nights
 - Navigation systems functioning despite limited landmarks and shifting terrain features
@@ -158,6 +170,7 @@ Arid environment specialists develop techniques addressing resource scarcity, ex
 **Social Position:** Desert communities often regard specialized Rangers as community lifelines, providing critical resource identification, safe passage coordination, and protection against environmental extremes. These specialists frequently serve as caravan guides, water sourcing experts, and regional navigation authorities.
 
 **Cultural Expressions:**
+
 - The Dune Walkers develop specialized movement techniques allowing efficient travel across shifting sands
 - The Water Finders maintain secret knowledge regarding hidden moisture sources invisible to casual observation
 - The Sun Shields specialize in temperature management techniques supporting daytime operation despite extreme heat
@@ -168,6 +181,7 @@ Arid environment specialists develop techniques addressing resource scarcity, ex
 Shoreline specialists develop techniques addressing marine-terrestrial interface zones, tidal dynamics, and aquatic resource management. These approaches emphasize understanding complex interactions between land and sea, maximizing coastal resource opportunities, and navigating transition environments.
 
 **Key Capabilities:**
+
 - Tidal pattern understanding supporting safe shoreline operation despite changing conditions
 - Marine resource identification and acquisition techniques addressing both consumption and material needs
 - Weather prediction methodologies specific to coastal storm patterns and seasonal variations
@@ -179,6 +193,7 @@ Shoreline specialists develop techniques addressing marine-terrestrial interface
 **Social Position:** Coastal communities typically integrate specialized Rangers into resource acquisition systems, relying on their capabilities for identifying safe harvesting opportunities, predicting dangerous weather conditions, and maximizing available resources. These specialists frequently serve as fishing expedition guides, coastal navigation experts, and community providers.
 
 **Cultural Expressions:**
+
 - The Tide Readers maintain sophisticated understanding of complex tidal patterns supporting safe shore operations
 - The Shell Seekers specialize in identifying and acquiring valuable coastal resources during optimal collection windows
 - The Storm Wardens develop exceptional weather prediction capabilities specific to coastal storm systems
@@ -341,11 +356,13 @@ Through these lifestyle elements, established Rangers maintain both immediate op
 **Focus:** Develops increasing expertise within specific environment types through focused specialization rather than breadth expansion. Progressively addresses more challenging operational parameters including extreme conditions, resource limitations, or extended durations within concentrated terrain categories.
 
 **Key Milestones:**
+
 - **Foundation (Early):** Develops comprehensive understanding regarding specific terrain type characteristics and challenges. Creates specialized equipment configurations and technique adaptations addressing particular environmental demands.
 - **Development (Middle):** Addresses increasingly challenging conditions within specialty environment including extreme manifestations, seasonal variations, and extended operation requirements. Develops innovative approaches overcoming traditional operational limitations.
 - **Mastery (Advanced):** Operates effectively within theoretically impossible environmental constraints through exceptional adaptation and specialized technique development. Creates new methodologies advancing entire field beyond established operational boundaries.
 
 **Common Expressions:**
+
 - The Mountain Master progresses from basic elevation operation to extreme altitude capability through focused specialization
 - The Desert Specialist develops increasingly sophisticated water management techniques supporting extended arid environment operation
 - The Deep Forest Expert advances from basic canopy understanding to complex three-dimensional navigation through progressive challenge engagement
@@ -355,11 +372,13 @@ Through these lifestyle elements, established Rangers maintain both immediate op
 **Focus:** Develops extraordinary capability following, identifying, and predicting movements through progressive challenge engagement. Addresses increasingly difficult tracking scenarios including intentional trail concealment, challenging substrates, or complex environmental conditions.
 
 **Key Milestones:**
+
 - **Foundation (Early):** Develops comprehensive sign identification capability, basic pattern recognition, and fundamental tracking methodologies. Creates systematic approach transferring observation into practical pursuit beyond instinctive following.
 - **Development (Middle):** Addresses complex tracking challenges including intermittent sign, environmental disruption, or intentional concealment through advanced methodologies. Develops innovative approaches reconstructing movement patterns from minimal indicators.
 - **Mastery (Advanced):** Tracks seemingly impossible quarry through exceptional observation capabilities and innovative methodology development. Creates new tracking approaches advancing entire field beyond traditional limitations.
 
 **Common Expressions:**
+
 - The Sign Reader progresses from basic track identification to complex pattern analysis through systematic methodology development
 - The Ghost Follower develops increasingly sophisticated techniques addressing intentional trail concealment through counter-methodology specialization
 - The Pursuit Master advances from basic following techniques to complex predictive tracking through behavioral understanding integration
@@ -369,11 +388,13 @@ Through these lifestyle elements, established Rangers maintain both immediate op
 **Focus:** Develops sophisticated understanding regarding specific creature categories through progressive study and interaction. Addresses increasingly complex aspects including behavioral patterns, ecological relationships, or human-animal interaction approaches.
 
 **Key Milestones:**
+
 - **Foundation (Early):** Develops comprehensive identification capability, basic behavioral understanding, and fundamental interaction approaches. Creates systematic observation methodology supporting detailed understanding beyond casual contact.
 - **Development (Middle):** Addresses complex wildlife dynamics including territorial patterns, social structures, or predator-prey relationships through advanced study methods. Develops specialized interaction techniques supporting close observation without disruption.
 - **Mastery (Advanced):** Establishes unprecedented understanding regarding specific creature categories through exceptional observation capabilities and methodology innovation. Creates new approaches advancing entire field beyond established knowledge boundaries.
 
 **Common Expressions:**
+
 - The Predator Specialist progresses from basic understanding to complex behavioral prediction through systematic observation methodology
 - The Herd Manager develops increasingly sophisticated techniques supporting large group management through behavioral influence rather than direct control
 - The Rare Species Expert advances from basic identification to comprehensive lifecycle understanding through specialized non-disruptive study techniques
@@ -383,11 +404,13 @@ Through these lifestyle elements, established Rangers maintain both immediate op
 **Focus:** Develops exceptional wayfinding capabilities across challenging territories through progressive skill development. Addresses increasingly difficult navigation scenarios including unmarked wilderness, extreme conditions, or complex three-dimensional environments.
 
 **Key Milestones:**
+
 - **Foundation (Early):** Develops comprehensive understanding of fundamental navigation principles, environmental indicator reading, and basic orientation techniques. Creates reliable methodologies supporting confident movement beyond marked trails or familiar territories.
 - **Development (Middle):** Addresses complex navigation challenges including featureless terrain, visibility limitations, or extended journeys through advanced techniques. Develops innovative approaches maintaining orientation despite challenging circumstances.
 - **Mastery (Advanced):** Navigates seemingly impossible territories through exceptional environmental reading capabilities and methodology innovation. Creates new wayfinding approaches advancing entire field beyond traditional limitations.
 
 **Common Expressions:**
+
 - The Pathfinder progresses from basic route selection to optimal path identification through comprehensive territory assessment
 - The Night Navigator develops increasingly sophisticated techniques supporting darkness operation through non-visual orientation methods
 - The Celestial Guide advances from basic star orientation to complex celestial navigation through specialized astronomical understanding
@@ -505,6 +528,7 @@ The natural connection of Druids creates exceptional complementary potential wit
 **Motivations:** Enables safe access to wilderness regions without requiring comprehensive personal skill development. Develops increasingly efficient route systems minimizing risk while maximizing experiential value. Creates sustainable visitor interactions supporting wilderness appreciation without exploitation damage.
 
 **Distinctive Elements:**
+
 - Comprehensive regional knowledge spanning multiple seasons and condition variations
 - Psychological assessment capability identifying traveler limitations before they create emergencies
 - Educational approach transforming travel necessities into learning opportunities beyond transportation alone
@@ -524,6 +548,7 @@ The natural connection of Druids creates exceptional complementary potential wit
 **Motivations:** Establishes clear understanding regarding appropriate territorial utilization versus exploitation. Develops increasingly sophisticated monitoring systems identifying threats before they create significant damage. Maintains balanced approach addressing legitimate access needs while preventing destructive activities.
 
 **Distinctive Elements:**
+
 - Territorial marking systems establishing clear boundary communication without requiring direct presence
 - Threat assessment capability distinguishing between legitimate travelers and potential dangers
 - Intervention methodology emphasizing appropriate force calibration rather than excessive response
@@ -543,6 +568,7 @@ The natural connection of Druids creates exceptional complementary potential wit
 **Motivations:** Extracts critical intelligence from minimal environmental indicators creating decisive information advantages. Develops increasingly sophisticated methodologies addressing challenging substrate conditions or intentional trail concealment. Preserves traditional tracking knowledge while developing innovative applications extending capabilities beyond conventional boundaries.
 
 **Distinctive Elements:**
+
 - Integrated tracking system combining physical sign reading with behavioral prediction creating movement forecasting beyond mere following
 - Temporal assessment capability determining precise timeframes from subtle environmental indicators
 - Pressure analysis extracting subject information regarding weight, injury status, or equipment load from impact patterns
@@ -562,6 +588,7 @@ The natural connection of Druids creates exceptional complementary potential wit
 **Motivations:** Establishes productive cross-species relationships supporting mutual benefit beyond exploitation. Develops increasingly sophisticated communication systems bridging instinctual and rational thought patterns. Demonstrates potential for balanced interaction rather than inevitable conflict across species boundaries.
 
 **Distinctive Elements:**
+
 - Behavioral analysis identifying individual animal personality traits beyond species generalization
 - Relationship progression framework establishing trust through predictable stages rather than forced compliance
 - Communication system utilizing species-appropriate signals creating basic understanding despite biological differences
@@ -581,6 +608,7 @@ The natural connection of Druids creates exceptional complementary potential wit
 **Motivations:** Provides critical decision-making information enhancing community safety and operational planning. Develops increasingly precise prediction timeframes supporting specific activity scheduling rather than general condition awareness. Preserves traditional weather knowledge while integrating systematic observation creating comprehensive understanding beyond isolated indicators.
 
 **Distinctive Elements:**
+
 - Integrated indicator system combining atmospheric, biological, and geological signals into unified prediction framework
 - Temporal precision providing specific timeframe estimates rather than merely general trend indications
 - Regional adaptation recognizing microclimate variations and local pattern deviations beyond broad predictions

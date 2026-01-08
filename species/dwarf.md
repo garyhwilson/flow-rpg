@@ -1,5 +1,6 @@
 # Dwarf
-*Endurance and Tradition, with Physical Resilience and Communities Maintaining Multigenerational Continuity*
+
+_Endurance and Tradition, with Physical Resilience and Communities Maintaining Multigenerational Continuity_
 
 ## Species Essence
 
@@ -18,6 +19,7 @@ Dwarves possess distinctive biological traits reflecting both their subterranean
 **Physical Proportions:** Dwarves typically stand between 4'2" and 4'10" tall, with weight ranging from 140 to 220 pounds depending on build, clan heritage, and lifestyle. Their compact, dense physiology creates significantly greater strength and durability than their height might suggest, with pound-for-pound strength exceeding most other intelligent species. Their limb proportions favor stability and leverage over reach, with broader shoulders, deeper chests, and lower centers of gravity optimized for endurance, load-bearing, and precise force application.
 
 **Distinctive Features:** All dwarves share certain characteristic traits:
+
 - Robust skeletal structure with pronounced cranial ridges
 - Dense musculature with exceptional strength-to-size ratio
 - Thick, often elaborately styled hair and beards (in both males and females)
@@ -25,6 +27,7 @@ Dwarves possess distinctive biological traits reflecting both their subterranean
 - Comparatively large eyes adapted for subterranean environments
 
 **Sensory Capabilities:** Dwarven senses show specialized adaptation to their traditional underground environments:
+
 - Darkvision allowing perfect sight in darkness up to 60 feet
 - Enhanced depth perception enabling precise distance judgment
 - Superior hearing within stone environments, including ability to detect hollow spaces and structural weaknesses
@@ -32,6 +35,7 @@ Dwarves possess distinctive biological traits reflecting both their subterranean
 - Limited color vision optimized for distinguishing mineral variations rather than surface-world hues
 
 **Internal Physiology:** Dwarves function through exceptionally robust biological systems:
+
 - Cardiovascular system with additional heart chambers creating exceptional circulation efficiency
 - Respiratory system capable of filtering airborne particulates through specialized membranes
 - Digestive system processing low-nutrition foods with remarkable efficiency
@@ -137,6 +141,7 @@ Dwarven cultural diversity extends across numerous environments and historical t
 **Geographic Distribution:** Established within major mountain ranges, particularly where mineral resources, defensive positions, and subterranean access converge. Communities typically develop complex three-dimensional settlements extending both above and below ground, with surface structures serving primarily as interaction points with other species while true centers remain underground.
 
 **Defining Characteristics:**
+
 - Vertical architecture integrating multiple underground levels with surface structures
 - Clan-based political structures with formalized hierarchies
 - Strong martial traditions focused on defensive fortification
@@ -160,6 +165,7 @@ Dwarven cultural diversity extends across numerous environments and historical t
 **Geographic Distribution:** Established in rolling uplands, foothills, and plateau regions where lower elevation permits greater surface activity while still providing natural defensive advantages and underground access. Communities typically feature more extensive surface construction with shallower but wider underground complexes.
 
 **Defining Characteristics:**
+
 - Agricultural integration alongside traditional mining and crafting
 - More frequent interaction with other species, particularly humans
 - Adaptive architectural styles incorporating local materials
@@ -183,6 +189,7 @@ Dwarven cultural diversity extends across numerous environments and historical t
 **Geographic Distribution:** Established around exceptional geothermal features, volcanic activity, or other natural phenomena supporting advanced metallurgy and crafting. These specialized settlements prioritize production capability over agricultural self-sufficiency or defensive positioning, often relying on trade relationships and allied communities for support.
 
 **Defining Characteristics:**
+
 - Production-centered social organization focused on crafting excellence
 - Guild-based governance emphasizing technical mastery over clan affiliation
 - Architectural designs subordinated to manufacturing requirements
@@ -206,6 +213,7 @@ Dwarven cultural diversity extends across numerous environments and historical t
 **Geographic Distribution:** Established at extreme depths unreachable by conventional mining techniques, often accessing vast cavern networks or subterranean features unknown to surface dwellers. These isolated communities typically maintain minimal external contact, developing highly specialized adaptations to deep underground conditions.
 
 **Defining Characteristics:**
+
 - Complete adaptation to lightless environments beyond normal darkvision range
 - Defensive paranoia stemming from exposure to subterranean threats
 - Ancestral traditions preserved with minimal external influence
@@ -398,25 +406,27 @@ Dwarves receive +2 Will, +1 Might, and -1 Grace, reflecting their legendary dete
 
 **Resilient Physiology:** You gain +2 Guard against poison, disease, and extreme environmental conditions due to your hardy constitution. This ability reflects the dwarven biological adaptations providing natural resistance to toxins and environmental stresses common in their traditional underground habitats.
 
-### Flow Interactions
+### Momentum Interactions
 
-Dwarves interact with the Flow resource through their distinctive endurance and crafting capabilities:
+Dwarves interact with the Momentum resource through their distinctive endurance and crafting capabilities:
 
-**Flow Generation:**
-- Successfully completing extended, difficult tasks (+1 Flow)
-- Enduring hardship without complaint or faltering (+1 Flow)
-- Applying traditional techniques to solve current problems (+1 Flow)
-- Identifying quality craftsmanship or structural weaknesses (+1 Flow)
-- Upholding clan honor through exceptional accomplishment (+2 Flow)
+**Momentum Generation:**
 
-**Flow Expenditure:**
+- Successfully completing extended, difficult tasks (+1 Momentum)
+- Enduring hardship without complaint or faltering (+1 Momentum)
+- Applying traditional techniques to solve current problems (+1 Momentum)
+- Identifying quality craftsmanship or structural weaknesses (+1 Momentum)
+- Upholding clan honor through exceptional accomplishment (+2 Momentum)
+
+**Momentum Expenditure:**
+
 - Extraordinary endurance beyond normal limits (variable cost)
-- Perfect craftsmanship requiring exceptional precision (+1 Flow)
-- Ancestral insight providing specialized knowledge (+2 Flow)
-- Unbreakable determination against overwhelming opposition (+1 Flow)
-- Stone-sense revealing hidden features or structural weaknesses (+2 Flow)
+- Perfect craftsmanship requiring exceptional precision (+1 Momentum)
+- Ancestral insight providing specialized knowledge (+2 Momentum)
+- Unbreakable determination against overwhelming opposition (+1 Momentum)
+- Stone-sense revealing hidden features or structural weaknesses (+2 Momentum)
 
-This relationship with Flow emphasizes the dwarven capacity for endurance, crafting excellence, and ancestral connection—transforming their stubborn persistence into extraordinary accomplishment through unwavering commitment and accumulated wisdom.
+This relationship with Momentum emphasizes the dwarven capacity for endurance, crafting excellence, and ancestral connection—transforming their stubborn persistence into extraordinary accomplishment through unwavering commitment and accumulated wisdom.
 
 ## Archetype Synergies
 
@@ -425,18 +435,21 @@ Dwarven biology and culture create effective combinations with all archetypes, t
 ### Natural Synergies
 
 **Dwarf Fighter**
+
 - Cultural martial traditions emphasize defensive positioning
 - Natural resilience enhances frontline combat capability
 - Will bonus supports stance maintenance and tactical discipline
 - Crafting knowledge provides equipment optimization advantages
 
 **Dwarf Cleric**
+
 - Structured religious traditions complement clan organization
 - Natural resilience supports frontline divine casting
 - Cultural value system aligns with religious dedication
 - Ancestral connection enhances spiritual authority
 
 **Dwarf Artificer**
+
 - Cultural crafting excellence supports magical creation
 - Intuitive material understanding enhances enchantment
 - Traditional knowledge provides specialized crafting techniques
@@ -445,18 +458,21 @@ Dwarven biology and culture create effective combinations with all archetypes, t
 ### Interesting Tensions
 
 **Dwarf Wizard**
+
 - Balancing traditional approaches with magical experimentation
 - Overcoming cultural emphasis on physical crafting
 - Applying structured methodology to fluid magical forces
 - Using ancestral wisdom alongside personal arcane discovery
 
 **Dwarf Bard**
+
 - Reconciling performance traditions with expressive individuality
 - Transforming cultural formality into accessible storytelling
 - Balancing historical accuracy with engaging presentation
 - Finding emotional expression within structured traditions
 
 **Dwarf Ranger**
+
 - Adapting underground expertise to surface environments
 - Balancing community connection with wilderness isolation
 - Developing flexible tactics beyond traditional formations
@@ -467,30 +483,35 @@ Dwarven biology and culture create effective combinations with all archetypes, t
 The dwarven species supports diverse character concepts reflecting their enduring nature and varied cultural backgrounds:
 
 ### "The Clan Emissary"
+
 - **Background:** Dwarf representing traditional values in outside world
 - **Motivation:** Establishes beneficial relationships while maintaining cultural identity
 - **Conflict:** Balancing diplomatic flexibility with clan expectations
 - **Gameplay Focus:** Negotiation, cultural translation, resource acquisition
 
 ### "The Master Artisan"
+
 - **Background:** Dwarf perfecting ancestral craft through innovative refinement
 - **Motivation:** Creates works worthy of multi-generational remembrance
 - **Conflict:** Respecting tradition while pushing boundaries of possibility
 - **Gameplay Focus:** Resource acquisition, technical development, reputation management
 
 ### "The Lineage Keeper"
+
 - **Background:** Dwarf maintaining historical knowledge and genealogical records
 - **Motivation:** Preserves crucial information that might otherwise be lost
 - **Conflict:** Determining which traditions remain relevant versus which need adaptation
 - **Gameplay Focus:** Knowledge application, intercultural translation, legacy preservation
 
 ### "The Tradition Reformer"
+
 - **Background:** Dwarf adapting ancestral practices for contemporary challenges
 - **Motivation:** Revitalizes cultural traditions through thoughtful modernization
 - **Conflict:** Facing resistance from conservative elements while avoiding excessive change
 - **Gameplay Focus:** Innovation, persuasion, proving effectiveness through results
 
 ### "The Honor Redeemer"
+
 - **Background:** Dwarf working to restore clan reputation damaged by ancestors
 - **Motivation:** Erases historical stain through extraordinary service and accomplishment
 - **Conflict:** Overcoming prejudice based on actions not personally committed
@@ -501,30 +522,35 @@ The dwarven species supports diverse character concepts reflecting their endurin
 Dwarven characters experience distinctive development arcs shaped by their extended lifespans, cultural values, and ancestral connections.
 
 ### Apprentice to Master
+
 - **Beginning:** Learning fundamental techniques within established tradition
 - **Development:** Achieving technical competence through consistent application
 - **Growth:** Developing personal style while maintaining traditional principles
 - **Mastery:** Creating innovative approaches extending rather than replacing tradition
 
 ### Individual to Lineage
+
 - **Beginning:** Focusing on personal accomplishment and reputation building
 - **Development:** Recognizing connection between individual actions and clan standing
 - **Growth:** Accepting responsibility for maintaining and enhancing family legacy
 - **Mastery:** Viewing personal accomplishments as contributions to multigenerational narrative
 
 ### Structured to Adaptive
+
 - **Beginning:** Relying on established methodologies and proven approaches
 - **Development:** Recognizing limitations of rigid application in changing circumstances
 - **Growth:** Developing flexibility within traditional frameworks rather than abandoning them
 - **Mastery:** Creating innovative applications of foundational principles addressing novel challenges
 
 ### Isolated to Connected
+
 - **Beginning:** Comfortable primarily within dwarven cultural contexts
 - **Development:** Recognizing value in diverse perspectives and approaches
 - **Growth:** Building meaningful connections while maintaining cultural identity
 - **Mastery:** Serving as effective bridge between dwarven communities and other societies
 
 ### Technical to Philosophical
+
 - **Beginning:** Focusing on practical skills and concrete accomplishments
 - **Development:** Questioning underlying principles behind traditional practices
 - **Growth:** Developing personal philosophy integrating ancestral wisdom with direct experience

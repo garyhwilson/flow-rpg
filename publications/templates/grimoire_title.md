@@ -1,11 +1,12 @@
-# FLOW RPG
+# MOMENTUM RPG
 
 ## The Grimoire
+
 ### A Complete Guide to Magic
 
 ---
 
-*Master the revolutionary flexible casting system*
+_Master the revolutionary flexible casting system_
 
 **Version 1.0 (Draft)**
 
@@ -13,7 +14,8 @@
 
 ### What's Inside
 
-This grimoire is a deep dive into Flow RPG's magic system:
+This grimoire is a deep dive into Autumn Phoenix RPG's magic system:
+
 - **The Four Approaches:** Mind, Awareness, Will, and Presence
 - **Complete Spell List:** All four tiers with extensive examples
 - **Magical Traditions:** Cultural frameworks for magic
@@ -22,11 +24,12 @@ This grimoire is a deep dive into Flow RPG's magic system:
 - **GM Guidance:** Running magic in your game
 
 ### Design & Writing
+
 [Your Name Here]
 
 ### The Revolutionary Magic System
 
-Flow RPG's magic system breaks from tradition. Instead of giving each caster type unique spells, **the same spells adapt to your approach:**
+Autumn Phoenix RPG's magic system breaks from tradition. Instead of giving each caster type unique spells, **the same spells adapt to your approach:**
 
 - **Wizards** cast with **Mind** for precision and control
 - **Sorcerers** cast with **Awareness** for raw power
@@ -43,4 +46,4 @@ Whether you're a player building a spellcaster or a GM adjudicating magic, this 
 
 ---
 
-*This is a draft document for development and playtesting purposes.*
+_This is a draft document for development and playtesting purposes._
