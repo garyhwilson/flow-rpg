@@ -1,0 +1,2 @@
+# This file ensures the assembled/ directory is tracked by git
+# Assembled publications are gitignored but regenerated on demand

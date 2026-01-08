@@ -41,7 +41,7 @@ Ensure each archetype receives regular moments of spotlight by incorporating var
 ### Archetype Organizations
 Incorporate archetype-specific organizations to enrich your setting:
 
-- **Fighter Guilds:** Martial training halls, mercenary companies, elite guards
+- **Fighter Guilds:** Martial training halls, mercenary companies, royal guards
 - **Ranger Enclaves:** Wilderness outposts, border wardens, nature preserves
 - **Paladin Orders:** Sacred knighthoods, divine champions, oath fellowships
 - **Rogue Networks:** Thieves' guilds, spy rings, artisan collectives

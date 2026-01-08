@@ -47,12 +47,12 @@ CONNECTIONS
 What function does this NPC serve?
 - Questgiver, ally, rival, merchant, authority figure, sage, etc.
 
-### Step 2: Determine Power Level
-- **Commoner** (Threat 0) - No combat training
-- **Competent** (Threat 1) - Basic training
-- **Skilled** (Threat 2) - Professional level
-- **Expert** (Threat 3) - Master of their craft
-- **Legendary** (Threat 4) - World-class capability
+### Step 2: Determine Capability
+- **Commoner** - No combat training, flees danger
+- **Trained** - Basic competence, can defend themselves
+- **Professional** - Skilled at their trade, dangerous if provoked
+- **Veteran** - Master of their craft, formidable in their domain
+- **Legendary** - World-class capability, renowned throughout the land
 
 ### Step 3: Assign Key Attributes
 Only detail what matters for their role:
@@ -90,7 +90,7 @@ Who they know, what resources they control
 
 **Connections:** Trade networks, other merchants, suppliers
 
-**Combat:** Avoid if possible. If forced: Threat 1 (knife, call guards)
+**Combat:** Avoids if possible. If forced: knife under counter, calls for guards
 
 ---
 
@@ -104,7 +104,7 @@ Who they know, what resources they control
 
 **Defenses:** Vitality 8, Guard 11 (leather armor + shield), Flow 2
 
-**Offense:** Spear 2d6+2, deals 1d6+2 damage
+**Offense:** Spear (+2): 1d6+2 damage
 
 **Key Skills:**
 - Know local laws
@@ -140,7 +140,7 @@ Who they know, what resources they control
 
 **Connections:** Other nobles, political allies, servants, guards, merchants
 
-**Combat:** Never fights personally. Has bodyguards (Threat 2-3 warriors).
+**Combat:** Never fights personally. Has 2-4 professional bodyguards.
 
 ---
 
@@ -163,7 +163,7 @@ Who they know, what resources they control
 
 **Connections:** Libraries, universities, other scholars, noble patrons
 
-**Combat:** Avoid if possible. If spellcaster: Threat 2-3 (defensive spells, flee).
+**Combat:** Avoids if possible. Spellcasters use defensive magic to escape.
 
 ---
 
@@ -186,7 +186,7 @@ Who they know, what resources they control
 
 **Connections:** Locals, travelers, merchants, guards, criminal underworld
 
-**Combat:** Threat 1 (club under bar, rarely used)
+**Combat:** Club under the bar, rarely used. Calls regulars for backup.
 
 ---
 
@@ -209,7 +209,7 @@ Who they know, what resources they control
 
 **Connections:** Miners, merchants, guards (supply armor), adventurers
 
-**Combat:** Threat 2 if provoked (smith's hammer 2d6+3, deals 2d6+3 damage)
+**Combat:** Dangerous if provoked—smith's hammer (+3): 2d6+3 damage.
 
 ---
 
@@ -234,7 +234,7 @@ Who they know, what resources they control
 
 **Connections:** Temple hierarchy, faithful, nobles, healers
 
-**Combat:** Defensive. Threat 2 (mace, support spells, healing).
+**Combat:** Defensive. Mace for self-defense, support spells, healing.
 
 ---
 
@@ -257,7 +257,7 @@ Who they know, what resources they control
 
 **Connections:** Guild members, political contacts, spies, muscle
 
-**Combat:** Never alone. Bodyguards (2-4 Threat 2-3). Personal skill Threat 2-3.
+**Combat:** Never alone. 2-4 professional bodyguards. Personally skilled fighter.
 
 ---
 
@@ -280,7 +280,7 @@ Who they know, what resources they control
 
 **Connections:** Nobility (clients), suppliers, guilds, apprentices
 
-**Combat:** Threat 2 (if forced, uses craft tools as weapons)
+**Combat:** Uses craft tools as weapons if forced. Surprising strength.
 
 ---
 
@@ -307,7 +307,7 @@ Who they know, what resources they control
 
 **Connections:** Noble patron, magical circles, nobles, spies
 
-**Combat:** Threat 3-4. Full spellcasting arsenal. Prepared defenses.
+**Combat:** Formidable. Full spellcasting arsenal. Prepared defenses.
 
 ---
 
@@ -321,7 +321,7 @@ Who they know, what resources they control
 
 **Defenses:** Vitality 14, Guard 13, Flow 4
 
-**Offense:** Longsword 2d6+4, deals 2d6+4 damage
+**Offense:** Longsword (+4): 2d6+4 damage
 
 **Key Skills:**
 - Expert combat tactics and strategy
@@ -334,7 +334,7 @@ Who they know, what resources they control
 
 **Connections:** Military hierarchy, fellow veterans, nobles (former employers)
 
-**Combat:** Threat 3. Multiple attacks, combat abilities, leadership.
+**Combat:** Veteran warrior. Multiple attacks, combat abilities, leadership.
 
 ---
 
@@ -357,7 +357,7 @@ Who they know, what resources they control
 
 **Connections:** Criminals, corrupt officials, spies, muscle, legitimate businesses
 
-**Combat:** Never without bodyguards (4-6 Threat 2-3). Personal skill Threat 3.
+**Combat:** Never without bodyguards (4-6 professional warriors). Personally a veteran combatant.
 
 ---
 
@@ -372,7 +372,7 @@ Some NPCs are designed as recurring antagonists:
 **Motivation:** Same goals as PCs, but different methods/alignment
 
 **Creation:**
-- Match party's average Threat level
+- Match party's average capability
 - Use PC archetypes as templates
 - Give distinctive personality to each member
 - Establish history (past encounters, reputation)
@@ -404,11 +404,11 @@ Some NPCs are designed as recurring antagonists:
 
 **Tactics:**
 - Use legal system against party
-- Send minions (deniability)
+- Send underlings (deniability)
 - Frame or discredit party
 - Flee if exposed, deal if cornered
 
-**Combat:** Threat 1-2 personally. Commands Threat 2-3 guards.
+**Combat:** Modest personal skill. Commands trained guards.
 
 ---
 
@@ -432,13 +432,13 @@ Some NPCs are designed as recurring antagonists:
 **Personality:** Arrogant, obsessed, sees people as tools
 
 **Tactics:**
-- Work through minions
+- Work through servants and agents
 - Prepared defenses and contingencies
 - Strike from hiding/range
 - Retreat to fight another day
 - Long-term schemes
 
-**Combat:** Threat 4. Full spellcasting arsenal. Lair advantages.
+**Combat:** Legendary. Full spellcasting arsenal. Lair advantages.
 
 ---
 
@@ -468,7 +468,7 @@ Some NPCs are designed as recurring antagonists:
 - Ritual magic (party must interrupt)
 - Martyr complex (may self-destruct)
 
-**Combat:** Threat 3 personally. Commands many Threat 1-2 cultists.
+**Combat:** Veteran combatant. Commands many lesser cultists.
 
 ---
 
@@ -517,63 +517,63 @@ Build relationships over time:
 If NPC enters combat unexpectedly:
 
 **Quick Conversion:**
-1. Estimate Threat level from narrative role
+1. Estimate capability from narrative role
 2. Use appropriate template
 3. Focus on narrative over precision
 
 **Example:**
 "The kindly merchant reveals himself as a disguised assassin!"
-- Was Threat 0 merchant
-- Now Threat 2 rogue (stats from standard enemies)
+- Was harmless shopkeeper
+- Now revealed as trained rogue
 - Add narrative twist to abilities
 
 ---
 
-## Balancing NPC Power
+## NPC Capability Guidelines
 
 ### By Narrative Role
 
-**Commoner (Threat 0):**
+**Commoners:**
 - Farmers, servants, children
 - No combat training
 - Vitality 3-5, Guard 7-8
 - Flee combat
 
-**Professional (Threat 1-2):**
+**Trained Professionals:**
 - Guards, soldiers, skilled workers
 - Basic to moderate training
-- Standard enemy statistics
+- Vitality 8-12, Guard 10-12
 - Fight if required by job
 
-**Expert (Threat 3):**
-- Veterans, master craftspeople, minor nobles
+**Veterans:**
+- Experienced warriors, master craftspeople, minor nobles
 - Extensive training or experience
-- Elite enemy statistics
+- Vitality 14-20, Guard 12-14
 - Competent in specialty
 
-**Legendary (Threat 4):**
+**Legendary Figures:**
 - Guild masters, archmages, generals
 - World-class in their field
-- Legendary adversary statistics
+- Vitality 25+, Guard 15-18
 - Known by reputation
 
-### By Party Level
+### By Campaign Stage
 
-NPCs should scale with party:
+NPCs encountered scale naturally with story:
 
-**Milestone 1-2:**
-- Most NPCs Threat 0-1
-- Rare Threat 2-3 experts
-- Legendary NPCs are distant figures
+**Early Sessions:**
+- Most NPCs are commoners or low-level professionals
+- Veterans are rare and respected
+- Legendary figures are distant, rumored
 
-**Milestone 3-4:**
-- Common Threat 1-2 NPCs
-- Frequent Threat 3 experts
-- Occasional Threat 4 legends
+**Mid-Campaign:**
+- Professional NPCs are common contacts
+- Veterans become peers and rivals
+- Legendary figures may take notice
 
-**Milestone 5+:**
-- Threat 2-3 common in party's circles
-- Threat 4 peers and rivals
+**Late Campaign:**
+- Veterans are common in party's circles
+- Legendary figures become allies and enemies
 - Party becomes legendary themselves
 
 ---

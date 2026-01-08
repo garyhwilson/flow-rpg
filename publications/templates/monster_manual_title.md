@@ -8,13 +8,13 @@
 
 ### From Humble Goblins to Ancient Dragons
 
-Populate your world with memorable creatures and compelling NPCs. This manual provides Game Masters with everything needed to create engaging encounters—from simple minions to legendary adversaries that will define your campaign.
+Populate your world with memorable creatures and compelling NPCs. This manual provides Game Masters with everything needed to create engaging encounters - named adversaries with personalities and motivations who will enrich your campaign.
 
 **Inside This Manual:**
 
-- **21 Complete Stat Blocks** across 4 threat levels
+- **Named Adversaries** with motivations and tactics
 - **Comprehensive NPC Templates** for every campaign need
-- **Encounter Building Guidelines** for balanced challenges
+- **Guidance for Creating Your Own** adversaries that fit your story
 - **Quick Reference Tables** for easy table use
 - **Tactical Notes** to bring creatures to life
 

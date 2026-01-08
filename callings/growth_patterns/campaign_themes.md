@@ -54,7 +54,7 @@ Guardian-centered campaigns generate Flow through successfully protecting others
 #### Campaign Concepts
 - **Tournament Circuit:** Rising through competitive rankings toward championship
 - **Legendary Quests:** Completing famous challenges to prove exceptional ability
-- **Elite Organizations:** Earning membership in prestigious guilds or orders
+- **Prestigious Organizations:** Earning membership in renowned guilds or orders
 - **Legacy Builders:** Creating lasting achievements that will outlive the heroes
 
 #### Key Elements

@@ -60,7 +60,7 @@ sections:
           - "GM Considerations"
           - "Balancing Mixed Parties"
 
-      - section_header: "The Six Core Archetypes"
+      - section_header: "The Seven Core Archetypes"
 
       - file: "archetypes/archetype_types/fighter.md"
       - file: "archetypes/archetype_types/wizard.md"
@@ -68,6 +68,7 @@ sections:
       - file: "archetypes/archetype_types/rogue.md"
       - file: "archetypes/archetype_types/ranger.md"
       - file: "archetypes/archetype_types/paladin.md"
+      - file: "archetypes/archetype_types/bard.md"
 
   # ===== SPECIES =====
   - title: "Part III: Species - Your Character's Heritage"

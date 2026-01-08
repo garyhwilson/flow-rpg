@@ -26,21 +26,25 @@ This document tracks ongoing design decisions, outstanding issues, and developme
 ### Completed Initiatives
 
 1. **✓ Complete Archetype Modularization**
+
    - ✓ Create all archetype files following established template
    - ✓ Ensure consistent structure across all archetype documentation
 
 2. **✓ Complete Species Modularization**
+
    - ✓ Apply same modular structure to species documentation
    - ✓ Maintain consistent cross-referencing with archetypes and callings
    - ✓ Create root files (introduction, GM guidelines, etc.)
    - ✓ Develop individual species files (human, elf, dwarf, halfling)
 
 3. **✓ Complete Equipment Modularization**
+
    - ✓ Develop structured documentation for equipment systems
    - ✓ Create modular equipment structure (weapons, armor, adventuring gear, magical items)
    - ✓ Add quick reference guide
 
 4. **✓ Complete Spell System Modularization**
+
    - ✓ Create modular structure for spell documentation
    - ✓ Organize spells by tier (cantrips, standard, advanced, master)
    - ✓ Develop spell root files (introduction, GM guidelines, system integration)
@@ -48,6 +52,7 @@ This document tracks ongoing design decisions, outstanding issues, and developme
    - ✓ Add spell quick reference guide
 
 5. **✓ Establish Publication System**
+
    - ✓ Create publication directory structure
    - ✓ Develop Python assembly script (assemble_book.py)
    - ✓ Create YAML manifest system for book definitions
@@ -57,6 +62,7 @@ This document tracks ongoing design decisions, outstanding issues, and developme
    - ✓ Document publication workflow
 
 6. **✓ Complete Monster & NPC System**
+
    - ✓ Create monsters directory structure
    - ✓ Develop threat level system (1-4: Henchmen, Standard, Champions, Legendary)
    - ✓ Create monster root files (introduction, GM guidelines, system integration, quick reference)
@@ -68,17 +74,20 @@ This document tracks ongoing design decisions, outstanding issues, and developme
    - ✓ Integrate with Flow economy and PC systems
 
 7. **✓ YAML System Conversion**
+
    - ✓ Convert all Markdown to structured YAML
    - ✓ Establish YAML schema for all game components
    - ✓ Create Python documentation generator
    - ✓ Maintain dual YAML/Markdown workflow
 
 8. **✓ Playtesting Fixes - Phase 1 (Critical Fixes)**
+
    - ✓ Champion action economy (2 attacks max to prevent TPK)
    - ✓ Deepen Expertise timing (requires 3 consecutive minor milestones)
    - ✓ Documentation corrections (Guard formula, skill tier modifiers)
 
 9. **✓ Playtesting Fixes - Phase 2 (Balance Tuning)**
+
    - ✓ Flow generation limit (once per round)
    - ✓ High Flow bonus removal (flat +6 maximum)
    - ✓ TN scaling guidance (TN 10-12 for late game challenges)
@@ -94,6 +103,7 @@ This document tracks ongoing design decisions, outstanding issues, and developme
 ### Balance Concerns
 
 - **Will Casting as Emergency Button**: Ability to cast at negative Flow may undermine Flow management
+
   - _Potential Solution_: Add consequences or limitations to Will casting at negative Flow
   - _Status_: Needs playtesting with new Flow generation rules (once per round limit now in place)
 
@@ -109,22 +119,27 @@ This document tracks ongoing design decisions, outstanding issues, and developme
 Critical gameplay systems not yet documented:
 
 - **Multiclassing Rules**: No system for characters training in multiple archetypes
+
   - _Status_: Not started
   - _Priority_: High (common player request)
 
 - **Crafting System**: Craft skill exists but no crafting rules
+
   - _Status_: Not started
   - _Priority_: Medium
 
 - **Social Conflict Resolution**: Social skills exist but no social conflict mechanics
+
   - _Status_: Not started
   - _Priority_: Medium (three social skills need framework)
 
 - **Exploration Procedures**: Survival/Investigate skills need exploration framework
+
   - _Status_: Not started
   - _Priority_: Low (can use general scene resolution)
 
 - **Rest and Recovery Mechanics**: How do characters recover Flow, Guard, and Vitality?
+
   - _Status_: Partially documented, needs expansion
   - _Priority_: High (fundamental to gameplay)
 
@@ -135,6 +150,7 @@ Critical gameplay systems not yet documented:
 ### System Integration Questions
 
 - **Magic Access Requirement**: How does the Mind + Awareness ≥ +2 requirement affect archetypes like Clerics?
+
   - _Investigation Needed_: Review character creation examples to ensure viable paths
 
 - **Stance/Calling Interaction**: Some Calling benefits may work too well with certain stances
@@ -143,6 +159,7 @@ Critical gameplay systems not yet documented:
 ### Documentation Needs
 
 - **Quick Start Rules**: Need condensed version for new players
+
   - _Status_: Not started
 
 - **GM Screen Information**: Identify key references for quick lookup
@@ -153,18 +170,21 @@ Critical gameplay systems not yet documented:
 ### Playtesting Phase 1-3 Fixes (11/14/25)
 
 **Phase 1 - Critical Fixes:**
+
 - ✓ **Champion Action Economy** (advancement.yaml:752-763): Limited to 2 attacks per round to prevent TPK
 - ✓ **Deepen Expertise Timing** (advancement.yaml:609-616): Now requires 3 consecutive minor milestones (was ambiguous)
 - ✓ **Guard Formula Correction** (core_rules.yaml:412-420): Documented as `12 + max(Might, Grace, Will)` (not `8 + attribute + milestones`)
 - ✓ **Skill Tier Modifiers** (core_rules.yaml:372-381): Clarified Professional = +1 (not +2), Expert = +2
 
 **Phase 2 - Balance Tuning:**
+
 - ✓ **Flow Generation Limit** (core_rules.yaml:458-465): Maximum once per round to prevent runaway economy
 - ✓ **High Flow Bonus Removal** (core_rules.yaml:455-456): Removed +2 bonus at 6+ Flow, now flat +6 maximum
 - ✓ **TN Scaling Guidance** (gm_tools.yaml:64-110): Added guidance for TN 10-12 challenges at late game (+5 cap sweet spot)
 - ✓ **GM Flow Examples** (gm_tools.yaml:34-63): Added complete worked examples for spending GM Flow pool
 
 **Phase 3 - Accessibility & Polish:**
+
 - ✓ **Simplified Rules** (examples.yaml:24-93): Created quick-start variant for first 1-2 sessions
 - ✓ **Default Build Paths** (advancement.yaml:862-982): Added 6 pre-planned advancement paths to reduce option paralysis
 - ✓ **Optional GM Flow** (gm_tools.yaml:162-200): Made GM Flow pool explicitly optional with guidance for when to skip it
@@ -212,6 +232,7 @@ These core principles should guide all design decisions:
    - Intuitive resource that mirrors character momentum
 
 4. **Player Agency**
+
    - Meaningful choices in character building
    - Tactical decisions in combat
    - Narrative permissions granting special capabilities
@@ -235,6 +256,7 @@ Flow RPG is a traditional tabletop roleplaying game. Every design decision, piec
 Video game design patterns are fundamentally incompatible with TTRPG play and must be actively rejected:
 
 **Forbidden Video Game Patterns:**
+
 - **Formulaic stat scaling** - e.g., "Guard = 8 + milestones × 2"
 - **Enemy types/tiers as units** - Treating adversaries as interchangeable stat blocks
 - **Squad composition formulas** - e.g., "1 Champion + 4 Henchmen = Medium difficulty"
@@ -244,6 +266,7 @@ Video game design patterns are fundamentally incompatible with TTRPG play and mu
 - **Stat blocks without character** - Enemies as numbers, not people
 
 **Why These Patterns Are Poison:**
+
 - MMO patterns assume computer-controlled enemies with scripted AI
 - TTRPGs have intelligent GMs making dynamic narrative decisions
 - Video games require mathematical balance for fair matchmaking
@@ -254,18 +277,21 @@ Video game design patterns are fundamentally incompatible with TTRPG play and mu
 ### Required TTRPG Approach
 
 **Every adversary is a character with a name and motivation:**
+
 - Don't create "a Champion" - create "Captain Vex, who wants revenge for his fallen squad"
 - Stats serve the story, never the other way around
 - GMs create specific individuals, not fill encounter slots
 - Personality and motivation come BEFORE mechanics
 
 **Narrative-driven opposition:**
+
 - Scene difficulty emerges from circumstances, not stat calculations
 - Consequences and stakes matter more than hit points
 - Social and environmental challenges are as important as combat
 - Story determines what's appropriate, not balance formulas
 
 **GM judgment over rigid rules:**
+
 - Provide guidance ranges and examples, not formulas
 - Trust GMs to create what feels right for their story
 - Emphasize adaptation to table needs
@@ -273,9 +299,14 @@ Video game design patterns are fundamentally incompatible with TTRPG play and mu
 
 ### Forbidden Terminology (Comprehensive List)
 
-**NEVER use these video game terms:**
+**Never use ANY video game terms.**
+**Never use ANY video game language.**
+**Never use ANY video game thinking or mechanics.**
+
+**Partial list of UNACCEPTAGBLE video game terms:**
 
 Combat & Enemies:
+
 - "Boss" → Use: legendary adversary, major villain, archvillain
 - "Elite" → Use: champion, veteran, master
 - "Minion" → Use: henchman, lesser enemy, follower
@@ -287,12 +318,14 @@ Combat & Enemies:
 - "Aggro" → Use: draw attention, threaten, engage
 
 Roles & Classes:
+
 - "Tank" → Use: defender, guardian, protector
 - "DPS" → Use: damage dealer, striker, attacker
 - "Healer" → Use: support, medic (if modern), cleric
 - "Support" → Use: ally, helper (context-dependent)
 
 Abilities & Effects:
+
 - "AOE" → Use: area effect, zone, burst
 - "Proc" → Use: trigger, activate, occurs
 - "Cooldown" → Use: recharge, rest required, once per scene
@@ -301,6 +334,7 @@ Abilities & Effects:
 - "DOT" (damage over time) → Use: ongoing damage, poison, burning
 
 Rewards & Progression:
+
 - "Loot" → Use: treasure, rewards, spoils
 - "Drop" → Use: carried, possesses
 - "XP/EXP" → Use: advancement, growth (we use milestones)
@@ -308,6 +342,7 @@ Rewards & Progression:
 - "Farming" → Never applicable in TTRPG
 
 Encounter Design:
+
 - "Encounter" → Use: conflict, scene, confrontation
 - "Wave" → Use: reinforcements, second group
 - "Phase" → Use: the enemy changes tactics, adapts
@@ -319,14 +354,17 @@ Encounter Design:
 **Before creating or modifying any content, ask:**
 
 1. **Does this sound like a tabletop game or World of Warcraft?**
+
    - If it sounds like an MMO wiki page, rewrite it
    - Would this appear in D&D, Fate, or Powered by the Apocalypse?
 
 2. **Are we describing characters or stat blocks?**
+
    - Every significant enemy needs a name and motivation
    - Personality should be clear even in mechanical descriptions
 
 3. **Is the GM empowered to make narrative choices?**
+
    - Are we providing guidance or rigid formulas?
    - Can the GM adapt to their specific story?
    - Is player creativity supported or constrained?
@@ -338,6 +376,7 @@ Encounter Design:
 **Red Flags vs Green Flags:**
 
 Red Flags (Video Game):
+
 - Mathematical scaling formulas
 - "Opposition types" and "squad composition"
 - Role-based character design
@@ -346,6 +385,7 @@ Red Flags (Video Game):
 - Treating enemies as interchangeable units
 
 Green Flags (TTRPG):
+
 - Named characters with clear motivations
 - Situational guidance: "A squad typically has..."
 - Story-first design: "What makes sense for this villain?"
@@ -356,6 +396,7 @@ Green Flags (TTRPG):
 ### Content Audit Triggers
 
 **These situations require extra vigilance:**
+
 - Adding new enemy types or adversary guidance
 - Creating combat abilities or tactical options
 - Writing GM guidance for running conflicts
@@ -364,6 +405,7 @@ Green Flags (TTRPG):
 - Writing advancement or progression systems
 
 **When in doubt:**
+
 1. Check CLAUDE.md "Design Philosophy: TTRPG Not Video Game" section
 2. Search the content for forbidden terms
 3. Read it aloud - does it sound like fantasy fiction or a game wiki?
@@ -382,19 +424,23 @@ Traditional TTRPGs (D&D Monster Manual, Pathfinder Bestiary) show concrete examp
 When creating or reviewing documentation:
 
 1. **✓ Examples come before theory**
+
    - Show 5-7 named, concrete examples first
    - Add "Building Your Own" guidance section after
    - Let patterns emerge from studying examples
 
 2. **✗ No category-first organization**
+
    - Not: "Opposition Patterns" with examples under each category
    - Yes: Captain Sera Blackthorn, Red Cloak Gang, etc., then guidance
 
 3. **✗ No taxonomic section headers**
+
    - Red flags: "Pattern", "Category", "Type", "Classification", "Tier", "Level"
    - Better: "Creating [X]", "Available [X]", or named example headings
 
 4. **✗ No numbered threat/tier systems**
+
    - Not: "Threat 1: Henchmen", "Tier 1-5 Challenges"
    - Yes: Descriptive language in context, natural groupings
 
@@ -406,6 +452,7 @@ When creating or reviewing documentation:
 **Recent Case Studies:**
 
 These issues were just fixed - avoid similar patterns:
+
 - **"Paragon Paths"** - D&D 4e terminology, formal categorization
 - **"Opposition Patterns"** - Video game taxonomy, categories-first
 - **"Threat Levels"** - MMO numbered system (Threat 1-4)
@@ -418,6 +465,7 @@ These issues were just fixed - avoid similar patterns:
 **YAML Documentation Standards:**
 
 When working with YAML source files:
+
 - **Always validate** after making changes: `python scripts/generate_docs.py --all`
 - **Regenerate all templates** when YAML changes affect multiple files
 - **Check cross-references** between YAML and generated markdown
@@ -427,6 +475,7 @@ When working with YAML source files:
 **Language Audit Requirements:**
 
 When reviewing or modifying content:
+
 - **Search comprehensively** for video game terminology across all files
 - **Check YAML first** - it's the source of truth for generated content
 - **Verify generated docs** after cleaning up YAML
@@ -436,6 +485,7 @@ When reviewing or modifying content:
 **Documentation Structure Audit:**
 
 When creating templates or documentation:
+
 - **Check organization pattern** - examples first or categories first?
 - **Search for taxonomic headers** - "Pattern", "Category", "Type", etc.
 - **Verify presentation order** - concrete before abstract?
@@ -525,12 +575,14 @@ flow-rpg/
 The project now includes a complete publication assembly system:
 
 **To Assemble a Book:**
+
 ```bash
 # From project root
 python scripts/assemble_book.py publications/manifests/core_rulebook.yaml
 ```
 
 **System Features:**
+
 - YAML manifests define book structure
 - Python script automatically assembles from modular sources
 - Output to `publications/assembled/` (gitignored)
@@ -540,6 +592,7 @@ python scripts/assemble_book.py publications/manifests/core_rulebook.yaml
 **See:** `publications/README.md` for detailed documentation
 
 **Current Publications (All Ready):**
+
 - **Core Rulebook** (775 KB) - Complete game
 - **Player's Guide** (683 KB) - Player-facing content only
 - **Game Master's Guide** (279 KB) - GM-facing content only
@@ -547,6 +600,7 @@ python scripts/assemble_book.py publications/manifests/core_rulebook.yaml
 - **Quick Reference** (84 KB) - Printable at-table reference
 
 **Generate All Publications:**
+
 ```bash
 python scripts/assemble_book.py publications/manifests/core_rulebook.yaml
 python scripts/assemble_book.py publications/manifests/players_guide.yaml
@@ -560,11 +614,13 @@ python scripts/assemble_book.py publications/manifests/quick_reference.yaml
 The project is ready for version control with Git and GitHub:
 
 **Setup Instructions:**
+
 - Complete setup guide: `GIT_SETUP.md`
 - Repository files created: `README.md`, `LICENSE.md`, `CONTRIBUTING.md`
 - `.gitignore` configured to exclude assembled publications
 
 **Daily Workflow:**
+
 ```bash
 # Review changes
 git status
@@ -579,12 +635,14 @@ git push
 ```
 
 **Commit Message Guidelines:**
+
 - Use clear, specific descriptions
 - Explain why, not just what
 - Group related changes together
 - Reference issues when applicable
 
 **Example Commit Messages:**
+
 ```bash
 # Good
 git commit -m "Add Monk archetype with ki point system"
@@ -597,11 +655,13 @@ git commit -m "Fixed stuff"
 ```
 
 **Repository Structure:**
+
 - `main` branch: Stable, tested content
 - Feature branches: Experimental changes (optional)
 - Releases: Major milestones (v0.1, v1.0, etc.)
 
 **GitHub Features:**
+
 - **Issues:** Track bugs, balance concerns, design questions
 - **Projects:** Organize development priorities
 - **Discussions:** Community Q&A and feedback
@@ -618,30 +678,35 @@ These guidelines help Claude actively support proper Git practices during work s
 I should remind you to review and commit changes when:
 
 **1. After Completing a Discrete Task**
+
 - Finished adding a new archetype/spell/calling
 - Completed a section of documentation
 - Fixed a specific bug or balance issue
 - Finished a set of related edits
 
 **2. Before Starting Major Changes**
+
 - About to refactor a large system
 - Planning to reorganize files
 - Starting experimental changes
 - Before trying alternative approaches
 
 **3. After Significant Milestones**
+
 - Completed a full system (e.g., all spells modularized)
 - Finished a publication manifest
 - Completed a session's work
 - Before switching focus to different system
 
 **4. Safety Checkpoints**
+
 - Before making potentially destructive edits
 - After creating many new files (rough guideline: 5-10+ files)
 - When work session is ending
 - Before long breaks in work
 
 **When NOT to Prompt:**
+
 - In the middle of a multi-step task
 - During active brainstorming/planning
 - When user explicitly says "don't commit yet"
@@ -652,17 +717,20 @@ I should remind you to review and commit changes when:
 When prompting for a commit, I should:
 
 **1. Summarize What Changed**
+
 - List files modified/created
 - Describe the changes briefly
 - Group related changes
 
 **2. Propose Commit Message**
+
 - Suggest specific, descriptive message
 - Follow conventional commits format when appropriate
 - Include "why" not just "what"
 - Use imperative mood ("Add" not "Added")
 
 **3. Example Format:**
+
 ```
 I've completed [X]. Ready to commit?
 
@@ -695,6 +763,7 @@ If issues found, fix them before suggesting commit.
 ### Git Workflow Rules for Claude
 
 **1. Always Suggest Review Commands First**
+
 ```bash
 # Before commit, suggest these
 git status
@@ -702,6 +771,7 @@ git diff
 ```
 
 **2. Never Suggest These Commands** (unless user explicitly requests):
+
 - `git push --force` (destructive)
 - `git reset --hard` (destructive)
 - `git clean -fd` (destructive)
@@ -709,6 +779,7 @@ git diff
 - `git rebase` on main branch (risky)
 
 **3. Always Suggest Proper Sequence**:
+
 ```bash
 # Review
 git status
@@ -723,6 +794,7 @@ git push
 ```
 
 **4. Warn About These Situations**:
+
 - Committing without reviewing changes first
 - Very large commits (>20 files) - suggest breaking up
 - Committing assembled publications (should be gitignored)
@@ -760,6 +832,7 @@ git commit -m "Changes"
 ```
 
 **If user provides vague message, suggest improvement:**
+
 ```
 That message is a bit vague. How about:
 "Fix Fireball damage calculation in advanced_spells.md"
@@ -770,20 +843,24 @@ This makes it clear what changed and why when reviewing history.
 ### Session Management
 
 **At Session Start:**
+
 ```bash
 # Check for uncommitted changes
 git status
 ```
+
 - If uncommitted changes exist, ask if user wants to commit them first
 - If on wrong branch, notify user
 
 **During Session:**
+
 - Commit after each completed task (not mid-task)
 - Batch small related changes together
 - Don't interrupt flow with too-frequent commit prompts
 - Group related file changes into single commit
 
 **At Session End:**
+
 ```
 We've completed [list of tasks]. Before ending:
 
@@ -801,21 +878,25 @@ Always remind to commit any uncommitted work at session end.
 I should recommend creating a branch for:
 
 **1. Experimental Changes**
+
 - Testing major balance changes
 - Trying alternative system designs
 - Prototyping new mechanics
 
 **2. Large Refactors**
+
 - Restructuring multiple files
 - Renaming systems
 - Major reorganization
 
 **3. Optional Content**
+
 - New archetypes being playtested
 - Alternative spell lists
 - Variant rules
 
 **Suggested Workflow:**
+
 ```bash
 # Create feature branch
 git checkout -b feature/monk-archetype
@@ -834,6 +915,7 @@ git branch -d feature/monk-archetype
 ```
 
 **Keep on Main Branch:**
+
 - Bug fixes
 - Typo corrections
 - Balance tweaks
@@ -845,21 +927,25 @@ git branch -d feature/monk-archetype
 I should actively warn about:
 
 **1. Large File Commits**
+
 - If assembled books aren't gitignored
 - Binary files being added accidentally
 - Very large documents (>1MB)
 
 **2. Sensitive Information**
+
 - Email addresses in content (use placeholders)
 - Personal information
 - API keys or tokens (shouldn't be in this project, but watch for it)
 
 **3. File Organization**
+
 - Files in wrong directories
 - Inconsistent naming conventions
 - Missing related updates
 
 **4. Commit Quality**
+
 - Mixing multiple unrelated changes
 - Incomplete features being committed
 - Broken cross-references
@@ -867,6 +953,7 @@ I should actively warn about:
 ### Example Interaction
 
 **Good Flow:**
+
 ```
 User: "Let's add a Monk archetype"
 Claude: [Creates monk.md with complete documentation]
@@ -889,6 +976,7 @@ Ready to commit, or would you like to review the changes first?"
 ```
 
 **Preventing Problems:**
+
 ```
 User: "Commit these changes"
 Claude: "Before committing, I notice:
@@ -901,16 +989,19 @@ Let me verify the .gitignore is working correctly first."
 ### Commit Frequency Guidelines
 
 **Good Rhythm:**
+
 - 1 commit per completed task/feature
 - 3-5 commits per work session (rough guideline)
 - Commit before ending session (always)
 
 **Too Frequent:**
+
 - Committing every file edit
 - Committing incomplete work
 - Micro-commits for trivial changes
 
 **Too Infrequent:**
+
 - Working for hours without commits
 - Mixing many unrelated changes
 - Risk losing work if something goes wrong
@@ -931,17 +1022,20 @@ These guidelines ensure continuity and proper documentation across development s
 ### At Session Start
 
 **1. Review Current State**
+
 ```bash
 # Check for uncommitted changes
 git status
 ```
 
 **2. Review Instructions Document**
+
 - Read any new entries in Outstanding Design Issues
 - Check Active Development Priorities
 - Review most recent Session Notes
 
 **3. Create Todo List for Session**
+
 - Use TodoWrite to track major tasks for this session
 - Always include "Update .claude/instructions.md session notes" as final task
 - Mark tasks in_progress as you work on them
@@ -950,18 +1044,21 @@ git status
 ### During Session
 
 **1. Task Management**
+
 - Use TodoWrite for complex, multi-step work
 - Keep exactly one task in_progress at a time
 - Mark tasks completed immediately after finishing
 - Don't batch completions
 
 **2. Documentation**
+
 - Note any new design issues discovered
 - Track important decisions made
 - Document balance concerns that arise
 - Capture new guidelines or patterns
 
 **3. Git Workflow**
+
 - Provide git commands after completing discrete tasks
 - Suggest commits before major changes
 - Never execute git commands unless explicitly requested
@@ -970,6 +1067,7 @@ git status
 ### At Session End (MANDATORY)
 
 **1. Update Session Notes**
+
 - **ALWAYS add new session entry to this document**
 - Include date and session identifier
 - List all major work completed
@@ -978,12 +1076,14 @@ git status
 - Update project status if milestones completed
 
 **2. Verify Completeness**
+
 - All todos marked as completed
 - No placeholder text left in files
 - Cross-references are valid
 - Files in correct locations
 
 **3. Provide Git Commands**
+
 ```bash
 # Review all changes
 git status
@@ -998,6 +1098,7 @@ git push
 ```
 
 **4. Session Notes Template**
+
 ```markdown
 _MM/DD/YY Session (Identifier)_:
 
@@ -1011,17 +1112,20 @@ _MM/DD/YY Session (Identifier)_:
 ### Common Failure Modes to Avoid
 
 **Forgetting Session Notes:**
+
 - If session ends without updating Session Notes, this is a FAILURE
 - Session notes are MANDATORY, not optional
 - Use TodoWrite to track this task throughout session
 
 **Incomplete Git Workflow:**
+
 - Always provide git commands at session end
 - Review what changed before committing
 - Use descriptive commit messages
 - Never leave uncommitted work without explicit user approval
 
 **Poor Task Tracking:**
+
 - Forgetting to mark todos as completed
 - Leaving todos in_progress when done
 - Not using TodoWrite for complex work
@@ -1030,6 +1134,7 @@ _MM/DD/YY Session (Identifier)_:
 ### Success Criteria
 
 A successful session includes:
+
 - ✓ New session notes added to instructions.md
 - ✓ All todos marked completed
 - ✓ Git commands provided for uncommitted changes

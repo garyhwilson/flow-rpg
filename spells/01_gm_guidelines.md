@@ -131,7 +131,7 @@ Some spell effects "maintain for scene." Guidelines:
 When designing enemy spellcasters:
 
 1. **Choose Primary Attribute** - Pick one or two attributes they prefer
-2. **Select Appropriate Spells** - Match spell tier to enemy threat level
+2. **Select Appropriate Spells** - Match spell power to the adversary's capability
 3. **Consider Flow Economy** - Enemy casters need Flow too
 4. **Tactical Behavior** - Show smart casting choices to teach players
 

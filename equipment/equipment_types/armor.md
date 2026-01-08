@@ -140,7 +140,7 @@ Heavy armor provides maximum damage reduction through comprehensive metal protec
 
 #### Tactical Implications
 
-Heavy armor creates dedicated tanks capable of absorbing tremendous punishment while maintaining battlefield presence. The -4 damage reduction means many attacks deal minimal or no damage, making heavy armor wearers extraordinarily difficult to kill through conventional attacks.
+Heavy armor creates dedicated defenders capable of absorbing tremendous punishment while maintaining battlefield presence. The -4 damage reduction means many attacks deal minimal or no damage, making heavy armor wearers extraordinarily difficult to kill through conventional attacks.
 
 The -2 Grace penalty significantly impacts Grace-based actions, making heavy armor wearers reliant on Might for combat effectiveness. Combined with the inability to use Aggressive stance, heavy armor fighters typically employ Defensive or Balanced stances, controlling space and protecting allies rather than maximizing personal damage output.
 
@@ -170,7 +170,7 @@ While not mechanically required, heavy armor practically demands high Might. The
 
 #### Character Archetypes
 
-**Defensive Fighters** specialize in heavy armor, creating nearly unkillable tanks.
+**Defensive Fighters** specialize in heavy armor, creating nearly unkillable bulwarks.
 
 **Guardian-focused Paladins** might wear heavy armor when protection matters more than spellcasting.
 
@@ -213,7 +213,7 @@ Large shields offer substantial Guard improvement with minor penalties. The Grac
 
 Tower shields provide exceptional protection and allow shielding adjacent allies, but the severe Grace penalties make them specialist equipment for dedicated defensive characters.
 
-**Best For**: Pure tanks, dedicated protectors, formation fighters, siege defense
+**Best For**: Dedicated defenders, protectors, formation fighters, siege defense
 
 ## Armor and Species Interactions
 
@@ -420,7 +420,7 @@ While Flow doesn't track detailed armor condition, extended adventuring without 
 Consider these factors when selecting armor:
 
 1. **Primary Attributes**: High Grace suggests lighter armor, high Might enables heavier armor
-2. **Combat Role**: Tank, striker, support, or caster
+2. **Combat Style**: Defensive, aggressive, versatile, or spellcasting focus
 3. **Spellcasting Needs**: Arcane casters need light/no armor, divine casters can use medium
 4. **Stance Preference**: Aggressive stance incompatible with heavy armor
 5. **Species**: Elves gain casting benefits, dwarves excel in heavy armor, halflings favor light

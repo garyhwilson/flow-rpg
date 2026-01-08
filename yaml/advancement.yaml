@@ -593,27 +593,6 @@ campaign_progression:
       session_5: "10-16 (if choosing Guard boosts)"
       session_10: "10-19 (if maximizing defense)"
       note: "No automatic scaling with milestones"
-  
-  enemy_scaling:
-    principle: "Enemies scale with party milestone count"
-    reasoning: "PCs should feel growth while maintaining challenge"
-    campaign_note: "Designed for 0-12 milestone range (8-12 session campaigns)"
-
-    henchman_total:
-      note: "Combined Guard + Vitality"
-      formula: "Guard 7 + milestones, Vitality 5 + milestones"
-      milestone_0_2: 12
-      milestone_3_5: 16
-      milestone_6_8: 20
-      milestone_9_plus: 24
-
-    elite_total:
-      note: "Combined Guard + Vitality"
-      formula: "Guard 40 + (milestones × 8), Vitality 70 + (milestones × 14)"
-      milestone_0_2: 110
-      milestone_3_5: 154
-      milestone_6_8: 198
-      milestone_9_plus: 242
 
 # ============================================
 # ADVANCEMENT VARIANTS

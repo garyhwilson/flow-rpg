@@ -1,0 +1,148 @@
+{#
+================================================================================
+Example Jinja2 Template
+================================================================================
+This template demonstrates common patterns for generating TTRPG documentation
+from YAML data.
+
+Usage:
+    python scripts/generate_docs.py --example
+
+Variables available (passed from generate_docs.py):
+    - title: string
+    - version: string
+    - system: dict (contents of example_system.yaml)
+================================================================================
+#}
+
+# {{ title }}
+
+*Version {{ version }}*
+
+---
+
+{# ============================================================================
+   PATTERN: Iterating over a dictionary
+   ============================================================================ #}
+{% if system.attributes is defined %}
+## Attributes
+
+{% for category, attrs in system.attributes.items() %}
+### {{ category | title }}
+
+{% for attr_key, attr in attrs.items() %}
+**{{ attr.name }}** ({{ attr.abbreviation }})
+
+{{ attr.description }}
+
+{% if attr.governs %}
+*Governs:*
+{% for item in attr.governs %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+{% endfor %}
+{% endif %}
+
+{# ============================================================================
+   PATTERN: Derived values with formulas
+   ============================================================================ #}
+{% if system.derived_values is defined %}
+## Derived Values
+
+| Stat | Formula | Description |
+|------|---------|-------------|
+{% for key, value in system.derived_values.items() %}
+| {{ key | title }} | {{ value.formula }} | {{ value.description }} |
+{% endfor %}
+
+{% endif %}
+
+{# ============================================================================
+   PATTERN: Character options (species, classes, etc.)
+   ============================================================================ #}
+{% if system.species is defined %}
+## Species
+
+{% for species_key, species in system.species.items() %}
+### {{ species.name }}
+
+{{ species.description }}
+
+**Attribute Bonus:** {{ species.attribute_bonus }}
+
+**Special Ability:** {{ species.special_ability.name }} - {{ species.special_ability.effect }}
+
+**Size:** {{ species.size }} | **Lifespan:** {{ species.lifespan }}
+
+---
+
+{% endfor %}
+{% endif %}
+
+{# ============================================================================
+   PATTERN: Tiered content (spells, abilities, etc.)
+   ============================================================================ #}
+{% if system.spells is defined %}
+## Spells
+
+{% for tier_key, tier in system.spells.items() %}
+### {{ tier_key | replace('_', ' ') | title }}
+
+{{ tier.description }}
+
+**Cost:** {{ tier.cost }}
+{% if tier.prerequisite %}
+**Prerequisite:** {{ tier.prerequisite }}
+{% endif %}
+
+{% for spell in tier.spells %}
+**{{ spell.name }}**
+- **Effect:** {{ spell.effect }}
+- **Duration:** {{ spell.duration }}
+
+{% endfor %}
+{% endfor %}
+{% endif %}
+
+{# ============================================================================
+   PATTERN: Equipment tables
+   ============================================================================ #}
+{% if system.weapons is defined %}
+## Weapons
+
+{% for category, weapons in system.weapons.items() %}
+### {{ category | title }} Weapons
+
+| Name | Damage | Properties | Cost | Weight |
+|------|--------|------------|------|--------|
+{% for weapon in weapons %}
+| {{ weapon.name }} | {{ weapon.damage }} | {{ weapon.properties | join(', ') }} | {{ weapon.cost }} | {{ weapon.weight }} |
+{% endfor %}
+
+{% endfor %}
+{% endif %}
+
+{# ============================================================================
+   PATTERN: Random tables
+   ============================================================================ #}
+{% if system.random_tables is defined %}
+## Random Tables
+
+{% for table_key, table in system.random_tables.items() %}
+### {{ table_key | replace('_', ' ') | title }}
+
+Roll {{ table.die }}:
+
+{% for roll, result in table.entries.items() %}
+| {{ roll }} | {{ result }} |
+{% endfor %}
+
+{% endfor %}
+{% endif %}
+
+---
+
+*Generated from YAML data*

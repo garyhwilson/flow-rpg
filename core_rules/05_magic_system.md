@@ -8,14 +8,17 @@ In this world, magic is fundamentally tied to the Flow that permeates reality. S
 
 ### Magic Access Requirements
 
-Not everyone can cast spells. To access magic, a character must have:
+Not everyone can cast spells. Access depends on your magical tradition:
 
-- **Mind + Awareness ≥ +2** total
-- This represents the minimum mental acuity and perceptual awareness needed to sense and manipulate magical Flow
-- Approximately 45% of the population meets this requirement
-- Even Wizards, Clerics, and Bards must meet this requirement!
+**Archetype Override:** If your archetype provides the Sorcery skill (Wizard, Cleric, Paladin, Bard), you can cast spells regardless of attribute requirements.
 
-This requirement creates meaningful attribute choices without being overly restrictive. Failing to meet the requirement doesn't mean you can never cast—you can increase these attributes through milestones.
+**Attribute Requirements by Tradition:**
+- **Arcane (Wizard's Way):** Mind + Awareness ≥ +2 (intellectual magical study)
+- **Divine (Cleric/Paladin's Way):** Will + Presence ≥ +2 (faith-based channeling)
+- **Primal (Ranger/Druid's Way):** Awareness + Will ≥ +2 (natural world connection)
+- **Performance (Bard's Way):** Presence + Grace ≥ +2 (artistic magical expression)
+
+These requirements create meaningful attribute choices without being overly restrictive. Failing to meet the requirement doesn't mean you can never cast—you can increase attributes through milestones.
 
 ### Mage Sight (Innate to All Casters)
 
@@ -83,30 +86,39 @@ When you roll 6 or less on a casting roll:
 
 ---
 
-## Spell Categories
+## Spell Tiers
 
-Spells are divided into three categories based on power level and Flow cost:
+Spells are divided into five tiers based on power level and Flow cost:
 
-### Cantrips (0 Flow)
-- Basic magical effects that require no Flow expenditure
-- Available to all casters regardless of skill
-- Limited but useful effects
-- Examples: Spark, Light, Mage Armor
+### Tier 0: Cantrips (0 Flow)
+- Simple magics requiring no Flow investment
+- Minor effects available to all casters
+- Free magical pressure without Flow cost
+- Examples: Spark, Light, Mage Armor, Prestidigitation
 
-### Standard Spells (-1 Flow)
-- Common magical effects that cost 1 Flow
-- Bread and butter of magical combat and utility
+### Tier 1: Basic Spells (0 Flow)
+- Fundamental spells, Flow neutral
+- Standard combat and utility effects
+- Sustained casting possible without Flow management
 - Examples: Bolt, Shield, Charm, Blur
 
-### Advanced Spells (-3 Flow)
-- Powerful magic requiring 3 Flow
-- Game-changing effects with significant impact
-- Examples: Fireball, Heal, Invisibility, Dispel
+### Tier 2: Advanced Spells (-1 Flow)
+- Powerful effects requiring some momentum
+- Significant impact, worth Flow investment
+- Turning point spells in combat
+- Examples: Fireball, Heal, Fly, Invisibility
 
-### Master Spells (-5 Flow)
-- Highest tier of magic requiring 5 Flow
-- Legendary effects that can turn the tide of battle
-- Examples: Lightning Storm, Teleport, Dominate, Time Stop
+### Tier 3: Expert Spells (-2 Flow)
+- Major magical effects
+- Battle-changing power requiring Flow buildup
+- Often combat-ending when used well
+- Examples: Lightning Storm, Teleport, Polymorph
+
+### Tier 4: Master Spells (-3 Flow)
+- Reality-altering magic
+- Legendary effects for campaign climax moments
+- Requires perfect Flow management
+- Examples: Time Stop, Dominate, Meteor Swarm
 
 ---
 
@@ -133,7 +145,7 @@ Spells are divided into three categories based on power level and Flow cost:
 - **Presence:** +2 Guard, absorbs first 2 damage, shimmers impressively (+1 to social rolls)
 *All versions: Doesn't stack with armor, breaks after absorbing damage, can be recast*
 
-### Standard Spells (-1 Flow)
+### Tier 1: Basic Spells (0 Flow)
 
 #### Bolt - Ranged magical attack at Far range
 - **Mind:** Mind + d6 damage, ignores cover (calculated trajectory)  
@@ -159,7 +171,7 @@ Spells are divided into three categories based on power level and Flow cost:
 - **Will:** +2 defense, maintain even when stunned/dazed
 - **Presence:** +2 defense, mesmerizing movements distract attackers
 
-### Advanced Spells (-3 Flow)
+### Tier 2: Advanced Spells (-1 Flow)
 
 #### Fireball - Area damage spell
 - **Mind:** 2d6 + Mind to zone, precise placement (exclude X targets)
@@ -185,7 +197,7 @@ Spells are divided into three categories based on power level and Flow cost:
 - **Will:** Brute force dismissal, +Will to overpower effect
 - **Presence:** Command magic to cease, +Presence if you know caster's name
 
-### Master Spells (-5 Flow)
+### Tier 3: Expert Spells (-2 Flow)
 
 #### Lightning Storm - Massive area attack
 - **Mind:** 3d6 to chosen targets across multiple zones (tactical precision)
@@ -198,6 +210,8 @@ Spells are divided into three categories based on power level and Flow cost:
 - **Awareness:** Anywhere you can sense/have been
 - **Will:** Can bring others, even unwilling (opposed Will)
 - **Presence:** Dramatic entrance/exit, +3 to next Social action
+
+### Tier 4: Master Spells (-3 Flow)
 
 #### Dominate - Control target's actions
 - **Mind:** Logical commands seem reasonable to target

@@ -228,7 +228,7 @@ Most Fighter traditions recognize development stages marking progression from no
 
 Fighters apply their skills through various professional roles beyond adventuring:
 
-**Military Professional:** Service in organized armed forces, ranging from common soldier to elite specialist or officer, with responsibilities including defense, conquest, and security maintenance.
+**Military Professional:** Service in organized armed forces, ranging from common soldier to veteran specialist or officer, with responsibilities including defense, conquest, and security maintenance.
 
 **Personal Protector:** Guardian for important individuals or properties, including bodyguards, estate security, caravan defenders, and other protective specialists focused on specific clients.
 

@@ -1,0 +1,95 @@
+# =============================================================================
+# Example Book Manifest
+# =============================================================================
+# This manifest demonstrates all available options for book assembly.
+# Copy and modify this file to create your own publications.
+#
+# Usage:
+#   python scripts/assemble_book.py publications/manifests/example_book.yaml
+# =============================================================================
+
+# Book Metadata
+# -------------
+title: "Example Book"
+version: "0.1-draft"
+output_file: "publications/assembled/example_book.md"
+
+# Assembly Options
+# ----------------
+options:
+  generate_toc: false       # Set true to add table of contents
+  add_page_breaks: false    # Set true to add --- between files
+
+# Book Content
+# ------------
+# Sections are assembled in order. Each section can have a title,
+# optional intro text, and content items.
+
+sections:
+  # Front Matter
+  # ------------
+  - title: "Front Matter"
+    content:
+      - file: "publications/templates/title_page.md"
+      - file: "publications/templates/copyright.md"
+
+  # Core Rules Section
+  # ------------------
+  - title: "Part I: Core Rules"
+    intro: "This section covers the fundamental rules of the game."
+    content:
+      # Simple file include
+      - file: "core_rules/00_introduction.md"
+
+      # File with heading adjustment (demote all headings by 1 level)
+      - file: "core_rules/01_basic_mechanics.md"
+        heading_level_adjust: 1
+
+  # Content Modules Section
+  # -----------------------
+  - title: "Part II: Character Options"
+    intro: "Choose from these options when creating your character."
+    content:
+      # Include the introduction
+      - file: "content_modules/00_introduction.md"
+
+      # Add a sub-header
+      - section_header: "Available Options"
+
+      # Include all content types from the directory
+      - files_from_directory: "content_modules/content_types/*.md"
+        sort: alphabetical
+
+  # Reference Section
+  # -----------------
+  - title: "Appendix: Quick Reference"
+    content:
+      - file: "content_modules/03_quick_reference.md"
+        # Rename the section for this book
+        rename_to: "Quick Reference Tables"
+
+
+# =============================================================================
+# Advanced Examples (Commented Out)
+# =============================================================================
+# Uncomment and modify these examples as needed.
+
+# Example: GM-only content with exclusions
+# ----------------------------------------
+#  - title: "Game Master Section"
+#    content:
+#      - file: "core_rules/07_gm_guide.md"
+#        exclude_sections:
+#          - "Player-Facing Summary"
+#          - "Handout Version"
+
+# Example: Multiple files with different options
+# ----------------------------------------------
+#  - title: "Spell Compendium"
+#    content:
+#      - file: "spells/00_introduction.md"
+#        heading_level_adjust: 1
+#      - files_from_directory: "spells/spell_tiers/*.md"
+#        sort: alphabetical
+#      - file: "spells/03_quick_reference.md"
+#        rename_to: "Spell Index"

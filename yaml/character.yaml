@@ -314,8 +314,8 @@ archetypes:
 
     archetype_feature:
       name: "Divine Grace"
-      effect: "+1 to all saving rolls, +4 Guard, start each scene at +1 Flow"
-      note: "Divine protection shields from harm, strengthens resolve, and provides blessed energy"
+      effect: "+1 to all saving rolls, +4 Guard, start each scene at +1 Flow, ignore first point of armor penalty to divine spellcasting"
+      note: "Divine protection shields from harm, strengthens resolve, provides blessed energy, and allows armored casting"
 
     spellcasting:
       tradition: "divine"
@@ -410,7 +410,7 @@ archetypes:
         - Stay at Far range when possible
         - Use Arcane Ward (1 Flow) to reduce incoming damage
         - Cast Shield spell for additional Guard
-        - Coordinate with tanks for protection
+        - Coordinate with armored allies for protection
         - End fights fast with high-damage spells
 
     spellcasting:
@@ -449,8 +449,8 @@ archetypes:
 
     archetype_feature:
       name: "Divine Grace"
-      effect: "+1 to all saving rolls, +4 Guard, start each scene at +1 Flow"
-      note: "Divine protection shields from harm, strengthens resolve, and provides blessed energy"
+      effect: "+1 to all saving rolls, +4 Guard, start each scene at +1 Flow, ignore first point of armor penalty to divine spellcasting"
+      note: "Divine protection shields from harm, strengthens resolve, provides blessed energy, and allows armored casting"
 
     spellcasting:
       tradition: "divine"

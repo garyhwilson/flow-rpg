@@ -1,500 +1,254 @@
-# MONSTERS & NPCS - GM GUIDELINES
+# RUNNING ADVERSARIES
 
-## Running Monsters Effectively
+This guide helps you bring adversaries to life at the table, making combat encounters memorable and narratively satisfying.
 
-This guide helps you leverage the monster system to create engaging, dynamic encounters that feel natural within the Flow economy.
+## Before the Fight
 
-## Encounter Building Basics
+### Know Your Adversary
 
-### Party Size & Threat Assessment
+Before combat begins, answer these questions:
 
-**Standard Party:** 4 players
+**Who are they?**
+- Name (always give them one, even if players never learn it)
+- Role in the world (guard captain, pack leader, ancient protector)
+- Current emotional state (confident, desperate, enraged, curious)
 
-**Encounter Budget by Difficulty:**
+**What do they want?**
+- Immediate goal (kill intruders, defend territory, capture alive)
+- Underlying motivation (loyalty, fear, hunger, duty)
+- What would make them stop (surrender accepted, warning delivered, enough food secured)
 
-**Easy Encounter:**
-- 4-6 Threat 1 minions, OR
-- 2-3 Threat 2 standard enemies, OR
-- 1 Threat 2 + 2-3 Threat 1
+**How do they fight?**
+- Preferred tactics (aggressive charge, defensive positioning, hit-and-run)
+- Who do they target (weakest opponent, biggest threat, whoever hurt them)
+- What triggers a change in behavior (ally falls, takes significant damage, objectives threatened)
 
-**Moderate Encounter:**
-- 1 Threat 3 champion + 2-4 Threat 1 minions, OR
-- 3-4 Threat 2 standard enemies, OR
-- 2 Threat 2 + 3-4 Threat 1
+### Set the Scene
 
-**Hard Encounter:**
-- 1 Threat 3 champion + 1 Threat 2 + 2-3 Threat 1, OR
-- 2 Threat 3 champions, OR
-- 5-6 Threat 2 standard enemies
+Combat happens somewhere. Before initiative:
 
-**Deadly Encounter:**
-- 1 Threat 4 legendary adversary (solo), OR
-- 1 Threat 4 legendary adversary + supporting minions, OR
-- 3 Threat 3 champions
+- **Describe the environment** - What can players see, hear, smell?
+- **Note interactive elements** - Tables to overturn, chandeliers to drop, doors to bar
+- **Establish lighting and terrain** - Does anyone have an advantage?
+- **Place the adversaries** - Where are they when combat begins?
 
-### Scaling for Party Size
+A fight in a crowded tavern feels different from a fight in that same tavern when it's empty at midnight.
 
-**3-Player Party:**
-- Reduce enemy count by 1-2
-- Or reduce one enemy's threat level
-- Consider giving players +1 starting Flow
+---
 
-**5-6 Player Party:**
-- Add 1-2 more enemies
-- Or increase one enemy's threat level
-- Or add environmental challenges
+## During Combat
 
-## Flow Management for Encounters
+### Personality Through Action
 
-### Starting Flow
+Make each significant adversary memorable through how they fight:
 
-**Monsters:**
-- Minions (Threat 1): 0-1 Flow
-- Standard (Threat 2): 2-3 Flow
-- Champion (Threat 3): 4-6 Flow
-- Legendary (Threat 4): 8-12 Flow
+**The Calculating Captain**
+- Calls out tactical orders to allies
+- Targets healers and spellcasters first
+- Uses terrain advantages methodically
+- Offers surrender when victory is assured
 
-**Players:**
-- Ambush/surprise: Start at 0-2 Flow
-- Standard start: 3-5 Flow (from previous encounter or scene)
-- Prepared/advantageous: 5-7 Flow
+**The Berserker**
+- Howls and charges the nearest enemy
+- Ignores wounds to press the attack
+- Targets whoever wounded them most recently
+- Never retreats, but might be talked down with shows of strength
 
-### Flow During Combat
+**The Coward**
+- Hangs back behind allies
+- Uses ranged attacks or spells from cover
+- Flees the moment the fight turns
+- Might betray allies to save themselves
 
-**Players Generate Flow By:**
-- Successful attacks in Aggressive Stance (+1 Flow)
-- Building in Defensive Stance (+1 Flow per turn)
-- Defeating monsters (+1 Flow per monster, +2 for legendary adversaries)
-- Using certain calling benefits
+### Running Multiple Adversaries
 
-**Monsters Generate Flow By:**
-- Same rules as players (if intelligent enough)
-- Minions typically don't manage Flow tactically
-- Standard+ enemies can use Flow economy
+When facing groups:
 
-**Result:** Players typically accumulate Flow advantage as combat progresses, creating dramatic momentum toward victory.
+**Group by similarity** - All the guards act on the same initiative
+**Vary their actions** - Some attack, some position, some use abilities
+**Track individuals roughly** - "Two guards are wounded, one is fresh"
 
-## Monster Tactics by Intelligence
+### When Adversaries Should Retreat
 
-### Mindless (Intelligence 0)
+Intelligent adversaries flee when:
+- Their leader falls (unless seeking revenge)
+- They're clearly losing and can escape
+- The cost exceeds the benefit (risking death for a patrol mission?)
+- They need to warn others or get reinforcements
 
-**Examples:** Zombies, oozes, animated objects
+This isn't weakness - it's intelligent behavior. It also:
+- Creates recurring villains
+- Gives players valuable prisoners
+- Makes the world feel alive
+- Prevents every fight from being to the death
 
-**Tactics:**
-- Attack nearest target
-- No tactical Flow usage
-- No retreat
-- Predictable patterns
+### Making Powerful Foes Threatening
 
-**Running Them:**
-- Simple to play
-- Fast resolution
-- Let players feel smart
-- Focus on positioning/numbers
+Major adversaries should feel dangerous. Techniques to achieve this:
 
-### Animal (Intelligence 1)
+**Multiple actions:** A dragon can bite, claw, and breathe fire. Limit attacks to 2 per round to avoid instant player deaths, but that third action can be movement, magical effects, or environmental manipulation.
 
-**Examples:** Wolves, bears, giant spiders
+**Legendary resistance:** "The spell washes over the demon lord, who merely laughs. That power won't work on me." Use sparingly - 2-3 times per fight.
 
-**Tactics:**
-- Pack coordination
-- Focus on weak targets
-- Retreat when badly hurt
-- Simple ambush tactics
+**Environmental control:** In their lair, the adversary controls the battlefield. Lava rises, walls shift, darkness falls, reinforcements arrive.
 
-**Running Them:**
-- Use pack tactics (flank, surround)
-- Target casters/wounded
-- Flee at 1/4 Vitality
-- Environmental advantages
-
-### Low Intelligence (Intelligence 2)
+**Focused pressure:** Target one player character intensely (but not exclusively). The party must adapt tactics to protect that character.
 
-**Examples:** Goblins, ogres, orcs
-
-**Tactics:**
-- Basic strategy (focus fire, use cover)
-- Simple Flow usage (1 ability, then basic attacks)
-- Retreat when losing badly
-- Follow leader
+---
 
-**Running Them:**
-- Use terrain advantages
-- Focus fire on one target
-- Use 1-Flow abilities when available
-- Morale breaks matter
+## Flow in Combat
 
-### Average Intelligence (Intelligence 3)
+### Adversary Flow
 
-**Examples:** Bandits, cultists, soldiers
+Adversaries use Flow like player characters:
 
-**Tactics:**
-- Coordinated strategy
-- Tactical Flow usage
-- Adapt to player tactics
-- Use equipment and abilities
+- **Starting Flow** depends on the adversary (see bestiary entries)
+- **Generating Flow** through stance bonuses and successful attacks
+- **Spending Flow** on abilities, enhanced attacks, defensive reactions
 
-**Running Them:**
-- Switch targets tactically
-- Use abilities at key moments
-- Coordinate attacks
-- Retreat strategically
+Intelligent adversaries should manage Flow tactically. A goblin shaman saves Flow for emergency healing. A demon lord spends freely, confident in power. A cornered bandit burns everything on desperation attacks.
 
-### High Intelligence (Intelligence 4+)
+### Flow When Adversaries Fall
 
-**Examples:** Wizards, dragons, master strategists
+When players defeat an adversary, they gain +1 Flow. This creates natural momentum - as the fight progresses, players accumulate resources and gain advantage.
 
-**Tactics:**
-- Complex plans
-- Optimal Flow management
-- Anticipate player actions
-- Environmental control
+For particularly significant victories (defeating a major villain, saving the town), consider awarding +2 Flow or other narrative rewards.
 
-**Running Them:**
-- Multi-turn strategies
-- Save resources for key moments
-- Exploit weaknesses
-- Have backup plans
+---
 
-## Tactical Positioning
+## Common Situations
 
-### Zones in Combat
+### Ambushes
 
-Recall the zone system:
-- **Close:** Melee range (same zone)
-- **Near:** Short range (adjacent zone)
-- **Far:** Long range (2+ zones away)
+When adversaries ambush the party:
+- Describe the setup before springing the trap
+- Give players a chance to notice (Awareness check)
+- Even failed checks might give partial warning
+- Position matters more than raw damage
 
-### Monster Positioning Tactics
+When players ambush adversaries:
+- Let their planning pay off
+- Adversaries who survive might flee or surrender quickly
+- Don't punish clever play with sudden reinforcements
 
-**Minion Swarms:**
-- Surround single targets
-- Block escape routes
-- Force area effect targets
+### Hostage Situations
 
-**Ranged Attackers:**
-- Stay at Far range
-- Use cover
-- Focus fire with allies
+When adversaries have leverage:
+- Make the hostage sympathetic (name them!)
+- Give adversaries clear demands
+- Let negotiation be a real option
+- Have consequences for both success and failure
 
-**Spellcasters:**
-- Stay at Near/Far range
-- Behind frontline
-- Positioned for area effects
+### Fighting Retreat
 
-**Champions/Legendary:**
-- Control center of battlefield
-- Force players to come to them
-- Use lair advantages
+When adversaries retreat while fighting:
+- Each round, they move toward escape
+- They use delaying tactics (overturning furniture, throwing smoke)
+- They might leave wounded behind or try to rescue them
+- Pursuit has risks - running into ambushes, traps, reinforcements
 
-## Monster Abilities & Flow
+---
 
-### When to Use Abilities
+## After Combat
 
-**1-Flow Abilities:**
-- Use early and often
-- Save one for emergency
-- Standard enemies can afford 2-3 per fight
+### Aftermath
 
-**3-Flow Abilities:**
-- Save for critical moments
-- Champion enemies can afford 1-2 per fight
-- Use when it will turn the tide
+Combat has consequences:
+- **Wounded adversaries** - Do players stabilize them or let them die?
+- **Prisoners** - What do players do with captured foes?
+- **Survivors who fled** - Will they return with reinforcements? Spread news?
+- **The environment** - Is the building on fire? Are innocents hurt?
 
-**5-Flow Abilities:**
-- Legendary adversaries only usually
-- Save for dramatic moments
-- Use when players think they're winning
+### Information and Loot
 
-### Telegraphing Big Attacks
+Defeated adversaries provide:
+- **Information** - What do they know? Will they talk?
+- **Equipment** - Weapons, armor, items they were carrying
+- **Connections** - Who do they work for? Who will miss them?
+- **Story hooks** - Letters, maps, orders, personal effects
 
-When a monster is about to use a powerful ability:
-1. **Describe the wind-up** ("The dragon's throat glows with building flame...")
-2. **Give players a chance to react** (ready defense, move, interrupt)
-3. **Execute dramatically** (describe the awesome effect)
+### Recurring Adversaries
 
-This creates tension without feeling cheap.
+Foes who escape can return:
+- **Improved** - They've trained, recruited allies, prepared countermeasures
+- **Changed** - Their defeat changed them (humbled, enraged, obsessed)
+- **Informed** - They know the party's tactics and have adapted
+- **Connected** - They've allied with other threats
 
-## Monster Death & Flow
+The bandit who escaped in session 2 returning as a mercenary captain in session 8, still bearing the scar from your fighter's blade, creates stories no random encounter can match.
 
-### Defeat Generates Flow
+---
 
-When a monster is defeated:
-- **Threat 1-3:** Players gain +1 Flow (distributed to attacking player or party)
-- **Threat 4:** Players gain +2 Flow
+## Keeping Combat Moving
 
-### Morale & Retreat
+### Pacing
 
-Intelligent monsters should retreat when:
-- Leader/champion defeated
-- Reduced to 25% of original force
-- Clearly losing
+Most combats should resolve in 4-6 rounds. Longer fights risk becoming tedious.
 
-Don't fight every battle to total annihilation—retreating enemies:
-- Create recurring villains
-- Feel more realistic
-- Can return with reinforcements
-- Provide information to players
+**If combat is dragging:**
+- Adversaries make decisive moves (all-out attacks, dramatic retreats)
+- Environmental changes force action (building collapses, reinforcements arrive)
+- Narratively resolve the end ("With their leader fallen, the remaining bandits throw down their weapons")
 
-## Special Situations
+### Group Initiatives
 
-### Monster Spellcasting
+To speed play with multiple adversaries:
+- All similar adversaries act on the same initiative
+- Roll attacks for groups simultaneously
+- Track damage to groups, not individuals ("The guard patrol has taken 30 damage total, two are down")
 
-Monsters can cast spells using the flexible system:
-- Choose appropriate attribute (Mind for wizards, Will for clerics, etc.)
-- Pay Flow costs
-- Use same spell rules as PCs
+### Know When to End
 
-**GM Shortcut:** Pre-select which attribute each monster caster uses to speed play.
+When the outcome is obvious:
+- Offer surrender terms
+- Describe the conclusion narratively
+- Move on to consequences and aftermath
 
-### Monsters vs. Callings
+Don't force players to roll through every remaining hit point when victory is assured.
 
-Player callings interact with monsters:
-- **Explorer:** Might trigger on first encounter with creature type
-- **Scholar:** Can use knowledge to identify weaknesses
-- **Protector:** Gets benefits when allies threatened
-- **Avenger:** Might have specific enemy types
-- **Ascendant:** Legendary adversaries provide great moments
-
-Design encounters that let callings shine.
-
-### Monsters vs. Stances
-
-**Against Aggressive Players:**
-- Focus fire to force Defensive switches
-- Use crowd control
-- Spread damage around
-
-**Against Defensive Players:**
-- Force them to act (threaten NPCs, time pressure)
-- Area effects hit defensive targets
-- Wear down resources
-
-**Against Balanced Players:**
-- Adapt to their tactics
-- Create situations forcing stance switches
-- Reward tactical play
-
-## Environmental Factors
-
-### Lair Advantages
-
-Legendary adversaries in their lairs might have:
-- **Environmental hazards** (lava, falling rocks)
-- **Minion reinforcements** (arrive each round)
-- **Terrain advantages** (high ground, cover)
-- **Magical effects** (darkness, silence zones)
-
-### Using Terrain
-
-**Elevation:**
-- High ground grants advantage
-- Low ground restricts visibility
-- Falling damage is real
-
-**Cover:**
-- Grants defense bonus
-- Blocks line of sight
-- Can be destroyed
-
-**Obstacles:**
-- Require movement to navigate
-- Create tactical positioning
-- Force ranged vs. melee decisions
-
-**Hazards:**
-- Damage per turn
-- Require saves/checks
-- Change battlefield
-
-## Encounter Pacing
-
-### Opening (Rounds 1-2)
-
-**Goals:**
-- Establish positioning
-- Set up combos
-- Assess threats
-
-**Monster Tactics:**
-- Aggressive opening
-- Use terrain
-- Spread damage
-
-### Middle (Rounds 3-4)
-
-**Goals:**
-- Execute strategies
-- Adapt to threats
-- Manage resources
-
-**Monster Tactics:**
-- Focus fire
-- Use key abilities
-- Coordinate attacks
-
-### Climax (Rounds 5+)
-
-**Goals:**
-- Finish the fight
-- Spend remaining resources
-- Heroic moments
-
-**Monster Tactics:**
-- Desperate measures
-- Big abilities
-- All-in attacks
-
-**Note:** Most fights should resolve in 4-6 rounds. Longer = potential slog.
-
-## Running Multiple Monsters
-
-### Group Initiative
-
-To speed play:
-- **Group by type:** All goblins act together
-- **Clear turn order:** Players → Minions → Champions → Legendary
-- **Fast resolution:** Roll all attacks at once
-
-### Tracking HP & Flow
-
-**Techniques:**
-- Index cards for each monster/group
-- Dry-erase battle mat with stats
-- Note pad with quick tallies
-- Digital tools if preferred
-
-**What to Track:**
-- Current Vitality
-- Current Flow
-- Status effects
-- Used abilities
-
-### Speeding Combat
-
-**Do:**
-- Pre-roll damage
-- Group similar monsters
-- Have stat blocks ready
-- Describe attacks quickly
-
-**Don't:**
-- Recalculate basics every turn
-- Narrate every mundane attack
-- Let monster turns drag
-- Over-complicate
-
-## Common Mistakes
-
-### Mistake: Too Many Monsters
-
-**Problem:** Combat becomes tedious
-**Solution:** Use fewer, more interesting monsters. 6-8 enemies max usually.
-
-### Mistake: Ignoring Flow Economy
-
-**Problem:** Monsters don't feel integrated
-**Solution:** Track monster Flow, use abilities tactically
-
-### Mistake: Monsters Fight to Death
-
-**Problem:** Unrealistic, prevents recurring villains
-**Solution:** Smart enemies retreat at 25% strength
-
-### Mistake: No Tactical Variety
-
-**Problem:** Every fight feels same
-**Solution:** Mix threat levels, use terrain, vary tactics
-
-### Mistake: Overwhelming Opening
-
-**Problem:** Players feel helpless early
-**Solution:** Build difficulty, use minions early, save champions for middle
-
-## Improvising Monsters
-
-Need a monster on the fly?
-
-### 30-Second Monster
-
-1. **Threat Level:** Based on party level and desired difficulty
-2. **Vitality:** Use threat level guidelines
-3. **Guard:** 7 + threat level + 1d4
-4. **Attack:** 2d6 + threat level
-5. **One Simple Ability:** Costs 1 Flow, does something interesting
-
-**Example:** Sudden ambush by bandits? Threat 2, Vitality 10, Guard 10, Attack 2d6+2, Ability: "Smoke Bomb" (1 Flow - create obscurement, escape).
-
-### Scaling Existing Monsters
-
-**Make Easier:**
-- Reduce Vitality by 25%
-- Reduce starting Flow by 2
-- Remove one ability
-
-**Make Harder:**
-- Increase Vitality by 50%
-- Increase starting Flow by 2-3
-- Add one ability
-- Increase attributes by +1
+---
 
 ## Creating Memorable Fights
 
-### Elements of Great Encounters
+### Elements That Matter
 
-1. **Clear Stakes:** What happens if players lose?
-2. **Interesting Terrain:** More than empty room
-3. **Tactical Choices:** Multiple valid approaches
-4. **Dramatic Pacing:** Build to climax
-5. **Character Moments:** Let PCs shine
+**Clear stakes** - What happens if players lose? What happens if they win?
 
-### Set-Piece Battles
+**Meaningful choices** - Should they focus the leader or thin the ranks? Save the hostage or stop the ritual? Fight or flee?
 
-**Legendary Adversary Phases:**
-- Phase 1: Initial tactics (full strength)
-- Phase 2: Escalation at 50% (desperation, new abilities)
-- Phase 3: Final stand at 25% (all-out, environmental collapse)
+**Environmental interaction** - The chandelier drops, the bridge collapses, the magical circle flares
 
-**Waves:**
-- Wave 1: Initial enemies
-- Wave 2: Reinforcements arrive (round 3)
-- Wave 3: Champion/legendary shows up (round 5)
+**Character moments** - Let individual players shine. Let adversaries target specific characters. Create stories.
 
-**Environmental Changes:**
-- Building collapses
-- Fire spreads
-- Water rises
-- Darkness falls
+### What to Avoid
 
-## Encounter as Story
+**Bags of hit points** - If the only interesting thing is how long it takes to reduce the adversary to zero, the fight needs work
 
-Every combat tells a story:
-- **Setup:** Who, where, why
-- **Complication:** Unexpected element
-- **Climax:** Critical moment
-- **Resolution:** Consequences
+**Interchangeable foes** - "Another 4 goblins attack" is less interesting than "Skrix brings three of his brothers to avenge their tribe"
 
-Don't just run fights—narrate battles that players remember.
+**Fights to the death** - Not every combat needs to end with bodies. Surrender, retreat, and negotiation are all valid endings.
+
+**Solving everything with combat** - Sometimes the most interesting choice is whether to fight at all
 
 ---
 
-## Quick Reference: Running Combat
+## Quick Reminders
 
-**Each Round:**
-1. Declare actions (players describe intent)
-2. Roll initiative if needed (or use set order)
-3. Resolve actions (attacks, abilities, movement)
-4. Update Flow (generate/spend, track)
-5. Check morale/conditions
-6. Narrate results dramatically
+**Before combat:**
+- Name your adversaries
+- Know what they want
+- Prepare the environment
 
-**GM Reminders:**
-- Track monster Flow
-- Use abilities tactically
-- Retreat when appropriate
-- Describe awesome moments
-- Keep pacing brisk
+**During combat:**
+- Give adversaries personality
+- Use Flow tactically
+- Let adversaries retreat when sensible
+
+**After combat:**
+- Consequences matter
+- Survivors remember
+- Stories continue
 
 ---
 
-*Running monsters well makes combat engaging. Use the Flow economy, think tactically, and create memorable battles that serve the story.*
+*The best combat encounters are ones your players remember as stories, not as dice rolls. Give your adversaries names, motivations, and personalities - then let them loose.*

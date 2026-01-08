@@ -43,13 +43,18 @@ Clerics begin with the following skill proficiencies, reflecting their specializ
 
 **Professional (+1):**
 - Medicine (holistic healing, wound treatment, and ailment diagnosis)
-- Empathy (spiritual perception, emotional understanding, and interpersonal awareness)
 
 **Competent (+0):**
 - Sorcery (divine magic channeling, ritual performance, and spiritual communion)
 
 **Special Ability:**
 - **Divine Spellcasting:** Can cast divine spells regardless of attributes (archetype training overrides normal spellcasting requirements)
+
+**Archetype Feature - Divine Grace:**
+- +1 to all saving rolls
+- +4 Guard (divine protection)
+- Start each scene at +1 Flow
+- Ignore first point of armor penalty to divine spellcasting
 
 **Additional Skills:**
 - Choose three additional skills at Basic/Untrained level reflecting background and cultural training

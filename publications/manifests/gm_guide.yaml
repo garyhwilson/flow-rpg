@@ -47,12 +47,9 @@ sections:
       - file: "monsters/00_introduction.md"
       - file: "monsters/02_system_integration.md"
 
-      - section_header: "Creature Compendium"
+      - section_header: "The Bestiary"
 
-      - file: "monsters/monster_types/threat_1_minions.md"
-      - file: "monsters/monster_types/threat_2_standard.md"
-      - file: "monsters/monster_types/threat_3_champion.md"
-      - file: "monsters/monster_types/threat_4_legendary.md"
+      - file: "monsters/bestiary.md"
       - file: "monsters/monster_types/npcs.md"
 
   # ===== ENCOUNTER DESIGN =====

@@ -18,7 +18,7 @@
 | -1    | Below average      | Bookish scholar (Might) |
 | 0     | Human average      | Typical commoner        |
 | +1    | Above average      | Trained professional    |
-| +3    | Exceptional        | Elite specialist        |
+| +3    | Exceptional        | Master of craft         |
 | +5    | Legendary          | Mythic hero             |
 
 ### Skill Progression

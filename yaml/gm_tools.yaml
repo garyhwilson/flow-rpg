@@ -97,7 +97,7 @@ flow_management:
       setup: "major villain fight, GM at 4 Flow"
 
       round_1:
-        elite_action: "Champion attacks, hits two PCs"
+        villain_action: "Major adversary attacks, hits two PCs"
         pc_failure: "PC misses attack badly"
         gm_gains: "+1 (PC failure)"
         gm_total: "5 Flow"
@@ -110,9 +110,9 @@ flow_management:
         gm_total: "4 Flow"
 
       round_4:
-        situation: "Champion nearly defeated, dramatically appropriate exit"
+        situation: "Major adversary nearly defeated, dramatically appropriate exit"
         gm_spends: "2 Flow (escape route)"
-        effect: "Champion teleports away: 'This isn't over!'"
+        effect: "Villain teleports away: 'This isn't over!'"
         narrative: "Villain survives for recurring threat"
         gm_total: "2 Flow"
 
@@ -202,160 +202,52 @@ flow_management:
 # ============================================
 # SCENE DESIGN
 # ============================================
-#
-# WARNING: This section requires significant refactoring to align with TTRPG principles.
-# Current content contains video game patterns (formulaic scaling, "opposition types",
-# squad composition formulas) that are fundamentally incompatible with tabletop RPG design.
-#
-# This section should emphasize:
-# - Creating named adversaries with motivations
-# - Providing guidance ranges, not rigid formulas
-# - GM judgment and narrative appropriateness
-# - Story-driven challenges, not encounter balance math
-#
-# See CLAUDE.md and .claude/instructions.md "CRITICAL: This Is A Tabletop RPG, Not A Video Game"
-# section for detailed guidance on the required approach.
-#
-# Until refactored, use this section cautiously - trust your GM instincts over formulas.
-# ============================================
 
 scene_design:
-  challenge_rating:
-    formula: "Total Enemy Power / Party Average Power"
-    
-    difficulty_bands:
-      trivial:
-        ratio: "< 0.5"
-        description: "No real threat"
-        flow_generation: "Minimal"
-      
-      easy:
-        ratio: "0.5 - 0.75"
-        description: "Minor challenge"
-        flow_generation: "Low"
-      
-      standard:
-        ratio: "0.75 - 1.25"
-        description: "Fair fight"
-        flow_generation: "Moderate"
-      
-      hard:
-        ratio: "1.25 - 1.75"
-        description: "Serious challenge"
-        flow_generation: "High"
-      
-      deadly:
-        ratio: "> 1.75"
-        description: "Potential TPK"
-        flow_generation: "Extreme"
-  
-  enemy_templates:
-    henchman:
-      guard: "12 + party_milestones"
-      vitality: "12 + party_milestones"
-      damage: "1d6 + (party_milestones / 2)"
-      skills: "One at Professional"
-      flow: "Starts at 0"
-      special: "Should survive 2-3 hits, feel substantial in groups"
-      description: "Capable followers who can threaten careless PCs"
-      design_note: "Playtest v3: Increased from Guard 10/Vit 8 to Guard 12/Vit 12. At 24 total HP, survives 2-3 hits from optimized Fighter (avg 9-10 damage). Prevents 'tissue paper' feel while keeping them manageable."
+  philosophy:
+    core_principle: "Every adversary is a character with a name and motivation"
+    guidance: "Stats serve the story, not the other way around"
 
-    worthy_opponent:
-      guard: "13 + (party_milestones × 3)"
-      vitality: "21 + (party_milestones × 3)"
-      damage: "2d6 + (party_milestones / 2)"
-      skills: "Two at Professional"
-      flow: "Starts at 0"
-      special: "Equal match for individual heroes"
-      description: "Capable adversary matching party members"
-      design_note: "Lasts 2-3 rounds under focus fire, longer in mixed encounters"
+    creating_opposition:
+      step_1: "Who is this person (or creature)? Give them a name."
+      step_2: "What do they want? Their motivation drives their actions."
+      step_3: "Why would they oppose the characters? Conflict should feel natural."
+      step_4: "What would make them stop fighting? Not every conflict ends in death."
 
-    champion:
-      guard: "35 + (party_milestones × 3)"
-      vitality: "55 + (party_milestones × 5)"
-      damage: "2d6+2 + party_milestones"
-      damage_reduction: 2
-      skills: "Two or three at Expert (+2)"
-      flow: "Starts at +2"
-      actions_per_round: 3
-      legendary_resistances: "3 per scene"
+    stat_guidance:
+      note: "These ranges are starting points, not formulas. Adjust freely for your story."
 
-      action_economy:
-        philosophy: "Three actions with attack limit prevents TPK while keeping champions threatening"
+      inexperienced_or_fragile:
+        description: "New recruits, wild animals, simple undead"
+        guard: "8-14"
+        vitality: "8-14"
+        combat_modifier: "+0 to +1"
 
-        critical_rule: "Champions can make MAXIMUM 2 ATTACKS per round"
+      trained_combatants:
+        description: "Professional soldiers, dangerous predators, skilled bandits"
+        guard: "14-20"
+        vitality: "14-24"
+        combat_modifier: "+2 to +3"
 
-        attack_limit_rationale: "Playtest showed 3 attacks caused TPK even with damage reduction and disadvantage. Focus-fire of 3 attacks (avg 30+ damage) instantly kills any PC. Limiting to 2 attacks prevents instant-kill alpha strikes while maintaining the champion's threatening multi-action advantage."
+      veterans_and_magical:
+        description: "Experienced guards, young dragons, vampire spawn"
+        guard: "20-32"
+        vitality: "24-40"
+        combat_modifier: "+3 to +4"
 
-        action_options:
-          standard_recommended: "2 attacks + 1 non-attack action"
-          defensive: "1 attack + 2 non-attack actions"
-          note: "Champions CANNOT make 3 attacks in one round under any circumstances"
+      legendary_threats:
+        description: "Ancient dragons, demon lords, archmages"
+        guard: "35-60"
+        vitality: "40-70"
+        combat_modifier: "+4 to +5"
 
-        non_attack_actions:
-          movement: "Reposition, advance, retreat (1-2 zones)"
-          technique: "Use combat technique or special ability (if available)"
-          defense: "Take Defensive Stance action (+2 Guard until next turn)"
-          grab_item: "Interact with environment, draw weapon, use item"
-          tactical: "Aid ally, grant advantage, create hazard"
+    powerful_adversary_guidance:
+      multiple_actions: "Some powerful foes act more than once per round"
+      attack_limit: "Limit attacks to 2 per round to avoid instant player kills"
+      non_attack_options: "Movement, techniques, defensive stances, environmental interaction"
+      legendary_resistance: "Major villains might shrug off 2-3 failed saves per scene"
+      rationale: "These guidelines prevent anticlimactic player deaths while keeping threats scary"
 
-        typical_patterns:
-          round_1: "Attack PC1 + Attack PC2 + Move to advantageous position"
-          round_2: "Attack PC1 + Use technique (e.g., power attack, whirlwind) + Defensive stance"
-          round_3: "Attack weakened PC + Attack fresh PC + Reposition"
-          note: "Varies by situation, but never exceeds 2 attacks"
-
-        focus_fire_guidance:
-          permitted: "Champions CAN attack same PC twice in one round"
-          expected_damage: "2 attacks at 2d6+2+milestones: avg 21-24 damage"
-          survivability: "Most PCs survive 2 hits at appropriate tier"
-          counterplay: "Party can heal, reposition, or focus down the champion"
-
-        playtest_results:
-          old_system: "3 attacks with disadvantage on 2nd/3rd = 30+ damage = instant TPK"
-          new_system: "2 attacks maximum = 21-24 damage = threatening but survivable"
-          verdict: "Champions remain dangerous in 2-3 round focused fights without guaranteed PC deaths"
-
-      special: "Three actions per round with balanced economy, DR 2, legendary resistances"
-      description: "Formidable threat requiring focused effort and party coordination"
-      design_note: "Playtest v3: Reduced scaling from ×4/×7 to ×3/×5. New durability: 90 at milestone 0, 114 at milestone 3, 138 at milestone 6, 170 at milestone 10. Creates 2-3 round focused fights against optimized parties with ~60 DPR. Previous formula caused 4-6 round sloggy combats."
-  
-  opposition_types:
-    overwhelming_force:
-      description: "Single powerful opponent with significant advantages"
-      composition: "1 Champion"
-      tactics: "Tests party coordination and resource management"
-      guidance: "Champion acts multiple times per round OR has environmental advantages"
-      notes: "Legendary resistance (3/scene) represents adaptability"
-
-    coordinated_threat:
-      description: "Champion leading organized group"
-      composition: "1 Champion + 4-6 Henchmen"
-      tactics: "Leader coordinates followers tactically"
-      guidance: "Henchmen enable Champion's strategy through positioning and support"
-      notes: "Champion adapts tactics when strategy fails"
-
-    champion_team:
-      description: "Multiple skilled opponents"
-      composition: "2-3 Champions"
-      tactics: "Coordinated strikes and combination attacks"
-      guidance: "Each Champion has distinct capability, they support each other"
-      notes: "Focus fire and divide-and-conquer both valid approaches"
-
-    overwhelming_numbers:
-      description: "Numerous weak opponents"
-      composition: "10+ Henchmen"
-      tactics: "Swarm and surround tactics"
-      guidance: "Use swarm rules for efficiency"
-      notes: "Area effects and choke points become critical"
-
-    asymmetric_conflict:
-      description: "Mixed opposition with varied capabilities"
-      composition: "1 Champion + 2 Worthy Opponents + 3 Henchmen"
-      tactics: "Layered challenge with distinct roles"
-      guidance: "Each opponent type complements the others tactically"
-      notes: "Reinforcements may arrive based on narrative circumstances"
-  
   environmental_factors:
     hazards:
       ongoing_damage:
@@ -405,8 +297,8 @@ npc_generation:
         flow: "Starts at 0"
       
       combat_npc:
-        template: "Use henchman/worthy_opponent/champion"
-        modify: "Adjust for role"
+        template: "Use stat guidance from scene_design section"
+        modify: "Adjust for narrative role and significance"
       
       specialist_npc:
         expert_skill: "One at Expert (+2) - pinnacle of mortal achievement"
@@ -783,14 +675,14 @@ sweet_spot_edition:
         - ["+4", "97%", "83%", "58%"]
         - ["+5", "97%", "97%", "72%"]
 
-    enemy_hp_quick_reference:
-      henchman: "24 HP (Guard 12 + Vitality 12) - dies in 2-3 hits"
-      worthy_opponent: "34 HP base - dies in 3-4 hits"
-      champion: "90 HP base - dies in 2-3 rounds focused fire"
+    adversary_durability_reference:
+      minor_opponent: "Guard 8-14, Vitality 8-14 - falls in 2-3 hits"
+      trained_combatant: "Guard 14-20, Vitality 14-24 - falls in 3-4 hits"
+      major_threat: "Guard 20-32, Vitality 24-40 - falls in 2-3 rounds focused fire"
 
     remember:
       - "At +5, TN 8 is auto-success (97%)"
-      - "Champions: MAX 2 attacks per round"
+      - "Powerful adversaries: MAX 2 attacks per round"
       - "Track party modifiers each session"
 
 # ============================================

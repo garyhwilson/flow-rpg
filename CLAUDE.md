@@ -407,6 +407,56 @@ python scripts/generate_docs.py
 # This syncs yaml/ content to markdown files
 ```
 
+### Validate YAML-Markdown Sync
+
+```bash
+# Check that YAML-SOURCE markers match their YAML sources
+python scripts/validate_yaml_sync.py
+
+# Run before assembling to catch documentation drift
+python scripts/validate_yaml_sync.py && python scripts/assemble_book.py publications/manifests/core_rulebook.yaml
+```
+
+## YAML-Markdown Sync Workflow
+
+The YAML files are the **source of truth** for all mechanical values (formulas, costs, modifiers, etc.). Markdown files contain both mechanical content (which must match YAML) and narrative content (which is hand-written).
+
+### YAML-SOURCE Markers
+
+Mechanical content in markdown files can be marked with HTML comments to indicate it comes from YAML:
+
+```markdown
+<!-- YAML-SOURCE: character.yaml > derived_values > guard -->
+**Guard:** 12 + max(Might, Grace, Will)
+<!-- /YAML-SOURCE -->
+```
+
+### Editing Rules
+
+**When making MECHANICAL changes:**
+1. Edit the YAML file first (source of truth)
+2. Find the corresponding section in markdown
+3. Update the markdown to match
+4. Run validation script
+5. Reassemble publications
+
+**When making NARRATIVE changes:**
+1. Edit markdown directly (no YAML involved)
+2. Keep edits outside of YAML-SOURCE markers
+3. Reassemble publications
+
+**Rule:** Never edit mechanical values in markdown without first updating the YAML source file.
+
+### Preventing Documentation Drift
+
+Common drift issues to watch for:
+- Formula discrepancies (e.g., Guard = "12 + max" vs "8 + Higher")
+- Session timing differences (e.g., Major milestones at 5/10 vs 18/30)
+- Skill tier modifiers (e.g., Professional = +1 vs +2)
+- Spell tier costs (e.g., Advanced = -1 vs -3)
+
+When in doubt, check the YAML file - it's always the authoritative source.
+
 ## Critical YAML Files
 
 When making balance changes, **always edit YAML first**, then sync to markdown:

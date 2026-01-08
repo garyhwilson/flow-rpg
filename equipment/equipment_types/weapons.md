@@ -419,7 +419,7 @@ Understanding how weapons generate Flow helps characters maximize resource gener
 Consider these factors when selecting weapons:
 
 1. **Primary Attributes**: Match weapons to Might vs Grace emphasis
-2. **Combat Role**: Tank, striker, skirmisher, or ranged specialist
+2. **Combat Style**: Defensive, aggressive, mobile, or ranged focus
 3. **Stance Preference**: Aggressive, Balanced, or Defensive
 4. **Armor Compatibility**: Heavier armor favors certain weapon choices
 5. **Archetype Synergies**: Some archetypes pair naturally with specific weapons

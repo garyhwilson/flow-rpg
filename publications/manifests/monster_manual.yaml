@@ -18,28 +18,18 @@ sections:
     content:
       - file: "monsters/00_introduction.md"
 
-  # ===== PART I: UNDERSTANDING THREAT LEVELS =====
-  - title: "Part I: Threat Levels & Encounter Design"
-    intro: "Before diving into the bestiary, understand how to use threat levels to create balanced, engaging encounters."
+  # ===== PART I: RUNNING ADVERSARIES =====
+  - title: "Part I: Running Adversaries"
+    intro: "How to bring adversaries to life at the table, from creating memorable characters to managing Flow in combat."
     content:
       - file: "monsters/01_gm_guidelines.md"
       - file: "monsters/02_system_integration.md"
 
   # ===== PART II: BESTIARY =====
   - title: "Part II: The Bestiary"
-    intro: "Creatures organized by threat level, from minions to legendary adversaries."
+    intro: "Named adversaries and creatures to populate your campaigns. Each entry includes motivation, personality, and statistics."
     content:
-      - section_header: "Threat Level 1: Minions"
-      - file: "monsters/monster_types/threat_1_minions.md"
-
-      - section_header: "Threat Level 2: Standard Enemies"
-      - file: "monsters/monster_types/threat_2_standard.md"
-
-      - section_header: "Threat Level 3: Champions"
-      - file: "monsters/monster_types/threat_3_champion.md"
-
-      - section_header: "Threat Level 4: Legendary Adversaries"
-      - file: "monsters/monster_types/threat_4_legendary.md"
+      - file: "monsters/bestiary.md"
 
   # ===== PART III: NON-PLAYER CHARACTERS =====
   - title: "Part III: Non-Player Characters"

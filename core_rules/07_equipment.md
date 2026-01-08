@@ -107,7 +107,7 @@ Armor provides damage reduction but may impose penalties on certain actions. The
 - **Penalties:** -2 to Grace-based rolls
 - **Stance Restriction:** Cannot use Aggressive stance
 - **Casting:** Cannot cast spells
-- **Best For:** Tanks, defensive fighters, strength-based characters
+- **Best For:** Defenders, front-line fighters, strength-based characters
 
 #### Shields
 Shields are held in one hand and provide Guard bonuses rather than damage reduction.

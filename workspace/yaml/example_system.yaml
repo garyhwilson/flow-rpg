@@ -1,0 +1,251 @@
+# =============================================================================
+# Example YAML Structure
+# =============================================================================
+# This file demonstrates common patterns for structuring TTRPG game data.
+# Use this as a reference when creating your own YAML files.
+# Delete or rename this file once you've created your real system files.
+# =============================================================================
+
+_meta:
+  file: "example_system.yaml"
+  description: "Example patterns for YAML game data"
+  purpose: "Template reference - delete when no longer needed"
+
+# =============================================================================
+# PATTERN: Attributes / Stats
+# =============================================================================
+# Core character statistics that define capabilities.
+
+attributes:
+  physical:
+    strength:
+      name: "Strength"
+      abbreviation: "STR"
+      description: "Physical power and carrying capacity"
+      governs:
+        - "Melee damage"
+        - "Carrying capacity"
+        - "Athletic feats"
+
+    agility:
+      name: "Agility"
+      abbreviation: "AGI"
+      description: "Speed, reflexes, and coordination"
+      governs:
+        - "Defense"
+        - "Ranged attacks"
+        - "Acrobatic feats"
+
+  mental:
+    intellect:
+      name: "Intellect"
+      abbreviation: "INT"
+      description: "Reasoning, memory, and knowledge"
+      governs:
+        - "Spellcasting"
+        - "Lore checks"
+        - "Problem solving"
+
+    willpower:
+      name: "Willpower"
+      abbreviation: "WIL"
+      description: "Mental fortitude and determination"
+      governs:
+        - "Resisting magic"
+        - "Morale"
+        - "Concentration"
+
+# =============================================================================
+# PATTERN: Derived Values / Formulas
+# =============================================================================
+# Calculated values based on other stats.
+
+derived_values:
+  health:
+    formula: "10 + (Strength modifier x 2)"
+    description: "How much damage you can absorb"
+    minimum: 1
+
+  defense:
+    formula: "10 + Agility modifier + armor bonus"
+    description: "Target number to hit you in combat"
+
+  initiative:
+    formula: "Agility modifier + Intellect modifier"
+    description: "Determines combat order"
+
+# =============================================================================
+# PATTERN: Character Options (Species, Classes, etc.)
+# =============================================================================
+# Player-facing choices with mechanical effects.
+
+species:
+  human:
+    name: "Human"
+    description: "Versatile and ambitious, humans are the most common folk."
+    attribute_bonus: "Choose any +1"
+    special_ability:
+      name: "Adaptable"
+      effect: "Gain one extra skill at character creation"
+    lifespan: "80 years average"
+    size: "Medium"
+
+  elf:
+    name: "Elf"
+    description: "Graceful and long-lived, with a connection to nature."
+    attribute_bonus: "Agility +1"
+    special_ability:
+      name: "Keen Senses"
+      effect: "Advantage on Perception checks"
+    lifespan: "750 years average"
+    size: "Medium"
+
+  dwarf:
+    name: "Dwarf"
+    description: "Sturdy and resilient, masters of stone and metal."
+    attribute_bonus: "Strength +1"
+    special_ability:
+      name: "Stonecunning"
+      effect: "Advantage on checks related to stonework"
+    lifespan: "350 years average"
+    size: "Medium (short)"
+
+# =============================================================================
+# PATTERN: Skills or Abilities
+# =============================================================================
+# Things characters can be trained in.
+
+skills:
+  combat:
+    - name: "Melee Combat"
+      attribute: "Strength"
+      description: "Fighting with swords, axes, and other melee weapons"
+
+    - name: "Ranged Combat"
+      attribute: "Agility"
+      description: "Fighting with bows, crossbows, and thrown weapons"
+
+  knowledge:
+    - name: "Arcana"
+      attribute: "Intellect"
+      description: "Knowledge of magic, spells, and magical creatures"
+
+    - name: "History"
+      attribute: "Intellect"
+      description: "Knowledge of past events, kingdoms, and cultures"
+
+  social:
+    - name: "Persuasion"
+      attribute: "Willpower"
+      description: "Convincing others through charm and logic"
+
+    - name: "Intimidation"
+      attribute: "Strength"
+      description: "Coercing others through threats and presence"
+
+# =============================================================================
+# PATTERN: Tiered Content (Spells, Abilities, etc.)
+# =============================================================================
+# Content organized by power level or progression.
+
+spells:
+  tier_1:
+    description: "Basic spells available to novice casters"
+    cost: 1
+
+    spells:
+      - name: "Magic Missile"
+        effect: "Deal 1d4+1 force damage to a target within 60 feet"
+        duration: "Instant"
+
+      - name: "Light"
+        effect: "Create a ball of light that illuminates 30 feet"
+        duration: "1 hour"
+
+  tier_2:
+    description: "Intermediate spells requiring training"
+    cost: 2
+    prerequisite: "Caster level 3+"
+
+    spells:
+      - name: "Fireball"
+        effect: "Deal 6d6 fire damage in a 20-foot radius"
+        duration: "Instant"
+
+      - name: "Invisibility"
+        effect: "Become invisible until you attack or cast a spell"
+        duration: "1 hour"
+
+# =============================================================================
+# PATTERN: Equipment
+# =============================================================================
+# Gear with mechanical properties.
+
+weapons:
+  melee:
+    - name: "Longsword"
+      damage: "1d8"
+      properties: ["Versatile (1d10)"]
+      cost: "15 gold"
+      weight: "3 lbs"
+
+    - name: "Dagger"
+      damage: "1d4"
+      properties: ["Light", "Thrown (20 ft)"]
+      cost: "2 gold"
+      weight: "1 lb"
+
+  ranged:
+    - name: "Longbow"
+      damage: "1d8"
+      range: "150 ft"
+      properties: ["Two-handed", "Ammunition"]
+      cost: "50 gold"
+      weight: "2 lbs"
+
+armor:
+  light:
+    - name: "Leather"
+      defense_bonus: "+2"
+      properties: []
+      cost: "10 gold"
+      weight: "10 lbs"
+
+  medium:
+    - name: "Chain Shirt"
+      defense_bonus: "+4"
+      properties: ["Max Agility bonus +2"]
+      cost: "50 gold"
+      weight: "20 lbs"
+
+  heavy:
+    - name: "Plate"
+      defense_bonus: "+6"
+      properties: ["No Agility bonus", "Disadvantage on stealth"]
+      cost: "1500 gold"
+      weight: "65 lbs"
+
+# =============================================================================
+# PATTERN: Tables and Random Generation
+# =============================================================================
+# Content for random generation or reference tables.
+
+random_tables:
+  tavern_names:
+    die: "d6"
+    entries:
+      1: "The Rusty Nail"
+      2: "The Prancing Pony"
+      3: "The Golden Griffin"
+      4: "The Drunken Dragon"
+      5: "The Wanderer's Rest"
+      6: "The Broken Sword"
+
+  treasure_types:
+    die: "d8"
+    entries:
+      1-2: "Coins (3d6 x 10 gold)"
+      3-4: "Gems (1d4 worth 50 gold each)"
+      5-6: "Art object (worth 2d6 x 25 gold)"
+      7: "Magic item (minor)"
+      8: "Magic item (major)"

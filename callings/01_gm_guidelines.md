@@ -182,7 +182,7 @@ Callings can inform the structure of organizations, cultures, and institutions i
 - Arcane academies
 
 **Champion Organizations:**
-- Elite military units
+- Renowned military units
 - Ruling dynasties
 - Athletic competitions
 - Protector orders

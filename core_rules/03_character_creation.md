@@ -53,8 +53,8 @@ Your species provides an attribute bonus and unique traits that integrate with t
 **Attribute Bonus:** +1 Might or +1 Will (your choice)
 
 **Species Traits:**
-- **Stone Endurance:** When your Guard is depleted, reduce the first Vitality damage each scene by 2 (innate toughness)
-- **Craftwise:** When examining worked materials (stone, metal, crafts), ask one question the GM must answer truthfully
+- **Stone Endurance:** Once per scene, reduce damage from one attack by 2 (stacks with armor)
+- **Craftwise:** When examining worked materials, ask one question the GM must answer truthfully
 - **Steady Stance:** Switching from Defensive stance costs no Flow (stubborn immovability)
 
 **Common Callings:** Sentinel, Guardian, Advocate
@@ -66,8 +66,8 @@ Your species provides an attribute bonus and unique traits that integrate with t
 **Attribute Bonus:** +1 Grace or +1 Awareness (your choice)
 
 **Species Traits:**
-- **Fey Grace:** When you gain Flow from critical success (13+), gain +1 additional Flow
-- **Magical Affinity:** You can sense magic without the Sorcery skill (but can't identify details without it)
+- **Fey Grace:** When you roll 11+ on any check, gain +1 Flow (once per round)
+- **Magical Affinity:** Can sense magic within Near range without Sorcery skill (but need skill for details)
 - **Elven Focus:** When casting spells, ignore the first point of armor penalty
 
 **Common Callings:** Scholar, Seeker, Mediator
@@ -79,9 +79,9 @@ Your species provides an attribute bonus and unique traits that integrate with t
 **Attribute Bonus:** +1 Will or +1 Presence (your choice)
 
 **Species Traits:**
-- **Lucky:** Once per scene, when your Flow would go negative, it stops at 0 instead
-- **Brave Heart:** When an ally goes to negative Flow, you immediately gain +1 Flow
-- **Small but Mighty:** You can move through enemy zones without provoking. When you successfully Hide, enemies get -2 to detect you
+- **Lucky:** Once per scene, reroll any single die (keep new result)
+- **Brave Heart:** When an ally goes to negative Flow, immediately gain +1 Flow
+- **Small but Mighty:** Move through enemy zones without provoking. When successfully Hide, enemies get -2 to detect
 
 **Common Callings:** Enthusiast, Guardian, Mediator
 **Natural Archetypes:** Rogue, Bard, Cleric
@@ -92,9 +92,9 @@ Your species provides an attribute bonus and unique traits that integrate with t
 **Attribute Bonus:** +1 to any attribute of your choice
 
 **Species Traits:**
-- **Versatile:** Start with one extra Competent skill OR upgrade one starting Competent to Professional
-- **Determined:** When at negative Flow, your next successful action gains +1 additional Flow
-- **Adaptable:** During any rest, you may swap one skill at Competent level with another
+- **Versatile:** Start with one extra skill at Novice (-1)
+- **Determined:** When at negative Flow, next successful action gains +1 additional Flow
+- **Adaptable:** During any rest, may swap one Competent skill with another
 
 **Common Callings:** Any - humans show no pattern
 **Natural Archetypes:** Any - human flexibility
@@ -317,10 +317,10 @@ Your Calling represents your inner drive and provides Flow benefits and narrativ
 When reduced to 0 Vitality, you fall unconscious and begin dying.
 
 **Death Saves:** Roll 2d6 + Will at the start of each turn:
-- **6 or less:** Lose 1 Vitality (getting worse)
-- **7-8:** Stable for this round
-- **9-11:** Stabilize at 0 Vitality (unconscious but stable)
-- **12+:** Regain consciousness at 1 Vitality
+- **5 or less:** Lose 1 Vitality (getting worse)
+- **6-7:** Stable for this round (holding on)
+- **8-10:** Stabilize at 0 Vitality (unconscious but stable)
+- **11+:** Regain consciousness at 1 Vitality (heroic recovery)
 
 **Death:** Occurs at -3 Vitality (down from -5)
 **Stabilization:** Medicine check (TN 8) or any magical healing
@@ -378,7 +378,7 @@ When reduced to 0 Vitality, you fall unconscious and begin dying.
   - Always knows who needs help
 - **Derived Values:**
   - Guard: 15 (12 + Will 3, highest of Might/Grace/Will)
-  - Vitality: 14 (10 + Will 4)
+  - Vitality: 13 (10 + Will 3)
   - Magic Access: Yes (Cleric archetype grants divine casting regardless of attributes)
 
 Thornwick combines divine magic with practical medicine to protect his allies. His Guardian calling makes him exceptionally attuned to others' needs, while his dwarven resilience allows him to endure hardship to help others.

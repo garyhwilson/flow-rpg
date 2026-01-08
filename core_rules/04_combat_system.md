@@ -20,7 +20,7 @@ Rather than using traditional initiative rolls, this game uses a stance system t
 *"Adapt and overcome"*
 
 - **Turn Order:** Act second
-- **Flow Generation:** +1 Flow on any critical success
+- **Flow Generation:** +1 Flow on any roll of 8+ (natural, before modifiers)
 - **Damage:** Normal
 - **Defense:** Normal
 - **Movement:** Complete freedom
@@ -30,9 +30,10 @@ Rather than using traditional initiative rolls, this game uses a stance system t
 *"Patience and protection"*
 
 - **Turn Order:** Act last (choosing your moment)
-- **Flow Generation:** +1 when attacked, +1 on successful defense
+- **Flow Generation:** +1 when attacked (once per round), +1 on successful defense
 - **Damage Penalty:** -1 to damage rolls
-- **Defense Bonus:** +2 to defense rolls
+- **Defense Bonus:** +4 to defense rolls
+- **Damage Reduction:** 2 (reduces incoming damage)
 - **Movement:** Can disengage without penalty
 - **Special Ability:** Counterattack on critical defense success
 
@@ -157,10 +158,10 @@ Vitality can be increased through milestone choices (see Advancement), but does 
 When reduced to 0 Vitality, you fall unconscious and begin dying.
 
 **Death Saves:** Roll 2d6 + Will at the start of each turn:
-- **6 or less:** Lose 1 Vitality (getting worse)
-- **7-8:** Stable for this round
-- **9-11:** Stabilize at 0 Vitality (unconscious but stable)
-- **12+:** Regain consciousness at 1 Vitality
+- **5 or less:** Lose 1 Vitality (getting worse)
+- **6-7:** Stable for this round (holding on)
+- **8-10:** Stabilize at 0 Vitality (unconscious but stable)
+- **11+:** Regain consciousness at 1 Vitality (heroic recovery)
 
 **Death:** Occurs at -3 Vitality (down from -5)
 **Stabilization:** Medicine check (TN 8) or any magical healing

@@ -119,4 +119,4 @@ The Sentinel's journey involves several key developments:
 - **Trust Calibration:** Finding balance between skepticism and faith
 - **Inner Authority:** Developing confidence in personal judgment
 - **Flexibility:** Adapting security approaches to changing circumstances
-- **Proportional Response:** Matching vigilance to actual threat level
+- **Proportional Response:** Matching vigilance to actual danger

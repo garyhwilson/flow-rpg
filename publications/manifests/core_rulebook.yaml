@@ -55,7 +55,7 @@ sections:
       - file: "archetypes/00_introduction.md"
       - file: "archetypes/02_system_integration.md"
 
-      - section_header: "The Six Core Archetypes"
+      - section_header: "The Seven Core Archetypes"
 
       - file: "archetypes/archetype_types/fighter.md"
       - file: "archetypes/archetype_types/wizard.md"
@@ -63,6 +63,7 @@ sections:
       - file: "archetypes/archetype_types/rogue.md"
       - file: "archetypes/archetype_types/ranger.md"
       - file: "archetypes/archetype_types/paladin.md"
+      - file: "archetypes/archetype_types/bard.md"
 
   # ===== PART IV: SPECIES =====
   - title: "Part IV: Species - Character Heritage"
@@ -113,12 +114,9 @@ sections:
       - file: "monsters/00_introduction.md"
       - file: "monsters/02_system_integration.md"
 
-      - section_header: "Creatures by Threat Level"
+      - section_header: "The Bestiary"
 
-      - file: "monsters/monster_types/threat_1_minions.md"
-      - file: "monsters/monster_types/threat_2_standard.md"
-      - file: "monsters/monster_types/threat_3_champion.md"
-      - file: "monsters/monster_types/threat_4_legendary.md"
+      - file: "monsters/bestiary.md"
       - file: "monsters/monster_types/npcs.md"
 
   # ===== PART VIII: GAME MASTER'S SECTION =====

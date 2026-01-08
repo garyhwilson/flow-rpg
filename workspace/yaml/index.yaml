@@ -1,0 +1,100 @@
+# =============================================================================
+# [Your TTRPG System Name] - Master Index
+# =============================================================================
+# This file serves as the master reference for your game system.
+# Edit this file to define your system's identity, version, and philosophy.
+# =============================================================================
+
+# System Identity
+# ---------------
+title: "Your TTRPG System Name"
+version: "0.1.0-draft"
+tagline: "A brief tagline for your game"
+
+# Core Design Philosophy
+# ----------------------
+# Define the guiding principles of your game design.
+# These help maintain consistency as you develop.
+design_philosophy:
+  core_principles:
+    - principle: "Principle 1"
+      description: "What this means for your game"
+
+    - principle: "Principle 2"
+      description: "What this means for your game"
+
+    - principle: "Principle 3"
+      description: "What this means for your game"
+
+  # What makes your game unique?
+  unique_features:
+    - "Feature 1: Brief description"
+    - "Feature 2: Brief description"
+    - "Feature 3: Brief description"
+
+# Target Experience
+# -----------------
+# Define what kind of play experience you're designing for.
+target_experience:
+  campaign_length: "Suggested number of sessions"
+  player_count: "Recommended players"
+  session_length: "Typical session duration"
+  tone: "Adventure, horror, investigation, etc."
+  complexity: "Rules-light, medium, crunchy"
+
+# Component Files
+# ---------------
+# Reference to other YAML files in this directory.
+# Uncomment and customize as you create them.
+components:
+  # - file: "core_rules.yaml"
+  #   description: "Dice mechanics, attributes, skills"
+
+  # - file: "character.yaml"
+  #   description: "Species, classes, creation"
+
+  # - file: "combat.yaml"
+  #   description: "Action economy, health, damage"
+
+  # - file: "magic.yaml"
+  #   description: "Spells and magical abilities"
+
+  # - file: "advancement.yaml"
+  #   description: "Character progression"
+
+  # - file: "equipment.yaml"
+  #   description: "Weapons, armor, gear"
+
+  # - file: "gm_tools.yaml"
+  #   description: "Adversaries, encounters, tables"
+
+  - file: "example_system.yaml"
+    description: "Example structure template"
+
+# Development Status
+# ------------------
+# Track your development progress.
+status:
+  stage: "early-draft"  # early-draft, alpha, beta, release-candidate, released
+  last_updated: "YYYY-MM-DD"
+
+  completed:
+    - "Initial project setup"
+
+  in_progress:
+    - "Core mechanics definition"
+
+  planned:
+    - "Character creation"
+    - "Combat system"
+    - "Advancement rules"
+
+# Critical Constraints
+# --------------------
+# Rules that emerged from playtesting and should NOT be changed.
+# Add these as you playtest your system.
+critical_constraints:
+  # Example:
+  # - constraint: "Maximum modifier is +5"
+  #   reason: "Maintains meaningful dice rolls at all levels"
+  #   related_files: ["core_rules.yaml", "advancement.yaml"]

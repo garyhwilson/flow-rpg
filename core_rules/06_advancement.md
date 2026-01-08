@@ -127,9 +127,10 @@ Moderate milestones mark substantial character growth, typically occurring after
 - Upon completing a major adventure or quest
 - After resolving a significant story arc
 - When characters achieve an important objective
-- **Frequency:** Typically every 4-6 sessions
-- **First Moderate Milestone:** Around session 6
-- **Second Moderate Milestone:** Around session 12
+- **Frequency:** Every 3 sessions (sessions 3, 6, 9)
+- **First Moderate Milestone:** Session 3
+- **Second Moderate Milestone:** Session 6
+- **Third Moderate Milestone:** Session 9
 
 ### Moderate Milestone Options
 
@@ -198,9 +199,9 @@ Major milestones represent transformative moments in a character's journey. They
 - After completing a major campaign arc
 - Upon achieving a legendary feat
 - When characters fundamentally transform their understanding
-- **Frequency:** Rare, typically 3-5 times per campaign
-- **First Major Milestone:** Around session 18
-- **Second Major Milestone:** Around session 30
+- **Frequency:** Typically 2 per campaign (sessions 5 and 10)
+- **First Major Milestone:** Session 5 (mid-campaign transformation)
+- **Second Major Milestone:** Session 10 (legendary status)
 
 ### Major Milestone Options
 
@@ -264,26 +265,32 @@ After the **Second Major Milestone** (legendary status), characters are appropri
 
 ### Typical Advancement Schedule
 
-**Early Campaign: Learning the Ropes**
+**Sessions 1-2: Learning the Ropes**
 - Start with initial character creation
-- 2-3 minor milestones
-- First moderate milestone around session 6
+- Minor milestones each session
+- Establishing character identity
 
-**Mid Campaign: Growing Expertise**
-- Regular minor milestones
-- Second moderate milestone around session 12
-- Approaching first major milestone
+**Session 3: First Capability Jump**
+- First moderate milestone
+- Signature moves or advanced techniques
+- Party roles solidifying
 
-**Advanced Campaign: Rising Heroes**
-- First major milestone around session 18
-- More specialized abilities
-- Advanced character concepts emerging
+**Sessions 4-5: Rising Heroes**
+- First major milestone at session 5
+- Transformative character evolution
+- Regional hero status
 
-**Legendary Campaign: Mythic Status**
-- Second major milestone around session 30
+**Sessions 6-9: Peak Performance**
+- Second moderate milestone at session 6
+- Third moderate milestone at session 9
 - Master-level skills
-- Legendary techniques
+- Advanced character concepts
+
+**Session 10: Legendary Status**
+- Second major milestone
 - Calling transcendence/synthesis
+- Legendary techniques
+- Campaign conclusion approaches
 
 ### Milestone Effect on Difficulty
 
@@ -320,7 +327,7 @@ After the **Second Major Milestone** (legendary status), characters are appropri
 - Gained Tough Edge (+2 Guard)
 - Guard: 17 (15 base + 2 from edge)
 
-**After First Moderate Milestone (Session 6):**
+**After First Moderate Milestone (Session 3):**
 - Increased Will to +4 (enhancing both spell power and Vitality)
 - Developed Signature Move "Healing Word" - Command that also recovers 1d6 Guard
 - Guard: 18 (12 + 4 from Will + 2 from edge), Vitality: 14 (10 + 4)
@@ -330,11 +337,11 @@ After the **Second Major Milestone** (legendary status), characters are appropri
 - Gained Hardy Edge (+2 Vitality)
 - Guard: 18, Vitality: 16
 
-**After Second Moderate Milestone (Session 12):**
+**After Second Moderate Milestone (Session 6):**
 - Advanced Medicine skill to Expert (+2)
 - Mastery of both divine magic and mundane healing
 
-**After First Major Milestone (Session 18):**
+**After First Major Milestone (Session 5):**
 - Synthesized Guardian and Scholar Callings
 - Can now protect allies from death AND begin scenes at +1 Flow
 - Guard: 20 (12 + 4 + 4 from edges), Vitality: 18

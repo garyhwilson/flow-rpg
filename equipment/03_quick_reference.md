@@ -198,13 +198,13 @@ Quality equipment is more resilient to these effects.
 4. Add archetype-specific tools
 5. Spend remaining funds on personal touches
 
-### Combat Role Selection
+### Combat Style Selection
 
-**Tank**: Heavy armor, medium/heavy weapon, large shield
-**Striker**: Medium/light weapon, light/medium armor, mobility focus
-**Ranged**: Bow/crossbow, light armor, tactical positioning gear
-**Skirmisher**: Thrown/reach weapons, light armor, mobility tools
-**Support**: Light weapons, light/medium armor, utility items
+**Defensive Fighter**: Heavy armor, medium/heavy weapon, large shield
+**Aggressive Combatant**: Medium/light weapon, light/medium armor, mobility focus
+**Archer/Hunter**: Bow/crossbow, light armor, tactical positioning gear
+**Mobile Warrior**: Thrown/reach weapons, light armor, mobility tools
+**Versatile Adventurer**: Light weapons, light/medium armor, utility items
 
 ### Spellcaster Considerations
 - Light/no armor for full casting ability

@@ -208,7 +208,7 @@ All publications are ready to assemble:
 - All core rules
 - All character options (callings, archetypes, species)
 - Complete magic system
-- Monsters & NPCs (all threat levels)
+- Monsters & NPCs (complete bestiary)
 - Equipment and advancement
 - Both player and GM content
 - **Audience:** Everyone
@@ -235,7 +235,7 @@ All publications are ready to assemble:
 
 ### 4. Monster Manual (`monster_manual.yaml`) - 109 KB
 **Bestiary and NPC compendium**
-- 21 complete stat blocks (threat levels 1-4)
+- Named adversaries with motivations and tactics
 - Comprehensive NPC templates
 - Encounter building guidelines
 - Tactical notes for running creatures

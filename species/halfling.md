@@ -90,7 +90,7 @@ Moots operate through consensus rather than majority rule, with discussions cont
 
 **Specialization without Hierarchy**
 
-Halfling societies recognize and value specialized expertise without creating corresponding social stratification or professional isolation. Master bakers, healers, or craftspeople receive community respect for their skills while remaining integrated community members rather than forming separate elite classes. This approach creates functional specialization without corresponding social division, maintaining community cohesion despite diverse individual capabilities.
+Halfling societies recognize and value specialized expertise without creating corresponding social stratification or professional isolation. Master bakers, healers, or craftspeople receive community respect for their skills while remaining integrated community members rather than forming separate privileged classes. This approach creates functional specialization without corresponding social division, maintaining community cohesion despite diverse individual capabilities.
 
 This non-hierarchical specialization manifests through distinctive halfling recognition patterns where expertise acknowledgment comes through invitation to share knowledge rather than formal titles or exclusive guild membership. The halfling phrase "We all knead the dough differently" captures this philosophy valuing diverse contributions equally within community context.
 

@@ -1,0 +1,7 @@
+# TTRPG Development Dependencies
+
+# Required for all scripts
+pyyaml>=6.0
+
+# Required for generate_docs.py (YAML to markdown generation)
+jinja2>=3.0

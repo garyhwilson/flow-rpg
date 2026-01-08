@@ -30,6 +30,8 @@ Flow is the central resource that powers combat techniques, spells, and narrativ
 
 **Flow Range:** -3 to +6 (reduced from original)
 
+> **Note:** Flow cannot exceed your maximum (default +6, can be increased through edges and abilities). Any excess Flow generation is lost.
+
 **Starting Flow:** 0 (neutral position)
 - **Exception:** Scholars start each scene at +1 Flow
 
@@ -47,6 +49,8 @@ Flow is the central resource that powers combat techniques, spells, and narrativ
 - Casting a cantrip successfully: +1 Flow
 - Archetype abilities (varies)
 - Calling-specific triggers (rebalanced for reliability)
+
+> **Stacking:** You can gain Flow from multiple different triggers in the same round. Each trigger's "once per round" limit applies separately. For example, you could gain +1 Flow from being attacked AND +1 Flow from taking damage in the same round.
 
 **Spending Flow:**
 - Enhance dice rolls (+1 per point spent)
