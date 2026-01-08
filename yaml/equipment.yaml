@@ -683,7 +683,7 @@ magic_items:
         cost: 1000
         rarity: "Uncommon"
       
-      ring_of_flow:
+      ring_of_momentum:
         effect: "+1 maximum Momentum"
         cost: 3000
         rarity: "Rare"

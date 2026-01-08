@@ -316,7 +316,7 @@ pregenerated_characters:
         brave_heart: "+1 Momentum when ally goes negative"
         small_but_mighty: "Move through enemies, +2 to hide"
       calling:
-        joyful_flow: "Share Momentum with adjacent allies"
+        joyful_momentum: "Share Momentum with adjacent allies"
         silver_lining: "Find benefit in any situation"
       edges:
         momentum_harmony: "+1 max Momentum"
@@ -430,7 +430,7 @@ play_examples:
     step_3_result:
       gm: "10 is a full success. The door bursts open cleanly. You're through and ready for action."
     
-    step_4_flow:
+    step_4_momentum:
       change: "No Momentum change on full success (Momentum only on crit 13+)"
   
   combat_round:
@@ -487,7 +487,7 @@ play_examples:
         action: "Fire at Silvara"
         result: "One hits for 5 damage"
         silvara_guard: "15 → 10"
-        silvara_flow: "+1 (took damage)"
+        silvara_momentum: "+1 (took damage)"
   
   social_encounter:
     scenario: "Elena negotiates with suspicious town guard"
@@ -537,8 +537,8 @@ play_examples:
         modifiers: "+3 Mind, +2 Sorcery"
         total: 14
         result: "Hit! 1d6: 4 damage"
-        momentum: "+2 total (cantrip +1, Aggressive +1)"
-        new_flow: 3
+        momentum_change: "+2 total (cantrip +1, Aggressive +1)"
+        new_momentum: 3
     
     turn_2_buildup:
       aldric:
@@ -549,7 +549,7 @@ play_examples:
         roll: "Auto-hits behind cover"
         damage: "3+4 = 7"
         momentum_cost: 0
-        new_flow: 3
+        new_momentum: 3
     
     turn_3_nova:
       aldric:
@@ -558,7 +558,7 @@ play_examples:
         cost: 2  # Reduced from 3
         effect: "3d6 to all enemies in zone"
         damage: "14 to all"
-        new_flow: 1
+        new_momentum: 1
         narrative: "Lightning crackles through the battlefield"
 
 # ============================================

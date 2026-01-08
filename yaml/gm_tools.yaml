@@ -140,7 +140,7 @@ momentum_management:
 
     example_4_when_not_to_spend:
       situation: "Party low on resources, barely surviving"
-      gm_flow: "9 Momentum available"
+      gm_momentum: "9 Momentum available"
       gm_decision: "DON'T spend—let them have the win"
       rationale: "Pacing: They earned this victory through clever play"
       alternative: "Save Momentum for next scene's dramatic entrance"
@@ -162,7 +162,7 @@ momentum_management:
   optional_variant:
     when_to_skip: "First 1-2 sessions, casual play, or if tracking feels burdensome"
 
-    running_without_gm_flow:
+    running_without_gm_momentum:
       philosophy: "Trust narrative instincts instead of mechanical tracking"
 
       introduce_complications_when:
@@ -186,7 +186,7 @@ momentum_management:
         - "No resource scarcity for GM"
         - "Players can't anticipate complications"
 
-    when_to_add_gm_flow:
+    when_to_add_gm_momentum:
       sign_1: "You want more structure for complications"
       sign_2: "Players enjoy knowing when complications come"
       sign_3: "You're tracking it mentally anyway"
@@ -735,13 +735,13 @@ gm_tools:
         - "Initiative order position"
     
     momentum_tracker:
-      player_flow:
+      player_momentum:
         - "Character name"
         - "Current Momentum"
         - "Momentum triggers used"
         - "Signature moves available"
       
-      gm_flow:
+      gm_momentum:
         - "Current pool"
         - "Complications available"
     

@@ -216,7 +216,7 @@ archetypes:
       name: "Weapon Versatility"
       effect: "Use any weapon without penalty, switch weapons as free action, gain proficiency with improvised weapons"
       note: "Represents fundamental martial discipline and adaptability"
-      starting_flow: 1
+      starting_momentum: 1
 
     starting_edge:
       choice: ["weapon_focus", "tough"]
@@ -261,7 +261,7 @@ archetypes:
         - Deal +2 damage
         - Gain +1 Momentum on hit
         - May use Survival skill instead of Combat for the attack
-      starting_flow: 1
+      starting_momentum: 1
 
       design_note: |
         Differentiates Rangers from Fighters:
@@ -353,7 +353,7 @@ archetypes:
       name: "Dual Expertise"
       effect: "Two Professional skills instead of one"
       note: "Rogues' defining trait - extreme skill specialization"
-      starting_flow: 1
+      starting_momentum: 1
 
     starting_equipment:
       armor: "light"

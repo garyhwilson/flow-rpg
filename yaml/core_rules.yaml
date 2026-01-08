@@ -193,7 +193,7 @@ momentum_system:
       maximum: 6
     excess_rule: "Momentum cannot exceed your maximum. Any excess Momentum generation is lost."
     stacking_rule: "You can gain Momentum from multiple different triggers in the same round. Each trigger's 'once per round' limit applies separately."
-    starting_flow: 0
+    starting_momentum: 0
     reset: "Between scenes"
     
   starting_exceptions:

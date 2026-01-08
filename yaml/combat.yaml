@@ -667,7 +667,7 @@ combat_techniques:
       cost: "3 Momentum"
       limit: "Once per scene"
     
-    combat_flow:
+    combat_momentum:
       effect: "Extra Momentum on any critical"
       cost: "Passive once learned"
   
@@ -873,7 +873,7 @@ social_combat:
   overview:
     description: "Conflicts resolved through words not weapons"
     uses_stances: true
-    uses_flow: true
+    uses_momentum: true
     health: "Composure instead of Guard/Vitality"
   
   composure:

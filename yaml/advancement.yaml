@@ -278,7 +278,7 @@ moderate_milestones:
         whirlwind_strike: "Attack all adjacent"
         perfect_parry: "Negate all damage from source"
         devastating_blow: "Double damage dice"
-        combat_flow: "Extra Momentum on criticals"
+        combat_momentum: "Extra Momentum on criticals"
       
       magic_techniques:
         metamagic_mastery: "Apply 2 metamagics"
@@ -749,7 +749,7 @@ advancement_guidelines:
   common_mistakes:
     spreading_thin: "Too many skills at Novice"
     ignoring_defense: "No Guard/Vitality boosts"
-    hoarding_flow: "Not learning techniques"
+    hoarding_momentum: "Not learning techniques"
     attribute_obsession: "Attributes over skills"
 
   reaching_the_cap_early:

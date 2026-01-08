@@ -131,7 +131,7 @@ spell_points:
     tier_3_expert: 3
     tier_4_master: 4
 
-  interaction_with_flow:
+  interaction_with_momentum:
     description: "Spell points replace Momentum costs for spells"
     momentum_generation: "Still generate Momentum from critical successes and stances"
     momentum_expenditure: "Can still spend Momentum for techniques and narrative advantages"
