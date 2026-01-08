@@ -7,9 +7,9 @@ Weapons in Flow RPG represent more than mere damage-dealing instruments—they e
 
 The weapon system integrates seamlessly with Flow's stance mechanics, providing different tactical opportunities depending on how characters position themselves in combat. A reach weapon wielded by a defensive fighter creates different tactical possibilities than dual-wielded daggers used by an aggressive rogue, even when both characters possess similar attribute scores.
 
-## Understanding Weapon Categories
+## Choosing Your Weapon
 
-Weapons are organized into categories based on functional characteristics rather than arbitrary classifications. Each category provides mechanical benefits tailored to specific tactical approaches while maintaining rough parity in overall effectiveness.
+Weapons fall into three broad groups based on how they're wielded in combat. Each offers distinct tactical advantages while maintaining rough parity in overall effectiveness - the "best" weapon is the one that fits your fighting style.
 
 ### Light Weapons
 

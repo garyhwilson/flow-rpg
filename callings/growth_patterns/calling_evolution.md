@@ -1,25 +1,28 @@
-# Calling Evolution Patterns
+# How Callings Evolve
 
-## Introduction to Calling Growth
+## Callings Are Living Things
 
-Callings are not static labels but dynamic frameworks that evolve as characters develop. This evolution follows predictable patterns based on the Enneagram system, with each Calling having characteristic growth and stress directions. Understanding these patterns helps players create compelling character arcs and provides GMs with tools to create meaningful character development opportunities.
+Callings are not static labels but dynamic frameworks that evolve as characters develop. A Guardian at the start of a campaign isn't the same Guardian at the end - their core drive to protect remains, but it matures, deepens, and sometimes fractures under pressure.
 
-## Core Evolution Principles
+## The Shape of Growth
 
-### Callings Change But Don't Disappear
-- Characters never completely lose their core Calling
-- Evolution means integrating new aspects rather than replacement
-- Original motivations remain but become more nuanced
+### Your Calling Grows With You
 
-### Three Types of Evolution
-1. **Deepening** - More mature expression of the same Calling
-2. **Integration** - Incorporating positive aspects of growth direction
-3. **Disintegration** - Exhibiting negative aspects of stress direction
+Consider Sera, a Guardian Cleric. Early in her career, she protected people by standing between them and physical harm - simple, direct, immediate. As she matured, her understanding of protection deepened. Now she establishes clinics, trains healers, and builds systems that protect people even when she's not there. Same Calling, more nuanced expression.
 
-### Milestone Connection
-- Minor Milestones often represent Deepening
-- Moderate Milestones can trigger Integration opportunities
-- Major Milestones may involve significant evolution
+This **deepening** represents the most common form of Calling evolution. The core motivation remains, but its expression becomes more sophisticated.
+
+### Learning From Other Callings
+
+Sometimes growth means incorporating strengths from other Callings. Sir Aldric, a Champion, discovered that his drive to lead and achieve could be enriched by the Scholar's love of wisdom. He didn't stop being a Champion - but he learned to lead through understanding rather than force alone.
+
+This **integration** often happens during moderate milestones, when characters face challenges that reveal the limits of their current approach.
+
+### Breaking Under Pressure
+
+Growth isn't always positive. Under extreme stress, characters may exhibit unhealthy versions of other Callings. When Sera the Guardian feels overwhelmed and unappreciated, she sometimes becomes controlling and domineering - the dark side of the Champion, demanding gratitude for her sacrifices.
+
+This **disintegration** represents how core drives can twist when a character feels threatened.
 
 ## Stress Directions
 

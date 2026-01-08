@@ -290,14 +290,17 @@ When running multiple similar opponents (a patrol of guards, a pack of wolves):
 
 ## Quick Reference
 
-### Adversary Flow by Power Level
+### Adversary Flow
 
-| Power Level | Starting Flow | Typical Abilities |
-|-------------|---------------|-------------------|
-| Minor | 0-2 | 0-1 simple abilities |
-| Skilled | 2-4 | 1-2 tactical abilities |
-| Dangerous | 4-5 | 2-3 abilities, at least one powerful |
-| Major | 5-6 | 3-5 abilities, includes dramatic options |
+How much Flow an adversary starts with depends on who they are and what the scene demands:
+
+**Inexperienced or surprised adversaries** typically begin with 0-2 Flow. A nervous bandit ambushed in their camp, a wild animal startled from sleep, or rank-and-file soldiers caught off guard won't have momentum on their side.
+
+**Prepared or competent adversaries** often start with 2-4 Flow. A veteran mercenary expecting trouble, a court mage who noticed the party's approach, or a pack of wolves stalking prey have had time to assess the situation.
+
+**Formidable adversaries in their element** might begin with 4-6 Flow. A dragon in its lair, a crime lord surrounded by loyal guards, or an ancient vampire on home ground commands the scene from the first moment.
+
+Adjust freely based on narrative circumstances. The same bandit captain might start at 2 Flow when surprised or 5 Flow when executing her own ambush.
 
 ### Common Ability Costs
 

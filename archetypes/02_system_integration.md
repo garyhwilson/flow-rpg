@@ -12,13 +12,13 @@ Archetypes determine a character's starting skill proficiencies, providing a fou
 - **Novice (-1):** Secondary skills that support the archetype's approach
 - **Untrained (-2):** Skills outside the archetype's typical training
 
-### Skill Advancement Patterns
+### Developing Your Skills
 
-While any character can advance any skill, each archetype offers natural advancement paths:
+Any character can advance any skill, but each archetype has natural affinities shaped by their training and worldview.
 
-- **Primary Path:** Skills central to archetype identity advance at standard cost
-- **Secondary Path:** Related skills advance at standard cost
-- **Cross-Training:** Skills from other archetypes advance at increased cost
+A Fighter who wants to learn Sorcery isn't forbidden from doing so - nothing mechanically prevents it. But it requires more effort than simply advancing Combat, because arcane study lies outside their professional training. Meanwhile, a Wizard picks up new magical techniques almost effortlessly, but struggles with the martial discipline a Fighter takes for granted.
+
+This creates organic specialization without hard restrictions. Characters remain free to develop however their story demands.
 
 ### Archetype Skill Specialties
 
@@ -219,44 +219,23 @@ Each archetype generates Flow through distinctive actions:
 - **Secondary Generation:** Story collection and lore application
 - **Special Trigger:** Audience engagement and emotional impact
 
-### Flow Expenditure Patterns
+### How Each Archetype Spends Flow
 
-How archetypes typically spend Flow:
+Each archetype has developed characteristic ways of channeling their momentum:
 
-**Fighter:**
-- **Primary Use:** Combat technique enhancement
-- **Secondary Use:** Defensive reaction improvements
-- **Signature Technique:** Flow-powered attack combinations
+**Fighters** convert Flow into devastating technique combinations. Watch Commander Vex chain her attacks together, each strike setting up the next. At 3 Flow, she unleashes a whirlwind of steel that catches three enemies in a single devastating sequence.
 
-**Ranger:**
-- **Primary Use:** Environmental adaptation techniques
-- **Secondary Use:** Tracking and survival enhancement
-- **Signature Technique:** Terrain-specific advantages
+**Rangers** spend Flow to become one with their environment. Tracker Kira burns 2 Flow and suddenly the forest floor reads like a book - every broken twig, every displaced leaf tells the story of her quarry's passage.
 
-**Paladin:**
-- **Primary Use:** Protective and inspiring effects
-- **Secondary Use:** Conviction-manifesting abilities
-- **Signature Technique:** Self-sacrifice for ally benefit
+**Paladins** channel Flow through their oaths. When Sir Aldric's companion falls, he pours 3 Flow into his protective vow - the next blow meant for his ally strikes him instead, his oath made manifest.
 
-**Rogue:**
-- **Primary Use:** Precision strike enhancement
-- **Secondary Use:** Skill check improvement
-- **Signature Technique:** Perfect opportunity exploitation
+**Rogues** save Flow for the perfect moment. Shadow has been watching, waiting. When the target finally turns his back, she spends 4 Flow on a single devastating strike that ends the fight before it begins.
 
-**Wizard:**
-- **Primary Use:** Spell power and control enhancement
-- **Secondary Use:** Magical analysis improvement
-- **Signature Technique:** Spell modification for situation
+**Wizards** invest Flow into their spellwork. Magister Theron shapes a basic fire bolt, then feeds it 2 Flow - the spell warps, splits, and strikes three separate targets as he bends the magical formulae to his will.
 
-**Cleric:**
-- **Primary Use:** Healing and protection enhancement
-- **Secondary Use:** Divine manifestation empowerment
-- **Signature Technique:** Faith-powered intervention
+**Clerics** channel Flow through faith. When poison courses through the warrior's veins, Sister Mercy pours 3 Flow into her prayer. Divine light suffuses the wound, burning the toxin away.
 
-**Bard:**
-- **Primary Use:** Performance effect enhancement
-- **Secondary Use:** Social interaction improvement
-- **Signature Technique:** Inspiration that grants Flow to allies
+**Bards** transform personal Flow into inspiration for others. Lyssa's song reaches its crescendo and she releases 2 Flow into the music - suddenly her companions stand taller, their weariness forgotten, her gift of momentum flowing into their next actions.
 
 ### Flow States by Archetype
 
@@ -367,34 +346,19 @@ For magical archetypes, preferred casting attributes:
 - **Secondary Attribute:** Will (survival determination)
 - **Casting Style:** Intuitive, adaptable, terrain-specific
 
-### Spell Category Affinities
+### How Each Archetype Approaches Magic
 
-Each magical archetype gravitates toward certain spell types:
+Each magical tradition naturally gravitates toward spells that resonate with their worldview and training:
 
-**Wizard:**
-- **Primary Categories:** Elemental manipulation, reality alteration
-- **Secondary Categories:** Knowledge acquisition, protection
-- **Restricted Categories:** Divine manifestation, natural communion
+**Wizards** pursue magic through intellectual understanding. Elowen the Arcanist spent decades mastering the elemental equations, and now conjures fire with mathematical precision. Wizards excel at manipulating raw magical forces - shaping elements, bending space, unraveling enchantments. They rarely develop healing magic (too instinctive) or commune with nature spirits (too chaotic for their structured approach).
 
-**Cleric:**
-- **Primary Categories:** Healing, divine manifestation
-- **Secondary Categories:** Protection, inspiration
-- **Restricted Categories:** Reality alteration, mental manipulation
+**Clerics** channel divine power through faith and devotion. Brother Marcus feels his goddess's warmth flow through him when he lays hands on the wounded. Clerics naturally manifest their deity's domains - a war god's cleric radiates martial power, while a healer's priest mends wounds almost unconsciously. The intellectual magic of wizards feels cold and disconnected to them.
 
-**Bard:**
-- **Primary Categories:** Emotion influence, illusion
-- **Secondary Categories:** Enhancement, knowledge acquisition
-- **Restricted Categories:** Destructive manifestation, forceful control
+**Bards** weave magic through emotion, story, and performance. When Lyssa plays her lute, the very air shimmers with enchantment. Bards excel at influencing hearts and minds - inspiring allies, terrifying enemies, crafting illusions that feel real. Destructive magic feels crude to them; they prefer changing how people *perceive* reality over forcing change.
 
-**Paladin:**
-- **Primary Categories:** Protection, purification
-- **Secondary Categories:** Enhancement, healing
-- **Restricted Categories:** Deception, manipulation
+**Paladins** manifest their oaths as divine power. Sir Aldric's shield glows with protective light because he *is* protection - his oath made manifest. Paladin magic naturally expresses their sacred vows: purifying corruption, shielding the innocent, smiting the wicked. Deceptive or manipulative magic violates everything they stand for.
 
-**Ranger:**
-- **Primary Categories:** Natural communion, enhancement
-- **Secondary Categories:** Perception, movement
-- **Restricted Categories:** Urban manipulation, mass effect
+**Rangers** draw magic from their bond with the wild. Kira the Wayfinder feels the forest lend her its strength. Ranger magic connects to living things and natural forces - communicating with animals, moving through terrain unhindered, sensing threats. The artificial complexities of urban magic and mass-effect spells feel alien to their intimate, personal connection with nature.
 
 ## Advancement System Integration
 
@@ -437,44 +401,23 @@ Different archetypes experience milestone advancement in characteristic ways:
 - **Moderate Milestones:** Creation of works with lasting impact
 - **Major Milestones:** Performance that changes history or reality
 
-### Technique Acquisition Patterns
+### Learning New Techniques
 
-How archetypes typically learn new techniques:
+Each archetype has their own path to mastery:
 
-**Fighter:**
-- **Learning Method:** Repetitive practice and combat experience
-- **Teacher Relationship:** Master-student training lineage
-- **Innovation Process:** Adaptation of existing techniques to new situations
+**Fighters** learn through repetition and experience. Commander Vex drilled the shield-bash maneuver a thousand times before it became instinct. She learned from watching her old sergeant, adapted it when she lost her shield in battle and had to use a table leg instead, and now teaches it to her own soldiers.
 
-**Ranger:**
-- **Learning Method:** Environmental immersion and adaptation
-- **Teacher Relationship:** Experienced guide or self-taught
-- **Innovation Process:** Necessity-driven solutions to environmental challenges
+**Rangers** learn from the wild itself. Kira discovered the "shadow step" technique by watching how deer vanish into underbrush - three months of patient observation, then weeks of failed attempts, then suddenly she could do it too. Her mentor never taught her; the forest did.
 
-**Paladin:**
-- **Learning Method:** Devotional practice and principled service
-- **Teacher Relationship:** Order traditions and divine inspiration
-- **Innovation Process:** Conviction application to unprecedented challenges
+**Paladins** learn through devotion and divine inspiration. Sir Aldric spent a year in contemplation before the *Radiant Shield* technique came to him in a vision. His order has trained this way for centuries - prayer, service, and patience until the divine answers.
 
-**Rogue:**
-- **Learning Method:** Observation, experimentation, and practical application
-- **Teacher Relationship:** Informal mentorship or guild training
-- **Innovation Process:** Creative solution development for specific obstacles
+**Rogues** learn by doing and watching. Shadow never had a formal teacher. She watched the guild's best, practiced in her cramped room, and developed her own variations when the standard approaches didn't fit her smaller frame. Now younger rogues watch *her*.
 
-**Wizard:**
-- **Learning Method:** Theoretical study and controlled experimentation
-- **Teacher Relationship:** Academic hierarchy or research collaboration
-- **Innovation Process:** Methodical development from theoretical principles
+**Wizards** learn through study and careful experimentation. Magister Theron spent three years researching fire magic before attempting his first modification. His tower bears scorch marks from failed experiments, but each failure taught him something. His innovations are documented, repeatable, teachable.
 
-**Cleric:**
-- **Learning Method:** Divine communion and faithful service
-- **Teacher Relationship:** Religious hierarchy and spiritual mentorship
-- **Innovation Process:** Faith expression in response to community needs
+**Clerics** learn through faith and service. Sister Mercy didn't set out to learn the *Purifying Touch* - she prayed desperately over a poisoned child, and the divine answered. Now she teaches others that healing techniques come not from study but from compassionate need and unwavering faith.
 
-**Bard:**
-- **Learning Method:** Performance practice and tradition study
-- **Teacher Relationship:** Artistic mentorship and audience feedback
-- **Innovation Process:** Synthesis of diverse influences into new expressions
+**Bards** learn from everywhere. Lyssa collected her *Song of Courage* from a dwarven war-chant, an elven lullaby, and a halfling drinking song. She synthesized them during a siege when she needed something that could reach everyone. Her performances are always evolving, always incorporating new influences.
 
 ### Specialized Development Paths
 

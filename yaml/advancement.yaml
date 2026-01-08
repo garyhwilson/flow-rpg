@@ -881,8 +881,8 @@ default_build_paths:
 
     result: "Grace +3, Stealth Expert +2 = +5 cap at session 6, legendary shadow powers"
 
-  cleric_healer_path:
-    concept: "Divine support and battlefield medic"
+  cleric_divine_mercy_path:
+    concept: "Servant of compassion who channels divine grace to mend wounds and lift spirits"
 
     milestones:
       session_1_minor: "Empathy: Novice → Competent"

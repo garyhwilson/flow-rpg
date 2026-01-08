@@ -5,7 +5,7 @@
 
 The Fighter represents the mastery of physical combat through disciplined training and tactical expertise. Beyond mere brute force, true Fighters combine technical weapon skill, strategic positioning, and battlefield awareness into a comprehensive approach to martial conflict. They transform combat from chaotic violence into controlled application of force, using disciplined technique to overcome opponents regardless of the specific weapons or fighting styles employed.
 
-- **Combat Role:** Front-line combatant, defender, and weapon specialist
+- **Combat Style:** Front-line warrior who excels at weapon mastery and protecting allies
 - **Key Attributes:** Might, Grace, Will
 - **Combat Focus:** Weapon mastery, tactical positioning, and endurance
 

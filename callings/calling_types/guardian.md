@@ -65,9 +65,9 @@ Your connections to others define your heroism. Build relationships with party m
 ## Archetype Synergies
 
 ### Strong Combinations
-- **Guardian Cleric:** The quintessential healer and protector
-- **Guardian Fighter:** The stalwart defender shielding allies from harm
-- **Guardian Paladin:** Combines protection with divine purpose
+- **Guardian Cleric:** Channels divine compassion to mend wounds and shelter the vulnerable
+- **Guardian Fighter:** Stands firm between danger and those they've sworn to protect
+- **Guardian Paladin:** Sacred oaths made manifest through protective devotion
 
 ### Challenging Combinations
 - **Guardian Rogue:** Reconciling helping others with self-reliance

@@ -90,9 +90,9 @@ Different species typically develop distinctive skill preferences shaped by cult
 - *Natural:* Stealth, Cooking, Negotiate
 - *Challenging:* Intimidate (size limitations)
 
-### Cultural Learning Patterns
+### How Each Species Learns
 
-Beyond natural affinities, species differ in how they typically approach skill development:
+Beyond natural affinities, each species has distinctive approaches to developing new skills:
 
 **Humans** favor breadth and adaptation, often developing moderate proficiency across diverse skills rather than extreme specialization. Their approach emphasizes practical application over theoretical mastery, with knowledge valued for its immediate utility.
 
@@ -115,7 +115,7 @@ These different learning approaches create distinctive skill development pattern
 
 The Flow resource interacts distinctively with each species, reflecting different approaches to managing and utilizing this fundamental energy:
 
-### Generation Patterns
+### Generating Flow
 
 **Humans** generate Flow through successful adaptation and innovation, earning rewards for creative approaches, adaptability under pressure, and effective improvisation. This pattern reflects their core strength of finding novel solutions to immediate challenges.
 

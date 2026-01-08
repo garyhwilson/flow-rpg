@@ -143,12 +143,11 @@ Backpack, ink & quill, parchment, scroll cases, reference book, magnifying glass
 **Significant Items**: Weapons, armor, substantial tools
 **Negligible**: Small items tracked as collections
 
-## Equipment Quality Levels
+## Equipment Quality
 
-- **Improvised/Poor**: Possible penalties or reliability issues
-- **Standard**: Professionally crafted, reliable
-- **Superior**: Minor mechanical advantages, enhanced durability
-- **Masterwork**: Substantial benefits, extraordinary resilience
+Not all equipment is created equal. A chair leg grabbed in desperation might break mid-swing. A smith's standard work serves reliably for years. Superior craftsmanship provides subtle advantages - a blade that holds its edge longer, armor fitted perfectly to its wearer. Masterwork items approach legendary status, combining exceptional materials with generations of accumulated craft knowledge.
+
+Most adventurers start with standard equipment and acquire better gear through adventure rewards, skilled artisans, or fortunate discoveries.
 
 ## Archetype Starting Equipment
 

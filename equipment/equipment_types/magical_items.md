@@ -14,39 +14,34 @@ Magical items exist in tiers of rarity affecting both cost and availability:
 ### Common Magical Items
 **Availability**: Can be purchased in major cities
 **Cost**: 50-150 sp
-**Power Level**: Minor conveniences, small improvements, limited-use abilities
 
-Common magical items provide useful benefits without fundamentally changing character capabilities. They're accessible to successful adventurers and represent the baseline of magical equipment.
+Common magical items provide minor conveniences - a lantern that never needs oil, a cloak that keeps you dry in rain, a knife that stays sharp. They're useful without fundamentally changing character capabilities. Successful adventurers can afford these baseline magical tools.
 
 ### Uncommon Magical Items
 **Availability**: Found as treasure, commissioned from skilled enchanters
 **Cost**: 200-500 sp (if purchasable)
-**Power Level**: Significant benefits, meaningful tactical options, regular-use abilities
 
-Uncommon magical items provide substantial benefits worth building tactics around. Most magical weapons and armor fall into this category.
+Uncommon magical items provide meaningful tactical benefits worth building around. A sword that bursts into flame on command, boots that let you walk on water, armor that mends itself overnight. Most magical weapons and armor fall into this category.
 
 ### Rare Magical Items
 **Availability**: Major treasure finds, rewards from powerful patrons
 **Cost**: 750-2000 sp (rarely available for purchase)
-**Power Level**: Powerful abilities, character-defining effects, significant combat advantages
 
-Rare magical items significantly enhance character capabilities and often become signature equipment around which characters build their tactics.
+Rare magical items significantly enhance character capabilities. A cloak of invisibility, a helm that lets you read thoughts, a blade that drinks the souls of the fallen. Characters often become known for these signature pieces of equipment.
 
 ### Very Rare Magical Items
 **Availability**: Climactic treasure, legendary rewards
 **Cost**: Generally not purchasable
-**Power Level**: Exceptional abilities, game-changing effects, legendary capabilities
 
-Very rare magical items are campaign-defining treasures representing major achievements and creating new strategic possibilities.
+Very rare magical items are campaign-defining treasures. A ring of wishes, armor forged by gods, a staff that commands storms. Finding such an item represents a major achievement and creates new strategic possibilities for the entire party.
 
 ### Legendary Magical Items
 **Availability**: Unique artifacts, campaign centerpieces
 **Cost**: Not purchasable
-**Power Level**: Artifact-level power, story-defining abilities, world-shaking potential
 
-Legendary items are unique artifacts with histories, personalities, and capabilities that make them story elements as much as equipment.
+Legendary items are unique artifacts with histories, personalities, and world-shaking capabilities. The sword that killed a god, the crown of a fallen empire, the book that contains all mortal knowledge. These are story elements as much as equipment.
 
-## Magical Item Categories
+## Types of Magical Items
 
 ### Potions & Consumables
 

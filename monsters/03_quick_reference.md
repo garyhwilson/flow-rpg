@@ -43,13 +43,13 @@ Fast-lookup tables and guidelines for running adversaries at the table.
 
 ## COMMON ABILITY COSTS
 
-| Flow Cost | Power Level | Examples |
-|-----------|-------------|----------|
-| 0 | Natural/passive | Poison, natural armor, flight |
-| 1 | Basic tactical | Extra movement, minor buff, defensive reaction |
-| 2 | Significant | Area effect, strong buff/debuff |
-| 3 | Powerful | Stun, major damage, summon allies |
-| 4+ | Dramatic | Fight-changing effects |
+| Flow Cost | Effect | Examples |
+|-----------|--------|----------|
+| 0 | Natural abilities | Poison, natural armor, flight |
+| 1 | Tactical advantages | Extra movement, minor buff, defensive reaction |
+| 2 | Significant effects | Area effect, strong buff/debuff |
+| 3 | Powerful capabilities | Stun, major damage, summon allies |
+| 4+ | Dramatic moments | Fight-changing effects |
 
 ---
 

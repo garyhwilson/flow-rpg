@@ -7,9 +7,9 @@ Armor in Flow RPG represents meaningful defensive choices rather than simple num
 
 The armor system integrates with Flow's core mechanics through multiple vectors—damage reduction, attribute penalties, stance restrictions, and spellcasting limitations. These interactions ensure armor choice influences overall character strategy rather than serving as a simple "equip the best armor available" decision.
 
-## Understanding Armor Categories
+## Choosing Your Armor
 
-Armor categories represent fundamental approaches to protection, each trading different capabilities for defensive benefits. The right armor choice depends on character attributes, combat role, spellcasting needs, and tactical preferences.
+Armor represents a fundamental trade-off: protection versus mobility, spellcasting, and stealth. The right choice depends on your fighting style, magical needs, and tactical preferences.
 
 ### No Armor
 
@@ -361,36 +361,21 @@ Human armor varies tremendously by region and purpose:
 **Reasoning**: Balance combat effectiveness against versatility
 **Example**: Ranger in leather armor, bard in studded leather
 
-## Armor Progression
+## Armor Through a Character's Journey
 
-Character armor choices often evolve through adventuring career:
+Character armor choices evolve naturally through adventuring:
 
-### Early Career (Levels 1-3)
+### Starting Out
 
-Characters typically wear whatever armor they can afford and effectively use:
+New adventurers wear whatever they can afford or scrounge. A fighter might have a hand-me-down chainmail shirt from their militia days. A cleric wears simple leather until the temple can provide better. Rangers and rogues prefer light armor that doesn't impede their mobility. Most spellcasters avoid armor entirely, though elves sometimes wear light leather.
 
-- **Fighters**: Medium armor or best affordable option
-- **Clerics/Paladins**: Light armor, aspiring to medium
-- **Rangers/Rogues**: Light armor
-- **Spellcasters**: No armor or light armor if elven
+### Finding Their Footing
 
-### Mid Career (Levels 4-6)
+As characters establish themselves and accumulate resources, they upgrade to armor suited to their fighting style. Warriors who favor heavy protection save for quality plate. Those preferring mobility seek out superior leatherwork. The unarmored look to magical alternatives - protective amulets, enchanted bracers, or warded robes.
 
-Characters upgrade to optimal armor for their build:
+### Renowned Heroes
 
-- **Heavy armor specialists**: Acquiring full plate
-- **Medium armor users**: Superior quality medium armor
-- **Light armor users**: Masterwork light armor with modifications
-- **Unarmored characters**: Possibly magical protection items
-
-### Late Career (Levels 7+)
-
-Characters possess ideal armor for their role:
-
-- **Enchanted armor**: Magical enhancements providing superior protection
-- **Specialized modifications**: Custom features for specific tactics
-- **Cultural masterworks**: Legendary craftsmanship from renowned artisans
-- **Signature pieces**: Named armor with personal history and significance
+Experienced adventurers often possess armor that tells a story: enchanted plate forged by dwarven smiths, dragonhide armor crafted from a fallen foe, an ancestral breastplate passed down through generations, or a masterwork cuirass gifted by a grateful monarch. Such armor becomes part of the character's legend.
 
 ## Armor Maintenance and Damage
 

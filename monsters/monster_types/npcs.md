@@ -214,7 +214,7 @@ Who they know, what resources they control
 ---
 
 ### PRIEST / CLERIC
-*Temple priest, healer, spiritual guide*
+*Temple servant, tender of wounds, spiritual guide*
 
 **Role:** Spiritual guidance, healing, divine magic
 **Motivation:** Serve deity, help community, spread faith
@@ -689,7 +689,7 @@ Roll or choose from each category:
 
 ### ALLY: BROTHER EDMUND
 
-**Role:** Temple priest, healer
+**Role:** Temple priest who tends the wounded and comforts the afflicted
 **Motivation:** Serve deity (god of healing/protection), help those in need
 
 **Attributes:** Will +3, Presence +2, Mind +2

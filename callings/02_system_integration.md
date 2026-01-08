@@ -6,13 +6,11 @@ This document explains how Callings integrate with the core Flow RPG system mech
 
 The milestone advancement system naturally pairs with the Calling system, as character growth often aligns with Calling development.
 
-### Milestone Types
+### Earning Milestones Through Your Calling
 
-- **Minor Milestones**: Moments that reinforce your Calling
-- **Moderate Milestones**: Challenges that test your Calling
-- **Major Milestones**: Transformative events that evolve your Calling
+Milestones emerge naturally from pursuing your Calling. Small moments of character expression earn minor rewards. Significant challenges that test your convictions warrant moderate advancement. Transformative events that fundamentally change who you are - or prove who you've always been - represent major milestones.
 
-### Example Milestone Triggers by Calling
+Here's how this plays out for different Callings:
 
 **Advocate:**
 - **Minor**: Successfully exposing a minor injustice
@@ -128,54 +126,27 @@ Each Calling generates Flow through actions aligned with their core drive:
 **Champion:** Extra Flow in Aggressive stance when protecting (+1 Flow)
 **Mediator:** Resolving conflicts peacefully (+1 Flow)
 
-### Flow Expenditure Patterns
+### How Each Calling Spends Flow
 
-Different Callings tend to spend Flow in characteristic ways:
+Your Calling shapes not just when you gain Flow, but how you instinctively want to spend it.
 
-**Advocate:** 
-- Prefers spending Flow on revealing hidden information
-- Often uses Flow to boost social rolls exposing wrongdoing
-- Signature Flow use: Righteous Revelation (3 Flow) - automatically expose one hidden truth
+**Advocates** save their Flow for moments of revelation. When Marcus the Advocate finally confronts the corrupt magistrate, he pours 3 Flow into *Righteous Revelation* - the truth spills out whether the magistrate wants it to or not. Every coin skimmed, every bribe taken, laid bare.
 
-**Guardian:**
-- Prefers spending Flow on protective actions
-- Often uses Flow to boost healing and defensive rolls
-- Signature Flow use: Guardian's Intercession (2 Flow) - take damage meant for another
+**Guardians** spend Flow protecting others. Sera sees the arrow flying toward the young prince and burns 2 Flow on *Guardian's Intercession*, throwing herself into its path. The wound hurts, but the prince lives.
 
-**Exemplar:**
-- Prefers spending Flow on impressive demonstrations of skill
-- Often uses Flow to boost rolls that will bring recognition
-- Signature Flow use: Perfect Performance (3 Flow) - automatic success on a skill demonstration
+**Exemplars** invest Flow in moments that will be remembered. Kael the duelist saves his Flow for the climactic exchange, then spends 3 Flow on *Perfect Performance* - his bladework becomes poetry, witnessed by the assembled nobles.
 
-**Seeker:**
-- Prefers spending Flow on authentic self-expression
-- Often uses Flow to boost rolls that challenge conventions
-- Signature Flow use: True Self (2 Flow) - ignore external penalties for one action
+**Seekers** spend Flow to be truly themselves. When the priest demands Lyra conform to tradition, she burns 2 Flow on *True Self*, speaking her mind despite the social pressure that would normally silence her.
 
-**Scholar:**
-- Prefers banking Flow for critical moments
-- Often uses Flow to boost recall or analysis rolls
-- Signature Flow use: Perfect Recall (2 Flow) - automatically remember any information previously encountered
+**Scholars** hoard Flow for critical insights. Brother Aldric has been saving Flow all session. When the party needs to decipher the ancient text, he spends 2 Flow on *Perfect Recall*, remembering a footnote from a book he read twenty years ago.
 
-**Sentinel:**
-- Prefers spending Flow on awareness and preparation
-- Often uses Flow to boost detection and defensive rolls
-- Signature Flow use: Perfect Vigilance (3 Flow) - automatically detect any hidden threat
+**Sentinels** spend Flow on vigilance. Captain Thorne burns 3 Flow on *Perfect Vigilance* before entering the warehouse - every trap, every hidden enemy, every escape route revealed to his keen awareness.
 
-**Enthusiast:**
-- Prefers sharing Flow with allies
-- Often uses Flow to boost rolls that create new opportunities
-- Signature Flow use: Boundless Optimism (2 Flow) - remove a negative condition
+**Enthusiasts** share their Flow freely. Pip spends 2 Flow on *Boundless Optimism* to lift the despair from a wounded companion - their pain doesn't disappear, but suddenly it feels bearable.
 
-**Champion:**
-- Prefers spending Flow on decisive actions
-- Often uses Flow to boost combat and intimidation rolls
-- Signature Flow use: Overwhelming Force (4 Flow) - double damage on an attack
+**Champions** spend Flow on decisive action. When the enemy champion stands between her and victory, Valeria pours 4 Flow into *Overwhelming Force* - one strike that ends the duel.
 
-**Mediator:**
-- Prefers spending Flow on understanding and communication
-- Often uses Flow to boost diplomatic and insight rolls
-- Signature Flow use: Perfect Understanding (3 Flow) - automatically succeed on a communication roll
+**Mediators** spend Flow on understanding. Ambassador Kai burns 3 Flow on *Perfect Understanding* - suddenly the trade negotiation makes sense, the hidden agendas clear, the path to agreement obvious.
 
 ## Combat Stances and Callings
 

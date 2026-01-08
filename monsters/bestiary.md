@@ -231,7 +231,7 @@ This chapter presents adversaries and creatures for your Flow RPG adventures. Ea
 **Special:** Darkvision, excellent at hiding in underbrush (+2 to Stealth in wilderness)
 **Tactics:** Attacks only from ambush or when cornered. Prefers to observe and report. Will surrender if captured, offering information about the tribe in exchange for his life.
 
-*Goblin scouts typically have Guard 10-12. They're cowards individually but dangerous in groups of 6 or more, where mob courage kicks in.*
+*Goblin scouts typically have Guard 10-12. They're cowards individually but dangerous in groups of 6 or more, where they find courage in numbers.*
 
 ---
 
