@@ -49,28 +49,28 @@ Choose ONE of the following when you reach a minor milestone:
 - Total attribute points must remain the same
 - Example: Lower Grace by -1 to raise Mind by +1
 
-**Combat Edge**
+**Combat Specialty**
 
-- Gain a minor combat improvement (see Combat Edges list below)
-- Edges provide incremental power growth
-- Can take same Edge multiple times if limit allows
+- Gain a minor combat improvement (see Combat Specialties list below)
+- Specialties provide incremental power growth
+- Can take same Specialty multiple times if limit allows
 
-**Skill Edge**
+**Skill Specialty**
 
 - Gain +1 to specific application of a skill
 - Example: +1 to Athletics when climbing
 - Narrows focus for specialized expertise
 
-**Momentum Edge**
+**Momentum Specialty**
 
 - Increase maximum Momentum capacity by +1 (can take up to 3 times)
 - Example: Increases max Momentum from +6 to +7
 
-### Combat Edges
+### Combat Specialties
 
-Minor improvements that provide incremental power growth. Some edges can be taken multiple times up to their limit.
+Minor improvements that provide incremental power growth. Some specialties can be taken multiple times up to their limit.
 
-| Edge                  | Benefit                           | Limit                |
+| Specialty             | Benefit                           | Limit                |
 | --------------------- | --------------------------------- | -------------------- |
 | **Weapon Focus**      | +1 damage with one weapon type    | Once per weapon type |
 | **Armor Training**    | Reduce armor penalty by 1         | Once per armor type  |
@@ -230,7 +230,7 @@ Choose ONE of the following when you reach a major milestone:
 **Skill Expertise**
 
 - Advance any skill to Expert level (+2) if not already
-- Or gain a skill specialization edge (+1 to specific applications)
+- Or gain a skill specialization specialty (+1 to specific applications)
 - Expert-level skills represent peak human mastery
 
 **Calling Transcendence/Synthesis**
@@ -261,7 +261,7 @@ _After defeating the ancient lich and recovering the Artifact of Ages, the party
 
 **Elena (Cleric)** chooses Calling Transcendence, evolving her Guardian Calling. She can now spend 1 Momentum to reduce damage to a dying ally by half AND when she successfully defuses conflict without violence, she and all participants gain 1 Momentum.
 
-**Magnus (Fighter)** achieves Combat Mastery, gaining a skill specialization edge that grants +1 to Combat when fighting multiple opponents, and the ability to make an extra attack when scoring a critical hit.
+**Magnus (Fighter)** achieves Combat Mastery, gaining a skill specialization specialty that grants +1 to Combat when fighting multiple opponents, and the ability to make an extra attack when scoring a critical hit.
 
 **Lyra (Wizard)** gains the Legendary Technique Unstoppable Assault, allowing her to cast spells that cannot miss when she spends 6 Momentum, representing her complete mastery of magical precision.
 
@@ -325,7 +325,7 @@ After the **Second Major Milestone** (legendary status), characters are appropri
 
 - Guard = 12 + max(Might, Grace, Will)
 - Guard does not automatically scale with milestones
-- Survivability increases through milestone choices (edges, techniques)
+- Survivability increases through milestone choices (specialties, techniques)
 - Allows tough, agile, or mentally resilient characters to be effective
 
 **Momentum Generation Rate**
@@ -356,19 +356,19 @@ After the **Second Major Milestone** (legendary status), characters are appropri
 **After Two Minor Milestones:**
 
 - Advanced Sorcery from Competent (+0) to Professional (+1)
-- Gained Tough Edge (+2 Guard)
-- Guard: 17 (15 base + 2 from edge)
+- Gained Tough Specialty (+2 Guard)
+- Guard: 17 (15 base + 2 from specialty)
 
 **After First Moderate Milestone (Session 3):**
 
 - Increased Will to +4 (enhancing both spell power and Vitality)
 - Developed Signature Move "Healing Word" - Command that also recovers 1d6 Guard
-- Guard: 18 (12 + 4 from Will + 2 from edge), Vitality: 14 (10 + 4)
+- Guard: 18 (12 + 4 from Will + 2 from specialty), Vitality: 14 (10 + 4)
 
 **After Four Minor Milestones (Total 6 Milestones):**
 
 - Advanced Sorcery to Expert (+2)
-- Gained Hardy Edge (+2 Vitality)
+- Gained Hardy Specialty (+2 Vitality)
 - Guard: 18, Vitality: 16
 
 **After Second Moderate Milestone (Session 6):**
@@ -380,7 +380,7 @@ After the **Second Major Milestone** (legendary status), characters are appropri
 
 - Synthesized Guardian and Scholar Callings
 - Can now protect allies from death AND begin scenes at +1 Momentum
-- Guard: 20 (12 + 4 + 4 from edges), Vitality: 18
+- Guard: 20 (12 + 4 + 4 from specialties), Vitality: 18
 - Has become a legendary battle medic combining protective instincts with scholarly preparation
 
 This evolution shows how a character grows in power through milestone scaling while maintaining their core concept.

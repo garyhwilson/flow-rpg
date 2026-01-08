@@ -41,8 +41,8 @@ Fighters begin with the following skill proficiencies, reflecting their speciali
 - Athletics (physical capability beyond combat applications)
 - Command (battlefield leadership and intimidation)
 
-**Starting Edge:**
-Choose one Edge at character creation:
+**Starting Specialty:**
+Choose one Specialty at character creation:
 
 - **Weapon Focus:** +1 damage with one specific weapon type
 - **Tough:** +2 Guard

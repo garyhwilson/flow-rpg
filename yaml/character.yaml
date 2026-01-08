@@ -174,7 +174,7 @@ archetypes:
     immediate:
       - "Pre-selected skills that work together"
       - "Starting equipment package"
-      - "Thematic starting edge"
+      - "Thematic starting specialty"
       - "Access to subsystem without prerequisites"
 
     ongoing:
@@ -218,7 +218,7 @@ archetypes:
       note: "Represents fundamental martial discipline and adaptability"
       starting_momentum: 1
 
-    starting_edge:
+    starting_specialty:
       choice: ["weapon_focus", "tough"]
       weapon_focus: "+1 damage with chosen weapon type"
       tough: "+2 Guard"
@@ -275,7 +275,7 @@ archetypes:
         - Synergizes with Stealth and Survival skills
         - Using Survival for attack allows +4 total at Session 1 (Awareness +3, Survival +1)
 
-    starting_edge:
+    starting_specialty:
       choice: ["fast_movement", "precise_strike"]
       fast_movement: "+1 zone of movement"
       precise_strike: "Reroll one damage die per attack"
@@ -528,9 +528,9 @@ custom_build:
     restrictions: "No skill may start above Competent (0)"
     advantage: "Start with 4 skills vs archetype's 3"
 
-  starting_edges:
+  starting_specialties:
     selection: "Choose TWO from universal list (double archetype bonus!)"
-    universal_edges:
+    universal_specialties:
       tough:
         effect: "+2 Guard"
         description: "Natural resilience"
@@ -864,7 +864,7 @@ derived_values:
     base_zones_per_turn: 1
     modifiers:
       no_armor: 2
-      fast_movement_edge: "+1"
+      fast_movement_specialty: "+1"
       halfling_size: "Can move through enemies"
     double_move: "2 zones if no other action"
   

@@ -287,4 +287,4 @@ Thanks to all playtesters and contributors who have helped shape Autumn Phoenix 
 
 ---
 
-_Momentum RPG: Where your character's momentum becomes reality._
+_Autumn Phoenix RPG: Where your character's momentum becomes reality._

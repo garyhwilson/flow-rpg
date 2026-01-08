@@ -61,7 +61,7 @@ momentum_rpg_system:
         - 'Minor milestones (every session)'
         - 'Moderate milestones (sessions 3, 6, 9)'
         - 'Major milestones (sessions 5 and 10)'
-        - 'Edges system'
+        - 'Specialties system'
         - 'Campaign designed for 8-12 sessions'
         - 'Retirement at peak power'
 
@@ -145,7 +145,7 @@ momentum_rpg_system:
     sweet_spot_edition:
       philosophy: 'Bounded accuracy that ACTUALLY works'
       core_insight: 'Unlimited progression breaks bounded accuracy - cap modifiers or TN 8 becomes meaningless'
-      solution: 'Hard cap at +5 total modifier (attribute +3, skill +2, edges +1)'
+      solution: 'Hard cap at +5 total modifier (attribute +3, skill +2, specialties +1)'
       campaign_length: '8-12 sessions is the natural lifespan for +0 to +5 progression'
       retirement: 'Characters conclude at heroic peak rather than grinding through mechanical breakdown'
       math: 'At +5 cap: 97.2% success vs TN 8 (nearly automatic - only fail on 1,1)'
@@ -194,7 +194,7 @@ momentum_rpg_system:
 
       custom_build:
         - 'Start with blank slate'
-        - 'Choose 3 skills and starting edge'
+        - 'Choose 3 skills and starting specialty'
         - '100 coin equipment budget'
         - 'Build exactly what you envision'
 

@@ -143,7 +143,7 @@ pregenerated_characters:
       calling:
         protective_surge: "When ally takes damage, gain +1 Momentum"
         helpers_intuition: "Know when someone needs help"
-      edge:
+      specialty:
         tough: "+2 Guard (included)"
     
     personality:
@@ -200,7 +200,7 @@ pregenerated_characters:
       calling:
         authentic_insight: "+3 Momentum when trying new approach"
         soul_reading: "Ask one deep question per scene"
-      edge:
+      specialty:
         precise_strike: "Reroll one damage die"
     
     personality:
@@ -302,8 +302,8 @@ pregenerated_characters:
       vitality: 10  # 10 + 0
       momentum:
         current: 0
-        max: 7  # Momentum Harmony edge
-      movement: 2  # Fast Movement edge
+        max: 7  # Momentum Harmony specialty
+      movement: 2  # Fast Movement specialty
     
     equipment:
       armor: "Light (DR 1)"
@@ -318,7 +318,7 @@ pregenerated_characters:
       calling:
         joyful_momentum: "Share Momentum with adjacent allies"
         silver_lining: "Find benefit in any situation"
-      edges:
+      specialties:
         momentum_harmony: "+1 max Momentum"
         fast_movement: "+1 zone movement"
         riposte: "Counter after successful defense"
@@ -365,7 +365,7 @@ pregenerated_characters:
       vitality: 10  # 10 + 0
       momentum:
         current: 1  # Scholar starts at +1
-        max: 7  # Momentum Harmony edge
+        max: 7  # Momentum Harmony specialty
       movement: 2  # No armor bonus
       spellcasting: "Yes (Mind 3 + Awareness 1 = 4)"
     

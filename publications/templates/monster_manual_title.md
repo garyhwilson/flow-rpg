@@ -1,4 +1,4 @@
-# MOMENTUM RPG
+# AUTUMN PHOENIX RPG
 
 ## MONSTER MANUAL
 
@@ -24,4 +24,4 @@ Whether you need a band of goblins for tonight's session or a legendary dragon t
 
 **Version 1.0 (Draft)**
 
-_For use with Momentum RPG_
+_For use with Autumn Phoenix RPG_

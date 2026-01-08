@@ -32,7 +32,7 @@ Momentum is the central resource that powers combat techniques, spells, and narr
 
 **Momentum Range:** -3 to +6 (reduced from original)
 
-> **Note:** Momentum cannot exceed your maximum (default +6, can be increased through edges and abilities). Any excess Momentum generation is lost.
+> **Note:** Momentum cannot exceed your maximum (default +6, can be increased through specialties and abilities). Any excess Momentum generation is lost.
 
 **Starting Momentum:** 0 (neutral position)
 

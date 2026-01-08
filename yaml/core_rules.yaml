@@ -466,12 +466,12 @@ attributes:
 skills:
   skill_caps:
     total_modifier_maximum: "+5"
-    formula: "Attribute + Skill + Edges ≤ 5"
+    formula: "Attribute + Skill + Specialties ≤ 5"
 
     breakdown:
       attribute_max: "+3 (natural human limits)"
       skill_max: "+2 (Expert level)"
-      edge_bonus: "+1 from specializations"
+      specialty_bonus: "+1 from specializations"
 
     design_rationale:
       - "Maintains bounded accuracy - prevents unlimited modifier inflation"

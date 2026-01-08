@@ -184,7 +184,7 @@ zones:
     
     modifiers:
       no_armor: "+1 zone per turn"
-      fast_movement_edge: "+1 zone per turn"
+      fast_movement_specialty: "+1 zone per turn"
       difficult_terrain: "-1 zone per turn"
       halfling: "Move through enemy zones"
   
@@ -228,7 +228,7 @@ health_system:
 
     armor_bonus:
       medium_armor: "+2 Guard at scene start"
-      special_abilities: "Various edges grant +2"
+      special_abilities: "Various specialties grant +2"
   
   vitality:
     formula: "10 + will"
@@ -443,7 +443,7 @@ armor:
       grace: -2
       momentum: "None"
       spellcasting: -2
-      movement: "Maximum 1 zone per turn (cannot be increased by edges)"
+      movement: "Maximum 1 zone per turn (cannot be increased by specialties)"
     benefits:
       knockback_immunity: "Cannot be moved by attacks"
       damage_reduction: "Highest protection (DR 4)"

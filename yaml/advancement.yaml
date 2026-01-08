@@ -88,7 +88,7 @@ minor_milestones:
         - "Lower Grace -1, raise Mind +1"
         - "Reduce Might -1, increase Will +1"
     
-    combat_edges:
+    combat_specialties:
       description: "Minor combat improvements"
       philosophy: "Specialization, not raw power increase"
 
@@ -138,7 +138,7 @@ minor_milestones:
           effect: "+1 Guard in Defensive stance"
           limit: "Once only"
     
-    skill_edges:
+    skill_specialties:
       description: "+1 to specific skill application"
       examples:
         combat:
@@ -349,7 +349,7 @@ major_milestones:
       legendary_capability:
         perfect_skill:
           effect: "One skill to Expert (+2) if not already"
-          plus: "Gain +1 edge in that skill"
+          plus: "Gain +1 specialty in that skill"
           description: "Perfect mastery with specialization"
           limit: "Total modifier still capped at +5"
 
@@ -406,7 +406,7 @@ major_milestones:
         inspire_legend: "Grant major bonus to all allies"
         perfect_knowledge: "Know anything about topic"
     
-    mythic_edge:
+    mythic_specialty:
       description: "Supernatural capability"
 
       examples:
@@ -457,30 +457,30 @@ major_milestones:
       - "Multiversal dangers"
 
 # ============================================
-# EDGES SYSTEM
+# SPECIALTIES SYSTEM
 # ============================================
 
-edges_system:
+specialties_system:
   description: "Minor improvements providing growth variety"
   introduction: "Alternative to skill/attribute advancement"
   
   categories:
-    combat_edges:
+    combat_specialties:
       description: "Martial improvements"
       acquisition: "Minor milestones"
       stacking: "Some stack, some don't"
     
-    skill_edges:
+    skill_specialties:
       description: "Specialized applications"
       acquisition: "Minor milestones"
       stacking: "Different specializations stack"
     
-    momentum_edges:
+    momentum_specialties:
       description: "Resource management"
       acquisition: "Minor milestones"
       stacking: "Limited stacking"
     
-    social_edges:
+    social_specialties:
       description: "Interaction benefits"
       acquisition: "Minor milestones or roleplay"
       examples:
@@ -488,7 +488,7 @@ edges_system:
         contact: "Ally in specific location"
         language: "Learn new language"
     
-    equipment_edges:
+    equipment_specialties:
       description: "Gear improvements"
       acquisition: "Milestone or quest reward"
       examples:
@@ -496,8 +496,8 @@ edges_system:
         masterwork_tools: "+1 to craft/profession"
         lucky_charm: "Reroll one die per scene"
   
-  edge_chains:
-    description: "Edges that build on each other"
+  specialty_chains:
+    description: "Specialties that build on each other"
     
     example_chain_martial:
       1_weapon_focus: "+1 damage with type"
@@ -563,11 +563,11 @@ campaign_progression:
     philosophy: "Bounded accuracy - TN 8 stays relevant throughout"
 
     skill_caps:
-      total_maximum: "+5 (attribute + skill + edges)"
+      total_maximum: "+5 (attribute + skill + specialties)"
       breakdown:
         attribute: "+3 max (peak natural human)"
         skill: "+2 max (Expert level)"
-        edges: "+1 from specializations"
+        specialties: "+1 from specializations"
 
       design_note: "Capped at +5 to maintain challenge throughout 8-12 sessions"
 
@@ -616,7 +616,7 @@ advancement_variants:
     pros: "Clear objectives"
     cons: "Can feel videogamey"
     examples:
-      - "Defeat 10 orcs: Combat Edge"
+      - "Defeat 10 orcs: Combat Specialty"
       - "Save 3 villages: Guardian calling benefit"
       - "Discover 5 ruins: Lore skill increase"
   
@@ -654,7 +654,7 @@ retirement_legacy:
     description: "Retired character's impact"
     
     mechanical_legacy:
-      student: "New PC starts with extra edge"
+      student: "New PC starts with extra specialty"
       heir: "Inherit legendary item"
       inspired: "Start with higher attribute"
     
@@ -677,7 +677,7 @@ advancement_guidelines:
   recommended_progression:
     sessions_1_3:
       priority_1: "Get primary skill to Professional (+1)"
-      priority_2: "Pick up combat edge or technique"
+      priority_2: "Pick up combat specialty or technique"
       priority_3: "Shore up weaknesses with new skills"
       avoid: "Spreading too thin across many skills"
 
@@ -696,7 +696,7 @@ advancement_guidelines:
 
     session_5_major:
       optimal_choices:
-        combat_focused: "Perfect skill (Expert + edge) or subsystem mastery"
+        combat_focused: "Perfect skill (Expert + specialty) or subsystem mastery"
         magic_focused: "Attribute excellence (casting stat to +3) or legendary technique"
         balanced: "Attribute excellence (two attributes +1) or Vitality transcendence"
 
@@ -711,14 +711,14 @@ advancement_guidelines:
 
     sessions_6_10:
       strategy: "Reach +5 cap and fill gaps"
-      minors: "Edges, techniques, skill variety"
+      minors: "Specialties, techniques, skill variety"
       session_6_moderate: "Whatever you didn't take at session 3"
       session_9_moderate: "Final skill/attribute push to cap"
       session_10_major: "Complete your build vision - this is your final transformative choice"
 
   archetype_specific:
     fighter:
-      early: "Combat to Professional (+1), weapon techniques"
+      early: "Combat to Professional (+1), weapon specialties"
       mid: "Guard increases, Combat to Expert (+2)"
       late: "Might to +3, battlefield control, signature moves"
 
@@ -758,7 +758,7 @@ advancement_guidelines:
     this_is_intentional: "Bounded accuracy REQUIRES capping vertical growth"
 
     why_it_happens:
-      optimizer_path: "Attribute +2 (start) + Skill +2 (Expert) + Edge +1 = +5 total"
+      optimizer_path: "Attribute +2 (start) + Skill +2 (Expert) + Specialty +1 = +5 total"
       timing: "Can achieve by session 3 with focused choices"
       example: "Fighter: Might +3, Combat +2 = +5 by session 3-5"
 
@@ -785,14 +785,14 @@ advancement_guidelines:
           effect: "Increase Guard and Vitality"
           benefit: "Live long enough to use your mastery"
 
-        edges_and_specializations:
+        specialties_and_specializations:
           effect: "Narrow but deep expertise"
           examples: ["Dueling +1", "Urban Stealth +1"]
           benefit: "Excel in specific situations"
 
         legendary_powers:
           effect: "Gain transformative abilities at Major milestones"
-          examples: ["Subsystem mastery", "Mythic edges", "Legendary techniques"]
+          examples: ["Subsystem mastery", "Mythic specialties", "Legendary techniques"]
           benefit: "Transcend mortal limits in special ways"
 
     player_satisfaction:
@@ -838,14 +838,14 @@ default_build_paths:
       session_2_minor: "Athletics: Untrained → Novice"
       session_3_moderate: "+3 Guard (durability focus)"
       session_4_minor: "Combat: Competent → Professional (+1)"
-      session_5_major: "Perfect Skill (Combat to Expert +2 with edge)"
+      session_5_major: "Perfect Skill (Combat to Expert +2 with specialty)"
       session_6_moderate: "Signature Move: Devastating Cleave"
       session_7_minor: "Combat Reflexes (+1 defense)"
       session_8_minor: "Precise Strike (reroll damage)"
       session_9_moderate: "Attribute Improvement: Might +1 (to +3)"
       session_10_major: "Legendary Technique: Unstoppable Assault"
 
-    result: "Might +3, Combat Expert +2, multiple combat edges = +5 cap at session 5, then versatility"
+    result: "Might +3, Combat Expert +2, multiple combat specialties = +5 cap at session 5, then versatility"
 
   wizard_archmage_path:
     concept: "Reality-warping spellcaster"
@@ -872,12 +872,12 @@ default_build_paths:
       session_2_minor: "Stealth: Competent → Professional (+1)"
       session_3_moderate: "Skill Specialization: Urban Stealth/Urban Finesse/Urban Deceive (+1 each)"
       session_4_minor: "Precise Strike (reroll damage)"
-      session_5_major: "Perfect Skill: Stealth to Expert (+2) with edge"
+      session_5_major: "Perfect Skill: Stealth to Expert (+2) with specialty"
       session_6_moderate: "Attribute Improvement: Grace +1 (to +3)"
       session_7_minor: "Fast Movement (+1 zone)"
       session_8_minor: "Shadow Techniques (advanced sneak)"
       session_9_moderate: "Signature Move: Death Mark"
-      session_10_major: "Mythic Edge: Shadow Mastery"
+      session_10_major: "Mythic Specialty: Shadow Mastery"
 
     result: "Grace +3, Stealth Expert +2 = +5 cap at session 6, legendary shadow powers"
 
@@ -894,7 +894,7 @@ default_build_paths:
       session_7_minor: "Medicine: Professional → Expert (+2) [1/3]"
       session_8_minor: "Medicine: Professional → Expert (+2) [2/3]"
       session_9_moderate: "Medicine: Professional → Expert (+2) [3/3 complete]"
-      session_10_major: "Mythic Edge: Resurrection"
+      session_10_major: "Mythic Specialty: Resurrection"
 
     result: "Will +3, Medicine Expert +2 = +5 cap at session 9, divine powers throughout"
 
@@ -906,7 +906,7 @@ default_build_paths:
       session_2_minor: "Survival: Competent → Professional (+1)"
       session_3_moderate: "Skill Specialization: Ranged Combat/Tracking/Wilderness Stealth"
       session_4_minor: "Precise Strike (reroll damage)"
-      session_5_major: "Perfect Skill: Survival to Expert (+2) with edge"
+      session_5_major: "Perfect Skill: Survival to Expert (+2) with specialty"
       session_6_moderate: "Attribute Improvement: Grace +1 (to +3)"
       session_7_minor: "Fast Movement (+1 zone)"
       session_8_minor: "Terrain Mastery: Forest"

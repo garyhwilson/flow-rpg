@@ -132,7 +132,7 @@ _Master of weapons and combat techniques_
 - Command (Novice -1)
 
 **Starting Equipment:** Medium armor, martial weapon, shield
-**Starting Edge:** Choose Weapon Focus (+1 damage with one weapon type) or Tough (+2 Guard)
+**Starting Specialty:** Choose Weapon Focus (+1 damage with one weapon type) or Tough (+2 Guard)
 **Natural Callings:** Champion, Guardian, Sentinel
 
 ### RANGER
@@ -146,7 +146,7 @@ _Wilderness expert and skilled hunter_
 - Investigate (Novice -1)
 
 **Starting Equipment:** Light armor, bow, tracking kit
-**Starting Edge:** Choose Fast Movement (+1 zone) or Precise Strike (reroll one damage die)
+**Starting Specialty:** Choose Fast Movement (+1 zone) or Precise Strike (reroll one damage die)
 **Natural Callings:** Seeker, Scholar, Sentinel
 
 ### PALADIN

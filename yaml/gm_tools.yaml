@@ -509,7 +509,7 @@ sweet_spot_edition:
 
   campaign_parameters:
     ideal_length: "8-12 sessions"
-    modifier_cap: "+5 total (attribute + skill + edges)"
+    modifier_cap: "+5 total (attribute + skill + specialties)"
     design_goal: "TN 8 stays relevant from session 1 through campaign conclusion"
     retirement: "Characters conclude at peak power around session 12"
 

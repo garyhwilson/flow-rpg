@@ -57,8 +57,8 @@ Rangers begin with the following skill proficiencies, reflecting their specializ
 - Combat (wilderness-adapted fighting techniques and ranged weapon proficiency)
 - Investigate (tracking, observation, and detail-oriented search)
 
-**Starting Edge:**
-Choose one Edge at character creation:
+**Starting Specialty:**
+Choose one Specialty at character creation:
 
 - **Fast Movement:** +1 zone of movement per turn
 - **Precise Strike:** Reroll one damage die per attack
