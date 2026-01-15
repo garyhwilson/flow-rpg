@@ -85,7 +85,7 @@ sections:
 
   # ===== ADVANCEMENT =====
   - title: "Part VI: Character Advancement"
-    intro: "Pacing character growth and managing milestone advancement."
+    intro: "Pacing character growth and managing XP-based advancement through the five ranks."
     content:
       - file: "core_rules/06_advancement.md"
 

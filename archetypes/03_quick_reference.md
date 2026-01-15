@@ -157,9 +157,9 @@
 | **Cleric**  | Spiritual guide | Healer                | Religious position     |
 | **Bard**    | Entertainer     | Diplomat              | Performance reputation |
 
-## Advancement Milestones
+## Advancement by Rank
 
-### Minor Milestone Examples
+### Novice-Seasoned Examples
 
 - **Fighter:** Master a new weapon or combat technique
 - **Ranger:** Adapt to a new environment type
@@ -169,7 +169,7 @@
 - **Cleric:** Demonstrate faith through significant service
 - **Bard:** Learn a new performance style or tradition
 
-### Moderate Milestone Examples
+### Veteran-Heroic Examples
 
 - **Fighter:** Develop a personal fighting style
 - **Ranger:** Form a deep connection with specific territory
@@ -179,7 +179,7 @@
 - **Cleric:** Transform a community through faith
 - **Bard:** Create a work with lasting cultural impact
 
-### Major Milestone Examples
+### Legendary Examples
 
 - **Fighter:** Create a new combat approach or school
 - **Ranger:** Achieve harmony with a challenging environment

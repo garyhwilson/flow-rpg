@@ -416,51 +416,51 @@ Each magical tradition naturally gravitates toward spells that resonate with the
 
 ## Advancement System Integration
 
-### Milestone Progress by Archetype
+### Rank Progress by Archetype
 
-Different archetypes experience milestone advancement in characteristic ways:
+Different archetypes experience rank progression in characteristic ways:
 
 **Fighter:**
 
-- **Minor Milestones:** Mastery of specific weapons or techniques
-- **Moderate Milestones:** Development of personal fighting style
-- **Major Milestones:** Creation of new combat approaches
+- **Novice-Seasoned:** Mastery of specific weapons or techniques
+- **Veteran-Heroic:** Development of personal fighting style
+- **Legendary:** Creation of new combat approaches
 
 **Ranger:**
 
-- **Minor Milestones:** Adaptation to new environments
-- **Moderate Milestones:** Deep connection with specific territory
-- **Major Milestones:** Harmony achievement with challenging environments
+- **Novice-Seasoned:** Adaptation to new environments
+- **Veteran-Heroic:** Deep connection with specific territory
+- **Legendary:** Harmony achievement with challenging environments
 
 **Paladin:**
 
-- **Minor Milestones:** Oath fulfillment in challenging circumstances
-- **Moderate Milestones:** Conviction demonstration that inspires others
-- **Major Milestones:** Divine recognition of exceptional service
+- **Novice-Seasoned:** Oath fulfillment in challenging circumstances
+- **Veteran-Heroic:** Conviction demonstration that inspires others
+- **Legendary:** Divine recognition of exceptional service
 
 **Rogue:**
 
-- **Minor Milestones:** Mastery of specific skill applications
-- **Moderate Milestones:** Successful completion of complex operations
-- **Major Milestones:** Innovation of new approaches to obstacles
+- **Novice-Seasoned:** Mastery of specific skill applications
+- **Veteran-Heroic:** Successful completion of complex operations
+- **Legendary:** Innovation of new approaches to obstacles
 
 **Wizard:**
 
-- **Minor Milestones:** Mastery of specific spell categories
-- **Moderate Milestones:** Magical research breakthroughs
-- **Major Milestones:** Creation of new magical theory or spells
+- **Novice-Seasoned:** Mastery of specific spell categories
+- **Veteran-Heroic:** Magical research breakthroughs
+- **Legendary:** Creation of new magical theory or spells
 
 **Cleric:**
 
-- **Minor Milestones:** Faithful service in challenging circumstances
-- **Moderate Milestones:** Community transformation through faith
-- **Major Milestones:** Divine intervention facilitation
+- **Novice-Seasoned:** Faithful service in challenging circumstances
+- **Veteran-Heroic:** Community transformation through faith
+- **Legendary:** Divine intervention facilitation
 
 **Bard:**
 
-- **Minor Milestones:** Mastery of new performance techniques
-- **Moderate Milestones:** Creation of works with lasting impact
-- **Major Milestones:** Performance that changes history or reality
+- **Novice-Seasoned:** Mastery of new performance techniques
+- **Veteran-Heroic:** Creation of works with lasting impact
+- **Legendary:** Performance that changes history or reality
 
 ### Learning New Techniques
 

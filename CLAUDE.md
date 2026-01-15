@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This repository contains **Autumn Phoenix RPG Sweet Spot Edition**, a tabletop RPG system designed for 8-12 session campaigns with bounded accuracy mechanics. The system is implemented in two parallel formats:
+This repository contains **Autumn Phoenix RPG**, a tabletop RPG system designed for 30-50 session campaigns with bounded accuracy mechanics. The system uses a Savage Worlds-inspired XP and Ranks progression. It is implemented in two parallel formats:
 
 1. **YAML structured data** (yaml/ directory) - Machine-readable game rules
 2. **Markdown narrative** (core_rules/, callings/, etc.) - Human-readable documentation
@@ -419,11 +419,11 @@ This pattern represents criminal organizations.
 
 ### Key Design Principle: Bounded Accuracy
 
-The system uses a **hard +5 total modifier cap** (attribute +3, skill +2, edges +1) to maintain meaningful dice rolls throughout 8-12 session campaigns. This is enforced mathematically:
+The system uses a **hard +5 total modifier cap** (attribute +3, skill +2, specialties +1) to maintain meaningful dice rolls throughout 30-50 session campaigns. This cap is typically reached at **Veteran rank** (sessions 17-24). This is enforced mathematically:
 
 - At +0 modifier vs TN 8: 58% success (challenging)
 - At +5 modifier vs TN 8: 97.2% success (nearly automatic)
-- **Critical**: GMs must use TN 10-12 for late-game challenges (sessions 7-12)
+- **Critical**: GMs must use TN 10-12 for Veteran+ rank challenges
 
 This cap is THE fundamental constraint - do not suggest changes that break it.
 
@@ -501,7 +501,7 @@ Mechanical content in markdown files can be marked with HTML comments to indicat
 Common drift issues to watch for:
 
 - Formula discrepancies (e.g., Guard = "12 + max" vs "8 + Higher")
-- Session timing differences (e.g., Major milestones at 5/10 vs 18/30)
+- Rank/advance timing differences
 - Skill tier modifiers (e.g., Professional = +1 vs +2)
 - Spell tier costs (e.g., Advanced = -1 vs -3)
 
@@ -632,7 +632,7 @@ drafts/
 
 **Balance change**:
 
-1. Edit YAML file (e.g., `advancement.yaml` for milestone options)
+1. Edit YAML file (e.g., `advancement.yaml` for advance options)
 2. Update design notes in `index.yaml` if philosophy changed
 3. Sync to markdown documentation
 4. Update examples if mechanics changed
@@ -667,8 +667,8 @@ critical_rule: 'Champions can make MAXIMUM 2 ATTACKS per round'
 From `index.yaml` - keep these principles in mind:
 
 1. **Bounded accuracy that ACTUALLY works** - Hard +5 cap required
-2. **8-12 sessions is the sweet spot** - Campaign concludes at peak power
-3. **TN scaling is mandatory** - GMs must use TN 10-12 at sessions 7-12
+2. **30-50 sessions to Legendary** - XP/Ranks system enables long campaigns
+3. **TN scaling by Rank** - GMs must use TN 10-12 for Veteran+ characters
 4. **Horizontal growth after cap** - Players gain versatility, not raw power
 5. **Archetypes are optional** - Custom Build is equally viable
 
@@ -676,9 +676,10 @@ From `index.yaml` - keep these principles in mind:
 
 - The +5 total modifier cap (breaks bounded accuracy)
 - Champion/powerful adversary 2-attack maximum (causes TPK with 3 attacks)
-- Deepen Expertise 3-minor requirement (2 minors hits cap too early)
+- Attribute increase limit of once per Rank (prevents rushing to +5 cap)
 - Guard formula (12 + max, not 8 + attribute)
 - Momentum range -3 to +6 (other ranges tested and rejected)
 - Skill tier modifiers (Professional = +1, not +2)
+- XP system (3-5 per session, 5 XP = 1 advance)
 
 These were all extensively playtested and mathematically validated.

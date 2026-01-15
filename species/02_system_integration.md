@@ -306,7 +306,7 @@ These different social patterns create distinctive interaction experiences:
 
 ## Advancement & Species
 
-The milestone system interacts distinctively with each species' developmental patterns and cultural values:
+The rank advancement system interacts distinctively with each species' developmental patterns and cultural values:
 
 ### Development Tempos
 
@@ -320,17 +320,17 @@ Different species experience personal growth through distinctive temporal patter
 
 **Halflings** evolve through social role adaptation, developing capabilities in response to community needs and interpersonal relationships. Their advancement pattern emphasizes practical skill application in changing social contexts, with personal growth intertwined with community development rather than pursued independently.
 
-### Milestone Focus
+### Advance Allocation
 
-Different species typically emphasize distinctive areas when selecting milestone enhancements:
+Different species typically emphasize distinctive areas when selecting advance options:
 
-**Humans** often distribute milestones across diverse capability areas, developing breadth of competence rather than extreme specialization in single domains. Their milestone selections typically prioritize versatility and novel combinations creating distinctive personal approaches.
+**Humans** often distribute advances across diverse capability areas, developing breadth of competence rather than extreme specialization in single domains. Their advance selections typically prioritize versatility and novel combinations creating distinctive personal approaches.
 
-**Elves** frequently focus milestones on perfecting specialized capabilities aligned with personal identity developed over centuries. Their milestone selections often represent subtle refinements of existing strengths rather than dramatic transformations or compensations for weaknesses.
+**Elves** frequently focus advances on perfecting specialized capabilities aligned with personal identity developed over centuries. Their advance selections often represent subtle refinements of existing strengths rather than dramatic transformations or compensations for weaknesses.
 
-**Dwarves** typically allocate milestones according to traditional development sequences established within their cultural frameworks. Their milestone selections build systematically upon established foundations, creating reliable capability progression following proven patterns.
+**Dwarves** typically allocate advances according to traditional development sequences established within their cultural frameworks. Their advance selections build systematically upon established foundations, creating reliable capability progression following proven patterns.
 
-**Halflings** usually direct milestones toward enhancing community contribution and social connection, developing capabilities that strengthen their place within interpersonal networks. Their milestone selections often emphasize skills supporting group effectiveness rather than individual achievement.
+**Halflings** usually direct advances toward enhancing community contribution and social connection, developing capabilities that strengthen their place within interpersonal networks. Their advance selections often emphasize skills supporting group effectiveness rather than individual achievement.
 
 ### Legacy Perspectives
 

@@ -24,7 +24,7 @@ character_creation:
           choices: ["fighter", "ranger", "paladin", "rogue", "wizard", "cleric", "bard"]
         custom_build:
           description: "Build your own character with flexible skill and equipment choices"
-          note: "Can later adopt archetype abilities through milestones"
+          note: "Can later adopt archetype abilities through advances"
     
     step_4_calling:
       action: "Select inner motivation providing Momentum benefits"
@@ -157,14 +157,14 @@ archetypes:
 
     key_principles:
       - "Archetypes are jumpstart templates, not mandatory paths"
-      - "Can diverge from archetype at any milestone"
+      - "Can diverge from archetype at any advance"
       - "Can adopt archetype features later through Custom Build"
       - "No penalties for abandoning archetype progression"
       - "Mix and match abilities through techniques.yaml"
 
     flexibility:
       at_creation: "Choose archetype OR custom build"
-      during_play: "Every milestone offers complete freedom"
+      during_play: "Every advance offers complete freedom"
       subsystem_access: "Any character can learn any subsystem"
       no_multiclassing: "No need - all options always available"
 
@@ -288,7 +288,7 @@ archetypes:
     unique_subsystem:
       name: "Favored Terrain"
       description: "Gain bonuses in specific environments"
-      progression: "Add new terrains at milestones"
+      progression: "Add new terrains via advances"
 
     natural_callings: ["seeker", "scholar", "sentinel"]
     
@@ -330,7 +330,7 @@ archetypes:
     unique_subsystem:
       name: "Divine Oath"
       description: "Sworn oath provides power and restrictions"
-      progression: "Oath evolves with major milestones"
+      progression: "Oath evolves at Heroic rank"
     
     natural_callings: ["advocate", "guardian", "champion"]
     
@@ -465,7 +465,7 @@ archetypes:
     unique_subsystem:
       name: "Divine Domain"
       description: "Deity grants specialized powers"
-      progression: "Domain powers expand at milestones"
+      progression: "Domain powers expand via advances"
     
     natural_callings: ["guardian", "mediator", "advocate"]
     
@@ -502,7 +502,7 @@ archetypes:
     unique_subsystem:
       name: "Bardic Inspiration"
       description: "Grant allies bonus dice through performance"
-      progression: "Inspiration die size increases with milestones"
+      progression: "Inspiration die size increases via advances"
     
     natural_callings: ["enthusiast", "mediator", "seeker"]
 
@@ -560,7 +560,7 @@ custom_build:
         description: "Family resources or past success"
 
       talented:
-        effect: "Choose one skill to advance faster (half milestone cost)"
+        effect: "Choose one skill to advance faster (half advance cost)"
         description: "Natural aptitude"
 
   starting_equipment:
@@ -588,10 +588,10 @@ custom_build:
         - "Adventurer's kit (30 coins)"
 
   progression:
-    flexibility: "Complete freedom in milestone choices"
+    flexibility: "Complete freedom in advance choices"
 
     subsystem_access:
-      description: "Can learn any archetype subsystem through milestones"
+      description: "Can learn any archetype subsystem through advances"
       requirement: "Narrative justification and/or training"
       examples:
         - "Learn Combat Techniques from Fighter mentor"
@@ -603,11 +603,11 @@ custom_build:
       description: "Can gain spellcasting if meeting requirements"
       options:
         attribute_based: "Meet tradition requirements (see magic_access)"
-        milestone_based: "Spend moderate milestone to gain Sorcery skill"
+        advance_based: "Spend advance to gain Sorcery skill"
         training_based: "Learn from mentor with proper narrative"
 
     archetype_adoption:
-      description: "Can fully adopt an archetype at Moderate Milestone"
+      description: "Can fully adopt an archetype at Seasoned rank"
       effect: "Gain archetype's unique subsystem and progression options"
       restriction: "Must meet narrative requirements"
       note: "Keeps all previously gained abilities"
@@ -844,7 +844,7 @@ derived_values:
     recovery:
       between_scenes: "Full restoration"
       rally_action: "1d6 once per scene"
-    progression: "Increased through milestone choices, not automatically"
+    progression: "Increased through advance choices (+2 Guard option)"
     design_note: "Base 12 + highest attribute ensures all builds have survivability. Will inclusion helps casters use mental fortitude for defense."
 
   vitality:
@@ -853,7 +853,7 @@ derived_values:
     recovery:
       natural: "1 per hour of rest"
       magical: "Varies by spell"
-    progression: "Increased through milestone choices, not automatically"
+    progression: "Increased through advance choices (+2 Vitality option)"
   
   momentum:
     starting: 0
@@ -886,19 +886,19 @@ derived_values:
 # ============================================
 
 calling_evolution:
-  minor_milestone:
+  any_advance:
     options:
       - "Deepen understanding of current calling"
       - "Gain minor related benefit (GM discretion)"
       - "Explore calling through roleplay"
-  
-  moderate_milestone:
+
+  seasoned_rank:
     options:
       - "Evolve interpretation of calling"
       - "Modify Momentum benefit trigger slightly"
       - "Add minor secondary benefit"
-  
-  major_milestone:
+
+  heroic_rank:
     transformation:
       description: "Complete calling change or synthesis"
       requirements:

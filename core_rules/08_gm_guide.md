@@ -444,35 +444,42 @@ Some checks are made by the GM:
 
 ### Campaign Arcs
 
-A full campaign typically consists of:
+A full campaign typically consists of 30-50 sessions across five ranks:
 
-**Introduction (Levels 1-3)**
+**Novice Arc (Sessions 1-8)**
 
 - Character establishment
 - World introduction
 - Early challenges and successes
-- Minor milestone advancement
+- Building toward the +5 modifier cap
 
-**Rising Action (Levels 4-7)**
+**Seasoned Arc (Sessions 9-16)**
 
 - Deepening plot
 - More dangerous threats
 - Character specialization
-- Moderate milestone advancement
+- Unlocking Seasoned-rank techniques
 
-**Complications (Levels 8-12)**
+**Veteran Arc (Sessions 17-24)**
 
 - Major antagonist revealed
-- Significant setbacks
-- Character evolution
-- Major milestone advancement
+- +5 modifier cap reached
+- Horizontal growth begins
+- Unlocking Veteran-rank abilities
 
-**Climax & Resolution (Levels 13+)**
+**Heroic Arc (Sessions 25-32)**
+
+- Significant setbacks and comebacks
+- Character evolution through versatility
+- World-shaping decisions
+- Heroic techniques available
+
+**Legendary Arc (Sessions 33+)**
 
 - Final confrontations
 - World-changing events
 - Character destinies fulfilled
-- Legendary achievements
+- Mythic achievements
 
 ### World Building
 

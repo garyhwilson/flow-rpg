@@ -1,470 +1,318 @@
 # CHARACTER ADVANCEMENT
 
-## The Milestone System
+## The XP and Ranks System
 
-This game uses milestone-based advancement instead of experience points. Milestones represent significant moments of character growth and development that occur naturally through the story.
+Autumn Phoenix RPG uses a Savage Worlds-inspired advancement system. Characters earn Experience Points (XP) each session, which accumulate into Advances that let you grow your character.
 
-### Philosophy Behind Milestones
+### Core Mechanics
 
-- **Story-Driven Growth:** Characters advance when the narrative calls for it
-- **No Bookkeeping:** No need to track XP or calculate advancement
-- **GM Control:** The GM determines when milestones occur based on story pacing
-- **Equal Advancement:** All characters reach milestones together
+- **GM awards 3-5 XP per session** (average 4)
+- **5 XP = 1 Advance**
+- **4 Advances = 1 Rank promotion**
+- **5 Ranks total:** Novice → Seasoned → Veteran → Heroic → Legendary
 
-### Types of Milestones
+### Why This System?
 
-There are three tiers of milestones, each representing a different magnitude of character development:
-
-1. **Minor Milestones:** Small but meaningful growth (individual development)
-2. **Moderate Milestones:** Substantial character development (group achievement)
-3. **Major Milestones:** Transformative evolution (campaign-defining moments)
+- **Simple tracking:** Just count XP to 5, then spend an advance
+- **Predictable progression:** You know roughly when you'll rank up
+- **Player choice:** Every advance, YOU decide how to grow
+- **Long campaigns:** Designed for 30-50 sessions to reach Legendary
 
 ---
 
-## Minor Milestones
+## The Five Ranks
 
-Minor milestones occur frequently and represent individual character growth moments.
+Your Rank represents your overall experience and power level. As you accumulate advances, you'll promote through the ranks.
 
-### When to Award Minor Milestones
+| Rank | Advances Required | Typical Sessions |
+|------|-------------------|------------------|
+| **Novice** | 0-3 advances | Sessions 1-8 |
+| **Seasoned** | 4-7 advances | Sessions 9-16 |
+| **Veteran** | 8-11 advances | Sessions 17-24 |
+| **Heroic** | 12-15 advances | Sessions 25-32 |
+| **Legendary** | 16+ advances | Sessions 33+ |
 
-- After completing a single session
-- Upon resolving a challenging encounter
-- When characters make a small but meaningful discovery
-- After successful use of skills in a significant way
-- **Frequency:** Approximately every 1-2 sessions
+### Rank Descriptions
 
-### Minor Milestone Options
+**Novice (0-3 Advances)**
+New adventurers finding their footing. You're competent but still learning. Local threats like bandits and wild animals are appropriate challenges.
 
-Choose ONE of the following when you reach a minor milestone:
+**Seasoned (4-7 Advances)**
+Established heroes with growing reputations. You've proven yourself and are known in the region. Organized crime, cultists, and dangerous beasts are your foes.
 
-**Skill Development**
+**Veteran (8-11 Advances)**
+Renowned champions at the peak of mortal capability. You've likely reached the +5 modifier cap in your primary skills. Noble houses, young dragons, and demon cults challenge you.
 
-- Advance one skill up one tier (Untrained → Novice → Competent → Professional)
-- Gain a new skill at Novice level (-1)
-- Note: Cannot advance beyond Professional tier (+1) with minor milestones
+**Heroic (12-15 Advances)**
+Legendary figures whose names are known across the land. You grow through versatility now, not raw power. Ancient guardians and planar threats test your might.
 
-**Attribute Adjustment**
+**Legendary (16+ Advances)**
+Mythic heroes challenging gods and fate itself. You're among the most powerful beings in existence. Demon lords, ancient dragons, and world-ending catastrophes await.
 
-- Adjust one attribute by +1/-1 (representing shift in focus or retraining)
-- Total attribute points must remain the same
-- Example: Lower Grace by -1 to raise Mind by +1
+---
 
-**Combat Specialty**
+## The Advance Menu
 
-- Gain a minor combat improvement (see Combat Specialties list below)
-- Specialties provide incremental power growth
-- Can take same Specialty multiple times if limit allows
+Each time you gain an advance (every 5 XP), choose ONE option from this menu:
 
-**Skill Specialty**
+### Raise a Skill
 
-- Gain +1 to specific application of a skill
-- Example: +1 to Athletics when climbing
-- Narrows focus for specialized expertise
+Increase one skill by one tier:
+- Untrained (-2) → Novice (-1)
+- Novice (-1) → Competent (+0)
+- Competent (+0) → Professional (+1)
+- Professional (+1) → Expert (+2)
 
-**Momentum Specialty**
+**Cost:** 1 advance (or 2 advances if raising above your linked attribute)
 
-- Increase maximum Momentum capacity by +1 (can take up to 3 times)
-- Example: Increases max Momentum from +6 to +7
+### New Skill
+
+Gain a new skill at Novice tier (-1).
+
+### New Specialty
+
+Gain a combat, skill, or social specialty. See the Specialties section below.
+
+### Raise Attribute
+
+Increase one attribute by +1.
+
+**Important Limit:** You can only raise an attribute **once per Rank**. This prevents rushing to the +5 modifier cap.
+
+- Maximum attribute: +3
+- Choose wisely—you only get one attribute increase per rank!
+
+### New Technique
+
+Gain a combat technique, metamagic option, or special ability. Some techniques have **Rank Requirements** (see Techniques section).
+
+### Increase Survivability
+
+Choose one:
+- +2 Guard (your defensive threshold)
+- +2 Vitality (your health pool)
+
+---
+
+## Specialties
+
+Specialties provide focused bonuses and unique capabilities. They're organized into categories for convenience, but any character can take any specialty.
 
 ### Combat Specialties
 
-Minor improvements that provide incremental power growth. Some specialties can be taken multiple times up to their limit.
+| Specialty | Benefit | Limit |
+|-----------|---------|-------|
+| **Weapon Focus** | +1 damage with one weapon type | Once per weapon type |
+| **Armor Training** | Reduce armor penalty by 1 | Once per armor type |
+| **Tough** | +2 Guard | Twice |
+| **Hardy** | +2 Vitality | Twice |
+| **Quick Draw** | Switch weapons as free action | Once |
+| **Combat Reflexes** | +1 to defense rolls | Once |
+| **Fast Movement** | +1 zone of movement per turn | Once |
+| **Precise Strike** | Reroll one damage die per attack | Once |
+| **Defensive Fighter** | +1 Guard in Defensive stance | Once |
 
-| Specialty             | Benefit                           | Limit                |
-| --------------------- | --------------------------------- | -------------------- |
-| **Weapon Focus**      | +1 damage with one weapon type    | Once per weapon type |
-| **Armor Training**    | Reduce armor penalty by 1         | Once per armor type  |
-| **Tough**             | +2 Guard                          | Twice                |
-| **Hardy**             | +2 Vitality                       | Twice                |
-| **Quick Draw**        | Switch weapons as free action     | Once                 |
-| **Combat Reflexes**   | +1 to defense rolls               | Once                 |
-| **Fast Movement**     | +1 zone of movement per turn      | Once                 |
-| **Precise Strike**    | Reroll one damage die per attack  | Once                 |
-| **Momentum Harmony**  | +1 maximum Momentum capacity      | Three times          |
-| **Defensive Fighter** | +1 Guard when in Defensive stance | Once                 |
+### Skill Specialties
 
-### Minor Milestone Example
+| Specialty | Benefit |
+|-----------|---------|
+| **Expert Knowledge** | +1 to specific skill application |
+| **Signature Technique** | Create a unique skill use |
+| **Tool Mastery** | No penalty without proper tools |
 
-_After successfully infiltrating the governor's mansion and discovering evidence of corruption, the party reaches a minor milestone._
+### Momentum Specialties
 
-**Elena (Cleric)** chooses to adjust her attributes, lowering Presence by -1 to raise Awareness by +1, reflecting her growing perceptiveness to danger.
-
-**Magnus (Fighter)** learns the Press Advantage combat technique, allowing him to deal +1d6 damage when his Momentum is positive.
-
-**Lyra (Wizard)** advances her Investigate skill from Competent (+0) to Professional (+1), having honed her analytical abilities during the mission.
-
-### Appropriate Challenges After Minor Milestones
-
-Characters who have experienced a few minor milestones are appropriate for:
-
-- Local threats (bandits, wolves, minor undead)
-- Small-scale local problems
-- Threats to villages or small communities
+| Specialty | Benefit | Limit |
+|-----------|---------|-------|
+| **Momentum Harmony** | +1 maximum Momentum capacity | Three times |
+| **Efficient Techniques** | -1 Momentum cost to one technique | Once per technique |
+| **Quick Recovery** | +1 Momentum at start of combat | Once |
 
 ---
 
-## Damage Scaling
+## Techniques
 
-Your damage output increases automatically as you gain milestones, keeping pace with enemy advancement:
+Techniques are powerful abilities that typically cost Momentum to use. Some require a minimum Rank.
 
-**Milestone Damage Bonus:**
+### Combat Techniques (Novice)
 
-- **Every 2 Milestones:** +1 damage with all attacks
-- **At 5 Total Milestones:** Weapon damage die increases (d6 → d8)
-- **At 10 Total Milestones:** Gain exploding dice (6s are rerolled and added)
-- **At 15 Total Milestones:** Weapon die increases again (d8 → d10)
+Available to all characters:
 
-**Example Progression:**
+- **Press Advantage:** When Momentum is positive, +1d6 damage
+- **Defensive Strike:** Attack and gain +2 Guard until next turn
+- **Momentum Strike:** On hit, gain +1 Momentum
 
-- **Start (0 milestones):** 2d6 + Might = 10 avg damage
-- **2 milestones:** 2d6 + Might + 1 = 11 avg damage
-- **4 milestones:** 2d6 + Might + 2 = 12 avg damage
-- **5 milestones:** 2d8 + Might + 2 = 13 avg damage
-- **10 milestones:** 2d8 + Might + 5 (with exploding) = 18 avg damage
+### Advanced Combat Techniques (Requires Seasoned)
 
-This progression ensures martial characters remain effective against increasingly powerful threats throughout a campaign.
+- **Whirlwind Strike:** Hit all adjacent enemies (costs 2 Momentum)
+- **Perfect Parry:** Negate all damage from one source (costs 2 Momentum)
+- **Devastating Blow:** Double damage dice (costs 3 Momentum)
 
----
+### Legendary Techniques (Requires Heroic)
 
-## Moderate Milestones
+- **Unstoppable Assault:** Attack cannot miss (costs 4 Momentum)
+- **Avatar of War:** Temporary transformation with massive bonuses (costs 5 Momentum)
+- **Death Defiance:** Return from death's door (costs 6 Momentum)
 
-Moderate milestones mark substantial character growth, typically occurring after completing a significant story arc or adventure. They represent major achievements and collective party development.
+### Mythic Techniques (Requires Legendary)
 
-### When to Award Moderate Milestones
-
-- Upon completing a major adventure or quest
-- After resolving a significant story arc
-- When characters achieve an important objective
-- **Frequency:** Every 3 sessions (sessions 3, 6, 9)
-- **First Moderate Milestone:** Session 3
-- **Second Moderate Milestone:** Session 6
-- **Third Moderate Milestone:** Session 9
-
-### Moderate Milestone Options
-
-Choose ONE of the following when you reach a moderate milestone:
-
-**Attribute Improvement**
-
-- Increase one attribute permanently by +1
-- Note: Cannot raise any attribute above +4 until a major milestone
-
-**Skill Mastery**
-
-- Advance one skill to Expert level (+2)
-- This allows progression beyond the Professional tier (+1) available through minor milestones
-- Or gain a new skill at Professional level (+1) as an alternative option
-
-**Calling Evolution**
-
-- Evolve interpretation of Calling
-- Modify Momentum Benefit trigger slightly
-- Add minor secondary benefit to existing Calling ability
-
-**Advanced Combat Technique**
-
-- Gain advanced combat technique (requires Momentum +3 to use)
-- Options include:
-  - Whirlwind Strike: Hit all adjacent enemies
-  - Perfect Parry: Negate all damage from one source
-  - Devastating Blow: Double damage dice
-  - Combat Momentum: Extra Momentum on critical success
-
-**Signature Move Development**
-
-- Create a personal Signature Move that combines existing abilities
-- Costs 1 less Momentum than normal (minimum 0)
-- Must have narrative description and name
-- Should reflect character's Calling and style
-
-### Moderate Milestone Example
-
-_After defeating the corrupt governor and exposing the criminal network, the party completes a major story arc and reaches a moderate milestone._
-
-**Elena (Cleric)** chooses attribute improvement, increasing her Will from +2 to +3, reflecting her strengthened resolve.
-
-**Magnus (Fighter)** develops his Signature Move "Thundering Blow" - a devastating strike that costs 2 Momentum (normally 3) and creates an intimidating shockwave, combining his Combat technique with his Champion Calling.
-
-**Lyra (Wizard)** gains the advanced technique Perfect Parry, allowing her to completely negate damage from one attack by spending 3 Momentum, representing her mastery of defensive magic.
-
-### Appropriate Challenges After Moderate Milestones
-
-After the **First Moderate Milestone** (regional heroes), characters are appropriate for:
-
-- Young dragons and drakes
-- Organized military forces
-- Evil spellcasters and cult leaders
-- Regional threats affecting multiple communities
-
-After the **Second Moderate Milestone** (masters of the realm), characters are appropriate for:
-
-- Adult dragons
-- Powerful undead (vampires, liches)
-- Demon-possessed individuals
-- Threats to entire kingdoms or regions
+- **Reality Warp:** Alter the battlefield itself
+- **Timeless Strike:** Act outside the normal turn order
+- **Legendary Endurance:** Ignore wounds for an entire scene
 
 ---
 
-## Major Milestones
+## Bounded Accuracy
 
-Major milestones represent transformative moments in a character's journey. They mark fundamental evolution and occur at campaign-defining moments.
+Autumn Phoenix uses bounded accuracy—your total modifier is capped at +5.
 
-### When to Award Major Milestones
+### The Math
 
-- After completing a major campaign arc
-- Upon achieving a legendary feat
-- When characters fundamentally transform their understanding
-- **Frequency:** Typically 2 per campaign (sessions 5 and 10)
-- **First Major Milestone:** Session 5 (mid-campaign transformation)
-- **Second Major Milestone:** Session 10 (legendary status)
+- **Maximum attribute:** +3
+- **Maximum skill:** +2 (Expert)
+- **Maximum specialty bonus:** Varies, but total capped at +5
 
-### Major Milestone Options
+### When You Hit the Cap
 
-Choose ONE of the following when you reach a major milestone:
+Most characters reach the +5 cap in their primary skills during the **Veteran rank** (sessions 17-24). After that:
 
-**Attribute Transcendence**
+- **Horizontal growth:** Gain new specialties, techniques, and abilities
+- **Versatility:** Improve other skills and secondary attributes
+- **Survivability:** Increase Guard and Vitality
+- **Options:** Learn new techniques and metamagic
 
-- Increase one attribute permanently by +1
-- Can now raise attributes to +5 (legendary level)
-
-**Skill Expertise**
-
-- Advance any skill to Expert level (+2) if not already
-- Or gain a skill specialization specialty (+1 to specific applications)
-- Expert-level skills represent peak human mastery
-
-**Calling Transcendence/Synthesis**
-
-- Fundamentally transform your Calling
-- Or synthesize aspects of two Callings
-- Gain significantly enhanced Momentum benefits
-- Access unique narrative permissions
-
-**Legendary Technique**
-
-- Gain access to a legendary technique (requires Momentum +6)
-- Examples include:
-  - Unstoppable Assault: Attack cannot miss
-  - Avatar of War: Temporary transformation
-  - Supernatural Insight: See through deception
-  - Death Defiance: Return from death's door
-
-**Archetype Evolution**
-
-- Transcend the normal limitations of your Archetype
-- Gain a unique ability that redefines your approach
-- Access cross-Archetype capabilities
-
-### Major Milestone Example
-
-_After defeating the ancient lich and recovering the Artifact of Ages, the party completes a campaign-defining arc and reaches a major milestone._
-
-**Elena (Cleric)** chooses Calling Transcendence, evolving her Guardian Calling. She can now spend 1 Momentum to reduce damage to a dying ally by half AND when she successfully defuses conflict without violence, she and all participants gain 1 Momentum.
-
-**Magnus (Fighter)** achieves Combat Mastery, gaining a skill specialization specialty that grants +1 to Combat when fighting multiple opponents, and the ability to make an extra attack when scoring a critical hit.
-
-**Lyra (Wizard)** gains the Legendary Technique Unstoppable Assault, allowing her to cast spells that cannot miss when she spends 6 Momentum, representing her complete mastery of magical precision.
-
-### Appropriate Challenges After Major Milestones
-
-After the **First Major Milestone**, characters are appropriate for:
-
-- Adult dragons
-- Powerful demon lords
-- Threats to entire continents
-- Planar entities
-
-After the **Second Major Milestone** (legendary status), characters are appropriate for:
-
-- Ancient dragons
-- Demon princes and archdevils
-- World-threatening entities
-- Multiversal threats
+You won't get more powerful at your best skills, but you'll become more versatile and survivable.
 
 ---
 
-## Campaign Advancement Timeline
+## Example Character Progression
 
-### Typical Advancement Schedule
+### Kira the Fighter
 
-**Sessions 1-2: Learning the Ropes**
+**Starting (Novice, 0 advances):**
+- Might +2, Grace +1, Mind -1, Awareness +0, Will +1, Presence -1
+- Combat (Professional +1), Athletics (Competent +0)
+- Guard 14, Vitality 11
 
-- Start with initial character creation
-- Minor milestones each session
-- Establishing character identity
+**After 2 Advances (Novice):**
+- Raised Combat to Expert (+2) — 1 advance
+- Took Tough specialty (+2 Guard) — 1 advance
+- Guard 16, Vitality 11
 
-**Session 3: First Capability Jump**
+**After 4 Advances (Now Seasoned!):**
+- Raised Might to +3 (attribute increase for Novice rank) — 1 advance
+- Learned Whirlwind Strike technique — 1 advance
+- Guard 17, Vitality 11
 
-- First moderate milestone
-- Signature moves or advanced techniques
-- Party roles solidifying
+**After 8 Advances (Now Veteran!):**
+- Raised Might +3 → Can't raise again until Heroic!
+- Combat at +2, Might at +3 = **+5 total (cap reached!)**
+- Now focusing on versatility: new techniques, other skills, survivability
 
-**Sessions 4-5: Rising Heroes**
+**After 12 Advances (Now Heroic!):**
+- Has multiple combat techniques
+- Tough x2 (+4 Guard total from specialty)
+- Hardy (+2 Vitality)
+- Guard 21, Vitality 13
+- Learning Legendary techniques
 
-- First major milestone at session 5
-- Transformative character evolution
-- Regional hero status
+### Tracking XP
 
-**Sessions 6-9: Peak Performance**
-
-- Second moderate milestone at session 6
-- Third moderate milestone at session 9
-- Master-level skills
-- Advanced character concepts
-
-**Session 10: Legendary Status**
-
-- Second major milestone
-- Calling transcendence/synthesis
-- Legendary techniques
-- Campaign conclusion approaches
-
-### Milestone Effect on Difficulty
-
-**Guard and Survivability**
-
-- Guard = 12 + max(Might, Grace, Will)
-- Guard does not automatically scale with milestones
-- Survivability increases through milestone choices (specialties, techniques)
-- Allows tough, agile, or mentally resilient characters to be effective
-
-**Momentum Generation Rate**
-
-- More Momentum triggers from advanced abilities
-- Larger Momentum pools from technique synergies
-- More strategic Momentum management
-
-**Combat Complexity**
-
-- Early campaign: Basic stances and simple techniques
-- Mid campaign: Stance dancing and advanced techniques
-- Advanced campaign: Complex combinations and legendary moves
+| Session | XP Earned | Total XP | Advances | Rank |
+|---------|-----------|----------|----------|------|
+| 1 | 4 | 4 | 0 | Novice |
+| 2 | 3 | 7 | 1 | Novice |
+| 3 | 4 | 11 | 2 | Novice |
+| 4 | 4 | 15 | 3 | Novice |
+| 5 | 5 | 20 | 4 | **Seasoned!** |
+| ... | ... | ... | ... | ... |
 
 ---
 
-## Example Character Evolution
+## For Players
 
-**Thornwick Ironfoot (Dwarf Cleric Guardian)**
+### Planning Your Growth
 
-**Starting Character:**
+1. **Know your concept:** What do you want your character to be?
+2. **Prioritize:** Focus advances on your core identity first
+3. **Balance:** Don't neglect survivability—dead characters don't advance
+4. **Diversify later:** Once you hit +5 cap, branch out
 
-- **Attributes:** Might +2, Grace -2, Mind -1, Awareness 0, Will +3, Presence 0
-- **Skills:** Medicine (Professional +1), Sorcery (Competent +0), Empathy (Professional +1)
-- **Derived Values:** Guard 15 (12 + 3 from Will), Vitality 13 (10 + 3)
-- **Magic:** Can cast divine spells (Cleric archetype override)
+### Making Advance Choices
 
-**After Two Minor Milestones:**
+- **Early ranks:** Build toward your +5 cap in primary skill
+- **After cap:** Focus on versatility, techniques, and survivability
+- **Every rank:** Save your ONE attribute increase for what matters most
 
-- Advanced Sorcery from Competent (+0) to Professional (+1)
-- Gained Tough Specialty (+2 Guard)
-- Guard: 17 (15 base + 2 from specialty)
+### Celebrating Rank Promotions
 
-**After First Moderate Milestone (Session 3):**
+Reaching a new rank is a big deal! It should feel like a milestone in your character's story. Talk to your GM about:
 
-- Increased Will to +4 (enhancing both spell power and Vitality)
-- Developed Signature Move "Healing Word" - Command that also recovers 1d6 Guard
-- Guard: 18 (12 + 4 from Will + 2 from specialty), Vitality: 14 (10 + 4)
-
-**After Four Minor Milestones (Total 6 Milestones):**
-
-- Advanced Sorcery to Expert (+2)
-- Gained Hardy Specialty (+2 Vitality)
-- Guard: 18, Vitality: 16
-
-**After Second Moderate Milestone (Session 6):**
-
-- Advanced Medicine skill to Expert (+2)
-- Mastery of both divine magic and mundane healing
-
-**After First Major Milestone (Session 5):**
-
-- Synthesized Guardian and Scholar Callings
-- Can now protect allies from death AND begin scenes at +1 Momentum
-- Guard: 20 (12 + 4 + 4 from specialties), Vitality: 18
-- Has become a legendary battle medic combining protective instincts with scholarly preparation
-
-This evolution shows how a character grows in power through milestone scaling while maintaining their core concept.
+- How has your character's reputation grown?
+- What new opportunities does your rank unlock?
+- How do NPCs react differently to you now?
 
 ---
 
-## Signature Moves System
+## For Game Masters
 
-Signature Moves represent a character's unique fighting style or magical technique. They are created at moderate milestones and evolve as characters advance.
+### Awarding XP
 
-### Creating a Signature Move
+Award XP at the end of every session:
 
-**Core Components:**
+| Session Quality | XP Award |
+|-----------------|----------|
+| **Routine** | 3 XP |
+| **Good progress** | 4 XP |
+| **Exceptional** | 5 XP |
 
-1. **Mechanical Effect:** What the move does (damage, protection, etc.)
-2. **Momentum Cost:** Normally costs 1 less than standard (minimum 0)
-3. **Thematic Element:** How it reflects your character
+**Guidelines:**
+- Always give at least 3 XP for showing up
+- Award whole-party XP (no individual awards)
+- Tell players why they earned bonus XP
 
-**Inspiration Sources:**
+### Scaling Challenges by Rank
 
-- Your Archetype's traditional techniques
-- Your Calling's motivational focus
-- Your Species' natural abilities
-- Your personal character history
+As characters advance, increase challenge difficulty:
 
-### Evolving Signature Moves
+| Party Rank | Standard TN | Hard TN |
+|------------|-------------|---------|
+| Novice | TN 8 | TN 10 |
+| Seasoned | TN 10 | TN 12 |
+| Veteran | TN 10 | TN 12 |
+| Heroic | TN 12 | TN 14 |
+| Legendary | TN 12 | TN 14 |
 
-At each subsequent milestone, you can choose to evolve your Signature Move in one of three ways:
+### Rank Promotions
 
-**Power Evolution:**
-
-- Increase the move's magnitude
-- Momentum cost increases by 1
-
-**Efficiency Evolution:**
-
-- Reduce Momentum cost by an additional 1 (minimum 0)
-- Effect remains the same
-
-**Versatility Evolution:**
-
-- Add a secondary effect or option
-- Momentum cost may increase by 1 if significantly more powerful
+When players reach a new rank:
+- Acknowledge it in the fiction
+- Consider a scene celebrating their growing reputation
+- Unlock rank-appropriate challenges and storylines
+- Introduce NPCs who recognize their status
 
 ---
 
-## Advancement Guidelines
+## Quick Reference
 
-### For Players
+**XP System:**
+- 3-5 XP per session (average 4)
+- 5 XP = 1 Advance
+- 4 Advances = 1 Rank promotion
 
-**Character Vision**
+**Advance Options (pick one):**
+1. Raise a skill
+2. New skill at Novice
+3. New specialty
+4. Raise attribute (once per rank!)
+5. New technique
+6. +2 Guard or +2 Vitality
 
-- Plan your character's growth path
-- Choose options that align with your character concept
-- Consider how advancement reflects your character's story
+**The Five Ranks:**
+1. Novice (0-3 advances)
+2. Seasoned (4-7 advances)
+3. Veteran (8-11 advances)
+4. Heroic (12-15 advances)
+5. Legendary (16+ advances)
 
-**Mechanical Considerations**
-
-- Balance between immediate needs and long-term goals
-- Diversify skills and abilities for versatility
-- Specialize in key areas for character identity
-
-**Collaborative Growth**
-
-- Discuss advancement with other players
-- Ensure party balance and complementary abilities
-- Create interesting dynamics through contrasting development
-
-### For Game Masters
-
-**Milestone Pacing**
-
-- **Minor:** Approximately every 1-2 sessions
-- **Moderate:** Every 4-6 sessions or at conclusion of story arc
-- **Major:** Every 12-20 sessions or at campaign-defining moments
-
-**Customized Opportunities**
-
-- Create story moments that highlight character growth
-- Provide opportunities to use newly acquired abilities
-- Design challenges that reward character development
-
-**Balancing Advancement**
-
-- Ensure all characters receive equal advancement opportunities
-- Adjust encounter difficulty as characters advance
-- Provide suitable challenges for advancing characters
+**Modifier Cap:** +5 total (typically reached at Veteran rank)

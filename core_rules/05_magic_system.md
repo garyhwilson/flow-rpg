@@ -19,7 +19,7 @@ Not everyone can cast spells. Access depends on your magical tradition:
 - **Primal (Ranger/Druid's Way):** Awareness + Will ≥ +2 (natural world connection)
 - **Performance (Bard's Way):** Presence + Grace ≥ +2 (artistic magical expression)
 
-These requirements create meaningful attribute choices without being overly restrictive. Failing to meet the requirement doesn't mean you can never cast—you can increase attributes through milestones.
+These requirements create meaningful attribute choices without being overly restrictive. Failing to meet the requirement doesn't mean you can never cast—you can increase attributes through advances (once per rank).
 
 ### Mage Sight (Innate to All Casters)
 

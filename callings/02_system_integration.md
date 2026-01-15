@@ -2,69 +2,69 @@
 
 This document explains how Callings integrate with the core Autumn Phoenix RPG system mechanics. Callings aren't just narrative elements—they actively influence gameplay through mechanical interactions with various subsystems.
 
-## Milestones and Callings
+## Advancement and Callings
 
-The milestone advancement system naturally pairs with the Calling system, as character growth often aligns with Calling development.
+The rank advancement system naturally pairs with the Calling system, as character growth often aligns with Calling development.
 
-### Earning Milestones Through Your Calling
+### Earning Advances Through Your Calling
 
-Milestones emerge naturally from pursuing your Calling. Small moments of character expression earn minor rewards. Significant challenges that test your convictions warrant moderate advancement. Transformative events that fundamentally change who you are - or prove who you've always been - represent major milestones.
+Advances emerge naturally from pursuing your Calling. Small moments of character expression demonstrate early growth. Significant challenges that test your convictions mark the transition to higher ranks. Transformative events that fundamentally change who you are - or prove who you've always been - represent legendary achievements.
 
-Here's how this plays out for different Callings:
+Here's how this plays out for different Callings by rank:
 
 **Advocate:**
 
-- **Minor**: Successfully exposing a minor injustice
-- **Moderate**: Reforming a corrupt system
-- **Major**: Bringing a major villain to justice at great personal cost
+- **Novice-Seasoned**: Successfully exposing a minor injustice, reforming corrupt systems
+- **Veteran-Heroic**: Leading systemic change, inspiring others to fight for justice
+- **Legendary**: Bringing a major villain to justice at great personal cost
 
 **Guardian:**
 
-- **Minor**: Protecting someone from immediate harm
-- **Moderate**: Making a significant sacrifice to help others
-- **Major**: Establishing a lasting protection for a community
+- **Novice-Seasoned**: Protecting someone from immediate harm, making sacrifices to help others
+- **Veteran-Heroic**: Establishing lasting protection for a community
+- **Legendary**: Becoming a legendary protector whose name inspires hope
 
 **Exemplar:**
 
-- **Minor**: Achieving recognition for exceptional skill
-- **Moderate**: Winning a significant competition or challenge
-- **Major**: Reaching the pinnacle of achievement in their field
+- **Novice-Seasoned**: Achieving recognition for exceptional skill
+- **Veteran-Heroic**: Winning significant competitions or challenges
+- **Legendary**: Reaching the pinnacle of achievement in their field
 
 **Seeker:**
 
-- **Minor**: Discovering a new aspect of their identity
-- **Moderate**: Taking a stand based on personal truth despite opposition
-- **Major**: Fundamental transformation of self-understanding
+- **Novice-Seasoned**: Discovering new aspects of their identity
+- **Veteran-Heroic**: Taking a stand based on personal truth despite opposition
+- **Legendary**: Fundamental transformation of self-understanding
 
 **Scholar:**
 
-- **Minor**: Uncovering valuable knowledge
-- **Moderate**: Applying knowledge to solve a complex problem
-- **Major**: Making a groundbreaking discovery
+- **Novice-Seasoned**: Uncovering valuable knowledge
+- **Veteran-Heroic**: Applying knowledge to solve complex problems
+- **Legendary**: Making a groundbreaking discovery
 
 **Sentinel:**
 
-- **Minor**: Successfully preventing a threat through preparation
-- **Moderate**: Proving loyalty despite personal cost
-- **Major**: Establishing lasting security for something they protect
+- **Novice-Seasoned**: Successfully preventing threats through preparation
+- **Veteran-Heroic**: Proving loyalty despite personal cost
+- **Legendary**: Establishing lasting security for something they protect
 
 **Enthusiast:**
 
-- **Minor**: Finding joy in a difficult situation
-- **Moderate**: Helping others embrace freedom and possibility
-- **Major**: Overcoming a profound limitation to experience life fully
+- **Novice-Seasoned**: Finding joy in difficult situations
+- **Veteran-Heroic**: Helping others embrace freedom and possibility
+- **Legendary**: Overcoming a profound limitation to experience life fully
 
 **Champion:**
 
-- **Minor**: Successfully defeating a worthy opponent
-- **Moderate**: Protecting others through strength and leadership
-- **Major**: Overcoming a fundamental weakness to become stronger
+- **Novice-Seasoned**: Successfully defeating worthy opponents
+- **Veteran-Heroic**: Protecting others through strength and leadership
+- **Legendary**: Overcoming a fundamental weakness to become stronger
 
 **Mediator:**
 
-- **Minor**: Successfully resolving a conflict
-- **Moderate**: Bringing hostile groups to peaceful agreement
-- **Major**: Creating lasting harmony between long-standing enemies
+- **Novice-Seasoned**: Successfully resolving conflicts
+- **Veteran-Heroic**: Bringing hostile groups to peaceful agreement
+- **Legendary**: Creating lasting harmony between long-standing enemies
 
 ## Skills and Callings
 
@@ -337,6 +337,6 @@ On character sheets, Callings should be prominently featured:
 1. **Calling Section:** Dedicated area showing Calling name, Momentum Benefit, and Narrative Permission
 2. **Momentum Tracking:** Space to note Calling-specific Momentum generation
 3. **Narrative Permission Tracker:** Checkboxes for once-per-scene permissions
-4. **Milestone Connection:** Space to record how milestone advancement relates to Calling development
+4. **Advancement Connection:** Space to record how rank advancement relates to Calling development
 
 _Always remember that while Callings have mechanical effects, their primary purpose is to guide roleplaying and character development. The mechanical benefits should reinforce the narrative aspects rather than overshadow them._

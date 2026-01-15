@@ -118,7 +118,7 @@ stance_interactions:
   
   stance_dancing:
     description: "Advanced technique of switching stances tactically"
-    requirements: "Moderate milestone technique"
+    requirements: "Requires Seasoned rank"
     benefit: "Switch stance as reaction for 1 Momentum"
   
   team_tactics:
@@ -221,7 +221,7 @@ health_system:
         action_cost: "Full action"
 
     progression:
-      method: "Through milestone choices, not automatic"
+      method: "Through advance choices (+2 Guard option)"
       options: "See advancement.yaml for Guard increase options"
 
     design_note: "Base 12 + attribute ensures 2-3 hit survivability. Will inclusion gives casters 15+ Guard."
@@ -244,7 +244,7 @@ health_system:
       magical: "Varies by spell level"
 
     progression:
-      method: "Through milestone choices, not automatic"
+      method: "Through advance choices (+2 Vitality option)"
       options: "See advancement.yaml for Vitality increase options"
     
     damage_consequences:
@@ -255,19 +255,19 @@ health_system:
 damage_resolution:
   order:
     1: "Roll damage dice"
-    2: "Add modifiers (attribute, milestone bonus, etc.)"
+    2: "Add modifiers (attribute, specialty bonus, etc.)"
     3: "Subtract armor damage reduction"
     4: "Apply to Guard first"
     5: "Excess damage goes to Vitality"
     6: "Check for death/dying if Vitality = 0"
-  
+
   damage_scaling:
     philosophy: "Damage increases through choices, not automatically"
 
     options:
-      weapon_focus: "Minor milestone: +1 damage with weapon type"
-      improved_casting: "Moderate milestone: +1d6 spell damage"
-      legendary_strike: "Major milestone: Critical on 11+ with chosen weapon"
+      weapon_focus: "Via advance: +1 damage with weapon type"
+      improved_casting: "Requires Seasoned: +1d6 spell damage"
+      legendary_strike: "Requires Heroic: Critical on 11+ with chosen weapon"
 
     note: "See advancement.yaml for specific damage improvement options"
   
@@ -616,7 +616,7 @@ combat_actions:
 combat_techniques:
   acquisition:
     philosophy: "No attribute gates - anyone can learn"
-    method: "Milestone advancement"
+    method: "Via advances (some require minimum Rank)"
     training: "Narrative justification helpful"
   
   basic_techniques:
@@ -627,58 +627,58 @@ combat_techniques:
       - "Maneuver (tactical advantage)"
       - "Rally (recover Guard)"
   
-  minor_milestone_techniques:
-    requirement: "1+ minor milestones"
-    
+  novice_techniques:
+    requirement: "Available to all characters"
+
     riposte:
       trigger: "After successful Defend"
       effect: "Immediately Strike"
       cost: "1 Momentum"
-    
+
     press_advantage:
       trigger: "While Momentum positive"
       effect: "+1d6 damage"
       cost: "Passive while condition met"
-    
+
     defensive_mastery:
       effect: "Defensive stance grants +3 defense"
       cost: "Passive improvement"
-    
+
     quick_recovery:
       effect: "Regain 1d6 Guard between rounds"
       cost: "1 Momentum"
       limit: "Once per combat"
-  
-  moderate_milestone_techniques:
-    requirement: "Momentum +3 to activate"
-    
+
+  seasoned_techniques:
+    requirement: "Requires Seasoned rank"
+
     whirlwind_strike:
       effect: "Hit all adjacent enemies"
       cost: "3 Momentum"
       damage: "Normal weapon damage to each"
-    
+
     perfect_parry:
       effect: "Negate all damage from one source"
       cost: "2 Momentum"
       timing: "Reaction"
-    
+
     devastating_blow:
       effect: "Double damage dice"
       cost: "3 Momentum"
       limit: "Once per scene"
-    
+
     combat_momentum:
       effect: "Extra Momentum on any critical"
       cost: "Passive once learned"
-  
-  major_milestone_techniques:
-    requirement: "Momentum +6 to activate"
-    
+
+  heroic_techniques:
+    requirement: "Requires Heroic rank"
+
     unstoppable_assault:
       effect: "Next attack cannot miss"
       cost: "6 Momentum"
       damage: "Maximum damage"
-    
+
     death_blow:
       effect: "Instant kill if target below 50% Vitality"
       cost: "6 Momentum"
@@ -698,8 +698,8 @@ signature_moves:
   philosophy: "Earned power that represents mastery and personal style"
 
   creation:
-    when: "Moderate milestone"
-    timing_note: "Awarded at session 4 typically, when character identity is established"
+    when: "Seasoned rank"
+    timing_note: "Awarded when character identity is established"
     components:
       - "Name (personal to character)"
       - "Mechanical effect (based on existing technique)"
@@ -749,14 +749,14 @@ signature_moves:
   
   evolution:
     minor_improvement:
-      when: "2 milestones after creation"
+      when: "2 advances after creation"
       options:
         - "Reduce cost by 1 (minimum 0)"
         - "Add minor effect"
         - "Increase range/area"
-    
+
     major_improvement:
-      when: "Major milestone"
+      when: "Heroic rank"
       options:
         - "Double effect"
         - "Remove limit"

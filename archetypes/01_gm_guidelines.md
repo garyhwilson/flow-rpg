@@ -75,13 +75,13 @@ Consider how different societies view each archetype:
 
 ## Archetype Development Through Campaign
 
-### Milestone Integration
+### Rank-Based Development
 
-Use milestones to facilitate meaningful archetype development:
+Use ranks to facilitate meaningful archetype development:
 
-- **Minor Milestones:** Refinement of existing archetype techniques
-- **Moderate Milestones:** Integration of new approaches within archetype framework
-- **Major Milestones:** Potential hybrid development or specialization options
+- **Novice-Seasoned:** Refinement of existing archetype techniques
+- **Veteran-Heroic:** Integration of new approaches within archetype framework
+- **Legendary:** Potential hybrid development or specialization options
 
 ### Creating Growth Opportunities
 

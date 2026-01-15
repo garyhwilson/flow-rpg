@@ -182,9 +182,9 @@ Enchanted items interact with the Momentum economy (see [spell_tiers/](spell_tie
 
 **Balance Guidelines:**
 
-- 1 minor item per character by Milestone 2
-- 1 moderate item per character by Milestone 4
-- 1 major item per character by Milestone 6
+- 1 minor item per character by Seasoned rank
+- 1 moderate item per character by Veteran rank
+- 1 major item per character by Heroic rank
 - Legendary items are extremely rare campaign rewards
 
 ### Attunement Limits
@@ -254,7 +254,7 @@ This is fine! It's a valid specialization:
 - They'll excel in some situations
 - They'll struggle in others
 - Other party members will complement them
-- They might diversify as they gain milestones
+- They might diversify as they advance in rank
 
 ### "How many spells should a character know?"
 

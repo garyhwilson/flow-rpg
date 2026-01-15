@@ -132,19 +132,19 @@ When secure and growing, characters integrate positive aspects:
 | **Champion**   | Combat, Command, Athletics     | Intimidate, Survival, Craft |
 | **Mediator**   | Empathy, Persuade, Deceive     | Command, Perform, Lore      |
 
-## Milestone Triggers
+## Character Arc by Rank
 
-| Calling        | Minor Milestone                       | Major Milestone                          |
+| Calling        | Novice-Veteran                        | Heroic-Legendary                         |
 | -------------- | ------------------------------------- | ---------------------------------------- |
-| **Advocate**   | Exposing minor injustice              | Bringing major villain to justice        |
-| **Guardian**   | Protecting someone from harm          | Making great sacrifice for others        |
-| **Exemplar**   | Recognition for skill                 | Reaching pinnacle of achievement         |
-| **Seeker**     | Discovering new aspect of identity    | Fundamental self-transformation          |
+| **Advocate**   | Exposing injustice, building reputation | Bringing major villain to justice        |
+| **Guardian**   | Protecting from harm, making sacrifices | Establishing lasting protection          |
+| **Exemplar**   | Recognition for skill, winning challenges | Reaching pinnacle of achievement         |
+| **Seeker**     | Discovering aspects of identity       | Fundamental self-transformation          |
 | **Scholar**    | Uncovering valuable knowledge         | Making groundbreaking discovery          |
-| **Sentinel**   | Preventing threat through preparation | Establishing lasting security            |
+| **Sentinel**   | Preventing threats through preparation | Establishing lasting security            |
 | **Enthusiast** | Finding joy in difficulty             | Overcoming limitation to experience life |
-| **Champion**   | Defeating worthy opponent             | Overcoming weakness to become stronger   |
-| **Mediator**   | Resolving minor conflict              | Creating lasting harmony between enemies |
+| **Champion**   | Defeating worthy opponents            | Overcoming weakness to become stronger   |
+| **Mediator**   | Resolving conflicts successfully      | Creating lasting harmony between enemies |
 
 ## Magic Casting Approaches
 

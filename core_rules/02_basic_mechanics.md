@@ -108,11 +108,11 @@ Skills represent your character's training and expertise in various areas. Each 
 4. **Professional** (+1 modifier): Skilled practitioner
 5. **Expert** (+2 modifier): Peak human mastery
 
-**Advancement Limits by Milestone Type:**
+**Advancement:**
 
 - **Starting Characters:** Maximum Competent (+0), one Professional (+1) from archetype
-- **Minor Milestones:** Can advance skills up to Professional (+1)
-- **Moderate Milestones:** Can advance skills to Expert (+2)
+- **Via Advances:** Each advance can raise one skill by one tier
+- **Maximum:** Expert (+2) is the highest skill tier
 
 **The 15 Core Skills:**
 

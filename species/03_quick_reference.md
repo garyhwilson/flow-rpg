@@ -109,7 +109,7 @@ _Essential Information for Players and Game Masters_
 
 ## Advancement Patterns
 
-| Species  | Development Tempo      | Milestone Focus        | Legacy Perspective            |
+| Species  | Development Tempo      | Advance Focus          | Legacy Perspective            |
 | -------- | ---------------------- | ---------------------- | ----------------------------- |
 | Human    | Rapid transformation   | Diverse capabilities   | Lasting impact after death    |
 | Elf      | Gradual refinement     | Specialized mastery    | Continuous personal evolution |

@@ -150,7 +150,7 @@ Vitality represents your core health and ability to withstand serious injury.
 - **Critical Point:** At 0 Vitality, you fall unconscious and begin dying
 
 **Increasing Vitality:**
-Vitality can be increased through milestone choices (see Advancement), but does not scale automatically. This keeps death meaningful throughout the campaign.
+Vitality can be increased through advance choices (see Advancement), but does not scale automatically. This keeps death meaningful throughout the campaign.
 
 ### Damage Resolution
 
@@ -228,7 +228,7 @@ When reduced to 0 Vitality, you fall unconscious and begin dying.
 
 - Basic combat available to all
 - Advanced techniques require Momentum thresholds
-- Acquisition through milestones, not XP
+- Acquisition through advances (earned via XP)
 - NO attribute gates for combat (anyone can learn any technique)
 
 ### Basic Techniques (Anyone can attempt)
@@ -238,21 +238,21 @@ When reduced to 0 Vitality, you fall unconscious and begin dying.
 - Maneuver: Create tactical advantage
 - Rally: Recover Guard mid-combat (once per scene)
 
-### Minor Milestone Techniques
+### Novice Techniques (Available to All)
 
 - **Riposte:** After successful Defend, immediately Strike
 - **Press Advantage:** +1d6 damage when Momentum positive
 - **Defensive Stance Mastery:** Trade offense for stronger defense
 - **Quick Recovery:** Regain Guard between rounds
 
-### Moderate Milestone Techniques (Require Momentum +3)
+### Seasoned Techniques (Require Seasoned Rank)
 
 - **Whirlwind Strike:** Hit all adjacent enemies
 - **Perfect Parry:** Negate all damage from one source
 - **Devastating Blow:** Double damage dice
 - **Combat Momentum:** Extra Momentum on critical success
 
-### Major Milestone Techniques (Require Momentum +6)
+### Heroic Techniques (Require Heroic Rank)
 
 - **Unstoppable Assault:** Cannot miss
 - **Death Blow:** Instant kill if target below 50% Vitality
@@ -262,7 +262,7 @@ When reduced to 0 Vitality, you fall unconscious and begin dying.
 
 ## Signature Moves
 
-At each Moderate Milestone, you can create a personal Signature Move that represents your character's unique fighting style.
+At Seasoned rank and beyond, you can use an advance to create a personal Signature Move that represents your character's unique fighting style.
 
 ### Creating a Signature Move
 

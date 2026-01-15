@@ -357,7 +357,7 @@ scene_resolution:
       momentum_reset: "All Momentum returns to 0"
       guard_recovery: "Full Guard restoration"
       consequences: "Apply lasting effects"
-      experience: "Note for milestone consideration"
+      experience: "Award XP at session end"
 
   scene_types:
     combat:
@@ -476,8 +476,8 @@ skills:
     design_rationale:
       - "Maintains bounded accuracy - prevents unlimited modifier inflation"
       - "97.2% success rate at cap vs TN 8 (nearly automatic - only fail on 1,1)"
-      - "Supports 8-12 session campaigns perfectly"
-      - "GMs should use TN 10-12 for meaningful challenges at peak power"
+      - "Supports 30-50 session campaigns with +5 cap reached at Veteran rank"
+      - "GMs should use TN 10-12 for meaningful challenges at Veteran+ ranks"
 
     bounded_accuracy_reality:
       philosophy: "Hard cap prevents runaway progression, but creates new challenge"
@@ -529,25 +529,25 @@ skills:
     2_novice:
       modifier: -1
       description: "Basic understanding"
-      advancement: "Starting or minor milestone"
+      advancement: "Starting or via advance"
 
     3_competent:
       modifier: 0
       description: "Professional capability"
-      advancement: "Starting or minor milestone"
+      advancement: "Starting or via advance"
 
     4_professional:
       modifier: 1
       description: "Skilled practitioner"
-      advancement: "Minor milestone"
+      advancement: "Via advance"
 
     5_expert:
       modifier: 2
       description: "Pinnacle of mortal capability"
-      advancement: "Moderate milestone"
+      advancement: "Via advance (costs 2 if above linked attribute)"
       note: "Final skill tier - represents peak human achievement"
 
-    design_note: "Master tier (+3) removed to maintain bounded accuracy throughout 8-12 session campaigns. Expert represents the absolute peak of human capability without becoming superhuman."
+    design_note: "Master tier (+3) removed to maintain bounded accuracy throughout 30-50 session campaigns. Expert represents the absolute peak of human capability without becoming superhuman."
   
   skill_list:
     physical:
@@ -665,7 +665,7 @@ dice_conventions:
     exploding:
       trigger: "Natural 6 on damage die"
       effect: "Roll again and add"
-      milestone_requirement: 10
+      rank_requirement: "Heroic"
       stacks: true
   
   special_dice:

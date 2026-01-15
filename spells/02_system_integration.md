@@ -150,29 +150,29 @@ Changing stances is a significant decision:
 
 ## Spell Scaling with Advancement
 
-Spells automatically improve as characters gain milestones, ensuring magical power keeps pace with martial advancement:
+Spells automatically improve as characters advance in rank, ensuring magical power keeps pace with martial advancement:
 
 ### Damage Spell Scaling
 
-**At 3 Milestones:**
+**At Seasoned Rank:**
 
 - Damage spells gain +1d6
 - Example: Bolt goes from Attribute + 1d6 to Attribute + 2d6
 - Applies to all damage-dealing spells (Spark, Bolt, Fireball, etc.)
 
-**At 6 Milestones:**
+**At Veteran Rank:**
 
 - All spells gain +1 to their save TN
 - Enemy saves become harder to succeed
 - Increases effectiveness of control/debuff spells
 
-**At 10 Milestones:**
+**At Heroic Rank:**
 
 - Damage spells gain another +1d6
 - Example: Fireball goes from 2d6 to 3d6
 - Significantly increased combat power
 
-**At 15 Milestones:**
+**At Legendary Rank:**
 
 - Can cast one tier higher for same cost once per scene
 - Example: Cast a Tier 2 spell for 0 Momentum, or Tier 3 for -1 Momentum
@@ -182,11 +182,11 @@ Spells automatically improve as characters gain milestones, ensuring magical pow
 
 **Bolt (Tier 1 Basic Spell):**
 
-- **Start:** Attribute + 1d6 damage, 0 Momentum cost
-- **3 Milestones:** Attribute + 2d6 damage, 0 Momentum cost
-- **6 Milestones:** Attribute + 2d6 damage, 0 Momentum cost, +1 save TN
-- **10 Milestones:** Attribute + 3d6 damage, 0 Momentum cost, +1 save TN
-- **15 Milestones:** Can cast as Tier 0 (generates +1 Momentum) once per scene
+- **Novice:** Attribute + 1d6 damage, 0 Momentum cost
+- **Seasoned:** Attribute + 2d6 damage, 0 Momentum cost
+- **Veteran:** Attribute + 2d6 damage, 0 Momentum cost, +1 save TN
+- **Heroic:** Attribute + 3d6 damage, 0 Momentum cost, +1 save TN
+- **Legendary:** Can cast as Tier 0 (generates +1 Momentum) once per scene
 
 This progression ensures spellcasters remain competitive with martial damage scaling throughout a campaign.
 
@@ -403,7 +403,7 @@ Focus items are **narrative elements**, not mechanical requirements, unless you 
 
 Characters improve magical ability through:
 
-**Milestone Advances:**
+**Advance Choices:**
 
 1. **Increase Sorcery** - Makes all casting better
 2. **Increase Casting Attribute** - Improves chosen approach
@@ -417,30 +417,30 @@ Characters improve magical ability through:
 - Experiment with new approaches
 - Discover ancient magical traditions
 
-### Spell Access by Tier
+### Spell Access by Rank
 
 Suggested spell access progression:
 
-**Character Creation:**
+**Character Creation (Novice):**
 
 - All Cantrips
 - 3-4 Standard Spells
 - 1-2 Advanced Spells (if Sorcery +2 or higher)
 - 0 Master Spells
 
-**Milestone 2-3:**
+**Seasoned Rank:**
 
 - Gain 1-2 more Standard Spells
 - Gain 1 Advanced Spell
 - Possibly first Master Spell (if Sorcery +3)
 
-**Milestone 4-5:**
+**Veteran Rank:**
 
 - Full access to Standard/Advanced Spells
 - Gain 1-2 Master Spells
 - Specialize in preferred approaches
 
-**Milestone 6+:**
+**Heroic+ Ranks:**
 
 - Access to all spell tiers
 - Multiple Master Spells known

@@ -543,6 +543,6 @@ Two orcs with identical statistics can feel completely different:
 
 ### Remember: Stats Serve Story
 
-If a scene needs a dangerous mercenary captain, don't calculate "appropriate Guard for party milestone level." Ask: "How tough should Captain Vex be for this story?" Then assign statistics that make that story work.
+If a scene needs a dangerous mercenary captain, don't calculate "appropriate Guard for party rank." Ask: "How tough should Captain Vex be for this story?" Then assign statistics that make that story work.
 
 Sometimes the right answer is "too tough to fight directly." That's not unfair - it's dramatic.

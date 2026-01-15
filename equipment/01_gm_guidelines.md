@@ -291,8 +291,8 @@ Consider developing:
 
 This approach creates meaningful progression without rendering earlier equipment obsolete.
 
-**Pacing Considerations**  
-Equipment advancement should align with overall campaign progression and character development. Major equipment improvements should typically coincide with significant milestones, maintaining appropriate challenge levels while providing concrete manifestation of character growth.
+**Pacing Considerations**
+Equipment advancement should align with overall campaign progression and character development. Major equipment improvements should typically coincide with rank promotions, maintaining appropriate challenge levels while providing concrete manifestation of character growth.
 
 Consider aligning:
 

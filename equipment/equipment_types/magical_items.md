@@ -642,7 +642,7 @@ Magical items should feel special rather than expected:
 - Common items: Can be purchased or found relatively easily
 - Uncommon items: Significant treasure finds or rewards
 - Rare items: Major achievements or important discoveries
-- Very Rare items: Campaign milestone rewards
+- Very Rare items: Heroic or Legendary rank rewards
 - Legendary items: Unique artifacts central to story
 
 ### Making Items Memorable

@@ -280,11 +280,11 @@ _Can position, buff, prepare—can't directly harm frozen creatures_
 
 ## Momentum Management Guide
 
-### Starting Momentum by Level
+### Starting Momentum by Rank
 
-- **Low Level (Milestone 1-2):** 3-5 Momentum
-- **Mid Level (Milestone 3-4):** 5-7 Momentum
-- **High Level (Milestone 5-6):** 7-10 Momentum
+- **Novice:** 3-5 Momentum
+- **Seasoned:** 5-7 Momentum
+- **Veteran+:** 7-10 Momentum
 
 ### Spending Priorities
 
@@ -419,9 +419,9 @@ _These are narrative, not mechanical restrictions—any caster can use any attri
 **Spell Access Progression (Suggested):**
 
 - **Creation:** All cantrips, 3-4 standard, 1-2 advanced
-- **Milestone 2-3:** +2 standard, +1 advanced, possibly first master
-- **Milestone 4-5:** Full standard/advanced access, 1-2 master
-- **Milestone 6+:** All tiers available
+- **Seasoned:** +2 standard, +1 advanced, possibly first master
+- **Veteran:** Full standard/advanced access, 1-2 master
+- **Heroic+:** All tiers available
 
 **Balancing Magic:**
 

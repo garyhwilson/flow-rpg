@@ -713,37 +713,37 @@ equipment_progression:
         uses: "100 successful uses"
         benefit: "Unique magical property"
   
-  milestone_upgrades:
-    minor_milestone:
+  equipment_upgrades_by_rank:
+    novice_seasoned:
       options:
         - "Repair and improve gear"
         - "Add minor modification"
         - "Acquire quality version"
-    
-    moderate_milestone:
+
+    seasoned_veteran:
       options:
         - "Commission masterwork"
         - "Add magical enhancement"
         - "Discover rare material"
-    
-    major_milestone:
+
+    heroic_legendary:
       options:
         - "Forge legendary item"
         - "Awaken item intelligence"
         - "Create artifact"
-  
+
   signature_equipment:
     description: "Personal iconic gear"
-    
+
     creation:
-      when: "Moderate milestone"
+      when: "Seasoned rank"
       process: "Name and describe"
       benefit: "Grows with character"
-    
+
     evolution:
-      minor: "+1 enhancement"
-      moderate: "Special property"
-      major: "Legendary ability"
+      seasoned: "+1 enhancement"
+      veteran: "Special property"
+      heroic: "Legendary ability"
 
 # ============================================
 # ECONOMY

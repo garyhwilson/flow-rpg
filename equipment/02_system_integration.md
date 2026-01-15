@@ -556,27 +556,27 @@ Equipment becomes increasingly personalized through modification:
 
 These progression paths create equipment evolution alongside character development, establishing concrete manifestation of abstract advancement.
 
-### Milestone Integration
+### Advancement Integration
 
-The milestone system integrates with equipment development in several significant ways:
+The rank system integrates with equipment development in several significant ways:
 
-**Equipment-Based Milestones**  
-Some milestones specifically involve equipment acquisition or mastery:
+**Equipment-Based Advancement**
+Some advancement moments specifically involve equipment acquisition or mastery:
 
-- Minor Milestones might include acquiring specialized tools or weapons
-- Moderate Milestones could involve obtaining rare or exceptional equipment
-- Major Milestones sometimes feature legendary or unique items
+- Novice-Seasoned advancement might include acquiring specialized tools or weapons
+- Veteran rank could involve obtaining rare or exceptional equipment
+- Heroic and Legendary ranks sometimes feature unique or legendary items
 
-**Milestone-Unlocked Equipment**  
-Character development through milestones often enables equipment access:
+**Rank-Unlocked Equipment**
+Character development through advancement often enables equipment access:
 
 - Skill improvements unlock utilization capabilities for advanced equipment
 - Reputation advancements provide access to restricted equipment sources
 - Knowledge development reveals previously unknown equipment options
 - Connection establishment creates acquisition opportunities
 
-**Equipment Synergy with Abilities**  
-Milestone-granted abilities often interact specifically with equipment:
+**Equipment Synergy with Abilities**
+Advance-granted abilities often interact specifically with equipment:
 
 - Combat techniques might require particular weapon types
 - Specialized skills could utilize specific tools more effectively

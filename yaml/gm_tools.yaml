@@ -355,25 +355,25 @@ campaign_management:
     episodic:
       description: "Self-contained adventures"
       momentum_reset: "Full reset each session"
-      advancement: "Milestone per episode"
+      advancement: "3-5 XP per episode"
       benefits: "Easy to run, flexible"
-    
+
     serial:
       description: "Ongoing connected story"
       momentum_reset: "Carries between sessions"
-      advancement: "Natural story beats"
+      advancement: "XP tied to story progress"
       benefits: "Deep character development"
-    
+
     sandbox:
       description: "Player-driven exploration"
       momentum_reset: "By location"
-      advancement: "Discovery-based"
+      advancement: "XP for discoveries and achievements"
       benefits: "Maximum agency"
-    
+
     hybrid:
       description: "Serial with episodic elements"
       momentum_reset: "Varies by arc"
-      advancement: "Mixed approach"
+      advancement: "Standard XP (3-5/session)"
       benefits: "Best of both worlds"
   
   session_structure:
@@ -419,24 +419,31 @@ campaign_management:
       climax_management: "Both sides maximum Momentum"
       denouement: "Gentle Momentum reduction"
   
-  milestone_timing:
-    minor_milestone_triggers:
-      - "End of satisfying session"
-      - "Significant discovery"
-      - "Overcome personal challenge"
-      - "Creative problem solution"
-    
-    moderate_milestone_triggers:
-      - "Complete story arc"
-      - "Defeat recurring villain"
-      - "Save community"
-      - "Major character growth"
-    
-    major_milestone_triggers:
-      - "Complete campaign chapter"
-      - "World-changing event"
-      - "Legendary achievement"
-      - "Transform the setting"
+  xp_award_guidance:
+    standard_awards:
+      base: "3 XP per session"
+      good_progress: "4 XP per session"
+      exceptional: "5 XP per session"
+
+    award_triggers:
+      always_give: "3 XP just for showing up and playing"
+      bonus_1_xp: "Significant story progress, clever solutions, good roleplay"
+      bonus_2_xp: "Major achievements, completing arcs, exceptional sessions"
+
+    pacing:
+      average: "4 XP/session over a campaign"
+      advance_rate: "1 advance every 1-2 sessions (5 XP = 1 advance)"
+      rank_promotion: "Every 4 advances (roughly 5-8 sessions per rank)"
+
+    guidelines:
+      consistency: "Award at end of every session—never skip"
+      transparency: "Tell players exactly why they earned bonus XP"
+      fairness: "Whole party gets same XP (no individual awards)"
+
+    example_awards:
+      routine_session: "3 XP - Regular play, some progress"
+      good_session: "4 XP - Completed objective, good roleplay"
+      great_session: "5 XP - Major arc completion, memorable moments"
 
 # ============================================
 # RULES ADJUDICATION
@@ -505,50 +512,60 @@ adjudication:
 # ============================================
 
 sweet_spot_edition:
-  philosophy: "Autumn Phoenix RPG Sweet Spot Edition - Bounded accuracy that actually works"
+  philosophy: "Autumn Phoenix RPG - Savage Worlds-inspired progression with bounded accuracy"
 
   campaign_parameters:
-    ideal_length: "8-12 sessions"
+    ideal_length: "30-50 sessions"
     modifier_cap: "+5 total (attribute + skill + specialties)"
-    design_goal: "TN 8 stays relevant from session 1 through campaign conclusion"
-    retirement: "Characters conclude at peak power around session 12"
+    design_goal: "TN 8 relevant at Novice/Seasoned, TN 10-12 for Veteran+"
+    cap_reached: "Veteran rank (sessions 17-24)"
 
-  power_progression:
-    session_1_2:
-      typical_modifier: "+2 to +4"
-      vs_tn_8: "86-97% success"
-      description: "Already competent - optimized characters hit +4 at creation"
+  power_progression_by_rank:
+    novice:
+      advances: "0-3"
+      sessions: "1-8 (roughly)"
+      typical_modifier: "+1 to +3"
+      vs_tn_8: "72-91% success"
+      description: "New adventurers finding their footing"
       threats: "Local bandits, wild animals, minor mysteries"
-      note: "TN 8 may feel easy for optimized builds; use TN 10 for real challenges"
+      tn_guidance: "TN 8 standard, TN 10 hard"
 
-    session_3_4:
-      typical_modifier: "+3 to +5"
+    seasoned:
+      advances: "4-7"
+      sessions: "9-16 (roughly)"
+      typical_modifier: "+3 to +4"
       vs_tn_8: "91-97% success"
-      description: "Specialists hit cap via Deepen Expertise - TN 8 becomes routine"
+      description: "Established heroes with growing reputations"
       threats: "Organized crime, cultists, dangerous beasts"
-      note: "Transition to TN 10 as standard for meaningful challenges"
+      tn_guidance: "TN 8 routine, TN 10 standard, TN 12 hard"
 
-    session_5_6:
-      typical_modifier: "+4 to +5"
+    veteran:
+      advances: "8-11"
+      sessions: "17-24 (roughly)"
+      typical_modifier: "+4 to +5 (approaching cap)"
       vs_tn_8: "97% success"
-      description: "Most characters at or near cap - TN 8 is now trivial"
+      description: "Renowned champions - +5 cap reached here"
       threats: "Noble houses, young dragons, demon cults"
-      note: "Use TN 10 as baseline, TN 12 for hard challenges"
+      tn_guidance: "TN 10 standard, TN 12 hard"
 
-    session_7_9:
+    heroic:
+      advances: "12-15"
+      sessions: "25-32 (roughly)"
       typical_modifier: "+5 (at cap)"
       vs_tn_8: "97% success"
-      description: "All characters at cap - horizontal growth replaces vertical"
+      description: "Legendary figures - horizontal growth (specialties, techniques)"
       threats: "Ancient guardians, powerful organizations, planar threats"
-      note: "TN 10 is now standard, TN 8 is auto-success for primary skills"
+      tn_guidance: "TN 10 routine, TN 12 standard"
 
-    session_10_12:
+    legendary:
+      advances: "16+"
+      sessions: "33+ (roughly)"
       typical_modifier: "+5 (at cap)"
       vs_tn_8: "97.2% success"
-      description: "Legendary heroes - peak mortal capability, but rolls feel nearly automatic"
+      description: "Mythic heroes challenging gods and fate itself"
       threats: "Demon lords, ancient dragons, world-ending catastrophes"
-      note: "Campaign concludes here - characters retire at peak power"
-      design_warning: "At +5, TN 8 rolls are nearly automatic (35/36 outcomes succeed). Use TN 10+ for meaningful challenges. Bounded accuracy works but requires higher TNs at peak power."
+      tn_guidance: "TN 12 standard, TN 14 for climactic moments"
+      design_note: "Horizontal growth continues - more versatility, not more power"
 
   target_numbers:
     philosophy: "TN 8 is baseline, but GMs must scale TNs as party power increases"
@@ -564,27 +581,27 @@ sweet_spot_edition:
       the_problem: |
         AT +5 MODIFIER, TN 8 SUCCEEDS 97% OF THE TIME!
         Only snake eyes (1,1) fails. This is NOT a meaningful challenge.
-        If you use TN 8 throughout the campaign, Sessions 4-12 will be
+        If you use TN 8 for Veteran+ rank characters, the game becomes
         boring and tension-free as players auto-succeed at everything.
 
       the_solution: |
-        Scale TNs as party power increases:
-        - Sessions 1-3: TN 8 standard (party at +2 to +4)
-        - Sessions 4-6: TN 10 standard (party at +4 to +5)
-        - Sessions 7-12: TN 10-12 standard (party at +5 cap)
+        Scale TNs by party Rank:
+        - Novice (advances 0-3): TN 8 standard
+        - Seasoned (advances 4-7): TN 10 standard
+        - Veteran+ (advances 8+): TN 10-12 standard
 
-      session_cheat_sheet:
-        sessions_1_3: "TN 8 standard, TN 10 hard"
-        sessions_4_6: "TN 10 standard, TN 12 hard"
-        sessions_7_12: "TN 10 routine, TN 12 standard, TN 14 extreme"
+      rank_cheat_sheet:
+        novice: "TN 8 standard, TN 10 hard"
+        seasoned: "TN 10 standard, TN 12 hard"
+        veteran_plus: "TN 10 routine, TN 12 standard, TN 14 extreme"
 
       what_happens_if_ignored: |
-        - Sessions 1-3: Game feels appropriately challenging
-        - Sessions 4-6: Game starts feeling too easy
-        - Sessions 7-12: Players succeed at EVERYTHING, no tension
+        - Novice: Game feels appropriately challenging
+        - Seasoned: Game starts feeling too easy with TN 8
+        - Veteran+: Players succeed at EVERYTHING with TN 8, no tension
         - Result: Boring campaign, players disengage
 
-      remember: "THIS IS A CORE RULE. Higher character power REQUIRES higher TNs."
+      remember: "THIS IS A CORE RULE. Higher Rank REQUIRES higher TNs."
 
     standard_tns:
       trivial: 6
@@ -594,34 +611,41 @@ sweet_spot_edition:
       extreme: 12
       legendary: 14
 
-    tn_scaling_by_session:
-      sessions_1_3:
-        party_modifiers: "+2 to +4"
-        standard_challenge: "TN 8-10 (86-97% at TN 8, 58-83% at TN 10)"
-        hard_challenge: "TN 10-12 (58-83% at TN 10, 28-58% at TN 12)"
-        guidance: "TN 8 may feel easy for optimizers; use TN 10 for real challenges"
+    tn_scaling_by_rank:
+      novice:
+        party_modifiers: "+1 to +3"
+        standard_challenge: "TN 8 (72-91% success)"
+        hard_challenge: "TN 10 (41-72% success)"
+        guidance: "TN 8 works well; use TN 10 for real challenges"
         example: "TN 8: Routine tasks. TN 10: Climbing crumbling wall under fire"
 
-      sessions_4_6:
-        party_modifiers: "+4 to +5"
-        standard_challenge: "TN 10 (83-97% success)"
-        hard_challenge: "TN 12 (58-72% success)"
-        guidance: "TN 8 is now routine; TN 10 is new standard"
+      seasoned:
+        party_modifiers: "+3 to +4"
+        standard_challenge: "TN 10 (72-83% success)"
+        hard_challenge: "TN 12 (42-58% success)"
+        guidance: "TN 8 becoming routine; TN 10 is new standard"
         example: "TN 10: Tracking cultists. TN 12: Decoding ancient ritual"
 
-      sessions_7_9:
-        party_modifiers: "+5 (at cap)"
-        standard_challenge: "TN 10 (97% success)"
-        hard_challenge: "TN 12 (72% success)"
-        guidance: "TN 8 is auto-success, TN 10 is routine, TN 12 for real challenges"
-        example: "TN 10: Routine for legends. TN 12: Negotiating with dragon"
+      veteran:
+        party_modifiers: "+4 to +5 (at/near cap)"
+        standard_challenge: "TN 10 (83-97% success)"
+        hard_challenge: "TN 12 (58-72% success)"
+        guidance: "TN 8 is auto-success, TN 10 is standard, TN 12 for hard challenges"
+        example: "TN 10: Standard heroic task. TN 12: Negotiating with dragon"
 
-      sessions_10_12:
+      heroic:
         party_modifiers: "+5 (at cap)"
-        standard_challenge: "TN 10-12 (72% at TN 10, 42% at TN 12)"
-        hard_challenge: "TN 12-14 (42% at TN 12, 16.7% at TN 14)"
-        guidance: "TN 8 is automatic (97.2%), use TN 10+ exclusively for peak power heroes"
-        example: "TN 10: Binding demon lord. TN 12: Rewriting fate itself. TN 14: Godhood"
+        standard_challenge: "TN 12 (72% success)"
+        hard_challenge: "TN 14 (42% success)"
+        guidance: "TN 10 is routine, TN 12 is standard, TN 14 for dramatic moments"
+        example: "TN 12: Major heroic feat. TN 14: Nearly impossible odds"
+
+      legendary:
+        party_modifiers: "+5 (at cap)"
+        standard_challenge: "TN 12 (72% success)"
+        hard_challenge: "TN 14 (42% success)"
+        guidance: "TN 10 is trivial, TN 12 standard, TN 14+ for epic moments"
+        example: "TN 12: Binding demon lord. TN 14: Rewriting fate itself"
 
     quick_reference_table:
       at_plus_0: "TN 8 = 58% (challenging)"
@@ -631,23 +655,23 @@ sweet_spot_edition:
       at_plus_5: "TN 8 = 97% (automatic), TN 10 = 97% (routine), TN 12 = 72% (challenging)"
 
     practical_gm_advice:
-      early_campaign: "TN 8 works but optimizers may breeze through; mix TN 10 for real challenges"
-      mid_campaign: "TN 10 is your new standard by Session 4; TN 8 is for routine tasks"
-      late_campaign: "TN 10 is routine at +5; TN 12 is standard, TN 14 for heroic moments"
-      peak_power: "TN 12-14 for climactic moments against world-ending threats"
+      novice_rank: "TN 8 works well; mix in TN 10 for real challenges"
+      seasoned_rank: "TN 10 is your new standard; TN 8 is for routine tasks"
+      veteran_rank: "TN 10 is routine at +5; TN 12 is standard for challenges"
+      heroic_legendary: "TN 12 standard, TN 14 for climactic moments"
 
   design_rationale:
     core_insight: "Bounded accuracy requires ACTUALLY bounding the modifiers AND adjusting TNs"
-    honest_assessment: "Even with +5 cap, TN 8 becomes nearly automatic at peak power"
-    sweet_spot: "8-12 sessions is the natural lifespan for +0 to +5 progression with TN scaling"
-    retirement: "Characters conclude at heroic peak when they're challenging gods at TN 14"
+    honest_assessment: "Even with +5 cap, TN 8 becomes nearly automatic at Veteran+"
+    progression: "30-50 sessions with +5 cap reached at Veteran rank (sessions 17-24)"
+    horizontal_growth: "After +5 cap, advancement provides versatility, not raw power"
     vs_unlimited_progression: "Avoids +8 modifiers breaking everything, but requires GM awareness"
 
   gm_guidance:
-    embrace_conclusion: "Plan for campaign arc to conclude around session 10-12"
-    tn_awareness: "Track party modifiers and adjust TNs accordingly—this is critical"
-    next_campaign: "Start fresh with new characters for new stories"
-    legacy_benefits: "Retired characters can mentor new PCs or become world NPCs"
+    long_campaigns: "30-50 sessions allows for epic multi-arc stories"
+    tn_awareness: "Track party Rank and adjust TNs accordingly—this is critical"
+    rank_promotion: "Celebrate rank promotions as major story moments"
+    legendary_play: "Legendary rank characters are demigods—adventures should match"
 
   # =========================================================
   # PRINTABLE GM REFERENCE CARD
@@ -656,16 +680,19 @@ sweet_spot_edition:
     title: "Autumn Phoenix RPG - TN Quick Reference"
     format: "Print and keep at table"
 
-    session_tn_guide:
-      sessions_1_3:
-        standard: "TN 8-10"
-        hard: "TN 10-12"
-      sessions_4_6:
+    rank_tn_guide:
+      novice:
+        standard: "TN 8"
+        hard: "TN 10"
+      seasoned:
         standard: "TN 10"
         hard: "TN 12"
-      sessions_7_plus:
-        standard: "TN 10-12"
-        hard: "TN 12-14"
+      veteran:
+        standard: "TN 10"
+        hard: "TN 12"
+      heroic_legendary:
+        standard: "TN 12"
+        hard: "TN 14"
 
     modifier_to_success_vs_tn:
       header: ["Mod", "TN 8", "TN 10", "TN 12"]
@@ -683,7 +710,7 @@ sweet_spot_edition:
     remember:
       - "At +5, TN 8 is auto-success (97%)"
       - "Powerful adversaries: MAX 2 attacks per round"
-      - "Track party modifiers each session"
+      - "Track party Rank and adjust TNs"
 
 # ============================================
 # TOOLS AND RESOURCES
@@ -746,11 +773,11 @@ gm_tools:
         - "Complications available"
     
     campaign_tracker:
-      milestone_progress:
-        - "Sessions since last milestone"
+      advancement_progress:
+        - "Current XP and advances"
+        - "Party Rank (Novice/Seasoned/Veteran/Heroic/Legendary)"
+        - "Advances until next rank"
         - "Significant achievements"
-        - "Character growth moments"
-        - "Pending rewards"
       
       story_threads:
         - "Active plots"

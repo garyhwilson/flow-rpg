@@ -82,7 +82,7 @@
 +------------------------------------------+
 | NAME: _________________  PLAYER: _______ |
 | SPECIES: ______________ ARCHETYPE: _____ |
-| CALLING: ______________ MILESTONE: _____ |
+| CALLING: ______________ RANK: __________ |
 +------------------------------------------+
 | ATTRIBUTES                | DERIVED      |
 | +----------+----+ +----------+----+ +------+|
@@ -113,11 +113,11 @@
 | ______________________   | _____________  |
 | ______________________   | _____________  |
 +---------------------------+---------------+
-| MILESTONE TRACKER                         |
-| MINOR:    | | | | | | | | | | | |        |
-| MODERATE: | | |                          |
-| MAJOR:    | |                            |
-| (Track for advancement options)           |
+| ADVANCEMENT TRACKER                       |
+| XP: ____/5  ADVANCES: ____               |
+| RANK: [ ]Novice [ ]Seasoned [ ]Veteran   |
+|       [ ]Heroic [ ]Legendary             |
+| (5 XP = 1 Advance, 4 Advances = 1 Rank)  |
 +------------------------------------------+
 | CALLING                                  |
 | MOMENTUM BENEFIT: ________________________   |
@@ -127,13 +127,13 @@
 +------------------------------------------+
 ```
 
-The character sheet includes a dedicated Milestone Tracker section that allows players to:
+The character sheet includes a dedicated Advancement Tracker section that allows players to:
 
-1. Track individual minor, moderate, and major milestones with checkbox fields
-2. Calculate their total milestones achieved in one place
-3. Reference their advancement options based on milestones earned
+1. Track XP earned toward the next advance (5 XP = 1 Advance)
+2. Track total advances earned and current rank
+3. Reference the five ranks: Novice → Seasoned → Veteran → Heroic → Legendary
 
-This helps players track their character progression and know when new advancement options become available.
+This helps players track their character progression and know when rank promotions unlock new techniques and abilities.
 
 ---
 
@@ -180,7 +180,7 @@ Extensive playtesting revealed several key insights that shaped the final system
 
 #### Ongoing Balance Considerations
 
-- Monitor Guard scaling at higher milestones
+- Monitor Guard scaling at higher ranks
 - Watch Halfling weapon damage penalty
 - Observe Scholar Calling retroactive dice benefit
 - Track Will casting as "emergency button"
@@ -252,7 +252,7 @@ Most importantly, the system encourages players to create characters driven by i
 **M**
 
 - Magic System, 218
-- Milestone System, 232
+- Advancement System, 232
 
 **N**
 

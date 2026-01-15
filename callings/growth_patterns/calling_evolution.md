@@ -16,7 +16,7 @@ This **deepening** represents the most common form of Calling evolution. The cor
 
 Sometimes growth means incorporating strengths from other Callings. Sir Aldric, a Champion, discovered that his drive to lead and achieve could be enriched by the Scholar's love of wisdom. He didn't stop being a Champion - but he learned to lead through understanding rather than force alone.
 
-This **integration** often happens during moderate milestones, when characters face challenges that reveal the limits of their current approach.
+This **integration** often happens during rank transitions, when characters face challenges that reveal the limits of their current approach.
 
 ### Breaking Under Pressure
 
@@ -181,7 +181,7 @@ Encourage players to:
 - Identify their Calling's stress and growth directions
 - Notice when their character exhibits stress behaviors
 - Actively pursue growth opportunities
-- Consider how milestones might trigger evolution
+- Consider how rank transitions might trigger evolution
 
 ### GM-Facilitated Evolution
 
@@ -253,7 +253,7 @@ As characters evolve, their Momentum benefits can reflect this growth:
 
 ## Advanced Evolution: Calling Transformations
 
-In rare circumstances, usually after Major Milestones involving profound character development, a character's primary Calling might shift entirely. This represents fundamental transformation of core motivation.
+In rare circumstances, usually after reaching Heroic or Legendary rank with profound character development, a character's primary Calling might shift entirely. This represents fundamental transformation of core motivation.
 
 ### Requirements for Transformation
 
@@ -287,4 +287,4 @@ In rare circumstances, usually after Major Milestones involving profound charact
 
 - Discuss how character evolutions might affect party dynamics
 - Consider campaign themes that support meaningful evolution
-- Create collaborative story moments that mark evolution milestones
+- Create collaborative story moments that mark evolution through advancement

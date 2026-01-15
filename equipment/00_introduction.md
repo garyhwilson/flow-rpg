@@ -120,7 +120,7 @@ Equipment selection represents a significant aspect of character development in 
 
 **Starting Equipment** typically reflects background, initial training, and basic professional needs. These items represent the foundation of a character's problem-solving approach and establish their baseline capabilities.
 
-**Milestone Acquisitions** mark significant character development through the acquisition of tools representing new capabilities, specializations, or identity evolution. These key pieces often commemorate important achievements or relationships, carrying narrative significance beyond their mechanical function.
+**Rank Acquisitions** mark significant character development through the acquisition of tools representing new capabilities, specializations, or identity evolution. These key pieces often commemorate important achievements or relationships, carrying narrative significance beyond their mechanical function.
 
 **Signature Items** emerge through consistent use, customization, and association with significant accomplishments. These pieces become extensions of character identity, often gaining names, histories, and distinctive descriptions reflecting their importance to the character's story.
 

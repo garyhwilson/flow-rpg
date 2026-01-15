@@ -18,7 +18,7 @@ This guide contains all player-facing content:
 - **Combat System:** Stances, actions, and tactical options
 - **Magic System:** Flexible spellcasting with all spell tiers
 - **Equipment:** Weapons, armor, gear, and magical items
-- **Advancement:** Growing your character through milestones
+- **Advancement:** Growing your character through XP and Ranks
 - **Quick References:** Fast-lookup tables for play
 
 ### Design & Writing

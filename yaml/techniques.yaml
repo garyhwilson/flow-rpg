@@ -1,6 +1,6 @@
 # Autumn Phoenix RPG Universal Techniques
-# Version: 2.0-restructured
-# Abilities available to all characters through milestones
+# Version: 3.0-savage-worlds-inspired
+# Abilities available to all characters through advances
 
 techniques_system:
   philosophy:
@@ -9,12 +9,12 @@ techniques_system:
       - "No archetype gates - abilities available to all"
       - "Narrative justification enhances acquisition"
       - "Momentum cost balances powerful techniques"
-      - "Milestone choices provide access"
+      - "Rank requirements gate powerful techniques"
 
   acquisition_methods:
-    milestone_choice:
-      description: "Select technique instead of other advancement"
-      availability: "Any milestone level"
+    advance_choice:
+      description: "Select technique instead of other advancement option"
+      availability: "Some techniques require minimum Rank"
 
     training:
       description: "Learn from mentor or through practice"
@@ -54,27 +54,27 @@ combat_techniques:
     combat_expertise:
       effect: "+1 to combat rolls in chosen situation"
       examples: ["Dueling", "Mounted", "Defensive"]
-      acquisition: "Minor milestone"
+      acquisition: "Via advance"
 
   momentum_techniques:
-    note: "No prerequisites - just milestone + Momentum cost"
+    note: "No prerequisites - just advance + Momentum cost"
 
     riposte:
       trigger: "After successful defense"
       effect: "Immediate counterattack"
       momentum_cost: 1
-      acquisition: "Minor milestone"
+      acquisition: "Via advance"
 
     press_advantage:
       trigger: "While at Momentum +2 or higher"
       effect: "+1d6 damage on all attacks"
       momentum_cost: "Passive while condition met"
-      acquisition: "Minor milestone"
+      acquisition: "Via advance"
 
     perfect_strike:
       effect: "Next attack ignores armor"
       momentum_cost: 2
-      acquisition: "Moderate milestone"
+      acquisition: "Requires Seasoned"
 
   advanced_techniques:
     note: "Momentum cost is the only gate"
@@ -83,18 +83,18 @@ combat_techniques:
       effect: "Attack all adjacent enemies"
       damage: "Normal weapon damage to each"
       momentum_cost: 3
-      acquisition: "Moderate milestone"
+      acquisition: "Requires Seasoned"
 
     devastating_blow:
       effect: "Double damage dice on next attack"
       momentum_cost: 3
       limit: "Once per scene"
-      acquisition: "Moderate milestone"
+      acquisition: "Requires Seasoned"
 
     battlefield_control:
       effect: "Reposition all combatants in zone"
       momentum_cost: 3
-      acquisition: "Major milestone"
+      acquisition: "Requires Heroic"
 
 # ============================================
 # WIZARD DEFENSIVE TECHNIQUES
@@ -123,7 +123,7 @@ wizard_techniques:
 
     acquisition: "Wizard starting feature (free with Arcane Battery)"
 
-    availability_note: "Other characters can learn this through Minor milestone, but it scales with Mind so wizards benefit most"
+    availability_note: "Other characters can learn this via advance, but it scales with Mind so wizards benefit most"
 
     tactical_notes: |
       - Can use multiple times per round if you have Momentum
@@ -160,51 +160,51 @@ metamagic:
       effect: "Cast without visible components"
       momentum_cost: 1
       benefit: "Cannot be counterspelled"
-      acquisition: "Minor milestone"
+      acquisition: "Via advance"
 
     extended_spell:
       effect: "Double spell duration"
       momentum_cost: 1
       restriction: "Duration spells only"
-      acquisition: "Minor milestone"
+      acquisition: "Via advance"
 
     careful_spell:
       effect: "Exclude allies from area effects"
       momentum_cost: 1
-      acquisition: "Minor milestone"
+      acquisition: "Via advance"
 
   advanced_metamagic:
-    note: "Available through moderate milestones"
+    note: "Requires Seasoned rank"
 
     empowered_spell:
       effect: "Add extra damage die"
       momentum_cost: 2
-      acquisition: "Moderate milestone"
+      acquisition: "Requires Seasoned"
 
     twinned_spell:
       effect: "Target two creatures"
       momentum_cost: 2
       restriction: "Single-target spells only"
-      acquisition: "Moderate milestone"
+      acquisition: "Requires Seasoned"
 
     quickened_spell:
       effect: "Cast as bonus action"
       momentum_cost: 3
       limit: "Once per turn"
-      acquisition: "Moderate milestone"
+      acquisition: "Requires Seasoned"
 
   master_metamagic:
-    note: "Available through major milestones"
+    note: "Requires Heroic rank"
 
     heightened_spell:
       effect: "Increase save TN by 2"
       momentum_cost: 3
-      acquisition: "Major milestone"
+      acquisition: "Requires Heroic"
 
     persistent_spell:
       effect: "Spell lasts entire scene"
       momentum_cost: 4
-      acquisition: "Major milestone"
+      acquisition: "Requires Heroic"
 
 # ============================================
 # DIVINE TECHNIQUES
@@ -222,13 +222,13 @@ divine_techniques:
       effect: "Heal 1d6 Vitality by touch"
       momentum_cost: 1
       daily_uses: "Will modifier (minimum 1)"
-      acquisition: "Minor milestone"
+      acquisition: "Via advance"
 
     healing_surge:
       effect: "All allies in zone recover 1d6 Guard"
       momentum_cost: 2
       limit: "Once per scene"
-      acquisition: "Moderate milestone"
+      acquisition: "Requires Seasoned"
 
   smite_techniques:
     requirement: "Narrative alignment with cause"
@@ -236,13 +236,13 @@ divine_techniques:
     divine_strike:
       effect: "+1d6 radiant damage vs opposed alignment"
       momentum_cost: 1
-      acquisition: "Minor milestone"
+      acquisition: "Via advance"
 
     banishing_smite:
       effect: "Send extraplanar creature home"
       momentum_cost: 3
       save: "Will TN 10"
-      acquisition: "Moderate milestone"
+      acquisition: "Requires Seasoned"
 
   aura_techniques:
     requirement: "Presence +1 or higher"
@@ -251,13 +251,13 @@ divine_techniques:
       effect: "Allies in zone get +1 to saves"
       momentum_cost: 2
       duration: "Scene"
-      acquisition: "Moderate milestone"
+      acquisition: "Requires Seasoned"
 
     inspiring_presence:
       effect: "Allies gain +1 Momentum when you succeed"
       momentum_cost: "Passive once activated"
       activation: 3
-      acquisition: "Major milestone"
+      acquisition: "Requires Heroic"
 
 # ============================================
 # ROGUISH GAMBITS
@@ -274,11 +274,11 @@ gambits:
       trigger: "Attack with advantage or surprise"
       effect: "+1d6 damage"
       requirement: "Target unaware or flanked"
-      acquisition: "Minor milestone"
+      acquisition: "Via advance"
 
       progression:
-        basic: "+1d6 damage (Minor milestone)"
-        improved: "+2d6 damage (Moderate milestone)"
+        basic: "+1d6 damage (via advance)"
+        improved: "+2d6 damage (requires Seasoned)"
         note: "Caps at 2d6 to prevent overshadowing Fighter damage output"
 
       critical_interaction:
@@ -293,7 +293,7 @@ gambits:
       effect: "Blind, trip, or disarm opponent"
       contest: "Finesse vs defense"
       momentum_generation: "+1 on success"
-      acquisition: "Minor milestone"
+      acquisition: "Via advance"
 
   advanced_gambits:
     requirement: "Grace or Mind +2"
@@ -303,14 +303,14 @@ gambits:
       effect: "Negate all damage from source"
       momentum_cost: 3
       limit: "Once per scene"
-      acquisition: "Moderate milestone"
+      acquisition: "Requires Seasoned"
 
     shadow_step:
       effect: "Teleport behind enemy"
       range: "Within same zone"
       momentum_cost: 2
       bonus: "Next attack has advantage"
-      acquisition: "Moderate milestone"
+      acquisition: "Requires Seasoned"
 
   master_gambits:
     requirement: "Multiple successes with basic gambits"
@@ -320,7 +320,7 @@ gambits:
       duration: "One round studying"
       benefit: "Critical on 10+ vs that target"
       momentum_cost: 3
-      acquisition: "Major milestone"
+      acquisition: "Requires Heroic"
 
 # ============================================
 # BARDIC INSPIRATION
@@ -338,13 +338,13 @@ inspiration_techniques:
       range: "Can hear you"
       momentum_cost: 1
       uses: "Presence modifier per scene"
-      acquisition: "Minor milestone"
+      acquisition: "Via advance"
 
     cutting_words:
       effect: "Enemy suffers -1d6 to next roll"
       range: "Can hear and understand you"
       momentum_cost: 1
-      acquisition: "Minor milestone"
+      acquisition: "Via advance"
 
   performance_magic:
     requirement: "Perform skill and spell access"
@@ -352,13 +352,13 @@ inspiration_techniques:
     song_of_rest:
       effect: "Double healing during short rest"
       duration: "10 minutes performance"
-      acquisition: "Minor milestone"
+      acquisition: "Via advance"
 
     countercharm:
       effect: "Allies immune to charm/fear"
       duration: "While performing"
       momentum_cost: 2
-      acquisition: "Moderate milestone"
+      acquisition: "Requires Seasoned"
 
   legendary_performance:
     requirement: "Perform Expert (+2)"
@@ -368,7 +368,7 @@ inspiration_techniques:
       effect: "Influence crowd's emotions"
       save: "Will TN 10"
       momentum_cost: 4
-      acquisition: "Major milestone"
+      acquisition: "Requires Heroic"
 
 # ============================================
 # TERRAIN MASTERY
@@ -406,7 +406,7 @@ terrain_mastery:
           - "Immune to heat exhaustion"
           - "+2 to Survival"
 
-    acquisition: "Minor milestone per terrain"
+    acquisition: "Via advance (one terrain per advance)"
 
   advanced_terrain:
     requirement: "Basic mastery in terrain"
@@ -414,19 +414,19 @@ terrain_mastery:
     one_with_environment:
       effect: "Invisible while still in terrain"
       momentum_cost: 2
-      acquisition: "Moderate milestone"
+      acquisition: "Requires Seasoned"
 
     territorial_advantage:
       effect: "+1 to all rolls in chosen terrain"
       passive: true
-      acquisition: "Moderate milestone"
+      acquisition: "Requires Seasoned"
 
   legendary_terrain:
     requirement: "Multiple terrain masteries"
 
     worldwalker:
       effect: "Benefits of all terrains"
-      acquisition: "Major milestone"
+      acquisition: "Requires Heroic"
 
 # ============================================
 # UNIVERSAL TECHNIQUES
@@ -438,19 +438,19 @@ universal_techniques:
   momentum_mastery:
     momentum_conservation:
       effect: "Reduce all Momentum costs by 1 (minimum 0)"
-      acquisition: "Major milestone"
+      acquisition: "Requires Heroic"
 
     momentum_battery:
       effect: "Maximum Momentum increased to +8"
-      acquisition: "Major milestone"
+      acquisition: "Requires Heroic"
 
     momentum_transfer:
       effect: "Give Momentum to adjacent ally"
       rate: "2 for 1"
-      acquisition: "Moderate milestone"
+      acquisition: "Requires Seasoned"
 
   legendary_abilities:
-    requirement: "Two Major milestones"
+    requirement: "Requires Legendary rank"
 
     unstoppable:
       effect: "Immune to all conditions for scene"
@@ -506,36 +506,36 @@ technique_combinations:
 
 suggested_paths:
   warrior_path:
-    minor_milestones:
+    novice_seasoned:
       - "Combat Expertise"
       - "Riposte"
       - "Weapon Focus"
-    moderate_milestones:
+    seasoned_veteran:
       - "Whirlwind Strike"
       - "Perfect Strike"
-    major_milestone:
+    heroic:
       - "Battlefield Control"
 
   caster_path:
-    minor_milestones:
+    novice_seasoned:
       - "Subtle Spell"
       - "Careful Spell"
       - "Extended Spell"
-    moderate_milestones:
+    seasoned_veteran:
       - "Empowered Spell"
       - "Quickened Spell"
-    major_milestone:
+    heroic:
       - "Persistent Spell"
 
   support_path:
-    minor_milestones:
+    novice_seasoned:
       - "Inspiring Word"
       - "Lay on Hands"
       - "Song of Rest"
-    moderate_milestones:
+    seasoned_veteran:
       - "Healing Surge"
       - "Protective Aura"
-    major_milestone:
+    heroic:
       - "Inspiring Presence"
 
   custom_path:

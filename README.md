@@ -38,6 +38,15 @@ Three stances create tactical depth:
 - **Defensive:** Build resources, improve defenses
 - **Balanced:** Versatile and adaptable
 
+### Savage Worlds-Inspired Advancement
+
+XP and Ranks system designed for 30-50 session campaigns:
+
+- **Simple tracking:** 3-5 XP per session, 5 XP = 1 Advance
+- **5 Ranks:** Novice → Seasoned → Veteran → Heroic → Legendary
+- **Bounded accuracy:** +5 modifier cap reached at Veteran rank
+- **Horizontal growth:** After the cap, gain versatility and techniques
+
 ---
 
 ## 📊 Current Status

@@ -355,11 +355,11 @@ Through these lifestyle elements, established Rangers maintain both immediate op
 
 **Focus:** Develops increasing expertise within specific environment types through focused specialization rather than breadth expansion. Progressively addresses more challenging operational parameters including extreme conditions, resource limitations, or extended durations within concentrated terrain categories.
 
-**Key Milestones:**
+**Development by Rank:**
 
-- **Foundation (Early):** Develops comprehensive understanding regarding specific terrain type characteristics and challenges. Creates specialized equipment configurations and technique adaptations addressing particular environmental demands.
-- **Development (Middle):** Addresses increasingly challenging conditions within specialty environment including extreme manifestations, seasonal variations, and extended operation requirements. Develops innovative approaches overcoming traditional operational limitations.
-- **Mastery (Advanced):** Operates effectively within theoretically impossible environmental constraints through exceptional adaptation and specialized technique development. Creates new methodologies advancing entire field beyond established operational boundaries.
+- **Novice-Seasoned:** Develops comprehensive understanding regarding specific terrain type characteristics and challenges. Creates specialized equipment configurations and technique adaptations addressing particular environmental demands.
+- **Veteran-Heroic:** Addresses increasingly challenging conditions within specialty environment including extreme manifestations, seasonal variations, and extended operation requirements. Develops innovative approaches overcoming traditional operational limitations.
+- **Legendary:** Operates effectively within theoretically impossible environmental constraints through exceptional adaptation and specialized technique development. Creates new methodologies advancing entire field beyond established operational boundaries.
 
 **Common Expressions:**
 
@@ -371,11 +371,11 @@ Through these lifestyle elements, established Rangers maintain both immediate op
 
 **Focus:** Develops extraordinary capability following, identifying, and predicting movements through progressive challenge engagement. Addresses increasingly difficult tracking scenarios including intentional trail concealment, challenging substrates, or complex environmental conditions.
 
-**Key Milestones:**
+**Development by Rank:**
 
-- **Foundation (Early):** Develops comprehensive sign identification capability, basic pattern recognition, and fundamental tracking methodologies. Creates systematic approach transferring observation into practical pursuit beyond instinctive following.
-- **Development (Middle):** Addresses complex tracking challenges including intermittent sign, environmental disruption, or intentional concealment through advanced methodologies. Develops innovative approaches reconstructing movement patterns from minimal indicators.
-- **Mastery (Advanced):** Tracks seemingly impossible quarry through exceptional observation capabilities and innovative methodology development. Creates new tracking approaches advancing entire field beyond traditional limitations.
+- **Novice-Seasoned:** Develops comprehensive sign identification capability, basic pattern recognition, and fundamental tracking methodologies. Creates systematic approach transferring observation into practical pursuit beyond instinctive following.
+- **Veteran-Heroic:** Addresses complex tracking challenges including intermittent sign, environmental disruption, or intentional concealment through advanced methodologies. Develops innovative approaches reconstructing movement patterns from minimal indicators.
+- **Legendary:** Tracks seemingly impossible quarry through exceptional observation capabilities and innovative methodology development. Creates new tracking approaches advancing entire field beyond traditional limitations.
 
 **Common Expressions:**
 
@@ -387,11 +387,11 @@ Through these lifestyle elements, established Rangers maintain both immediate op
 
 **Focus:** Develops sophisticated understanding regarding specific creature categories through progressive study and interaction. Addresses increasingly complex aspects including behavioral patterns, ecological relationships, or human-animal interaction approaches.
 
-**Key Milestones:**
+**Development by Rank:**
 
-- **Foundation (Early):** Develops comprehensive identification capability, basic behavioral understanding, and fundamental interaction approaches. Creates systematic observation methodology supporting detailed understanding beyond casual contact.
-- **Development (Middle):** Addresses complex wildlife dynamics including territorial patterns, social structures, or predator-prey relationships through advanced study methods. Develops specialized interaction techniques supporting close observation without disruption.
-- **Mastery (Advanced):** Establishes unprecedented understanding regarding specific creature categories through exceptional observation capabilities and methodology innovation. Creates new approaches advancing entire field beyond established knowledge boundaries.
+- **Novice-Seasoned:** Develops comprehensive identification capability, basic behavioral understanding, and fundamental interaction approaches. Creates systematic observation methodology supporting detailed understanding beyond casual contact.
+- **Veteran-Heroic:** Addresses complex wildlife dynamics including territorial patterns, social structures, or predator-prey relationships through advanced study methods. Develops specialized interaction techniques supporting close observation without disruption.
+- **Legendary:** Establishes unprecedented understanding regarding specific creature categories through exceptional observation capabilities and methodology innovation. Creates new approaches advancing entire field beyond established knowledge boundaries.
 
 **Common Expressions:**
 
@@ -403,11 +403,11 @@ Through these lifestyle elements, established Rangers maintain both immediate op
 
 **Focus:** Develops exceptional wayfinding capabilities across challenging territories through progressive skill development. Addresses increasingly difficult navigation scenarios including unmarked wilderness, extreme conditions, or complex three-dimensional environments.
 
-**Key Milestones:**
+**Development by Rank:**
 
-- **Foundation (Early):** Develops comprehensive understanding of fundamental navigation principles, environmental indicator reading, and basic orientation techniques. Creates reliable methodologies supporting confident movement beyond marked trails or familiar territories.
-- **Development (Middle):** Addresses complex navigation challenges including featureless terrain, visibility limitations, or extended journeys through advanced techniques. Develops innovative approaches maintaining orientation despite challenging circumstances.
-- **Mastery (Advanced):** Navigates seemingly impossible territories through exceptional environmental reading capabilities and methodology innovation. Creates new wayfinding approaches advancing entire field beyond traditional limitations.
+- **Novice-Seasoned:** Develops comprehensive understanding of fundamental navigation principles, environmental indicator reading, and basic orientation techniques. Creates reliable methodologies supporting confident movement beyond marked trails or familiar territories.
+- **Veteran-Heroic:** Addresses complex navigation challenges including featureless terrain, visibility limitations, or extended journeys through advanced techniques. Develops innovative approaches maintaining orientation despite challenging circumstances.
+- **Legendary:** Navigates seemingly impossible territories through exceptional environmental reading capabilities and methodology innovation. Creates new wayfinding approaches advancing entire field beyond traditional limitations.
 
 **Common Expressions:**
 

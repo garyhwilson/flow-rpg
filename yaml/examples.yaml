@@ -102,7 +102,7 @@ pregenerated_characters:
   
   marcus_ironforge:
     concept: "Dwarven Defender"
-    level: "Starting (0 milestones)"
+    rank: "Novice (0 advances)"
     
     identity:
       species: "Dwarf"
@@ -159,7 +159,7 @@ pregenerated_characters:
   
   silvara_moonwhisper:
     concept: "Elven Scout"
-    level: "Starting (0 milestones)"
+    rank: "Novice (0 advances)"
     
     identity:
       species: "Elf"
@@ -216,7 +216,7 @@ pregenerated_characters:
   
   elena_lightbringer:
     concept: "Human Healer"
-    level: "Starting (0 milestones)"
+    rank: "Novice (0 advances)"
     
     identity:
       species: "Human"
@@ -273,11 +273,11 @@ pregenerated_characters:
       strategy: "Heal and support"
       momentum_use: "Healing spells, protection"
   
-  # After Minor Milestones (Session 3-4)
-  
+  # After 3 Advances (Novice rank)
+
   finn_quickblade:
     concept: "Halfling Trickster"
-    level: "3 Minor Milestones"
+    rank: "Novice (3 advances)"
     
     identity:
       species: "Halfling"
@@ -293,12 +293,12 @@ pregenerated_characters:
       presence: 0
     
     skills:
-      professional: ["Stealth +1", "Finesse +1", "Combat +1"]  # Combat upgraded via minor milestone
-      competent: ["Deceive 0"]  # New skill via minor milestone
+      professional: ["Stealth +1", "Finesse +1", "Combat +1"]  # Combat upgraded via advance
+      competent: ["Deceive 0"]  # New skill via advance
       untrained: "All others at -2"
 
     derived_values:
-      guard: 17  # 12 + max(-2 Might, 3 Grace, 0 Will) + 2 (minor milestone) = 17
+      guard: 17  # 12 + max(-2 Might, 3 Grace, 0 Will) + 2 (Tough specialty) = 17
       vitality: 10  # 10 + 0
       momentum:
         current: 0
@@ -334,11 +334,11 @@ pregenerated_characters:
       strategy: "Flank, sneak attack, share Momentum"
       momentum_use: "Mobility and team support"
   
-  # After Moderate Milestone (Session 6)
-  
+  # Seasoned Rank (4+ advances)
+
   aldric_stormcaller:
     concept: "Human Wizard"
-    level: "1 Moderate, 2 Minor Milestones"
+    rank: "Seasoned (4 advances)"
     
     identity:
       species: "Human"
@@ -354,14 +354,14 @@ pregenerated_characters:
       presence: 1
     
     skills:
-      expert: ["Sorcery +2"]  # Upgraded via Deepen Expertise
+      expert: ["Sorcery +2"]  # Upgraded via advances
       professional: ["Lore +1"]
-      competent: ["Investigate 0"]  # Upgraded via milestone
-      novice: ["Craft +0"]  # New via milestone
+      competent: ["Investigate 0"]  # Upgraded via advance
+      novice: ["Craft +0"]  # New via advance
       untrained: "All others at -2"
 
     derived_values:
-      guard: 15  # 12 + max(-1 Might, 1 Grace, 0 Will) + 2 (milestone choice) = 15
+      guard: 15  # 12 + max(-1 Might, 1 Grace, 0 Will) + 2 (Tough specialty) = 15
       vitality: 10  # 10 + 0
       momentum:
         current: 1  # Scholar starts at +1
@@ -682,11 +682,11 @@ first_session:
       success:
         - "Return water to town"
         - "100 gold reward"
-        - "Minor milestone"
+        - "4 XP (good progress)"
       extra:
         - "Peaceful: Goblin allies"
         - "Violent: Goblin enmity"
-        - "Clever: Extra treasure"
+        - "Clever: Extra treasure (+1 XP)"
   
   gm_tips:
     first_combat:
@@ -722,13 +722,13 @@ first_session:
   
   ending_session:
     wrap_up:
-      - "Award minor milestone"
-      - "Discuss advancement choices"
+      - "Award 3-5 XP for the session"
+      - "Discuss any advances earned"
       - "Get feedback on system"
       - "Set next session expectations"
-    
+
     between_sessions:
-      - "Players choose advancement"
+      - "Players spend advances if earned"
       - "GM prepares next adventure"
       - "Adjust based on feedback"
       - "Build on established fiction"

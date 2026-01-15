@@ -480,7 +480,7 @@ Armor evolution parallels character growth:
 
 - Starting with humble protection
 - Upgrading to reflect success and resources
-- Acquiring signature pieces at key milestones
+- Acquiring signature pieces at key rank promotions
 - Eventually wearing legendary equipment
 
 Armor in Momentum represents more than statistics—it's a fundamental aspect of character identity and tactical approach, creating meaningful choices that influence both mechanical effectiveness and narrative presentation.
