@@ -517,40 +517,40 @@ sweet_spot_edition:
   campaign_parameters:
     ideal_length: "30-50 sessions"
     modifier_cap: "+5 total (attribute + skill + specialties)"
-    design_goal: "TN 8 relevant at Novice/Seasoned, TN 10-12 for Veteran+"
-    cap_reached: "Veteran rank (sessions 17-24)"
+    design_goal: "TN 8 relevant at Novice, TN 10-12 for Seasoned+"
+    cap_reached: "Seasoned rank (sessions 6-10) for focused builds, all builds at Veteran"
 
   power_progression_by_rank:
     novice:
       advances: "0-3"
-      sessions: "1-8 (roughly)"
+      sessions: "1-5 (roughly)"
       typical_modifier: "+1 to +3"
-      vs_tn_8: "72-91% success"
+      vs_tn_8: "58-83% success"
       description: "New adventurers finding their footing"
       threats: "Local bandits, wild animals, minor mysteries"
       tn_guidance: "TN 8 standard, TN 10 hard"
 
     seasoned:
       advances: "4-7"
-      sessions: "9-16 (roughly)"
-      typical_modifier: "+3 to +4"
-      vs_tn_8: "91-97% success"
-      description: "Established heroes with growing reputations"
+      sessions: "6-10 (roughly)"
+      typical_modifier: "+3 to +5 (focused builds hit cap)"
+      vs_tn_8: "83-97% success"
+      description: "Established heroes - focused builds reach +5 cap at advance 5"
       threats: "Organized crime, cultists, dangerous beasts"
-      tn_guidance: "TN 8 routine, TN 10 standard, TN 12 hard"
+      tn_guidance: "TN 10 standard, TN 12 hard"
 
     veteran:
       advances: "8-11"
-      sessions: "17-24 (roughly)"
-      typical_modifier: "+4 to +5 (approaching cap)"
+      sessions: "11-15 (roughly)"
+      typical_modifier: "+5 (all builds at cap)"
       vs_tn_8: "97% success"
-      description: "Renowned champions - +5 cap reached here"
+      description: "Renowned champions - all builds at +5 cap, horizontal growth begins"
       threats: "Noble houses, young dragons, demon cults"
       tn_guidance: "TN 10 standard, TN 12 hard"
 
     heroic:
       advances: "12-15"
-      sessions: "25-32 (roughly)"
+      sessions: "16-20 (roughly)"
       typical_modifier: "+5 (at cap)"
       vs_tn_8: "97% success"
       description: "Legendary figures - horizontal growth (specialties, techniques)"
@@ -559,9 +559,9 @@ sweet_spot_edition:
 
     legendary:
       advances: "16+"
-      sessions: "33+ (roughly)"
+      sessions: "21+ (roughly)"
       typical_modifier: "+5 (at cap)"
-      vs_tn_8: "97.2% success"
+      vs_tn_8: "97% success"
       description: "Mythic heroes challenging gods and fate itself"
       threats: "Demon lords, ancient dragons, world-ending catastrophes"
       tn_guidance: "TN 12 standard, TN 14 for climactic moments"
@@ -614,45 +614,45 @@ sweet_spot_edition:
     tn_scaling_by_rank:
       novice:
         party_modifiers: "+1 to +3"
-        standard_challenge: "TN 8 (72-91% success)"
-        hard_challenge: "TN 10 (41-72% success)"
+        standard_challenge: "TN 8 (58-83% success)"
+        hard_challenge: "TN 10 (28-58% success)"
         guidance: "TN 8 works well; use TN 10 for real challenges"
         example: "TN 8: Routine tasks. TN 10: Climbing crumbling wall under fire"
 
       seasoned:
         party_modifiers: "+3 to +4"
-        standard_challenge: "TN 10 (72-83% success)"
-        hard_challenge: "TN 12 (42-58% success)"
+        standard_challenge: "TN 10 (58-72% success)"
+        hard_challenge: "TN 12 (28-42% success)"
         guidance: "TN 8 becoming routine; TN 10 is new standard"
         example: "TN 10: Tracking cultists. TN 12: Decoding ancient ritual"
 
       veteran:
         party_modifiers: "+4 to +5 (at/near cap)"
-        standard_challenge: "TN 10 (83-97% success)"
-        hard_challenge: "TN 12 (58-72% success)"
+        standard_challenge: "TN 10 (72-83% success)"
+        hard_challenge: "TN 12 (42-58% success)"
         guidance: "TN 8 is auto-success, TN 10 is standard, TN 12 for hard challenges"
         example: "TN 10: Standard heroic task. TN 12: Negotiating with dragon"
 
       heroic:
         party_modifiers: "+5 (at cap)"
-        standard_challenge: "TN 12 (72% success)"
-        hard_challenge: "TN 14 (42% success)"
+        standard_challenge: "TN 12 (58% success)"
+        hard_challenge: "TN 14 (28% success)"
         guidance: "TN 10 is routine, TN 12 is standard, TN 14 for dramatic moments"
         example: "TN 12: Major heroic feat. TN 14: Nearly impossible odds"
 
       legendary:
         party_modifiers: "+5 (at cap)"
-        standard_challenge: "TN 12 (72% success)"
-        hard_challenge: "TN 14 (42% success)"
+        standard_challenge: "TN 12 (58% success)"
+        hard_challenge: "TN 14 (28% success)"
         guidance: "TN 10 is trivial, TN 12 standard, TN 14+ for epic moments"
         example: "TN 12: Binding demon lord. TN 14: Rewriting fate itself"
 
     quick_reference_table:
-      at_plus_0: "TN 8 = 58% (challenging)"
-      at_plus_2: "TN 8 = 86% (reliable), TN 10 = 58% (challenging)"
-      at_plus_3: "TN 8 = 91% (routine), TN 10 = 72% (challenging)"
-      at_plus_4: "TN 8 = 97% (trivial), TN 10 = 83% (reliable), TN 12 = 42% (challenging)"
-      at_plus_5: "TN 8 = 97% (automatic), TN 10 = 97% (routine), TN 12 = 72% (challenging)"
+      at_plus_0: "TN 8 = 42% (hard), TN 10 = 17% (very hard)"
+      at_plus_2: "TN 8 = 72% (challenging), TN 10 = 42% (hard)"
+      at_plus_3: "TN 8 = 83% (reliable), TN 10 = 58% (challenging), TN 12 = 28% (hard)"
+      at_plus_4: "TN 8 = 92% (routine), TN 10 = 72% (challenging), TN 12 = 42% (hard)"
+      at_plus_5: "TN 8 = 97% (automatic), TN 10 = 83% (reliable), TN 12 = 58% (challenging)"
 
     practical_gm_advice:
       novice_rank: "TN 8 works well; mix in TN 10 for real challenges"
@@ -663,7 +663,7 @@ sweet_spot_edition:
   design_rationale:
     core_insight: "Bounded accuracy requires ACTUALLY bounding the modifiers AND adjusting TNs"
     honest_assessment: "Even with +5 cap, TN 8 becomes nearly automatic at Veteran+"
-    progression: "30-50 sessions with +5 cap reached at Veteran rank (sessions 17-24)"
+    progression: "30-50 sessions with +5 cap reached mid-Seasoned for focused builds (advance 5, sessions 6-10)"
     horizontal_growth: "After +5 cap, advancement provides versatility, not raw power"
     vs_unlimited_progression: "Avoids +8 modifiers breaking everything, but requires GM awareness"
 
@@ -697,10 +697,10 @@ sweet_spot_edition:
     modifier_to_success_vs_tn:
       header: ["Mod", "TN 8", "TN 10", "TN 12"]
       rows:
-        - ["+2", "86%", "58%", "28%"]
-        - ["+3", "91%", "72%", "42%"]
-        - ["+4", "97%", "83%", "58%"]
-        - ["+5", "97%", "97%", "72%"]
+        - ["+2", "72%", "42%", "17%"]
+        - ["+3", "83%", "58%", "28%"]
+        - ["+4", "92%", "72%", "42%"]
+        - ["+5", "97%", "83%", "58%"]
 
     adversary_durability_reference:
       minor_opponent: "Guard 8-14, Vitality 8-14 - falls in 2-3 hits"

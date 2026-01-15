@@ -28,23 +28,24 @@ resolution_system:
       skill: [-2, 8]
     
   target_numbers:
-    trivial: 
+    design_note: "success_rate_base assumes +2 total modifier (typical starting competent character)"
+    trivial:
       value: 6
       success_rate_base: 91.7
       description: "Routine tasks under pressure"
-    easy: 
+    easy:
       value: 7
       success_rate_base: 83.3
       description: "Basic professional work"
-    standard: 
+    standard:
       value: 8
       success_rate_base: 72.2
       description: "Challenging professional tasks"
-    hard: 
+    hard:
       value: 10
       success_rate_base: 41.7
       description: "Expert-level challenges"
-    extreme: 
+    extreme:
       value: 12
       success_rate_base: 16.7
       description: "Near-impossible feats"
@@ -94,10 +95,10 @@ resolution_system:
         note: "TN 8 is trivial (97.2%), TN 10 is new baseline, TN 12 for hard challenges"
 
     quick_reference:
-      at_plus_0: "TN 8 = 58% (challenging)"
-      at_plus_2: "TN 8 = 86% (reliable), TN 10 = 58% (challenging)"
-      at_plus_3: "TN 8 = 91% (routine), TN 10 = 72% (challenging)"
-      at_plus_5: "TN 8 = 97% (automatic), TN 10 = 72% (challenging), TN 12 = 42% (hard)"
+      at_plus_0: "TN 8 = 42% (hard), TN 10 = 17% (very hard)"
+      at_plus_2: "TN 8 = 72% (challenging), TN 10 = 42% (hard)"
+      at_plus_3: "TN 8 = 83% (reliable), TN 10 = 58% (challenging), TN 12 = 28% (hard)"
+      at_plus_5: "TN 8 = 97% (automatic), TN 10 = 83% (reliable), TN 12 = 58% (challenging)"
 
   success_tiers:
     failure:
@@ -487,9 +488,9 @@ skills:
       philosophy: "Hard cap prevents runaway progression, but creates new challenge"
 
       success_rates_vs_tn_8:
-        at_plus_0: "58.3% (7+ on 2d6)"
-        at_plus_2: "86.1% (5+ on 2d6)"
-        at_plus_3: "91.7% (4+ on 2d6)"
+        at_plus_0: "41.7% (8+ on 2d6)"
+        at_plus_2: "72.2% (6+ on 2d6)"
+        at_plus_3: "83.3% (5+ on 2d6)"
         at_plus_5: "97.2% (3+ on 2d6 - only fail on snake eyes)"
 
       the_problem:
@@ -497,9 +498,9 @@ skills:
         solution: "GMs must use higher TNs for late-game challenges"
 
       tn_scaling_guidance:
-        novice_sessions_1_5: "TN 8 for standard challenges (+0 to +2 modifiers: 58-86% success)"
-        seasoned_sessions_6_10: "TN 10 for challenges (+3 to +4 modifiers: 72-83% at TN 10)"
-        veteran_plus_sessions_11_plus: "TN 10-12 standard (+5 modifier: 72% at TN 10, 42% at TN 12)"
+        novice_sessions_1_5: "TN 8 for standard challenges (+0 to +2 modifiers: 42-72% success)"
+        seasoned_sessions_6_10: "TN 10 for challenges (+3 to +4 modifiers: 58-72% at TN 10)"
+        veteran_plus_sessions_11_plus: "TN 10-12 standard (+5 modifier: 83% at TN 10, 58% at TN 12)"
         note: "Peak power heroes need harder challenges to feel meaningful risk"
 
       vs_alternative_caps:

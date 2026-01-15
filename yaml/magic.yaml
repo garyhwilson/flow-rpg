@@ -12,26 +12,41 @@ magic_system:
       - "Player agency in casting approach"
   
   access_requirements:
-    archetype_override:
-      rule: "If archetype provides Sorcery skill, can cast regardless of attributes"
-      affected: ["wizard", "cleric", "paladin", "bard"]
-    
-    attribute_requirements:
+    overview: |
+      To cast spells, you need:
+      1. Sorcery skill (at any level)
+      2. Tradition access (via specialty OR attribute requirements)
+
+      Two paths to tradition access - both are equally valid:
+      - Take a tradition specialty (bypasses attribute requirements)
+      - Meet attribute requirements naturally
+
+    tradition_access:
       arcane:
-        formula: "mind + awareness >= 2"
+        attribute_path: "Mind + Awareness >= 2"
+        specialty_path: "Arcane Attunement specialty"
         description: "Intellectual magical study"
-      
+
       divine:
-        formula: "will + presence >= 2"
+        attribute_path: "Will + Presence >= 2"
+        specialty_path: "Divine Touched specialty"
         description: "Faith-based channeling"
-      
+
       primal:
-        formula: "awareness + will >= 2"
+        attribute_path: "Awareness + Will >= 2"
+        specialty_path: "Primal Bond specialty"
         description: "Natural world connection"
-      
+
       performance:
-        formula: "presence + grace >= 2"
+        attribute_path: "Presence + Grace >= 2"
+        specialty_path: "Performance Magic specialty"
         description: "Artistic magical expression"
+
+    design_note: |
+      The specialty path allows any character to access magic without
+      specific attribute investment. This supports true classless design
+      where a Might-focused warrior can take Divine Touched to cast
+      divine spells without needing high Will or Presence.
 
 # ============================================
 # SPELL TIERS AND COSTS

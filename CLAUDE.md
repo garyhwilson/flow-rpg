@@ -562,10 +562,10 @@ Do not use the old formula - all examples have been corrected.
 ### Skill Tiers
 
 - Untrained: -2
-- Novice: +0 (not -1)
+- Novice: -1
 - Competent: 0
-- Professional: +1 (not +2)
-- Expert: +2 (max, not +3)
+- Professional: +1
+- Expert: +2 (max)
 
 ### Momentum Range
 

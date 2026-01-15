@@ -153,87 +153,104 @@ species:
 
 archetypes:
   philosophy:
-    core_concept: "Optional starting packages, not restrictive classes"
+    core_concept: "GURPS-style templates using identical resources"
 
     key_principles:
-      - "Archetypes are jumpstart templates, not mandatory paths"
-      - "Can diverge from archetype at any advance"
-      - "Can adopt archetype features later through Custom Build"
-      - "No penalties for abandoning archetype progression"
-      - "Mix and match abilities through techniques.yaml"
+      - "Archetypes and Custom Builds use IDENTICAL resource budgets"
+      - "Choosing an archetype is a shortcut, not a power boost"
+      - "All 'archetype features' are specialties anyone can take"
+      - "No mechanical advantage to archetype vs custom build"
+      - "True classless design - templates are convenience only"
+
+    classless_design: |
+      TRUE CLASSLESS SYSTEM: Every character uses the same resource budget.
+
+      UNIVERSAL BUDGET (all characters):
+      - 4 skills: 1 Competent (0), 3 Novice (-1)
+      - 2 specialties from universal list
+      - 150 coins for equipment
+
+      Archetypes are pre-made packages that follow these same rules.
+      "Fighter" = a build that chose Combat as primary + martial specialties.
+      Custom Build = you make those same choices yourself.
+
+      There is NO mechanical difference - archetypes just pre-make decisions.
 
     flexibility:
-      at_creation: "Choose archetype OR custom build"
+      at_creation: "Choose archetype (quick start) OR custom build (full control)"
       during_play: "Every advance offers complete freedom"
       subsystem_access: "Any character can learn any subsystem"
+      specialty_access: "All specialties available to all characters"
       no_multiclassing: "No need - all options always available"
 
-    design_note: "This achieves the 'unicorn' of RPG design - true character freedom without multiclassing complexity"
+    design_note: "This achieves GURPS-style freedom: templates are guidelines, not mechanical advantages. Choosing 'Fighter' vs building a fighter yourself yields identical characters."
 
-  archetype_benefits:
-    immediate:
-      - "Pre-selected skills that work together"
-      - "Starting equipment package"
-      - "Thematic starting specialty"
-      - "Access to subsystem without prerequisites"
-
-    ongoing:
-      - "Suggested advancement paths (never mandatory)"
-      - "Narrative framework for character"
-      - "Quick character creation for new players"
+  universal_resources:
+    skills: "4 total: 1 Competent (0), 3 Novice (-1)"
+    specialties: "2 from universal list"
+    equipment: "150 coins"
+    note: "All archetypes and Custom Builds use this exact budget"
 
   divergence_examples:
     fighter_becomes_scholar:
-      starting: "Fighter with Combat Techniques"
+      starting: "Fighter template (Combat focus)"
       progression: "Takes Lore skill, learns Metamagic"
       result: "Spell blade without multiclassing"
 
     wizard_becomes_warrior:
-      starting: "Wizard with Metamagic"
-      progression: "Takes Combat skill, learns Techniques"
+      starting: "Wizard template (Sorcery focus)"
+      progression: "Takes Combat skill, learns Weapon Versatility specialty"
       result: "Battle mage through natural growth"
 
     custom_matches_archetype:
       starting: "Custom Build"
-      progression: "Adopts Fighter techniques over time"
-      result: "Effectively a Fighter, built organically"
+      progression: "Chooses same skills/specialties as Fighter template"
+      result: "Mechanically identical to Fighter - same character"
+
+    hybrid_build:
+      starting: "Custom Build"
+      progression: "Chooses Ambush Training + Arcane Attunement specialties"
+      result: "Unique hybrid - ranger/wizard blend from session 1"
   fighter:
     name: "Fighter"
     description: "Master of weapons and combat techniques"
 
     starting_skills:
       combat:
-        level: "professional"
-        modifier: 1
+        level: "competent"
+        modifier: 0
+        note: "Primary skill"
       athletics:
         level: "novice"
         modifier: -1
       command:
         level: "novice"
         modifier: -1
+      survival:
+        level: "novice"
+        modifier: -1
 
-    archetype_feature:
-      name: "Weapon Versatility"
-      effect: "Use any weapon without penalty, switch weapons as free action, gain proficiency with improvised weapons"
-      note: "Represents fundamental martial discipline and adaptability"
-      starting_momentum: 1
-
-    starting_specialty:
-      choice: ["weapon_focus", "tough"]
-      weapon_focus: "+1 damage with chosen weapon type"
-      tough: "+2 Guard"
+    starting_specialties:
+      count: 2
+      recommended:
+        - "Weapon Versatility"
+        - "Tough (+2 Guard)"
+      alternatives:
+        - "Weapon Focus (+1 damage)"
+        - "Combat Reflexes (+1 defense)"
 
     starting_equipment:
-      armor: "medium"
-      weapon: "martial weapon and shield"
-      gear: ["Adventurer's kit", "50 coins"]
+      budget: 150
+      recommended:
+        armor: "Chain shirt (80 coins)"
+        weapon: "Longsword (40 coins)"
+        shield: "Shield (20 coins)"
+        remaining: "10 coins"
 
-    unique_subsystem:
+    subsystem_access:
       name: "Combat Techniques"
-      description: "Start with immediate access to combat techniques"
-      reference: "See techniques.yaml for full list"
-      starting_access: "One basic combat technique at creation"
-      progression: "Can continue learning or switch to other subsystems"
+      description: "Available to anyone with Combat skill"
+      note: "No special access - techniques learnable via advances"
 
     natural_callings: ["champion", "guardian", "sentinel"]
     
@@ -242,53 +259,42 @@ archetypes:
     description: "Wilderness expert and skilled hunter"
 
     starting_skills:
-      combat:
+      survival:
         level: "competent"
         modifier: 0
-        design_note: "Skilled hunters should be competent combatants"
-      survival:
-        level: "professional"
-        modifier: 1
+        note: "Primary skill"
+      combat:
+        level: "novice"
+        modifier: -1
+      stealth:
+        level: "novice"
+        modifier: -1
       investigate:
         level: "novice"
         modifier: -1
 
-    archetype_feature:
-      name: "Ambush Expert"
-      effect: |
-        When attacking from a hidden position, during a surprise round,
-        or against a target you have tracked for at least 1 minute:
-        - Deal +2 damage
-        - Gain +1 Momentum on hit
-        - May use Survival skill instead of Combat for the attack
-      starting_momentum: 1
-
-      design_note: |
-        Differentiates Rangers from Fighters:
-        - Fighter: "Always ready for any fight" (Weapon Versatility)
-        - Ranger: "Patient hunter who sets up devastating ambushes"
-
-      tactical_guidance: |
-        - Scout ahead to identify enemies before combat
-        - Track targets to learn their patterns and vulnerabilities
-        - Set ambushes for maximum first-round impact
-        - Synergizes with Stealth and Survival skills
-        - Using Survival for attack allows +4 total at Session 1 (Awareness +3, Survival +1)
-
-    starting_specialty:
-      choice: ["fast_movement", "precise_strike"]
-      fast_movement: "+1 zone of movement"
-      precise_strike: "Reroll one damage die per attack"
+    starting_specialties:
+      count: 2
+      recommended:
+        - "Ambush Training"
+        - "Fast Movement (+1 zone)"
+      alternatives:
+        - "Precise Strike (reroll damage die)"
+        - "Alert (+1 initiative)"
 
     starting_equipment:
-      armor: "light"
-      weapon: "bow and hunting knife"
-      gear: ["Tracking kit", "Camping gear", "30 coins"]
+      budget: 150
+      recommended:
+        armor: "Leather armor (30 coins)"
+        weapon: "Longbow (60 coins)"
+        knife: "Hunting knife (10 coins)"
+        gear: "Tracking kit (25 coins), Camping gear (15 coins)"
+        remaining: "10 coins"
 
-    unique_subsystem:
+    subsystem_access:
       name: "Favored Terrain"
       description: "Gain bonuses in specific environments"
-      progression: "Add new terrains via advances"
+      note: "Available via advances to any character"
 
     natural_callings: ["seeker", "scholar", "sentinel"]
     
@@ -298,40 +304,47 @@ archetypes:
 
     starting_skills:
       combat:
-        level: "professional"
-        modifier: 1
-        design_note: "Divine warriors should fight competently; still behind dedicated Fighters"
+        level: "competent"
+        modifier: 0
+        note: "Primary skill"
+      command:
+        level: "novice"
+        modifier: -1
       medicine:
         level: "novice"
         modifier: -1
-      command:
-        level: "competent"
-        modifier: 0
-        design_note: "Adjusted from professional to maintain 4-skill balance with combat improvement"
-      sorcery:
+      empathy:
         level: "novice"
         modifier: -1
 
-    archetype_feature:
-      name: "Divine Grace"
-      effect: "+1 to all saving rolls, +4 Guard, start each scene at +1 Momentum, ignore first point of armor penalty to divine spellcasting"
-      note: "Divine protection shields from harm, strengthens resolve, provides blessed energy, and allows armored casting"
+    starting_specialties:
+      count: 2
+      recommended:
+        - "Divine Touched (divine tradition, +1 saves, +2 Guard)"
+        - "Tough (+2 Guard)"
+      alternatives:
+        - "Weapon Versatility"
+        - "Combat Reflexes (+1 defense)"
+      note: "Divine Touched grants divine tradition access"
+
+    starting_equipment:
+      budget: 150
+      recommended:
+        armor: "Scale mail (100 coins)"
+        weapon: "Mace (35 coins)"
+        gear: "Holy symbol (5 coins)"
+        remaining: "10 coins"
 
     spellcasting:
       tradition: "divine"
-      access: "Can cast divine spells regardless of attributes"
-      focus: "Protection and smiting"
-    
-    starting_equipment:
-      armor: "heavy"
-      weapon: "weapon and holy symbol"
-      gear: ["Healing kit", "Religious texts", "40 coins"]
-    
-    unique_subsystem:
+      access: "Via Divine Touched specialty OR meeting Will + Presence >= 2"
+      note: "Must have Sorcery skill (acquire via advance) to cast spells"
+
+    subsystem_access:
       name: "Divine Oath"
       description: "Sworn oath provides power and restrictions"
-      progression: "Oath evolves at Heroic rank"
-    
+      note: "Available via advances to any character with divine tradition"
+
     natural_callings: ["advocate", "guardian", "champion"]
     
   rogue:
@@ -340,30 +353,41 @@ archetypes:
 
     starting_skills:
       stealth:
-        level: "professional"
-        modifier: 1
-      finesse:
-        level: "professional"
-        modifier: 1
-      combat:
         level: "competent"
         modifier: 0
+        note: "Primary skill"
+      finesse:
+        level: "novice"
+        modifier: -1
+      combat:
+        level: "novice"
+        modifier: -1
+      deceive:
+        level: "novice"
+        modifier: -1
 
-    archetype_feature:
-      name: "Dual Expertise"
-      effect: "Two Professional skills instead of one"
-      note: "Rogues' defining trait - extreme skill specialization"
-      starting_momentum: 1
+    starting_specialties:
+      count: 2
+      recommended:
+        - "Skilled Expert (+1 to Finesse rolls)"
+        - "Quick (+1 zone movement)"
+      alternatives:
+        - "Precision Expert (Grace to damage)"
+        - "Alert (+1 initiative)"
+      note: "Skilled Expert provides expertise bonus to secondary skill"
 
     starting_equipment:
-      armor: "light"
-      weapon: "daggers and shortbow"
-      gear: ["Thieves' tools", "Disguise kit", "60 coins"]
+      budget: 150
+      recommended:
+        armor: "Leather armor (30 coins)"
+        weapons: "Daggers x2 (20 coins), Shortbow (30 coins)"
+        gear: "Thieves' tools (30 coins), Disguise kit (35 coins)"
+        remaining: "5 coins"
 
-    unique_subsystem:
+    subsystem_access:
       name: "Gambits"
       description: "High-risk, high-reward special actions"
-      progression: "Unlock new gambits through heists"
+      note: "Available via advances to any character"
 
     natural_callings: ["seeker", "enthusiast", "scholar"]
     
@@ -373,63 +397,47 @@ archetypes:
 
     starting_skills:
       sorcery:
-        level: "professional"
-        modifier: 1
+        level: "competent"
+        modifier: 0
+        note: "Primary skill"
       lore:
-        level: "professional"
-        modifier: 1
+        level: "novice"
+        modifier: -1
       investigate:
         level: "novice"
         modifier: -1
+      craft:
+        level: "novice"
+        modifier: -1
 
-    archetype_feature:
-      name: "Arcane Battery"
-      effect: |
-        - Maximum Momentum increased to +7
-        - Start each scene at +2 Momentum
-        - +2 base Guard (magical resilience)
-        - Gain Arcane Ward technique (see techniques.yaml)
-      note: "Greater magical reserves provide both offensive capability and basic protection"
+    starting_specialties:
+      count: 2
+      recommended:
+        - "Arcane Attunement (arcane tradition, +1 max Momentum, +2 Guard)"
+        - "Momentum Harmony (+1 max Momentum)"
+      alternatives:
+        - "Focused (+1 to Sorcery)"
+        - "Versatile (extra Novice skill)"
+      note: "Arcane Attunement grants arcane tradition access"
 
-    glass_cannon_design:
-      trade_off_explanation: |
-        Wizards trade physical resilience for magical power:
-
-        WHAT YOU GET:
-        - +2 starting Momentum (can cast Tier-2 spell immediately)
-        - +7 max Momentum (vs standard +6)
-        - +2 base Guard (magical protection)
-        - Arcane Ward technique (Momentum-based damage reduction)
-
-        WHAT YOU SACRIFICE:
-        - Cannot effectively wear armor (penalties)
-        - Still lowest Guard in party even with +2 bonus
-        - Must rely on Momentum techniques and party protection
-
-        PLAY STYLE:
-        - Stay at Far range when possible
-        - Use Arcane Ward (1 Momentum) to reduce incoming damage
-        - Cast Shield spell for additional Guard
-        - Coordinate with armored allies for protection
-        - End fights fast with high-damage spells
+    starting_equipment:
+      budget: 150
+      recommended:
+        armor: "None (0 coins)"
+        weapon: "Staff or wand (20 coins)"
+        gear: "Spellbook (30 coins), Component pouch (20 coins), Scholarly tools (30 coins), Adventurer's kit (25 coins)"
+        remaining: "25 coins"
 
     spellcasting:
       tradition: "arcane"
-      access: "Can cast arcane spells regardless of attributes"
-      focus: "Versatility and power"
-    
-    starting_equipment:
-      armor: "none"
-      weapon: "staff or wand"
-      gear: ["Spellbook", "Component pouch", "Scholarly tools", "30 coins"]
-    
-    unique_subsystem:
+      access: "Via Arcane Attunement specialty OR meeting Mind + Awareness >= 2"
+      note: "Sorcery skill required to cast spells"
+
+    subsystem_access:
       name: "Metamagic"
-      description: "Start with immediate access to metamagic"
-      reference: "See techniques.yaml for full list"
-      starting_access: "One basic metamagic at creation"
-      progression: "Can continue learning or explore other subsystems"
-    
+      description: "Spell enhancement options"
+      note: "Available via advances to any character with Sorcery skill"
+
     natural_callings: ["scholar", "seeker", "advocate"]
     
   cleric:
@@ -438,35 +446,47 @@ archetypes:
 
     starting_skills:
       medicine:
-        level: "professional"
-        modifier: 1
-      sorcery:
         level: "competent"
         modifier: 0
+        note: "Primary skill"
+      sorcery:
+        level: "novice"
+        modifier: -1
       empathy:
-        level: "professional"
-        modifier: 1
+        level: "novice"
+        modifier: -1
+      lore:
+        level: "novice"
+        modifier: -1
 
-    archetype_feature:
-      name: "Divine Grace"
-      effect: "+1 to all saving rolls, +4 Guard, start each scene at +1 Momentum, ignore first point of armor penalty to divine spellcasting"
-      note: "Divine protection shields from harm, strengthens resolve, provides blessed energy, and allows armored casting"
+    starting_specialties:
+      count: 2
+      recommended:
+        - "Divine Touched (divine tradition, +1 saves, +2 Guard)"
+        - "Tough (+2 Guard)"
+      alternatives:
+        - "Focused (+1 to Medicine)"
+        - "Versatile (extra Novice skill)"
+      note: "Divine Touched grants divine tradition access"
+
+    starting_equipment:
+      budget: 150
+      recommended:
+        armor: "Chain shirt (80 coins)"
+        weapon: "Mace (35 coins)"
+        gear: "Holy symbol (5 coins), Healer's kit (25 coins)"
+        remaining: "5 coins"
 
     spellcasting:
       tradition: "divine"
-      access: "Can cast divine spells regardless of attributes"
-      focus: "Healing and support"
-    
-    starting_equipment:
-      armor: "medium"
-      weapon: "mace and holy symbol"
-      gear: ["Healer's kit", "Holy water", "Religious garments", "35 coins"]
-    
-    unique_subsystem:
+      access: "Via Divine Touched specialty OR meeting Will + Presence >= 2"
+      note: "Sorcery skill required to cast spells"
+
+    subsystem_access:
       name: "Divine Domain"
       description: "Deity grants specialized powers"
-      progression: "Domain powers expand via advances"
-    
+      note: "Available via advances to any character with divine tradition"
+
     natural_callings: ["guardian", "mediator", "advocate"]
     
   bard:
@@ -475,35 +495,47 @@ archetypes:
 
     starting_skills:
       perform:
-        level: "professional"
-        modifier: 1
+        level: "competent"
+        modifier: 0
+        note: "Primary skill"
+      sorcery:
+        level: "novice"
+        modifier: -1
       deceive:
         level: "novice"
         modifier: -1
-      sorcery:
-        level: "competent"
-        modifier: 0
+      empathy:
+        level: "novice"
+        modifier: -1
 
-    archetype_feature:
-      name: "Versatile Experience"
-      effect: "One additional Novice skill of your choice, +4 Guard, start each scene at +1 Momentum"
-      note: "Bards learn from their travels, magical performance builds resilience and energy"
+    starting_specialties:
+      count: 2
+      recommended:
+        - "Performance Magic (performance tradition, +1 Perform)"
+        - "Versatile (extra Novice skill)"
+      alternatives:
+        - "Connected (helpful NPC contact)"
+        - "Quick (+1 zone movement)"
+      note: "Performance Magic grants performance tradition access"
+
+    starting_equipment:
+      budget: 150
+      recommended:
+        armor: "Leather armor (30 coins)"
+        weapons: "Rapier (30 coins), Dagger (10 coins)"
+        gear: "Musical instrument (40 coins), Costume (25 coins)"
+        remaining: "15 coins"
 
     spellcasting:
       tradition: "performance"
-      access: "Can cast performance magic regardless of attributes"
-      focus: "Inspiration and manipulation"
-    
-    starting_equipment:
-      armor: "light"
-      weapon: "rapier and dagger"
-      gear: ["Musical instrument", "Costume", "Bardic lore collection", "45 coins"]
-    
-    unique_subsystem:
+      access: "Via Performance Magic specialty OR meeting Presence + Grace >= 2"
+      note: "Sorcery skill required to cast spells"
+
+    subsystem_access:
       name: "Bardic Inspiration"
       description: "Grant allies bonus dice through performance"
-      progression: "Inspiration die size increases via advances"
-    
+      note: "Available via advances to any character with Perform skill"
+
     natural_callings: ["enthusiast", "mediator", "seeker"]
 
 # ============================================
@@ -512,10 +544,19 @@ archetypes:
 
 custom_build:
   name: "Custom Build"
-  description: "Superior flexibility and customization for experienced players"
+  description: "Full control over character creation - same resources as archetypes"
+
+  parity_note: |
+    Custom Build uses IDENTICAL resources to archetypes:
+    - 4 skills (1 Competent, 3 Novice)
+    - 2 specialties
+    - 150 coins
+
+    The only difference is YOU make the choices instead of using a template.
+    A Custom Build choosing Fighter's skills and specialties IS a Fighter.
 
   starting_skills:
-    selection: "Choose 4 skills (more than any archetype!)"
+    selection: "Choose 4 skills"
     distribution:
       competent:
         number: 1
@@ -524,93 +565,149 @@ custom_build:
       novice:
         number: 3
         modifier: -1
-        note: "Broader base than archetypes"
+        note: "Supporting skills"
     restrictions: "No skill may start above Competent (0)"
-    advantage: "Start with 4 skills vs archetype's 3"
 
   starting_specialties:
-    selection: "Choose TWO from universal list (double archetype bonus!)"
-    universal_specialties:
+    selection: "Choose TWO from universal list"
+
+    # Combat Specialties
+    combat_specialties:
       tough:
         effect: "+2 Guard"
         description: "Natural resilience"
+      weapon_versatility:
+        effect: "Use any weapon without penalty, switch as free action"
+        description: "Martial discipline"
+      weapon_focus:
+        effect: "+1 damage with chosen weapon type"
+        description: "Weapon specialization"
+      combat_reflexes:
+        effect: "+1 to defense rolls"
+        description: "Quick reactions"
+      precise_strike:
+        effect: "Reroll one damage die per attack"
+        description: "Deadly accuracy"
+      precision_expert:
+        effect: "Grace to damage with light weapons"
+        description: "Finesse fighter"
 
+    # Movement Specialties
+    movement_specialties:
       quick:
         effect: "+1 zone of movement"
         description: "Fast on your feet"
-
       alert:
         effect: "+1 to initiative rolls"
         description: "Always ready"
 
+    # Skill Specialties
+    skill_specialties:
       versatile:
         effect: "One additional Novice skill"
         description: "Broad experience"
-
       focused:
         effect: "+1 to rolls with your Competent skill"
         description: "Specialized training"
-
-      connected:
-        effect: "Start with helpful NPC contact"
-        description: "Social network"
-
-      wealthy:
-        effect: "Double starting coins (200 total)"
-        description: "Family resources or past success"
-
+      skilled_expert:
+        effect: "+1 bonus to one Novice skill"
+        description: "Secondary expertise"
       talented:
         effect: "Choose one skill to advance faster (half advance cost)"
         description: "Natural aptitude"
+      ambush_training:
+        effect: "+2 damage from hidden/surprise, +1 Momentum on hit"
+        description: "Patient hunter"
+
+    # Social Specialties
+    social_specialties:
+      connected:
+        effect: "Start with helpful NPC contact"
+        description: "Social network"
+      wealthy:
+        effect: "Double starting coins (300 total)"
+        description: "Family resources or past success"
+
+    # Magic Tradition Specialties (grant tradition access)
+    tradition_specialties:
+      arcane_attunement:
+        effect: "+1 max Momentum, +2 Guard, grants arcane tradition access"
+        description: "Arcane magical connection"
+        tradition: "arcane"
+        note: "Bypasses Mind + Awareness >= 2 requirement"
+      divine_touched:
+        effect: "+1 saves, +2 Guard, grants divine tradition access"
+        description: "Divine blessing"
+        tradition: "divine"
+        note: "Bypasses Will + Presence >= 2 requirement"
+      primal_bond:
+        effect: "+1 Survival, +2 Guard, grants primal tradition access"
+        description: "Nature connection"
+        tradition: "primal"
+        note: "Bypasses Awareness + Will >= 2 requirement"
+      performance_magic:
+        effect: "+1 Perform, grants performance tradition access"
+        description: "Magical artistry"
+        tradition: "performance"
+        note: "Bypasses Presence + Grace >= 2 requirement"
+
+    # Caster Specialties
+    caster_specialties:
+      momentum_harmony:
+        effect: "+1 maximum Momentum"
+        description: "Deeper reserves"
 
   starting_equipment:
     budget: 150
-    note: "50% more than most archetypes!"
+    note: "Same as all archetypes"
     suggestions:
       combat_focused:
-        - "Medium armor (40 coins)"
-        - "Martial weapon (20 coins)"
-        - "Shield (10 coins)"
-        - "Adventurer's kit (30 coins)"
+        - "Medium armor (80 coins)"
+        - "Martial weapon (40 coins)"
+        - "Shield (20 coins)"
+        - "Remaining: 10 coins"
 
       skill_focused:
-        - "Light armor (20 coins)"
-        - "Simple weapon (10 coins)"
+        - "Light armor (30 coins)"
+        - "Simple weapon (15 coins)"
         - "Professional tools (30 coins)"
-        - "Adventurer's kit (30 coins)"
-        - "10 coins remaining"
+        - "Adventurer's kit (25 coins)"
+        - "Remaining: 50 coins"
 
       magic_focused:
         - "No armor (0 coins)"
         - "Focus item (20 coins)"
         - "Component pouch (20 coins)"
+        - "Spellbook (30 coins)"
         - "Scholarly tools (30 coins)"
-        - "Adventurer's kit (30 coins)"
+        - "Remaining: 50 coins"
 
   progression:
     flexibility: "Complete freedom in advance choices"
 
     subsystem_access:
-      description: "Can learn any archetype subsystem through advances"
+      description: "Can learn any subsystem through advances"
       requirement: "Narrative justification and/or training"
       examples:
-        - "Learn Combat Techniques from Fighter mentor"
-        - "Develop Metamagic through magical research"
-        - "Gain Bardic Inspiration by studying performance"
-        - "Acquire Divine Oath through religious dedication"
+        - "Learn Combat Techniques with Combat skill"
+        - "Develop Metamagic with Sorcery skill"
+        - "Gain Bardic Inspiration with Perform skill"
+        - "Acquire Divine Oath with divine tradition"
 
     magic_access:
-      description: "Can gain spellcasting if meeting requirements"
+      description: "Spellcasting requires Sorcery skill + tradition access"
       options:
-        attribute_based: "Meet tradition requirements (see magic_access)"
-        advance_based: "Spend advance to gain Sorcery skill"
-        training_based: "Learn from mentor with proper narrative"
+        specialty_based: "Take tradition specialty (bypasses attribute requirements)"
+        attribute_based: "Meet tradition requirements (see magic_access section)"
+      note: "Both paths are equally valid"
 
-    archetype_adoption:
-      description: "Can fully adopt an archetype at Seasoned rank"
-      effect: "Gain archetype's unique subsystem and progression options"
-      restriction: "Must meet narrative requirements"
-      note: "Keeps all previously gained abilities"
+    hybrid_builds:
+      description: "Create any combination from session 1"
+      examples:
+        - "Ambush Training + Arcane Attunement = Arcane Hunter"
+        - "Divine Touched + Weapon Versatility = Holy Warrior"
+        - "Any two tradition specialties = Multi-tradition caster"
+      advantage: "True classless - no restrictions, no waiting"
 
 # ============================================
 # CALLINGS
@@ -783,7 +880,8 @@ callings:
     
     calling_equipment:
       item: "Lucky Charm"
-      effect: "Turn one failure into partial success per scene"
+      effect: "Once per scene, when you fail a roll (6 or less), treat it as a partial success (7-9 tier) instead"
+      design_note: "Converts total failure into success-with-complication"
     
   champion:
     name: "The Champion"

@@ -35,7 +35,7 @@ quick_start:
 
     character_basics:
       attributes: "Use the numbers on your character sheet (+3 is great, -2 is weak)"
-      skills: "Professional +1, Novice +0, Untrained -2"
+      skills: "Professional +1, Competent 0, Novice -1, Untrained -2"
       guard: "Your health in combat (recovers after fights)"
       vitality: "Serious injuries (harder to recover)"
       momentum: "Ranges from -3 to +6, starts at 0 each scene"
@@ -119,7 +119,7 @@ pregenerated_characters:
     
     skills:
       professional: ["Combat +1"]
-      novice: ["Athletics +0", "Command +0"]
+      novice: ["Athletics -1", "Command -1"]
       untrained: "All others at -2"
 
     derived_values:
@@ -176,7 +176,7 @@ pregenerated_characters:
     
     skills:
       professional: ["Survival +1"]
-      novice: ["Combat +0", "Investigate +0"]
+      novice: ["Combat -1", "Investigate -1"]
       untrained: "All others at -2"
 
     derived_values:
@@ -357,7 +357,7 @@ pregenerated_characters:
       expert: ["Sorcery +2"]  # Upgraded via advances
       professional: ["Lore +1"]
       competent: ["Investigate 0"]  # Upgraded via advance
-      novice: ["Craft +0"]  # New via advance
+      novice: ["Craft -1"]  # New via advance
       untrained: "All others at -2"
 
     derived_values:

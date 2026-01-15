@@ -387,8 +387,9 @@ combat_techniques:
       momentum_cost: 4
 
     death_blow:
-      effect: "Instant kill target below 50% Vitality"
+      effect: "Target below 25% Vitality must make Will save (TN 12) or die instantly"
       momentum_cost: 5
+      design_note: "Changed from 50% threshold with no save to prevent trivializing boss fights"
 
     perfect_defense:
       effect: "Immune to damage for one round"
@@ -398,8 +399,9 @@ combat_techniques:
     rank_requirement: "Legendary"
 
     army_of_one:
-      effect: "Take extra action each round"
+      effect: "Take one extra action this round only"
       momentum_cost: 6
+      design_note: "Changed from permanent to single round to prevent indefinite action economy doubling"
 
     legendary_presence:
       effect: "Enemies must save or flee"
@@ -473,6 +475,164 @@ magic_techniques:
       additional_cost: "+6 Momentum"
 
 # ============================================
+# SPECIALTIES (Universal List)
+# ============================================
+
+specialties:
+  philosophy: |
+    TRUE CLASSLESS DESIGN: All specialties are available to all characters.
+
+    Specialties can be acquired:
+    - At character creation (choose 2 from this list)
+    - Via advances (1 advance per specialty)
+
+    There is no distinction between "archetype specialties" and "general specialties."
+    A Fighter template simply pre-selects certain specialties - anyone can choose them.
+
+  description: "Universal specialty options for all characters"
+  acquisition: "Creation (2 free) OR Advance menu (1 advance each)"
+
+  # Combat Specialties
+  combat_specialties:
+    weapon_versatility:
+      name: "Weapon Versatility"
+      cost: "1 advance (or free at creation)"
+      effect: "Use any weapon without penalty, switch weapons as free action"
+      design_note: "Martial flexibility"
+
+    ambush_training:
+      name: "Ambush Training"
+      cost: "1 advance (or free at creation)"
+      effect: "+2 damage from hidden/surprise, +1 Momentum on ambush hit"
+      design_note: "Patient hunter tactics"
+
+    precision_expert:
+      name: "Precision Expert"
+      cost: "1 advance (or free at creation)"
+      prerequisite: "Grace +2 or higher"
+      effect: "Add Grace modifier to damage with light weapons (instead of Might)"
+      design_note: "Finesse fighter. Previously also granted +1d6 crits and reroll - split to reduce power."
+
+    tough:
+      name: "Tough"
+      cost: "1 advance (or free at creation)"
+      effect: "+2 Guard"
+      limit: "Can take twice"
+
+    weapon_focus:
+      name: "Weapon Focus"
+      cost: "1 advance (or free at creation)"
+      effect: "+1 damage with chosen weapon type"
+      limit: "Once per weapon type"
+
+    combat_reflexes:
+      name: "Combat Reflexes"
+      cost: "1 advance (or free at creation)"
+      effect: "+1 to defense rolls"
+
+    precise_strike:
+      name: "Precise Strike"
+      cost: "1 advance (or free at creation)"
+      effect: "Reroll one damage die per attack"
+
+  # Movement Specialties
+  movement_specialties:
+    quick:
+      name: "Quick"
+      cost: "1 advance (or free at creation)"
+      effect: "+1 zone of movement"
+
+    alert:
+      name: "Alert"
+      cost: "1 advance (or free at creation)"
+      effect: "+1 to initiative rolls"
+
+  # Skill Specialties
+  skill_specialties:
+    versatile:
+      name: "Versatile"
+      cost: "1 advance (or free at creation)"
+      effect: "One additional Novice skill"
+
+    focused:
+      name: "Focused"
+      cost: "1 advance (or free at creation)"
+      effect: "+1 to rolls with your Competent skill"
+
+    skilled_expert:
+      name: "Skilled Expert"
+      cost: "1 advance (or free at creation)"
+      effect: "+1 bonus to one Novice (-1) skill (effectively making it +0)"
+      design_note: "Expertise without tier advancement. Previously upgraded tier directly - reduced to prevent saving a full advance."
+
+    talented:
+      name: "Talented"
+      cost: "1 advance (or free at creation)"
+      effect: "One skill advances at half cost"
+
+  # Social Specialties
+  social_specialties:
+    connected:
+      name: "Connected"
+      cost: "1 advance (or free at creation)"
+      effect: "Start with helpful NPC contact"
+
+    wealthy:
+      name: "Wealthy"
+      cost: "1 advance (or free at creation)"
+      effect: "Double starting coins (300 total)"
+
+  # Magic Tradition Specialties
+  tradition_specialties:
+    arcane_attunement:
+      name: "Arcane Attunement"
+      cost: "1 advance (or free at creation)"
+      effect: "+1 max Momentum, +2 Guard, grants arcane tradition access"
+      design_note: "Bypasses Mind + Awareness >= 2 requirement"
+
+    divine_touched:
+      name: "Divine Touched"
+      cost: "1 advance (or free at creation)"
+      effect: "+1 saves, +2 Guard, grants divine tradition access"
+      design_note: "Bypasses Will + Presence >= 2 requirement"
+
+    primal_bond:
+      name: "Primal Bond"
+      cost: "1 advance (or free at creation)"
+      effect: "+1 Survival, +2 Guard, grants primal tradition access"
+      design_note: "Bypasses Awareness + Will >= 2 requirement"
+
+    performance_magic:
+      name: "Performance Magic"
+      cost: "1 advance (or free at creation)"
+      effect: "+1 Perform, grants performance tradition access"
+      design_note: "Bypasses Presence + Grace >= 2 requirement"
+
+  # Caster Specialties
+  caster_specialties:
+    momentum_harmony:
+      name: "Momentum Harmony"
+      cost: "1 advance (or free at creation)"
+      effect: "+1 maximum Momentum"
+      limit: "Can take three times"
+
+  examples:
+    fighter_build:
+      description: "Building a Fighter-style character"
+      at_creation: "Choose Weapon Versatility + Tough as 2 starting specialties"
+      via_advances: "OR take both later for 2 advances total"
+
+    wizard_build:
+      description: "Building a Wizard-style character"
+      at_creation: "Choose Arcane Attunement + Momentum Harmony"
+      via_advances: "OR take both later for 2 advances total"
+
+    hybrid_build:
+      description: "Building a hybrid from session 1"
+      at_creation: "Choose Divine Touched + Weapon Versatility = Holy Warrior"
+      note: "No waiting, no prerequisites at creation"
+
+# ============================================
 # MYTHIC SPECIALTIES
 # ============================================
 
@@ -535,16 +695,16 @@ bounded_accuracy:
       note: "Building foundation"
 
     seasoned:
-      typical: "+3 to +4"
-      note: "Approaching expertise"
+      typical: "+4 to +5"
+      note: "Cap reached by advance 5 (mid-Seasoned) for focused builds"
 
     veteran:
-      typical: "+4 to +5"
-      note: "Cap reached for specialists"
+      typical: "+5 (capped)"
+      note: "All builds at cap, horizontal growth begins"
 
     heroic_and_beyond:
       typical: "+5 (capped)"
-      note: "Horizontal growth only"
+      note: "Maximum horizontal growth - versatility, not power"
 
   why_cap_matters: |
     At +5 vs TN 8: 97.2% success (only fail on snake eyes)
@@ -698,15 +858,15 @@ default_build_paths:
       1: "Combat: Competent → Professional"
       2: "Tough (+2 Guard)"
       3: "Weapon Focus: Sword"
-      4: "Raise Attribute: Might +1"
+      4: "Raise Attribute: Might +1 (to +3)"
       5: "Combat: Professional → Expert"
       6: "Press Advantage technique"
       7: "Hardy (+2 Vitality)"
-      8: "Raise Attribute: Might +1 (to +3)"
+      8: "Raise Attribute: Grace +1 (to +2)"
       9: "Whirlwind Strike technique"
       10: "Combat specialty: Dueling +1"
       11: "Perfect Parry technique"
-      12: "Raise Attribute: Grace +1"
+      12: "Raise Attribute: Will +1 (to +3)"
       13: "Unstoppable Assault technique"
       14: "Tough (+2 Guard again)"
       15: "Combat Momentum technique"
@@ -740,15 +900,15 @@ default_build_paths:
       1: "Sorcery: Competent → Professional"
       2: "Extend Spell metamagic"
       3: "Lore: Untrained → Novice"
-      4: "Raise Attribute: Mind +1"
+      4: "Raise Attribute: Mind +1 (to +3)"
       5: "Sorcery: Professional → Expert"
       6: "Empower Spell metamagic"
       7: "Momentum Harmony (+1 max)"
-      8: "Raise Attribute: Mind +1 (to +3)"
+      8: "Raise Attribute: Awareness +1 (to +2)"
       9: "Quicken Spell metamagic"
       10: "Momentum Harmony (+1 max)"
       11: "Maximize Spell metamagic"
-      12: "Raise Attribute: Will +1"
+      12: "Raise Attribute: Will +1 (to +2)"
       13: "Twin Spell metamagic"
       14: "Vitality boost (+2)"
       15: "Penetrating Spell metamagic"
@@ -782,15 +942,15 @@ default_build_paths:
       1: "Stealth: Competent → Professional"
       2: "Precise Strike"
       3: "Skill specialty: Urban Stealth +1"
-      4: "Raise Attribute: Grace +1"
+      4: "Raise Attribute: Grace +1 (to +3)"
       5: "Stealth: Professional → Expert"
       6: "Fast Movement"
       7: "Finesse: Novice → Competent"
-      8: "Raise Attribute: Grace +1 (to +3)"
+      8: "Raise Attribute: Awareness +1 (to +2)"
       9: "Quick Strike technique"
       10: "Skill specialty: Urban Finesse +1"
       11: "Riposte technique"
-      12: "Raise Attribute: Mind +1"
+      12: "Raise Attribute: Mind +1 (to +2)"
       13: "Mythic: Planar Step"
       14: "Combat Reflexes"
       15: "Unstoppable Assault"
