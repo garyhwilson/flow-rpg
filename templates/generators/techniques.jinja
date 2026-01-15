@@ -1,6 +1,7 @@
 {#
 Combat Techniques Template - Publication Style
 Generates technique documentation with professional TTRPG prose
+Updated for XP/Ranks advancement system
 #}
 # Combat Techniques
 
@@ -8,7 +9,7 @@ Beyond basic weapon swings and defensive maneuvers lie the combat techniques—s
 
 {{ techniques.acquisition.philosophy }}
 
-**How You Learn Them:** {{ techniques.acquisition.method }}
+**How You Learn Them:** Techniques are acquired by spending advances (earned through XP). Each technique costs 1 advance.
 
 **Training Approach:** {{ techniques.acquisition.training }}
 
@@ -18,7 +19,7 @@ Unlike spells which require specific attributes and archetypes, combat technique
 
 ## Basic Techniques
 
-**Available to:** {{ techniques.basic_techniques.available_to }}
+**Available to:** All characters from the start
 **Cost:** No Momentum required
 
 These fundamental combat actions are available to every character from the beginning:
@@ -31,13 +32,13 @@ You don't learn these—they're inherent to combat-trained characters. Use them 
 
 ---
 
-## Minor Milestone Techniques
+## Novice Techniques
 
-**Requirement:** {{ techniques.minor_milestone_techniques.requirement }}
+**Requirement:** Available at Novice rank (0-3 advances)
 
-After your first minor milestone, you can begin learning these techniques. They provide reliable tactical options that enhance your combat effectiveness without requiring significant Momentum investment:
+From your first advance, you can begin learning these techniques. They provide reliable tactical options that enhance your combat effectiveness without requiring significant Momentum investment:
 
-{% for tech_id, tech in techniques.minor_milestone_techniques.items() %}
+{% for tech_id, tech in techniques.novice_techniques.items() %}
 {% if tech_id != 'requirement' %}
 
 ### {{ tech_id.replace('_', ' ').title() }}
@@ -52,17 +53,17 @@ After your first minor milestone, you can begin learning these techniques. They 
 {% endif %}
 {% endfor %}
 
-Minor techniques form your combat foundation. Choose 1-2 that complement your fighting style—defensive fighters favor Defensive Mastery, aggressive strikers prefer Press Advantage, opportunistic combatants like Riposte.
+Novice techniques form your combat foundation. Choose 1-2 that complement your fighting style—defensive fighters favor Defensive Mastery, aggressive strikers prefer Press Advantage, opportunistic combatants like Riposte.
 
 ---
 
-## Moderate Milestone Techniques
+## Seasoned Techniques
 
-**Requirement:** {{ techniques.moderate_milestone_techniques.requirement }}
+**Requirement:** Requires Seasoned rank (4+ advances)
 
-These powerful techniques require significant Momentum investment but can swing combat momentum decisively. Available after reaching moderate milestones:
+These powerful techniques require significant Momentum investment but can swing combat decisively. Available after reaching Seasoned rank:
 
-{% for tech_id, tech in techniques.moderate_milestone_techniques.items() %}
+{% for tech_id, tech in techniques.seasoned_techniques.items() %}
 {% if tech_id != 'requirement' %}
 
 ### {{ tech_id.replace('_', ' ').title() }}
@@ -77,17 +78,17 @@ These powerful techniques require significant Momentum investment but can swing 
 {% endif %}
 {% endfor %}
 
-Moderate techniques represent your character's mastery of combat beyond basic competence. You'll typically use these 1-2 times per fight when you've built sufficient Momentum and need to change the tactical situation dramatically.
+Seasoned techniques represent your character's mastery of combat beyond basic competence. You'll typically use these 1-2 times per fight when you've built sufficient Momentum and need to change the tactical situation dramatically.
 
 ---
 
-## Major Milestone Techniques
+## Heroic Techniques
 
-**Requirement:** {{ techniques.major_milestone_techniques.requirement }}
+**Requirement:** Requires Heroic rank (12+ advances)
 
 Ultimate combat abilities reserved for legendary warriors. These techniques deliver devastating results but require maximum Momentum:
 
-{% for tech_id, tech in techniques.major_milestone_techniques.items() %}
+{% for tech_id, tech in techniques.heroic_techniques.items() %}
 {% if tech_id != 'requirement' %}
 
 ### {{ tech_id.replace('_', ' ').title() }}
@@ -102,7 +103,7 @@ Ultimate combat abilities reserved for legendary warriors. These techniques deli
 {% endif %}
 {% endfor %}
 
-Major techniques are combat-defining moments. When you've built maximum Momentum and need to end a fight decisively, these abilities deliver. Use them sparingly—saving them for critical moments creates dramatic tension.
+Heroic techniques are combat-defining moments. When you've built maximum Momentum and need to end a fight decisively, these abilities deliver. Use them sparingly—saving them for critical moments creates dramatic tension.
 
 ---
 
@@ -111,7 +112,7 @@ Major techniques are combat-defining moments. When you've built maximum Momentum
 ### By Combat Role
 
 **Defensive Fighter:**
-Build toward survivability and control. Start with Defensive Mastery for enhanced Guard in Defensive stance. Add Perfect Parry at moderate milestones to negate big hits entirely. Finish with Battlefield Control to dominate positioning.
+Build toward survivability and control. Start with Defensive Mastery for enhanced Guard in Defensive stance. Add Perfect Parry at Seasoned rank to negate big hits entirely. Finish with Battlefield Control to dominate positioning.
 
 **Aggressive Striker:**
 Maximize damage output. Press Advantage provides passive bonus damage whenever you're at positive Momentum. Riposte adds extra attacks when enemies miss you. Devastating Blow delivers massive damage spikes. Unstoppable Assault ensures your finishing blow can't miss.
@@ -125,11 +126,11 @@ Your Momentum economy determines which techniques you can afford:
 
 **Low Momentum (Below 0):** Use only basic techniques and focus on Momentum generation. Expensive techniques aren't accessible yet. Build resources before attempting power moves.
 
-**Medium Momentum (0-3):** Minor milestone techniques become available. Press Advantage activates passively. Riposte triggers on enemy misses. You're operating at base competence with occasional tactical flourishes.
+**Medium Momentum (0-3):** Novice techniques become available. Press Advantage activates passively. Riposte triggers on enemy misses. You're operating at base competence with occasional tactical flourishes.
 
-**High Momentum (3-6):** Moderate techniques unlock. Whirlwind Strike handles multiple enemies. Perfect Parry provides emergency defense. Devastating Blow delivers damage spikes. This is your optimal operating range.
+**High Momentum (3-6):** Seasoned techniques unlock. Whirlwind Strike handles multiple enemies. Perfect Parry provides emergency defense. Devastating Blow delivers damage spikes. This is your optimal operating range.
 
-**Maximum Momentum (6+):** Major techniques become possible. These should be saved for critical moments—turning desperate situations or finishing major threats. Don't waste Unstoppable Assault or Death Blow on trivial enemies.
+**Maximum Momentum (6+):** Heroic techniques become possible. These should be saved for critical moments—turning desperate situations or finishing major threats. Don't waste Unstoppable Assault or Death Blow on trivial enemies.
 
 ### Technique Combinations
 
@@ -149,29 +150,29 @@ The key is choosing techniques that work together rather than randomly selecting
 
 ### Teaching Techniques
 
-Don't overcomplicate technique acquisition. When players reach milestones allowing technique selection, let them choose from available options. You can flavor this as:
+Don't overcomplicate technique acquisition. When players spend advances on techniques, let them choose from rank-appropriate options. You can flavor this as:
 - Self-discovery through combat experience
 - Training montages during downtime
 - Learning from defeated enemies
 - Ancient tomes or master teachers
 
-But don't require extensive downtime, specific trainers, or gold payments. Techniques are milestone rewards—make them feel rewarding, not bureaucratic.
+But don't require extensive downtime, specific trainers, or gold payments. Techniques are advance rewards—make them feel rewarding, not bureaucratic.
 
 ### Balancing Combat with Techniques
 
 Expect players with techniques to be roughly 20% more effective in combat than baseline:
-- Minor techniques add reliable tactical options
-- Moderate techniques create momentum swings
-- Major techniques deliver climactic moments
+- Novice techniques add reliable tactical options
+- Seasoned techniques create momentum swings
+- Heroic techniques deliver climactic moments
 
-Adjust encounter difficulty accordingly, but don't punish players for mastering techniques. If someone invests milestones in combat techniques, they should feel powerful in combat.
+Adjust encounter difficulty accordingly, but don't punish players for mastering techniques. If someone invests advances in combat techniques, they should feel powerful in combat.
 
 ### Technique Limitations
 
 Techniques can't:
 - Replace archetype features entirely
 - Bypass core combat mechanics
-- Scale infinitely with level
+- Scale infinitely with rank
 - Function without Momentum (except basic techniques and certain passives)
 
 Keep techniques powerful within their niche while maintaining overall game balance. A fighter with Unstoppable Assault is formidable but not invincible.
@@ -188,7 +189,7 @@ Yes. Devastating Blow can enhance spell attack damage just as easily as weapon d
 Absolutely. Wizards, clerics, and rogues can all learn combat techniques. No archetype restrictions exist.
 
 **What about custom techniques?**
-Work with players to create balanced custom techniques using existing ones as templates. Keep power levels comparable to the tier they'd be learned at.
+Work with players to create balanced custom techniques using existing ones as templates. Keep power levels comparable to the rank they'd be learned at.
 
 ---
 

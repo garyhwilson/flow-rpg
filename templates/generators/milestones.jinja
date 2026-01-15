@@ -1,313 +1,302 @@
 {#
-Milestones Template - Publication Style
-Generates milestone advancement documentation with professional TTRPG prose
+Advancement Template - Publication Style
+Generates XP and Ranks advancement documentation with professional TTRPG prose
+Note: Renamed from milestones.jinja but kept for backward compatibility
 #}
 # Character Advancement
 
-Your character grows through meaningful achievements, not abstract experience points. Every few sessions, when the story reaches a natural pause or the party accomplishes something significant, you reach a milestone and gain new capabilities.
+Your character grows through experience, earning XP each session that accumulates into Advances. This Savage Worlds-inspired system creates predictable, satisfying progression over 30-50 session campaigns.
 
-Autumn Phoenix RPG uses three tiers of milestones, each marking different levels of growth:
+## The XP and Ranks System
 
-**Minor Milestones** - {{ milestone_data.minor_milestones.frequency }}. Small but meaningful improvements that accumulate over time.
+Autumn Phoenix RPG uses a simple advancement structure:
 
-**Moderate Milestones** - {{ milestone_data.moderate_milestones.frequency }}. Significant power increases that change how you play.
-
-**Major Milestones** - {{ milestone_data.major_milestones.frequency }}. Transformative moments that define your character's legend.
-
----
-
-# Minor Milestones
-
-{{ milestone_data.minor_milestones.philosophy }}
-
-These frequent advancement opportunities let you refine your capabilities between sessions. Over time, small choices accumulate into a character that's uniquely yours.
-
-## When You Reach Minor Milestones
-
-Minor milestones occur when:
-
-{% for trigger in milestone_data.minor_milestones.triggers %}
-- {{ trigger }}
-{% endfor %}
-
-Your GM determines exact timing based on campaign pacing, but expect one every 1-2 sessions on average.
-
-## Your Advancement Options
-
-When you reach a minor milestone, choose one of the following options:
-
-{% for option_key, option_data in milestone_data.minor_milestones.options.items() %}
-{% if option_data is mapping %}
-
-### {{ option_key.replace('_', ' ').title() }}
-
-{% if option_data.description %}
-{{ option_data.description }}
-
-{% endif %}
-{% if option_key == 'edge' %}
-Rather than broad capability increases, edges represent focused expertise in specific areas. See the Edges chapter for available options and detailed descriptions.
-
-When choosing an edge, consider what situations you face regularly. Edges shine in their specialty but don't replace general capability.
-{% elif option_key == 'skill_advancement' %}
-You can improve one skill by one tier. This makes you more reliable in that area across all situations.
-
-**Advancement Path:** Untrained (-2) → Novice (-1) → Competent (0) → Professional (+1) → Expert (+2) → Master (+3)
-
-Most characters reach Professional in their primary skills by mid-campaign. Expert and Master represent exceptional expertise typically achieved through dedicated focus.
-{% elif option_key == 'attribute_boost' %}
-You can increase one attribute by 1 point. This affects all actions using that attribute, making it a broadly applicable choice.
-
-**Typical Progression:** Most characters start with attributes between -1 and +2. Through milestones and major growth, attributes can reach +4 or higher in exceptional cases.
-
-Consider boosting attributes that support multiple skills you use frequently, or shore up weaknesses that limit your effectiveness.
-{% endif %}
-
-{% endif %}
-{% endfor %}
+- **GM awards 3-5 XP per session** (average 4)
+- **5 XP = 1 Advance**
+- **4 Advances = 1 Rank promotion**
+- **5 Ranks total:** Novice → Seasoned → Veteran → Heroic → Legendary
 
 ---
 
-# Moderate Milestones
+# The Five Ranks
 
-{{ milestone_data.moderate_milestones.philosophy }}
+Your Rank represents your overall experience and power level. As you accumulate advances, you'll promote through the ranks.
 
-These milestones represent noticeable power increases. Where minor milestones accumulate gradually, moderate milestones create immediate, visible improvements to your character.
+| Rank | Advances Required | Typical Sessions |
+|------|-------------------|------------------|
+| **Novice** | 0-3 advances | Sessions 1-8 |
+| **Seasoned** | 4-7 advances | Sessions 9-16 |
+| **Veteran** | 8-11 advances | Sessions 17-24 |
+| **Heroic** | 12-15 advances | Sessions 25-32 |
+| **Legendary** | 16+ advances | Sessions 33+ |
 
-## When You Reach Moderate Milestones
+## Rank Descriptions
 
-Moderate milestones occur when:
+**Novice (0-3 Advances)**
+New adventurers finding their footing. You're competent but still learning. Local threats like bandits and wild animals are appropriate challenges.
 
-{% for trigger in milestone_data.moderate_milestones.triggers %}
-- {{ trigger }}
-{% endfor %}
+**Seasoned (4-7 Advances)**
+Established heroes with growing reputations. You've proven yourself and are known in the region. Organized crime, cultists, and dangerous beasts are your foes.
 
-## Typical Campaign Schedule
+**Veteran (8-11 Advances)**
+Renowned champions at the peak of mortal capability. You've likely reached the +5 modifier cap in your primary skills. Noble houses, young dragons, and demon cults challenge you.
 
-{% if milestone_data.moderate_milestones.schedule %}
-In a standard 8-12 session campaign, moderate milestones typically occur:
+**Heroic (12-15 Advances)**
+Legendary figures whose names are known across the land. You grow through versatility now, not raw power. Ancient guardians and planar threats test your might.
 
-{% for key, schedule in milestone_data.moderate_milestones.schedule.items() %}
-{% if key != 'design_note' and schedule is mapping %}
-**{{ schedule.timing }}** - {{ schedule.context }}
-{% endif %}
-{% endfor %}
-
-Your campaign's exact schedule may vary based on story pacing and session frequency.
-{% endif %}
-
-## Your Advancement Options
-
-When you reach a moderate milestone, choose one of the following options:
-
-{% for option_key, option_data in milestone_data.moderate_milestones.options.items() %}
-{% if option_data is mapping %}
-
-### {{ option_key.replace('_', ' ').title() }}
-
-{% if option_data.description %}
-{{ option_data.description }}
-
-{% endif %}
-{% if option_data.choose_one %}
-Choose one of the following:
-
-{% for choice_key, choice_data in option_data.choose_one.items() %}
-{% if choice_key != 'description' and choice_data is mapping %}
-**{{ choice_key.replace('_', ' ').title() }}** - {{ choice_data.description if choice_data.description else choice_data }}
-
-{% endif %}
-{% endfor %}
-{% endif %}
-
-{% endif %}
-{% endfor %}
+**Legendary (16+ Advances)**
+Mythic heroes challenging gods and fate itself. You're among the most powerful beings in existence. Demon lords, ancient dragons, and world-ending catastrophes await.
 
 ---
 
-# Major Milestones
+# The Advance Menu
 
-{{ milestone_data.major_milestones.philosophy }}
+Each time you gain an advance (every 5 XP), choose ONE option from this menu:
 
-Major milestones mark transformative moments in your character's story. These aren't just mechanical upgrades—they represent fundamental changes in who your character is and what they're capable of.
+## Raise a Skill
 
-## When You Reach Major Milestones
+Increase one skill by one tier:
+- Untrained (-2) → Novice (-1)
+- Novice (-1) → Competent (+0)
+- Competent (+0) → Professional (+1)
+- Professional (+1) → Expert (+2)
 
-Major milestones occur when:
+**Cost:** 1 advance (or 2 advances if raising above your linked attribute)
 
-{% for trigger in milestone_data.major_milestones.triggers %}
-- {{ trigger }}
-{% endfor %}
+## New Skill
 
-## Typical Campaign Schedule
+Gain a new skill at Novice tier (-1).
 
-{% if milestone_data.major_milestones.schedule %}
-In a standard campaign, major milestones mark key story beats:
+## New Specialty
 
-{% for key, schedule in milestone_data.major_milestones.schedule.items() %}
-{% if key != 'design_note' and schedule is mapping %}
-**{{ schedule.timing }}** - {{ schedule.context }}
-{% if schedule.significance %}
+Gain a combat, skill, or social specialty. See the Specialties section for available options.
 
-*{{ schedule.significance }}*
-{% endif %}
-{% if schedule.note %}
+## Raise Attribute
 
-*({{ schedule.note }})*
-{% endif %}
+Increase one attribute by +1.
 
-{% endif %}
-{% endfor %}
-{% endif %}
+**Important Limit:** You can only raise an attribute **once per Rank**. This prevents rushing to the +5 modifier cap.
 
-## Your Advancement Options
+- Maximum attribute: +3
+- Choose wisely—you only get one attribute increase per rank!
 
-When you reach a major milestone, choose one of the following options. These represent legendary capabilities that set you apart as a hero of note:
+## New Technique
 
-{% for option_key, option_data in milestone_data.major_milestones.options.items() %}
-{% if option_data is mapping %}
+Gain a combat technique, metamagic option, or special ability. Some techniques have **Rank Requirements** (see Techniques section).
 
-### {{ option_key.replace('_', ' ').title() }}
+## Increase Survivability
 
-{% if option_data.description %}
-{{ option_data.description }}
-
-{% endif %}
-{% if option_data.choose_one %}
-Choose one of the following:
-
-{% for choice_key, choice_data in option_data.choose_one.items() %}
-{% if choice_key != 'description' and choice_data is mapping %}
-**{{ choice_key.replace('_', ' ').title() }}** - {{ choice_data.description if choice_data.description else choice_data }}
-
-{% endif %}
-{% endfor %}
-{% endif %}
-
-{% endif %}
-{% endfor %}
+Choose one:
+- +2 Guard (your defensive threshold)
+- +2 Vitality (your health pool)
 
 ---
 
-## Building Your Character Through Milestones
+# Specialties
 
-### The Philosophy of Choice
+Specialties provide focused bonuses and unique capabilities. They're organized into categories for convenience, but any character can take any specialty.
 
-Every milestone presents a choice. Do you specialize further in what you already do well, or do you diversify to handle new challenges? Both approaches work—the decision itself is what makes your character unique.
+## Combat Specialties
 
-**Specialization** creates focused expertise. A character who invests repeatedly in combat edges becomes exceptionally dangerous in fights, but may struggle with social challenges or magical problems.
+| Specialty | Benefit | Limit |
+|-----------|---------|-------|
+| **Weapon Focus** | +1 damage with one weapon type | Once per weapon type |
+| **Armor Training** | Reduce armor penalty by 1 | Once per armor type |
+| **Tough** | +2 Guard | Twice |
+| **Hardy** | +2 Vitality | Twice |
+| **Quick Draw** | Switch weapons as free action | Once |
+| **Combat Reflexes** | +1 to defense rolls | Once |
+| **Fast Movement** | +1 zone of movement per turn | Once |
+| **Precise Strike** | Reroll one damage die per attack | Once |
+| **Defensive Fighter** | +1 Guard in Defensive stance | Once |
 
-**Diversification** creates versatility. A character who spreads advancements across skills, attributes, and varied edges can handle many situations, but won't dominate any single area.
+## Skill Specialties
+
+| Specialty | Benefit |
+|-----------|---------|
+| **Expert Knowledge** | +1 to specific skill application |
+| **Signature Technique** | Create a unique skill use |
+| **Tool Mastery** | No penalty without proper tools |
+
+## Momentum Specialties
+
+| Specialty | Benefit | Limit |
+|-----------|---------|-------|
+| **Momentum Harmony** | +1 maximum Momentum capacity | Three times |
+| **Efficient Techniques** | -1 Momentum cost to one technique | Once per technique |
+| **Quick Recovery** | +1 Momentum at start of combat | Once |
+
+---
+
+# Techniques
+
+Techniques are powerful abilities that typically cost Momentum to use. Some require a minimum Rank.
+
+## Combat Techniques (Novice)
+
+Available to all characters:
+
+- **Press Advantage:** When Momentum is positive, +1d6 damage
+- **Defensive Strike:** Attack and gain +2 Guard until next turn
+- **Momentum Strike:** On hit, gain +1 Momentum
+
+## Advanced Combat Techniques (Requires Seasoned)
+
+- **Whirlwind Strike:** Hit all adjacent enemies (costs 2 Momentum)
+- **Perfect Parry:** Negate all damage from one source (costs 2 Momentum)
+- **Devastating Blow:** Double damage dice (costs 3 Momentum)
+
+## Legendary Techniques (Requires Heroic)
+
+- **Unstoppable Assault:** Attack cannot miss (costs 4 Momentum)
+- **Avatar of War:** Temporary transformation with massive bonuses (costs 5 Momentum)
+- **Death Defiance:** Return from death's door (costs 6 Momentum)
+
+## Mythic Techniques (Requires Legendary)
+
+- **Reality Warp:** Alter the battlefield itself
+- **Timeless Strike:** Act outside the normal turn order
+- **Legendary Endurance:** Ignore wounds for an entire scene
+
+---
+
+# Bounded Accuracy
+
+Autumn Phoenix uses bounded accuracy—your total modifier is capped at +5.
+
+## The Math
+
+- **Maximum attribute:** +3
+- **Maximum skill:** +2 (Expert)
+- **Maximum specialty bonus:** Varies, but total capped at +5
+
+## When You Hit the Cap
+
+Most characters reach the +5 cap in their primary skills during the **Veteran rank** (sessions 17-24). After that:
+
+- **Horizontal growth:** Gain new specialties, techniques, and abilities
+- **Versatility:** Improve other skills and secondary attributes
+- **Survivability:** Increase Guard and Vitality
+- **Options:** Learn new techniques and metamagic
+
+You won't get more powerful at your best skills, but you'll become more versatile and survivable.
+
+---
+
+# Building Your Character Through Advances
+
+## The Philosophy of Choice
+
+Every advance presents a choice. Do you specialize further in what you already do well, or do you diversify to handle new challenges? Both approaches work—the decision itself is what makes your character unique.
+
+**Specialization** creates focused expertise. A character who invests repeatedly in combat specialties becomes exceptionally dangerous in fights, but may struggle with social challenges or magical problems.
+
+**Diversification** creates versatility. A character who spreads advances across skills, attributes, and varied specialties can handle many situations, but won't dominate any single area.
 
 Most successful characters blend both approaches—specializing in their core competency while diversifying enough to contribute meaningfully to varied situations.
 
-### Minor Milestone Strategy
+## Strategy by Rank
 
-You'll have many minor milestones throughout a campaign. Early choices often focus on shoring up weaknesses or rounding out your starting concept. Later choices tend toward specialization in areas where you've already demonstrated strength.
+**Novice (Sessions 1-8):**
+- Build toward your +5 cap in primary skill
+- Take specialties that support your core role
+- Consider attribute boosts strategically (once per rank!)
 
-**Early Campaign (Sessions 1-3):**
-- Advance your secondary skills to Competent or Professional
-- Take edges that support your core role
-- Consider attribute boosts to important secondary attributes
+**Seasoned (Sessions 9-16):**
+- Push primary skills toward Expert (+2)
+- Unlock Seasoned-rank techniques
+- Begin diversifying into secondary skills
 
-**Mid Campaign (Sessions 4-8):**
-- Push primary skills toward Expert
-- Specialize with edges that create unique capabilities
-- Boost primary attributes to maximize reliability
+**Veteran (Sessions 17-24):**
+- Reach your +5 modifier cap
+- Focus on horizontal growth: new techniques, versatility
+- Increase survivability (Guard, Vitality)
 
-**Late Campaign (Sessions 9+):**
-- Master-tier skills in your specialty
-- Edges that create signature moves
-- Final attribute optimization
+**Heroic (Sessions 25-32):**
+- Master multiple combat and skill approaches
+- Learn Heroic-rank techniques
+- Become truly legendary
 
-### Moderate Milestone Strategy
-
-Moderate milestones offer powerful, often build-defining options. These choices should feel significant and memorable.
-
-**Signature Moves** create dramatic moments that define your character in combat. The move that everyone at the table associates with your character often comes from a moderate milestone.
-
-**Advanced Techniques** represent refined mastery of your archetype's unique subsystem. Fighters gain new combat techniques, wizards learn metamagic, rogues develop gambits.
-
-**Power Increases** provide immediate combat effectiveness through better damage, defense, or resource economy. These feel less thematic but noticeably improve your power level.
-
-Choose based on what creates interesting moments at the table, not just optimal numbers.
-
-### Major Milestone Strategy
-
-Major milestones are rare and transformative. These choices should reflect your character's growth arc and the story you've told together.
-
-**Legendary Abilities** grant capabilities that transcend normal human limits. These are the abilities that make you a legend, not just an adventurer.
-
-**Attribute Mastery** pushes attributes beyond normal ranges, representing fundamental transformation in who you are.
-
-**Paradigm Shifts** might include learning entirely new subsystems, gaining access to magic you previously couldn't use, or fundamentally changing your role in the party.
-
-Consider the narrative impact as much as the mechanical benefit. What does this choice say about who your character has become?
+**Legendary (Sessions 33+):**
+- Access Mythic techniques
+- Transcend normal limitations
+- Shape the world around you
 
 ---
 
-## Game Master Guidance
+# For Game Masters
 
-### Awarding Milestones
+## Awarding XP
 
-The guidelines above provide typical pacing, but your campaign may differ. Some campaigns compress into 6 intense sessions, others sprawl across 20+ sessions. Adjust milestone frequency to match your story.
+Award XP at the end of every session:
 
-**Award minor milestones based on:**
-- Session count (every 1-2 sessions as a baseline)
-- Story beats (completing an investigation, winning a battle)
-- Player engagement (when advancement would maintain interest)
+| Session Quality | XP Award |
+|-----------------|----------|
+| **Routine** | 3 XP |
+| **Good progress** | 4 XP |
+| **Exceptional** | 5 XP |
 
-**Award moderate milestones based on:**
-- Story arc completion (defeating the bandit king, uncovering the conspiracy)
-- Major victories (surviving the deadly dungeon, winning the tournament)
-- Campaign phase transitions (moving from act one to act two)
+**Guidelines:**
+- Always give at least 3 XP for showing up
+- Award whole-party XP (no individual awards)
+- Tell players why they earned bonus XP
 
-**Award major milestones based on:**
-- Campaign climaxes (confronting the main villain, saving the kingdom)
-- Fundamental story shifts (character revelations, world-changing events)
-- Transformative character moments (overcoming core flaws, achieving major goals)
+## Scaling Challenges by Rank
 
-### Handling Milestone Choices
+As characters advance, increase challenge difficulty:
 
-When players reach milestones, give them time to consider options. Some players know immediately what they want; others need to review possibilities or discuss with the table.
+| Party Rank | Standard TN | Hard TN |
+|------------|-------------|---------|
+| Novice | TN 8 | TN 10 |
+| Seasoned | TN 10 | TN 12 |
+| Veteran | TN 10 | TN 12 |
+| Heroic | TN 12 | TN 14 |
+| Legendary | TN 12 | TN 14 |
 
-**Between Sessions:** Award milestones at session end, let players choose before next session. This prevents advancement from consuming play time.
+## Rank Promotions
 
-**During Sessions:** If you award mid-session (dramatic moment calls for immediate growth), allow quick choices or default to simple options (skill advancement, attribute boost).
+When players reach a new rank:
+- Acknowledge it in the fiction
+- Consider a scene celebrating their growing reputation
+- Unlock rank-appropriate challenges and storylines
+- Introduce NPCs who recognize their status
 
-**Analysis Paralysis:** If a player struggles to choose, suggest two good options and explain why both work. The choice itself matters less than moving forward.
+## Handling Advance Choices
 
-### Milestone Timing Variance
+When players earn advances, give them time to consider options. Some players know immediately what they want; others need to review possibilities.
 
-Not all campaigns follow standard pacing:
+**Between Sessions:** Award XP at session end, let players make advance choices before next session.
 
-**Short Campaigns (4-6 sessions):**
-- Award minor milestones every session
-- Award moderate milestones at sessions 2, 4
-- Award major milestone at campaign climax (session 5-6)
+**During Sessions:** If needed for narrative timing, allow quick choices or suggest simple options.
 
-**Long Campaigns (15+ sessions):**
-- Maintain minor milestone every 1-2 sessions
-- Spread moderate milestones every 3-4 sessions
-- Award major milestones at major story arcs (sessions 5, 10, 15, etc.)
-
-**Episodic Campaigns:**
-- Award minor milestone after each episode
-- Award moderate milestone after multi-episode arcs
-- Award major milestone at season finales
-
-The system is flexible. Adjust to your table's needs.
-
-### Encouraging Meaningful Choices
-
-Some players optimize mechanically. Others choose thematically. Both approaches are valid.
-
-**For optimizers:** Help them understand how different choices achieve their goals. Is +1 to Combat better than a combat edge? Depends on application.
-
-**For thematic choosers:** Ensure their thematic choices remain mechanically viable. A character built purely for theme shouldn't struggle to contribute.
-
-**For variety:** Encourage players to try different advancement types. A player who only takes edges misses the satisfaction of watching their core skills improve. A player who only boosts attributes might feel less distinctive than one who takes edges.
+**Analysis Paralysis:** If a player struggles to choose, suggest two good options and explain why both work.
 
 ---
 
-*Advancement in Autumn Phoenix RPG isn't about becoming generically more powerful—it's about becoming more uniquely yourself.*
+# Quick Reference
+
+**XP System:**
+- 3-5 XP per session (average 4)
+- 5 XP = 1 Advance
+- 4 Advances = 1 Rank promotion
+
+**Advance Options (pick one):**
+1. Raise a skill
+2. New skill at Novice
+3. New specialty
+4. Raise attribute (once per rank!)
+5. New technique
+6. +2 Guard or +2 Vitality
+
+**The Five Ranks:**
+1. Novice (0-3 advances)
+2. Seasoned (4-7 advances)
+3. Veteran (8-11 advances)
+4. Heroic (12-15 advances)
+5. Legendary (16+ advances)
+
+**Modifier Cap:** +5 total (typically reached at Veteran rank)
+
+---
+
+*Advancement in Autumn Phoenix RPG creates meaningful progression over 30-50 sessions. Every advance makes you more capable, while the bounded accuracy ensures dice always matter.*

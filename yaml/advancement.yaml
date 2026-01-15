@@ -61,38 +61,43 @@ ranks:
   progression:
     novice:
       advances: "0-3"
-      sessions: "1-8 (approximately)"
+      sessions: "1-5 (approximately)"
       description: "Starting adventurers learning their craft"
       typical_modifier: "+1 to +3"
       challenges: "Local threats, bandits, wild animals"
+      note: "TN 8 feels appropriately challenging"
 
     seasoned:
       advances: "4-7"
-      sessions: "9-16 (approximately)"
+      sessions: "6-10 (approximately)"
       description: "Experienced adventurers with proven skills"
       typical_modifier: "+3 to +4"
       challenges: "Regional dangers, organized crime, minor villains"
+      note: "Begin using TN 10 for meaningful challenges"
 
     veteran:
       advances: "8-11"
-      sessions: "17-24 (approximately)"
+      sessions: "11-15 (approximately)"
       description: "Respected heroes known throughout the region"
       typical_modifier: "+4 to +5 (cap reached)"
       challenges: "Young dragons, powerful organizations, national threats"
+      note: "TN 10 standard, TN 12 for hard challenges"
 
     heroic:
       advances: "12-15"
-      sessions: "25-32 (approximately)"
+      sessions: "16-20 (approximately)"
       description: "Famous champions whose names are spoken with reverence"
       typical_modifier: "+5 (horizontal growth)"
       challenges: "Ancient dragons, demon lords, continental threats"
+      note: "TN 12 standard for meaningful risk"
 
     legendary:
       advances: "16+"
-      sessions: "33+ (approximately)"
+      sessions: "21+ (campaign continues to 30-50)"
       description: "Living legends whose deeds will echo through history"
       typical_modifier: "+5 (maximum horizontal growth)"
       challenges: "World-ending threats, gods, primordial entities"
+      note: "TN 12-14 for epic challenges"
 
   rank_up:
     trigger: "After 4th advance in current rank"
@@ -122,12 +127,26 @@ advance_menu:
         at_or_below_linked_attribute: "1 advance"
         above_linked_attribute: "2 advances"
 
-      example: |
-        Grace +2, Stealth Professional (+1)
-        Raising to Expert (+2) costs 1 advance (skill equals attribute)
+      linked_attribute_rule: |
+        When a skill has multiple key attributes (like Combat: Might/Grace),
+        use YOUR HIGHEST key attribute to determine cost.
 
-        Grace +1, Stealth Professional (+1)
-        Raising to Expert (+2) costs 2 advances (skill exceeds attribute)
+        This reflects that skilled practitioners naturally leverage their strengths.
+        A graceful duelist and a powerful warrior both become expert fighters,
+        just through different approaches.
+
+      example: |
+        Combat skill, Grace +3, Might +1
+        Linked attribute = Grace (highest of key attributes)
+        Raising Combat to Expert (+2) costs 1 advance (skill ≤ Grace)
+
+        Stealth skill, Grace +2, Awareness +0
+        Linked attribute = Grace (highest of key attributes)
+        Raising Stealth to Expert (+2) costs 1 advance (skill ≤ Grace)
+
+        Sorcery skill, Mind +1, Awareness +0, Will +2, Presence +0
+        Linked attribute = Will (highest of key attributes)
+        Raising Sorcery to Expert (+2) costs 1 advance (skill ≤ Will)
 
       limit: "Expert (+2) is maximum"
 
@@ -236,6 +255,12 @@ skill_specialties:
   description: "+1 to specific skill application"
   acquisition: "Advance menu (1 advance)"
 
+  design_note: |
+    These are EXAMPLES, not an exhaustive list. GMs and players should
+    create appropriate specialties that fit the character concept.
+    The key constraint: Each specialty should be narrow enough that
+    it only applies to a specific subset of skill uses.
+
   examples:
     combat:
       - "Dueling (one-on-one)"
@@ -267,6 +292,12 @@ skill_specialties:
 social_specialties:
   description: "Social and narrative benefits"
   acquisition: "Advance menu (1 advance)"
+
+  design_note: |
+    Social specialties represent connections, reputation, and social position.
+    GMs and players should create specialties appropriate to the campaign.
+    These often provide both mechanical (+1 to relevant rolls) and
+    narrative benefits (access, information, favors).
 
   list:
     reputation:
@@ -533,46 +564,51 @@ bounded_accuracy:
 
 campaign_progression:
   timeline:
-    sessions_1_8:
+    sessions_1_5:
       rank: "Novice"
       advances: "0-3"
       focus: "Establishing competence"
+      tn_guidance: "TN 8 standard"
       typical_choices:
         - "Raise primary skill"
         - "New skills for versatility"
         - "First specialties"
 
-    sessions_9_16:
+    sessions_6_10:
       rank: "Seasoned"
       advances: "4-7"
       focus: "Developing expertise"
+      tn_guidance: "TN 10 for challenges, TN 8 routine"
       typical_choices:
         - "Raise attribute (once per rank)"
         - "Skills to Professional"
         - "First techniques"
 
-    sessions_17_24:
+    sessions_11_15:
       rank: "Veteran"
       advances: "8-11"
-      focus: "Reaching mastery"
+      focus: "Reaching mastery (+5 cap)"
+      tn_guidance: "TN 10 standard, TN 12 hard"
       typical_choices:
         - "Primary skill to Expert"
         - "Attribute to +3"
         - "Advanced techniques"
 
-    sessions_25_32:
+    sessions_16_20:
       rank: "Heroic"
       advances: "12-15"
       focus: "Transcending limits"
+      tn_guidance: "TN 12 standard"
       typical_choices:
         - "Mythic specialties"
         - "Heroic techniques"
         - "Multiple Expert skills"
 
-    sessions_33_50:
+    sessions_21_plus:
       rank: "Legendary"
       advances: "16+"
-      focus: "Cementing legend"
+      focus: "Cementing legend (campaigns run 30-50 sessions)"
+      tn_guidance: "TN 12-14 for epic challenges"
       typical_choices:
         - "Legendary techniques"
         - "More mythic powers"
@@ -605,24 +641,29 @@ gm_guidelines:
 
   pacing_by_rank:
     novice:
+      sessions: "1-5"
       challenges: "Keep threats manageable"
       tn_range: "TN 8 standard"
 
     seasoned:
+      sessions: "6-10"
       challenges: "Introduce organized opposition"
-      tn_range: "TN 8-10"
+      tn_range: "TN 10 for challenges, TN 8 routine"
 
     veteran:
-      challenges: "Regional threats"
-      tn_range: "TN 10 standard"
+      sessions: "11-15"
+      challenges: "Regional threats (+5 cap reached)"
+      tn_range: "TN 10 standard, TN 12 hard"
 
     heroic:
+      sessions: "16-20"
       challenges: "National/continental threats"
-      tn_range: "TN 10-12"
+      tn_range: "TN 12 standard"
 
     legendary:
+      sessions: "21+"
       challenges: "World-ending threats"
-      tn_range: "TN 12 standard"
+      tn_range: "TN 12-14 for epic challenges"
 
 # ============================================
 # DEFAULT BUILD PATHS
@@ -633,6 +674,25 @@ default_build_paths:
 
   fighter_path:
     concept: "Frontline warrior"
+    build_type: "Custom Build (not Fighter archetype)"
+
+    starting_attributes:
+      note: "Using standard array [2, 1, 1, 0, 0, -1] + species"
+      might: "+2 (primary)"
+      grace: "+1"
+      mind: "+0"
+      awareness: "+0"
+      will: "+1"
+      presence: "-1"
+      species_bonus: "+1 Will (Dwarf) = Will +2"
+
+    starting_skills:
+      combat: "Competent (0) from Custom Build"
+
+    cap_math: |
+      At advance 5: Might +3, Combat Expert (+2) = +5 total
+      - Advance 4: Might +2 → +3
+      - Advances 1 & 5: Combat 0 → +1 → +2
 
     advances:
       1: "Combat: Competent → Professional"
@@ -656,6 +716,25 @@ default_build_paths:
 
   wizard_path:
     concept: "Reality-warping spellcaster"
+    build_type: "Custom Build (not Wizard archetype)"
+
+    starting_attributes:
+      note: "Using standard array [2, 1, 1, 0, 0, -1] + species"
+      might: "-1"
+      grace: "+0"
+      mind: "+2 (primary)"
+      awareness: "+1"
+      will: "+1"
+      presence: "+0"
+      species_bonus: "+1 Mind (Human) = Mind +3 OR kept for later"
+
+    starting_skills:
+      sorcery: "Competent (0) from Custom Build"
+
+    cap_math: |
+      At advance 5: Mind +3, Sorcery Expert (+2) = +5 total
+      - Advance 4: Mind +2 → +3 (if no species bonus to Mind)
+      - Advances 1 & 5: Sorcery 0 → +1 → +2
 
     advances:
       1: "Sorcery: Competent → Professional"
@@ -679,6 +758,25 @@ default_build_paths:
 
   rogue_path:
     concept: "Master of stealth and precision"
+    build_type: "Custom Build (not Rogue archetype)"
+
+    starting_attributes:
+      note: "Using standard array [2, 1, 1, 0, 0, -1] + species"
+      might: "+0"
+      grace: "+2 (primary)"
+      mind: "+1"
+      awareness: "+1"
+      will: "+0"
+      presence: "-1"
+      species_bonus: "+1 Grace (Elf) = Grace +3 OR kept for later"
+
+    starting_skills:
+      stealth: "Competent (0) from Custom Build"
+
+    cap_math: |
+      At advance 5: Grace +3, Stealth Expert (+2) = +5 total
+      - Advance 4: Grace +2 → +3 (if no species bonus to Grace)
+      - Advances 1 & 5: Stealth 0 → +1 → +2
 
     advances:
       1: "Stealth: Competent → Professional"

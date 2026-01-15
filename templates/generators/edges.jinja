@@ -1,25 +1,26 @@
 {#
 Edges Template - Publication Style
 Generates edge documentation from YAML advancement data with professional TTRPG prose
+Updated for XP/Ranks advancement system
 #}
-# Edges and Specialization
+# Specialties and Edges
 
-As adventurers grow in power, they develop unique capabilities that set them apart from others of similar training. These edges represent specialized techniques, natural talents, and hard-won expertise—the small choices that define who you are as a hero.
+As adventurers grow in power, they develop unique capabilities that set them apart from others of similar training. These specialties represent specialized techniques, natural talents, and hard-won expertise—the small choices that define who you are as a hero.
 
-## What Are Edges?
+## What Are Specialties?
 
-At each minor milestone (typically every 1-2 sessions), you may choose to take an edge instead of advancing a skill or attribute. While skills and attributes measure broad capability, edges represent focused specialization in narrow areas.
+When you gain an advance (every 5 XP), you may choose to take a specialty instead of raising a skill or attribute. While skills and attributes measure broad capability, specialties represent focused expertise in narrow areas.
 
-Some edges can also be earned through play without spending milestones—social connections, languages, and unique story rewards can emerge naturally from your adventures.
+Some specialties can also be earned through play without spending advances—social connections, languages, and unique story rewards can emerge naturally from your adventures.
 
 ---
 
-## Edge Descriptions
+## Specialty Descriptions
 
-The following edges are available to all characters. Your GM may introduce additional edges specific to your campaign.
+The following specialties are available to all characters. Your GM may introduce additional specialties specific to your campaign.
 
-{% if milestone_data.minor_milestones.options.combat_edges.list %}
-{% for edge_id, edge in milestone_data.minor_milestones.options.combat_edges.list.items() %}
+{% if advancement_data.combat_specialties.list %}
+{% for edge_id, edge in advancement_data.combat_specialties.list.items() %}
 
 ### {{ edge_id.replace('_', ' ').title() }}
 
@@ -43,16 +44,16 @@ The following edges are available to all characters. Your GM may introduce addit
 {% endfor %}
 {% endif %}
 
-{% if milestone_data.minor_milestones.options.skill_edges.examples %}
+{% if advancement_data.skill_specialties.examples %}
 
 ### Skill Specialization
 
 Rather than improving your skill across all situations, you can instead gain +1 to a specific application of that skill. This represents the kind of focused expertise that comes from repeated experience in particular circumstances.
 
-Unlike most edges, you can take Skill Specialization multiple times as long as each application is different. A character might specialize in Urban Stealth, Combat Dueling, and Empathy for Reading Lies—each a distinct narrow use of a broader skill.
+Unlike most specialties, you can take Skill Specialization multiple times as long as each application is different. A character might specialize in Urban Stealth, Combat Dueling, and Empathy for Reading Lies—each a distinct narrow use of a broader skill.
 
 **Examples of Skill Specializations:**
-{% for skill, applications in milestone_data.minor_milestones.options.skill_edges.examples.items() %}
+{% for skill, applications in advancement_data.skill_specialties.examples.items() %}
 - **{{ skill.title() }}:** {{ applications|join(', ') }}
 {% endfor %}
 
@@ -62,9 +63,9 @@ Unlike most edges, you can take Skill Specialization multiple times as long as e
 
 ---
 
-## Building Your Character With Edges
+## Building Your Character With Specialties
 
-Rather than listing every possible edge combination, here are proven builds that demonstrate how edges work together to create distinct character concepts. Use these as inspiration or follow them exactly—both approaches work.
+Rather than listing every possible specialty combination, here are proven builds that demonstrate how specialties work together to create distinct character concepts. Use these as inspiration or follow them exactly—both approaches work.
 
 ### Defensive Fighter
 
@@ -83,7 +84,7 @@ If you want reliable damage with your signature weapon, this build focuses on yo
 
 1. **Weapon Technique** (special maneuver with your weapon type)
 2. **Precise Strike** (reroll damage die)
-3. Later milestones: weapon mastery chain if continuing to specialize
+3. Later advances: weapon mastery chain if continuing to specialize
 
 **Result:** Consistent, reliable damage output. You know your weapon intimately and use it to maximum effect.
 
@@ -119,13 +120,13 @@ If you want tactical flexibility and the ability to handle varied situations:
 
 ---
 
-## Edge Stacking Rules
+## Specialty Stacking Rules
 
-Some edges can be taken multiple times, while others provide their benefit once and can't be repeated.
+Some specialties can be taken multiple times, while others provide their benefit once and can't be repeated.
 
-### Edges That Stack
+### Specialties That Stack
 
-These edges can be taken multiple times, subject to the limits shown:
+These can be taken multiple times, subject to the limits shown:
 
 - **Weapon Technique** - One per weapon type
 - **Armor Adaptation** - One per armor type
@@ -134,9 +135,9 @@ These edges can be taken multiple times, subject to the limits shown:
 - **Momentum Harmony** - Maximum 3 times total (total +3 max Momentum)
 - **Skill Specialization** - Multiple allowed as long as applications differ
 
-### Edges That Don't Stack
+### Specialties That Don't Stack
 
-These edges provide their benefit once. Taking them again has no effect:
+These provide their benefit once. Taking them again has no effect:
 
 - Quick Draw
 - Combat Reflexes
@@ -148,15 +149,15 @@ These edges provide their benefit once. Taking them again has no effect:
 
 ## Game Master Guidance
 
-### Awarding Edges at Minor Milestones
+### Awarding Specialties
 
-When players reach minor milestones, they choose between taking an edge or advancing a skill/attribute. Don't force players to take edges if they'd prefer advancement—the choice itself is part of character building.
+When players spend advances on specialties, let them choose from available options. Don't force players to take specialties if they'd prefer skill or attribute advancement—the choice itself is part of character building.
 
-That said, encourage variety over optimization. A character with diverse edges is often more fun to play than one min-maxed for a single strategy.
+That said, encourage variety over optimization. A character with diverse specialties is often more fun to play than one min-maxed for a single strategy.
 
-### Edges as Roleplay Rewards
+### Specialties as Roleplay Rewards
 
-Not all edges need to cost milestones. Social edges can emerge naturally from play:
+Not all specialties need to cost advances. Social specialties can emerge naturally from play:
 
 - **Reputation** (+1 with specific group) earned through consistent actions
 - **Contact** (ally in specific location) developed through interaction
@@ -164,9 +165,9 @@ Not all edges need to cost milestones. Social edges can emerge naturally from pl
 
 When players earn these through roleplay, it reinforces the connection between their actions and their character sheet.
 
-### Edges as Quest Rewards
+### Specialties as Quest Rewards
 
-Unique edges tied to story beats feel special and memorable:
+Unique specialties tied to story beats feel special and memorable:
 
 - **Heirloom Weapon:** A family blade gains minor magical properties
 - **Masterwork Tools:** Expert crafted tools provide +1 to craft/profession
@@ -176,9 +177,9 @@ Make these feel earned through the story, not randomly distributed.
 
 ---
 
-## Creating Custom Edges
+## Creating Custom Specialties
 
-Game Masters can create campaign-specific edges using these power level guidelines:
+Game Masters can create campaign-specific specialties using these power level guidelines:
 
 **Appropriate Power Levels:**
 - +1 to a specific narrow application
@@ -186,7 +187,7 @@ Game Masters can create campaign-specific edges using these power level guidelin
 - Reroll one die in a particular circumstance
 - Narrative permission for a unique action
 
-**Example Custom Edge:**
+**Example Custom Specialty:**
 
 > **Shadow Step**
 >
@@ -196,13 +197,13 @@ Game Masters can create campaign-specific edges using these power level guidelin
 >
 > **Limit:** Once only
 
-When creating custom edges, ensure they're comparable in power to existing edges. The goal is variety in character options, not power creep.
+When creating custom specialties, ensure they're comparable in power to existing ones. The goal is variety in character options, not power creep.
 
 ---
 
 ## Balance Considerations for GMs
 
-All edges should meet these criteria:
+All specialties should meet these criteria:
 
 - Comparable in power to +1 skill tier in a specific situation
 - Useful but not mandatory for any character concept
@@ -211,13 +212,13 @@ All edges should meet these criteria:
 
 ### Watch For These Issues
 
-- **Too many defensive edges:** Limit Tough and Hardy to 2 each maximum
-- **Only combat edges:** Encourage variety across different aspects of play
-- **Edges that obsolete skills:** An edge shouldn't make a skill pointless
-- **Overpowered combinations:** Some edge combinations might create unintended synergies
+- **Too many defensive specialties:** Limit Tough and Hardy to 2 each maximum
+- **Only combat specialties:** Encourage variety across different aspects of play
+- **Specialties that obsolete skills:** A specialty shouldn't make a skill pointless
+- **Overpowered combinations:** Some specialty combinations might create unintended synergies
 
-When in doubt, remember that edges represent focused expertise, not sweeping power increases.
+When in doubt, remember that specialties represent focused expertise, not sweeping power increases.
 
 ---
 
-*Two fighters with identical skills can play completely differently through their edge selections. These small choices accumulate over a campaign to create unique characters.*
+*Two fighters with identical skills can play completely differently through their specialty selections. These small choices accumulate over a campaign to create unique characters.*

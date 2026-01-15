@@ -426,7 +426,7 @@ class FlowRPGGenerator:
             return
 
         edges_data = self.yaml_data['advancement'].get('edges_system', {})
-        milestone_data = self.yaml_data['advancement']
+        advancement_data = self.yaml_data['advancement']
 
         if not edges_data:
             print("⚠️  No edges data found")
@@ -438,7 +438,7 @@ class FlowRPGGenerator:
             print(f"⚠️  Template not found: {e}")
             return
 
-        output = template.render(edges_data=edges_data, milestone_data=milestone_data)
+        output = template.render(edges_data=edges_data, advancement_data=advancement_data)
         output_path = OUTPUT_DIR / 'edges_mechanics.md'
         with open(output_path, 'w') as f:
             f.write(output)
@@ -446,14 +446,14 @@ class FlowRPGGenerator:
         print(f"✓ Generated edges documentation: {output_path}")
 
     def generate_milestones(self):
-        """Generate milestone documentation from YAML."""
-        print("\n📝 Generating milestone documentation...")
+        """Generate advancement documentation from YAML."""
+        print("\n📝 Generating advancement documentation...")
 
         if 'advancement' not in self.yaml_data:
             print("⚠️  No advancement data loaded")
             return
 
-        milestone_data = self.yaml_data['advancement']
+        advancement_data = self.yaml_data['advancement']
 
         try:
             template = self.env.get_template('milestones.jinja')
@@ -461,12 +461,12 @@ class FlowRPGGenerator:
             print(f"⚠️  Template not found: {e}")
             return
 
-        output = template.render(milestone_data=milestone_data)
-        output_path = OUTPUT_DIR / 'milestone_mechanics.md'
+        output = template.render(advancement_data=advancement_data)
+        output_path = OUTPUT_DIR / 'advancement_mechanics.md'
         with open(output_path, 'w') as f:
             f.write(output)
 
-        print(f"✓ Generated milestone documentation: {output_path}")
+        print(f"✓ Generated advancement documentation: {output_path}")
 
     def generate_stances(self):
         """Generate stances documentation from YAML."""
@@ -751,8 +751,9 @@ class FlowRPGGenerator:
             print("⚠️  No advancement data loaded")
             return
 
-        milestone_data = self.yaml_data['advancement']
-        signature_moves = milestone_data.get('moderate_milestones', {}).get('signature_moves', {})
+        advancement_data = self.yaml_data['advancement']
+        # Signature moves are now part of the advance menu options
+        signature_moves = advancement_data.get('advance_menu', {}).get('options', {}).get('signature_move', {})
 
         try:
             template = self.env.get_template('signature_moves.jinja')
@@ -760,7 +761,7 @@ class FlowRPGGenerator:
             print(f"⚠️  Template not found: {e}")
             return
 
-        output = template.render(signature_moves=signature_moves, milestone_data=milestone_data)
+        output = template.render(signature_moves=signature_moves, advancement_data=advancement_data)
         output_path = OUTPUT_DIR / 'signature_moves.md'
         with open(output_path, 'w') as f:
             f.write(output)
@@ -775,7 +776,7 @@ class FlowRPGGenerator:
             print("⚠️  No advancement data loaded")
             return
 
-        milestone_data = self.yaml_data['advancement']
+        advancement_data = self.yaml_data['advancement']
 
         try:
             template = self.env.get_template('advanced_techniques.jinja')
@@ -783,7 +784,7 @@ class FlowRPGGenerator:
             print(f"⚠️  Template not found: {e}")
             return
 
-        output = template.render(milestone_data=milestone_data)
+        output = template.render(advancement_data=advancement_data)
         output_path = OUTPUT_DIR / 'advanced_techniques.md'
         with open(output_path, 'w') as f:
             f.write(output)
@@ -798,7 +799,7 @@ class FlowRPGGenerator:
             print("⚠️  No advancement data loaded")
             return
 
-        milestone_data = self.yaml_data['advancement']
+        advancement_data = self.yaml_data['advancement']
 
         try:
             template = self.env.get_template('legendary_techniques.jinja')
@@ -806,7 +807,7 @@ class FlowRPGGenerator:
             print(f"⚠️  Template not found: {e}")
             return
 
-        output = template.render(milestone_data=milestone_data)
+        output = template.render(advancement_data=advancement_data)
         output_path = OUTPUT_DIR / 'legendary_techniques.md'
         with open(output_path, 'w') as f:
             f.write(output)

@@ -1,6 +1,7 @@
 {#
 Campaign Tracker Template - Publication Style
 Generates campaign tracking and management documentation with professional TTRPG prose
+Updated for XP/Ranks advancement system
 #}
 # Campaign Tracker
 
@@ -10,68 +11,45 @@ Good campaign tracking answers three critical questions: Where have we been? Whe
 
 ---
 
-## Milestone Tracking
+## XP and Advancement Tracking
 
-The most critical tracking: character advancement. Autumn Phoenix RPG uses milestone advancement rather than experience points—characters advance when they accomplish significant story beats. Track these systematically to ensure consistent progression:
+The most critical tracking: character advancement. Autumn Phoenix RPG uses XP-based advancement with a Rank system—characters advance by earning XP each session and accumulating advances. Track these systematically to ensure consistent progression:
 
-### Milestone Types and Timing
+### XP Awards and Timing
 
-**Minor Milestones:** Every 1-2 sessions
-{% if campaign_management and campaign_management.milestone_timing and campaign_management.milestone_timing.minor_milestone_triggers %}
-Award when characters:
-{% for trigger in campaign_management.milestone_timing.minor_milestone_triggers %}
-- {{ trigger }}
-{% endfor %}
-{% else %}
-- End satisfying session
-- Make significant discovery
-- Overcome personal challenge
-- Solve problems creatively
-{% endif %}
+**XP Per Session:** Award 3-5 XP at the end of every session
+- **3 XP (Routine):** Standard session, basic progress
+- **4 XP (Good):** Solid progress, meaningful moments
+- **5 XP (Exceptional):** Major achievements, memorable session
 
-**Moderate Milestones:** Every 3-4 sessions
-{% if campaign_management and campaign_management.milestone_timing and campaign_management.milestone_timing.moderate_milestone_triggers %}
-Award when characters:
-{% for trigger in campaign_management.milestone_timing.moderate_milestone_triggers %}
-- {{ trigger }}
-{% endfor %}
-{% else %}
-- Complete story arc
-- Defeat recurring villain
-- Save community
-- Achieve major character growth
-{% endif %}
+**Advancement:** 5 XP = 1 Advance
 
-**Major Milestones:** Every 5-6 sessions (typically sessions 5 and 10)
-{% if campaign_management and campaign_management.milestone_timing and campaign_management.milestone_timing.major_milestone_triggers %}
-Award when characters:
-{% for trigger in campaign_management.milestone_timing.major_milestone_triggers %}
-- {{ trigger }}
-{% endfor %}
-{% else %}
-- Complete campaign chapter
-- Cause world-changing event
-- Achieve legendary feat
-- Transform the setting
-{% endif %}
+**Rank Progression:**
+| Rank | Advances Required | Typical Sessions |
+|------|-------------------|------------------|
+| Novice | 0-3 advances | Sessions 1-8 |
+| Seasoned | 4-7 advances | Sessions 9-16 |
+| Veteran | 8-11 advances | Sessions 17-24 |
+| Heroic | 12-15 advances | Sessions 25-32 |
+| Legendary | 16+ advances | Sessions 33+ |
 
 ### Tracking Sheet Example
 
 **Campaign:** The Dragon's Conspiracy
-**Session:** 7 of planned 12
+**Session:** 15 of planned 40
 
-| Milestone Type | Last Awarded | Sessions Since | Next Expected |
-|---|---|---|---|
-| Minor | Session 6 | 1 session | Session 7-8 |
-| Moderate | Session 4 | 3 sessions | Session 7-8 |
-| Major | Session 5 | 2 sessions | Session 10 |
+| Character | XP Total | Advances | Current Rank | Next Rank At |
+|-----------|----------|----------|--------------|--------------|
+| Kara (Fighter) | 58 | 11 | Veteran | 12 advances |
+| Theron (Wizard) | 56 | 11 | Veteran | 12 advances |
+| Lyra (Rogue) | 60 | 12 | Heroic | Already there |
 
-**Achievements This Arc:**
-- Infiltrated cult hideout (session 5)
-- Discovered dragon alliance (session 6)
-- Stopped ritual (session 7 - pending)
+**Advance Choices This Arc:**
+- Kara: Raised Might to +3, took Tough specialty
+- Theron: Learned Whirlwind Strike technique
+- Lyra: Raised Athletics to Expert
 
-**Note:** Award moderate milestone when ritual stopped—completes story arc.
+**Note:** Party approaching Heroic rank—consider introducing Heroic-tier challenges.
 
 ---
 
@@ -93,7 +71,7 @@ Plots currently driving session content:
 - Status: Background mystery
 - Next Step: Party discovers her coded messages
 - Stakes: Trusted ally is actually informant
-- Timeline: Revelation session 8-9
+- Timeline: Revelation session 18-19
 
 ### Background Threads
 
@@ -103,13 +81,13 @@ Plots developing off-screen, emerging later:
 - Status: Developing
 - Trigger: When party returns to city
 - Stakes: Guild war erupts, collateral damage
-- Timeline: Sessions 9-10
+- Timeline: Sessions 20-22
 
 ### Resolved Threads
 
 Completed plots (useful for continuity):
 
-**Thread A: The Bandit King** (Resolved Session 3)
+**Thread A: The Bandit King** (Resolved Session 8)
 - Outcome: Defeated, territory claimed by legitimate authorities
 - Consequences: Party gained regional fame
 
@@ -142,7 +120,7 @@ For each important NPC, record:
 - Role: Informant, unreliable ally
 - Motivation: Profit and survival above all else
 - Memorable Trait: Whispers everything, even in safe locations
-- Status: Disappeared after double-crossing party (session 4)
+- Status: Disappeared after double-crossing party (session 12)
 
 {% else %}
 
@@ -193,7 +171,7 @@ Maintain pacing by structuring sessions consistently:
 **Opening:** Recap, intentions, Momentum check, scene setting
 **Rising Action:** 2-3 encounters, building tension, complications
 **Climax:** Major challenge, peak resources, decisive moment
-**Resolution:** Consequences, rewards, hooks, Momentum reset
+**Resolution:** Consequences, XP awards, hooks, Momentum reset
 
 {% endif %}
 
@@ -212,7 +190,7 @@ Different campaign styles require different tracking approaches:
 {% if campaign_type.advancement %}**Advancement:** {{ campaign_type.advancement }}{% endif %}
 {% if campaign_type.benefits %}**Benefits:** {{ campaign_type.benefits }}{% endif %}
 
-{% if type_id == 'episodic' %}**Tracking Needs:** Minimal—each session self-contained, track character sheets and milestone count only.{% endif %}
+{% if type_id == 'episodic' %}**Tracking Needs:** Minimal—each session self-contained, track character sheets and XP totals only.{% endif %}
 {% if type_id == 'serial' %}**Tracking Needs:** Full tracking—maintain NPC roster, story threads, ongoing consequences across sessions.{% endif %}
 {% if type_id == 'sandbox' %}**Tracking Needs:** Location-based—track regions, factions, discovered locations, and available quests.{% endif %}
 {% if type_id == 'hybrid' %}**Tracking Needs:** Moderate—track main story arc thoroughly, episodic elements lightly.{% endif %}
@@ -280,10 +258,14 @@ Use this format for session-by-session tracking:
 **Date:** ___
 **In-Game Time:** ___
 
-**Milestones Awarded:**
-- [ ] Minor
-- [ ] Moderate
-- [ ] Major
+**XP Awarded This Session:** ___ (3-5)
+
+**Advancement Status:**
+| Character | XP Before | XP After | Advances | Rank |
+|-----------|-----------|----------|----------|------|
+| | | | | |
+| | | | | |
+| | | | | |
 
 **Story Progress:**
 - Main Quest: ___
@@ -306,35 +288,41 @@ Use this format for session-by-session tracking:
 
 ## Campaign Conclusion Tracking
 
-{% if sweet_spot_edition and sweet_spot_edition.campaign_parameters %}
-Autumn Phoenix RPG campaigns naturally conclude after 8-12 sessions when characters reach peak power. Track toward this conclusion:
+Autumn Phoenix RPG campaigns naturally span 30-50 sessions as characters progress from Novice to Legendary rank. Track toward this conclusion:
 
-**Campaign Length:** {{ sweet_spot_edition.campaign_parameters.ideal_length if sweet_spot_edition.campaign_parameters.ideal_length else "8-12 sessions" }}
+**Campaign Length:** 30-50 sessions (typical)
 **Current Session:** ___
 **Estimated Conclusion:** Session ___
 
-**Milestone Progress:**
-- Minor Milestones Awarded: ___
-- Moderate Milestones Awarded: ___
-- Major Milestones Awarded: ___ / 2
+**Advancement Progress:**
+- Party Average Advances: ___
+- Current Party Rank: ___
+- Sessions Until Next Rank: ___
 
 **Power Level Tracking:**
 - Current Party Modifiers: ___
-- Approaching Cap (+5): ___ sessions estimated
+- Approaching Cap (+5): ___ (typically reached at Veteran rank, sessions 17-24)
 
 **Retirement Planning:**
 - Main story arc conclusion: Session ___
 - Character epilogues planned: Yes / No
 - Legacy benefits for next campaign: ___
 
-{% else %}
+---
 
-**Current Session:** ___
-**Planned Conclusion:** Session ___
-**Milestones Remaining:** ___
-**Story Arc Status:** ___
+## Scaling Challenges by Rank
 
-{% endif %}
+As the party advances through ranks, scale challenge difficulty:
+
+| Party Rank | Standard TN | Hard TN | Story Stakes |
+|------------|-------------|---------|--------------|
+| Novice | TN 8 | TN 10 | Local threats, personal stakes |
+| Seasoned | TN 10 | TN 12 | Regional threats, community stakes |
+| Veteran | TN 10 | TN 12 | Kingdom-wide threats, political stakes |
+| Heroic | TN 12 | TN 14 | Continental threats, legendary stakes |
+| Legendary | TN 12 | TN 14 | World-ending threats, mythic stakes |
+
+**Note:** After characters reach the +5 modifier cap (typically at Veteran rank), challenges scale through complexity and stakes rather than raw difficulty numbers.
 
 ---
 

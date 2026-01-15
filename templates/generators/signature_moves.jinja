@@ -1,15 +1,16 @@
 {#
 Signature Moves Template - Publication Style
 Generates signature moves documentation with professional TTRPG prose
+Updated for XP/Ranks advancement system
 #}
 # Signature Moves
 
 Every fighter can execute a perfect sword strike. Every wizard can cast Fireball. But only you have *your* signature move—the personal technique that defines your fighting style, bears your name, and costs less Momentum than anyone else could manage. Signature moves aren't just mechanically efficient; they're expressions of character identity made manifest in combat.
 
-{% if milestone_data and milestone_data.moderate_milestones and milestone_data.moderate_milestones.options and milestone_data.moderate_milestones.options.signature_move %}{{ milestone_data.moderate_milestones.options.signature_move.description }} This personalization transforms generic techniques into abilities that feel uniquely yours.
-{% else %}Signature moves are personalized techniques created at moderate milestones. They take existing abilities and make them distinctly yours—reduced Momentum cost, enhanced effects, or unique narrative descriptions.{% endif %}
+{% if advancement_data and advancement_data.signature_move %}{{ advancement_data.signature_move.description }} This personalization transforms generic techniques into abilities that feel uniquely yours.
+{% else %}Signature moves are personalized techniques created by spending an advance at Seasoned rank or higher. They take existing abilities and make them distinctly yours—reduced Momentum cost, enhanced effects, or unique narrative descriptions.{% endif %}
 
-Signature moves typically arrive at your first moderate milestone (session 3 usually), though you can create additional signature moves at later moderate milestones. Most characters have 1-2 signature moves across entire campaigns—these are defining abilities, not a full arsenal.
+Signature moves typically arrive when you reach Seasoned rank (4+ advances), though you can create additional signature moves with later advances. Most characters have 1-2 signature moves across entire campaigns—these are defining abilities, not a full arsenal.
 
 ---
 
@@ -17,10 +18,10 @@ Signature moves typically arrive at your first moderate milestone (session 3 usu
 
 ### Components
 
-{% if milestone_data and milestone_data.moderate_milestones and milestone_data.moderate_milestones.options and milestone_data.moderate_milestones.options.signature_move and milestone_data.moderate_milestones.options.signature_move.components %}
+{% if advancement_data and advancement_data.signature_move and advancement_data.signature_move.components %}
 Every signature move includes these elements:
 
-{% for component, desc in milestone_data.moderate_milestones.options.signature_move.components.items() %}
+{% for component, desc in advancement_data.signature_move.components.items() %}
 **{{ component.title() }}:** {{ desc }}
 
 {% endfor %}
@@ -72,10 +73,10 @@ These enhancements should feel earned rather than game-breaking. The signature m
 
 ## Example Signature Moves
 
-{% if milestone_data and milestone_data.moderate_milestones and milestone_data.moderate_milestones.options and milestone_data.moderate_milestones.options.signature_move and milestone_data.moderate_milestones.options.signature_move.examples %}
+{% if advancement_data and advancement_data.signature_move and advancement_data.signature_move.examples %}
 These examples show how different archetypes create signature moves from existing abilities:
 
-{% for archetype, move in milestone_data.moderate_milestones.options.signature_move.examples.items() %}
+{% for archetype, move in advancement_data.signature_move.examples.items() %}
 ### {{ archetype.title() }}: {{ move.name }}
 
 **Base Technique:** {{ move.base_technique if move.base_technique else move.base_spell }}
@@ -124,7 +125,7 @@ The rogue's signature move adds impossible positioning to damage. Shadow-telepor
 
 ### Start With Experience
 
-Don't plan signature moves during character creation. Wait until session 2-3 when you've actually fought in the system:
+Don't plan signature moves during character creation. Wait until you've actually fought in the system for several sessions:
 
 **What techniques do you use most often?** Those are signature move candidates
 **What moments felt most satisfying?** Turn those into signature moves
@@ -145,12 +146,12 @@ Good GMs encourage signature move creation—it increases player investment and 
 
 ### Evolve Over Time
 
-Signature moves can improve at later milestones:
+Signature moves can improve with later advances:
 
-**Session 6 moderate milestone:** Reduce cost by additional 1 Momentum OR add minor enhancement
-**Session 9 moderate milestone:** Add narrative permission OR slightly boost effect
+**Veteran rank:** Reduce cost by additional 1 Momentum OR add minor enhancement
+**Heroic rank:** Add narrative permission OR slightly boost effect
 
-These improvements keep signature moves relevant as characters grow in power. The signature move you created at session 3 shouldn't become obsolete by session 9.
+These improvements keep signature moves relevant as characters grow in power. The signature move you created at Seasoned rank shouldn't become obsolete by Heroic rank.
 
 ---
 
@@ -194,7 +195,7 @@ Signature moves should feel like your bread-and-butter technique, not desperate 
 
 Don't require signature moves, but create opportunities:
 
-**Ask at moderate milestone:** "You've reached session 3. Would you like to create a signature move?"
+**Ask at Seasoned rank:** "You've reached Seasoned. Would you like to create a signature move?"
 **Reference technique use:** "You've used Charge Attack successfully three times. Want to make it signature?"
 **Suggest enhancements:** "What if your healing touch had golden glow unique to you?"
 
@@ -220,11 +221,11 @@ If signature move dominates all other options, it's too strong. Players should w
 
 ### Multiple Signature Moves
 
-Allow 1 signature move at first moderate milestone, possibly additional moves at later moderate milestones:
+Allow 1 signature move at Seasoned rank, possibly additional moves at later ranks:
 
-**Session 3:** First signature move
-**Session 6:** Optional second signature move OR improve first
-**Session 9:** Optional third signature move OR improve existing ones
+**Seasoned (4-7 advances):** First signature move
+**Veteran (8-11 advances):** Optional second signature move OR improve first
+**Heroic (12-15 advances):** Optional third signature move OR improve existing ones
 
 Don't let players create signature versions of every technique. Limitation creates meaningful choice—which techniques matter most?
 

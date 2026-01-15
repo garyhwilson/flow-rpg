@@ -1,6 +1,7 @@
 {#
 Signature Equipment Template - Publication Style
 Generates signature equipment documentation with professional TTRPG prose
+Updated for XP/Ranks advancement system
 #}
 # Signature Equipment
 
@@ -8,7 +9,7 @@ Heroes carry many weapons and wear various armors across their careers. But ever
 
 {% if signature_data %}Signature equipment represents {{ signature_data.description if signature_data.description else "personal iconic gear that evolves with your character" }}. {% endif %}This system transforms generic equipment into irreplaceable treasures with history, personality, and mechanical progression tied directly to your advancement.
 
-Most characters designate signature equipment at moderate milestones (session 3 typically), though you can evolve signature equipment or designate new pieces at later milestones. Typically you'll have 1-2 signature items across entire campaign—your legendary sword, your ancestral armor, your grandfather's bow.
+Most characters designate signature equipment at Seasoned rank (4+ advances), though you can evolve signature equipment or designate new pieces with later advances. Typically you'll have 1-2 signature items across entire campaign—your legendary sword, your ancestral armor, your grandfather's bow.
 
 ---
 
@@ -42,20 +43,20 @@ Game Masters shouldn't abuse this: don't constantly steal signature equipment fo
 {% if signature_data and signature_data.evolution %}
 Signature equipment evolves as you advance:
 
-{% if signature_data.evolution.minor %}**Minor Milestones:** {{ signature_data.evolution.minor }}{% endif %}
+{% if signature_data.evolution.minor %}**Early Advances (Novice/Seasoned):** {{ signature_data.evolution.minor }}{% endif %}
 
-{% if signature_data.evolution.moderate %}**Moderate Milestones:** {{ signature_data.evolution.moderate }}{% endif %}
+{% if signature_data.evolution.moderate %}**Mid-Campaign (Veteran):** {{ signature_data.evolution.moderate }}{% endif %}
 
-{% if signature_data.evolution.major %}**Major Milestones:** {{ signature_data.evolution.major }}{% endif %}
+{% if signature_data.evolution.major %}**Late Campaign (Heroic/Legendary):** {{ signature_data.evolution.major }}{% endif %}
 
 {% else %}
-**Minor Milestones:** Small improvements (+1 enhancement, cosmetic changes)
-**Moderate Milestones:** Significant properties (special abilities, unique effects)
-**Major Milestones:** Legendary capabilities (reality-bending powers, sentience)
+**Early Advances (Novice/Seasoned):** Small improvements (+1 enhancement, cosmetic changes)
+**Mid-Campaign (Veteran):** Significant properties (special abilities, unique effects)
+**Late Campaign (Heroic/Legendary):** Legendary capabilities (reality-bending powers, sentience)
 
 {% endif %}
 
-The sword you started with at level 1 doesn't become obsolete at level 10—it evolves into legendary artifact worthy of your achievements.
+The sword you started with at Novice rank doesn't become obsolete at Legendary—it evolves into legendary artifact worthy of your achievements.
 
 ---
 
@@ -71,7 +72,7 @@ The sword you started with at level 1 doesn't become obsolete at level 10—it e
 {% else %}
 ### Designating Signature Equipment
 
-At a moderate milestone (usually session 3), work with your GM to designate one piece of equipment as signature:
+At Seasoned rank (usually around sessions 9-16), work with your GM to designate one piece of equipment as signature:
 
 **Choose existing equipment:** Don't create new items—elevate equipment you're already using
 **Establish history:** What makes this equipment special to your character?
@@ -98,7 +99,7 @@ Signature equipment always has a name:
 **Inherited names:** *Grandfather's Longbow*, *The Family Blade*
 **Earned titles:** *Dragonslayer* (after killing your first dragon with it)
 
-The name should feel earned and meaningful, not randomly generated or overly grandiose for your current level.
+The name should feel earned and meaningful, not randomly generated or overly grandiose for your current rank.
 
 ---
 
@@ -108,13 +109,13 @@ The name should feel earned and meaningful, not randomly generated or overly gra
 
 As you advance, signature equipment gains power:
 
-**Minor Milestone Option:** Instead of taking skill/attribute improvement, improve signature equipment by +1 enhancement
+**Novice/Seasoned Option:** Instead of taking skill/attribute improvement, improve signature equipment by +1 enhancement
 
-**Moderate Milestone Option:** Grant signature equipment special property (flaming, frost, keen, returning, etc.)
+**Veteran Option:** Grant signature equipment special property (flaming, frost, keen, returning, etc.)
 
-**Major Milestone Option:** Grant signature equipment legendary ability tied to your character's achievements
+**Heroic/Legendary Option:** Grant signature equipment legendary ability tied to your character's achievements
 
-These improvements cost milestone choices—signature equipment evolution competes with other advancement options. This ensures evolution feels earned rather than automatic.
+These improvements cost advance choices—signature equipment evolution competes with other advancement options. This ensures evolution feels earned rather than automatic.
 
 ### Narrative Progression
 
@@ -130,7 +131,7 @@ Work with your GM to tie mechanical improvements to narrative achievements. Equi
 
 Signature equipment's appearance changes with power:
 
-**Worn but sturdy** (early game) → **Battle-scarred and legendary** (mid game) → **Radiant with power** (endgame)
+**Worn but sturdy** (Novice) → **Battle-scarred and legendary** (Veteran) → **Radiant with power** (Legendary)
 
 **Simple steel blade** → **Rune-etched steel glowing with inner light** → **Reality-warping artifact crackling with elemental fury**
 
@@ -142,28 +143,28 @@ Describe how your equipment looks different at each power tier. Visual evolution
 
 ### The Sword That Grew
 
-**Session 1:** Standard longsword, inherited from mentor
-**Session 3 (Moderate Milestone):** Designated signature equipment, named *Oathkeeper*, +1 enhancement
-**Session 6 (Moderate Milestone):** Gains Keen property (critical on 11+) after striking killing blow against corrupt noble
-**Session 10 (Major Milestone):** Becomes *Oathkeeper, Blade of Justice*—grants wielder ability to sense lies and compel truth once per day
+**Session 1 (Novice):** Standard longsword, inherited from mentor
+**Session 10 (Seasoned):** Designated signature equipment, named *Oathkeeper*, +1 enhancement
+**Session 18 (Veteran):** Gains Keen property (critical on 11+) after striking killing blow against corrupt noble
+**Session 28 (Heroic):** Becomes *Oathkeeper, Blade of Justice*—grants wielder ability to sense lies and compel truth once per day
 
 The mechanical progression (+1 → Keen → Legendary ability) follows narrative progression (mentor's blade → proven weapon → artifact of justice).
 
 ### The Armor That Endured
 
-**Session 2:** Chainmail purchased in starting town
-**Session 3 (Moderate Milestone):** Designated signature after surviving near-death experience, named *The Survivor*, begins showing battle scars
-**Session 5 (Major Milestone):** Transforms into *The Unyielding*—grants wearer +2 Vitality and immunity to fear after enduring impossible odds
-**Session 9 (Moderate Milestone):** Gains Fortification (25% critical negation) after defending allies in climactic battle
+**Session 2 (Novice):** Chainmail purchased in starting town
+**Session 10 (Seasoned):** Designated signature after surviving near-death experience, named *The Survivor*, begins showing battle scars
+**Session 20 (Veteran):** Transforms into *The Unyielding*—grants wearer +2 Vitality and immunity to fear after enduring impossible odds
+**Session 30 (Heroic):** Gains Fortification (25% critical negation) after defending allies in climactic battle
 
 Evolution tied to survival and protection themes. Each upgrade reflects character's role as indomitable defender.
 
 ### The Staff That Awakened
 
-**Session 1:** Wooden quarterstaff, simple walking stick
-**Session 3 (Moderate Milestone):** Named *Starlight* after first major magical achievement, begins glowing faintly when spells cast
-**Session 6 (Moderate Milestone):** Gains +1 enhancement, light brightens with caster's power
-**Session 10 (Major Milestone):** Becomes sentient—*Starlight, the Awakened*—acts as advisor and grants +1 to all Sorcery checks
+**Session 1 (Novice):** Wooden quarterstaff, simple walking stick
+**Session 10 (Seasoned):** Named *Starlight* after first major magical achievement, begins glowing faintly when spells cast
+**Session 18 (Veteran):** Gains +1 enhancement, light brightens with caster's power
+**Session 30 (Heroic):** Becomes sentient—*Starlight, the Awakened*—acts as advisor and grants +1 to all Sorcery checks
 
 The mundane staff evolves into legendary artifact and companion through magical use and character growth.
 
@@ -178,9 +179,9 @@ Signature equipment provides concrete advantages:
 **Enhanced performance:** Bonuses exceed standard equipment
 **Special properties:** Unique abilities unavailable elsewhere
 **Reliable access:** Cannot be permanently lost
-**Continued relevance:** Evolves to remain competitive at all levels
+**Continued relevance:** Evolves to remain competitive at all ranks
 
-These benefits justify the milestone investment required for evolution.
+These benefits justify the advance investment required for evolution.
 
 ### Narrative Weight
 
@@ -209,7 +210,7 @@ These behaviors, tied to signature equipment, become character signatures as muc
 
 ### Approving Signature Equipment
 
-Allow signature equipment designation freely at moderate milestones, but ensure:
+Allow signature equipment designation freely at Seasoned rank, but ensure:
 
 **Narrative justification:** Equipment has personal significance beyond stats
 **Appropriate power level:** Can't make Common magic items signature for free upgrades to Legendary
@@ -222,11 +223,11 @@ Most signature equipment requests are fine. Occasionally player requests might n
 
 Signature equipment should evolve roughly parallel to character power:
 
-**+1 enhancement:** Available at minor or moderate milestones (sessions 2-4)
-**Special properties:** Moderate milestones (sessions 6-9)
-**Legendary abilities:** Major milestones (sessions 5 and 10)
+**+1 enhancement:** Available at Novice/Seasoned ranks (sessions 2-12)
+**Special properties:** Veteran rank (sessions 17-24)
+**Legendary abilities:** Heroic/Legendary ranks (sessions 25+)
 
-Don't let signature equipment outpace character level dramatically. +3 Legendary equipment at session 3 breaks game balance.
+Don't let signature equipment outpace character rank dramatically. +3 Legendary equipment at Novice rank breaks game balance.
 
 ### Temporary Separation
 
@@ -256,4 +257,4 @@ Signature status should be special. If everything is signature, nothing is.
 
 ---
 
-*Signature equipment transforms generic gear into legendary artifacts that define your character's visual identity and grow alongside your achievements. Choose equipment with personal significance, invest milestones in its evolution, and let it become as much a part of your legend as your name.*
+*Signature equipment transforms generic gear into legendary artifacts that define your character's visual identity and grow alongside your achievements. Choose equipment with personal significance, invest advances in its evolution, and let it become as much a part of your legend as your name.*

@@ -1,6 +1,7 @@
 {#
 Signature Combat Reference - Publication Style
 Brief cross-reference pointing to main signature moves documentation
+Updated for XP/Ranks advancement system
 #}
 # Signature Combat Moves
 
@@ -18,7 +19,7 @@ Every warrior develops personal techniques through experience. That overhead sla
 ## Creating Your Signature Move
 
 {% if signature_moves.creation %}
-{% if signature_moves.creation.when %}**Timing:** Earned at {{ signature_moves.creation.when }}{% if signature_moves.creation.timing_note %} ({{ signature_moves.creation.timing_note }}){% endif %}{% endif %}
+{% if signature_moves.creation.when %}**Timing:** Earned at Seasoned rank (4+ advances){% if signature_moves.creation.timing_note %} ({{ signature_moves.creation.timing_note }}){% endif %}{% endif %}
 
 Your signature move requires four components:
 
@@ -62,7 +63,7 @@ These examples show how different characters create signature moves from their c
 
 Signature moves personalize combat techniques:
 
-**Creation:** Moderate milestone
+**Creation:** Seasoned rank (4+ advances)
 **Components:** Name, mechanical effect, Momentum cost (1 less than normal), narrative description
 **Examples:**
 - Thunder Strike: Attack all enemies in zone (2 Momentum instead of 3)
@@ -74,10 +75,10 @@ Signature moves personalize combat techniques:
 ## Evolution and Improvement
 
 {% if signature_moves and signature_moves.evolution %}
-Signature moves can improve at later milestones:
+Signature moves can improve at later ranks:
 
 {% if signature_moves.evolution.minor_improvement %}
-**Minor Improvement** ({{ signature_moves.evolution.minor_improvement.when if signature_moves.evolution.minor_improvement.when else "Later milestone" }}):
+**Minor Improvement** (Veteran rank, 8+ advances):
 {% if signature_moves.evolution.minor_improvement.options %}
 {% for option in signature_moves.evolution.minor_improvement.options %}
 - {{ option }}
@@ -86,7 +87,7 @@ Signature moves can improve at later milestones:
 {% endif %}
 
 {% if signature_moves.evolution.major_improvement %}
-**Major Improvement** ({{ signature_moves.evolution.major_improvement.when if signature_moves.evolution.major_improvement.when else "Major milestone" }}):
+**Major Improvement** (Heroic rank, 12+ advances):
 {% if signature_moves.evolution.major_improvement.options %}
 {% for option in signature_moves.evolution.major_improvement.options %}
 - {{ option }}
@@ -96,8 +97,8 @@ Signature moves can improve at later milestones:
 
 {% else %}
 
-**Minor Improvement:** Reduce cost by 1, add minor effect, or increase range
-**Major Improvement:** Double effect, remove limits, or add narrative permissions
+**Minor Improvement (Veteran):** Reduce cost by 1, add minor effect, or increase range
+**Major Improvement (Heroic):** Double effect, remove limits, or add narrative permissions
 
 {% endif %}
 
@@ -114,7 +115,7 @@ For comprehensive rules on creating, using, and evolving signature moves, includ
 
 **See the full [Signature Moves](signature_moves.md) documentation.**
 
-This reference provides a quick overview. The complete documentation covers signature move creation in depth, including how to choose appropriate base techniques, balance Momentum costs, develop narrative descriptions, and evolve signature moves through campaign progression.
+This reference provides a quick overview. The complete documentation covers signature move creation in depth, including how to choose appropriate base techniques, balance Momentum costs, develop narrative descriptions, and evolve signature moves through rank progression.
 
 ---
 

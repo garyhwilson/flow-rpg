@@ -63,28 +63,32 @@ resolution_system:
     critical_warning: |
       AT +5 MODIFIER, TN 8 SUCCEEDS 97% OF THE TIME (ONLY FAILS ON SNAKE EYES).
       This is NOT a meaningful challenge. GMs MUST use higher TNs as party power grows.
-      FAILURE TO SCALE TNs WILL MAKE SESSIONS 4-12 TRIVIAL AND BORING.
+      FAILURE TO SCALE TNs WILL MAKE SESSIONS 6+ TRIVIAL AND BORING.
+      Start using TN 10 at Seasoned rank (sessions 6-10) when modifiers reach +3 to +4.
 
     rationale: "Bounded accuracy caps modifiers at +5, but this creates near-automatic success vs TN 8. The solution is mandatory TN scaling, not higher modifier caps."
 
     scaling_table:
-      early_campaign:
+      novice:
         party_modifier: "+0 to +2"
-        sessions: "1-3"
+        sessions: "1-5"
+        rank: "Novice"
         standard_tn: 8
         hard_tn: 10
         note: "TN 8 feels appropriately challenging (58-86% success)"
 
-      mid_campaign:
+      seasoned:
         party_modifier: "+3 to +4"
-        sessions: "4-6"
+        sessions: "6-10"
+        rank: "Seasoned"
         standard_tn: 10
         hard_tn: 12
         note: "TN 8 becomes routine (91-97%), use TN 10 for real challenges"
 
-      late_campaign:
+      veteran_plus:
         party_modifier: "+5"
-        sessions: "7+"
+        sessions: "11+"
+        rank: "Veteran through Legendary"
         standard_tn: 10
         hard_tn: 12
         note: "TN 8 is trivial (97.2%), TN 10 is new baseline, TN 12 for hard challenges"
@@ -493,9 +497,9 @@ skills:
         solution: "GMs must use higher TNs for late-game challenges"
 
       tn_scaling_guidance:
-        sessions_1_3: "TN 8 for standard challenges (+0 to +2 modifiers: 58-86% success)"
-        sessions_4_6: "TN 8-10 mix (+3 to +4 modifiers: 72-91% at TN 8)"
-        sessions_7_12: "TN 10-12 standard (+5 modifier: 72% at TN 10, 42% at TN 12)"
+        novice_sessions_1_5: "TN 8 for standard challenges (+0 to +2 modifiers: 58-86% success)"
+        seasoned_sessions_6_10: "TN 10 for challenges (+3 to +4 modifiers: 72-83% at TN 10)"
+        veteran_plus_sessions_11_plus: "TN 10-12 standard (+5 modifier: 72% at TN 10, 42% at TN 12)"
         note: "Peak power heroes need harder challenges to feel meaningful risk"
 
       vs_alternative_caps:
