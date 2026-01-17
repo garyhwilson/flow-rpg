@@ -6,7 +6,7 @@ _Tools, Weapons, Armor, and Gear for Adventure_
 
 In the Autumn Phoenix RPG system, equipment represents more than mere statistical bonuses—it embodies practical tools through which characters interact with their world, express their identity, and overcome challenges. This compendium provides comprehensive information on the various items available to adventurers, from basic necessities to specialized implements reflecting unique cultural traditions and professional expertise.
 
-Equipment in Momentum is designed to offer meaningful choices rather than simple numerical progression. Each item presents distinctive advantages, limitations, and contextual benefits that support different approaches to problem-solving rather than establishing a clear "best option" applicable to all situations.
+Equipment in Autumn Phoenix is designed to offer meaningful choices rather than simple numerical progression. Each item presents distinctive advantages, limitations, and contextual benefits that support different approaches to problem-solving rather than establishing a clear "best option" applicable to all situations.
 
 ## Equipment Categories
 
@@ -48,9 +48,9 @@ Items perform differently depending on circumstances rather than providing const
 Equipment serves both functional and expressive purposes, allowing characters to demonstrate cultural background, personal values, and professional identity through their gear choices. These narrative dimensions enhance mechanical functions without compromising practical effectiveness.
 
 **Integration with Core Systems**  
-Equipment interacts meaningfully with Momentum's stance system, skill mechanics, and resource management rather than functioning as an isolated subsystem. This integration ensures that equipment selection influences and is influenced by other character decisions, creating cohesive gameplay experience.
+Equipment interacts meaningfully with Autumn Phoenix's stance system, skill mechanics, and resource management rather than functioning as an isolated subsystem. This integration ensures that equipment selection influences and is influenced by other character decisions, creating cohesive gameplay experience.
 
-These principles create an equipment system that enhances tactical depth, supports character expression, and integrates seamlessly with Momentum's other mechanics, making gear selection an engaging aspect of character development rather than a simple optimization exercise.
+These principles create an equipment system that enhances tactical depth, supports character expression, and integrates seamlessly with Autumn Phoenix's other mechanics, making gear selection an engaging aspect of character development rather than a simple optimization exercise.
 
 ## Equipment and Momentum
 
@@ -74,7 +74,7 @@ This dynamic relationship between Momentum and equipment creates systems where g
 
 ### Quality and Craftsmanship
 
-Equipment in Momentum comes in various quality levels affecting both functionality and durability:
+Equipment in Autumn Phoenix comes in various quality levels affecting both functionality and durability:
 
 **Standard Quality** represents professionally crafted items meeting normal expectations for functionality and durability. These items serve their intended purpose reliably under expected conditions without notable advantages or disadvantages.
 

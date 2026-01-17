@@ -10,7 +10,7 @@ In Autumn Phoenix RPG, adventuring gear creates opportunities for creative solut
 
 ## Using Adventuring Gear Effectively
 
-Effective equipment use in Momentum follows several principles:
+Effective equipment use in Autumn Phoenix follows several principles:
 
 ### The Right Tool for the Job
 

@@ -2,11 +2,11 @@
 
 _Tools of Combat and Conflict Resolution_
 
-## Philosophy of Weapons in Momentum
+## Philosophy of Weapons in Autumn Phoenix
 
 Weapons in Autumn Phoenix RPG represent more than mere damage-dealing instruments—they embody tactical choices, character expression, and approaches to conflict. Each weapon category offers distinctive advantages balanced by corresponding limitations, creating meaningful decisions rather than simple hierarchical progression from inferior to superior options.
 
-The weapon system integrates seamlessly with Momentum's stance mechanics, providing different tactical opportunities depending on how characters position themselves in combat. A reach weapon wielded by a defensive fighter creates different tactical possibilities than dual-wielded daggers used by an aggressive rogue, even when both characters possess similar attribute scores.
+The weapon system integrates seamlessly with Autumn Phoenix's stance mechanics, providing different tactical opportunities depending on how characters position themselves in combat. A reach weapon wielded by a defensive fighter creates different tactical possibilities than dual-wielded daggers used by an aggressive rogue, even when both characters possess similar attribute scores.
 
 ## Choosing Your Weapon
 

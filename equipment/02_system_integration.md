@@ -117,7 +117,7 @@ The combat system interacts extensively with equipment choices, creating tactica
 
 ### Stance Interactions
 
-Equipment functions differently within Momentum's stance-based combat system, creating distinctive tactical profiles:
+Equipment functions differently within Autumn Phoenix's stance-based combat system, creating distinctive tactical profiles:
 
 **Aggressive Stance Equipment**
 
@@ -144,7 +144,7 @@ These stance-specific advantages create meaningful tactical choices based on bot
 
 ### Weapon Categories
 
-Beyond simple damage values, weapons in Momentum represent distinctive tactical approaches:
+Beyond simple damage values, weapons in Autumn Phoenix represent distinctive tactical approaches:
 
 **Impact Weapons (Hammers, Maces, Flails)**
 

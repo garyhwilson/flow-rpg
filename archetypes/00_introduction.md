@@ -6,7 +6,7 @@ _Character Training & Professional Capabilities_
 
 In the Autumn Phoenix RPG system, your character is defined by three essential pillars: Species (your heritage and physical nature), Archetype (your training and professional capabilities), and Calling (your psychological motivation and purpose). This compendium focuses on the second pillar—Archetypes—which represents the training, techniques, and approaches that define your character's capabilities in the world.
 
-Unlike rigid class systems where characters are locked into predetermined progression paths, Archetypes in Momentum represent foundational training that provides starting capabilities and preferred development directions while allowing for significant customization. Your Archetype determines your initial skill proficiencies, equipment options, and specialized techniques, but how you develop these foundations remains flexible.
+Unlike rigid class systems where characters are locked into predetermined progression paths, Archetypes in Autumn Phoenix represent foundational training that provides starting capabilities and preferred development directions while allowing for significant customization. Your Archetype determines your initial skill proficiencies, equipment options, and specialized techniques, but how you develop these foundations remains flexible.
 
 ## The Seven Core Archetypes
 
@@ -22,7 +22,7 @@ The seven core Archetypes cover the fundamental approaches to adventure across c
 
 ## Archetypes vs. Classes
 
-Unlike rigid class systems found in some role-playing games, Archetypes in Momentum represent foundational training that influences rather than dictates character development. This philosophy embraces several key principles:
+Unlike rigid class systems found in some role-playing games, Archetypes in Autumn Phoenix represent foundational training that influences rather than dictates character development. This philosophy embraces several key principles:
 
 **Skill-Based Progression:** Advancement occurs primarily through developing skills rather than predetermined class features. Your archetype provides initial skill proficiencies and learning affinities, but you can invest in any skills that suit your character concept.
 

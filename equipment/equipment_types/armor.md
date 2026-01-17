@@ -2,11 +2,11 @@
 
 _Protection, Trade-offs, and Defensive Strategy_
 
-## Philosophy of Armor in Momentum
+## Philosophy of Armor in Autumn Phoenix
 
 Armor in Autumn Phoenix RPG represents meaningful defensive choices rather than simple numerical progression. Each armor category offers distinct advantages balanced by corresponding limitations, creating tactical decisions that significantly impact combat approach, character capabilities, and resource management.
 
-The armor system integrates with Momentum's core mechanics through multiple vectors—damage reduction, attribute penalties, stance restrictions, and spellcasting limitations. These interactions ensure armor choice influences overall character strategy rather than serving as a simple "equip the best armor available" decision.
+The armor system integrates with Autumn Phoenix's core mechanics through multiple vectors—damage reduction, attribute penalties, stance restrictions, and spellcasting limitations. These interactions ensure armor choice influences overall character strategy rather than serving as a simple "equip the best armor available" decision.
 
 ## Choosing Your Armor
 
@@ -483,4 +483,4 @@ Armor evolution parallels character growth:
 - Acquiring signature pieces at key rank promotions
 - Eventually wearing legendary equipment
 
-Armor in Momentum represents more than statistics—it's a fundamental aspect of character identity and tactical approach, creating meaningful choices that influence both mechanical effectiveness and narrative presentation.
+Armor in Autumn Phoenix represents more than statistics—it's a fundamental aspect of character identity and tactical approach, creating meaningful choices that influence both mechanical effectiveness and narrative presentation.
