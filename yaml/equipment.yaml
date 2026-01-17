@@ -322,9 +322,10 @@ armor:
         momentum: "None"
         spellcasting: -1
       benefits:
-        guard_bonus: "+1 Guard at scene start"
+        guard_bonus: "+2 Guard at scene start"
         balanced: "No stance restrictions"
       cost: "50-150 coins"
+      design_note: "The +2 Guard bonus makes medium armor attractive for hybrid builds"
       
       examples:
         chain_shirt:
@@ -352,7 +353,7 @@ armor:
       penalties:
         grace: -2
         momentum: "-1 to all Momentum generation"
-        spellcasting: -3
+        spellcasting: -4
       benefits:
         knockback_immunity: "Cannot be moved"
         damage_reduction: "Highest available"
@@ -439,6 +440,16 @@ adventuring_gear:
       cost: 50
       weight: "Heavy load"
     
+    basic_healers_kit:
+      contents:
+        - "Bandages"
+        - "Herbs"
+        - "Basic salves"
+      uses: 5
+      benefit: "No penalty to Medicine checks"
+      cost: 25
+      note: "Starter kit for new healers"
+
     healers_kit:
       contents:
         - "Bandages"

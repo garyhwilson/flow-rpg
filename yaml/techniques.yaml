@@ -111,6 +111,7 @@ wizard_techniques:
     trigger: "When you take damage from any source"
     action_type: "Reaction"
     momentum_cost: 1
+    limit: "Once per round"
 
     effect: "Reduce the damage by 1d6 + Mind"
 
@@ -126,10 +127,10 @@ wizard_techniques:
     availability_note: "Other characters can learn this via advance, but it scales with Mind so wizards benefit most"
 
     tactical_notes: |
-      - Can use multiple times per round if you have Momentum
+      - Limited to once per round to prevent defensive stacking
       - Competes with offensive Momentum spending (spells, metamagic)
       - Most effective when combined with Shield spell
-      - Consider saving Momentum for emergencies vs. spending on damage
+      - Choose carefully which attack to block each round
       - At Mind +3, negates roughly one-third of a Champion's attack
 
     example:
@@ -139,8 +140,9 @@ wizard_techniques:
 
     design_rationale: |
       Gives Wizards meaningful defensive choice from Session 1.
-      Momentum cost ensures it competes with spellcasting - you can't
-      both nuke enemies AND block all incoming damage.
+      Once-per-round limit prevents defensive invincibility while
+      still providing meaningful protection.
+      Momentum cost ensures it competes with spellcasting.
       Scales with Mind, keeping it wizard-optimal while allowing
       other casters to use it less efficiently.
 

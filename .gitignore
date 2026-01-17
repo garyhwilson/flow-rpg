@@ -54,3 +54,5 @@ output/
 
 # ===== Obsidian Config =====
 .obsidian/
+
+playtests/

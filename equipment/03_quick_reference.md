@@ -27,7 +27,7 @@
 | None     | 0   | None          | None            | -                            |
 | Light    | -1  | None          | -1 Sorcery      | -                            |
 | Medium   | -2  | -1            | -2 Sorcery      | No Momentum from movement    |
-| Heavy    | -4  | -2            | Cannot cast     | Cannot use Aggressive stance |
+| Heavy    | -4  | -2            | -4 Sorcery      | Cannot use Aggressive stance |
 
 ### Shields
 

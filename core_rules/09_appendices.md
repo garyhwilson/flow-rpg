@@ -68,7 +68,7 @@
 | None   | 0   | None     | Normal          | No penalty  |
 | Light  | -1  | None     | Normal          | -1 Sorcery  |
 | Medium | -2  | -1 Grace | No charge bonus | -2 Sorcery  |
-| Heavy  | -4  | -2 Grace | No Aggressive   | Cannot cast |
+| Heavy  | -4  | -2 Grace | No Aggressive   | -4 Sorcery  |
 
 ---
 

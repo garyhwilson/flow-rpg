@@ -75,7 +75,7 @@ Wearing armor while casting spells imposes penalties:
 
 - **Light Armor:** -1 to Sorcery rolls
 - **Medium Armor:** -2 to Sorcery rolls
-- **Heavy Armor:** Cannot cast spells
+- **Heavy Armor:** -4 to Sorcery rolls
 
 Certain species traits and abilities can reduce these penalties, like the Elven Focus trait that ignores the first point of armor penalty.
 

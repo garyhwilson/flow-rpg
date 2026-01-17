@@ -21,7 +21,7 @@
 
 - Light: -1 Sorcery
 - Medium: -2 Sorcery
-- Heavy: Cannot cast
+- Heavy: -4 Sorcery
 
 ---
 
@@ -44,7 +44,7 @@
 | **Charm**  | Near  | Social influence, varies by attribute |
 | **Blur**   | Self  | +2 defense for scene                  |
 
-### ADVANCED SPELLS (-3 Momentum)
+### ADVANCED SPELLS (-1 Momentum)
 
 | Spell            | Range | Effect                          |
 | ---------------- | ----- | ------------------------------- |
@@ -53,7 +53,7 @@
 | **Invisibility** | Touch | +Attribute +3 Stealth for scene |
 | **Dispel**       | Near  | Counter or remove magic         |
 
-### MASTER SPELLS (-5 Momentum)
+### MASTER SPELLS (-3 Momentum)
 
 | Spell               | Range   | Effect                   |
 | ------------------- | ------- | ------------------------ |
@@ -169,7 +169,7 @@ _Can counter spells or remove ongoing effects_
 
 ---
 
-### MASTER SPELLS (-5 MOMENTUM)
+### MASTER SPELLS (-3 MOMENTUM)
 
 #### Lightning Storm - Massive area attack
 
@@ -319,12 +319,12 @@ _Can position, buff, prepare—can't directly harm frozen creatures_
 
 **Multiple Weak Enemies:**
 
-- Fireball (-3 Momentum) for groups
-- Lightning Storm (-5 Momentum) for armies
+- Fireball (-1 Momentum) for groups
+- Lightning Storm (-3 Momentum) for armies
 
 **Single Strong Enemy:**
 
-- Bolt (-1 Momentum) repeatedly
+- Bolt (0 Momentum) repeatedly
 - Build to advanced/master spell
 
 **Allies in Melee:**

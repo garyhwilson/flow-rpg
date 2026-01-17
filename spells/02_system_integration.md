@@ -331,7 +331,7 @@ Armor interferes with spellcasting:
 
 - **Light Armor:** -1 to Sorcery rolls
 - **Medium Armor:** -2 to Sorcery rolls
-- **Heavy Armor:** Cannot cast spells
+- **Heavy Armor:** -4 to Sorcery rolls
 
 **Mitigating Factors:**
 

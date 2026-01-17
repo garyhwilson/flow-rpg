@@ -83,7 +83,7 @@ Fireball is the iconic area damage spell—a roiling sphere of magical flame tha
 - **Special:** Can cast at negative Momentum
 - **Narrative:** Channeled through sheer determination, powered by faith/will, never fails
 - **Tactical Use:** Desperation Fireball when depleted
-- **Example:** At -2 Momentum, can still cast (ends at -5 Momentum)
+- **Example:** At -2 Momentum, can still cast (ends at -3 Momentum)
 
 ### Presence + Sorcery: Terrifying Conflagration
 
@@ -143,7 +143,7 @@ Heal channels magical energy to repair injuries, restore vitality, and save live
 - **Special:** Can heal even at negative Momentum, works when dying yourself
 - **Narrative:** Refuse to let them die, force of will sustains life, unshakable
 - **Tactical Use:** Emergency healing when resources depleted
-- **Example:** At -2 Momentum, still save dying ally (end at -5 Momentum)
+- **Example:** At -2 Momentum, still save dying ally (end at -3 Momentum)
 
 ### Presence + Sorcery: Inspiring Renewal
 

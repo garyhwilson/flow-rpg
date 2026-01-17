@@ -54,68 +54,73 @@ magic_system:
 
 spell_tiers:
   tier_0_cantrips:
+    spell_point_cost: 0
     momentum_cost: 0
-    description: "Simple magics requiring no Momentum investment"
+    description: "Simple magics requiring no resource investment"
     power_level: "Minor effects"
     examples: ["spark", "mage_armor", "light", "prestidigitation"]
 
     strategic_use:
-      - "Free magical pressure without Momentum cost"
-      - "Maintain offense when Momentum is neutral"
+      - "Free magical utility without resource cost"
+      - "Maintain magical presence when conserving Spell Points"
       - "Fill gaps between bigger spells"
-  
+
   tier_1_basic:
+    spell_point_cost: 1
     momentum_cost: 0
-    description: "Fundamental spells, Momentum neutral"
+    description: "Fundamental spells costing 1 Spell Point"
     power_level: "Standard combat/utility effects"
     examples: ["bolt", "shield", "charm", "blur"]
-    
+
     strategic_use:
-      - "Reliable damage/protection"
-      - "No Momentum investment needed"
-      - "Sustained casting possible"
-  
+      - "Reliable damage/protection at modest cost"
+      - "Core combat spells"
+      - "3-7 casts per scene depending on Will"
+
   tier_2_advanced:
+    spell_point_cost: 2
     momentum_cost: -1
-    description: "Powerful effects requiring momentum"
+    description: "Powerful effects requiring both Spell Points and Momentum"
     power_level: "Significant impact"
     examples: ["fireball", "heal", "fly", "invisibility"]
-    
+
     strategic_use:
       - "Turning point spells"
-      - "Worth Momentum investment"
-      - "Combo with cantrips for Momentum management"
-  
+      - "Worth the double resource investment"
+      - "1-3 casts per scene typically"
+
   tier_3_expert:
+    spell_point_cost: 3
     momentum_cost: -2
-    description: "Major magical effects"
+    description: "Major magical effects with heavy resource cost"
     power_level: "Battle-changing"
     examples: ["lightning_storm", "teleport", "polymorph"]
-    
+
     strategic_use:
-      - "Decisive moments"
-      - "Requires Momentum buildup"
+      - "Decisive moments only"
+      - "Requires Spell Point conservation and Momentum buildup"
       - "Often combat-ending"
-  
+
   tier_4_master:
+    spell_point_cost: 4
     momentum_cost: -3
-    description: "Reality-altering magic"
+    description: "Reality-altering magic at maximum cost"
     power_level: "Legendary effects"
     examples: ["time_stop", "dominate", "meteor_swarm"]
-    
+
     strategic_use:
       - "Campaign climax moments"
-      - "Requires perfect Momentum management"
+      - "Requires perfect resource management"
       - "Often scene-defining"
 
 # ============================================
-# SPELL POINTS (OPTIONAL RULE)
+# SPELL POINTS (DEFAULT SYSTEM)
 # ============================================
 
 spell_points:
-  description: "Alternative resource management for groups that prefer limited casting"
-  optional: true
-  philosophy: "Trade Momentum integration for traditional resource tracking"
+  description: "Resource management for spellcasting that balances caster output with martial damage"
+  optional: false
+  philosophy: "Spell Points ensure casters can't infinitely spam damage spells while keeping magic impactful"
 
   pool_calculation:
     formula: "3 + Will modifier"
@@ -147,12 +152,45 @@ spell_points:
     tier_4_master: 4
 
   interaction_with_momentum:
-    description: "Spell points replace Momentum costs for spells"
+    description: "Spell Points are the primary casting resource; Momentum costs are additional"
+    spell_point_cost: "Pay SP equal to tier (Tier 0 = 0, Tier 1 = 1, etc.)"
+    momentum_cost: "Some spells also cost Momentum (Tier 2+ as listed)"
     momentum_generation: "Still generate Momentum from critical successes and stances"
-    momentum_expenditure: "Can still spend Momentum for techniques and narrative advantages"
-    note: "This divorces spell resources from Momentum while maintaining Momentum mechanics"
+    momentum_expenditure: "Can spend Momentum for techniques, metamagic, and narrative advantages"
 
-  design_note: "For groups that prefer vancian-style resource management. Less elegant but more familiar to traditional players."
+  design_rationale: |
+    Without Spell Points, a Wizard with Bolt (Tier 1, 0 Momentum) can attack every round
+    for 2d6+3 damage at Far range with no resource cost, outperforming martial characters
+    who must close to melee range for similar damage.
+
+    Spell Points ensure:
+    - Casters must manage resources like everyone else
+    - Cantrips (Tier 0) remain free for magical utility
+    - Higher-tier spells remain powerful but limited
+    - Martial characters have a niche in sustained combat
+
+# ============================================
+# MOMENTUM-ONLY CASTING (OPTIONAL VARIANT)
+# ============================================
+
+momentum_only_casting:
+  description: "For groups that prefer pure Momentum-based magic without Spell Points"
+  optional: true
+  philosophy: "Simpler resource tracking but requires careful encounter design"
+
+  how_it_works:
+    tier_0: "Free to cast"
+    tier_1: "Free to cast (WARNING: can lead to caster dominance)"
+    tier_2: "Costs -1 Momentum"
+    tier_3: "Costs -2 Momentum"
+    tier_4: "Costs -3 Momentum"
+
+  gm_guidance: |
+    If using this variant, consider:
+    - More encounters per scene (depletes caster Momentum)
+    - Enemies that target casters specifically
+    - Shorter combat durations (3-4 rounds max)
+    - Giving martial characters bonus techniques to compensate
 
 # ============================================
 # ATTRIBUTE CASTING APPROACHES
@@ -185,9 +223,10 @@ casting_attributes:
     
     mechanical_benefits:
       universal: "Spells seek weak points"
-      damage: "+1 damage per die"
+      damage: "+1 total damage (not per die)"
       detection: "Sense additional information"
       area: "Affects unseen targets"
+      design_note: "Changed from +1/die to +1 total to prevent Awareness from dominating other casting approaches"
     
     narrative_style: "Instinctive power, overwhelming force"
   
@@ -318,13 +357,15 @@ spells:
   # ==========================================
   
   tier_1:
-    design_note: "Damage increased to 2d6 base for caster viability"
+    design_note: "Tier 1 spells cost 1 Spell Point. Damage at 2d6 base matches martial weapons."
 
     bolt:
       name: "Bolt"
       description: "Ranged magical attack at Far range"
       base_effect: "Attribute + 2d6 damage"
-      momentum: "0"
+      spell_point_cost: 1
+      momentum_cost: 0
+      balance_note: "At 1 SP per cast, a Will +2 caster (5 SP) can cast Bolt 5 times per scene"
 
       attribute_variations:
         mind:
@@ -454,7 +495,7 @@ spells:
           damage: "3d6"
           special: "Exclude allies, precise placement"
         awareness:
-          damage: "3d6+2"
+          damage: "3d6+1"
           special: "Seeks most enemies"
         will:
           damage: "3d6"
@@ -693,8 +734,8 @@ spells:
           damage: "4d6 precision strikes"
           special: "Hit only enemies"
         awareness:
-          damage: "5d6 seeking meteors"
-          special: "Cannot be dodged"
+          damage: "4d6+1 seeking meteors"
+          special: "Targets make Grace save (TN 10) for half damage"
         will:
           damage: "4d6 + ongoing"
           special: "Area burns for scene"

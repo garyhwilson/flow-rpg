@@ -9,7 +9,7 @@ character_creation:
       options: ["standard", "specialized", "balanced"]
       arrays:
         standard: [2, 1, 1, 0, 0, -1]
-        specialized: [3, 2, 0, 0, -1, -2]
+        specialized: [2, 2, 1, 0, -1, -2]
         balanced: [1, 1, 1, 0, 0, 0]
     
     step_2_species:
@@ -49,7 +49,17 @@ character_creation:
 # ============================================
 
 species:
-  design_note: "Species attribute bonuses respect the +3 attribute cap. If starting array already has +3 in an attribute, apply bonus elsewhere."
+  design_note: |
+    Species attribute bonuses respect the +3 attribute cap.
+
+    CREATION RULE: Species bonus cannot raise an attribute above +2 at creation.
+    This ensures +3 attributes require advancement investment, preserving the
+    intended progression timeline where +5 total modifier is reached at Seasoned
+    rank (advances 4-7), not Novice rank.
+
+    If your highest array attribute is already +2, apply the species bonus to
+    a different attribute. You can still reach +3 in your primary attribute
+    through the "Raise Attribute" advance option (once per rank).
 
   human:
     name: "Human"
@@ -58,6 +68,8 @@ species:
     attribute_bonus:
       choice: "any"
       amount: 1
+      creation_cap: 2
+      creation_cap_note: "Cannot raise any attribute above +2 at creation"
     
     species_traits:
       versatile:
@@ -82,7 +94,9 @@ species:
     attribute_bonus:
       choice: ["grace", "awareness"]
       amount: 1
-    
+      creation_cap: 2
+      creation_cap_note: "Cannot raise any attribute above +2 at creation"
+
     species_traits:
       fey_grace:
         effect: "When you roll 11+ on any check, gain +1 Momentum (once per round)"
@@ -106,7 +120,9 @@ species:
     attribute_bonus:
       choice: ["might", "will"]
       amount: 1
-    
+      creation_cap: 2
+      creation_cap_note: "Cannot raise any attribute above +2 at creation"
+
     species_traits:
       stone_endurance:
         effect: "Once per scene, reduce damage from one attack by 2 (stacks with armor)"
@@ -130,7 +146,9 @@ species:
     attribute_bonus:
       choice: ["will", "presence"]
       amount: 1
-    
+      creation_cap: 2
+      creation_cap_note: "Cannot raise any attribute above +2 at creation"
+
     species_traits:
       lucky:
         effect: "Once per scene, reroll any single die (keep new result)"
@@ -455,9 +473,10 @@ archetypes:
       empathy:
         level: "novice"
         modifier: -1
-      lore:
+      combat:
         level: "novice"
         modifier: -1
+        note: "Temple training includes basic martial defense"
 
     starting_specialties:
       count: 2
@@ -474,8 +493,9 @@ archetypes:
       recommended:
         armor: "Chain shirt (80 coins)"
         weapon: "Mace (35 coins)"
-        gear: "Holy symbol (5 coins), Healer's kit (25 coins)"
+        gear: "Holy symbol (5 coins), Basic healer's kit (25 coins)"
         remaining: "5 coins"
+      note: "Upgrade to full Healer's kit (+1 Medicine) for 40 coins when funds allow"
 
     spellcasting:
       tradition: "divine"
@@ -511,7 +531,7 @@ archetypes:
     starting_specialties:
       count: 2
       recommended:
-        - "Performance Magic (performance tradition, +1 Perform)"
+        - "Performance Magic (performance tradition, +1 Perform, +2 Guard)"
         - "Versatile (extra Novice skill)"
       alternatives:
         - "Connected (helpful NPC contact)"
@@ -646,10 +666,11 @@ custom_build:
         tradition: "primal"
         note: "Bypasses Awareness + Will >= 2 requirement"
       performance_magic:
-        effect: "+1 Perform, grants performance tradition access"
+        effect: "+1 Perform, +2 Guard, grants performance tradition access"
         description: "Magical artistry"
         tradition: "performance"
         note: "Bypasses Presence + Grace >= 2 requirement"
+        design_note: "Guard bonus added for parity with other tradition specialties"
 
     # Caster Specialties
     caster_specialties:

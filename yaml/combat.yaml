@@ -10,6 +10,45 @@ combat_system:
     zones: "Abstract positioning system"
 
 # ============================================
+# ADVANTAGE AND DISADVANTAGE
+# ============================================
+
+advantage_disadvantage:
+  description: "Situational modifiers that affect roll quality"
+
+  advantage:
+    mechanic: "Roll 3d6, keep the best two dice"
+    when_applied:
+      - "Attacking from surprise or hidden position"
+      - "Attacking a prone or restrained target"
+      - "Flanking (two allies in melee with same target)"
+      - "Specific abilities grant advantage (e.g., Shadow Step)"
+      - "Environmental benefits (high ground in certain situations)"
+    effect: "Increases average roll by approximately +2"
+    stacking: "Multiple sources of advantage do not stack - you still roll 3d6 keep 2"
+
+  disadvantage:
+    mechanic: "Roll 3d6, keep the worst two dice"
+    when_applied:
+      - "Attacking while blinded or in darkness"
+      - "Attacking at extreme range"
+      - "Attacking while prone"
+      - "Attacking while frightened of target"
+      - "Environmental penalties (difficult footing, etc.)"
+    effect: "Decreases average roll by approximately -2"
+    stacking: "Multiple sources of disadvantage do not stack - you still roll 3d6 keep 2"
+
+  cancellation:
+    rule: "If you have both advantage and disadvantage, they cancel out"
+    result: "Roll normally (2d6)"
+    note: "Any number of advantages cancels any number of disadvantages"
+
+  interaction_with_modifiers:
+    rule: "Advantage/disadvantage applies to the dice roll itself"
+    example: "With +3 modifier and advantage: roll 3d6, keep best 2, then add +3"
+    design_note: "This keeps advantage meaningful at all skill levels"
+
+# ============================================
 # STANCES
 # ============================================
 
@@ -211,14 +250,31 @@ health_system:
       - "Represents dodging, armor, luck, and mental fortitude"
       - "First to take damage"
 
-    design_note: "Will added to formula allows casters to use mental fortitude for defense"
-
     recovery:
       between_scenes: "Full restoration"
       rally_action:
         effect: "Recover 1d6 Guard"
         limit: "Once per scene"
         action_cost: "Full action"
+      second_wind:
+        trigger: "Guard reduced to 0 or below"
+        effect: "Restore Guard to 50% of maximum"
+        cost: "2 Momentum"
+        limit: "Once per scene"
+        action: "Reaction"
+        note: "See reactions section for full details"
+
+    stacking_rules:
+      description: "All Guard bonuses stack additively unless noted otherwise"
+      examples:
+        - "Base Guard (12 + attribute)"
+        - "+ Shield bonus (+1 to +3)"
+        - "+ Tough specialty (+2, can take twice)"
+        - "+ Medium armor bonus (+2 at scene start)"
+        - "+ Arcane Attunement/Divine Touched (+2)"
+        - "= Total Guard"
+      limit: "No maximum Guard cap"
+      note: "A heavily-invested defensive character can reach Guard 25+ legitimately"
 
     progression:
       method: "Through advance choices (+2 Guard option)"
@@ -260,6 +316,31 @@ damage_resolution:
     4: "Apply to Guard first"
     5: "Excess damage goes to Vitality"
     6: "Check for death/dying if Vitality = 0"
+
+  damage_calculation:
+    description: "How to calculate damage for different attack types"
+
+    melee_weapons:
+      formula: "Weapon dice + Might (or Grace with Finesse weapons)"
+      example: "Longsword (2d6+1) + Might +2 = 2d6+3 damage"
+
+    ranged_weapons:
+      formula: "Weapon dice + Grace"
+      example: "Longbow (2d6) + Grace +2 = 2d6+2 damage"
+      note: "Grace represents precision and timing for ranged attacks"
+
+    thrown_weapons:
+      formula: "Weapon dice + Might or Grace (player choice)"
+      example: "Javelin (2d6) + Might +2 = 2d6+2 damage"
+
+    spells:
+      formula: "Spell dice + Casting attribute"
+      example: "Bolt (2d6) + Mind +3 = 2d6+3 damage"
+      reference: "See magic.yaml for spell-specific variations"
+
+    unarmed:
+      formula: "1d6 + Might"
+      note: "Can use Grace with appropriate specialty"
 
   damage_scaling:
     philosophy: "Damage increases through choices, not automatically"
@@ -430,19 +511,20 @@ armor:
     penalties:
       grace: -1
       momentum: "None"
-      spellcasting: 0
+      spellcasting: -1
     benefits:
       guard: "+2 Guard at scene start"
       balance: "No stance restrictions"
-    description: "Versatile protection"
+    description: "Versatile protection with minor spellcasting hindrance"
     examples: ["Chain shirt", "Scale mail", "Breastplate"]
+    design_note: "The -1 spellcasting penalty creates meaningful choice for hybrid characters"
   
   heavy:
     damage_reduction: 4
     penalties:
       grace: -2
       momentum: "None"
-      spellcasting: -2
+      spellcasting: -4
       movement: "Maximum 1 zone per turn (cannot be increased by specialties)"
     benefits:
       knockback_immunity: "Cannot be moved by attacks"
@@ -503,8 +585,11 @@ weapons:
     ranged:
       damage: "2d6"
       range: "Far"
+      attribute: "grace"
+      damage_attribute: "grace"
       special: "+1 damage at Far, -2 when Engaged"
       examples: ["Bow", "Crossbow", "Sling"]
+      damage_note: "Add Grace modifier to ranged damage (represents precision and timing)"
   
   weapon_properties:
     versatile:
@@ -593,7 +678,19 @@ combat_actions:
       trigger: "Enemy leaves engagement"
       requirement: "Ready action or special ability"
       effect: "Free attack at -2"
-  
+
+    second_wind:
+      trigger: "Your Guard is reduced to 0 or below"
+      cost: "2 Momentum"
+      effect: "Immediately restore Guard to 50% of maximum (round up)"
+      limit: "Once per scene"
+      action: "Reaction (no action cost, triggers automatically when condition met)"
+      design_note: |
+        Prevents death spirals while costing a significant resource.
+        Momentum cost ensures it's a meaningful decision, not automatic.
+        The 50% restoration gives breathing room without full recovery.
+        Example: Guard max 20, drops to 0, spend 2 Momentum, restore to 10.
+
   full_actions:
     charge:
       requirement: "Aggressive stance"
@@ -618,7 +715,7 @@ combat_techniques:
     philosophy: "No attribute gates - anyone can learn"
     method: "Via advances (some require minimum Rank)"
     training: "Narrative justification helpful"
-  
+
   basic_techniques:
     available_to: "Anyone"
     no_momentum_cost:
@@ -626,6 +723,73 @@ combat_techniques:
       - "Defend (increase Guard)"
       - "Maneuver (tactical advantage)"
       - "Rally (recover Guard)"
+
+  # ==========================================
+  # UNIVERSAL MOMENTUM TECHNIQUES
+  # ==========================================
+  # These are available to ALL characters from session 1
+  # No advances required - just spend the Momentum
+
+  universal_momentum_techniques:
+    description: "Basic ways every character can spend Momentum without advances"
+    design_note: "Ensures all characters have meaningful Momentum outlets from session 1"
+
+    surge_of_effort:
+      cost: 1
+      effect: "+2 to any single roll (declare before rolling)"
+      timing: "Before roll"
+      limit: "Once per roll"
+      available_to: "All characters"
+
+    desperate_strike:
+      cost: 1
+      effect: "+1d6 damage on a successful attack"
+      timing: "After hit confirmed, before damage roll"
+      limit: "Once per attack"
+      available_to: "All characters"
+
+    quick_recovery:
+      cost: 1
+      effect: "Immediately recover 1d6 Guard"
+      timing: "Your turn"
+      limit: "Once per round"
+      available_to: "All characters"
+
+    seize_initiative:
+      cost: 2
+      effect: "Act immediately (interrupt turn order)"
+      timing: "Any time during combat"
+      limit: "Once per scene"
+      available_to: "All characters"
+
+    shake_it_off:
+      cost: 2
+      effect: "End one condition affecting you (prone, grappled, frightened, etc.)"
+      timing: "Your turn"
+      limit: "None"
+      available_to: "All characters"
+      exception: "Cannot end unconscious or dying"
+
+    protect_ally:
+      cost: 1
+      effect: "Become the target of an attack against adjacent ally"
+      timing: "Reaction when ally attacked"
+      limit: "Once per round"
+      available_to: "All characters"
+      note: "You take the hit instead of your ally"
+
+    tactical_repositioning:
+      cost: 1
+      effect: "Move 1 zone as a free action (doesn't provoke)"
+      timing: "Any time on your turn"
+      limit: "Once per turn"
+      available_to: "All characters"
+
+    guidance_note: |
+      These universal techniques ensure every character has meaningful
+      choices for spending Momentum. The advances in the next section
+      provide MORE POWERFUL or SPECIALIZED options, but no character
+      should feel stuck with unused Momentum.
   
   novice_techniques:
     requirement: "Available to all characters"
@@ -676,13 +840,13 @@ combat_techniques:
 
     unstoppable_assault:
       effect: "Next attack cannot miss"
-      cost: "6 Momentum"
+      cost: "4 Momentum"
       damage: "Maximum damage"
 
     death_blow:
-      effect: "Instant kill if target below 50% Vitality"
-      cost: "6 Momentum"
-      save: "Will TN 12 to reduce to normal damage"
+      effect: "Target below 25% Vitality must make Will save (TN 12) or die instantly"
+      cost: "5 Momentum"
+      design_note: "25% threshold and save requirement prevent trivializing boss fights"
     
     battlefield_control:
       effect: "Reposition all combatants"

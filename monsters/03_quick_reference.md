@@ -251,6 +251,68 @@ Damage resistance, may reform after death, vulnerable to holy
 
 ---
 
+## ENCOUNTER BUILDING GUIDELINES
+
+### Action Economy Fundamentals
+
+**The Golden Rule:** Each side should have roughly equal total actions per round.
+
+| Party Size | Recommended Enemy Actions |
+| ---------- | ------------------------- |
+| 3 PCs      | 3-4 enemy actions total   |
+| 4 PCs      | 4-5 enemy actions total   |
+| 5 PCs      | 5-6 enemy actions total   |
+
+**WARNING:** A party of 4 vs 8 enemies (8 actions) will be overwhelmed regardless of individual enemy weakness!
+
+### Balancing Many Weak Enemies
+
+When using multiple enemies:
+
+- **4+ enemies:** Reduce their damage by -1 each, OR give them half normal Vitality
+- **6+ enemies:** Consider having some flee after allies fall
+- **Use minions:** 1 Vitality enemies that die in one hit but still threaten with numbers
+
+### Difficulty Tiers
+
+| Difficulty  | Enemy Actions | Enemy Power Level | Expected Outcome       |
+| ----------- | ------------- | ----------------- | ---------------------- |
+| Easy        | Party -1      | Inexperienced     | Win with minor losses  |
+| Standard    | Party +0      | Trained           | Win with resource cost |
+| Challenging | Party +1      | Veteran           | Win with major effort  |
+| Deadly      | Party +2      | Legendary         | Possible defeat        |
+
+### Party Rank vs Enemy Capability
+
+| Party Rank | Appropriate Solo Boss | Appropriate Group      |
+| ---------- | --------------------- | ---------------------- |
+| Novice     | Trained (1)           | 3-4 Inexperienced      |
+| Seasoned   | Veteran (1)           | 4-5 Trained            |
+| Veteran    | Legendary (1)         | 2 Veterans + 3 Trained |
+| Heroic     | Legendary + minions   | 3-4 Veterans           |
+
+### Making Boss Fights Work
+
+Solo bosses need help to avoid being overwhelmed:
+
+- **Multi-action:** Major bosses act 2-3 times per round (max 2 attacks)
+- **Minions:** Add 2-4 weak allies to split party attention
+- **Lair actions:** Environment acts once per round
+- **Phases:** Boss transforms or gains new abilities at 50% Vitality
+
+### Quick Encounter Math
+
+**Average PC damage per round:** 7-10 (weapon + attribute)
+**Average PC Guard:** 15-17 (base 12 + attribute + gear)
+
+To calculate fight length:
+- Total enemy Vitality ÷ (Party DPR × 0.7 hit rate) = rounds to kill enemies
+- Total PC Guard ÷ Enemy DPR = rounds until PCs take Vitality damage
+
+**Target:** 3-5 rounds for standard fights
+
+---
+
 ## WHEN THINGS GO WRONG
 
 ### Fight Too Easy

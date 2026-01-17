@@ -100,7 +100,26 @@ resolution_system:
       at_plus_3: "TN 8 = 83% (reliable), TN 10 = 58% (challenging), TN 12 = 28% (hard)"
       at_plus_5: "TN 8 = 97% (automatic), TN 10 = 83% (reliable), TN 12 = 58% (challenging)"
 
+    player_expectation:
+      description: |
+        As a player, you should expect the GM to raise target numbers as your
+        character becomes more powerful. This is not the GM being unfair - it's
+        how the system maintains meaningful challenges throughout your campaign.
+
+      what_to_expect:
+        novice_rank: "TN 8 is standard. You'll fail about 30-50% of the time on important rolls."
+        seasoned_rank: "TN 10 becomes standard. Your improved skills offset the higher target."
+        veteran_plus: "TN 10-12 is standard. You're incredibly capable, facing epic challenges."
+
+      why_this_matters: |
+        At +5 modifier (the maximum), TN 8 succeeds 97% of the time - only snake eyes fails.
+        That's not a meaningful challenge. The game is designed for GMs to increase TNs
+        as you grow, so dice rolls stay exciting throughout your 30-50 session campaign.
+        Think of it as facing tougher opponents and harder challenges, not arbitrary difficulty.
+
   success_tiers:
+    resolution_order: "First check if your total meets the TN (success or failure). Then check which tier your total falls into: failure (6 or less), partial (7-9), full (10-12), or critical (13+). Meeting a higher TN doesn't change your tier - it just means you succeeded at a harder task."
+
     failure:
       range: "6 or less"
       effect: "Action fails"
@@ -509,21 +528,34 @@ skills:
         plus_6_cap: "Would give 97.2% vs TN 8 (3+ on 2d6) - same problem as +5"
         design_tension: "+5 cap allows heroic growth but requires GM TN adjustment"
 
+    cap_resolution_rule: |
+      When your total bonuses exceed +5, you apply bonuses in this order until reaching +5:
+      1. Attribute bonus (always applies, max +3)
+      2. Skill bonus (always applies, max +2)
+      3. Situational bonuses (specialties, equipment, etc.) only if room remains under cap
+
+      Specialties that push you over +5 still provide their non-modifier benefits (narratives,
+      special abilities) but don't increase your roll modifier beyond +5.
+
+      Example: Fighter with Might +3, Combat +2, Weapon Focus +1
+      - Roll modifier: +5 (Might +3 + Combat +2, capped)
+      - Weapon Focus: Doesn't add to roll, but still provides any special ability it grants
+
     examples:
       optimized_fighter:
         might: "+3"
         combat_expert: "+2"
-        weapon_focus: "+1"
-        total: "+6 (over cap, choose which bonuses apply)"
-        note: "In practice: Use Might +3, Combat +2 for total +5"
+        weapon_focus: "+1 (special: +1 damage with chosen weapon)"
+        total: "+5 to roll (capped), +1 damage from specialty"
+        note: "Specialties at cap provide side benefits, not higher modifiers"
         reality: "At +5, hits TN 8 97% of the time - GM should use TN 10+ in late game"
 
       skilled_rogue:
         grace: "+3"
         stealth_expert: "+2"
-        urban_specialist: "+1"
-        total: "+6 (over cap, must choose which bonuses apply)"
-        note: "Can apply urban specialist (+1) OR grace+stealth (+5), not both beyond cap"
+        urban_specialist: "+1 (special: advantage in city environments)"
+        total: "+5 to roll (capped), advantage in urban terrain"
+        note: "Specialty provides narrative benefit even at modifier cap"
 
   progression_tiers:
     1_untrained:
@@ -555,83 +587,104 @@ skills:
     design_note: "Master tier (+3) removed to maintain bounded accuracy throughout 30-50 session campaigns. Expert represents the absolute peak of human capability without becoming superhuman."
   
   skill_list:
+    advancement_rule: |
+      Skill advancement cost depends on your linked attribute:
+      - At or below linked attribute: 1 advance per tier
+      - Above linked attribute: 2 advances per tier
+      Your linked attribute is your HIGHER of the skill's key attributes.
+
     physical:
       combat:
         description: "Fighting, weapons, tactical positioning"
         key_attributes: ["might", "grace"]
         specializations: ["Melee", "Ranged", "Defensive"]
-      
+        advancement_note: "Linked to your higher of Might or Grace"
+
       athletics:
         description: "Running, climbing, swimming, strength"
         key_attributes: ["might", "grace"]
         specializations: ["Climbing", "Swimming", "Jumping"]
-      
+        advancement_note: "Linked to your higher of Might or Grace"
+
       stealth:
         description: "Hiding, sneaking, avoiding detection"
         key_attributes: ["grace", "awareness"]
         specializations: ["Urban", "Wilderness", "Social"]
-      
+        advancement_note: "Linked to your higher of Grace or Awareness"
+
       survival:
         description: "Tracking, foraging, navigation"
         key_attributes: ["awareness", "will"]
         specializations: ["Forest", "Desert", "Arctic"]
-      
+        advancement_note: "Linked to your higher of Awareness or Will"
+
       finesse:
         description: "Lockpicking, sleight of hand, precision"
         key_attributes: ["grace", "mind"]
         specializations: ["Lockpicking", "Pickpocket", "Forgery"]
+        advancement_note: "Linked to your higher of Grace or Mind"
     
     mental:
       lore:
         description: "History, academics, specialized knowledge"
         key_attributes: ["mind", "awareness"]
         specializations: ["History", "Arcana", "Religion"]
-      
+        advancement_note: "Linked to your higher of Mind or Awareness"
+
       medicine:
         description: "Healing, anatomy, treating injuries"
         key_attributes: ["mind", "awareness"]
         specializations: ["Surgery", "Herbalism", "Diagnosis"]
-      
+        advancement_note: "Linked to your higher of Mind or Awareness"
+
       craft:
         description: "Making, repairing, engineering"
         key_attributes: ["mind", "grace"]
         specializations: ["Smithing", "Alchemy", "Engineering"]
-      
+        advancement_note: "Linked to your higher of Mind or Grace"
+
       investigate:
         description: "Searching, analyzing, finding clues"
         key_attributes: ["mind", "awareness"]
         specializations: ["Crime Scenes", "Research", "Tracking"]
-      
+        advancement_note: "Linked to your higher of Mind or Awareness"
+
       sorcery:
         description: "Magical theory and spellcasting"
         key_attributes: ["mind", "awareness", "will", "presence"]
         specializations: ["Arcane", "Divine", "Primal"]
+        advancement_note: "Linked to your highest of Mind, Awareness, Will, or Presence"
     
     social:
       persuade:
         description: "Convincing through reason and charm"
         key_attributes: ["presence", "mind"]
         specializations: ["Diplomacy", "Seduction", "Logic"]
-      
+        advancement_note: "Linked to your higher of Presence or Mind"
+
       deceive:
         description: "Lying, disguise, misdirection"
         key_attributes: ["presence", "mind"]
         specializations: ["Lies", "Disguise", "Forgery"]
-      
+        advancement_note: "Linked to your higher of Presence or Mind"
+
       perform:
         description: "Entertainment, inspiration, art"
         key_attributes: ["presence", "grace"]
         specializations: ["Music", "Oratory", "Dance"]
-      
+        advancement_note: "Linked to your higher of Presence or Grace"
+
       command:
         description: "Leadership, intimidation, authority"
         key_attributes: ["presence", "will"]
         specializations: ["Military", "Intimidation", "Inspiration"]
-      
+        advancement_note: "Linked to your higher of Presence or Will"
+
       empathy:
         description: "Understanding emotions and motivations"
         key_attributes: ["awareness", "presence"]
         specializations: ["Detect Lies", "Therapy", "Animal Handling"]
+        advancement_note: "Linked to your higher of Awareness or Presence"
   
   approach_determines_attribute:
     note: "The specific approach determines which attribute pairs with skill"

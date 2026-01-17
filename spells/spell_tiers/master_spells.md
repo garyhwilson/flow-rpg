@@ -491,7 +491,7 @@ Time Stop is the ultimate tactical spell—the ability to freeze the flow of tim
 
 **Time Stop + Buffs:**
 
-1. Cast Time Stop -5 Momentum
+1. Cast Time Stop -3 Momentum
 2. Cast Shield on all allies (0 Momentum—time stopped)
 3. Cast Blur on self (0 Momentum)
 4. Position optimally
@@ -501,7 +501,7 @@ Time Stop is the ultimate tactical spell—the ability to freeze the flow of tim
 
 1. Cast Invisibility -3 Momentum (earlier)
 2. Position unseen
-3. Cast Teleport -5 Momentum
+3. Cast Teleport -3 Momentum
 4. Appear at critical location invisibly
 5. Perfect surprise
 
@@ -509,9 +509,9 @@ Time Stop is the ultimate tactical spell—the ability to freeze the flow of tim
 
 **Dominate + Lightning Storm:**
 
-1. Dominate enemy leader -5 Momentum
+1. Dominate enemy leader -3 Momentum
 2. Have them call retreat
-3. Or cast Lightning Storm -5 Momentum
+3. Or cast Lightning Storm -3 Momentum
 4. Devastate army
 5. Either way, encounter ended
 
@@ -519,11 +519,11 @@ Time Stop is the ultimate tactical spell—the ability to freeze the flow of tim
 
 **Time Stop + Teleport:**
 
-1. Cast Time Stop -5 Momentum
+1. Cast Time Stop -3 Momentum
 2. Plan escape during frozen time
-3. Cast Teleport -5 Momentum
+3. Cast Teleport -3 Momentum
 4. Resume time safely away
-5. (Requires 10 Momentum total—rare but possible)
+5. (Requires 6 Momentum total)
 
 ---
 
@@ -538,7 +538,7 @@ GMs may allow custom master spells following these guidelines:
 - **Utility:** Impossible effects (time manipulation, teleportation, reality bending)
 - **Range:** Far or unlimited
 - **Duration:** Scene or permanent effect
-- **Momentum Cost:** -5 Momentum
+- **Momentum Cost:** -3 Momentum
 
 **Design Template:**
 

@@ -131,7 +131,7 @@ Armor provides damage reduction but may impose penalties on certain actions. The
 - **Damage Reduction:** -4
 - **Penalties:** -2 to Grace-based rolls
 - **Stance Restriction:** Cannot use Aggressive stance
-- **Casting:** Cannot cast spells
+- **Casting:** -4 to Sorcery rolls
 - **Best For:** Defenders, front-line fighters, strength-based characters
 
 #### Shields
