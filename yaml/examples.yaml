@@ -276,45 +276,45 @@ pregenerated_characters:
   # After 3 Advances (Novice rank)
 
   finn_quickblade:
-    concept: "Halfling Trickster"
+    concept: "Felisari Trickster"
     rank: "Novice (3 advances)"
     
     identity:
-      species: "Halfling"
+      species: "Felisari"
       archetype: "Rogue"
       calling: "Enthusiast"
-    
+
     attributes:
-      might: -2
-      grace: 3
+      might: -2  # Base -1 + Felisari -1
+      grace: 3   # Base 2 + Felisari +2 (capped at creation, raised via advance)
       mind: 0
-      awareness: 2
-      will: 0  # Base -1 + Halfling 1
+      awareness: 2  # Base 1 + Felisari +1
+      will: -1
       presence: 0
-    
+
     skills:
       professional: ["Stealth +1", "Finesse +1", "Combat +1"]  # Combat upgraded via advance
       competent: ["Deceive 0"]  # New skill via advance
       untrained: "All others at -2"
 
     derived_values:
-      guard: 17  # 12 + max(-2 Might, 3 Grace, 0 Will) + 2 (Tough specialty) = 17
-      vitality: 10  # 10 + 0
+      guard: 17  # 12 + max(-2 Might, 3 Grace, -1 Will) + 2 (Tough specialty) = 17
+      vitality: 9  # 10 + (-1 Will)
       momentum:
         current: 0
         max: 7  # Momentum Harmony specialty
       movement: 2  # Fast Movement specialty
-    
+
     equipment:
       armor: "Light (DR 1)"
       weapons: ["Daggers (2d6)", "Shortbow (2d6)"]
       gear: ["Masterwork thieves' tools", "Disguise kit", "100 gold"]
-    
+
     special_abilities:
       species:
-        lucky: "Momentum stops at 0 once per scene"
-        brave_heart: "+1 Momentum when ally goes negative"
-        small_but_mighty: "Move through enemies, +2 to hide"
+        cats_grace: "Advantage on fall damage checks"
+        low_light_vision: "See in dim light as bright"
+        curiositys_edge: "+1 to Stealth rolls (chosen at creation)"
       calling:
         joyful_momentum: "Share Momentum with adjacent allies"
         silver_lining: "Find benefit in any situation"
@@ -322,10 +322,10 @@ pregenerated_characters:
         momentum_harmony: "+1 max Momentum"
         fast_movement: "+1 zone movement"
         riposte: "Counter after successful defense"
-    
+
     personality:
-      trait: "Eternally optimistic"
-      ideal: "Life's too short not to enjoy"
+      trait: "Eternally curious"
+      ideal: "Every secret has a story worth knowing"
       bond: "Party is chosen family"
       flaw: "Can't resist a good prank"
     

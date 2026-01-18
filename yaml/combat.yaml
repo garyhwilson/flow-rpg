@@ -225,7 +225,7 @@ zones:
       no_armor: "+1 zone per turn"
       fast_movement_specialty: "+1 zone per turn"
       difficult_terrain: "-1 zone per turn"
-      halfling: "Move through enemy zones"
+      felisari: "Move through enemy zones (cat's grace)"
   
   zone_control:
     blocking:

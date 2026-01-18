@@ -4,210 +4,190 @@ _Essential Information for Players and Game Masters_
 
 ## Attribute Modifiers
 
-| Species  | Attribute Adjustments            | Notes                              |
-| -------- | -------------------------------- | ---------------------------------- |
-| Human    | +1 to any two attributes         | Adaptable to any role              |
-| Elf      | +2 Grace, +1 Awareness, -1 Might | Perceptive and agile               |
-| Dwarf    | +2 Will, +1 Might, -1 Grace      | Resilient and strong               |
-| Halfling | +2 Presence, +1 Grace, -2 Might  | Charismatic but physically limited |
+| Species      | Attribute Adjustments              | Notes                        |
+| ------------ | ---------------------------------- | ---------------------------- |
+| Human        | +1 to any two attributes           | Adaptable to any role        |
+| Elf          | +2 Grace, +1 Awareness, -1 Might   | Mystical and perceptive      |
+| Dwarf        | +2 Might, +1 Mind, -1 Grace        | Strong and methodical        |
+| Felisari     | +2 Grace, +1 Awareness, -1 Might   | Agile and alert              |
+| Cliffborn    | +2 Grace, +1 Awareness, -1 Might   | Nimble and keen-eared        |
+| Emberkin     | +2 Might, +1 Mind, -1 Grace        | Sturdy and knowledgeable     |
+| Umbrin       | +2 Awareness, +1 Grace, -1 Might   | Perceptive and stealthy      |
+| Arborian     | +1 Season-based, +1 Mind, -1 Grace | Variable by seasonal aspect  |
+
+### Arborian Seasonal Bonuses
+
+| Season | Attribute | Theme                    |
+| ------ | --------- | ------------------------ |
+| Spring | +1 Grace  | Growth and flexibility   |
+| Summer | +1 Might  | Strength and vitality    |
+| Autumn | +1 Mind   | Wisdom and preparation   |
+| Winter | +1 Will   | Endurance and reflection |
 
 ## Biological Characteristics
 
-| Species  | Lifespan      | Maturity Age | Height       | Weight      | Vision     |
-| -------- | ------------- | ------------ | ------------ | ----------- | ---------- |
-| Human    | 70-90 years   | 16-18 years  | 5'5" - 6'2"  | 130-220 lbs | Normal     |
-| Elf      | 600-800 years | 50-60 years  | 5'7" - 6'4"  | 110-170 lbs | Low-light  |
-| Dwarf    | 250-350 years | 30-40 years  | 4'2" - 4'10" | 140-220 lbs | Darkvision |
-| Halfling | 120-150 years | 20-25 years  | 3'0" - 3'6"  | 35-45 lbs   | Normal     |
+| Species   | Lifespan       | Height       | Vision         | Notable Feature          |
+| --------- | -------------- | ------------ | -------------- | ------------------------ |
+| Human     | 70-90 years    | 5'4" - 6'2"  | Normal         | Highly varied appearance |
+| Elf       | 200-300 years  | 5'6" - 6'4"  | Normal         | Slender, graceful        |
+| Dwarf     | 150-200 years  | 4'4" - 5'0"  | Normal         | Stocky, strong           |
+| Felisari  | 60-80 years    | 5'2" - 5'10" | Low-light      | Feline features          |
+| Cliffborn | 70-100 years   | 5'2" - 5'10" | Normal         | Small horns              |
+| Emberkin  | 80-120 years   | 5'0" - 6'0"  | Normal         | Flame-like markings      |
+| Umbrin    | 100-140 years  | 5'4" - 6'2"  | Darkvision     | Large eyes, pale skin    |
+| Arborian  | Unknown        | 5'4" - 6'6"  | Normal         | Bark-like skin, seasonal |
 
 ## Species Abilities
 
-### Human
+### Human — The Adaptable Survivors
 
-**Adaptive Insight:** Once per session, after failing a skill check, you may re-roll the check with advantage as you quickly adapt your approach.
+- **Versatile Heritage:** Gain one additional utility proficiency at character creation
+- **Resilient Will:** Once per session, reroll any failed Will save
+- **Rapid Learner:** Reduce time to learn new proficiencies by 25% during downtime
 
-**Cultural Flexibility:** Choose one additional trained skill during character creation, representing your exposure to diverse cultural practices.
+### Elf — The Memory-Bound Mystics
 
-**Innovative Approach:** When attempting an action in a novel or creative way, gain +1 to the roll as your adaptive thinking creates unexpected advantages.
+- **Resonant Heritage:** +1 to saves against magical effects
+- **Keen Mind:** Once per long rest, reroll any failed Awareness or Mind-based check
+- **Trance Meditation:** 4 hours of meditation provides the benefit of 8 hours rest
 
-**Rapid Learning:** You require only 3 training sessions to increase a skill rating instead of the standard 4, representing your accelerated learning capability.
+### Dwarf — The Stoneborn Builders
 
-### Elf
+- **Stoneborn Resilience:** +3 to saves against poison and disease
+- **Enduring Frame:** +2 to Vitality calculation
+- **Crafted Precision:** +1 bonus to all engineering and crafting rolls
 
-**Environmental Awareness:** You gain advantage on Perception checks related to natural environments and can sense major ecological disruptions within 1 mile.
+### Felisari — The Feline Wanderers
 
-**Timeless Perspective:** Once per session, you may reroll a Knowledge or History check, drawing on your extensive life experience and cultural memory.
+- **Cat's Grace:** Gain advantage on checks to avoid or reduce fall damage
+- **Low-Light Vision:** See in dim light as if it were bright light
+- **Curiosity's Edge:** Choose one at character creation: +1 to Stealth, Investigation, or Performance rolls
 
-**Reverie:** You need only 4 hours of meditative rest to gain the benefits of a full rest cycle, though you must still limit strenuous activity appropriately.
+### Cliffborn — The Mountain Scouts
 
-**Natural Precision:** When in natural environments, you gain +1 Momentum when succeeding on checks requiring physical precision or environmental attunement.
+- **Sure-Footed:** Gain advantage on Athletics checks to climb, leap, or balance
+- **Keen Hearing:** +2 to perception checks involving sound
+- **Wind-Bond:** Once per day when falling 30+ feet, spend 1 Momentum as a reaction to reduce fall damage by half and land on your feet
 
-### Dwarf
+### Emberkin — The Fire-Touched
 
-**Unshakable Resolve:** Once per session, you may automatically succeed on a Will check to resist intimidation, fear, or mental influence as your legendary stubbornness manifests.
+- **Smoldering Vitality:** Resistance to fire damage (take half damage)
+- **Flame Wake:** When reduced below half Vitality, automatically deal 1d6 fire damage to all adjacent enemies (once per combat)
+- **Ash-Wise:** +1 bonus to all Lore checks involving fire, volcanoes, or ancient destruction
 
-**Stone Memory:** You automatically recognize depth underground, direction of true north, and remember any path you've physically traversed without requiring checks.
+### Umbrin — The Shadow Dreamers
 
-**Ancestral Crafting:** When crafting items using traditional dwarven methods, reduce the difficulty by one step and the required time by 25% through inherited techniques.
+- **Shadowmeld:** +2 to Stealth in dim light or darkness; gain advantage when hiding while stationary
+- **Eclipse-Blooded:** Once per long rest, reroll a failed Will save
+- **Umbral Memory:** Can perfectly recall one sensory detail from any scene witnessed in the last 24 hours
+- **Photosensitive:** Disadvantage on rolls in direct sunlight unless wearing protective eyewear
 
-**Resilient Physiology:** You gain +2 Guard against poison, disease, and extreme environmental conditions due to your hardy constitution.
+### Arborian — The Season-Bound
 
-### Halfling
-
-**Communal Support:** Once per session, you may grant an ally advantage on their roll as you provide perfectly timed assistance or emotional support.
-
-**Inconspicuous:** When attempting to avoid notice through social means (blending into a crowd, seeming harmless, etc.), you gain advantage on Stealth checks.
-
-**Homefield Advantage:** When in familiar environments or communities, you gain +1 Momentum when succeeding on social interactions or comfort-focused skill checks.
-
-**Lucky:** Once per session, you may reroll any 1s showing on your dice for a single check, representing your uncanny knack for avoiding disaster.
-
-## Skill Affinities
-
-| Species  | Exceptional In | Natural Aptitude             | Challenging            |
-| -------- | -------------- | ---------------------------- | ---------------------- |
-| Human    | Innovate       | Adapt, Persuade, Craft       | None (adaptable)       |
-| Elf      | Perceive       | Stealth, Nature, Performance | Endure (psychological) |
-| Dwarf    | Endure         | Craft, Stonework, Tradition  | Deception              |
-| Halfling | Empathize      | Stealth, Cooking, Negotiate  | Intimidate             |
+- **Seasonal Pulse:** Once per day, channel your season's power (costs 1 Momentum):
+  - _Spring:_ Heal yourself or an ally for 1d4 Vitality
+  - _Summer:_ Add +1 damage to melee attacks for one round
+  - _Autumn:_ Reroll any failed Mind-based check
+  - _Winter:_ Gain +1 Guard until the start of your next turn
+- **Botanic Form:** Immune to magical sleep; require only 4 hours of sunlight rest
 
 ## Momentum Interactions
 
-| Species  | Momentum Generation                 | Momentum Expenditure                  |
-| -------- | ----------------------------------- | ------------------------------------- |
-| Human    | Innovation, adaptation              | Opportunistic, immediate advantages   |
-| Elf      | Perception, pattern recognition     | Precise timing, quality over quantity |
-| Dwarf    | Endurance, traditional techniques   | Conservative, maintaining reserves    |
-| Halfling | Social harmony, practical solutions | Community-focused, supporting others  |
+| Species   | Momentum Trigger                        | Momentum Spend                          |
+| --------- | --------------------------------------- | --------------------------------------- |
+| Human     | Innovation, adaptation                  | Opportunistic immediate advantages      |
+| Elf       | Perception, pattern recognition         | Precise timing, quality over quantity   |
+| Dwarf     | Endurance, traditional techniques       | Conservative, maintaining reserves      |
+| Felisari  | Curiosity, discovery                    | Agile maneuvers, escapes                |
+| Cliffborn | Vertical movement, sound-based alerts   | Wind-Bond fall reduction                |
+| Emberkin  | Combat intensity (bloodied triggers)    | Fire-based offensive actions            |
+| Umbrin    | Stealth success, memory utilization     | Shadow-based infiltration               |
+| Arborian  | Seasonal Pulse activation               | Season-appropriate effects              |
+
+## Skill Affinities
+
+| Species   | Exceptional In | Natural Aptitude               |
+| --------- | -------------- | ------------------------------ |
+| Human     | Adapt          | Persuade, Craft, any one other |
+| Elf       | Perceive       | Lore, Performance, Nature      |
+| Dwarf     | Endure         | Craft, Stonework, Engineering  |
+| Felisari  | Stealth        | Acrobatics, Investigation      |
+| Cliffborn | Athletics      | Perception (sound), Survival   |
+| Emberkin  | Lore (fire)    | Craft, Intimidate              |
+| Umbrin    | Stealth        | Investigation, Memory tasks    |
+| Arborian  | Nature         | Survival, Insight              |
 
 ## Combat Preferences
 
-| Species  | Favored Stance     | Weapon Preferences           | Tactical Approach              |
-| -------- | ------------------ | ---------------------------- | ------------------------------ |
-| Human    | Adaptable          | Versatile, culturally varied | Innovation and adaptation      |
-| Elf      | Balanced           | Precision weapons, bows      | Positioning and environment    |
-| Dwarf    | Defensive          | Axes, hammers, reliable arms | Methodical and coordinated     |
-| Halfling | Defensive/Balanced | Short blades, slings, thrown | Opportunistic and misdirection |
-
-## Magic Affinities
-
-| Species  | Magical Aptitude       | Preferred Casting Attributes | Cultural Approach         |
-| -------- | ---------------------- | ---------------------------- | ------------------------- |
-| Human    | Adaptable, innovative  | Will, Mind                   | Practical application     |
-| Elf      | Environmental, precise | Awareness, Grace             | Philosophical integration |
-| Dwarf    | Material, ancestral    | Will, Might                  | Traditional preservation  |
-| Halfling | Practical, community   | Presence, Awareness          | Everyday utility          |
-
-## Social Approaches
-
-| Species  | Natural Social Methods | Communication Style          | Relationship Building       |
-| -------- | ---------------------- | ---------------------------- | --------------------------- |
-| Human    | Adaptability, Reason   | Efficient and flexible       | Shared experiences          |
-| Elf      | Perspective, Ethos     | Layered meaning, references  | Gradual trust over time     |
-| Dwarf    | Tradition, Directness  | Precise, comprehensive       | Formal structures and roles |
-| Halfling | Emotion, Comfort       | Personal, relationship-based | Community integration       |
-
-## Advancement Patterns
-
-| Species  | Development Tempo      | Advance Focus          | Legacy Perspective            |
-| -------- | ---------------------- | ---------------------- | ----------------------------- |
-| Human    | Rapid transformation   | Diverse capabilities   | Lasting impact after death    |
-| Elf      | Gradual refinement     | Specialized mastery    | Continuous personal evolution |
-| Dwarf    | Structured progression | Traditional sequences  | Contribution to clan legacy   |
-| Halfling | Social role adaptation | Community contribution | Positive impact on community  |
-
-## Common Synergies
-
-### Archetype Synergies
-
-| Species  | Natural Archetype Synergies | Interesting Archetype Tensions |
-| -------- | --------------------------- | ------------------------------ |
-| Human    | Fighter, Wizard, Bard       | Ranger, Cleric, Druid          |
-| Elf      | Ranger, Wizard, Druid       | Fighter, Cleric, Bard          |
-| Dwarf    | Fighter, Cleric, Artificer  | Wizard, Bard, Ranger           |
-| Halfling | Rogue, Bard, Ranger         | Fighter, Wizard, Paladin       |
-
-### Calling Synergies
-
-| Species  | Natural Calling Synergies      | Interesting Calling Tensions   |
-| -------- | ------------------------------ | ------------------------------ |
-| Human    | Seeker, Champion, Enthusiast   | Guardian, Scholar, Exemplar    |
-| Elf      | Scholar, Exemplar, Guardian    | Enthusiast, Champion, Advocate |
-| Dwarf    | Guardian, Exemplar, Sentinel   | Seeker, Enthusiast, Advocate   |
-| Halfling | Advocate, Enthusiast, Mediator | Champion, Sentinel, Scholar    |
-
-## Regional Variations
-
-### Human Regions
-
-| Region              | Cultural Focus                    | Notable Traits                            |
-| ------------------- | --------------------------------- | ----------------------------------------- |
-| Northern Frontier   | Communal survival, oral tradition | Seasonal lifestyle, resource conservation |
-| Eastern Kingdoms    | Formal hierarchy, heritage pride  | Institutional knowledge, family legacy    |
-| Coastal Federations | Maritime trade, diverse exchange  | Diplomatic adaptability, cosmopolitan     |
-| Southern Grasslands | Nomadic tradition, oral history   | Mobile communities, adaptable skill sets  |
-| Western Republics   | Civic participation, innovation   | Urban development, philosophical debate   |
-
-### Elf Regions
-
-| Region             | Cultural Focus                    | Notable Traits                             |
-| ------------------ | --------------------------------- | ------------------------------------------ |
-| Ancient Forests    | Environmental stewardship, cycles | Deep magic traditions, conservation        |
-| Coastal Enclaves   | Maritime tradition, preservation  | Weather prediction, tidal magic            |
-| Urban Settlements  | Cultural exchange, adaptation     | Diplomatic service, knowledge preservation |
-| Mountain Retreats  | Philosophical study, isolation    | Observational astronomy, weather magic     |
-| Desert Communities | Water conservation, minimalism    | Survival techniques, efficient magic       |
-
-### Dwarf Regions
-
-| Region              | Cultural Focus                    | Notable Traits                              |
-| ------------------- | --------------------------------- | ------------------------------------------- |
-| Mountain Kingdoms   | Traditional crafting, clan honor  | Fortress architecture, metalworking         |
-| Deep Enclaves       | Ancient preservation, isolation   | Historical records, traditional defense     |
-| Surface Settlements | Trade networks, cultural exchange | Diplomatic connections, adapted traditions  |
-| Volcanic Forges     | Specialized metallurgy, geomancy  | Unique crafting techniques, fire resistance |
-| Frontier Outposts   | Exploration, resource development | Adaptable traditions, practical innovation  |
-
-### Halfling Regions
-
-| Region               | Cultural Focus                    | Notable Traits                             |
-| -------------------- | --------------------------------- | ------------------------------------------ |
-| River Settlements    | Agricultural tradition, trade     | Hospitality customs, water navigation      |
-| Urban Neighborhoods  | Service specialization, community | Integrated businesses, cultural adaptation |
-| Pastoral Communities | Agricultural tradition, comfort   | Food preservation, festival celebrations   |
-| Nomadic Caravans     | Mobile trade, adaptive community  | Route knowledge, portable comfort          |
-| Frontier Homesteads  | Self-sufficiency, adaptation      | Practical innovation, resource efficiency  |
+| Species   | Favored Stance | Weapon Preferences              | Tactical Approach             |
+| --------- | -------------- | ------------------------------- | ----------------------------- |
+| Human     | Adaptable      | Versatile, culturally varied    | Innovation and adaptation     |
+| Elf       | Balanced       | Precision weapons, bows         | Positioning and patience      |
+| Dwarf     | Defensive      | Axes, hammers, reliable arms    | Methodical and coordinated    |
+| Felisari  | Evasive        | Short blades, claws, thrown     | Hit-and-run, ambush           |
+| Cliffborn | Mobile         | Spears, javelins, climbing aids | Vertical advantage, mobility  |
+| Emberkin  | Aggressive     | Heavy weapons, close combat     | Bloodied counterattack        |
+| Umbrin    | Defensive      | Daggers, crossbows, poison      | Stealth strike, withdrawal    |
+| Arborian  | Balanced       | Natural weapons, staves         | Season-appropriate tactics    |
 
 ## Character Concepts
 
-### Human Concepts
+### Human
+- Cultural bridge between species communities
+- Legacy builder seeking lasting impact
+- Tradition challenger questioning established practices
 
-- **The Cultural Bridge:** Human raised between multiple species' communities
-- **The Legacy Builder:** Human acutely aware of mortality seeking lasting impact
-- **The Accelerated Learner:** Human with extraordinary talent condensing normal development
-- **The Tradition Challenger:** Human questioning established practices of their culture
-- **The Pattern Observer:** Human with exceptional ability to recognize systemic connections
+### Elf
+- Twilight Forest lorekeeper preserving ancient memory
+- Resonance scholar studying magical flows
+- Ambassador bridging mortal and mystical realms
 
-### Elf Concepts
+### Dwarf
+- Ashcrest clan emissary to the surface world
+- Master smith perfecting ancestral techniques
+- Lineage keeper maintaining historical records
 
-- **The Temporal Observer:** Elf studying patterns across centuries
-- **The Cultural Interpreter:** Elf specializing in cross-species understanding
-- **The Tradition Innovator:** Elf carefully introducing change to ancient practices
-- **The Environmental Guardian:** Elf protecting specific natural location or system
-- **The Historical Witness:** Elf preserving knowledge of significant historical events
+### Felisari
+- Information broker trading in secrets
+- Traveling performer and spy
+- Curiosity-driven explorer of forgotten places
 
-### Dwarf Concepts
+### Cliffborn
+- Mountain guide leading expeditions
+- Wind-bonded messenger between peaks
+- Vertical combat specialist
 
-- **The Clan Emissary:** Dwarf representing traditional values in outside world
-- **The Master Artisan:** Dwarf perfecting ancestral craft through innovation
-- **The Lineage Keeper:** Dwarf maintaining historical knowledge and genealogical records
-- **The Tradition Reformer:** Dwarf adapting ancestral practices for contemporary challenges
-- **The Surface Explorer:** Dwarf studying above-ground cultures and environments
+### Emberkin
+- Forge worker channeling inner flame
+- Phoenix Cycle philosopher understanding destruction and renewal
+- Volcanic oracle reading signs in fire and ash
 
-### Halfling Concepts
+### Umbrin
+- Shadow courier for sensitive information
+- Memory keeper archiving important events
+- Eclipse prophet reading darkness between worlds
 
-- **The Community Mediator:** Halfling resolving tensions through practical compromise
-- **The Comfort Specialist:** Halfling enhancing quality of life through specialized skills
-- **The Unlikely Protector:** Halfling defending community through unexpected approaches
-- **The Cultural Adapter:** Halfling integrating traditions from diverse influences
-- **The Practical Innovator:** Halfling solving problems through creative improvisation
+### Arborian
+- Grove guardian protecting sacred spaces
+- Seasonal messenger traveling between communities
+- Phoenix gardener cultivating renewal after destruction
+
+---
+
+## Species and Proficiencies
+
+Species traits stack with proficiency bonuses:
+- A dwarf with Crafting proficiency gains both bonuses
+- A Felisari with Stealth proficiency adds both bonuses
+
+## Creating New Species
+
+1. **Assign 2 attribute points** (+1 to two, or +2 to one with -1 penalty)
+2. **Create 3 species traits** providing situational bonuses or unique abilities
+3. **Consider Momentum interaction** — at least one trait should engage with the system
+4. **Balance power** — no trait should be universally superior
+5. **Support narrative** — traits should encourage interesting roleplay
+
+---
+
+_In Autumn Phoenix, your species grants gifts from ages past, but your choices forge the future._

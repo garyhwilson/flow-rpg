@@ -59,21 +59,33 @@ Unlike martial archetypes, you don't need to meet specific attribute requirement
 
 ### Starting Equipment
 
-You begin your adventures properly equipped:
+You begin your adventures properly equipped ({{ archetype.starting_equipment.budget }} coins budget):
 
-**Armor:** {{ archetype.starting_equipment.armor.title() }} armor
-**Weapon:** {{ archetype.starting_equipment.weapon.title() }}
-**Gear:** {{ archetype.starting_equipment.gear|join(', ') }}
+{% if archetype.starting_equipment.recommended %}
+{% if archetype.starting_equipment.recommended.armor %}**Armor:** {{ archetype.starting_equipment.recommended.armor }}{% endif %}
+
+{% if archetype.starting_equipment.recommended.weapon %}**Weapon:** {{ archetype.starting_equipment.recommended.weapon }}{% endif %}
+
+{% if archetype.starting_equipment.recommended.weapons %}**Weapons:** {{ archetype.starting_equipment.recommended.weapons }}{% endif %}
+
+{% if archetype.starting_equipment.recommended.gear %}**Gear:** {{ archetype.starting_equipment.recommended.gear }}{% endif %}
+
+{% if archetype.starting_equipment.recommended.shield %}**Shield:** {{ archetype.starting_equipment.recommended.shield }}{% endif %}
+
+{% if archetype.starting_equipment.recommended.knife %}**Knife:** {{ archetype.starting_equipment.recommended.knife }}{% endif %}
+{% endif %}
 
 This equipment represents the standard loadout for your profession. You can customize within reasonable bounds—swapping one weapon for another of similar type, choosing different gear of equivalent value—but your armor choice defines important tactical decisions about mobility, protection, and spellcasting capability.
 
-### {{ archetype.unique_subsystem.name }}
+{% if archetype.subsystem_access %}
+### {{ archetype.subsystem_access.name }}
 
-{{ archetype.unique_subsystem.description }}
+{{ archetype.subsystem_access.description }}
 
-{{ archetype.unique_subsystem.progression }}
+{{ archetype.subsystem_access.note }}
 
 This subsystem defines what makes a {{ archetype.name }} distinct. While any character might learn some combat techniques or develop specialized skills, this mechanical framework belongs uniquely to your archetype.
+{% endif %}
 
 ### Common Psychological Patterns
 

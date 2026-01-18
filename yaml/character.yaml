@@ -14,7 +14,7 @@ character_creation:
     
     step_2_species:
       action: "Select species for attribute bonus and traits"
-      options: ["human", "elf", "dwarf", "halfling"]
+      options: ["human", "elf", "dwarf", "felisari", "cliffborn", "emberkin", "umbrin", "arborian"]
     
     step_3_build_type:
       action: "Choose between archetype (pre-built profession) or custom build"
@@ -63,107 +63,221 @@ species:
 
   human:
     name: "Human"
+    title: "The Adaptable Survivors"
     description: "Versatile and ambitious, adapting to any challenge"
 
     attribute_bonus:
-      choice: "any"
-      amount: 1
+      primary: "+1 to any two different attributes"
       creation_cap: 2
       creation_cap_note: "Cannot raise any attribute above +2 at creation"
-    
+
     species_traits:
-      versatile:
-        effect: "Start with one extra skill at Novice (-1)"
+      versatile_heritage:
+        effect: "Gain one additional utility proficiency at character creation"
         type: "character_creation"
-      
-      determined:
-        effect: "When at negative Momentum, next successful action gains +1 additional Momentum"
-        type: "momentum_generation"
-      
-      adaptable:
-        effect: "During any rest, may swap one Competent skill with another"
-        type: "flexibility"
-    
+
+      resilient_will:
+        effect: "Once per session, reroll any failed Will save"
+        type: "reroll"
+
+      rapid_learner:
+        effect: "Reduce time to learn new proficiencies by 25% during downtime"
+        type: "advancement"
+
     natural_callings: "Any - humans show no pattern"
     natural_archetypes: "Any - human flexibility"
-    
+
   elf:
     name: "Elf"
-    description: "Graceful people attuned to magic and nature"
-    
+    title: "The Memory-Bound Mystics"
+    description: "Mystics of the Twilight Forest, bound to ancient memories and the Resonance"
+
     attribute_bonus:
-      choice: ["grace", "awareness"]
-      amount: 1
+      primary: "+2 Grace, +1 Awareness, -1 Might"
       creation_cap: 2
       creation_cap_note: "Cannot raise any attribute above +2 at creation"
 
     species_traits:
-      fey_grace:
-        effect: "When you roll 11+ on any check, gain +1 Momentum (once per round)"
-        type: "momentum_generation"
-      
-      magical_affinity:
-        effect: "Can sense magic within Near range without Sorcery skill (but need skill for details)"
-        type: "perception"
-      
-      elven_focus:
-        effect: "When casting spells, ignore the first point of armor penalty"
-        type: "spellcasting"
-    
+      resonant_heritage:
+        effect: "+1 to saves against magical effects"
+        type: "defense"
+
+      keen_mind:
+        effect: "Once per long rest, reroll any failed Awareness or Mind-based check"
+        type: "reroll"
+
+      trance_meditation:
+        effect: "4 hours of meditation provides the benefit of 8 hours rest"
+        type: "rest"
+
     natural_callings: ["scholar", "seeker", "mediator"]
     natural_archetypes: ["wizard", "ranger", "bard"]
-    
+
   dwarf:
     name: "Dwarf"
-    description: "Sturdy mountain folk known for resilience and craftsmanship"
-    
+    title: "The Stoneborn Builders"
+    description: "Mountainfolk of Ashcrest, master craftsmen and stalwart defenders"
+
     attribute_bonus:
-      choice: ["might", "will"]
-      amount: 1
+      primary: "+2 Might, +1 Mind, -1 Grace"
       creation_cap: 2
       creation_cap_note: "Cannot raise any attribute above +2 at creation"
 
     species_traits:
-      stone_endurance:
-        effect: "Once per scene, reduce damage from one attack by 2 (stacks with armor)"
+      stoneborn_resilience:
+        effect: "+3 to saves against poison and disease"
         type: "defense"
-      
-      craftwise:
-        effect: "When examining worked materials, ask one question GM must answer truthfully"
-        type: "information"
-      
-      steady_stance:
-        effect: "Switching from Defensive stance costs no Momentum (stubborn immovability)"
-        type: "stance"
-    
+
+      enduring_frame:
+        effect: "+2 to Vitality calculation"
+        type: "derived_value"
+
+      crafted_precision:
+        effect: "+1 bonus to all engineering and crafting rolls"
+        type: "skill_bonus"
+
     natural_callings: ["sentinel", "guardian", "advocate"]
     natural_archetypes: ["fighter", "paladin", "cleric"]
-    
-  halfling:
-    name: "Halfling"
-    description: "Small, nimble folk with remarkable luck and courage"
-    
+
+  felisari:
+    name: "Felisari"
+    title: "The Feline Wanderers"
+    description: "Agile feline wanderers, excellent scouts and keepers of secrets"
+
     attribute_bonus:
-      choice: ["will", "presence"]
-      amount: 1
+      primary: "+2 Grace, +1 Awareness, -1 Might"
       creation_cap: 2
       creation_cap_note: "Cannot raise any attribute above +2 at creation"
 
     species_traits:
-      lucky:
-        effect: "Once per scene, reroll any single die (keep new result)"
-        type: "reroll"
-      
-      brave_heart:
-        effect: "When an ally goes to negative Momentum, immediately gain +1 Momentum"
-        type: "momentum_generation"
-      
-      small_but_mighty:
-        effect: "Move through enemy zones without provoking. When successfully Hide, enemies get -2 to detect"
+      cats_grace:
+        effect: "Gain advantage on checks to avoid or reduce fall damage"
         type: "mobility"
-    
-    natural_callings: ["enthusiast", "guardian", "mediator"]
-    natural_archetypes: ["rogue", "bard", "cleric"]
+
+      low_light_vision:
+        effect: "See in dim light as if it were bright light"
+        type: "perception"
+
+      curiositys_edge:
+        effect: "Choose one at character creation: +1 to Stealth, Investigation, or Performance rolls"
+        type: "skill_bonus"
+
+    natural_callings: ["seeker", "enthusiast", "scholar"]
+    natural_archetypes: ["rogue", "bard", "ranger"]
+
+  cliffborn:
+    name: "Cliffborn"
+    title: "The Mountain Scouts"
+    description: "Horned mountain scouts of Ashcrest's peaks, wind-bonded climbers"
+
+    attribute_bonus:
+      primary: "+2 Grace, +1 Awareness, -1 Might"
+      creation_cap: 2
+      creation_cap_note: "Cannot raise any attribute above +2 at creation"
+
+    species_traits:
+      sure_footed:
+        effect: "Gain advantage on Athletics checks to climb, leap, or balance"
+        type: "mobility"
+
+      keen_hearing:
+        effect: "+2 to perception checks involving sound"
+        type: "perception"
+
+      wind_bond:
+        effect: "Once per day when falling 30+ feet, spend 1 Momentum to reduce fall damage by half and land on feet"
+        type: "momentum_spend"
+
+    natural_callings: ["sentinel", "seeker", "guardian"]
+    natural_archetypes: ["ranger", "fighter", "rogue"]
+
+  emberkin:
+    name: "Emberkin"
+    title: "The Fire-Touched"
+    description: "Born from volcanic regions, carrying inner flames that manifest in times of stress"
+
+    attribute_bonus:
+      primary: "+2 Might, +1 Mind, -1 Grace"
+      creation_cap: 2
+      creation_cap_note: "Cannot raise any attribute above +2 at creation"
+
+    species_traits:
+      smoldering_vitality:
+        effect: "Resistance to fire damage (take half damage)"
+        type: "defense"
+
+      flame_wake:
+        effect: "When reduced below half Vitality, deal 1d6 fire damage to all adjacent enemies (once per combat)"
+        type: "triggered"
+
+      ash_wise:
+        effect: "+1 bonus to all Lore checks involving fire, volcanoes, or ancient destruction"
+        type: "skill_bonus"
+
+    natural_callings: ["champion", "advocate", "exemplar"]
+    natural_archetypes: ["fighter", "wizard", "paladin"]
+
+  umbrin:
+    name: "Umbrin"
+    title: "The Shadow Dreamers"
+    description: "Subterranean dreamkeepers with connections to shadow and memory"
+
+    attribute_bonus:
+      primary: "+2 Awareness, +1 Grace, -1 Might"
+      creation_cap: 2
+      creation_cap_note: "Cannot raise any attribute above +2 at creation"
+
+    species_traits:
+      shadowmeld:
+        effect: "+2 to Stealth in dim light or darkness; gain advantage when hiding while stationary"
+        type: "stealth"
+
+      eclipse_blooded:
+        effect: "Once per long rest, reroll a failed Will save"
+        type: "reroll"
+
+      umbral_memory:
+        effect: "Can perfectly recall one sensory detail from any scene witnessed in the last 24 hours"
+        type: "information"
+
+      photosensitive:
+        effect: "Disadvantage on rolls in direct sunlight unless wearing protective eyewear"
+        type: "weakness"
+
+    natural_callings: ["scholar", "sentinel", "seeker"]
+    natural_archetypes: ["rogue", "wizard", "ranger"]
+
+  arborian:
+    name: "Arborian"
+    title: "The Season-Bound"
+    description: "Grove-born beings whose appearance and abilities shift with their chosen seasonal aspect"
+
+    attribute_bonus:
+      primary: "+1 Season-based, +1 Mind, -1 Grace"
+      seasonal_options:
+        spring: "+1 Grace (growth and flexibility)"
+        summer: "+1 Might (strength and vitality)"
+        autumn: "+1 Mind (wisdom and preparation)"
+        winter: "+1 Will (endurance and reflection)"
+      creation_cap: 2
+      creation_cap_note: "Cannot raise any attribute above +2 at creation"
+
+    species_traits:
+      seasonal_pulse:
+        effect: "Once per day, spend 1 Momentum to channel season's power"
+        options:
+          spring: "Heal self or ally for 1d4 Vitality"
+          summer: "Add +1 damage to melee attacks for one round"
+          autumn: "Reroll any failed Mind-based check"
+          winter: "Gain +1 Guard until start of next turn"
+        type: "momentum_spend"
+
+      botanic_form:
+        effect: "Immune to magical sleep; require only 4 hours of sunlight rest"
+        type: "rest"
+
+    natural_callings: ["guardian", "mediator", "scholar"]
+    natural_archetypes: ["cleric", "ranger", "wizard"]
 
 # ============================================
 # ARCHETYPES
@@ -184,15 +298,17 @@ archetypes:
       TRUE CLASSLESS SYSTEM: Every character uses the same resource budget.
 
       UNIVERSAL BUDGET (all characters):
-      - 4 skills: 1 Competent (0), 3 Novice (-1)
+      - 4 skills with variable proficiency levels
+      - Archetypes: 1-2 Professional (+1), remaining at Competent (0) or Novice (-1)
+      - Custom Build: 1 Professional (+1), 1 Competent (0), 2 Novice (-1)
       - 2 specialties from universal list
       - 150 coins for equipment
 
-      Archetypes are pre-made packages that follow these same rules.
-      "Fighter" = a build that chose Combat as primary + martial specialties.
+      Archetypes are pre-made packages representing focused training.
+      "Fighter" = a build that chose Combat as Professional + martial specialties.
       Custom Build = you make those same choices yourself.
 
-      There is NO mechanical difference - archetypes just pre-make decisions.
+      Both paths offer equivalent total skill points - archetypes just pre-make decisions.
 
     flexibility:
       at_creation: "Choose archetype (quick start) OR custom build (full control)"
@@ -204,10 +320,10 @@ archetypes:
     design_note: "This achieves GURPS-style freedom: templates are guidelines, not mechanical advantages. Choosing 'Fighter' vs building a fighter yourself yields identical characters."
 
   universal_resources:
-    skills: "4 total: 1 Competent (0), 3 Novice (-1)"
+    skills: "4 total: 1-2 Professional (+1), remaining at Competent (0) or Novice (-1)"
     specialties: "2 from universal list"
     equipment: "150 coins"
-    note: "All archetypes and Custom Builds use this exact budget"
+    note: "All archetypes and Custom Builds use equivalent skill point budgets"
 
   divergence_examples:
     fighter_becomes_scholar:
@@ -235,8 +351,8 @@ archetypes:
 
     starting_skills:
       combat:
-        level: "competent"
-        modifier: 0
+        level: "professional"
+        modifier: 1
         note: "Primary skill"
       athletics:
         level: "novice"
@@ -278,8 +394,8 @@ archetypes:
 
     starting_skills:
       survival:
-        level: "competent"
-        modifier: 0
+        level: "professional"
+        modifier: 1
         note: "Primary skill"
       combat:
         level: "novice"
@@ -326,8 +442,9 @@ archetypes:
         modifier: 0
         note: "Primary skill"
       command:
-        level: "novice"
-        modifier: -1
+        level: "professional"
+        modifier: 1
+        note: "Inspiring leadership"
       medicine:
         level: "novice"
         modifier: -1
@@ -371,15 +488,16 @@ archetypes:
 
     starting_skills:
       stealth:
-        level: "competent"
-        modifier: 0
+        level: "professional"
+        modifier: 1
         note: "Primary skill"
       finesse:
-        level: "novice"
-        modifier: -1
+        level: "professional"
+        modifier: 1
+        note: "Secondary expertise"
       combat:
-        level: "novice"
-        modifier: -1
+        level: "competent"
+        modifier: 0
       deceive:
         level: "novice"
         modifier: -1
@@ -415,12 +533,13 @@ archetypes:
 
     starting_skills:
       sorcery:
-        level: "competent"
-        modifier: 0
+        level: "professional"
+        modifier: 1
         note: "Primary skill"
       lore:
-        level: "novice"
-        modifier: -1
+        level: "professional"
+        modifier: 1
+        note: "Scholarly expertise"
       investigate:
         level: "novice"
         modifier: -1
@@ -464,15 +583,16 @@ archetypes:
 
     starting_skills:
       medicine:
-        level: "competent"
-        modifier: 0
+        level: "professional"
+        modifier: 1
         note: "Primary skill"
       sorcery:
-        level: "novice"
-        modifier: -1
+        level: "competent"
+        modifier: 0
       empathy:
-        level: "novice"
-        modifier: -1
+        level: "professional"
+        modifier: 1
+        note: "Pastoral care"
       combat:
         level: "novice"
         modifier: -1
@@ -515,12 +635,12 @@ archetypes:
 
     starting_skills:
       perform:
-        level: "competent"
-        modifier: 0
+        level: "professional"
+        modifier: 1
         note: "Primary skill"
       sorcery:
-        level: "novice"
-        modifier: -1
+        level: "competent"
+        modifier: 0
       deceive:
         level: "novice"
         modifier: -1
@@ -984,7 +1104,7 @@ derived_values:
     modifiers:
       no_armor: 2
       fast_movement_specialty: "+1"
-      halfling_size: "Can move through enemies"
+      felisari_grace: "Can move through enemies"
     double_move: "2 zones if no other action"
   
   initiative:

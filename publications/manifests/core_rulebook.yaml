@@ -72,12 +72,16 @@ sections:
       - file: "species/00_introduction.md"
       - file: "species/02_system_integration.md"
 
-      - section_header: "The Four Core Species"
+      - section_header: "The Eight Species of Autumn Phoenix"
 
       - file: "species/human.md"
       - file: "species/elf.md"
       - file: "species/dwarf.md"
-      - file: "species/halfling.md"
+      - file: "species/felisari.md"
+      - file: "species/cliffborn.md"
+      - file: "species/emberkin.md"
+      - file: "species/umbrin.md"
+      - file: "species/arborian.md"
 
   # ===== PART V: MAGIC SYSTEM =====
   - title: "Part V: Magic - The Art of Spellcasting"
