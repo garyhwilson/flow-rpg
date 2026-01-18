@@ -63,7 +63,7 @@ momentum_rpg_system:
         - 'Unified advance menu (1 advance per choice)'
         - 'Specialties system with rank requirements'
         - 'Campaign designed for 30-50 sessions'
-        - 'Bounded accuracy (+5 cap at Veteran rank)'
+        - 'Bounded accuracy (+5 cap, timing varies by build)'
 
     techniques:
       file: 'techniques.yaml'
@@ -147,11 +147,11 @@ momentum_rpg_system:
       philosophy: 'Bounded accuracy that ACTUALLY works'
       core_insight: 'Unlimited progression breaks bounded accuracy - cap modifiers or TN 8 becomes meaningless'
       solution: 'Hard cap at +5 total modifier (attribute +3, skill +2, specialties +1)'
-      campaign_length: '30-50 sessions with +5 cap reached at Veteran rank (sessions 17-24)'
+      campaign_length: '30-50 sessions with +5 cap reached early (varies by build, most during Novice-Seasoned)'
       progression: 'Savage Worlds-inspired XP system: 3-5 XP/session, 5 XP = 1 advance, 4 advances per rank'
       horizontal_growth: 'After +5 cap, advances provide specialties, techniques, and survivability'
       math: 'At +5 cap: 97.2% success vs TN 8 (nearly automatic - only fail on 1,1)'
-      reality_check: 'Even with +5 cap, TN 8 becomes trivial. GMs use TN 10-12 for Veteran+ challenges.'
+      reality_check: 'Even with +5 cap, TN 8 becomes trivial. GMs scale TNs based on party modifier, not rank.'
       rank_gating: 'Powerful techniques require Seasoned, Veteran, Heroic, or Legendary rank'
       sweet_spot: 'Long campaigns with meaningful progression throughout all 5 ranks'
 

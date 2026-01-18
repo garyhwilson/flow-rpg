@@ -585,10 +585,15 @@ sweet_spot_edition:
         boring and tension-free as players auto-succeed at everything.
 
       the_solution: |
-        Scale TNs by party Rank:
-        - Novice (advances 0-3): TN 8 standard
-        - Seasoned (advances 4-7): TN 10 standard
-        - Veteran+ (advances 8+): TN 10-12 standard
+        Scale TNs by party modifier, not rank:
+        - Party at +0 to +3: TN 8 standard
+        - Party at +4 to +5: TN 10 standard
+        - Party at +5 cap: TN 10-12 standard
+
+      important_timing: |
+        Don't wait for Veteran rank to scale TNs!
+        Most focused builds hit +5 during Novice or Seasoned.
+        Scale TNs when the PARTY hits +5, not based on rank.
 
       rank_cheat_sheet:
         novice: "TN 8 standard, TN 10 hard"
@@ -662,7 +667,7 @@ sweet_spot_edition:
 
   design_rationale:
     core_insight: "Bounded accuracy requires ACTUALLY bounding the modifiers AND adjusting TNs"
-    honest_assessment: "Even with +5 cap, TN 8 becomes nearly automatic at Veteran+"
+    honest_assessment: "Even with +5 cap, TN 8 becomes nearly automatic once party hits +5 (often during Novice-Seasoned)"
     progression: "30-50 sessions with +5 cap reached mid-Seasoned for focused builds (advance 5, sessions 6-10)"
     horizontal_growth: "After +5 cap, advancement provides versatility, not raw power"
     vs_unlimited_progression: "Avoids +8 modifiers breaking everything, but requires GM awareness"

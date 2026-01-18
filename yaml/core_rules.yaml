@@ -573,7 +573,7 @@ skills:
     design_rationale:
       - "Maintains bounded accuracy - prevents unlimited modifier inflation"
       - "97.2% success rate at cap vs TN 8 (nearly automatic - only fail on 1,1)"
-      - "Supports 30-50 session campaigns with +5 cap reached at Veteran rank"
+      - "Supports 30-50 session campaigns with +5 cap reached early (varies by build)"
       - "GMs should use TN 10-12 for meaningful challenges at Veteran+ ranks"
 
     bounded_accuracy_reality:
@@ -590,10 +590,10 @@ skills:
         solution: "GMs must use higher TNs for late-game challenges"
 
       tn_scaling_guidance:
-        novice_sessions_1_5: "TN 8 for standard challenges (+0 to +2 modifiers: 42-72% success)"
-        seasoned_sessions_6_10: "TN 10 for challenges (+3 to +4 modifiers: 58-72% at TN 10)"
-        veteran_plus_sessions_11_plus: "TN 10-12 standard (+5 modifier: 83% at TN 10, 58% at TN 12)"
-        note: "Peak power heroes need harder challenges to feel meaningful risk"
+        before_cap: "TN 8 for standard challenges while party is at +0 to +3 modifiers (42-83% success)"
+        approaching_cap: "TN 10 as party reaches +4 to +5 (58-83% at TN 10)"
+        at_cap: "TN 10-12 standard once party hits +5 cap (83% at TN 10, 58% at TN 12)"
+        critical_note: "TN scaling triggers on party modifier, not rank. Most builds hit +5 during Novice-Seasoned."
 
       vs_alternative_caps:
         plus_4_cap: "Would give 91.7% vs TN 8 (4+ on 2d6) - better sweet spot"

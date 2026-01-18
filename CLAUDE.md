@@ -203,7 +203,7 @@ YAML files are the **source of truth** for mechanical values. Markdown contains 
 ### Campaign Structure
 - **5 Ranks:** Novice → Seasoned → Veteran → Heroic → Legendary
 - **Advancement:** 5 XP = 1 Advance, 4 Advances per Rank
-- **+5 cap reached:** Typically at Veteran rank (sessions 11-15)
+- **+5 cap reached:** Varies by build; focused builds cap early. TN scaling is modifier-driven, not rank-driven.
 - **TN scaling:** GMs increase TNs as characters grow
 
 ## Directory Structure

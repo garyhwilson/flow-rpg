@@ -174,7 +174,7 @@ Autumn Phoenix uses bounded accuracy—your total modifier is capped at +5.
 
 ### When You Hit the Cap
 
-Most characters reach the +5 cap in their primary skills during the **Veteran rank** (sessions 17-24). After that:
+Most characters reach the +5 cap in their primary skills during **Novice or Seasoned rank** (timing varies by build—focused builds cap early). After that:
 
 - **Horizontal growth:** Gain new specialties, techniques, and abilities
 - **Versatility:** Improve other skills and secondary attributes
@@ -315,4 +315,4 @@ When players reach a new rank:
 4. Heroic (12-15 advances)
 5. Legendary (16+ advances)
 
-**Modifier Cap:** +5 total (typically reached at Veteran rank)
+**Modifier Cap:** +5 total (timing varies by build; focused builds cap early)

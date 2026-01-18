@@ -79,9 +79,9 @@ ranks:
       advances: "8-11"
       sessions: "11-15 (approximately)"
       description: "Respected heroes known throughout the region"
-      typical_modifier: "+4 to +5 (cap reached)"
+      typical_modifier: "+5 (all builds at cap)"
       challenges: "Young dragons, powerful organizations, national threats"
-      note: "TN 10 standard, TN 12 for hard challenges"
+      note: "Most builds hit +5 cap earlier (Novice-Seasoned). TN 10 standard, TN 12 for hard challenges."
 
     heroic:
       advances: "12-15"
@@ -691,16 +691,16 @@ bounded_accuracy:
 
   progression_timeline:
     novice:
-      typical: "+1 to +3"
-      note: "Building foundation"
+      typical: "+1 to +5"
+      note: "Specialized builds (+3 starting attribute) can hit +5 cap by Advance 2"
 
     seasoned:
       typical: "+4 to +5"
-      note: "Cap reached by advance 5 (mid-Seasoned) for focused builds"
+      note: "Standard builds hit cap by Advance 3-5. Balanced builds hit cap by Advance 6-7"
 
     veteran:
       typical: "+5 (capped)"
-      note: "All builds at cap, horizontal growth begins"
+      note: "All builds at cap. TN scaling should already be in effect"
 
     heroic_and_beyond:
       typical: "+5 (capped)"
