@@ -137,7 +137,7 @@ stances:
     modifiers:
       damage_penalty: -1
       defense_bonus: 2
-      defense_bonus_note: "Adds +2 to your Guard (attackers need higher rolls to hit you)"
+      defense_bonus_note: "Adds +2 to your Guard pool, absorbing more damage before Vitality loss"
       damage_reduction: 2
     
     movement:
@@ -149,6 +149,12 @@ stances:
       effect: "On critical defense success, make free counterattack"
 
     tactical_notes: "Generates Momentum reliably through being targeted - turns enemy aggression into resource advantage while protecting yourself and allies"
+
+    design_note: |
+      Guard is a DAMAGE BUFFER, not a to-hit target number. Attacks roll vs TN 8
+      (or higher TNs at advanced ranks). Higher Guard means more damage absorbed
+      before Vitality is affected, not harder to hit. Defensive stance makes you
+      tougher through larger Guard pool and damage reduction, not evasion.
 
 stance_interactions:
   switching:
