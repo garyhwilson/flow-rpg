@@ -642,6 +642,7 @@ skills:
       modifier: -2
       description: "No formal training"
       advancement: "Starting only"
+      clarification: "If you have no ranks in a skill, you are Untrained and apply -2 to all rolls using that skill. There is no 'no modifier' option - you are either trained (Novice or higher) or Untrained (-2)."
 
     2_novice:
       modifier: -1

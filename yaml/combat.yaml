@@ -676,10 +676,12 @@ combat_actions:
       success: "Negate attack, possibly counter"
     
     interpose:
-      trigger: "Adjacent ally attacked"
+      trigger: "Adjacent ally targeted by an attack"
       cost: "1 Momentum"
-      effect: "Become target instead"
+      effect: "Become the target instead"
       requirement: "Defensive stance"
+      timing: "Declare BEFORE the attack roll is made. You commit to taking the hit before knowing if it would have missed your ally."
+      design_note: "Interpose is a proactive defensive choice, not a retroactive save. The defender must decide to protect their ally without knowing the outcome."
     
     opportunity_attack:
       trigger: "Enemy leaves engagement"
@@ -692,11 +694,18 @@ combat_actions:
       effect: "Immediately restore Guard to 50% of maximum (round up)"
       limit: "Once per scene"
       action: "Reaction (no action cost, triggers automatically when condition met)"
+      timing_clarification: |
+        Damage resolution sequence when Guard hits 0:
+        1. Attack damage is applied to Guard
+        2. Excess damage beyond Guard applies to Vitality
+        3. THEN Second Wind triggers - you may spend 2 Momentum to restore Guard to 50%
+        Second Wind does NOT prevent the excess Vitality damage - it restores Guard after the hit lands.
       design_note: |
         Prevents death spirals while costing a significant resource.
         Momentum cost ensures it's a meaningful decision, not automatic.
         The 50% restoration gives breathing room without full recovery.
-        Example: Guard max 20, drops to 0, spend 2 Momentum, restore to 10.
+        Example: Guard 5, take 15 damage. Guard goes to 0, 10 damage to Vitality.
+        Then spend 2 Momentum, restore Guard to 10. You took the Vitality damage but are now protected again.
 
   full_actions:
     charge:
@@ -747,6 +756,7 @@ combat_techniques:
       timing: "Before roll"
       limit: "Once per roll"
       available_to: "All characters"
+      cap_interaction: "This bonus CAN exceed the +5 modifier cap. The cap (Attribute + Skill + Specialty ≤ 5) applies to permanent modifiers only. Temporary bonuses from Momentum spends like Surge of Effort stack on top."
 
     desperate_strike:
       cost: 1

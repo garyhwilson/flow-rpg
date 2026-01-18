@@ -10,7 +10,7 @@ _"Life is an adventure to experience"_
 
 ## Mechanical Benefits
 
-- **Momentum Benefit - Contagious Enthusiasm:** When you gain Momentum from any source, one adjacent ally also gains +1 Momentum (spreading your enthusiasm)
+- **Momentum Benefit - Joyful Momentum:** When you gain Momentum from any source, one adjacent ally also gains +1 Momentum (twice per scene)
 - **Narrative Permission - Silver Lining:** You can always find something positive or useful in any situation, no matter how dire. This insight provides actual benefit
 
 ## Moral Compass

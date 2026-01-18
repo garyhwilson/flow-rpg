@@ -570,7 +570,17 @@ sweet_spot_edition:
   target_numbers:
     philosophy: "TN 8 is baseline, but GMs must scale TNs as party power increases"
 
-    reality_check: "Bounded accuracy with +5 cap means TN 8 becomes near-automatic at peak power (97.2% success). GMs need higher TNs for meaningful late-game challenges."
+    combat_vs_skills_clarification:
+      combat_attacks: |
+        Attack rolls ALWAYS use TN 8. Guard provides the defense scaling in combat.
+        When characters get stronger (+5 modifier), they hit more reliably - this is correct.
+        Challenge in combat comes from enemy Guard, Vitality, damage, and tactics, NOT higher attack TNs.
+      skill_challenges: |
+        Skill challenges (locks, cliffs, persuasion, research) scale to TN 10-12 as party modifiers increase.
+        This maintains meaningful dice rolls for non-combat challenges throughout the campaign.
+      summary: "TN scaling applies to SKILL challenges, not combat attack rolls."
+
+    reality_check: "Bounded accuracy with +5 cap means TN 8 becomes near-automatic at peak power (97.2% success). GMs need higher TNs for meaningful late-game SKILL challenges."
 
     # =========================================================
     # CRITICAL GM REQUIREMENT - CORE RULE, NOT OPTIONAL

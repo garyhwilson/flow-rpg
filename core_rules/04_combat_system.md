@@ -216,9 +216,10 @@ When reduced to 0 Vitality, you fall unconscious and begin dying.
 
 **Interpose**
 
-- When adjacent ally is attacked, spend 1 Momentum
+- When adjacent ally is targeted by an attack, spend 1 Momentum
 - Become the target instead
 - Must be in Defensive stance
+- **Timing:** Declare BEFORE the attack roll is made (you commit to taking the hit before knowing if it would have missed your ally)
 
 ---
 

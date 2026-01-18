@@ -673,9 +673,10 @@ mythic_specialties:
       rank: "Legendary"
 
     arcane_ascension:
-      effect: "All spell costs -1, sense all magic within mile"
+      effect: "Spell costs reduced by 1 (minimum cost: Tier 0-1 = 0, Tier 2 = -1, Tier 3+ = -2), sense all magic within mile"
       narrative: "Magic itself bends to your will"
       rank: "Legendary"
+      design_note: "Minimum cost floors prevent Tier 2 spells from becoming free, maintaining the Momentum economy even at Legendary rank."
 
 # ============================================
 # MODIFIER CAP AND BOUNDED ACCURACY

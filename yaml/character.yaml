@@ -776,10 +776,11 @@ custom_build:
         tradition: "arcane"
         note: "Bypasses Mind + Awareness >= 2 requirement"
       divine_touched:
-        effect: "+1 saves, +2 Guard, grants divine tradition access"
+        effect: "+1 saves, +2 Guard, grants divine tradition access, ignore armor Sorcery penalty"
         description: "Divine blessing"
         tradition: "divine"
         note: "Bypasses Will + Presence >= 2 requirement"
+        armor_note: "Divine magic flows from faith, not gestures. Armor does not impede divine casting."
       primal_bond:
         effect: "+1 Survival, +2 Guard, grants primal tradition access"
         description: "Nature connection"
@@ -1078,7 +1079,8 @@ callings:
       name: "Joyful Momentum"
       trigger: "When you gain Momentum from any source"
       effect: "Adjacent ally also gains +1 Momentum"
-      limit: "No limit"
+      limit: "Twice per scene"
+      design_note: "Matches Champion and Guardian limits. Maintains the unique 'sharing' flavor while preventing party Momentum doubling."
 
     narrative_permission:
       name: "Silver Lining"
