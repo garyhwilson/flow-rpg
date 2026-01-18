@@ -241,8 +241,10 @@ species:
         type: "information"
 
       photosensitive:
-        effect: "Disadvantage on rolls in direct sunlight unless wearing protective eyewear"
+        effect: "-2 to attacks, Awareness checks, and ranged spells when eyes exposed to bright sunlight"
         type: "weakness"
+        mitigation: "Umbrin wear a sheer fabric tied behind the head and over the eyes when above ground. Any thin fabric works, but Umbrin traditionally favor bloodsilk—crimson thread spun by giant cave spiders. The sight of a pale grey Umbrin with blood-red silk across their eyes is unmistakable."
+        note: "Penalty only applies when the band is removed or destroyed, not during normal outdoor activity"
 
     natural_callings: ["scholar", "sentinel", "seeker"]
     natural_archetypes: ["rogue", "wizard", "ranger"]
@@ -264,13 +266,13 @@ species:
 
     species_traits:
       seasonal_pulse:
-        effect: "Once per day, spend 1 Momentum to channel season's power"
+        effect: "Once per day, channel your season's power as a free action"
         options:
           spring: "Heal self or ally for 1d4 Vitality"
           summer: "Add +1 damage to melee attacks for one round"
           autumn: "Reroll any failed Mind-based check"
           winter: "Gain +1 Guard until start of next turn"
-        type: "momentum_spend"
+        type: "daily"
 
       botanic_form:
         effect: "Immune to magical sleep; require only 4 hours of sunlight rest"
@@ -1249,9 +1251,9 @@ calling_evolution:
         
         calling_transcendence:
           description: "Rise above calling limitations"
-          effect: "Lose calling benefits, gain +1 to all attributes (respecting +3 cap)"
-          narrative: "Achieved perfect balance"
-          note: "Excellent for generalists, brings all attributes closer to peak"
+          effect: "Lose calling benefits, gain +1 to all attributes (respecting +3 cap), start each scene at Momentum 2"
+          narrative: "Achieved perfect balance—inner equilibrium replaces external purpose"
+          note: "The passive Momentum represents centered readiness, compensating for lost calling triggers"
 
 # ============================================
 # MAGIC ACCESS

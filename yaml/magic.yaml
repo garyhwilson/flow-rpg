@@ -57,7 +57,32 @@ magic_system:
       - "Every spell should have four meaningfully different versions"
       - "Momentum integration creates casting decisions"
       - "Narrative style emerges from mechanical choice"
-  
+
+  novice_caster_experience:
+    design_intent: "Intentional learning curve"
+    description: |
+      New casters struggle with Momentum management. This is by design.
+
+      At Novice rank, a caster can freely use Tier 0-1 spells but must carefully
+      budget Momentum for Tier 2+ effects. Going negative (-1 to -3) is possible
+      but risky—it triggers calling struggle states and limits options.
+
+      This creates a meaningful progression arc:
+      - Novice: "I can cast, but I have to be careful about when"
+      - Seasoned: "I understand the rhythm of building and spending"
+      - Veteran+: "Momentum flows naturally; I can cast freely"
+
+    player_guidance: |
+      If you're new to casting, expect your first few sessions to feel constrained.
+      You'll learn when to hold Momentum for a big spell versus when to spend it
+      on smaller effects. This mastery IS the caster experience—not a bug.
+
+    gm_guidance: |
+      Don't bail out struggling novice casters. The tension of "do I have enough
+      Momentum for Fireball?" is part of the fun. Let them feel the relief when
+      they finally hit +3 and unleash. That earned moment is more satisfying
+      than easy access from session one.
+
   access_requirements:
     overview: |
       To cast spells, you need:
@@ -192,10 +217,10 @@ casting_attributes:
     
     mechanical_benefits:
       universal: "Spells seek weak points"
-      damage: "+1 total damage (not per die)"
+      damage: "+Awareness bonus damage (scales with attribute)"
       detection: "Sense additional information"
       area: "Affects unseen targets"
-      design_note: "Changed from +1/die to +1 total to prevent Awareness from dominating other casting approaches"
+      design_note: "Scales with attribute like Mind's ally exclusion, but less than old +1/die at high tiers"
     
     narrative_style: "Instinctive power, overwhelming force"
   
@@ -230,6 +255,67 @@ casting_attributes:
       blessing: "Affects 2x normal targets"
     
     narrative_style: "Drama, performance, emotional impact"
+
+# ============================================
+# SPELL TARGETING AND RESOLUTION
+# ============================================
+
+spell_targeting:
+  overview: |
+    Spells follow the same TN 8 resolution as other actions. The caster rolls
+    2d6 + Casting Attribute + Sorcery skill vs TN 8. What happens on success
+    depends on the spell type.
+
+  damage_spells:
+    single_target:
+      roll: "2d6 + Casting Attribute + Sorcery vs TN 8"
+      on_success: "Deal damage to target's Guard (then Vitality if Guard depleted)"
+      on_failure: "Spell misses or fizzles"
+      examples: ["Bolt", "Spark", "Smite"]
+      note: "Works exactly like weapon attacks - TN 8 to hit, damage to Guard"
+
+    area_effect:
+      roll: "2d6 + Casting Attribute + Sorcery vs TN 8"
+      on_success: "Spell affects the targeted zone"
+      target_response: "Each creature in area: Grace save vs TN 8 for half damage"
+      on_failure: "Spell fizzles or misfires (GM discretion)"
+      examples: ["Fireball", "Lightning Storm", "Meteor Swarm"]
+      note: "Caster must succeed to place the spell; targets then save individually"
+
+  control_spells:
+    description: "Spells that impose conditions, compel actions, or debuff targets"
+    roll: "2d6 + Casting Attribute + Sorcery vs TN 8"
+    on_success: "Target must make a save to resist"
+    target_save: "2d6 + Will vs TN 8 (or TN 8 + spell tier for powerful effects)"
+    save_failure: "Effect applies fully"
+    save_success: "Effect is negated or reduced (spell-specific)"
+    examples: ["Charm", "Binding Chains", "Fear", "Dominate"]
+    design_note: |
+      Control requires both caster success AND target failure. This creates
+      counterplay and makes Will valuable for non-casters.
+
+  buff_utility_spells:
+    self_or_willing:
+      roll: "Auto-success (no roll needed)"
+      note: "Casting on yourself or willing allies always succeeds"
+      examples: ["Shield", "Mage Armor", "Fly", "Invisibility"]
+
+    unwilling_target:
+      roll: "2d6 + Casting Attribute + Sorcery vs TN 8"
+      target_response: "Will save vs TN 8 to resist beneficial effects forced on them"
+      note: "Rare case - most buffs target willing creatures"
+
+  modifier_interactions:
+    will_casting: "Targets get -1 to their save (as listed in casting_attributes)"
+    spell_tier_scaling: "Higher tier control spells may use TN 8 + tier for saves"
+    cover_concealment: "Apply normal penalties unless spell ignores them (Mind casting)"
+
+  design_note: |
+    This system ensures:
+    - Damage spells work like weapons (consistent TN 8 resolution)
+    - Control spells have counterplay (save opportunities)
+    - Buffs are reliable on willing targets
+    - Will remains valuable as the "mental defense" attribute
 
 # ============================================
 # SPELL LIST BY TIER
@@ -331,6 +417,7 @@ spells:
     bolt:
       name: "Bolt"
       description: "Ranged magical attack at Far range"
+      targeting: "damage_single"
       base_effect: "Attribute + 2d6 damage"
       momentum_cost: 0
       balance_note: "Free to cast, but caster must manage Momentum for higher-tier spells"
@@ -356,6 +443,7 @@ spells:
     shield:
       name: "Shield"
       description: "Protective ward that grows stronger with rank"
+      targeting: "buff_self"
       base_effect: "+Attribute + rank bonus to Guard for scene"
       momentum: "0"
 
@@ -387,6 +475,8 @@ spells:
     charm:
       name: "Charm"
       description: "Influence target's mind"
+      targeting: "control"
+      save: "Will vs TN 8"
       base_effect: "Target becomes friendly"
       momentum: "0"
       duration: "Scene or until betrayed"
@@ -455,6 +545,8 @@ spells:
     fireball:
       name: "Fireball"
       description: "Explosive area damage"
+      targeting: "damage_area"
+      save: "Grace vs TN 8 for half"
       base_effect: "3d6 to all in zone"
       momentum: "-1"
 
@@ -655,7 +747,14 @@ spells:
       description: "Pause time"
       base_effect: "Take extra turns"
       momentum: "-3"
-      
+
+      restriction: |
+        Time Stop ends immediately if you directly affect another creature
+        (damage, healing, harmful conditions, or beneficial effects on others).
+        You may: move, cast self-only spells, manipulate objects, set traps,
+        or prepare environmental hazards. The spell is for positioning and
+        preparation, not for attacking frozen enemies.
+
       attribute_variations:
         mind:
           turns: 3
@@ -673,6 +772,8 @@ spells:
     dominate:
       name: "Dominate"
       description: "Total mental control"
+      targeting: "control"
+      save: "Will vs TN 12 (TN 8 + Tier 4)"
       base_effect: "Control target completely"
       momentum: "-3"
       duration: "Scene or longer"

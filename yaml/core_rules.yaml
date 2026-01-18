@@ -118,6 +118,8 @@ resolution_system:
         Think of it as facing tougher opponents and harder challenges, not arbitrary difficulty.
 
   success_tiers:
+    base_rule: "Roll 2d6 + attribute + skill. If your total equals or exceeds the TN, you succeed. If your total is less than the TN, you fail."
+
     resolution_order: "First check if your total meets the TN (success or failure). Then check which tier your total falls into: failure (6 or less), partial (7-9), full (10-12), or critical (13+). Meeting a higher TN doesn't change your tier - it just means you succeeded at a harder task."
 
     failure:
@@ -141,6 +143,7 @@ resolution_system:
     critical_success:
       base_threshold: 13
       scaling_rule: "13 + (total_modifier ÷ 3, rounded down)"
+      natural_12_rule: "Rolling double 6s (natural 12) is always a critical success, regardless of modifier. This mirrors snake eyes always failing."
       effect: "Exceptional success with benefits"
       momentum_change: "+1 Momentum to character"
       narrative: "Yes, and something exceptional"
@@ -148,8 +151,8 @@ resolution_system:
       threshold_by_modifier:
         modifier_0:
           threshold: 13
-          required_roll: "13+ on 2d6 (impossible without advantage)"
-          probability: "0%"
+          required_roll: "Natural 12 only (double 6s)"
+          probability: "2.8%"
         modifier_1:
           threshold: 13
           required_roll: "12+ on 2d6"
@@ -217,6 +220,12 @@ momentum_system:
       maximum: 6
     excess_rule: "Momentum cannot exceed your maximum. Any excess Momentum generation is lost."
     stacking_rule: "You can gain Momentum from multiple different triggers in the same round. Each trigger's 'once per round' limit applies separately."
+    cap_design_note: |
+      Lost excess Momentum is intentional. When multiple triggers fire and you're near +6,
+      excess vanishes—this teaches players to spend Momentum at +4 or +5 rather than
+      hoarding to cap. The system rewards using abilities frequently, not sitting on
+      resources. If you're consistently wasting generation, that's a signal to cast
+      that spell or activate that technique now.
     starting_momentum: 0
     reset: "Between scenes"
     
