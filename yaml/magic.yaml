@@ -155,6 +155,12 @@ spell_tiers:
       - "Requires significant Momentum reserve"
       - "Often scene-defining"
 
+  negative_momentum_casting:
+    rule: "You may cast spells that would take you negative"
+    consequence: "Momentum goes negative (minimum -3)"
+    note: "Negative Momentum triggers calling struggle states and makes recovery harder"
+    example: "At 0 Momentum, casting Fireball (Tier 2, -1) puts you at -1 Momentum"
+
 # ============================================
 # ATTRIBUTE CASTING APPROACHES
 # ============================================
@@ -768,7 +774,12 @@ ritual_magic:
 metamagic:
   description: "Modify spells with special techniques"
   acquisition: "Wizard archetype or feats"
-  
+
+  stacking:
+    rule: "Multiple metamagic options can be applied to a single spell"
+    cost: "Costs are additive (Quicken +1 and Empower +2 = +3 total)"
+    limit: "Cannot apply the same metamagic twice to one spell"
+
   options:
     quicken:
       effect: "Cast as swift action"

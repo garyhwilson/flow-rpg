@@ -81,9 +81,9 @@ quick_start:
         hard: "TN 10 (difficult)"
         extreme: "TN 12 (nearly impossible)"
 
-      enemies:
-        mooks: "Guard 8, Vitality 5, damage 1d6"
-        tough: "Guard 15, Vitality 12, damage 2d6"
+      adversaries:
+        common: "Guard 8, Vitality 5, damage 1d6"
+        dangerous: "Guard 15, Vitality 12, damage 2d6"
         major_villain: "Guard 20, Vitality 15, damage 2d6+2, acts twice per round"
 
       pacing:
@@ -98,7 +98,7 @@ quick_start:
 
 pregenerated_characters:
   
-  # Level 0 (Starting Characters)
+  # Starting Characters (Novice Rank)
   
   marcus_ironforge:
     concept: "Dwarven Defender"
@@ -551,7 +551,7 @@ play_examples:
         momentum_cost: 0
         new_momentum: 3
     
-    turn_3_nova:
+    turn_3_climax:
       aldric:
         momentum: 3
         action: "Signature Move: Arcane Tempest"

@@ -71,7 +71,7 @@ Fireball is the iconic area damage spell—a roiling sphere of magical flame tha
 
 - **Damage:** 2d6 + Awareness to entire zone
 - **Range:** Far
-- **Special:** Absolute maximum damage output
+- **Special:** Absolute maximum damage
 - **Narrative:** Instinctive power release, feels for maximum effect, overwhelming force
 - **Tactical Use:** Pure damage when ally positioning doesn't matter
 - **Example:** Awareness +3 deals 2d6+3 to everyone in zone
@@ -228,7 +228,7 @@ Invisibility renders the target invisible to normal sight, providing a massive b
 - Invisibility is powerful—massive Stealth bonus
 - Mind version is "true" invisibility (perfect concealment)
 - Awareness version knows when they're detected
-- Will version breaks action economy (attack repeatedly while invisible)
+- Will version allows repeated attacks while invisible
 - Presence version is social/mental rather than optical
 - Clever uses: invisible scout, infiltration, dramatic reveal
 - Breaking invisibility: attacking usually breaks it (except Will)

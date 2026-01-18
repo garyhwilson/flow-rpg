@@ -55,7 +55,7 @@ The revolutionary aspect of this magic system is that spells aren't tied to a si
 
 - **Mechanical Benefits:** Maximum damage, sensing weaknesses, magical detection
 - **Narrative Flavor:** Instinctive magic, raw power, natural talent
-- **Example:** Casting Fireball with Awareness deals maximum damage output
+- **Example:** Casting Fireball with Awareness deals maximum damage
 
 #### Will + Sorcery: The Divine/Pact Way
 

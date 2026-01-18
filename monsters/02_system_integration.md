@@ -334,8 +334,8 @@ Adjust freely based on narrative circumstances. The same bandit captain might st
 | Cost | Ability Type      | Examples                   |
 | ---- | ----------------- | -------------------------- |
 | 0    | Natural abilities | Poison bite, natural armor |
-| 1    | Basic tactical    | Extra movement, minor buff |
-| 2    | Significant       | Area attack, strong buff   |
+| 1    | Basic tactical    | Extra movement, minor enhancement |
+| 2    | Significant       | Area attack, strong enhancement   |
 | 3    | Powerful          | Stun, major damage spike   |
 | 4+   | Dramatic          | Fight-changing effects     |
 

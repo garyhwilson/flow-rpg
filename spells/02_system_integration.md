@@ -68,7 +68,7 @@ Smart spellcasters manage Momentum strategically:
 - Offensive spells that defeat enemies generate +1 Momentum
 - Natural fit for damage-dealing magic
 - Mind precision keeps allies safe
-- Awareness maximizes damage output
+- Awareness maximizes damage dealt
 
 **Drawbacks:**
 
@@ -527,7 +527,7 @@ These questions shape how magic feels in your game and create adventure opportun
 
 - Martial characters generate Momentum
 - Casters spend Momentum for impact
-- Natural synergy in action economy
+- Natural synergy in turn flow
 - Diverse problem-solving approaches
 
 **No Spellcasters:**

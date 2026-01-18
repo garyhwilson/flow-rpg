@@ -376,6 +376,13 @@ momentum_system:
       cost: 0
       note: "Free action, was -1 in original"
 
+    rally_ally:
+      description: "Shout encouragement or provide tactical support"
+      cost: "1 action"
+      effect: "Grant 1 Momentum to an adjacent ally"
+      limit: "Once per round"
+      note: "Cannot target yourself. Ally must be able to hear/see you."
+
 # ============================================
 # SCENE STRUCTURE
 # ============================================

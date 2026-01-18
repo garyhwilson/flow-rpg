@@ -46,8 +46,8 @@ Fast-lookup tables and guidelines for running adversaries at the table.
 | Momentum Cost | Effect                | Examples                                       |
 | ------------- | --------------------- | ---------------------------------------------- |
 | 0             | Natural abilities     | Poison, natural armor, flight                  |
-| 1             | Tactical advantages   | Extra movement, minor buff, defensive reaction |
-| 2             | Significant effects   | Area effect, strong buff/debuff                |
+| 1             | Tactical advantages   | Extra movement, minor enhancement, defensive reaction |
+| 2             | Significant effects   | Area effect, strong enhancement/hindrance            |
 | 3             | Powerful capabilities | Stun, major damage, summon allies              |
 | 4+            | Dramatic moments      | Fight-changing effects                         |
 
@@ -253,7 +253,7 @@ Damage resistance, may reform after death, vulnerable to holy
 
 ## ENCOUNTER BUILDING GUIDELINES
 
-### Action Economy Fundamentals
+### Action Distribution
 
 **The Golden Rule:** Each side should have roughly equal total actions per round.
 
@@ -284,21 +284,21 @@ When using multiple enemies:
 
 ### Party Rank vs Enemy Capability
 
-| Party Rank | Appropriate Solo Boss | Appropriate Group      |
+| Party Rank | Appropriate Major Adversary | Appropriate Group      |
 | ---------- | --------------------- | ---------------------- |
 | Novice     | Trained (1)           | 3-4 Inexperienced      |
 | Seasoned   | Veteran (1)           | 4-5 Trained            |
 | Veteran    | Legendary (1)         | 2 Veterans + 3 Trained |
 | Heroic     | Legendary + minions   | 3-4 Veterans           |
 
-### Making Boss Fights Work
+### Making Major Adversary Fights Work
 
-Solo bosses need help to avoid being overwhelmed:
+Solo major adversaries need help to avoid being overwhelmed:
 
-- **Multi-action:** Major bosses act 2-3 times per round (max 2 attacks)
+- **Multi-action:** Major adversaries act 2-3 times per round (max 2 attacks)
 - **Minions:** Add 2-4 weak allies to split party attention
 - **Lair actions:** Environment acts once per round
-- **Phases:** Boss transforms or gains new abilities at 50% Vitality
+- **Phases:** Adversary transforms or gains new abilities at 50% Vitality
 
 ### Quick Encounter Math
 

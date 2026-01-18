@@ -203,7 +203,7 @@ _Near range, scene duration (may persist)_
 - **Will:** Extend duration through concentration
 - **Presence:** Dramatic monologue, guaranteed social impact
 
-_Can position, buff, prepare—can't directly harm frozen creatures_
+_Can position, enhance, prepare—can't directly harm frozen creatures_
 
 ---
 
@@ -456,7 +456,7 @@ A: GM discretion. Will version specifically maintains when attacking.
 A: No, only dying/injured
 
 **Q: Can Time Stop let me kill everyone?**
-A: No, can't directly harm frozen creatures (position/buff only)
+A: No, can't directly harm frozen creatures (positioning/enhancing only)
 
 ---
 

@@ -237,7 +237,7 @@ scene_design:
 
       legendary_threats:
         description: "Ancient dragons, demon lords, archmages"
-        guard: "35-60"
+        guard: "25-30"
         vitality: "40-70"
         combat_modifier: "+4 to +5"
 

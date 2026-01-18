@@ -56,7 +56,7 @@ Bolt launches a concentrated projectile of magical energy at a distant target. I
 - **Range:** Far
 - **Special:** Seeks weak points (maximum damage potential)
 - **Narrative:** Instinctive aim, senses vulnerabilities, unerring accuracy
-- **Tactical Use:** Pure damage output, exploiting weaknesses
+- **Tactical Use:** Pure damage dealing, exploiting weaknesses
 
 ### Will + Sorcery: Unwavering Blast
 
@@ -343,7 +343,7 @@ Blur makes you harder to hit by distorting your appearance. Whether through calc
 1. Cast Blur for personal defense (-1 Momentum)
 2. Spend remaining turns using Bolt
 3. Stay at range, well-defended
-4. Efficient damage output
+4. Efficient damage dealing
 
 **Double Shield:**
 

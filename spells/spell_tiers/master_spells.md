@@ -278,10 +278,10 @@ Time Stop is the ultimate tactical spell—the ability to freeze the flow of tim
 
 ### Important Rules
 
-- **Actions During Time Stop:** Can't directly harm frozen creatures (but can position, buff, etc.)
+- **Actions During Time Stop:** Can't directly harm frozen creatures (but can position, enhance allies, etc.)
 - **No Damage Dealing:** Attacks during time stop don't deal damage (or all resolve when time resumes)
 - **Positioning:** Can move freely, position perfectly
-- **Preparation:** Can cast buffs, drink potions, prepare actions
+- **Preparation:** Can cast enhancements, drink potions, prepare actions
 - **Interaction:** Can't interrogate frozen people or read minds
 
 ### GM Notes

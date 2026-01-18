@@ -14,7 +14,7 @@ Weapons fall into three broad groups based on how they're wielded in combat. Eac
 
 ### Light Weapons
 
-Light weapons prioritize speed, precision, and versatility over raw damage output, making them ideal for characters emphasizing technique and mobility.
+Light weapons prioritize speed, precision, and versatility over raw striking power, making them ideal for characters emphasizing technique and mobility.
 
 **Damage**: 2d6
 **Special**: +1 to Finesse actions while wielding
@@ -33,7 +33,7 @@ These weapons pair exceptionally well with the Aggressive stance, allowing chara
 
 Most light weapons possess the Dual-Wield property, allowing characters to attack with both weapons at -1 penalty to each strike. This creates interesting tactical trade-offs:
 
-- **Aggressive Dual-Wielding**: Maximum damage output through multiple attacks
+- **Aggressive Dual-Wielding**: Maximum damage through multiple attacks
 - **Defensive Dual-Wielding**: Using off-hand weapon for parrying while attacking with primary
 - **Mixed Approach**: Attacking with one weapon while using the other for utility actions
 
@@ -51,7 +51,7 @@ Dual-wielding generates Momentum when effectively employed—striking different 
 
 ### Medium Weapons
 
-Medium weapons represent the quintessential balanced armament—effective damage output without significant penalties, making them reliable choices for versatile combatants.
+Medium weapons represent the quintessential balanced armament—effective damage without significant penalties, making them reliable choices for versatile combatants.
 
 **Damage**: 2d6+1
 **Special**: None
@@ -72,7 +72,7 @@ Medium weapons shine in their adaptability:
 
 - Effective in both Aggressive and Defensive stances without modification
 - Compatible with shields for defensive builds
-- Sufficient damage output for dedicated combatants
+- Sufficient damage for dedicated combatants
 - No Grace penalties hindering mobility or technique
 
 This balanced profile makes medium weapons popular among professional soldiers, adventurers expecting diverse challenges, and characters preferring reliable effectiveness over specialized optimization.
@@ -89,7 +89,7 @@ This balanced profile makes medium weapons popular among professional soldiers, 
 
 ### Heavy Weapons
 
-Heavy weapons sacrifice mobility and finesse for devastating damage output, appealing to characters built around overwhelming force.
+Heavy weapons sacrifice mobility and finesse for devastating striking power, appealing to characters built around overwhelming force.
 
 **Damage**: 2d6+2
 **Special**: -1 Grace while wielding
@@ -102,7 +102,7 @@ Heavy weapons sacrifice mobility and finesse for devastating damage output, appe
 
 Heavy weapons excel at dealing maximum damage per strike, making them ideal for characters prioritizing offense over defense. The Grace penalty affects all Grace-based actions while wielding the weapon, including combat rolls using Grace + Combat, mobility checks, and Finesse maneuvers.
 
-Characters wielding heavy weapons typically emphasize Might-based combat, leveraging superior strength to overcome the weapon's unwieldiness while maximizing damage output. The two-handed requirement prevents shield use, making Guard management through stance selection and positioning crucial.
+Characters wielding heavy weapons typically emphasize Might-based combat, leveraging superior strength to overcome the weapon's unwieldiness while maximizing damage dealt. The two-handed requirement prevents shield use, making Guard management through stance selection and positioning crucial.
 
 #### Aggressive Fighting
 
@@ -116,7 +116,7 @@ Heavy weapons can generate substantial Momentum through dramatic combat actions�
 
 #### Character Archetypes
 
-**Fighters** built around Might naturally gravitate toward heavy weapons, accepting Grace penalties to maximize damage output.
+**Fighters** built around Might naturally gravitate toward heavy weapons, accepting Grace penalties to maximize damage dealt.
 
 **Barbarian-style characters** (using Fighter or Ranger archetypes with appropriate callings) pair perfectly with heavy weapons' aggressive nature.
 
@@ -187,7 +187,7 @@ The +1 Momentum when throwing from Close range rewards tactical throwing—engag
 Thrown weapon specialists employ hit-and-run tactics:
 
 - **Opening Volleys**: Softening enemies before melee engagement
-- **Tactical Disengagement**: Throwing while retreating to maintain damage output
+- **Tactical Disengagement**: Throwing while retreating to maintain offensive pressure
 - **Exploiting Mobility**: Attacking while moving between positions
 - **Multi-Target Engagement**: Throwing at distant threats while engaged in melee with others
 

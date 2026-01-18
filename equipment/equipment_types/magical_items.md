@@ -262,7 +262,7 @@ Bracers that facilitate effortless stance transitions.
 
 A weapon enchanted to resonate with wielder's energy, increasing critical hit chance.
 
-**Tactical Value**: 50% more critical hits significantly increases damage output and combat effectiveness.
+**Tactical Value**: 50% more critical hits significantly increases damage dealt and combat effectiveness.
 
 #### Reactive Shield (Rare) - 225 sp (adds to shield cost)
 

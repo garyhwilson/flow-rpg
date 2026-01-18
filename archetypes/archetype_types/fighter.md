@@ -16,7 +16,7 @@ The Fighter represents the mastery of physical combat through disciplined traini
 
 Fighters typically develop attribute distributions emphasizing physical capability and tactical awareness:
 
-**Might:** Primary attribute supporting striking power, carrying capacity, and endurance. Contributes to damage output, intimidation presence, and combat longevity.
+**Might:** Primary attribute supporting striking power, carrying capacity, and endurance. Contributes to damage dealt, intimidation presence, and combat longevity.
 
 **Grace:** Essential for weapon manipulation, tactical movement, and defensive reactions. Contributes to attack accuracy, positioning advantage, and defensive capability.
 

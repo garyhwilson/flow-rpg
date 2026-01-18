@@ -143,7 +143,7 @@ Heavy armor provides maximum damage reduction through comprehensive metal protec
 
 Heavy armor creates dedicated defenders capable of absorbing tremendous punishment while maintaining battlefield presence. The -4 damage reduction means many attacks deal minimal or no damage, making heavy armor wearers extraordinarily difficult to kill through conventional attacks.
 
-The -2 Grace penalty significantly impacts Grace-based actions, making heavy armor wearers reliant on Might for combat effectiveness. Combined with the inability to use Aggressive stance, heavy armor fighters typically employ Defensive or Balanced stances, controlling space and protecting allies rather than maximizing personal damage output.
+The -2 Grace penalty significantly impacts Grace-based actions, making heavy armor wearers reliant on Might for combat effectiveness. Combined with the inability to use Aggressive stance, heavy armor fighters typically employ Defensive or Balanced stances, controlling space and protecting allies rather than maximizing personal damage dealt.
 
 #### Combat Role Specialization
 

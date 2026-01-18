@@ -62,7 +62,8 @@ stances:
 
     momentum_generation:
       successful_attack: 1
-      note: "Removed charging bonus for balance"
+      limit: "Once per round"
+      note: "First successful attack each round grants Momentum"
 
     modifiers:
       damage_bonus: 1
@@ -135,7 +136,8 @@ stances:
     
     modifiers:
       damage_penalty: -1
-      defense_bonus: 4
+      defense_bonus: 2
+      defense_bonus_note: "Adds +2 to your Guard (attackers need higher rolls to hit you)"
       damage_reduction: 2
     
     movement:
@@ -273,8 +275,8 @@ health_system:
         - "+ Medium armor bonus (+2 at scene start)"
         - "+ Arcane Attunement/Divine Touched (+2)"
         - "= Total Guard"
-      limit: "No maximum Guard cap"
-      note: "A heavily-invested defensive character can reach Guard 25+ legitimately"
+      limit: "Maximum Guard is 30"
+      note: "Cap maintains bounded accuracy. At Guard 30 vs +5 modifier, attacks hit on 13+ (17%)"
 
     progression:
       method: "Through advance choices (+2 Guard option)"
@@ -477,6 +479,11 @@ death_and_dying:
     first_aid:
       description: "Narrative stabilization"
       gm_discretion: true
+
+  adversary_death:
+    trigger: "Vitality reaches 0"
+    effect: "Adversary dies immediately"
+    note: "Death saves are for player characters. Adversaries fall when defeated."
 
 # ============================================
 # ARMOR SYSTEM
@@ -846,7 +853,7 @@ combat_techniques:
     death_blow:
       effect: "Target below 25% Vitality must make Will save (TN 12) or die instantly"
       cost: "5 Momentum"
-      design_note: "25% threshold and save requirement prevent trivializing boss fights"
+      design_note: "25% threshold and save requirement maintain tension against major villains"
     
     battlefield_control:
       effect: "Reposition all combatants"

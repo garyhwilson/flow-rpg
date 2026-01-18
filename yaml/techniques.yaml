@@ -143,8 +143,8 @@ wizard_techniques:
       Once-per-round limit prevents defensive invincibility while
       still providing meaningful protection.
       Momentum cost ensures it competes with spellcasting.
-      Scales with Mind, keeping it wizard-optimal while allowing
-      other casters to use it less efficiently.
+      Scales with Mind, making it most effective for scholarly mages
+      while still available to other casters.
 
 # ============================================
 # METAMAGIC TECHNIQUES
@@ -281,11 +281,11 @@ gambits:
       progression:
         basic: "+1d6 damage (via advance)"
         improved: "+2d6 damage (requires Seasoned)"
-        note: "Caps at 2d6 to prevent overshadowing Fighter damage output"
+        note: "Caps at 2d6 to keep martial characters competitive"
 
       critical_interaction:
         rule: "Sneak Attack dice are NOT multiplied on critical hits"
-        reasoning: "Prevents damage spikes from turning crits into guaranteed kills"
+        reasoning: "Prevents critical hits from becoming instant kills"
         example:
           normal_hit: "2d6+3 (weapon) + 2d6 (sneak) = 4d6+3 avg 17"
           critical_hit: "2d6+3 (weapon) + 2d6 (sneak) = 4d6+3 avg 17 (same!)"
@@ -447,8 +447,8 @@ universal_techniques:
       acquisition: "Requires Heroic"
 
     momentum_transfer:
-      effect: "Give Momentum to adjacent ally"
-      rate: "2 for 1"
+      effect: "Rally Ally grants +2 Momentum instead of +1"
+      note: "Enhances the universal Rally Ally action"
       acquisition: "Requires Seasoned"
 
   legendary_abilities:

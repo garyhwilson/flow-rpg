@@ -389,7 +389,7 @@ combat_techniques:
     death_blow:
       effect: "Target below 25% Vitality must make Will save (TN 12) or die instantly"
       momentum_cost: 5
-      design_note: "Changed from 50% threshold with no save to prevent trivializing boss fights"
+      design_note: "Changed from 50% threshold with no save to maintain tension against major villains"
 
     perfect_defense:
       effect: "Immune to damage for one round"
@@ -401,7 +401,7 @@ combat_techniques:
     army_of_one:
       effect: "Take one extra action this round only"
       momentum_cost: 6
-      design_note: "Changed from permanent to single round to prevent indefinite action economy doubling"
+      design_note: "Changed from permanent to single round to prevent unlimited extra actions"
 
     legendary_presence:
       effect: "Enemies must save or flee"
@@ -692,7 +692,7 @@ bounded_accuracy:
   progression_timeline:
     novice:
       typical: "+1 to +5"
-      note: "Specialized builds (+3 starting attribute) can hit +5 cap by Advance 2"
+      note: "Focused builds (+2 start, raise to +3, skill to Expert) can hit +5 cap by Advance 2"
 
     seasoned:
       typical: "+4 to +5"

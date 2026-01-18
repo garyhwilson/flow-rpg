@@ -166,7 +166,7 @@ Sometimes, let spellcasters shine:
 
 1. **Puzzle Encounters** - Where specific spells provide solutions
 2. **Investigation Scenes** - Mage Sight and detection spells excel
-3. **Mob Combat** - Area spells handle many weak enemies
+3. **Group Combat** - Area spells handle many weak enemies
 4. **Dramatic Moments** - Big spell at climactic time
 
 ## Enchanted Items and Magic
