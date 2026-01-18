@@ -3,13 +3,60 @@
 # Spells, traditions, and magical mechanics
 
 magic_system:
+  # ============================================
+  # SIGNATURE FEATURE: FOUR WAYS TO CAST
+  # ============================================
+
+  signature_feature:
+    headline: "Same spell, four different effects"
+    elevator_pitch: |
+      In Autumn Phoenix, a Fireball cast with Mind excludes your allies from the blast.
+      Cast with Awareness, it seeks out enemies hiding behind cover.
+      Cast with Will, it burns for rounds after impact.
+      Cast with Presence, enemies flee in panic before it even hits.
+
+      Four wizards, four different Fireballs.
+
+    what_makes_this_unique: |
+      Most RPGs treat magic as a menu - you pick Fireball and it does 8d6 fire damage.
+      In Autumn Phoenix, your casting ATTRIBUTE changes what the spell actually DOES.
+
+      This means:
+      - A Mind wizard and a Presence wizard play completely differently
+      - The same character can cast differently based on situation
+      - Magic feels personal to your character concept
+      - No two parties have the same magical options
+
+    the_four_approaches:
+      mind:
+        identity: "The Calculated Caster"
+        signature: "Precision and control"
+        example: "Fireball that excludes allies, perfectly placed"
+
+      awareness:
+        identity: "The Instinctive Sorcerer"
+        signature: "Power and perception"
+        example: "Fireball that seeks enemies behind cover, +1 damage"
+
+      will:
+        identity: "The Unyielding Channeler"
+        signature: "Persistence and duration"
+        example: "Fireball that keeps burning for rounds"
+
+      presence:
+        identity: "The Dramatic Performer"
+        signature: "Emotion and spectacle"
+        example: "Fireball that causes panic before impact"
+
+    design_note: "This is THE defining feature of Autumn Phoenix magic. Lead with it."
+
   philosophy:
-    core_concept: "Same spell, different effects based on approach"
+    core_concept: "Same spell, different effects based on your casting attribute"
     design_principles:
-      - "Elegance over complexity"
-      - "Narrative-first with mechanical depth"
-      - "Momentum integration central"
-      - "Player agency in casting approach"
+      - "Your attribute choice IS your magical identity"
+      - "Every spell should have four meaningfully different versions"
+      - "Momentum integration creates casting decisions"
+      - "Narrative style emerges from mechanical choice"
   
   access_requirements:
     overview: |
@@ -54,143 +101,59 @@ magic_system:
 
 spell_tiers:
   tier_0_cantrips:
-    spell_point_cost: 0
     momentum_cost: 0
-    description: "Simple magics requiring no resource investment"
+    description: "Simple magics requiring no Momentum investment"
     power_level: "Minor effects"
     examples: ["spark", "mage_armor", "light", "prestidigitation"]
 
     strategic_use:
-      - "Free magical utility without resource cost"
-      - "Maintain magical presence when conserving Spell Points"
+      - "Free magical utility"
+      - "Maintain magical presence while building Momentum"
       - "Fill gaps between bigger spells"
 
   tier_1_basic:
-    spell_point_cost: 1
     momentum_cost: 0
-    description: "Fundamental spells costing 1 Spell Point"
+    description: "Fundamental spells with no Momentum cost"
     power_level: "Standard combat/utility effects"
     examples: ["bolt", "shield", "charm", "blur"]
 
     strategic_use:
-      - "Reliable damage/protection at modest cost"
+      - "Reliable damage/protection without Momentum investment"
       - "Core combat spells"
-      - "3-7 casts per scene depending on Will"
+      - "Sustainable throughout a scene"
 
   tier_2_advanced:
-    spell_point_cost: 2
     momentum_cost: -1
-    description: "Powerful effects requiring both Spell Points and Momentum"
+    description: "Powerful effects requiring Momentum investment"
     power_level: "Significant impact"
     examples: ["fireball", "heal", "fly", "invisibility"]
 
     strategic_use:
       - "Turning point spells"
-      - "Worth the double resource investment"
-      - "1-3 casts per scene typically"
+      - "Requires positive Momentum to cast freely"
+      - "Risk of going negative if cast early"
 
   tier_3_expert:
-    spell_point_cost: 3
     momentum_cost: -2
-    description: "Major magical effects with heavy resource cost"
+    description: "Major magical effects with heavy Momentum cost"
     power_level: "Battle-changing"
     examples: ["lightning_storm", "teleport", "polymorph"]
 
     strategic_use:
       - "Decisive moments only"
-      - "Requires Spell Point conservation and Momentum buildup"
+      - "Requires Momentum buildup before casting"
       - "Often combat-ending"
 
   tier_4_master:
-    spell_point_cost: 4
     momentum_cost: -3
-    description: "Reality-altering magic at maximum cost"
+    description: "Reality-altering magic at maximum Momentum cost"
     power_level: "Legendary effects"
     examples: ["time_stop", "dominate", "meteor_swarm"]
 
     strategic_use:
       - "Campaign climax moments"
-      - "Requires perfect resource management"
+      - "Requires significant Momentum reserve"
       - "Often scene-defining"
-
-# ============================================
-# SPELL POINTS (DEFAULT SYSTEM)
-# ============================================
-
-spell_points:
-  description: "Resource management for spellcasting that balances caster output with martial damage"
-  optional: false
-  philosophy: "Spell Points ensure casters can't infinitely spam damage spells while keeping magic impactful"
-
-  pool_calculation:
-    formula: "3 + Will modifier"
-    minimum: 3
-    maximum: 7
-    recovery: "Full restoration between scenes"
-
-    examples:
-      low_will:
-        will: 0
-        points: 3
-        note: "Can cast 3 Tier-1 spells or 1 Tier-3"
-
-      moderate_will:
-        will: 2
-        points: 5
-        note: "Can cast 5 Tier-1 or 2 Tier-2 + 1 Tier-1"
-
-      high_will:
-        will: 4
-        points: 7
-        note: "Can cast 7 Tier-1 or 2 Tier-3 + 1 Tier-1"
-
-  spell_costs:
-    tier_0_cantrips: 0
-    tier_1_basic: 1
-    tier_2_advanced: 2
-    tier_3_expert: 3
-    tier_4_master: 4
-
-  interaction_with_momentum:
-    description: "Spell Points are the primary casting resource; Momentum costs are additional"
-    spell_point_cost: "Pay SP equal to tier (Tier 0 = 0, Tier 1 = 1, etc.)"
-    momentum_cost: "Some spells also cost Momentum (Tier 2+ as listed)"
-    momentum_generation: "Still generate Momentum from critical successes and stances"
-    momentum_expenditure: "Can spend Momentum for techniques, metamagic, and narrative advantages"
-
-  design_rationale: |
-    Without Spell Points, a Wizard with Bolt (Tier 1, 0 Momentum) can attack every round
-    for 2d6+3 damage at Far range with no resource cost, outperforming martial characters
-    who must close to melee range for similar damage.
-
-    Spell Points ensure:
-    - Casters must manage resources like everyone else
-    - Cantrips (Tier 0) remain free for magical utility
-    - Higher-tier spells remain powerful but limited
-    - Martial characters have a niche in sustained combat
-
-# ============================================
-# MOMENTUM-ONLY CASTING (OPTIONAL VARIANT)
-# ============================================
-
-momentum_only_casting:
-  description: "For groups that prefer pure Momentum-based magic without Spell Points"
-  optional: true
-  philosophy: "Simpler resource tracking but requires careful encounter design"
-
-  how_it_works:
-    tier_0: "Free to cast"
-    tier_1: "Free to cast (WARNING: can lead to caster dominance)"
-    tier_2: "Costs -1 Momentum"
-    tier_3: "Costs -2 Momentum"
-    tier_4: "Costs -3 Momentum"
-
-  gm_guidance: |
-    If using this variant, consider:
-    - More encounters per scene (depletes caster Momentum)
-    - Enemies that target casters specifically
-    - Shorter combat durations (3-4 rounds max)
-    - Giving martial characters bonus techniques to compensate
 
 # ============================================
 # ATTRIBUTE CASTING APPROACHES
@@ -357,15 +320,14 @@ spells:
   # ==========================================
   
   tier_1:
-    design_note: "Tier 1 spells cost 1 Spell Point. Damage at 2d6 base matches martial weapons."
+    design_note: "Tier 1 spells have no Momentum cost. Damage at 2d6 base matches martial weapons."
 
     bolt:
       name: "Bolt"
       description: "Ranged magical attack at Far range"
       base_effect: "Attribute + 2d6 damage"
-      spell_point_cost: 1
       momentum_cost: 0
-      balance_note: "At 1 SP per cast, a Will +2 caster (5 SP) can cast Bolt 5 times per scene"
+      balance_note: "Free to cast, but caster must manage Momentum for higher-tier spells"
 
       attribute_variations:
         mind:

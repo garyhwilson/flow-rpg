@@ -855,26 +855,60 @@ custom_build:
 # ============================================
 
 callings:
+  design_philosophy: |
+    Callings are psychological motivations with mechanical teeth. They generate
+    Momentum, grant narrative permissions, and create dramatic tension through
+    compulsions and vulnerability when struggling.
+
+  compulsion_system:
+    description: "GM can invoke your Calling's drive to create dramatic tension"
+    frequency: "Once per session per character"
+
+    when_invoked:
+      choice_a:
+        action: "Act on your Calling's drive"
+        reward: "+2 Momentum"
+        note: "The character follows their psychological compulsion"
+
+      choice_b:
+        action: "Resist the compulsion"
+        cost: "-2 Momentum"
+        note: "Can push to negative Momentum"
+
+    example: |
+      The Guardian sees an innocent in danger. The GM invokes the Guardian's
+      drive. The player can choose: rush to protect them (gain +2 Momentum)
+      or resist the urge for tactical reasons (lose 2 Momentum).
+
+    design_note: "Similar to Fate's Compel mechanic, integrated with Momentum"
+
   advocate:
     name: "The Advocate"
     core_drive: "The world must be made right"
     fear: "Being corrupt, defective, or wrong"
     desire: "To be good, right, accurate, and virtuous"
-    
+
     momentum_benefit:
       name: "Righteous Revelation"
       trigger: "When you or ally reveals truth or exposes deception"
       effect: "Gain +1 Momentum"
       limit: "No limit per scene"
-    
+
     narrative_permission:
       name: "Truth Sense"
       effect: "Always know when someone is lying about wrongdoing or corruption"
       requirement: "No roll needed"
-    
+
+    against_the_current:
+      description: "When struggling (negative Momentum), doubt clouds your judgment"
+      effect: "Truth Sense is disabled - you cannot tell truth from lies"
+      narrative: "Your fear of being wrong makes every statement seem suspect"
+
+    compulsion_trigger: "When you witness corruption, injustice, or deception going unchallenged"
+
     stress_behavior: "Becomes critical and perfectionist"
     growth_direction: "Learns to accept imperfection"
-    
+
     calling_equipment:
       item: "Seal of Truth"
       effect: "Once per scene, force someone to answer honestly"
@@ -884,21 +918,28 @@ callings:
     core_drive: "I exist to help others"
     fear: "Being unloved or unwanted"
     desire: "To feel loved and needed by others"
-    
+
     momentum_benefit:
       name: "Protective Surge"
       trigger: "When you successfully defend or heal an ally"
       effect: "Gain +1 Momentum"
       limit: "Twice per scene"
-    
+
     narrative_permission:
       name: "Helper's Intuition"
       effect: "Always know when someone genuinely needs help, even if hiding it"
       requirement: "No roll needed"
-    
+
+    against_the_current:
+      description: "When struggling (negative Momentum), you feel isolated and unwanted"
+      effect: "Protective Surge trigger is disabled - defending others generates no Momentum"
+      narrative: "Your fear of being unloved makes you feel your protection isn't wanted"
+
+    compulsion_trigger: "When an innocent or ally is in immediate danger"
+
     stress_behavior: "Becomes possessive and martyrlike"
     growth_direction: "Learns healthy boundaries"
-    
+
     calling_equipment:
       item: "Guardian's Token"
       effect: "Can take damage meant for another at any range once per scene"
@@ -908,21 +949,28 @@ callings:
     core_drive: "Success proves my worth"
     fear: "Being worthless without achievements"
     desire: "To feel valuable and worthwhile"
-    
+
     momentum_benefit:
       name: "Victory Rush"
       trigger: "Any critical success (13+)"
       effect: "Gain +1 additional Momentum beyond normal critical"
       limit: "No limit"
-    
+
     narrative_permission:
       name: "Victory Sense"
       effect: "Instinctively know the 'win condition' of any situation"
       requirement: "No roll needed"
-    
+
+    against_the_current:
+      description: "When struggling (negative Momentum), you see only paths to failure"
+      effect: "Victory Sense inverts - you see only how situations can go wrong, not how to win"
+      narrative: "Your fear of worthlessness makes every challenge seem insurmountable"
+
+    compulsion_trigger: "When an opportunity to prove yourself or outperform others arises"
+
     stress_behavior: "Becomes ruthlessly competitive"
     growth_direction: "Learns intrinsic worth"
-    
+
     calling_equipment:
       item: "Trophy of Excellence"
       effect: "Reroll one failed roll per scene"
@@ -932,21 +980,28 @@ callings:
     core_drive: "I must find my true self"
     fear: "Having no identity or significance"
     desire: "To find themselves and their significance"
-    
+
     momentum_benefit:
       name: "Authentic Insight"
       trigger: "When you discover something important about yourself or others"
       effect: "Gain +2 Momentum"
       limit: "Twice per scene"
-    
+
     narrative_permission:
       name: "Soul Reading"
       effect: "Once per scene, ask deep personal question that must be answered honestly"
       requirement: "Target may be cryptic"
-    
+
+    against_the_current:
+      description: "When struggling (negative Momentum), your identity feels hollow"
+      effect: "Soul Reading is blocked - others seem as unknowable as yourself"
+      narrative: "Your fear of insignificance makes all meaning feel arbitrary"
+
+    compulsion_trigger: "When a mystery about identity, origin, or deeper meaning presents itself"
+
     stress_behavior: "Becomes self-absorbed and melancholic"
     growth_direction: "Learns to connect authentically"
-    
+
     calling_equipment:
       item: "Mirror of Truth"
       effect: "See through any disguise or illusion once per scene"
@@ -956,21 +1011,28 @@ callings:
     core_drive: "Knowledge reveals truth"
     fear: "Being incompetent or overwhelmed"
     desire: "To be capable and understanding"
-    
+
     momentum_benefit:
       name: "Prepared Mind"
       trigger: "When you apply knowledge to solve a problem"
       effect: "Gain +1 Momentum"
       limit: "Three times per scene"
-    
+
     narrative_permission:
       name: "Contingency Planning"
       effect: "Once per scene, declare you prepared for this exact situation"
       requirement: "Produce relevant tool, fact, or preparation"
-    
+
+    against_the_current:
+      description: "When struggling (negative Momentum), your mind races uselessly"
+      effect: "Contingency Planning is disabled - you cannot claim prior preparation"
+      narrative: "Your fear of incompetence makes you doubt every plan you ever made"
+
+    compulsion_trigger: "When an opportunity to gather crucial information or solve a puzzle arises"
+
     stress_behavior: "Becomes detached and nihilistic"
     growth_direction: "Learns to engage emotionally"
-    
+
     calling_equipment:
       item: "Scholar's Codex"
       effect: "Ask GM one question about any topic, receive useful answer"
@@ -980,21 +1042,28 @@ callings:
     core_drive: "Loyalty and vigilance keep us safe"
     fear: "Being without support or security"
     desire: "To have security and support"
-    
+
     momentum_benefit:
       name: "Defensive Vigilance"
       trigger: "When you spot danger before it strikes"
       effect: "Gain +1 Momentum"
       limit: "Twice per scene"
-    
+
     narrative_permission:
       name: "Danger Sense"
       effect: "Cannot be surprised or ambushed, always act in first round"
       requirement: "Even if caught off-guard"
-    
+
+    against_the_current:
+      description: "When struggling (negative Momentum), paranoia blinds you"
+      effect: "Danger Sense fails - you CAN be surprised and may not act first"
+      narrative: "Your fear of abandonment makes you see threats everywhere and nowhere"
+
+    compulsion_trigger: "When your group's security or a trusted ally's safety is threatened"
+
     stress_behavior: "Becomes paranoid and reactive"
     growth_direction: "Learns to trust"
-    
+
     calling_equipment:
       item: "Sentinel's Ward"
       effect: "+2 Guard against first attack each scene"
@@ -1004,21 +1073,28 @@ callings:
     core_drive: "Life is an adventure to experience"
     fear: "Being trapped in pain or deprivation"
     desire: "To be satisfied and content"
-    
+
     momentum_benefit:
       name: "Joyful Momentum"
       trigger: "When you gain Momentum from any source"
       effect: "Adjacent ally also gains +1 Momentum"
       limit: "No limit"
-    
+
     narrative_permission:
       name: "Silver Lining"
       effect: "Always find something positive/useful in any situation"
       requirement: "Provides actual mechanical or narrative benefit"
-    
+
+    against_the_current:
+      description: "When struggling (negative Momentum), you see only pain ahead"
+      effect: "Silver Lining is disabled - you cannot find positives in situations"
+      narrative: "Your fear of deprivation makes every outcome seem like a trap"
+
+    compulsion_trigger: "When an exciting opportunity, new experience, or escape from boredom presents itself"
+
     stress_behavior: "Becomes manic and scattered"
     growth_direction: "Learns to face difficulty"
-    
+
     calling_equipment:
       item: "Lucky Charm"
       effect: "Once per scene, when you fail a roll (6 or less), treat it as a partial success (7-9 tier) instead"
@@ -1029,21 +1105,28 @@ callings:
     core_drive: "Strength protects what matters"
     fear: "Being controlled, vulnerable, or weak"
     desire: "To be self-reliant and in control"
-    
+
     momentum_benefit:
       name: "Protective Dominance"
       trigger: "When you defeat or intimidate an enemy threatening allies"
       effect: "Gain +1 Momentum"
       limit: "Twice per scene"
-    
+
     narrative_permission:
       name: "Unshakeable Will"
       effect: "Intimidation attempts against you automatically fail"
       requirement: "Project strength that cannot be undermined"
-    
+
+    against_the_current:
+      description: "When struggling (negative Momentum), your will wavers"
+      effect: "Unshakeable Will fails - intimidation CAN affect you normally"
+      narrative: "Your fear of weakness makes you feel exposed and vulnerable"
+
+    compulsion_trigger: "When someone or something threatens your control or challenges your strength"
+
     stress_behavior: "Becomes domineering and aggressive"
     growth_direction: "Learns vulnerability is strength"
-    
+
     calling_equipment:
       item: "Champion's Banner"
       effect: "Allies in same zone gain +1 damage"
@@ -1053,21 +1136,28 @@ callings:
     core_drive: "Harmony brings peace to all"
     fear: "Loss of connection, separation, conflict"
     desire: "To have inner and outer peace"
-    
+
     momentum_benefit:
       name: "Harmony Restoration"
       trigger: "First time each scene you help resolve any conflict"
       effect: "You and all involved gain +1 Momentum"
       limit: "Once per scene"
-    
+
     narrative_permission:
       name: "Universal Understanding"
       effect: "Understand basic meaning/emotion of any communication"
       requirement: "Regardless of language barriers"
-    
+
+    against_the_current:
+      description: "When struggling (negative Momentum), you cannot read intent"
+      effect: "Universal Understanding is blocked - languages and emotions become opaque"
+      narrative: "Your fear of disconnection makes everyone seem like a stranger"
+
+    compulsion_trigger: "When conflict between parties could be resolved through peaceful intervention"
+
     stress_behavior: "Becomes passive and avoidant"
     growth_direction: "Learns healthy conflict"
-    
+
     calling_equipment:
       item: "Peace Bond"
       effect: "Prevent one act of violence per scene through mystical compulsion"

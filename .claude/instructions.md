@@ -4,6 +4,28 @@
 **Never use ANY video game language.**
 **Never use ANY video game thinking or mechanics.**
 
+### Explicit Blacklist
+
+These words/phrases must NEVER appear in any output:
+
+**Role Terms:** tank, tanked, tanking, DPS, healer (as a role), support (as a role), carry, glass cannon, off-tank, main tank, aggro, threat
+
+**Combat Terms:** mob, mobs, adds, trash mobs, boss, mini-boss, elite, minion, henchman, spawn, respawn, cooldown, rotation, burst damage, sustained damage, AoE, DoT, HoT, buff, debuff, nerf
+
+**Structure Terms:** raid, dungeon (as a game mode), instance, encounter (as a discrete unit), pull, wipe, clear, farm, grind
+
+**Design Terms:** tier list, meta, optimal build, min-max, stat block template, encounter balance, CR, challenge rating
+
+### Use Instead
+
+- "Tanked" → "absorbed attacks," "drew enemy attention," "protected the group"
+- "DPS" → "dealt damage," "struck effectively"
+- "Boss" → the creature's name, "the leader," "their adversary"
+- "Adds" → "reinforcements," "allies," "followers"
+- "Mob" → "creature," "enemy," "adversary," or their actual name
+- "Encounter" → "scene," "conflict," "confrontation"
+- "Buff/Debuff" → "blessing," "enhancement," "hindrance," "curse"
+
 ## Design Principles Reference
 
 These core principles should guide all design decisions:

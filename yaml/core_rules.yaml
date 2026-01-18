@@ -226,11 +226,33 @@ momentum_system:
   momentum_states:
     negative:
       range: [-3, -1]
-      description: "Disrupted, struggling, disadvantage"
-      effects:
+      name: "Against the Current"
+      description: "When you're struggling against the current, your character's psychology breaks down. Your Calling's deepest fear begins to manifest."
+
+      universal_effects:
         - "Cannot cast spells (except Will-based)"
-        - "Narrative shows exhaustion/struggle"
         - "-1 to initiative order"
+        - "Narrative shows exhaustion and internal struggle"
+
+      calling_consequences:
+        description: "Your Calling's fear manifests mechanically when struggling"
+        reference: "See character.yaml callings section for specific consequences"
+
+        summary:
+          advocate: "Truth Sense disabled - doubt clouds judgment"
+          guardian: "Protective Surge trigger disabled - feel isolated"
+          exemplar: "Victory Sense inverts - see only failure paths"
+          seeker: "Soul Reading blocked - identity feels hollow"
+          scholar: "Contingency Planning disabled - mind races uselessly"
+          sentinel: "Danger Sense fails - paranoia blinds you"
+          enthusiast: "Silver Lining disabled - see only pain ahead"
+          champion: "Unshakeable Will wavers - intimidation can affect you"
+          mediator: "Universal Understanding blocked - cannot read intent"
+
+      dramatic_purpose: |
+        This creates pressure to climb out of negative Momentum. When struggling,
+        characters aren't just mechanically weaker - their psychological foundation
+        cracks. This makes recovery feel like genuine triumph.
     
     neutral:
       range: [0, 0]
@@ -359,29 +381,80 @@ momentum_system:
 # ============================================
 
 scene_resolution:
+  design_philosophy: |
+    Scenes are explicit dramatic units in Autumn Phoenix. Unlike games where
+    "scene" is informal, here scene boundaries have mechanical meaning:
+    Momentum resets, Guard recovers, and narrative beats are marked.
+
   phases:
-    1_setup:
+    1_opener:
+      name: "Scene Opener"
       gm_actions:
         - "Describe situation and environment"
-        - "Establish stakes and dangers"
-        - "Position participants"
+        - "Establish stakes clearly - what can be won or lost?"
+        - "Position participants in zones"
+        - "Set the tone - is this tense? Urgent? Mysterious?"
       player_actions:
         - "Ask clarifying questions"
-        - "Declare initial stance/approach"
-    
+        - "Declare initial stance (Aggressive, Balanced, Defensive)"
+        - "State initial intent - what does your character want from this scene?"
+
+      stakes_declaration:
+        description: "GM explicitly states what's at stake before engagement"
+        examples:
+          - "The bandits want the caravan's gold. You want to protect the merchants."
+          - "Lady Vera holds information you need. She wants leverage over the Duke."
+          - "The collapsing temple threatens to bury the artifact forever."
+        benefit: "Clear stakes create meaningful tension and informed choices"
+
     2_engagement:
+      name: "Scene Engagement"
       structure: "Varies by scene type"
       types:
-        combat: "See combat.yaml"
-        social: "See social_combat rules"
-        exploration: "Skill challenges"
+        combat: "See combat.yaml - stance-based initiative, zone movement"
+        social: "Composure-based exchanges, social stances"
+        exploration: "Skill challenges with clocks"
         mixed: "Combine systems as needed"
-    
-    3_resolution:
-      momentum_reset: "All Momentum returns to 0"
-      guard_recovery: "Full Guard restoration"
-      consequences: "Apply lasting effects"
-      experience: "Award XP at session end"
+
+    3_closer:
+      name: "Scene Closer"
+      standard_effects:
+        momentum_reset: "All Momentum returns to 0"
+        guard_recovery: "Full Guard restoration"
+        consequences: "Apply lasting effects (injuries, relationships, discoveries)"
+        experience: "XP awarded at session end, not per scene"
+
+      narrative_thread:
+        description: "One character may carry forward momentum to the next scene"
+        rule: "The character with the most dramatic scene-ending moment may carry 1 Momentum forward"
+        determination: "Table consensus or GM call"
+        examples:
+          - "Aldric's desperate last stand saved the party - he carries +1 forward"
+          - "Whisper's revelation about the Duke's treachery changed everything - she carries +1 forward"
+          - "Bramble's sacrifice allowed the others to escape - he carries +1 forward"
+        design_note: "Rewards dramatic play and creates continuity between scenes"
+
+  optional_scene_clock:
+    description: "Countdown for time pressure in scenes"
+    when_to_use:
+      - "The ritual will complete in 6 rounds"
+      - "The guards arrive when the clock hits 0"
+      - "The fire spreads - you have 4 rounds to escape"
+
+    clock_sizes:
+      short: "4 segments - immediate pressure"
+      standard: "6 segments - typical tense scene"
+      long: "8 segments - extended complex situations"
+
+    advancement:
+      fixed: "Clock advances 1 segment per round"
+      variable: "Clock advances on failures or complications"
+      mixed: "Clock advances each round plus on failures"
+
+    momentum_interaction:
+      spend_to_slow: "Spend 2 Momentum to hold the clock for 1 round"
+      dramatic_success: "Critical success may remove 1 segment"
+      design_note: "Creates tension without being punitive"
 
   scene_types:
     combat:
